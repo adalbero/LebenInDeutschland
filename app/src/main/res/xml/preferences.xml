@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<PreferenceScreen xmlns:android="http://schemas.android.com/apk/res/android">
+    <PreferenceCategory
+        android:key="pref_key_settings_land"
+        android:title="Land">
+
+        <ListPreference
+            android:key="pref_key_land"
+            android:summary="%s"
+            android:title="Select a land" />
+
+    </PreferenceCategory>
+
+    <PreferenceCategory android:title="About">
+
+        <Preference
+            android:key="version"
+            android:summary="unknown"
+            android:title="Version" />
+
+    </PreferenceCategory>
+
+</PreferenceScreen>

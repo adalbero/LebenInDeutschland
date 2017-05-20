@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="colorPrimary">#3F51B5</color>
+    <color name="colorPrimaryDark">#303F9F</color>
+    <color name="colorAccent">#3F51B5</color>
+
+    <color name="colorRight">#c8e6c9</color>
+    <color name="colorWrong">#ffcdd2</color>
+    <color name="colorNotAnswerd">#E0E0E0</color>
+
+    <color name="colorArea0">#BCAAA4</color>
+    <color name="colorArea1">#FFE082</color>
+    <color name="colorArea2">#81D4FA</color>
+    <color name="colorArea3">#A5D6A7</color>
+    <color name="colorLand">#CE93D8</color>
+    <color name="colorQuestion">#FFFFFF</color>
+    <color name="colorBackground">#FFFFFF</color>
+    <color name="colorCardBG">#B0BEC5</color>
+</resources>
