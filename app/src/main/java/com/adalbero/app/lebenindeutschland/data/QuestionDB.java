@@ -10,7 +10,9 @@ import java.io.IOException;
 import java.io.InputStream;
 import java.io.InputStreamReader;
 import java.util.ArrayList;
+import java.util.HashSet;
 import java.util.List;
+import java.util.Set;
 
 /**
  * Created by Adalbero on 17/05/2017.
@@ -84,4 +86,14 @@ public class QuestionDB {
         return result;
     }
 
+
+    public Set<String> getAllTags() {
+        Set<String> tags = new HashSet();
+
+        for (Question q : mQuestions) {
+            tags.addAll(q.getTags());
+        }
+
+        return tags;
+    }
 }

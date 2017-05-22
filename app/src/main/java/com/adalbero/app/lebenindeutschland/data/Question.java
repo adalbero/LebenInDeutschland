@@ -3,6 +3,10 @@ package com.adalbero.app.lebenindeutschland.data;
 import android.util.Log;
 
 import com.adalbero.app.lebenindeutschland.R;
+import com.adalbero.app.lebenindeutschland.controller.AppController;
+
+import java.util.HashSet;
+import java.util.Set;
 
 /**
  * Created by Adalbero on 16/05/2017.
@@ -17,6 +21,8 @@ public class Question {
     private String area;
     private String theme;
     private String image;
+
+    private Set<String> tags;
 
     public static Question parse(String line) {
         Question question = new Question();
@@ -40,6 +46,11 @@ public class Question {
         } catch (Exception ex) {
             Log.e("MyApp", "Question.parse: " + ex.getMessage(), ex);
         }
+
+//        question.tags = new HashSet<>();
+        question.loadTags();
+
+        question.autoTag();
 
         return question;
     }
@@ -135,6 +146,51 @@ public class Question {
         return result;
     }
 
+    public void autoTag() {
+        if (getImage() != null)
+            addTag("image");
+    }
 
+    public void addTag(String tag) {
+        if (tags == null) return;
+
+        tags.add(tag);
+        saveTags();
+    }
+
+    public void setTags(Set<String> t) {
+        if (tags == null) return;
+
+        tags = new HashSet<>(t);
+        saveTags();
+    }
+
+    public Set<String> getTags() {
+        return tags;
+    }
+
+    public boolean hasTag(String tag) {
+        return tags.contains(tag);
+    }
+
+    public void loadTags() {
+        String key = getNum() + ".tags";
+        String value = AppController.getInstance().getString(key, "");
+
+        tags = new HashSet<>();
+        String items[] = value.split(",");
+        for (String item : items) {
+            if (item.trim().length() > 0)
+                tags.add(item.trim());
+        }
+
+    }
+
+    public void saveTags() {
+        String key = getNum() + ".tags";
+        String value = tags.toString();
+        value = value.substring(1, value.length()-1);
+        AppController.getInstance().putString(key, value);
+    }
 
 }

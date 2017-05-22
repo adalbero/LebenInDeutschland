@@ -16,7 +16,7 @@ import com.adalbero.app.lebenindeutschland.data.ExamByThema;
 import com.adalbero.app.lebenindeutschland.data.ExamHeader;
 import com.adalbero.app.lebenindeutschland.data.ExamLand;
 import com.adalbero.app.lebenindeutschland.data.ExamSimulate;
-import com.adalbero.app.lebenindeutschland.data.ExamWithPicture;
+import com.adalbero.app.lebenindeutschland.data.ExamTag;
 import com.adalbero.app.lebenindeutschland.data.Question;
 import com.adalbero.app.lebenindeutschland.data.QuestionDB;
 import com.google.android.gms.ads.AdRequest;
@@ -26,6 +26,7 @@ import com.google.android.gms.ads.MobileAds;
 import java.util.ArrayList;
 import java.util.List;
 import java.util.Map;
+import java.util.Set;
 
 /**
  * Created by Adalbero on 16/05/2017.
@@ -60,7 +61,7 @@ public class AppController extends Application {
         mQuestionDB.load(this);
     }
 
-    private void loadExamList() {
+    public void loadExamList() {
         mExamList = new ArrayList<>();
 
         mExamList.add(new ExamHeader("Liste"));
@@ -82,10 +83,14 @@ public class AppController extends Application {
             mExamList.add(new ExamByThema(thema));
         }
 
-        mExamList.add(new ExamHeader("Tag"));
-        mExamList.add(new ExamWithPicture("Mit build"));
+        mExamList.add(new ExamHeader("Tags"));
+        Set<String> tags = getQuestionDB().getAllTags();
+        for (String tag : tags) {
+            mExamList.add(new ExamTag(tag));
+        }
 
         mExamList.add(new ExamHeader(""));
+
     }
 
     public QuestionDB getQuestionDB() {

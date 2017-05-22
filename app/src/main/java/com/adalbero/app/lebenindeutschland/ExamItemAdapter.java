@@ -13,7 +13,9 @@ import android.widget.ImageView;
 import android.widget.TextView;
 
 import com.adalbero.app.lebenindeutschland.data.Exam;
+import com.adalbero.app.lebenindeutschland.data.Exam300;
 import com.adalbero.app.lebenindeutschland.data.ExamHeader;
+import com.adalbero.app.lebenindeutschland.data.ExamLand;
 
 import java.util.List;
 
@@ -24,8 +26,8 @@ import java.util.List;
 public class ExamItemAdapter extends ArrayAdapter<Exam> {
     private final LayoutInflater mInflater;
 
-    public ExamItemAdapter(Context context, List<Exam> objects) {
-        super(context, R.layout.exam_item, objects);
+    public ExamItemAdapter(Context context, List<Exam> data) {
+        super(context, R.layout.exam_item, data);
 
         mInflater = LayoutInflater.from(context);
     }
@@ -66,6 +68,8 @@ public class ExamItemAdapter extends ArrayAdapter<Exam> {
         ImageView btn_icon = (ImageView)view.findViewById(R.id.img_icon);
         btn_icon.setVisibility(visible);
         btn_icon.setImageDrawable(parent.getResources().getDrawable(exam.getIcon()));
+        if (exam instanceof ExamLand || exam instanceof Exam300)
+            btn_icon.setColorFilter(Color.TRANSPARENT);
 
         TextView text_name = (TextView) view.findViewById(R.id.text_name);
         text_name.setText(name);

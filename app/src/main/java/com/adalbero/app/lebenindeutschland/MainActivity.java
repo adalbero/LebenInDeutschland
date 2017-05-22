@@ -7,7 +7,6 @@ import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
 import android.widget.AdapterView;
-import android.widget.ListAdapter;
 import android.widget.ListView;
 
 import com.adalbero.app.lebenindeutschland.controller.AppController;
@@ -21,7 +20,8 @@ import java.util.List;
 
 public class MainActivity extends AppCompatActivity {
 
-    private List<Exam> data = new ArrayList();
+    private List<Exam> data;
+    private ExamItemAdapter mAdapter;
 
     private AppController mAppController;
 
@@ -32,16 +32,12 @@ public class MainActivity extends AppCompatActivity {
 
         mAppController = (AppController) getApplication();
 
-        List<Exam> examList = mAppController.getExamList();
-        for (Exam exam : examList) {
-            exam.init();
-            data.add(exam);
-        }
+        updateData();
 
-        ListAdapter adapter = new ExamItemAdapter(this, data);
+        mAdapter = new ExamItemAdapter(this, data);
 
         ListView listView = (ListView) findViewById(R.id.list_view);
-        listView.setAdapter(adapter);
+        listView.setAdapter(mAdapter);
 
         listView.setOnItemClickListener(new AdapterView.OnItemClickListener() {
             @Override
@@ -51,7 +47,7 @@ public class MainActivity extends AppCompatActivity {
 
                 if (exam instanceof ExamHeader) return;
                 if (exam instanceof ExamDynamic) {
-                    ((ExamDynamic)exam).build(MainActivity.this, new ResultCallback() {
+                    ((ExamDynamic) exam).build(MainActivity.this, new ResultCallback() {
                         @Override
                         public void onResult(Object param) {
                             goList(name);
@@ -69,6 +65,16 @@ public class MainActivity extends AppCompatActivity {
         });
 
         mAppController.initAdView(this);
+    }
+
+    private void updateData() {
+        data = new ArrayList();
+        mAppController.loadExamList();
+        List<Exam> examList = mAppController.getExamList();
+        for (Exam exam : examList) {
+            exam.init();
+            data.add(exam);
+        }
     }
 
     @Override

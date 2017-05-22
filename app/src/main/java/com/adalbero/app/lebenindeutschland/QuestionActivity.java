@@ -11,8 +11,10 @@ import android.view.View;
 import android.widget.Button;
 import android.widget.CompoundButton;
 import android.widget.ImageView;
+import android.widget.LinearLayout;
 import android.widget.RadioButton;
 import android.widget.ScrollView;
+import android.widget.Space;
 import android.widget.TextView;
 
 import com.adalbero.app.lebenindeutschland.controller.AppController;
@@ -20,8 +22,9 @@ import com.adalbero.app.lebenindeutschland.data.Exam;
 import com.adalbero.app.lebenindeutschland.data.Question;
 
 import java.util.List;
+import java.util.Set;
 
-public class QuestionActivity extends AppCompatActivity implements CompoundButton.OnCheckedChangeListener {
+public class QuestionActivity extends AppCompatActivity implements CompoundButton.OnCheckedChangeListener, ResultCallback {
 
     private AppController mAppController;
     private Question mQuestion;
@@ -66,6 +69,38 @@ public class QuestionActivity extends AppCompatActivity implements CompoundButto
 
         mAppController.initAdView(this);
 
+    }
+
+    private void showTagView() {
+        LinearLayout tags_view = (LinearLayout)findViewById(R.id.tags_view);
+        tags_view.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                goTagDialog();
+            }
+        });
+
+        LinearLayout group_tag = (LinearLayout)findViewById(R.id.group_tag);
+        group_tag.removeAllViews();
+        Set<String> tags = mQuestion.getTags();
+        for (String tag : tags) {
+            View view = getLayoutInflater().inflate(R.layout.tag_text, null);
+            TextView textView = (TextView)view;
+            textView.setText(tag);
+            group_tag.addView(textView);
+            Space space = new Space(this);
+            space.setMinimumWidth(10);
+            group_tag.addView(space);
+        }
+//        TextView text_tag = (TextView)findViewById(R.id.text_tag);
+//        String tags = mQuestion.getTags().toString();
+//        text_tag.setText(tags);
+    }
+
+    private void goTagDialog() {
+        TagDialogFragment dialog = new TagDialogFragment();
+        dialog.setSelected(mQuestion.getTags());
+        dialog.show(getFragmentManager(), "tag");
     }
 
     @Override
@@ -155,6 +190,8 @@ public class QuestionActivity extends AppCompatActivity implements CompoundButto
             else if (answer.equals("c")) check(text_option_c, true);
             else if (answer.equals("d")) check(text_option_d, true);
         }
+
+        showTagView();
     }
 
     private void updateProgress() {
@@ -232,5 +269,10 @@ public class QuestionActivity extends AppCompatActivity implements CompoundButto
         }
     }
 
-
+    @Override
+    public void onResult(Object param) {
+        TagDialogFragment dialog = (TagDialogFragment)param;
+        mQuestion.setTags(dialog.getSelected());
+        showTagView();
+    }
 }
