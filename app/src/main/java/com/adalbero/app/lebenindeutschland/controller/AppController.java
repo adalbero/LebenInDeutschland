@@ -5,6 +5,7 @@ import android.app.Application;
 import android.content.SharedPreferences;
 import android.graphics.drawable.Drawable;
 import android.preference.PreferenceManager;
+import android.support.v4.content.ContextCompat;
 
 import com.adalbero.app.lebenindeutschland.R;
 import com.adalbero.app.lebenindeutschland.SettingsActivity;
@@ -203,6 +204,10 @@ public class AppController extends Application {
 
 
         adView.loadAd(adRequest);
+    }
+
+    public int getBackgroundColor(int resource) {
+        return ContextCompat.getColor(this, resource);
     }
 
 }

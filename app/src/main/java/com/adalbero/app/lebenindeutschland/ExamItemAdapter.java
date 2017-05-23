@@ -56,8 +56,7 @@ public class ExamItemAdapter extends ArrayAdapter<Exam> {
             name = "\n" + name;
             gravity = Gravity.CENTER_HORIZONTAL;
         } else {
-            int c = exam.getColor();
-            color = parent.getResources().getColor(c);
+            color = exam.getColor();
         }
 
         View item_view = view.findViewById(R.id.item_view);

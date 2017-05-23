@@ -5,5 +5,5 @@ package com.adalbero.app.lebenindeutschland;
  */
 
 public interface ResultCallback {
-    public void onResult(Object param);
+    void onResult(Object parent, Object param);
 }

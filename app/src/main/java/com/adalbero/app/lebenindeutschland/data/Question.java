@@ -1,5 +1,6 @@
 package com.adalbero.app.lebenindeutschland.data;
 
+import android.support.v4.content.ContextCompat;
 import android.util.Log;
 
 import com.adalbero.app.lebenindeutschland.R;
@@ -87,6 +88,10 @@ public class Question {
         return answer;
     }
 
+    public String getAnswerLetter() {
+        return Character.toString((char)('a' + answer));
+    }
+
     public void setAnswer(int answer) {
         this.answer = answer;
     }
@@ -116,16 +121,19 @@ public class Question {
     }
 
     public int getAreaColor() {
+        int colorRes = 0;
         if (areaCode.equals("politik"))
-            return R.color.colorArea1;
+            colorRes = R.color.colorArea1;
         else if (areaCode.equals("gesellschaft"))
-            return R.color.colorArea2;
+            colorRes = R.color.colorArea2;
         else if (areaCode.equals("geschichte"))
-            return R.color.colorArea3;
+            colorRes = R.color.colorArea3;
         else if (areaCode.equals("land"))
-            return R.color.colorLand;
+            colorRes = R.color.colorLand;
         else
-            return R.color.colorArea0;
+            colorRes = R.color.colorArea0;
+
+        return ContextCompat.getColor(AppController.getInstance(), colorRes);
     }
 
     public String getImage() {

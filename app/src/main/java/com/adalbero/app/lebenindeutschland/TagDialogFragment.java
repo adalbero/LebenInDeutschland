@@ -1,6 +1,5 @@
 package com.adalbero.app.lebenindeutschland;
 
-import android.app.Activity;
 import android.app.Dialog;
 import android.app.DialogFragment;
 import android.content.DialogInterface;
@@ -12,6 +11,7 @@ import android.widget.ListView;
 import android.widget.TextView;
 
 import com.adalbero.app.lebenindeutschland.controller.AppController;
+import com.adalbero.app.lebenindeutschland.data.Question;
 
 import java.util.ArrayList;
 import java.util.HashSet;
@@ -24,28 +24,17 @@ import java.util.Set;
 
 public class TagDialogFragment extends DialogFragment {
 
-    ResultCallback mListener;
+    Question mQuestion;
+
+    private ResultCallback mCallback;
 
     public Set<String> selected;
     private TextView newTag;
 
-    @Override
-    public void onAttach(Activity activity) {
-        super.onAttach(activity);
-        try {
-            mListener = (ResultCallback) activity;
-        } catch (ClassCastException e) {
-            throw new ClassCastException(activity.toString()
-                    + " must implement ResultCallback");
-        }
-    }
-
-    public void setSelected(Set<String> s) {
-        selected = new HashSet<>(s);
-    }
-
-    public Set<String> getSelected() {
-        return selected;
+    public void setQuestion(Question question, ResultCallback callback) {
+        mQuestion = question;
+        mCallback = callback;
+        selected = new HashSet<>(mQuestion.getTags());
     }
 
     public void initView(View v) {
@@ -78,7 +67,8 @@ public class TagDialogFragment extends DialogFragment {
                         if (text != null && text.length() > 0) {
                             selected.add(text.trim());
                         }
-                        mListener.onResult(TagDialogFragment.this);
+                        mQuestion.setTags(selected);
+                        mCallback.onResult(TagDialogFragment.this, null);
                     }
                 })
                 .setNegativeButton(android.R.string.cancel, new DialogInterface.OnClickListener() {

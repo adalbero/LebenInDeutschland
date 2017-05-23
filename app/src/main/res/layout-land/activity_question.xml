@@ -40,7 +40,7 @@
     </LinearLayout>
 
     <TextView
-        android:id="@+id/text_header"
+        android:id="@+id/view_header"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:layout_marginTop="0dp"
@@ -66,7 +66,7 @@
         app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintLeft_toLeftOf="parent"
         app:layout_constraintRight_toRightOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/text_header">
+        app:layout_constraintTop_toBottomOf="@+id/view_header">
 
         <LinearLayout
             android:layout_width="match_parent"
@@ -76,7 +76,7 @@
             tools:layout_editor_absoluteY="201dp">
 
             <TextView
-                android:id="@+id/text_label1"
+                android:id="@+id/view_question"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
@@ -104,11 +104,11 @@
                     android:layout_weight="1"
                     android:orientation="vertical"
                     app:layout_constraintLeft_toLeftOf="parent"
-                    app:layout_constraintRight_toLeftOf="@+id/image_view"
+                    app:layout_constraintRight_toLeftOf="@+id/view_image"
                     app:layout_constraintTop_toTopOf="parent">
 
                     <RadioButton
-                        android:id="@+id/text_option_a"
+                        android:id="@+id/view_option_a"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:layout_marginLeft="8dp"
@@ -121,7 +121,7 @@
                         android:textSize="18sp" />
 
                     <RadioButton
-                        android:id="@+id/text_option_b"
+                        android:id="@+id/view_option_b"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:layout_marginLeft="8dp"
@@ -134,7 +134,7 @@
                         android:textSize="18sp" />
 
                     <RadioButton
-                        android:id="@+id/text_option_c"
+                        android:id="@+id/view_option_c"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:layout_marginLeft="8dp"
@@ -147,7 +147,7 @@
                         android:textSize="18sp" />
 
                     <RadioButton
-                        android:id="@+id/text_option_d"
+                        android:id="@+id/view_option_d"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:layout_marginLeft="8dp"
@@ -162,7 +162,7 @@
                 </RadioGroup>
 
                 <ImageView
-                    android:id="@+id/image_view"
+                    android:id="@+id/view_image"
                     android:layout_width="300dp"
                     android:layout_height="200dp"
                     android:layout_gravity="center"

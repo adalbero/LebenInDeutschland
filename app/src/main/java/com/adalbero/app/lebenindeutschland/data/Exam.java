@@ -1,5 +1,7 @@
 package com.adalbero.app.lebenindeutschland.data;
 
+import android.support.v4.content.ContextCompat;
+
 import com.adalbero.app.lebenindeutschland.R;
 import com.adalbero.app.lebenindeutschland.controller.AppController;
 
@@ -61,7 +63,8 @@ public class Exam {
     }
 
     public int getColor() {
-        return R.color.colorArea0;
+        return AppController.getInstance().getBackgroundColor(R.color.colorArea0);
+//        return R.color.colorArea0;
     }
 
     private String getKey(String key) {
@@ -82,5 +85,13 @@ public class Exam {
         return R.drawable.ic_exam;
     }
 
+    public int getStatusColor(String num) {
+        int status = getResult().getAnswerStatus(num);
+        int colorStatus = ContextCompat.getColor(AppController.getInstance(),
+                status == 1 ? R.color.colorRight
+                        : status == 0 ? R.color.colorWrong
+                        : R.color.colorNotAnswerd);
+        return colorStatus;
+    }
 }
 

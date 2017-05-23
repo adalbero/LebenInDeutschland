@@ -13,7 +13,10 @@
     <color name="colorArea2">#81D4FA</color>
     <color name="colorArea3">#A5D6A7</color>
     <color name="colorLand">#CE93D8</color>
-    <color name="colorQuestion">#FFFFFF</color>
+    <color name="colorQuestion">#616161</color>
+    <color name="colorOptions">#616161</color>
     <color name="colorBackground">#FFFFFF</color>
     <color name="colorCardBG">#B0BEC5</color>
+    <color name="colorTagBG">#E0E0E0</color>
+    <color name="colorTagIcon">#9E9E9E</color>
 </resources>

@@ -49,7 +49,7 @@ public class MainActivity extends AppCompatActivity {
                 if (exam instanceof ExamDynamic) {
                     ((ExamDynamic) exam).build(MainActivity.this, new ResultCallback() {
                         @Override
-                        public void onResult(Object param) {
+                        public void onResult(Object parent, Object param) {
                             goList(name);
                         }
                     });

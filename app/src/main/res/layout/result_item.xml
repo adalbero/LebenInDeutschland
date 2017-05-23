@@ -9,13 +9,13 @@
     tools:showIn="@layout/activity_exam">
 
     <TextView
-        android:id="@+id/text_header"
+        android:id="@+id/view_header"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:layout_marginLeft="8dp"
         android:layout_marginRight="8dp"
         android:padding="8dp"
-        android:text="Ergebnis"
+        android:text="Progress"
         android:textSize="18sp"
         android:textStyle="bold"
         app:layout_constraintLeft_toLeftOf="parent"
@@ -25,15 +25,15 @@
         app:layout_constraintHorizontal_bias="0.5" />
 
     <TextView
-        android:id="@+id/text_label1"
+        android:id="@+id/view_question"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:layout_marginLeft="8dp"
         android:layout_marginTop="0dp"
-        android:text="Fortschritt"
+        android:text="Responded"
         android:textSize="18sp"
-        app:layout_constraintLeft_toLeftOf="@+id/text_header"
-        app:layout_constraintTop_toBottomOf="@+id/text_header" />
+        app:layout_constraintLeft_toLeftOf="@+id/view_header"
+        app:layout_constraintTop_toBottomOf="@+id/view_header" />
 
     <TextView
         android:id="@+id/text_value1"
@@ -44,9 +44,9 @@
         android:text="0"
         android:textAlignment="textEnd"
         android:textSize="18sp"
-        app:layout_constraintRight_toRightOf="@+id/text_header"
-        app:layout_constraintTop_toTopOf="@+id/text_label1"
-        app:layout_constraintLeft_toRightOf="@+id/text_label1"
+        app:layout_constraintRight_toRightOf="@+id/view_header"
+        app:layout_constraintTop_toTopOf="@+id/view_question"
+        app:layout_constraintLeft_toRightOf="@+id/view_question"
         android:layout_marginLeft="8dp"
         app:layout_constraintHorizontal_bias="0.5" />
 
@@ -57,11 +57,11 @@
         android:layout_marginLeft="0dp"
         android:layout_marginRight="0dp"
         android:layout_marginTop="-1dp"
-        android:text="Richtig"
+        android:text="Right"
         android:textSize="18sp"
-        app:layout_constraintLeft_toLeftOf="@+id/text_label1"
-        app:layout_constraintRight_toRightOf="@+id/text_label1"
-        app:layout_constraintTop_toBottomOf="@+id/text_label1"
+        app:layout_constraintLeft_toLeftOf="@+id/view_question"
+        app:layout_constraintRight_toRightOf="@+id/view_question"
+        app:layout_constraintTop_toBottomOf="@+id/view_question"
         app:layout_constraintHorizontal_bias="0.5" />
 
     <TextView

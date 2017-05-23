@@ -111,7 +111,7 @@ public class ExamBySearch extends ExamDynamic {
             public void onClick(DialogInterface dialog, int which) {
                 String text = input.getText().toString();
                 setTerms(text);
-                callback.onResult(getTerms());
+                callback.onResult(ExamBySearch.this, getTerms());
             }
         });
         builder.setNegativeButton("Cancel", new DialogInterface.OnClickListener() {

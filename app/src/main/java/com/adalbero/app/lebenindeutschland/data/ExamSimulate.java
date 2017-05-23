@@ -57,7 +57,7 @@ public class ExamSimulate extends ExamDynamic {
         Collections.shuffle(mQuestionNumList);
 
         if (callback != null) {
-            callback.onResult(null);
+            callback.onResult(this, null);
         }
     }
 
