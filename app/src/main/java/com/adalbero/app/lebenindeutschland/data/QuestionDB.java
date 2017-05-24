@@ -10,6 +10,8 @@ import java.io.IOException;
 import java.io.InputStream;
 import java.io.InputStreamReader;
 import java.util.ArrayList;
+import java.util.Collections;
+import java.util.Comparator;
 import java.util.HashSet;
 import java.util.List;
 import java.util.Set;
@@ -70,6 +72,14 @@ public class QuestionDB {
                 if (!result.contains(value)) result.add(value);
             }
         }
+
+        Collections.sort(result, new Comparator<String>() {
+            @Override
+            public int compare(String o1, String o2) {
+                return o1.substring(3).compareTo(o2.substring(3));
+            }
+        });
+
         return result;
     }
 

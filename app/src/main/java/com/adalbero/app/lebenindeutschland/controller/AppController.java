@@ -67,7 +67,6 @@ public class AppController extends Application {
 
         mExamList.add(new ExamHeader("Liste"));
         mExamList.add(new ExamSimulate("Probetest"));
-        mExamList.add(new ExamBySearch("Search"));
         mExamList.add(new Exam300("Alle"));
 
         updateLand();
@@ -84,10 +83,14 @@ public class AppController extends Application {
             mExamList.add(new ExamByThema(thema));
         }
 
-        mExamList.add(new ExamHeader("Tags"));
+        mExamList.add(new ExamHeader("Filter"));
+        mExamList.add(new ExamBySearch("Search"));
         Set<String> tags = getQuestionDB().getAllTags();
         for (String tag : tags) {
-            mExamList.add(new ExamTag(tag));
+            ExamTag examTag = new ExamTag(tag);
+            examTag.init();
+            if (examTag.getCount() > 0)
+                mExamList.add(examTag);
         }
 
         mExamList.add(new ExamHeader(""));
@@ -191,7 +194,7 @@ public class AppController extends Application {
         String ADS_APP_ID = "ca-app-pub-5723913637413365~4650789131";
         String DEVICE_NEXUS_5X = "580cd7e67c712dc2";
 
-        AdView adView = (AdView)activity.findViewById(R.id.adView);
+        AdView adView = (AdView) activity.findViewById(R.id.adView);
 
         if (adView == null) return;
 

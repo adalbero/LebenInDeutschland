@@ -9,6 +9,7 @@ import android.view.View;
 import android.widget.AdapterView;
 import android.widget.ListView;
 import android.widget.TextView;
+import android.widget.Toast;
 
 import com.adalbero.app.lebenindeutschland.controller.AppController;
 import com.adalbero.app.lebenindeutschland.data.Exam;
@@ -85,6 +86,10 @@ public class ExamActivity extends AppCompatActivity implements ResultCallback {
 
     private void setInline(boolean inline) {
         mAppController.putInt("exam.inline", inline ? 1 : 0);
+
+        String msg = (inline ? "Question inline mode" : "Question view mode");
+        Toast.makeText(this, msg, Toast.LENGTH_SHORT).show();
+
         invalidateOptionsMenu();
         mAdapter.notifyDataSetChanged();
     }
@@ -118,7 +123,7 @@ public class ExamActivity extends AppCompatActivity implements ResultCallback {
         int answerd = mExam.getResult().getAnswerdCount();
         int right = mExam.getResult().countRightAnswers();
 
-        float perc_answerd = (float) (100 * answerd / total);
+        float perc_answerd = total == 0 ? 0 : (float) (100 * answerd / total);
         float perc_right = answerd == 0 ? 0 : (float) (100 * right / answerd);
 
         TextView text_total_value = (TextView) findViewById(R.id.text_value1);

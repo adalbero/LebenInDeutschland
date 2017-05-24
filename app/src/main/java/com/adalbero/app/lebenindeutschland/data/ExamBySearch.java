@@ -39,6 +39,9 @@ public class ExamBySearch extends ExamDynamic {
 
         boolean flag = false;
         for (String term : terms) {
+            if (term.length() == 0)
+                continue;
+
             if (term.charAt(0) == '-') {
                 term = term.substring(1);
                 bExclude = true;
@@ -74,7 +77,7 @@ public class ExamBySearch extends ExamDynamic {
     }
 
     private void setTerms(String text) {
-        if (text == null) {
+        if (text == null || text.trim().length() == 0) {
             terms = null;
         } else {
             terms = text.split("[ ,;]");

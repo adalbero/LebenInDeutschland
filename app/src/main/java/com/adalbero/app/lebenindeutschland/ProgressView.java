@@ -43,20 +43,16 @@ public class ProgressView extends View {
         int h = canvas.getHeight();
         int w = canvas.getWidth();
 
-        int x1 = total == 0 ? 0 : (w * right) / total;
-        int x2 = total == 0 ? 0 : (w * wrong) / total;
-
-        int colorRight = ContextCompat.getColor(getContext(), R.color.colorRight);
-        int colorWrong = ContextCompat.getColor(getContext(), R.color.colorWrong);
+        int colorRight = ContextCompat.getColor(getContext(), R.color.colorRightDark);
+        int colorWrong = ContextCompat.getColor(getContext(), R.color.colorWrongDark);
         int colorNotAnswerd = ContextCompat.getColor(getContext(), R.color.colorNotAnswerd);
-        int colorBackground = ContextCompat.getColor(getContext(), R.color.colorAccent);
 
         paint.setStyle(Paint.Style.FILL);
 
 //        paint.setColor(colorBackground);
 //        canvas.drawRect(new RectF(0, 0, w, h), paint);
 
-        int dx = w / total;
+        int dx = (total == 0 ? w: w / total);
         int corner = h / 2;
 
         for (int i=0; i<total; i++) {

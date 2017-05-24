@@ -41,7 +41,7 @@
             android:id="@+id/img_tag"
             android:layout_width="24dp"
             android:layout_height="24dp"
-            android:layout_marginRight="8dp"
+            android:layout_marginRight="0dp"
             android:layout_weight="0"
             android:padding="2dp"
             android:scaleType="fitCenter"
@@ -68,7 +68,8 @@
         android:layout_marginLeft="8dp"
         android:layout_marginStart="8dp"
         android:layout_marginTop="0dp"
-        android:padding="8dp"
+        android:paddingBottom="8dp"
+        android:paddingLeft="8dp"
         android:text="question"
         android:textColor="@color/colorQuestion"
         android:textSize="18sp"
@@ -78,78 +79,90 @@
         app:layout_constraintRight_toRightOf="@+id/view_header"
         app:layout_constraintTop_toBottomOf="@+id/view_tags" />
 
-    <RadioGroup
+    <LinearLayout
         android:id="@+id/group_options"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
-        android:orientation="vertical"
+        android:orientation="horizontal"
         app:layout_constraintLeft_toLeftOf="@+id/view_question"
         app:layout_constraintRight_toRightOf="@+id/view_question"
         app:layout_constraintTop_toBottomOf="@+id/view_question">
 
-        <CheckedTextView
-            android:id="@+id/view_option_a"
-            android:layout_width="match_parent"
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:orientation="vertical">
+
+            <CheckedTextView
+                android:id="@+id/view_option_a"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:drawableLeft="@drawable/custom_btn_radio"
+                android:gravity="center_vertical"
+                android:padding="4dp"
+                android:tag="a"
+                android:text="Option A"
+                android:textColor="@color/colorOptions"
+                android:textSize="18sp" />
+
+            <CheckedTextView
+                android:id="@+id/view_option_b"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:drawableLeft="@drawable/custom_btn_radio"
+                android:gravity="center_vertical"
+                android:padding="4dp"
+                android:tag="b"
+                android:text="Option B"
+                android:textColor="@color/colorOptions"
+                android:textSize="18sp" />
+
+            <CheckedTextView
+                android:id="@+id/view_option_c"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:drawableLeft="@drawable/custom_btn_radio"
+                android:gravity="center_vertical"
+                android:padding="4dp"
+                android:tag="c"
+                android:text="Option C"
+                android:textColor="@color/colorOptions"
+                android:textSize="18sp" />
+
+            <CheckedTextView
+                android:id="@+id/view_option_d"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:drawableLeft="@drawable/custom_btn_radio"
+                android:gravity="center_vertical"
+                android:padding="4dp"
+                android:tag="d"
+                android:text="Option D"
+                android:textColor="@color/colorOptions"
+                android:textSize="18sp" />
+
+            <ImageView
+                android:id="@+id/view_image"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:minHeight="100dp"
+                android:scaleType="centerInside" />
+
+        </LinearLayout>
+
+        <ImageView
+            android:id="@+id/view_image_alt"
+            android:layout_width="320dp"
             android:layout_height="wrap_content"
-            android:drawableLeft="@drawable/custom_btn_radio"
-            android:gravity="center_vertical"
-            android:padding="4dp"
-            android:tag="a"
-            android:text="Option A"
-            android:textColor="@color/colorOptions"
-            android:textSize="18sp" />
+            android:layout_gravity="top"
+            android:layout_weight="0"
+            android:layout_marginTop="8dp"
+            android:layout_marginRight="8dp"
+            android:minWidth="50dp"
+            android:scaleType="fitStart" />
 
-        <CheckedTextView
-            android:id="@+id/view_option_b"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:drawableLeft="@drawable/custom_btn_radio"
-            android:gravity="center_vertical"
-            android:padding="4dp"
-            android:tag="b"
-            android:text="Option B"
-            android:textColor="@color/colorOptions"
-            android:textSize="18sp" />
-
-        <CheckedTextView
-            android:id="@+id/view_option_c"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:drawableLeft="@drawable/custom_btn_radio"
-            android:gravity="center_vertical"
-            android:padding="4dp"
-            android:tag="c"
-            android:text="Option C"
-            android:textColor="@color/colorOptions"
-            android:textSize="18sp" />
-
-        <CheckedTextView
-            android:id="@+id/view_option_d"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:drawableLeft="@drawable/custom_btn_radio"
-            android:gravity="center_vertical"
-            android:padding="4dp"
-            android:tag="d"
-            android:text="Option D"
-            android:textColor="@color/colorOptions"
-            android:textSize="18sp" />
-
-    </RadioGroup>
-
-    <ImageView
-        android:id="@+id/view_image"
-        android:layout_width="0dp"
-        android:layout_height="wrap_content"
-        android:layout_gravity="center"
-        android:layout_marginLeft="0dp"
-        android:layout_marginRight="0dp"
-        android:layout_marginTop="8dp"
-        android:minHeight="100dp"
-        android:scaleType="centerInside"
-        app:layout_constraintLeft_toLeftOf="@+id/view_question"
-        app:layout_constraintRight_toRightOf="@+id/view_question"
-        app:layout_constraintTop_toBottomOf="@+id/group_options" />
-
+    </LinearLayout>
 
 </android.support.constraint.ConstraintLayout>

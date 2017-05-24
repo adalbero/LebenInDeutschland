@@ -1,7 +1,6 @@
 package com.adalbero.app.lebenindeutschland.data;
 
 import android.content.Context;
-import android.util.Log;
 
 import com.adalbero.app.lebenindeutschland.R;
 import com.adalbero.app.lebenindeutschland.ResultCallback;
@@ -38,8 +37,6 @@ public class ExamSimulate extends ExamDynamic {
 
         int TOTAL_ALL = 30;
         int TOTAL_LAND = 3;
-
-        Log.d("MyApp", "ExamSimulate.build: shuffle");
 
         Collections.shuffle(idx_all);
         Collections.shuffle(idx_land);

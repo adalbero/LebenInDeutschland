@@ -5,18 +5,20 @@
     <color name="colorAccent">#3F51B5</color>
 
     <color name="colorRight">#c8e6c9</color>
+    <color name="colorRightDark">#A5D6A7</color>
     <color name="colorWrong">#ffcdd2</color>
-    <color name="colorNotAnswerd">#E0E0E0</color>
+    <color name="colorWrongDark">#EF9A9A</color>
+    <color name="colorNotAnswerd">#BDBDBD</color>
 
     <color name="colorArea0">#BCAAA4</color>
     <color name="colorArea1">#FFE082</color>
-    <color name="colorArea2">#81D4FA</color>
-    <color name="colorArea3">#A5D6A7</color>
+    <color name="colorArea2">#A2DAF4</color>
+    <color name="colorArea3">#C5D882</color>
     <color name="colorLand">#CE93D8</color>
     <color name="colorQuestion">#616161</color>
     <color name="colorOptions">#616161</color>
     <color name="colorBackground">#FFFFFF</color>
-    <color name="colorCardBG">#B0BEC5</color>
+    <color name="colorCardBG">#E0E0E0</color>
     <color name="colorTagBG">#E0E0E0</color>
     <color name="colorTagIcon">#9E9E9E</color>
 </resources>

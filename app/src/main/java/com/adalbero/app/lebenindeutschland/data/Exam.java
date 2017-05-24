@@ -23,8 +23,12 @@ public class Exam {
 
     protected void filterQuestions() {
         List<String> list = new ArrayList<>();
+        String land = AppController.getInstance().getSelectedLandName();
         QuestionDB questionDB = AppController.getInstance().getQuestionDB();
         for (Question q : questionDB.listAll()) {
+            if (q.getAreaCode().equals("land") & !q.getTheme().equals(land))
+                continue;
+
             if (isFilter(q))
                 list.add(q.getNum());
         }
@@ -88,8 +92,8 @@ public class Exam {
     public int getStatusColor(String num) {
         int status = getResult().getAnswerStatus(num);
         int colorStatus = ContextCompat.getColor(AppController.getInstance(),
-                status == 1 ? R.color.colorRight
-                        : status == 0 ? R.color.colorWrong
+                status == 1 ? R.color.colorRightDark
+                        : status == 0 ? R.color.colorWrongDark
                         : R.color.colorNotAnswerd);
         return colorStatus;
     }

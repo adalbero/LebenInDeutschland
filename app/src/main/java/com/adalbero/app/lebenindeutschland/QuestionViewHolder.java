@@ -3,11 +3,12 @@ package com.adalbero.app.lebenindeutschland;
 import android.app.Activity;
 import android.graphics.Color;
 import android.graphics.drawable.Drawable;
+import android.util.DisplayMetrics;
+import android.util.Log;
 import android.view.View;
 import android.widget.CheckedTextView;
 import android.widget.ImageView;
 import android.widget.LinearLayout;
-import android.widget.RadioGroup;
 import android.widget.Space;
 import android.widget.TextView;
 
@@ -33,9 +34,11 @@ public class QuestionViewHolder implements View.OnClickListener, ResultCallback 
     private TextView mViewQuestion;
     private CheckedTextView mViewOptions[] = new CheckedTextView[4];
     private ImageView mViewImage;
-    private RadioGroup mGroupOptions;
+    private ImageView mViewImageAlt;
+    private View mGroupOptions;
 
     private ResultCallback mCallback;
+    private boolean hasSpace;
 
     private static int COLOR_RIGHT = AppController.getInstance().getBackgroundColor(R.color.colorRight);
     private static int COLOR_WRONG = AppController.getInstance().getBackgroundColor(R.color.colorWrong);
@@ -52,16 +55,28 @@ public class QuestionViewHolder implements View.OnClickListener, ResultCallback 
         mViewStatus = view.findViewById(R.id.view_status);
         mViewQuestion = (TextView) view.findViewById(R.id.view_question);
 
-        mGroupOptions = (RadioGroup) view.findViewById(R.id.group_options);
+        mGroupOptions = view.findViewById(R.id.group_options);
         mViewOptions[0] = (CheckedTextView) view.findViewById(R.id.view_option_a);
         mViewOptions[1] = (CheckedTextView) view.findViewById(R.id.view_option_b);
         mViewOptions[2] = (CheckedTextView) view.findViewById(R.id.view_option_c);
         mViewOptions[3] = (CheckedTextView) view.findViewById(R.id.view_option_d);
         mViewImage = (ImageView) view.findViewById(R.id.view_image);
+        mViewImageAlt = (ImageView) view.findViewById(R.id.view_image_alt);
 
         for (CheckedTextView btn : mViewOptions) {
             btn.setOnClickListener(this);
         }
+
+        DisplayMetrics displayMetrics = AppController.getInstance().getResources().getDisplayMetrics();
+        float h = displayMetrics.heightPixels / displayMetrics.density;
+        float w = displayMetrics.widthPixels / displayMetrics.density;
+
+        if (!questionPage && w > h)
+            w -= 300;
+
+        Log.d("MyApp", "QuestionViewHolder.show: " + w);
+
+        hasSpace = w > 600;
     }
 
 
@@ -106,10 +121,19 @@ public class QuestionViewHolder implements View.OnClickListener, ResultCallback 
                 String imageName = mQuestion.getImage();
                 if (imageName == null) {
                     mViewImage.setVisibility(View.GONE);
+                    mViewImageAlt.setVisibility(View.GONE);
                 } else {
                     Drawable drawable = AppController.getInstance().getDrawable(imageName);
-                    mViewImage.setImageDrawable(drawable);
-                    mViewImage.setVisibility(View.VISIBLE);
+
+                    if (hasSpace) {
+                        mViewImageAlt.setImageDrawable(drawable);
+                        mViewImageAlt.setVisibility(View.VISIBLE);
+                        mViewImage.setVisibility(View.GONE);
+                    } else {
+                        mViewImage.setImageDrawable(drawable);
+                        mViewImage.setVisibility(View.VISIBLE);
+                        mViewImageAlt.setVisibility(View.GONE);
+                    }
                 }
             }
 
@@ -118,6 +142,8 @@ public class QuestionViewHolder implements View.OnClickListener, ResultCallback 
                 mGroupOptions.setVisibility(View.GONE);
             if (mViewImage != null)
                 mViewImage.setVisibility(View.GONE);
+            if (mViewImageAlt != null)
+                mViewImageAlt.setVisibility(View.GONE);
             if (mViewTags != null)
                 mViewTags.setOnClickListener(null);
         }
@@ -140,14 +166,15 @@ public class QuestionViewHolder implements View.OnClickListener, ResultCallback 
         btn.setClickable(response == null);
 
         int color;
-        if (response == null)
+        if (response == null) {
             color = Color.TRANSPARENT;
-        else if (btn.getTag().equals(answer))
+        } else if (btn.getTag().equals(answer)) {
             color = COLOR_RIGHT;
-        else if (btn.getTag().equals(response))
+        } else if (btn.getTag().equals(response)) {
             color = COLOR_WRONG;
-        else
+        } else {
             color = Color.TRANSPARENT;
+        }
 
         btn.setBackgroundColor(color);
         btn.setChecked(selected);

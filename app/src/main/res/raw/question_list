@@ -262,7 +262,7 @@ num;question;a;b;c;d;solution;area_code;area;thema;image
 261;Ein Mann möchte mit 30 Jahren in Deutschland sein Abitur nachholen. Wo kann er das tun? An ...;einer Hochschule;einem Abendgymnasium;einer Hauptschule;einer Privatuniversität;b;gesellschaft;Mensch und Gesellschaft;Bildung;-
 262;Was bedeutet in Deutschland der Grundsatz der Gleichbehandlung?;Niemand darf z.B. wegen einer Behinderung benachteiligt werden.;Man darf andere Personen benachteiligen, wenn ausreichende persönliche Gründe hierfür vorliegen.;Niemand darf gegen Personen klagen, wenn sie benachteiligt wurden.;Es ist für alle Gesetz, benachteiligten Gruppen jährlich Geld zu spenden.;a;politik;Politik in der Demokratie;Grundrechte;-
 263;In Deutschland sind Jugendliche ab 14 Jahren strafmündig. Das bedeutet: Jugendliche, die 14 Jahre und älter sind und gegen Strafgesetze verstoßen, ...;werden bestraft.;werden wie Erwachsene behandelt.;teilen die Strafe mit ihren Eltern.;werden nicht bestraft.;a;politik;Politik in der Demokratie;Recht und Alltag;-
-264;Zu welchem Fest tragen Menschen in Deutschland bunte Kostüme und Masken?;am Rosenmontag;am Maifeiertag;gesellschaft;an Pfingsten;a;gesellschaft;Mensch und Gesellschaft;Interkulturelles Zusammenleben;-
+264;Zu welchem Fest tragen Menschen in Deutschland bunte Kostüme und Masken?;am Rosenmontag;am Maifeiertag;beim Oktoberfest;an Pfingsten;a;gesellschaft;Mensch und Gesellschaft;Interkulturelles Zusammenleben;-
 265;Wohin muss man in Deutschland zuerst gehen, wenn man heiraten möchte?;zum Einwohnermeldeamt;zum Ordnungsamt;zur Agentur für Arbeit;zum Standesamt;d;politik;Politik in der Demokratie;Kommune;-
 266;Wann beginnt die gesetzliche Nachtruhe in Deutschland?;wenn die Sonne untergeht;wenn die Nachbarn schlafen gehen;um 0 Uhr, Mitternacht;um 22 Uhr;d;politik;Politik in der Demokratie;Recht und Alltag;-
 267;Eine junge Frau in Deutschland, 22 Jahre alt, lebt mit ihrem Freund zusammen. Die Eltern der Frau finden das nicht gut, weil ihnen der Freund nicht gefällt. Was können die Eltern tun?;Sie müssen die Entscheidung der volljährigen Tochter respektieren.;Sie haben das Recht, die Tochter in die elterliche Wohnung zurückzuholen.;Sie können zur Polizei gehen und die Tochter anzeigen.;Sie suchen einen anderen Mann für die Tochter.;a;politik;Politik in der Demokratie;Recht und Alltag;-
@@ -299,6 +299,86 @@ num;question;a;b;c;d;solution;area_code;area;thema;image
 298;In der DDR lebten vor allem Migranten aus ...;Vietnam, Polen, Mosambik.;Frankreich, Rumänien, Somalia.;Chile, Ungarn, Simbabwe.;Nordkorea, Mexiko, Ägypten.;a;gesellschaft;Mensch und Gesellschaft;Migrationsgeschichte;-
 299;Ausländische Arbeitnehmer und Arbeitnehmerinnen, die in den 50er- und 60er Jahren von der Bundesrepublik Deutschland angeworben wurden, nannte man ...;Schwarzarbeiter / Schwarzarbeiterinnen.;Gastarbeiter / Gastarbeiterinnen.;Zeitarbeiter /Zeitarbeiterinnen.;Schichtarbeiter / Schichtarbeiterinnen.;b;gesellschaft;Mensch und Gesellschaft;Migrationsgeschichte;-
 300;Aus welchem Land kamen die ersten Gastarbeiter / Gastarbeiterinnen in die Bundesrepublik Deutschland?;Italien;Spanien;Portugal;Türkei;a;gesellschaft;Mensch und Gesellschaft;Migrationsgeschichte;-
+BB-1;Welches Wappen gehört zum Bundesland Brandenburg?;1;2;3;4;a;land;Bundesland;Brandenburg;frage_bb_1
+BB-2;Welches ist ein Landkreis in Brandenburg?;Prignitz;Rhein-Sieg-Kreis;Vogtlandkreis;Amberg-Sulzbach;a;land;Bundesland;Brandenburg;-
+BB-3;Für wie viele Jahre wird der Landtag in Brandenburg gewählt?;3;4;5;6;c;land;Bundesland;Brandenburg;-
+BB-4;Ab welchem Alter darf man in Brandenburg bei Kommunalwahlen wählen?;14;18;16;20;c;land;Bundesland;Brandenburg;-
+BB-5;Welche Farben hat die Landesflagge von Brandenburg?;blau-weiß-rot;rot-weiß;grün-weiß-rot;schwarz-gelb;b;land;Bundesland;Brandenburg;-
+BB-6;Wo können Sie sich in Brandenburg über politische Themen informieren?;bei den Kirchen;beim Ordnungsamt der Gemeinde;bei der Landeszentrale für politische Bildung;bei der Verbraucherzentrale;c;land;Bundesland;Brandenburg;-
+BB-7;Die Landeshauptstadt von Brandenburg heißt ...;Potsdam.;Cottbus.;Brandenburg.;Frankfurt/Oder.;a;land;Bundesland;Brandenburg;-
+BB-8;Welches Bundesland ist Brandenburg?;1;2;3;4;d;land;Bundesland;Brandenburg;frage_bb_8
+BB-9;Wie nennt man den Regierungschef / die Regierungschefin in Brandenburg?;Erster Minister / Erste Ministerin;Premierminister / Premierministerin;Bürgermeister / Bürgermeisterin;Ministerpräsident / Ministerpräsidentin;d;land;Bundesland;Brandenburg;-
+BB-10;Welchen Minister / welche Ministerin hat Brandenburg nicht?;Justizminister / Justizministerin;Außenminister / Außenministerin;Finanzminister / Finanzministerin;Innenminister / Innenministerin;b;land;Bundesland;Brandenburg;-
+BE-1;Welches Wappen gehört zum Bundesland Berlin?;1;2;3;4;d;land;Bundesland;Berlin;frage_be_1
+BE-2;Welches ist ein Bezirk von Berlin?;Altona;Prignitz;Pankow;Demmin;c;land;Bundesland;Berlin;-
+BE-3;Für wie viele Jahre wird das Landesparlament in Berlin gewählt?;3;4;5;6;c;land;Bundesland;Berlin;-
+BE-4;Ab welchem Alter darf man in Berlin bei Kommunalwahlen (Wahl der Bezirksverordnetenversammlung) wählen?;14;16;18;20;b;land;Bundesland;Berlin;-
+BE-5;Welche Farben hat die Landesflagge von Berlin?;blau-weiß-rot;weiß-rot;grün-weiß-rot;schwarz-gold;b;land;Bundesland;Berlin;-
+BE-6;Wo können Sie sich in Berlin über politische Themen informieren?;beim Ordnungsamt der Gemeinde;bei den Kirchen;bei der Verbraucherzentrale;bei der Landeszentrale für politische Bildung;d;land;Bundesland;Berlin;-
+BE-7;Welches Bundesland ist ein Stadtstaat?;Berlin;Saarland;Brandenburg;Hessen;a;land;Bundesland;Berlin;-
+BE-8;Welches Bundesland ist Berlin?;1;2;3;4;d;land;Bundesland;Berlin;frage_be_8
+BE-9;Wie nennt man den Regierungschef / die Regierungschefin des Stadtstaates Berlin?;Ministerpräsident / Ministerpräsidentin;Oberbürgermeister / Oberbürgermeisterin;Präsident / Präsidentin des Senats;Regierender Bürgermeister / Regierende Bürgermeisterin;d;land;Bundesland;Berlin;-
+BE-10;Welchen Senator / welche Senatorin hat Berlin nicht?;Finanzsenator / Finanzsenatorin;Innensenator / Innensenatorin;Senator / Senatorin für Außenbeziehungen;Justizsenator / Justizsenatorin;c;land;Bundesland;Berlin;-
+BW-1;Welches Wappen gehört zum Bundesland Baden-Württemberg?;1;2;3;4;a;land;Bundesland;Baden-Württemberg;frage_bw_1
+BW-2;Welches ist ein Landkreis in Baden-Württemberg?;Demmin;Neckar-Odenwald-Kreis;Nordfriesland;Altötting;b;land;Bundesland;Baden-Württemberg;-
+BW-3;Für wie viele Jahre wird der Landtag in Baden-Württemberg gewählt?;3;4;5;6;c;land;Bundesland;Baden-Württemberg;-
+BW-4;Ab welchem Alter darf man in Baden-Württemberg bei Kommunalwahlen wählen?;14;16;18;20;b;land;Bundesland;Baden-Württemberg;-
+BW-5;Welche Farben hat die Landesflagge von Baden-Württemberg?;blau-weiß-rot;schwarz-gold;weiß-blau;grün-weiß-rot;b;land;Bundesland;Baden-Württemberg;-
+BW-6;Wo können Sie sich in Baden-Württemberg über politische Themen informieren?;beim Ordnungsamt der Gemeinde;bei der Verbraucherzentrale;bei der Landeszentrale für politische Bildung;bei den Kirchen;c;land;Bundesland;Baden-Württemberg;-
+BW-7;Die Landeshauptstadt von Baden-Württemberg heißt ...;Heidelberg.;Stuttgart.;Karlsruhe.;Mannheim.;b;land;Bundesland;Baden-Württemberg;-
+BW-8;Welches Bundesland ist Baden-Württemberg?;1;2;3;4;b;land;Bundesland;Baden-Württemberg;frage_bw_8
+BW-9;Wie nennt man den Regierungschef / die Regierungschefin in Baden-Württemberg?;Erster Minister / Erste Ministerin;Premierminister / Premierministerin;Bürgermeister / Bürgermeisterin;Ministerpräsident / Ministerpräsidentin;d;land;Bundesland;Baden-Württemberg;-
+BW-10;Welchen Minister / welche Ministerin hat Baden-Württemberg nicht?;Finanzminister / Finanzministerin;Justizminister / Justizministerin;Innenminister / Innenministerin;Außenminister / Außenministerin;d;land;Bundesland;Baden-Württemberg;-
+BY-1;Welches Wappen gehört zum Freistaat Bayern?;1;2;3;4;b;land;Bundesland;Bayern;frage_by_1
+BY-2;Welches ist ein Landkreis in Bayern?;Prignitz;Rhein-Sieg-Kreis;Nordfriesland;Altötting;d;land;Bundesland;Bayern;-
+BY-3;Für wie viele Jahre wird der Landtag in Bayern gewählt?;3;4;5;6;c;land;Bundesland;Bayern;-
+BY-4;Ab welchem Alter darf man in Bayern bei Kommunalwahlen wählen?;14;16;18;20;c;land;Bundesland;Bayern;-
+BY-5;Welche Farben hat die Landesflagge von Bayern?;blau-weiß-rot;weiß-blau;grün-weiß-rot;schwarz-gelb;b;land;Bundesland;Bayern;-
+BY-6;Wo können Sie sich in Bayern über politische Themen informieren?;beim Ordnungsamt der Gemeinde;bei der Landeszentrale für politische Bildung;bei der Verbraucherzentrale;bei den Kirchen;b;land;Bundesland;Bayern;-
+BY-7;Die Landeshauptstadt von Bayern heißt ...;Ingolstadt.;Regensburg.;Nürnberg.;München.;d;land;Bundesland;Bayern;-
+BY-8;Welches Bundesland ist Bayern?;1;2;3;4;d;land;Bundesland;Bayern;frage_by_8
+BY-9;Wie nennt man den Regierungschef / die Regierungschefin in Bayern?;Erster Minister / Erste Ministerin;Premierminister / Premierministerin;Bürgermeister / Bürgermeisterin;Ministerpräsident / Ministerpräsidentin;d;land;Bundesland;Bayern;-
+BY-10;Welchen Minister / welche Ministerin hat Bayern nicht?;Justizminister / Justizministerin;Außenminister / Außenministerin;Finanzminister / Finanzministerin;Innenminister / Innenministerin;b;land;Bundesland;Bayern;-
+HB-1;Welches Wappen gehört zur Freien Hansestadt Bremen?;1;2;3;4;c;land;Bundesland;Bremen;frage_hb_1
+HB-2;Welches ist ein Stadtteil von Bremen?;Altona;Hemelingen;Pankow;Babelsberg;b;land;Bundesland;Bremen;-
+HB-3;Für wie viele Jahre wird das Landesparlament in Bremen gewählt?;3;4;5;6;b;land;Bundesland;Bremen;-
+HB-4;Ab welchem Alter darf man in Bremen bei den Wahlen zur Bürgerschaft (Landtag) wählen?;14;16;18;20;b;land;Bundesland;Bremen;-
+HB-5;Welche Farben hat die Landesflagge von Bremen?;blau-weiß-rot;rot-weiß;grün-weiß-rot;schwarz-gold;b;land;Bundesland;Bremen;-
+HB-6;Wo können Sie sich in Bremen über politische Themen informieren?;beim Ordnungsamt der Gemeinde;bei der Landeszentrale für politische Bildung;bei den Kirchen;bei der Verbraucherzentrale;b;land;Bundesland;Bremen;-
+HB-7;Was ist ein deutscher Stadtstaat?;Bremen;München;Frankfurt;Erfurt;a;land;Bundesland;Bremen;-
+HB-8;Welches Bundesland ist Bremen?;1;2;3;4;a;land;Bundesland;Bremen;frage_hb_8
+HB-9;Wie nennt man den Regierungschef / die Regierungschefin des Stadtstaates Bremen?;Ministerpräsident / Ministerpräsidentin;Erster Bürgermeister / Erste Bürgermeisterin;Präsident / Präsidentin des Senats;Regierender Bürgermeister / Regierende Bürgermeisterin;c;land;Bundesland;Bremen;-
+HB-10;Welchen Senator / welche Senatorin hat Bremen nicht?;Senator / Senatorin für Außenbeziehungen;Finanzsenator / Finanzsenatorin;Justizsenator / Justizsenatorin;Innensenator / Innensenatorin;a;land;Bundesland;Bremen;-
+HE-1;Welches Wappen gehört zum Bundesland Hessen?;1;2;3;4;a;land;Bundesland;Hessen;frage_he_1
+HE-2;Welches ist ein Landkreis in Hessen?;Ammerland;Altötting;Prignitz;Main-Taunus-Kreis;d;land;Bundesland;Hessen;-
+HE-3;Für wie viele Jahre wird der Landtag in Hessen gewählt?;3;4;5;6;c;land;Bundesland;Hessen;-
+HE-4;Ab welchem Alter darf man in Hessen bei Kommunalwahlen wählen?;14;16;18;20;c;land;Bundesland;Hessen;-
+HE-5;Welche Farben hat die Landesflagge von Hessen?;blau-weiß-rot;rot-weiß;schwarz-gold;grün-weiß-rot;b;land;Bundesland;Hessen;-
+HE-6;Wo können Sie sich in Hessen über politische Themen informieren?;bei der Landeszentrale für politische Bildung;bei der Verbraucherzentrale;beim Ordnungsamt der Gemeinde;bei den Kirchen;a;land;Bundesland;Hessen;-
+HE-7;Die Landeshauptstadt von Hessen heißt ...;Kassel.;Darmstadt.;Frankfurt.;Wiesbaden.;d;land;Bundesland;Hessen;-
+HE-8;Welches Bundesland ist Hessen?;1;2;3;4;c;land;Bundesland;Hessen;frage_he_8
+HE-9;Wie nennt man den Regierungschef / die Regierungschefin in Hessen?;Erster Minister / Erste Ministerin;Premierminister / Premierministerin;Bürgermeister / Bürgermeisterin;Ministerpräsident / Ministerpräsidentin;d;land;Bundesland;Hessen;-
+HE-10;Welchen Minister / welche Ministerin hat Hessen nicht?;Justizminister / Justizministerin;Außenminister / Außenministerin;Finanzminister / Finanzministerin;Innenminister / Innenministerin;b;land;Bundesland;Hessen;-
+HH-1;Welches Wappen gehört zur Freien und Hansestadt Hamburg?;1;2;3;4;b;land;Bundesland;Hamburg;frage_hh_1
+HH-2;Welches ist ein Bezirk von Hamburg?;Altona;Hemelingen;Pankow;Demmin;a;land;Bundesland;Hamburg;-
+HH-3;Für wie viele Jahre wird das Landesparlament in Hamburg gewählt?;3;4;5;6;c;land;Bundesland;Hamburg;-
+HH-4;Ab welchem Alter darf man in Hamburg bei Kommunalwahlen (Wahl der Bezirksversammlungen) wählen?;14;16;18;20;b;land;Bundesland;Hamburg;-
+HH-5;Welche Farben hat die Landesflagge von Hamburg?;blau-weiß-rot;weiß-rot;grün-weiß-rot;schwarz-gelb;b;land;Bundesland;Hamburg;-
+HH-6;Wo können Sie sich in Hamburg über politische Themen informieren?;beim Ordnungsamt der Gemeinde;bei der Verbraucherzentrale;bei den Kirchen;bei der Landeszentrale für politische Bildung;d;land;Bundesland;Hamburg;-
+HH-7;Welches Bundesland ist ein Stadtstaat?;Hamburg;Sachsen;Bayern;Thüringen;a;land;Bundesland;Hamburg;-
+HH-8;Welches Bundesland ist Hamburg?;1;2;3;4;c;land;Bundesland;Hamburg;frage_hh_8
+HH-9;Wie nennt man den Regierungschef / die Regierungschefin des Stadtstaates Hamburg?;Ministerpräsident / Ministerpräsidentin;Erster Bürgermeister / Erste Bürgermeisterin;Regierender Senator / Regierende Senatorin;Oberbürgermeister / Oberbürgermeisterin;b;land;Bundesland;Hamburg;-
+HH-10;Welchen Senator / welche Senatorin hat Hamburg nicht?;Justizsenator / Justizsenatorin;Senator / Senatorin für Außenbeziehungen;Finanzsenator / Finanzsenatorin;Innensenator / Innensenatorin;b;land;Bundesland;Hamburg;-
+MV-1;Welches Wappen gehört zum Bundesland Mecklenburg-Vorpommern?;1;2;3;4;c;land;Bundesland;Mecklenburg-Vorpommern;frage_mv_1
+MV-2;Welches ist ein Landkreis in Mecklenburg-Vorpommern?;Prignitz;Demmin;Vogtlandkreis;Rhein-Sieg-Kreis;b;land;Bundesland;Mecklenburg-Vorpommern;-
+MV-3;Für wie viele Jahre wird der Landtag in Mecklenburg-Vorpommern gewählt?;3;4;5;6;c;land;Bundesland;Mecklenburg-Vorpommern;-
+MV-4;Ab welchem Alter darf man in Mecklenburg-Vorpommern bei Kommunalwahlen wählen?;14;16;18;20;b;land;Bundesland;Mecklenburg-Vorpommern;-
+MV-5;Welche Farben hat die Landesflagge von Mecklenburg-Vorpommern?;schwarz-rot-gold;blau-weiß-gelb-rot;grün-weiß-rot;schwarz-gelb;b;land;Bundesland;Mecklenburg-Vorpommern;-
+MV-6;Wo können Sie sich in Mecklenburg-Vorpommern über politische Themen informieren?;bei der Landeszentrale für politische Bildung;bei den Kirchen;beim Ordnungsamt der Gemeinde;bei der Verbraucherzentrale;a;land;Bundesland;Mecklenburg-Vorpommern;-
+MV-7;Die Landeshauptstadt von Mecklenburg-Vorpommern heißt ...;Greifswald.;Schwerin.;Rostock.;Wismar.;b;land;Bundesland;Mecklenburg-Vorpommern;-
+MV-8;Welches Bundesland ist Mecklenburg-Vorpommern?;1;2;3;4;c;land;Bundesland;Mecklenburg-Vorpommern;frage_mv_8
+MV-9;Wie nennt man den Regierungschef / die Regierungschefin in Mecklenburg-Vorpommern?;Erster Minister / Erste Ministerin;Premierminister / Premierministerin;Bürgermeister / Bürgermeisterin;Ministerpräsident / Ministerpräsidentin;d;land;Bundesland;Mecklenburg-Vorpommern;-
+MV-10;Welchen Minister / welche Ministerin hat Mecklenburg-Vorpommern nicht?;Justizminister / Justizministerin;Außenminister / Außenministerin;Finanzminister / Finanzministerin;Innenminister / Innenministerin;b;land;Bundesland;Mecklenburg-Vorpommern;-
 NI-1;Welches Wappen gehört zum Bundesland Niedersachsen?;1;2;3;4;c;land;Bundesland;Niedersachsen;frage_ni_1
 NI-2;Welches ist ein Landkreis in Niedersachsen?;Ammerland;Rhein-Sieg-Kreis;Nordfriesland;Vogtlandkreis;a;land;Bundesland;Niedersachsen;-
 NI-3;Für wie viele Jahre wird der Landtag in Niedersachsen gewählt?;3;4;5;6;c;land;Bundesland;Niedersachsen;-
@@ -309,6 +389,66 @@ NI-7;Die Landeshauptstadt von Niedersachsen heißt …;Hannover.;Braunschweig.;W
 NI-8;Welches Bundesland ist Niedersachsen?;1;2;3;4;a;land;Bundesland;Niedersachsen;frage_ni_8
 NI-9;Wie nennt man den Regierungschef / die Regierungschefin in Niedersachsen?;Erster Minister / Erste Ministerin;Premierminister / Premierministerin;Bürgermeister / Bürgermeisterin;Ministerpräsident / Ministerpräsidentin;d;land;Bundesland;Niedersachsen;-
 NI-10;Welchen Minister / welche Ministerin hat Niedersachsen nicht?;Justizminister / Justizministerin;Außenminister / Außenministerin;Finanzminister / Finanzministerin;Innenminister / Innenministerin;b;land;Bundesland;Niedersachsen;-
+NW-1;Welches Wappen gehört zum Bundesland Nordrhein-Westfalen?;1;2;3;4;b;land;Bundesland;Nordrhein-Westfalen;frage_nw_1
+NW-2;Welches ist ein Landkreis in Nordrhein-Westfalen?;Ammerland;Rhein-Sieg-Kreis;Nordfriesland;Vogtlandkreis;b;land;Bundesland;Nordrhein-Westfalen;-
+NW-3;Für wie viele Jahre wird der Landtag in Nordrhein-Westfalen gewählt?;3;4;5;6;c;land;Bundesland;Nordrhein-Westfalen;-
+NW-4;Ab welchem Alter darf man in Nordrhein-Westfalen bei Kommunalwahlen wählen?;14;16;18;20;b;land;Bundesland;Nordrhein-Westfalen;-
+NW-5;Welche Farben hat die Landesflagge von Nordrhein-Westfalen?;rot-weiß;grün-weiß-rot;schwarz-gold;blau-weiß-rot;b;land;Bundesland;Nordrhein-Westfalen;-
+NW-6;Wo können Sie sich in Nordrhein-Westfalen über politische Themen informieren?;bei den Kirchen;beim Ordnungsamt der Gemeinde;bei der Verbraucherzentrale;bei der Landeszentrale für politische Bildung;d;land;Bundesland;Nordrhein-Westfalen;-
+NW-7;Die Landeshauptstadt von Nordrhein-Westfalen heißt …;Köln.;Bonn.;Düsseldorf.;Dortmund.;c;land;Bundesland;Nordrhein-Westfalen;-
+NW-8;Welches Bundesland ist Nordrhein-Westfalen?;1;2;3;4;c;land;Bundesland;Nordrhein-Westfalen;frage_nw_8
+NW-9;Wie nennt man den Regierungschef / die Regierungschefin in Nordrhein-Westfalen?;Erster Minister / Erste Ministerin;Premierminister / Premierministerin;Bürgermeister / Bürgermeisterin;Ministerpräsident / Ministerpräsidentin;d;land;Bundesland;Nordrhein-Westfalen;-
+NW-10;Welchen Minister / welche Ministerin hat Nordrhein-Westfalen nicht?;Justizminister / Justizministerin;Außenminister / Außenministerin;Finanzminister / Finanzministerin;Innenminister / Innenministerin;b;land;Bundesland;Nordrhein-Westfalen;-
+RP-1;Welches Wappen gehört zum Bundesland Rheinland-Pfalz?;1;2;3;4;a;land;Bundesland;Rheinland-Pfalz;frage_rp_1
+RP-2;Welches ist ein Landkreis in Rheinland-Pfalz?;Westerwaldkreis;Altötting;Emsland;Prignitz;a;land;Bundesland;Rheinland-Pfalz;-
+RP-3;Für wie viele Jahre wird der Landtag in Rheinland-Pfalz gewählt?;3;4;5;6;c;land;Bundesland;Rheinland-Pfalz;-
+RP-4;Ab welchem Alter darf man in Rheinland-Pfalz bei Kommunalwahlen wählen?;14;16;18;20;c;land;Bundesland;Rheinland-Pfalz;-
+RP-5;Welche Farben hat die Landesflagge von Rheinland-Pfalz?;weiß-rot;schwarz-rot-gold;schwarz-gelb;grün-weiß-rot;b;land;Bundesland;Rheinland-Pfalz;-
+RP-6;Wo können Sie sich in Rheinland-Pfalz über politische Themen informieren?;bei den Kirchen;bei der Verbraucherzentrale;beim Ordnungsamt der Gemeinde;bei der Landeszentrale für politische Bildung;d;land;Bundesland;Rheinland-Pfalz;-
+RP-7;Die Landeshauptstadt von Rheinland-Pfalz heißt …;Mainz.;Kaiserslautern.;Ludwigshafen.;Koblenz.;a;land;Bundesland;Rheinland-Pfalz;-
+RP-8;Welches Bundesland ist Rheinland-Pfalz?;1;2;3;4;a;land;Bundesland;Rheinland-Pfalz;frage_rp_8
+RP-9;Wie nennt man den Regierungschef / die Regierungschefin in Rheinland-Pfalz?;Erster Minister / Erste Ministerin;Premierminister / Premierministerin;Bürgermeister / Bürgermeisterin;Ministerpräsident / Ministerpräsidentin;d;land;Bundesland;Rheinland-Pfalz;-
+RP-10;Welchen Minister / welche Ministerin hat Rheinland-Pfalz nicht?;Justizminister / Justizministerin;Außenminister / Außenministerin;Finanzminister / Finanzministerin;Innenminister / Innenministerin;b;land;Bundesland;Rheinland-Pfalz;-
+SH-1;Welches Wappen gehört zum Bundesland Schleswig-Holstein?;1;2;3;4;c;land;Bundesland;Schleswig-Holstein;frage_sh_1
+SH-2;Welches ist ein Landkreis in Schleswig-Holstein?;Ammerland;Demmin;Nordfriesland;Rhein-Sieg-Kreis;c;land;Bundesland;Schleswig-Holstein;-
+SH-3;Für wie viele Jahre wird der Landtag in Schleswig-Holstein gewählt?;3;4;5;6;c;land;Bundesland;Schleswig-Holstein;-
+SH-4;Ab welchem Alter darf man in Schleswig-Holstein bei Kommunalwahlen wählen?;14;16;18;20;b;land;Bundesland;Schleswig-Holstein;-
+SH-5;Welche Farben hat die Landesflagge von Schleswig-Holstein?;weiß-blau;blau-weiß-rot;weiß-rot;grün-weiß-rot;b;land;Bundesland;Schleswig-Holstein;-
+SH-6;Wo können Sie sich in Schleswig-Holstein über politische Themen informieren?;bei der Verbraucherzentrale;beim Ordnungsamt der Gemeinde;bei der Landeszentrale für politische Bildung;bei den Kirchen;c;land;Bundesland;Schleswig-Holstein;-
+SH-7;Die Landeshauptstadt von Schleswig-Holstein heißt …;Husum.;Flensburg.;Lübeck.;Kiel.;d;land;Bundesland;Schleswig-Holstein;-
+SH-8;Welches Bundesland ist Schleswig-Holstein?;1;2;3;4;a;land;Bundesland;Schleswig-Holstein;frage_he_8
+SH-9;Wie nennt man den Regierungschef / die Regierungschefin in Schleswig-Holstein?;Erster Minister / Erste Ministerin;Premierminister / Premierministerin;Bürgermeister / Bürgermeisterin;Ministerpräsident / Ministerpräsidentin;d;land;Bundesland;Schleswig-Holstein;-
+SH-10;Welchen Minister / welche Ministerin hat Schleswig-Holstein nicht?;Justizminister / Justizministerin;Außenminister / Außenministerin;Finanzminister / Finanzministerin;Innenminister / Innenministerin;b;land;Bundesland;Schleswig-Holstein;-
+SL-1;Welches Wappen gehört zum Bundesland Saarland?;1;2;3;4;d;land;Bundesland;Saarland;frage_sl_1
+SL-2;Welches ist ein Landkreis im Saarland?;Demmin;Altötting;Neunkirchen;Rhein-Sieg-Kreis;c;land;Bundesland;Saarland;-
+SL-3;Für wie viele Jahre wird der Landtag des Saarlandes gewählt?;3;4;5;6;c;land;Bundesland;Saarland;-
+SL-4;Ab welchem Alter darf man im Saarland bei Kommunalwahlen wählen?;14;16;18;20;c;land;Bundesland;Saarland;-
+SL-5;Welche Farben hat die Landesflagge des Saarlandes?;weiß-blau;schwarz-rot-gold;schwarz-gelb;grün-weiß-rot;b;land;Bundesland;Saarland;-
+SL-6;Wo können Sie sich im Saarland über politische Themen informieren?;bei den Kirchen;bei der Landeszentrale für politische Bildung;bei der Verbraucherzentrale;beim Ordnungsamt der Gemeinde;b;land;Bundesland;Saarland;-
+SL-7;Die Landeshauptstadt des Saarlandes heißt …;Neunkirchen.;Homburg.;Saarbrücken.;Völklingen.;c;land;Bundesland;Saarland;-
+SL-8;Welches Bundesland ist das Saarland?;1;2;3;4;b;land;Bundesland;Saarland;frage_sl_8
+SL-9;Wie nennt man den Regierungschef / die Regierungschefin des Saarlandes?;Erster Minister / Erste Ministerin;Premierminister / Premierministerin;Bürgermeister / Bürgermeisterin;Ministerpräsident / Ministerpräsidentin;d;land;Bundesland;Saarland;-
+SL-10;Welchen Minister / welche Ministerin hat das Saarland nicht?;Justizminister / Justizministerin;Außenminister / Außenministerin;Finanzminister / Finanzministerin;Innenminister / Innenministerin;b;land;Bundesland;Saarland;-
+SN-1;Welches Wappen gehört zum Freistaat Sachsen?;1;2;3;4;d;land;Bundesland;Sachsen;frage_sn_1
+SN-2;Welches ist ein Landkreis in Sachsen?;Vogtlandkreis;Altötting;Uckermark;Nordfriesland;a;land;Bundesland;Sachsen;-
+SN-3;Für wie viele Jahre wird der Landtag in Sachsen gewählt?;3;4;5;6;c;land;Bundesland;Sachsen;-
+SN-4;Ab welchem Alter darf man in Sachsen bei Kommunalwahlen wählen?;14;16;18;20;c;land;Bundesland;Sachsen;-
+SN-5;Welche Farben hat die Landesflagge von Sachsen?;blau-weiß-rot;weiß-grün;grün-weiß-rot;schwarz-gelb;b;land;Bundesland;Sachsen;-
+SN-6;Wo können Sie sich in Sachsen über politische Themen informieren?;bei der Landeszentrale für politische Bildung;beim Ordnungsamt der Gemeinde;bei den Kirchen;bei der Verbraucherzentrale;a;land;Bundesland;Sachsen;-
+SN-7;Die Landeshauptstadt von Sachsen heißt …;Leipzig.;Dresden.;Chemnitz.;Zwickau.;b;land;Bundesland;Sachsen;-
+SN-8;Welches Bundesland ist Sachsen?;1;2;3;4;d;land;Bundesland;Sachsen;frage_sn_8
+SN-9;Wie nennt man den Regierungschef / die Regierungschefin in Sachsen?;Erster Minister / Erste Ministerin;Premierminister / Premierministerin;Bürgermeister / Bürgermeisterin;Ministerpräsident / Ministerpräsidentin;d;land;Bundesland;Sachsen;-
+SN-10;Welchen Minister / welche Ministerin hat Sachsen nicht?;Justizminister / Justizministerin;Außenminister / Außenministerin;Finanzminister / Finanzministerin;Innenminister / Innenministerin;b;land;Bundesland;Sachsen;-
+ST-1;Welches Wappen gehört zum Bundesland Sachsen-Anhalt?;1;2;3;4;d;land;Bundesland;Sachsen-Anhalt;frage_st_1
+ST-2;Welches ist ein Landkreis in Sachsen-Anhalt?;Ammerland;Altötting;Uckermark;Börde;d;land;Bundesland;Sachsen-Anhalt;-
+ST-3;Für wie viele Jahre wird der Landtag in Sachsen-Anhalt gewählt?;3;4;5;6;c;land;Bundesland;Sachsen-Anhalt;-
+ST-4;Ab welchem Alter darf man in Sachsen-Anhalt bei Kommunalwahlen wählen?;14;16;18;20;b;land;Bundesland;Sachsen-Anhalt;-
+ST-5;Welche Farben hat die Landesflagge von Sachsen-Anhalt?;blau-weiß-rot;gelb-schwarz;grün-weiß-rot;weiß-rot;b;land;Bundesland;Sachsen-Anhalt;-
+ST-6;Wo können Sie sich in Sachsen-Anhalt über politische Themen informieren?;bei den Kirchen;bei der Landeszentrale für politische Bildung;beim Ordnungsamt der Gemeinde;bei der Verbraucherzentrale;b;land;Bundesland;Sachsen-Anhalt;-
+ST-7;Die Landeshauptstadt von Sachsen-Anhalt heißt …;Halle.;Dessau.;Magdeburg.;Wittenberg.;c;land;Bundesland;Sachsen-Anhalt;-
+ST-8;Welches Bundesland ist Sachsen-Anhalt?;1;2;3;4;c;land;Bundesland;Sachsen-Anhalt;frage_st_8
+ST-9;Wie nennt man den Regierungschef / die Regierungschefin in Sachsen-Anhalt?;Erster Minister / Erste Ministerin;Premierminister / Premierministerin;Bürgermeister / Bürgermeisterin;Ministerpräsident / Ministerpräsidentin;d;land;Bundesland;Sachsen-Anhalt;-
+ST-10;Welchen Minister / welche Ministerin hat Sachsen-Anhalt nicht?;Justizminister / Justizministerin;Außenminister / Außenministerin;Finanzminister / Finanzministerin;Innenminister / Innenministerin;b;land;Bundesland;Sachsen-Anhalt;-
 TH-1;Welches Wappen gehört zum Freistaat Thüringen?;1;2;3;4;d;land;Bundesland;Thüringen;frage_th_1
 TH-2;Welches ist ein Landkreis in Thüringen?;Ammerland;Altötting;Nordfriesland;Wartburgkreis;d;land;Bundesland;Thüringen;-
 TH-3;Für wie viele Jahre wird der Landtag in Thüringen gewählt?;3;4;5;6;c;land;Bundesland;Thüringen;-
