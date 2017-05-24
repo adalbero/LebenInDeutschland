@@ -4,7 +4,6 @@ import android.app.Activity;
 import android.graphics.Color;
 import android.graphics.drawable.Drawable;
 import android.util.DisplayMetrics;
-import android.util.Log;
 import android.view.View;
 import android.widget.CheckedTextView;
 import android.widget.ImageView;
@@ -73,8 +72,6 @@ public class QuestionViewHolder implements View.OnClickListener, ResultCallback 
 
         if (!questionPage && w > h)
             w -= 300;
-
-        Log.d("MyApp", "QuestionViewHolder.show: " + w);
 
         hasSpace = w > 600;
     }

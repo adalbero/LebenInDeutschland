@@ -6,6 +6,7 @@ import android.content.SharedPreferences;
 import android.graphics.drawable.Drawable;
 import android.preference.PreferenceManager;
 import android.support.v4.content.ContextCompat;
+import android.util.Log;
 
 import com.adalbero.app.lebenindeutschland.R;
 import com.adalbero.app.lebenindeutschland.SettingsActivity;
@@ -48,6 +49,9 @@ public class AppController extends Application {
     @Override
     public void onCreate() {
         super.onCreate();
+
+        Log.d("MyApp", "AppController.onCreate: ");
+
         instance = this;
 
 //        getPreferences().edit().remove(SettingsActivity.PREF_KEY_LAND).commit();
@@ -192,7 +196,7 @@ public class AppController extends Application {
 
     public void initAdView(Activity activity) {
         String ADS_APP_ID = "ca-app-pub-5723913637413365~4650789131";
-        String DEVICE_NEXUS_5X = "580cd7e67c712dc2";
+        String DEVICE_NEXUS_5X = "4218740A6FE03A56FFF5F7EA8E178378";
 
         AdView adView = (AdView) activity.findViewById(R.id.adView);
 

@@ -3,6 +3,7 @@ package com.adalbero.app.lebenindeutschland;
 import android.content.Intent;
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
+import android.util.Log;
 import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
@@ -31,6 +32,8 @@ public class ExamActivity extends AppCompatActivity implements ResultCallback {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_exam);
+
+        Log.d("MyApp", "ExamActivity.onCreate: ");
 
         mAppController = (AppController) getApplication();
 
@@ -109,13 +112,29 @@ public class ExamActivity extends AppCompatActivity implements ResultCallback {
     }
 
     @Override
+    protected void onResume() {
+        super.onResume();
+        Log.d("MyApp", "ExamActivity.onResume: ");
+    }
+
+    @Override
     protected void onStart() {
         super.onStart();
+
+        Log.d("MyApp", "ExamActivity.onStart: ");
+
         int position = mAppController.getInt("question_idx", 0);
         mListView.setSelection(position);
         mAdapter.notifyDataSetChanged();
 
         updateView();
+    }
+
+    @Override
+    protected void onStop() {
+        super.onStop();
+
+        Log.d("MyApp", "ExamActivity.onStop: ");
     }
 
     private void updateView() {
