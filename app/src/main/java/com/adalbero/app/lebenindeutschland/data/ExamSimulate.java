@@ -4,7 +4,7 @@ import android.content.Context;
 
 import com.adalbero.app.lebenindeutschland.R;
 import com.adalbero.app.lebenindeutschland.ResultCallback;
-import com.adalbero.app.lebenindeutschland.controller.AppController;
+import com.adalbero.app.lebenindeutschland.controller.Store;
 
 import java.util.ArrayList;
 import java.util.Collections;
@@ -33,7 +33,7 @@ public class ExamSimulate extends ExamDynamic {
     @Override
     public void build(Context context, ResultCallback callback) {
         mQuestionNumList = new ArrayList<>();
-        String landCode = AppController.getInstance().getSelectedLandCode();
+        String landCode = Store.getSelectedLandCode();
 
         int TOTAL_ALL = 30;
         int TOTAL_LAND = 3;
@@ -61,7 +61,7 @@ public class ExamSimulate extends ExamDynamic {
     @Override
     public int getCount() {
         if (super.getCount() == 0) {
-            String landCode = AppController.getInstance().getSelectedLandCode();
+            String landCode = Store.getSelectedLandCode();
             return 30 + (landCode == null ? 0 : 3);
         } else {
             return super.getCount();

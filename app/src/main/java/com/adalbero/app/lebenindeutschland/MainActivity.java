@@ -10,6 +10,7 @@ import android.widget.AdapterView;
 import android.widget.ListView;
 
 import com.adalbero.app.lebenindeutschland.controller.AppController;
+import com.adalbero.app.lebenindeutschland.controller.Store;
 import com.adalbero.app.lebenindeutschland.data.Exam;
 import com.adalbero.app.lebenindeutschland.data.ExamDynamic;
 import com.adalbero.app.lebenindeutschland.data.ExamHeader;
@@ -23,14 +24,10 @@ public class MainActivity extends AppCompatActivity {
     private List<Exam> data;
     private ExamItemAdapter mAdapter;
 
-    private AppController mAppController;
-
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
-
-        mAppController = (AppController) getApplication();
 
         updateData();
 
@@ -64,14 +61,12 @@ public class MainActivity extends AppCompatActivity {
             }
         });
 
-        mAppController.initAdView(this);
+        AppController.initAdView(this);
     }
 
     private void updateData() {
         data = new ArrayList();
-        mAppController.loadExamList();
-        List<Exam> examList = mAppController.getExamList();
-        for (Exam exam : examList) {
+        for (Exam exam : AppController.getExamList()) {
             exam.init();
             data.add(exam);
         }
@@ -97,16 +92,17 @@ public class MainActivity extends AppCompatActivity {
     @Override
     protected void onStart() {
         super.onStart();
-        mAppController.updateLand();
+//        AppController.updateLand();
     }
 
     private void goSettings() {
         startActivity(new Intent(this, SettingsActivity.class));
     }
 
-    private void goList(String value) {
-        mAppController.putString("exam_name", value);
-        mAppController.putInt("question_idx", 0);
+    private void goList(String examName) {
+        Store.setExamName(examName);
+        Store.setQuestionIdx(0);
+
         Intent intent = new Intent(this, ExamActivity.class);
         this.startActivity(intent);
     }

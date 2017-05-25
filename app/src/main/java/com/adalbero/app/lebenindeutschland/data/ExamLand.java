@@ -1,6 +1,7 @@
 package com.adalbero.app.lebenindeutschland.data;
 
 import com.adalbero.app.lebenindeutschland.controller.AppController;
+import com.adalbero.app.lebenindeutschland.controller.Store;
 
 /**
  * Created by Adalbero on 17/05/2017.
@@ -16,7 +17,6 @@ public class ExamLand extends ExamByArea {
 
         mValue = name;
         this.mName = name;
-//        mQuestionNumList = null;
         init();
     }
 
@@ -32,12 +32,11 @@ public class ExamLand extends ExamByArea {
 
     @Override
     public int getIcon() {
-        AppController app = AppController.getInstance();
-        String code = app.getSelectedLandCode();
+        String code = Store.getSelectedLandCode();
         if (code == null) return super.getIcon();
 
         String name = "wappen_" + code.toLowerCase();
-        int resId = app.getResource("drawable", name);
+        int resId = AppController.getResource("drawable", name);
         return resId;
     }
 

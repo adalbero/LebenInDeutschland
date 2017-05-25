@@ -13,6 +13,7 @@ import android.widget.TextView;
 import android.widget.Toast;
 
 import com.adalbero.app.lebenindeutschland.controller.AppController;
+import com.adalbero.app.lebenindeutschland.controller.Store;
 import com.adalbero.app.lebenindeutschland.data.Exam;
 import com.adalbero.app.lebenindeutschland.data.Question;
 
@@ -23,10 +24,9 @@ public class ExamActivity extends AppCompatActivity implements ResultCallback {
 
     private List<Question> data = new ArrayList();
     private Exam mExam;
+
     private ListView mListView;
     private QuestionItemAdapter mAdapter;
-
-    private AppController mAppController;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -35,10 +35,7 @@ public class ExamActivity extends AppCompatActivity implements ResultCallback {
 
         Log.d("MyApp", "ExamActivity.onCreate: ");
 
-        mAppController = (AppController) getApplication();
-
-        String listName = mAppController.getString("exam_name", "???");
-        mExam = mAppController.getExam(listName);
+        mExam = AppController.getCurrentExam();
 
         List<String> questions = mExam.getQuestionNumList();
 
@@ -47,7 +44,7 @@ public class ExamActivity extends AppCompatActivity implements ResultCallback {
 
         if (questions != null) {
             for (String questionNum : questions) {
-                Question q = mAppController.getQuestionDB().findByNum(questionNum);
+                Question q = AppController.getQuestionDB().findByNum(questionNum);
                 data.add(q);
             }
         }
@@ -60,13 +57,13 @@ public class ExamActivity extends AppCompatActivity implements ResultCallback {
         mListView.setOnItemClickListener(new AdapterView.OnItemClickListener() {
             @Override
             public void onItemClick(AdapterView<?> adapter, View v, int position, long id) {
-                boolean inline = (AppController.getInstance().getInt("exam.inline", 0) == 1);
+                boolean inline = Store.getExamInline();
                 if (!inline)
                     goQuestion(position);
             }
         });
 
-        mAppController.initAdView(this);
+        AppController.initAdView(this);
 
     }
 
@@ -79,7 +76,7 @@ public class ExamActivity extends AppCompatActivity implements ResultCallback {
 
     @Override
     public boolean onPrepareOptionsMenu(Menu menu) {
-        boolean inline = (AppController.getInstance().getInt("exam.inline", 0) == 1);
+        boolean inline = Store.getExamInline();
 
         menu.findItem(R.id.menu_expand).setVisible(!inline);
         menu.findItem(R.id.menu_collapse).setVisible(inline);
@@ -88,7 +85,7 @@ public class ExamActivity extends AppCompatActivity implements ResultCallback {
     }
 
     private void setInline(boolean inline) {
-        mAppController.putInt("exam.inline", inline ? 1 : 0);
+        Store.setExamInline(inline);
 
         String msg = (inline ? "Question inline mode" : "Question view mode");
         Toast.makeText(this, msg, Toast.LENGTH_SHORT).show();
@@ -123,7 +120,7 @@ public class ExamActivity extends AppCompatActivity implements ResultCallback {
 
         Log.d("MyApp", "ExamActivity.onStart: ");
 
-        int position = mAppController.getInt("question_idx", 0);
+        int position = Store.getQuestionIdx();
         mListView.setSelection(position);
         mAdapter.notifyDataSetChanged();
 
@@ -156,7 +153,7 @@ public class ExamActivity extends AppCompatActivity implements ResultCallback {
     }
 
     private void goQuestion(int idx) {
-        mAppController.putInt("question_idx", idx);
+        Store.setQuestionIdx(idx);
         Intent intent = new Intent(this, QuestionActivity.class);
         this.startActivity(intent);
     }
@@ -164,5 +161,21 @@ public class ExamActivity extends AppCompatActivity implements ResultCallback {
     @Override
     public void onResult(Object parent, Object param) {
         updateView();
+    }
+
+    @Override
+    protected void onRestoreInstanceState(Bundle savedInstanceState) {
+        super.onRestoreInstanceState(savedInstanceState);
+        Log.d("MyApp", "ExamActivity.onRestoreInstanceState: ");
+        Toast.makeText(this, "Restore state", Toast.LENGTH_SHORT).show();
+        mExam.restoreState(savedInstanceState);
+    }
+
+    @Override
+    protected void onSaveInstanceState(Bundle outState) {
+        super.onSaveInstanceState(outState);
+        Log.d("MyApp", "ExamActivity.onSaveInstanceState: ");
+
+        mExam.saveState(outState);
     }
 }

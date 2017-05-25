@@ -5,6 +5,7 @@ import android.content.ComponentName;
 import android.content.Intent;
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
+import android.util.Log;
 import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
@@ -13,6 +14,7 @@ import android.widget.ScrollView;
 import android.widget.Toast;
 
 import com.adalbero.app.lebenindeutschland.controller.AppController;
+import com.adalbero.app.lebenindeutschland.controller.Store;
 import com.adalbero.app.lebenindeutschland.data.Exam;
 import com.adalbero.app.lebenindeutschland.data.Question;
 
@@ -22,7 +24,6 @@ import static com.adalbero.app.lebenindeutschland.R.id.btn_next;
 
 public class QuestionActivity extends AppCompatActivity implements ResultCallback {
 
-    private AppController mAppController;
     private Question mQuestion;
     private Exam mExam;
 
@@ -39,10 +40,7 @@ public class QuestionActivity extends AppCompatActivity implements ResultCallbac
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_question2);
 
-        mAppController = (AppController) getApplication();
-
-        String listName = mAppController.getString("exam_name", "???");
-        mExam = mAppController.getExam(listName);
+        mExam = AppController.getCurrentExam();
 
         mQuestionNumList = mExam.getQuestionNumList();
 
@@ -67,7 +65,7 @@ public class QuestionActivity extends AppCompatActivity implements ResultCallbac
         View contentView = findViewById(R.id.item_question);
         mQuestionViewHolder = new QuestionViewHolder(contentView, mExam, true, this);
 
-        mAppController.initAdView(this);
+        AppController.initAdView(this);
     }
 
     @Override
@@ -129,11 +127,11 @@ public class QuestionActivity extends AppCompatActivity implements ResultCallbac
     }
 
     private void showView() {
-        final int idx = mAppController.getInt("question_idx", -1);
+        final int idx = Store.getQuestionIdx();
         final int count = mQuestionNumList.size();
 
         String num = mQuestionNumList.get(idx);
-        mQuestion = mAppController.getQuestionDB().findByNum(num);
+        mQuestion = AppController.getQuestionDB().findByNum(num);
 
         String title = String.format("Question %d of %d", (idx + 1), count);
         getSupportActionBar().setTitle(title);
@@ -147,8 +145,6 @@ public class QuestionActivity extends AppCompatActivity implements ResultCallbac
         mQuestionViewHolder.show(mQuestion);
 
         updateProgress();
-//
-//        showTagView();
     }
 
     private void updateProgress() {
@@ -162,10 +158,10 @@ public class QuestionActivity extends AppCompatActivity implements ResultCallbac
     }
 
     private void goPrev() {
-        final int idx = mAppController.getInt("question_idx", -1);
+        final int idx = Store.getQuestionIdx();
 
         if (idx > 0) {
-            mAppController.putInt("question_idx", idx - 1);
+            Store.setQuestionIdx(idx - 1);
             showView();
         } else {
             doClose();
@@ -173,11 +169,11 @@ public class QuestionActivity extends AppCompatActivity implements ResultCallbac
     }
 
     private void goNext() {
-        final int idx = mAppController.getInt("question_idx", -1);
+        final int idx = Store.getQuestionIdx();
         final int count = mQuestionNumList.size();
 
         if (idx < count - 1) {
-            mAppController.putInt("question_idx", idx + 1);
+            Store.setQuestionIdx(idx + 1);
             showView();
         } else {
             doClose();
@@ -190,4 +186,23 @@ public class QuestionActivity extends AppCompatActivity implements ResultCallbac
             updateProgress();
         }
     }
+
+    @Override
+    protected void onRestoreInstanceState(Bundle savedInstanceState) {
+        super.onRestoreInstanceState(savedInstanceState);
+        Log.d("MyApp", "Question.onRestoreInstanceState: ");
+
+        Toast.makeText(this, "Restore state", Toast.LENGTH_SHORT).show();
+
+        mExam.restoreState(savedInstanceState);
+    }
+
+    @Override
+    protected void onSaveInstanceState(Bundle outState) {
+        super.onSaveInstanceState(outState);
+        Log.d("MyApp", "Question.onSaveInstanceState: ");
+
+        mExam.saveState(outState);
+    }
+
 }

@@ -12,6 +12,7 @@ import android.widget.Space;
 import android.widget.TextView;
 
 import com.adalbero.app.lebenindeutschland.controller.AppController;
+import com.adalbero.app.lebenindeutschland.controller.Store;
 import com.adalbero.app.lebenindeutschland.data.Exam;
 import com.adalbero.app.lebenindeutschland.data.Question;
 
@@ -79,7 +80,7 @@ public class QuestionViewHolder implements View.OnClickListener, ResultCallback 
 
     public View show(Question question) {
         mQuestion = question;
-        boolean inline = (AppController.getInstance().getInt("exam.inline", 0) == 1);
+        boolean inline = Store.getExamInline();
 
         if (mViewHeader != null) {
             String header = String.format("Question #%s - %s", mQuestion.getNum(), mQuestion.getTheme());

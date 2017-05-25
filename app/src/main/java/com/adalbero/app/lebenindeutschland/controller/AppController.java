@@ -2,14 +2,11 @@ package com.adalbero.app.lebenindeutschland.controller;
 
 import android.app.Activity;
 import android.app.Application;
-import android.content.SharedPreferences;
 import android.graphics.drawable.Drawable;
-import android.preference.PreferenceManager;
 import android.support.v4.content.ContextCompat;
 import android.util.Log;
 
 import com.adalbero.app.lebenindeutschland.R;
-import com.adalbero.app.lebenindeutschland.SettingsActivity;
 import com.adalbero.app.lebenindeutschland.data.Exam;
 import com.adalbero.app.lebenindeutschland.data.Exam300;
 import com.adalbero.app.lebenindeutschland.data.ExamByArea;
@@ -36,14 +33,14 @@ import java.util.Set;
 
 public class AppController extends Application {
 
-    private static AppController instance;
+    private static AppController mInstance;
 
     private QuestionDB mQuestionDB;
     private List<Exam> mExamList;
     private ExamLand mExamLand;
 
     public static AppController getInstance() {
-        return instance;
+        return mInstance;
     }
 
     @Override
@@ -52,7 +49,7 @@ public class AppController extends Application {
 
         Log.d("MyApp", "AppController.onCreate: ");
 
-        instance = this;
+        mInstance = this;
 
 //        getPreferences().edit().remove(SettingsActivity.PREF_KEY_LAND).commit();
 
@@ -60,126 +57,117 @@ public class AppController extends Application {
         loadExamList();
     }
 
-    private void loadQuestionDB() {
-        mQuestionDB = new QuestionDB();
+    public static QuestionDB getQuestionDB() {
+        AppController app = getInstance();
 
-        mQuestionDB.load(this);
-    }
-
-    public void loadExamList() {
-        mExamList = new ArrayList<>();
-
-        mExamList.add(new ExamHeader("Liste"));
-        mExamList.add(new ExamSimulate("Probetest"));
-        mExamList.add(new Exam300("Alle"));
-
-        updateLand();
-        mExamList.add(mExamLand);
-
-        mExamList.add(new ExamHeader("Themen"));
-        mExamList.add(new ExamByArea("Politik in der Demokratie"));
-        mExamList.add(new ExamByArea("Geschichte und Verantwortung"));
-        mExamList.add(new ExamByArea("Mensch und Gesellschaft"));
-
-        mExamList.add(new ExamHeader("Themengebiete"));
-        List<String> themas = mQuestionDB.listAllTheme();
-        for (String thema : themas) {
-            mExamList.add(new ExamByThema(thema));
+        if (app.mQuestionDB == null) {
+            loadQuestionDB();
         }
 
-        mExamList.add(new ExamHeader("Filter"));
-        mExamList.add(new ExamBySearch("Search"));
+        return app.mQuestionDB;
+    }
+
+    private static void loadQuestionDB() {
+        AppController app = getInstance();
+
+        app.mQuestionDB = new QuestionDB();
+        app.mQuestionDB.load(app);
+    }
+
+    public static List<Exam> getExamList() {
+        AppController app = getInstance();
+
+        if (app.mExamList == null) {
+            loadExamList();
+        }
+
+        return app.mExamList;
+    }
+
+    // TODO: cache examList
+    public static void loadExamList() {
+
+        List<Exam> examList = new ArrayList<>();
+
+        examList.add(new ExamHeader("Liste"));
+        examList.add(new ExamSimulate("Probetest"));
+        examList.add(new Exam300("Alle"));
+
+        examList.add(getExamLand());
+
+        examList.add(new ExamHeader("Themen"));
+        examList.add(new ExamByArea("Politik in der Demokratie"));
+        examList.add(new ExamByArea("Geschichte und Verantwortung"));
+        examList.add(new ExamByArea("Mensch und Gesellschaft"));
+
+        examList.add(new ExamHeader("Themengebiete"));
+        List<String> themas = getQuestionDB().listAllTheme();
+        for (String thema : themas) {
+            examList.add(new ExamByThema(thema));
+        }
+
+        examList.add(new ExamHeader("Filter"));
+        examList.add(new ExamBySearch("Search"));
         Set<String> tags = getQuestionDB().getAllTags();
         for (String tag : tags) {
             ExamTag examTag = new ExamTag(tag);
             examTag.init();
             if (examTag.getCount() > 0)
-                mExamList.add(examTag);
+                examList.add(examTag);
         }
 
-        mExamList.add(new ExamHeader(""));
+        examList.add(new ExamHeader(""));
 
+        getInstance().mExamList = examList;
     }
 
-    public QuestionDB getQuestionDB() {
-        return mQuestionDB;
+    // TODO: why persist?
+    public static ExamLand getExamLand() {
+        AppController app = getInstance();
+
+        String landName = Store.getSelectedLandName();
+        if (app.mExamLand == null) {
+            app.mExamLand = new ExamLand(landName);
+        }
+
+        app.mExamLand.setLand(landName);
+
+        return app.mExamLand;
     }
 
-    public List<Exam> getExamList() {
-        return mExamList;
-    }
-
-    public Exam getCurrentExam() {
-        String name = getString("exam_name", "???");
+    public static Exam getCurrentExam() {
+        String name = Store.getExamName();
         return getExam(name);
     }
 
-    public Exam getExam(String name) {
-        for (Exam exam : mExamList) {
-            if (exam.getName().equals(name)) {
-                return exam;
+    public static Exam getExam(String name) {
+        if (name != null) {
+            for (Exam exam : getExamList()) {
+                if (exam.getName().equals(name)) {
+                    return exam;
+                }
             }
         }
 
         return null;
     }
 
-    public SharedPreferences getPreferences() {
-        return PreferenceManager.getDefaultSharedPreferences(this);
-    }
-
-    public void putString(String key, String value) {
-        SharedPreferences.Editor edit = getPreferences().edit();
-        edit.putString(key, value);
-        edit.commit();
-    }
-
-    public String getString(String key, String def) {
-        return getPreferences().getString(key, def);
-    }
-
-    public void putInt(String key, int value) {
-        SharedPreferences.Editor edit = getPreferences().edit();
-        edit.putInt(key, value);
-        edit.commit();
-    }
-
-    public int getInt(String key, int def) {
-        return getPreferences().getInt(key, def);
-    }
-
-    public int getResource(String type, String name) {
-        int resourceId = this.getResources().getIdentifier(name, type, this.getPackageName());
+    public static int getResource(String type, String name) {
+        int resourceId = getInstance().getResources().getIdentifier(name, type, getInstance().getPackageName());
         return resourceId;
     }
 
-    public Drawable getDrawable(String name) {
+    public static Drawable getDrawable(String name) {
         int resourceId = getResource("drawable", name);
-        return this.getResources().getDrawable(resourceId);
+        return getInstance().getResources().getDrawable(resourceId);
     }
 
-    public String getSelectedLandCode() {
-        String value = getString(SettingsActivity.PREF_KEY_LAND, null);
-        if (value == null) return null;
-        return value.substring(0, 2);
+    public static int getBackgroundColor(int resource) {
+        return ContextCompat.getColor(getInstance(), resource);
     }
 
-    public String getSelectedLandName() {
-        String value = getString(SettingsActivity.PREF_KEY_LAND, null);
-        if (value == null) return null;
-        return value.substring(3);
-    }
-
-    public void updateLand() {
-        String landName = getSelectedLandName();
-        if (mExamLand == null) {
-            mExamLand = new ExamLand(landName);
-        }
-
-        mExamLand.setLand(landName);
-    }
-
-    public int countRightAnswers(Map<String, String> answers) {
+    // TODO: why here?
+    public static int countRightAnswers(Map<String, String> answers) {
         int right = 0;
         for (String num : answers.keySet()) {
             String answer = answers.get(num);
@@ -194,7 +182,7 @@ public class AppController extends Application {
     }
 
 
-    public void initAdView(Activity activity) {
+    public static void initAdView(Activity activity) {
         String ADS_APP_ID = "ca-app-pub-5723913637413365~4650789131";
         String DEVICE_NEXUS_5X = "4218740A6FE03A56FFF5F7EA8E178378";
 
@@ -202,7 +190,7 @@ public class AppController extends Application {
 
         if (adView == null) return;
 
-        MobileAds.initialize(getApplicationContext(), ADS_APP_ID);
+        MobileAds.initialize(getInstance(), ADS_APP_ID);
 
         AdRequest adRequest = new AdRequest.Builder()
                 .addTestDevice(AdRequest.DEVICE_ID_EMULATOR)
@@ -211,10 +199,6 @@ public class AppController extends Application {
 
 
         adView.loadAd(adRequest);
-    }
-
-    public int getBackgroundColor(int resource) {
-        return ContextCompat.getColor(this, resource);
     }
 
 }

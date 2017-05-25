@@ -5,6 +5,7 @@ import android.util.Log;
 
 import com.adalbero.app.lebenindeutschland.R;
 import com.adalbero.app.lebenindeutschland.controller.AppController;
+import com.adalbero.app.lebenindeutschland.controller.Store;
 
 import java.util.HashSet;
 import java.util.Set;
@@ -183,7 +184,7 @@ public class Question {
 
     public void loadTags() {
         String key = getNum() + ".tags";
-        String value = AppController.getInstance().getString(key, "");
+        String value = Store.getString(key, "");
 
         tags = new HashSet<>();
         String items[] = value.split(",");
@@ -198,7 +199,7 @@ public class Question {
         String key = getNum() + ".tags";
         String value = tags.toString();
         value = value.substring(1, value.length()-1);
-        AppController.getInstance().putString(key, value);
+        Store.setString(key, value);
     }
 
 }

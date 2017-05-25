@@ -1,9 +1,16 @@
 package com.adalbero.app.lebenindeutschland.data;
 
+import android.os.Bundle;
 import android.support.v4.content.ContextCompat;
+import android.util.Log;
 
+import com.adalbero.app.lebenindeutschland.JSONUtil;
 import com.adalbero.app.lebenindeutschland.R;
 import com.adalbero.app.lebenindeutschland.controller.AppController;
+import com.adalbero.app.lebenindeutschland.controller.Store;
+
+import org.json.JSONArray;
+import org.json.JSONException;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -23,7 +30,7 @@ public class Exam {
 
     protected void filterQuestions() {
         List<String> list = new ArrayList<>();
-        String land = AppController.getInstance().getSelectedLandName();
+        String land = Store.getSelectedLandName();
         QuestionDB questionDB = AppController.getInstance().getQuestionDB();
         for (Question q : questionDB.listAll()) {
             if (q.getAreaCode().equals("land") & !q.getTheme().equals(land))
@@ -68,7 +75,6 @@ public class Exam {
 
     public int getColor() {
         return AppController.getInstance().getBackgroundColor(R.color.colorArea0);
-//        return R.color.colorArea0;
     }
 
     private String getKey(String key) {
@@ -77,12 +83,12 @@ public class Exam {
 
     public void putString(String key, String value) {
         key = getKey(key);
-        AppController.getInstance().putString(key, value);
+        Store.setString(key, value);
     }
 
     public String getString(String key, String def) {
         key = getKey(key);
-        return AppController.getInstance().getString(key, def);
+        return Store.getString(key, def);
     }
 
     public int getIcon() {
@@ -96,6 +102,33 @@ public class Exam {
                         : status == 0 ? R.color.colorWrongDark
                         : R.color.colorNotAnswerd);
         return colorStatus;
+    }
+
+    public void saveState(Bundle bundle) {
+        try {
+            String questions = JSONUtil.toJSONString(mQuestionNumList);
+            String result = getResult().toJSONString();
+
+            bundle.putString("exam.questions", questions);
+            bundle.putString("exam.result", result);
+
+        } catch (JSONException e) {
+            Log.e("MyApp", "Exam.saveSate: " + e.getMessage(), e);
+        }
+    }
+
+    public void restoreState(Bundle bundle) {
+        try {
+            String questions = bundle.getString("exam.questions");
+            String result = bundle.getString("exam.result");
+
+            JSONArray jsonArray = JSONUtil.toJSONArray(questions);
+            mQuestionNumList = JSONUtil.toStringList(jsonArray);
+            mResult = ResultExam.fromJSON(result);
+
+        } catch (JSONException e) {
+            Log.e("MyApp", "Exam.restoreState: " + e.getMessage(), e);
+        }
     }
 }
 
