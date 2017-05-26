@@ -5,15 +5,44 @@ import android.preference.PreferenceManager;
 
 import com.adalbero.app.lebenindeutschland.SettingsActivity;
 
+import java.util.ArrayList;
+import java.util.List;
+import java.util.Map;
+import java.util.Set;
+import java.util.TreeSet;
+
 /**
  * Created by Adalbero on 24/05/2017.
  */
 
 public class Store {
-    public static final String KEY_EXAM_NAME = "exam_name";
-    public static final String KEY_QUESTION_IDX = "question_idx";
-    public static final String KEY_EXAM_INLINE = "exam.inline";
+    public static final String KEY_EXAM_NAME = "exam.name";
+    public static final String KEY_QUESTION_IDX = "exam.question.idx";
+    public static final String KEY_EXAM_INLINE = "pref.inline";
 
+
+    public static void remove(String key) {
+        getPreferences().edit().remove(key).commit();
+    }
+
+    public static void removeGroup(String path) {
+        if (!path.endsWith("."))
+            path = path + ".";
+
+        for (String key : getAllKeys()) {
+            if (key.startsWith(path)) {
+                remove(key);
+            }
+        }
+    }
+
+    public static List<String> getAllKeys() {
+        Map<String, ?> prefs = PreferenceManager.getDefaultSharedPreferences(
+                AppController.getInstance()).getAll();
+        Set<String> keys = new TreeSet<>(prefs.keySet());
+
+        return new ArrayList<>(keys);
+    }
 
     public static SharedPreferences getPreferences() {
         return PreferenceManager.getDefaultSharedPreferences(AppController.getInstance());
@@ -58,13 +87,13 @@ public class Store {
     }
 
     public static String getSelectedLandCode() {
-        String value = Store.getString(SettingsActivity.PREF_KEY_LAND, null);
+        String value = Store.getString(SettingsActivity.PREF_LAND, null);
         if (value == null) return null;
         return value.substring(0, 2);
     }
 
     public static String getSelectedLandName() {
-        String value = Store.getString(SettingsActivity.PREF_KEY_LAND, null);
+        String value = Store.getString(SettingsActivity.PREF_LAND, null);
         if (value == null) return null;
         return value.substring(3);
     }
@@ -76,6 +105,14 @@ public class Store {
     public static boolean getExamInline() {
         int inline = Store.getInt(KEY_EXAM_INLINE, 0);
         return (inline == 1);
+    }
+
+    public static void resetPrefs() {
+        removeGroup("pref");
+    }
+
+    public static void resetExam() {
+        removeGroup("exam");
     }
 
 }

@@ -92,7 +92,8 @@ public class MainActivity extends AppCompatActivity {
     @Override
     protected void onStart() {
         super.onStart();
-//        AppController.updateLand();
+        AppController.getExamLand();
+        Store.resetExam();
     }
 
     private void goSettings() {

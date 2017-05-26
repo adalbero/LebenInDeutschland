@@ -182,8 +182,14 @@ public class Question {
         return tags.contains(tag);
     }
 
+    private String getKey() {
+        String key = "question." + getNum() + ".tags";
+
+        return key;
+    }
+
     public void loadTags() {
-        String key = getNum() + ".tags";
+        String key = getKey();
         String value = Store.getString(key, "");
 
         tags = new HashSet<>();
@@ -196,7 +202,7 @@ public class Question {
     }
 
     public void saveTags() {
-        String key = getNum() + ".tags";
+        String key = getKey();
         String value = tags.toString();
         value = value.substring(1, value.length()-1);
         Store.setString(key, value);

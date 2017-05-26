@@ -13,7 +13,7 @@ public class ExamLand extends ExamByArea {
     }
 
     public void setLand(String name) {
-        name = (name == null ? "* Select a Land" : name);
+        name = (name == null ? "* Select Bundesland" : name);
 
         mValue = name;
         this.mName = name;

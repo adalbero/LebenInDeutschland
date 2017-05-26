@@ -78,7 +78,7 @@ public class Exam {
     }
 
     private String getKey(String key) {
-        return getName() + "." + key;
+        return "pref." + getName() + "." + key;
     }
 
     public void putString(String key, String value) {

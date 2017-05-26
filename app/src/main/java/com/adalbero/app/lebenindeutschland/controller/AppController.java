@@ -51,7 +51,7 @@ public class AppController extends Application {
 
         mInstance = this;
 
-//        getPreferences().edit().remove(SettingsActivity.PREF_KEY_LAND).commit();
+//        getPreferences().edit().remove(SettingsActivity.PREF_LAND).commit();
 
         loadQuestionDB();
         loadExamList();
