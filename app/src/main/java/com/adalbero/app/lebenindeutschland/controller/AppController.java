@@ -11,11 +11,11 @@ import com.adalbero.app.lebenindeutschland.data.Exam;
 import com.adalbero.app.lebenindeutschland.data.Exam300;
 import com.adalbero.app.lebenindeutschland.data.ExamByArea;
 import com.adalbero.app.lebenindeutschland.data.ExamBySearch;
+import com.adalbero.app.lebenindeutschland.data.ExamByTag;
 import com.adalbero.app.lebenindeutschland.data.ExamByThema;
 import com.adalbero.app.lebenindeutschland.data.ExamHeader;
 import com.adalbero.app.lebenindeutschland.data.ExamLand;
 import com.adalbero.app.lebenindeutschland.data.ExamSimulate;
-import com.adalbero.app.lebenindeutschland.data.ExamTag;
 import com.adalbero.app.lebenindeutschland.data.Question;
 import com.adalbero.app.lebenindeutschland.data.QuestionDB;
 import com.google.android.gms.ads.AdRequest;
@@ -25,7 +25,6 @@ import com.google.android.gms.ads.MobileAds;
 import java.util.ArrayList;
 import java.util.List;
 import java.util.Map;
-import java.util.Set;
 
 /**
  * Created by Adalbero on 16/05/2017.
@@ -90,9 +89,7 @@ public class AppController extends Application {
         List<Exam> examList = new ArrayList<>();
 
         examList.add(new ExamHeader("Liste"));
-        examList.add(new ExamSimulate("Probetest"));
         examList.add(new Exam300("Alle"));
-
         examList.add(getExamLand());
 
         examList.add(new ExamHeader("Themen"));
@@ -108,13 +105,15 @@ public class AppController extends Application {
 
         examList.add(new ExamHeader("Filter"));
         examList.add(new ExamBySearch("Search"));
-        Set<String> tags = getQuestionDB().getAllTags();
-        for (String tag : tags) {
-            ExamTag examTag = new ExamTag(tag);
-            examTag.init();
-            if (examTag.getCount() > 0)
-                examList.add(examTag);
-        }
+        examList.add(new ExamByTag("Tags"));
+        examList.add(new ExamSimulate("Probetest"));
+//        Set<String> tags = getQuestionDB().getAllTags();
+//        for (String tag : tags) {
+//            ExamTag examTag = new ExamTag(tag);
+//            examTag.init();
+//            if (examTag.getCount() > 0)
+//                examList.add(examTag);
+//        }
 
         examList.add(new ExamHeader(""));
 
