@@ -19,7 +19,7 @@ public class Store {
     public static final String KEY_EXAM_NAME = "exam.name";
     public static final String KEY_QUESTION_IDX = "exam.question.idx";
     public static final String KEY_EXAM_INLINE = "pref.inline";
-
+    public static final String KEY_TAGS_TERMS = "pref.Tags.terms";
 
     public static void remove(String key) {
         getPreferences().edit().remove(key).commit();
@@ -115,4 +115,11 @@ public class Store {
         removeGroup("exam");
     }
 
+    public static void setTagTerms(Set<String> tags) {
+        getPreferences().edit().putStringSet(KEY_TAGS_TERMS, tags).commit();
+    }
+
+    public static Set<String> getTagTerms() {
+        return getPreferences().getStringSet(KEY_TAGS_TERMS, null);
+    }
 }

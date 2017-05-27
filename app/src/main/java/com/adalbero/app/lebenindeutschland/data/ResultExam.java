@@ -4,6 +4,7 @@ import android.util.Log;
 
 import com.adalbero.app.lebenindeutschland.JSONUtil;
 import com.adalbero.app.lebenindeutschland.controller.AppController;
+import com.adalbero.app.lebenindeutschland.controller.Store;
 
 import org.json.JSONException;
 import org.json.JSONObject;
@@ -16,6 +17,8 @@ import java.util.Map;
  */
 
 public class ResultExam {
+    private static final String KEY_EXAM_RESULT = "exam2.result.";
+
     private Map<String, String> answerList;
 
     public ResultExam() {
@@ -23,7 +26,21 @@ public class ResultExam {
     }
 
     public void reset() {
+        Store.remove(KEY_EXAM_RESULT);
         answerList = new HashMap<>();
+        Log.d("MyApp", "ResultExam.reset: ");
+    }
+
+    public void load() {
+        answerList = new HashMap<>();
+        for (String key : Store.getAllKeys()) {
+            if (key.startsWith(KEY_EXAM_RESULT)) {
+                String num = key.substring(KEY_EXAM_RESULT.length()+1);
+                String answer = Store.getString(key, null);
+                Log.d("MyApp", "ResultExam.load: " + num);
+                answerList.put(num, answer);
+            }
+        }
     }
 
     public int countRightAnswers() {
@@ -32,6 +49,8 @@ public class ResultExam {
 
     public void setAnswer(String num, String answer) {
         answerList.put(num, answer);
+        String key = KEY_EXAM_RESULT + num;
+        Store.setString(key, answer);
     }
 
     public String getAnswer(String num) {

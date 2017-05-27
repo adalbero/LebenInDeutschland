@@ -11,7 +11,6 @@ import android.widget.ListView;
 import android.widget.TextView;
 
 import com.adalbero.app.lebenindeutschland.controller.AppController;
-import com.adalbero.app.lebenindeutschland.data.Question;
 
 import java.util.ArrayList;
 import java.util.HashSet;
@@ -24,29 +23,11 @@ import java.util.Set;
 
 public class TagDialogFragment extends DialogFragment {
 
-    Question mQuestion;
-
     private ResultCallback mCallback;
 
     public Set<String> selected;
     private TextView newTag;
-
-    public void setQuestion(Question question, ResultCallback callback) {
-        mQuestion = question;
-        mCallback = callback;
-        selected = new HashSet<>(mQuestion.getTags());
-    }
-
-    public void initView(View v) {
-        Set<String> tags = AppController.getInstance().getQuestionDB().getAllTags();
-        List<String> data = new ArrayList(tags);
-
-        TagItemAdapter adapter = new TagItemAdapter(v.getContext(), data, selected);
-        ListView listView = (ListView)v.findViewById(R.id.list_view);
-        listView.setAdapter(adapter);
-
-        newTag = (TextView)v.findViewById((R.id.new_tag));
-    }
+    private boolean allowNewTag;
 
     @Override
     public Dialog onCreateDialog(Bundle savedInstanceState) {
@@ -67,7 +48,6 @@ public class TagDialogFragment extends DialogFragment {
                         if (text != null && text.length() > 0) {
                             selected.add(text.trim());
                         }
-                        mQuestion.setTags(selected);
                         mCallback.onResult(TagDialogFragment.this, null);
                     }
                 })
@@ -80,4 +60,27 @@ public class TagDialogFragment extends DialogFragment {
 
         return builder.create();
     }
+
+    public void initView(View v) {
+        Set<String> tags = AppController.getInstance().getQuestionDB().getAllTags();
+        List<String> data = new ArrayList(tags);
+
+        TagItemAdapter adapter = new TagItemAdapter(v.getContext(), data, selected);
+        ListView listView = (ListView)v.findViewById(R.id.list_view);
+        listView.setAdapter(adapter);
+
+        newTag = (TextView)v.findViewById((R.id.new_tag));
+        newTag.setVisibility(allowNewTag ? View.VISIBLE : View.GONE);
+    }
+
+    public void setTags(Set<String> tags, ResultCallback callback, boolean allowNewTag) {
+        mCallback = callback;
+        selected = new HashSet<>(tags);
+        this.allowNewTag = allowNewTag;
+    }
+
+    public Set<String> getSelected() {
+        return selected;
+    }
+
 }

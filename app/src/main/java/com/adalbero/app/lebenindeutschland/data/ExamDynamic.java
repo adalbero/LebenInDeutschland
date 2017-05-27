@@ -1,6 +1,6 @@
 package com.adalbero.app.lebenindeutschland.data;
 
-import android.content.Context;
+import android.app.Activity;
 
 import com.adalbero.app.lebenindeutschland.ResultCallback;
 
@@ -13,7 +13,7 @@ public class ExamDynamic extends Exam {
         super(name);
     }
 
-    public void build(Context context, ResultCallback callback) {
+    public void build(Activity activity, ResultCallback callback) {
 
     }
 

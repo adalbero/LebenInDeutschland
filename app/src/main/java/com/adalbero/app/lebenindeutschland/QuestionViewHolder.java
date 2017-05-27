@@ -206,7 +206,8 @@ public class QuestionViewHolder implements View.OnClickListener, ResultCallback 
         Activity activity = (Activity) mView.getContext();
 
         TagDialogFragment dialog = new TagDialogFragment();
-        dialog.setQuestion(mQuestion, this);
+        Set<String> tags = mQuestion.getTags();
+        dialog.setTags(tags, this, true);
         dialog.show(activity.getFragmentManager(), "tag");
     }
 
@@ -221,6 +222,9 @@ public class QuestionViewHolder implements View.OnClickListener, ResultCallback 
     @Override
     public void onResult(Object parent, Object param) {
         if (parent instanceof TagDialogFragment) {
+            TagDialogFragment dialog = (TagDialogFragment)parent;
+            Set<String> tags = dialog.getSelected();
+            mQuestion.setTags(tags);
             show(mQuestion);
         }
     }

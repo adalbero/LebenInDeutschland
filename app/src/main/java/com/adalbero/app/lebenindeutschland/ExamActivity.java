@@ -120,6 +120,8 @@ public class ExamActivity extends AppCompatActivity implements ResultCallback {
 
         Log.d("MyApp", "ExamActivity.onStart: ");
 
+        mExam.getResult().load();
+
         int position = Store.getQuestionIdx();
         mListView.setSelection(position);
         mAdapter.notifyDataSetChanged();
@@ -166,16 +168,15 @@ public class ExamActivity extends AppCompatActivity implements ResultCallback {
     @Override
     protected void onRestoreInstanceState(Bundle savedInstanceState) {
         super.onRestoreInstanceState(savedInstanceState);
-        Log.d("MyApp", "ExamActivity.onRestoreInstanceState: ");
         Toast.makeText(this, "Restore state", Toast.LENGTH_SHORT).show();
-        mExam.restoreState(savedInstanceState);
+
+//        mExam.restoreState(savedInstanceState);
     }
 
     @Override
     protected void onSaveInstanceState(Bundle outState) {
         super.onSaveInstanceState(outState);
-        Log.d("MyApp", "ExamActivity.onSaveInstanceState: ");
 
-        mExam.saveState(outState);
+//        mExam.saveState(outState);
     }
 }

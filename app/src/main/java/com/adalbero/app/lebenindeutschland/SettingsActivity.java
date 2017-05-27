@@ -132,7 +132,9 @@ public class SettingsActivity extends AppCompatActivity {
             Set<String> keys = new TreeSet<>(prefs.keySet());
             for (String key : keys) {
                 Object value = prefs.get(key);
-                Log.d("MyApp", key + " : " + value);
+                if (!key.startsWith("question.")) {
+                    Log.d("MyApp", key + " : " + value);
+                }
             }
         }
 

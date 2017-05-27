@@ -1,7 +1,7 @@
 package com.adalbero.app.lebenindeutschland.data;
 
+import android.app.Activity;
 import android.app.AlertDialog;
-import android.content.Context;
 import android.content.DialogInterface;
 import android.text.InputType;
 import android.widget.EditText;
@@ -23,8 +23,8 @@ public class ExamBySearch extends ExamDynamic {
     }
 
     @Override
-    public void build(Context context, ResultCallback callback) {
-        dialog(context, callback);
+    public void build(Activity activity, ResultCallback callback) {
+        dialog(activity, callback);
     }
 
     @Override
@@ -73,7 +73,7 @@ public class ExamBySearch extends ExamDynamic {
 
     @Override
     public String getTitle() {
-        return super.getName() + ": " + getTerms() + " (" + getCount() + ")";
+        return super.getTitle() + ": " + getTerms();
     }
 
     private void setTerms(String text) {
@@ -100,11 +100,11 @@ public class ExamBySearch extends ExamDynamic {
         return result.trim();
     }
 
-    public void dialog(Context context, final ResultCallback callback) {
-        AlertDialog.Builder builder = new AlertDialog.Builder(context);
+    public void dialog(Activity activity, final ResultCallback callback) {
+        AlertDialog.Builder builder = new AlertDialog.Builder(activity);
         builder.setTitle("Search for...");
 
-        final EditText input = new EditText(context);
+        final EditText input = new EditText(activity);
         input.setInputType(InputType.TYPE_CLASS_TEXT);
         input.setText(getTerms());
         builder.setView(input);
