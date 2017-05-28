@@ -39,5 +39,12 @@ public class Debug {
         }
     }
 
+    public static void removeExam() {
+        Store.removeGroup("exam.");
+    }
+
+    public static void removePref() {
+        Store.removeGroup("pref.");
+    }
 
 }

@@ -6,7 +6,7 @@ import com.adalbero.app.lebenindeutschland.R;
 import com.adalbero.app.lebenindeutschland.ResultCallback;
 import com.adalbero.app.lebenindeutschland.TagDialogFragment;
 import com.adalbero.app.lebenindeutschland.controller.Store;
-import com.adalbero.app.lebenindeutschland.data.Question;
+import com.adalbero.app.lebenindeutschland.data.question.Question;
 
 import java.util.Set;
 import java.util.TreeSet;

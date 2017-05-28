@@ -86,7 +86,6 @@ public class MainActivity extends AppCompatActivity implements ResultCallback {
     @Override
     protected void onStart() {
         super.onStart();
-        AppController.getExamLand();
         mAdapter.notifyDataSetChanged();
     }
 

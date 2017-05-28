@@ -25,6 +25,8 @@ public class SettingsActivity extends AppCompatActivity {
     public static final String DEBUG_CATEGORY = "debug.category";
     public static final String DEBUG_DUMP = "debug.dump";
     public static final String DEBUG_REMOVE_ALL = "debug.remove.all";
+    public static final String DEBUG_REMOVE_EXAM = "debug.remove.exam";
+    public static final String DEBUG_REMOVE_PREF = "debug.remove.pref";
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -66,6 +68,8 @@ public class SettingsActivity extends AppCompatActivity {
 
             findPreference(DEBUG_DUMP).setOnPreferenceClickListener(this);
             findPreference(DEBUG_REMOVE_ALL).setOnPreferenceClickListener(this);
+            findPreference(DEBUG_REMOVE_EXAM).setOnPreferenceClickListener(this);
+            findPreference(DEBUG_REMOVE_PREF).setOnPreferenceClickListener(this);
 
             mDebugClick = 0;
             getPreferenceScreen().removePreference(mDebugCategory);
@@ -112,6 +116,10 @@ public class SettingsActivity extends AppCompatActivity {
                 Debug.dumpSharedPreferences();
             } else if (key.equals(DEBUG_REMOVE_ALL)) {
                 Debug.removeAll();
+            } else if (key.equals(DEBUG_REMOVE_EXAM)) {
+                Debug.removeExam();
+            } else if (key.equals(DEBUG_REMOVE_PREF)) {
+                Debug.removePref();
             }
 
             return false;

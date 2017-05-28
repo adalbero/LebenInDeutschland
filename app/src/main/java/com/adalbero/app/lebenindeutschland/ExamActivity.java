@@ -8,20 +8,22 @@ import android.view.MenuItem;
 import android.view.View;
 import android.widget.AdapterView;
 import android.widget.ListView;
+import android.widget.TextView;
 import android.widget.Toast;
 
 import com.adalbero.app.lebenindeutschland.controller.AppController;
 import com.adalbero.app.lebenindeutschland.controller.Store;
-import com.adalbero.app.lebenindeutschland.data.Question;
 import com.adalbero.app.lebenindeutschland.data.exam.Exam2;
+import com.adalbero.app.lebenindeutschland.data.question.Question;
+import com.adalbero.app.lebenindeutschland.data.result.Exam2Result;
 
 import java.util.ArrayList;
 import java.util.List;
 
 public class ExamActivity extends AppCompatActivity implements ResultCallback {
 
-    private List<Question> data = new ArrayList();
-    private Exam2 mExam;
+    private List<Question> data;
+    private Exam2Result mResult;
 
     private ListView mListView;
     private QuestionItemAdapter mAdapter;
@@ -31,13 +33,15 @@ public class ExamActivity extends AppCompatActivity implements ResultCallback {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_exam);
 
-        mExam = AppController.getCurrentExam();
+        Exam2 exam = AppController.getCurrentExam();
+        mResult = new Exam2Result();
 
-        List<String> questions = mExam.getQuestions();
+        List<String> questions = exam.getQuestions();
 
-        String title = mExam.getTitle();
+        String title = exam.getTitle();
         getSupportActionBar().setTitle(title);
 
+        data = new ArrayList();
         if (questions != null) {
             for (String questionNum : questions) {
                 Question q = AppController.getQuestionDB().findByNum(questionNum);
@@ -45,7 +49,7 @@ public class ExamActivity extends AppCompatActivity implements ResultCallback {
             }
         }
 
-        mAdapter = new QuestionItemAdapter(this, data, mExam, this);
+        mAdapter = new QuestionItemAdapter(this, data, mResult, this);
 
         mListView = (ListView) findViewById(R.id.list_view);
         mListView.setAdapter(mAdapter);
@@ -108,31 +112,30 @@ public class ExamActivity extends AppCompatActivity implements ResultCallback {
     protected void onStart() {
         super.onStart();
 
-//        mExam.getResult().load();
-
         int position = Store.getQuestionIdx();
         mListView.setSelection(position);
+
         mAdapter.notifyDataSetChanged();
 
-        updateView();
+        updateResult();
     }
 
-    private void updateView() {
-//        int total = mExam.getCount();
-//        int answerd = mExam.getResult().getAnswerdCount();
-//        int right = mExam.getResult().countRightAnswers();
-//
-//        float perc_answerd = total == 0 ? 0 : (float) (100 * answerd / total);
-//        float perc_right = answerd == 0 ? 0 : (float) (100 * right / answerd);
-//
-//        TextView text_total_value = (TextView) findViewById(R.id.text_value1);
-//        text_total_value.setText(String.format("%d of %d (%.0f%%)", answerd, total, perc_answerd));
-//
-//        TextView text_answerd_value = (TextView) findViewById(R.id.text_value2);
-//        text_answerd_value.setText(String.format("%d of %d (%.0f%%)", right, answerd, perc_right));
-//
-//        ProgressView progressView = (ProgressView) findViewById(R.id.view_progress);
-//        progressView.setProgress(mExam);
+    private void updateResult() {
+        int total = mResult.getCount();
+        int answerd = mResult.getAnswerdCount();
+        int right = mResult.countRightAnswers();
+
+        float perc_answerd = total == 0 ? 0 : (float) (100 * answerd / total);
+        float perc_right = answerd == 0 ? 0 : (float) (100 * right / answerd);
+
+        TextView text_total_value = (TextView) findViewById(R.id.text_value1);
+        text_total_value.setText(String.format("%d of %d (%.0f%%)", answerd, total, perc_answerd));
+
+        TextView text_answerd_value = (TextView) findViewById(R.id.text_value2);
+        text_answerd_value.setText(String.format("%d of %d (%.0f%%)", right, answerd, perc_right));
+
+        ProgressView progressView = (ProgressView) findViewById(R.id.view_progress);
+        progressView.setProgress(mResult);
     }
 
     private void goQuestion(int idx) {
@@ -143,7 +146,7 @@ public class ExamActivity extends AppCompatActivity implements ResultCallback {
 
     @Override
     public void onResult(Object parent, Object param) {
-        updateView();
+        updateResult();
     }
 
     @Override

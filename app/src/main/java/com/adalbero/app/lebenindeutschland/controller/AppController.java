@@ -6,9 +6,6 @@ import android.graphics.drawable.Drawable;
 import android.support.v4.content.ContextCompat;
 
 import com.adalbero.app.lebenindeutschland.R;
-import com.adalbero.app.lebenindeutschland.data.ExamLand;
-import com.adalbero.app.lebenindeutschland.data.Question;
-import com.adalbero.app.lebenindeutschland.data.QuestionDB;
 import com.adalbero.app.lebenindeutschland.data.exam.Exam2;
 import com.adalbero.app.lebenindeutschland.data.exam.Exam2All;
 import com.adalbero.app.lebenindeutschland.data.exam.Exam2Area;
@@ -18,13 +15,13 @@ import com.adalbero.app.lebenindeutschland.data.exam.Exam2Random;
 import com.adalbero.app.lebenindeutschland.data.exam.Exam2Search;
 import com.adalbero.app.lebenindeutschland.data.exam.Exam2Tag;
 import com.adalbero.app.lebenindeutschland.data.exam.Exam2Thema;
+import com.adalbero.app.lebenindeutschland.data.question.QuestionDB;
 import com.google.android.gms.ads.AdRequest;
 import com.google.android.gms.ads.AdView;
 import com.google.android.gms.ads.MobileAds;
 
 import java.util.ArrayList;
 import java.util.List;
-import java.util.Map;
 
 /**
  * Created by Adalbero on 16/05/2017.
@@ -36,7 +33,6 @@ public class AppController extends Application {
 
     private QuestionDB mQuestionDB;
     private List<Exam2> mExamList;
-    private ExamLand mExamLand;
 
     public static AppController getInstance() {
         return mInstance;
@@ -109,20 +105,6 @@ public class AppController extends Application {
         getInstance().mExamList = examList;
     }
 
-    // TODO: why persist?
-    public static ExamLand getExamLand() {
-        AppController app = getInstance();
-
-        String landName = Store.getSelectedLandName();
-        if (app.mExamLand == null) {
-            app.mExamLand = new ExamLand(landName);
-        }
-
-        app.mExamLand.setLand(landName);
-
-        return app.mExamLand;
-    }
-
     public static Exam2 getCurrentExam() {
         String name = Store.getExamName();
         return getExam(name);
@@ -154,22 +136,6 @@ public class AppController extends Application {
     public static int getBackgroundColor(int resource) {
         return ContextCompat.getColor(getInstance(), resource);
     }
-
-    // TODO: why here?
-    public static int countRightAnswers(Map<String, String> answers) {
-        int right = 0;
-        for (String num : answers.keySet()) {
-            String answer = answers.get(num);
-            Question q = getQuestionDB().findByNum(num);
-            if (q != null) {
-                if (answer.charAt(0) - 'a' == q.getAnswer())
-                    right++;
-            }
-        }
-
-        return right;
-    }
-
 
     public static void initAdView(Activity activity) {
         String ADS_APP_ID = "ca-app-pub-5723913637413365~4650789131";

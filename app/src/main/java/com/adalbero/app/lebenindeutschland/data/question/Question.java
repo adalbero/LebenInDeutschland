@@ -1,4 +1,4 @@
-package com.adalbero.app.lebenindeutschland.data;
+package com.adalbero.app.lebenindeutschland.data.question;
 
 import android.support.v4.content.ContextCompat;
 import android.util.Log;
@@ -132,7 +132,7 @@ public class Question {
         else if (areaCode.equals("land"))
             colorRes = R.color.colorLand;
         else
-            colorRes = R.color.colorArea0;
+            colorRes = R.color.colorExam;
 
         return ContextCompat.getColor(AppController.getInstance(), colorRes);
     }

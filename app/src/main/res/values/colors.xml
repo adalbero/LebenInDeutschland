@@ -1,27 +1,27 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <color name="colorPrimary">#3f51b5</color>
-    <color name="colorPrimaryDark">#303f9f</color>
-    <color name="colorAccent">#3F51B5</color>
+    <color name="colorPrimary">@color/Indigo_500</color>
+    <color name="colorPrimaryDark">@color/Indigo_700</color>
+    <color name="colorAccent">@color/Indigo_500</color>
 
-    <color name="colorRight">#c8e6c9</color>
-    <color name="colorRightDark">#A5D6A7</color>
-    <color name="colorWrong">#ffcdd2</color>
-    <color name="colorWrongDark">#EF9A9A</color>
-    <color name="colorNotAnswerd">#BDBDBD</color>
+    <color name="colorRight">@color/Green_100</color>
+    <color name="colorRightDark">@color/Green_200</color>
+    <color name="colorWrong">@color/Red_100</color>
+    <color name="colorWrongDark">@color/Red_200</color>
+    <color name="colorNotAnswerd">@color/Gray_400</color>
 
-    <color name="colorAll" tag="Gray 600">#757575</color>
-    <color name="colorLand" tag="Red 200">#EF9A9A</color>
-    <color name="colorTest" tag="Yellow 400">#FFEE58</color>
-    <color name="colorArea0">#BCAAA4</color>
-    <color name="colorArea1">#FFE082</color>
-    <color name="colorArea2">#A2DAF4</color>
-    <color name="colorArea3">#C5D882</color>
+    <color name="colorAll">@color/Teal_200</color>
+    <color name="colorLand">@color/Purble_200</color>
+    <color name="colorTest">@color/DeepOrange_200</color>
+    <color name="colorExam">@color/Brown_200</color>
+    <color name="colorArea1">@color/Amber_200</color>
+    <color name="colorArea2">@color/LightGreeen_200</color>
+    <color name="colorArea3">@color/LightBlue_200</color>
 
-    <color name="colorQuestion">#616161</color>
-    <color name="colorOptions">#616161</color>
-    <color name="colorBackground">#FFFFFF</color>
-    <color name="colorCardBG">#E0E0E0</color>
-    <color name="colorTagBG">#E0E0E0</color>
-    <color name="colorTagIcon">#9E9E9E</color>
+    <color name="colorQuestion">@color/Gray_700</color>
+    <color name="colorOptions">@color/Gray_700</color>
+    <color name="colorBackground">@color/White</color>
+    <color name="colorCardBG">@color/Gray_300</color>
+    <color name="colorTagBG">@color/Gray_300</color>
+    <color name="colorTagIcon">@color/Gray_500</color>
 </resources>

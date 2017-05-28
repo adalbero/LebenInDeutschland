@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="Red_100">#ffcdd2</color>
+    <color name="Red_200">#EF9A9A</color>
+
+    <color name="Pink_200">#F48FB1</color>
+
+    <color name="Purble_200">#CE93D8</color>
+
+    <color name="DeepPurble_200">#B39DDB</color>
+
+    <color name="Indigo_200">#9FA8DA</color>
+    <color name="Indigo_500">#3f51b5</color>
+    <color name="Indigo_700">#303f9f</color>
+
+    <color name="Blue_200">#90CAF9</color>
+
+    <color name="LightBlue_100">#B3E5FC</color>
+    <color name="LightBlue_200">#81D4FA</color>
+
+    <color name="Cyan_200">#80DEEA</color>
+
+    <color name="Teal_200">#80CBC4</color>
+
+    <color name="Green_100">#c8e6c9</color>
+    <color name="Green_200">#A5D6A7</color>
+
+    <color name="LightGreeen_100">#DCEDC8</color>
+    <color name="LightGreeen_200">#C5E1A5</color>
+
+    <color name="Lime_200">#E6EE9C</color>
+
+    <color name="Yellow_200">#FFF59D</color>
+
+    <color name="Amber_100">#FFECB3</color>
+    <color name="Amber_200">#FFE082</color>
+
+    <color name="Orange_200">#FFCC80</color>
+
+    <color name="DeepOrange_200">#FFAB91</color>
+
+    <color name="Brown_200">#BCAAA4</color>
+
+    <color name="Gray_200">#EEEEEE</color>
+    <color name="Gray_300">#E0E0E0</color>
+    <color name="Gray_400">#BDBDBD</color>
+    <color name="Gray_500">#9E9E9E</color>
+    <color name="Gray_700">#616161</color>
+
+    <color name="BlueGray_200">#B0BEC5</color>
+
+    <color name="Black">#000000</color>
+    <color name="White">#FFFFFF</color>
+
+</resources>

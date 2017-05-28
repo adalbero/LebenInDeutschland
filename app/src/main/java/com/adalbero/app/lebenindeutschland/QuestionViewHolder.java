@@ -13,8 +13,8 @@ import android.widget.TextView;
 
 import com.adalbero.app.lebenindeutschland.controller.AppController;
 import com.adalbero.app.lebenindeutschland.controller.Store;
-import com.adalbero.app.lebenindeutschland.data.Question;
-import com.adalbero.app.lebenindeutschland.data.exam.Exam2;
+import com.adalbero.app.lebenindeutschland.data.question.Question;
+import com.adalbero.app.lebenindeutschland.data.result.Exam2Result;
 
 import java.util.Set;
 
@@ -24,8 +24,8 @@ import java.util.Set;
 
 public class QuestionViewHolder implements View.OnClickListener, ResultCallback {
     private View mView;
-    private Exam2 mExam;
     private Question mQuestion;
+    private Exam2Result mResult;
     private boolean mQuestionPage;
 
     private TextView mViewHeader;
@@ -43,9 +43,9 @@ public class QuestionViewHolder implements View.OnClickListener, ResultCallback 
     private static int COLOR_RIGHT = AppController.getInstance().getBackgroundColor(R.color.colorRight);
     private static int COLOR_WRONG = AppController.getInstance().getBackgroundColor(R.color.colorWrong);
 
-    public QuestionViewHolder(View view, Exam2 exam, boolean questionPage, ResultCallback callback) {
+    public QuestionViewHolder(View view, Exam2Result result, boolean questionPage, ResultCallback callback) {
         mView = view;
-        mExam = exam;
+        mResult = result;
         mQuestionPage = questionPage;
         mCallback = callback;
 
@@ -92,9 +92,11 @@ public class QuestionViewHolder implements View.OnClickListener, ResultCallback 
             showTagView();
         }
 
-//        if (mViewStatus != null) {
-//            mViewStatus.setBackgroundColor(mExam.getStatusColor(question.getNum()));
-//        }
+        if (mViewStatus != null) {
+            String num = question.getNum();
+            int color = mResult.getStatusColor(num);
+            mViewStatus.setBackgroundColor(color);
+        }
 
         if (mViewQuestion != null) {
             mViewQuestion.setText(mQuestion.getQuestion());
@@ -150,12 +152,12 @@ public class QuestionViewHolder implements View.OnClickListener, ResultCallback 
     }
 
     private void showOptions() {
-//        String response = mExam.getResult().getAnswer(mQuestion.getNum());
-//        String answer = mQuestion.getAnswerLetter();
-//
-//        for (CheckedTextView btn : mViewOptions) {
-//            checkOption(btn, answer, response);
-//        }
+        String userResponse = mResult.getAnswer(mQuestion.getNum());
+        String correctAnswer = mQuestion.getAnswerLetter();
+
+        for (CheckedTextView btn : mViewOptions) {
+            checkOption(btn, correctAnswer, userResponse);
+        }
 
     }
 
@@ -214,9 +216,9 @@ public class QuestionViewHolder implements View.OnClickListener, ResultCallback 
 
     @Override
     public void onClick(View v) {
-//        String answer = (String) v.getTag();
-//        mExam.getResult().setAnswer(mQuestion.getNum(), answer);
-//        showResult();
+        String answer = (String) v.getTag();
+        mResult.setAnswer(mQuestion.getNum(), answer);
+        showResult();
     }
 
     @Override

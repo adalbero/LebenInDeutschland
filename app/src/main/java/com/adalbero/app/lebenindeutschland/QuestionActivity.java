@@ -1,7 +1,5 @@
 package com.adalbero.app.lebenindeutschland;
 
-import android.content.ActivityNotFoundException;
-import android.content.ComponentName;
 import android.content.Intent;
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
@@ -14,8 +12,9 @@ import android.widget.Toast;
 
 import com.adalbero.app.lebenindeutschland.controller.AppController;
 import com.adalbero.app.lebenindeutschland.controller.Store;
-import com.adalbero.app.lebenindeutschland.data.Question;
 import com.adalbero.app.lebenindeutschland.data.exam.Exam2;
+import com.adalbero.app.lebenindeutschland.data.question.Question;
+import com.adalbero.app.lebenindeutschland.data.result.Exam2Result;
 
 import java.util.List;
 
@@ -24,7 +23,7 @@ import static com.adalbero.app.lebenindeutschland.R.id.btn_next;
 public class QuestionActivity extends AppCompatActivity implements ResultCallback {
 
     private Question mQuestion;
-    private Exam2 mExam;
+    private Exam2Result mResult;
 
     private List<String> mQuestionNumList;
     private QuestionViewHolder mQuestionViewHolder;
@@ -39,9 +38,10 @@ public class QuestionActivity extends AppCompatActivity implements ResultCallbac
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_question2);
 
-        mExam = AppController.getCurrentExam();
+        Exam2 exam = AppController.getCurrentExam();
+        mQuestionNumList = exam.getQuestions();
 
-        mQuestionNumList = mExam.getQuestions();
+        mResult = new Exam2Result();
 
         mBtnPrev = (Button) findViewById(R.id.btn_prev);
         mBtnPrev.setOnClickListener(new View.OnClickListener() {
@@ -62,7 +62,7 @@ public class QuestionActivity extends AppCompatActivity implements ResultCallbac
         mProgressView = (ProgressView) findViewById(R.id.view_progress);
 
         View contentView = findViewById(R.id.item_question);
-        mQuestionViewHolder = new QuestionViewHolder(contentView, mExam, true, this);
+        mQuestionViewHolder = new QuestionViewHolder(contentView, mResult, true, this);
 
         AppController.initAdView(this);
     }
@@ -93,36 +93,11 @@ public class QuestionActivity extends AppCompatActivity implements ResultCallbac
 
     private void goShare() {
         String text = mQuestion.getSharedContent();
-//        if (!goTranslate(text)) {
         Intent sendIntent = new Intent();
         sendIntent.setAction(Intent.ACTION_SEND);
         sendIntent.putExtra(Intent.EXTRA_TEXT, text);
         sendIntent.setType("text/plain");
         startActivity(Intent.createChooser(sendIntent, "Send to..."));
-//        }
-    }
-
-    private boolean goTranslate(String text) {
-        try {
-            Intent intent = new Intent();
-            intent.setAction(Intent.ACTION_SEND);
-            intent.putExtra(Intent.EXTRA_TEXT, text);
-            intent.putExtra("key_text_input", text);
-            intent.putExtra("key_text_output", "");
-            intent.putExtra("key_language_from", "de");
-//            intent.putExtra("key_language_to", "mal");
-            intent.putExtra("key_suggest_translation", "");
-            intent.putExtra("key_from_floating_window", false);
-            intent.setComponent(new ComponentName(
-                    "com.google.android.apps.translate",
-                    "com.google.android.apps.translate.HomeActivity"));
-            startActivity(intent);
-        } catch (ActivityNotFoundException e) {
-            Toast.makeText(getApplication(), "Sorry, No Google Translation Installed",
-                    Toast.LENGTH_SHORT).show();
-        }
-
-        return true;
     }
 
     private void showView() {
@@ -147,9 +122,9 @@ public class QuestionActivity extends AppCompatActivity implements ResultCallbac
     }
 
     private void updateProgress() {
-//        if (mProgressView != null) {
-//            mProgressView.setProgress(mExam);
-//        }
+        if (mProgressView != null) {
+            mProgressView.setProgress(mResult);
+        }
     }
 
     private void doClose() {
@@ -190,15 +165,6 @@ public class QuestionActivity extends AppCompatActivity implements ResultCallbac
     protected void onRestoreInstanceState(Bundle savedInstanceState) {
         super.onRestoreInstanceState(savedInstanceState);
         Toast.makeText(this, "Restore state", Toast.LENGTH_SHORT).show();
-
-//        mExam.restoreState(savedInstanceState);
-    }
-
-    @Override
-    protected void onSaveInstanceState(Bundle outState) {
-        super.onSaveInstanceState(outState);
-
-//        mExam.saveState(outState);
     }
 
 }

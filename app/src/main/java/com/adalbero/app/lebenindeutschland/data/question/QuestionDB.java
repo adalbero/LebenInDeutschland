@@ -1,4 +1,4 @@
-package com.adalbero.app.lebenindeutschland.data;
+package com.adalbero.app.lebenindeutschland.data.question;
 
 import android.content.Context;
 import android.util.Log;

@@ -28,6 +28,12 @@
         <Preference
             android:key="debug.remove.all"
             android:title="Clear all variables" />
+        <Preference
+            android:key="debug.remove.exam"
+            android:title="Clear exam variables" />
+        <Preference
+            android:key="debug.remove.pref"
+            android:title="Clear preference variables" />
 
     </PreferenceCategory>
 

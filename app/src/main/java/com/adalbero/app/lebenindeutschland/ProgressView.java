@@ -9,7 +9,7 @@ import android.support.v4.content.ContextCompat;
 import android.util.AttributeSet;
 import android.view.View;
 
-import com.adalbero.app.lebenindeutschland.data.Exam;
+import com.adalbero.app.lebenindeutschland.data.result.Exam2Result;
 
 /**
  * Created by Adalbero on 19/05/2017.
@@ -26,10 +26,10 @@ public class ProgressView extends View {
         super(context, attrs);
     }
 
-    public void setProgress(Exam exam) {
-        int total = exam.getCount();
-        int answerd = exam.getResult().getAnswerdCount();
-        int right = exam.getResult().countRightAnswers();
+    public void setProgress(Exam2Result result) {
+        int total = result.getCount();
+        int answerd = result.getAnswerdCount();
+        int right = result.countRightAnswers();
 
         this.total = total;
         this.right = right;
@@ -42,6 +42,7 @@ public class ProgressView extends View {
     public void onDraw(Canvas canvas) {
         int h = canvas.getHeight();
         int w = canvas.getWidth();
+        RectF rectF = new RectF();
 
         int colorRight = ContextCompat.getColor(getContext(), R.color.colorRightDark);
         int colorWrong = ContextCompat.getColor(getContext(), R.color.colorWrongDark);
@@ -49,25 +50,19 @@ public class ProgressView extends View {
 
         paint.setStyle(Paint.Style.FILL);
 
-//        paint.setColor(colorBackground);
-//        canvas.drawRect(new RectF(0, 0, w, h), paint);
-
         int dx = (total == 0 ? w: w / total);
         int corner = h / 2;
 
         for (int i=0; i<total; i++) {
             paint.setColor( i < right ? colorRight : i < right + wrong ? colorWrong : colorNotAnswerd);
-            canvas.drawRoundRect(new RectF(i*dx, 2, (i+1)*dx, h-2), corner, corner, paint);
+            rectF.set(i*dx, 2, (i+1)*dx, h-2);
+            canvas.drawRoundRect(rectF, corner, corner, paint);
 
         }
-//        paint.setColor(colorRight);
-//        canvas.drawRect(new RectF(0, 0, x1, h), paint);
-//
-//        paint.setColor(colorWrong);
-//        canvas.drawRect(new RectF(x1, 0, x1+x2, h), paint);
 
         paint.setColor(Color.RED);
-        canvas.drawRect(new RectF(w/2-2, 0, w/2+2, h), paint);
+        rectF.set(w/2-2, 0, w/2+2, h);
+        canvas.drawRect(rectF, paint);
     }
 
 }

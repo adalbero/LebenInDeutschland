@@ -108,20 +108,8 @@ public class Store {
         return (inline == 1);
     }
 
-    public static void resetPrefs() {
-        removeGroup("pref");
-    }
-
     public static void resetExam() {
         removeGroup("exam");
-    }
-
-    public static void setTagTerms(Set<String> tags) {
-        getPreferences().edit().putStringSet(KEY_TAGS_TERMS, tags).commit();
-    }
-
-    public static Set<String> getTagTerms() {
-        return getPreferences().getStringSet(KEY_TAGS_TERMS, null);
     }
 
     public static void setList(String key, List<String> list) {
@@ -137,7 +125,20 @@ public class Store {
         str = str.substring(1, str.length() - 1);
 
         String[] vet = str.split(",");
-        return Arrays.asList(vet);
+        List<String> list = Arrays.asList(vet);
+
+        for (int i=0; i<list.size(); i++) {
+            String value = list.get(i);
+            value = value.trim();
+
+            if (value.equals("null")) {
+                value = null;
+            }
+
+            list.set(i, value);
+        }
+
+        return list;
     }
 
     public static void setSet(String key, Set<String> set) {

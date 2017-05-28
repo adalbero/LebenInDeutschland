@@ -1,6 +1,6 @@
 package com.adalbero.app.lebenindeutschland.data.exam;
 
-import com.adalbero.app.lebenindeutschland.data.Question;
+import com.adalbero.app.lebenindeutschland.data.question.Question;
 
 /**
  * Created by Adalbero on 27/05/2017.

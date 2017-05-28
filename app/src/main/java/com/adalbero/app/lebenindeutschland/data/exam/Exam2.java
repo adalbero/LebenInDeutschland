@@ -7,8 +7,8 @@ import com.adalbero.app.lebenindeutschland.R;
 import com.adalbero.app.lebenindeutschland.ResultCallback;
 import com.adalbero.app.lebenindeutschland.controller.AppController;
 import com.adalbero.app.lebenindeutschland.controller.Store;
-import com.adalbero.app.lebenindeutschland.data.Question;
-import com.adalbero.app.lebenindeutschland.data.QuestionDB;
+import com.adalbero.app.lebenindeutschland.data.question.Question;
+import com.adalbero.app.lebenindeutschland.data.question.QuestionDB;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -39,6 +39,18 @@ public class Exam2 {
         mQuestionNumList = onGetQuestions();
 
         return mQuestionNumList;
+    }
+
+    public int getQuestionIdx(String num) {
+        List<String> list = getQuestions();
+
+        for (int i=0; i<list.size(); i++) {
+            if (list.get(i).equals(num)) {
+                return i;
+            }
+        }
+
+        return -1;
     }
 
     protected List<String> onGetQuestions() {
@@ -100,7 +112,7 @@ public class Exam2 {
     }
 
     protected int onGetColorResource() {
-        return R.color.colorArea0;
+        return R.color.colorExam;
     }
 
     public Drawable getIcon() {
