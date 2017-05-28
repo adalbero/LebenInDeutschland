@@ -11,17 +11,15 @@ import android.widget.ListView;
 
 import com.adalbero.app.lebenindeutschland.controller.AppController;
 import com.adalbero.app.lebenindeutschland.controller.Store;
-import com.adalbero.app.lebenindeutschland.data.Exam;
-import com.adalbero.app.lebenindeutschland.data.ExamDynamic;
-import com.adalbero.app.lebenindeutschland.data.ExamHeader;
-import com.adalbero.app.lebenindeutschland.data.ExamLand;
+import com.adalbero.app.lebenindeutschland.data.exam.Exam2;
+import com.adalbero.app.lebenindeutschland.data.exam.Exam2Header;
 
 import java.util.ArrayList;
 import java.util.List;
 
-public class MainActivity extends AppCompatActivity {
+public class MainActivity extends AppCompatActivity implements ResultCallback {
 
-    private List<Exam> data;
+    private List<Exam2> data;
     private ExamItemAdapter mAdapter;
 
     @Override
@@ -39,35 +37,31 @@ public class MainActivity extends AppCompatActivity {
         listView.setOnItemClickListener(new AdapterView.OnItemClickListener() {
             @Override
             public void onItemClick(AdapterView<?> adapter, View v, int position, long id) {
-                Exam exam = data.get(position);
-                final String name = exam.getName();
-
-                if (exam instanceof ExamHeader) return;
-                if (exam instanceof ExamDynamic) {
-                    ((ExamDynamic) exam).build(MainActivity.this, new ResultCallback() {
-                        @Override
-                        public void onResult(Object parent, Object param) {
-                            goList(name);
-                        }
-                    });
-                    return;
-                }
-
-                if (exam instanceof ExamLand && name.charAt(0) == '*') {
-                    goSettings();
-                    return;
-                }
-                goList(name);
+                onItemSelected(position);
             }
         });
 
         AppController.initAdView(this);
     }
 
+    private void onItemSelected(int position) {
+        Exam2 exam = data.get(position);
+
+        if (exam instanceof Exam2Header) return;
+
+        Store.resetExam();
+
+        if (exam.onPrompt(this, this)) {
+            return;
+        }
+
+        goExam(exam.getName());
+    }
+
     private void updateData() {
         data = new ArrayList();
-        for (Exam exam : AppController.getExamList()) {
-            exam.init();
+        for (Exam2 exam : AppController.getExamList()) {
+            exam.onUpdate();
             data.add(exam);
         }
     }
@@ -93,18 +87,24 @@ public class MainActivity extends AppCompatActivity {
     protected void onStart() {
         super.onStart();
         AppController.getExamLand();
-        Store.resetExam();
+        mAdapter.notifyDataSetChanged();
     }
 
     private void goSettings() {
         startActivity(new Intent(this, SettingsActivity.class));
     }
 
-    private void goList(String examName) {
+    private void goExam(String examName) {
         Store.setExamName(examName);
         Store.setQuestionIdx(0);
 
         Intent intent = new Intent(this, ExamActivity.class);
         this.startActivity(intent);
+    }
+
+    @Override
+    public void onResult(Object parent, Object param) {
+        String name = (String)param;
+        goExam(name);
     }
 }

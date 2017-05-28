@@ -6,7 +6,7 @@
         <ListPreference
             android:key="pref.land"
             android:summary="%s"
-            android:title="Select a land" />
+            android:title="Select Bundesland" />
 
     </PreferenceCategory>
 

@@ -3,19 +3,17 @@ package com.adalbero.app.lebenindeutschland;
 import android.content.Intent;
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
-import android.util.Log;
 import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
 import android.widget.AdapterView;
 import android.widget.ListView;
-import android.widget.TextView;
 import android.widget.Toast;
 
 import com.adalbero.app.lebenindeutschland.controller.AppController;
 import com.adalbero.app.lebenindeutschland.controller.Store;
-import com.adalbero.app.lebenindeutschland.data.Exam;
 import com.adalbero.app.lebenindeutschland.data.Question;
+import com.adalbero.app.lebenindeutschland.data.exam.Exam2;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -23,7 +21,7 @@ import java.util.List;
 public class ExamActivity extends AppCompatActivity implements ResultCallback {
 
     private List<Question> data = new ArrayList();
-    private Exam mExam;
+    private Exam2 mExam;
 
     private ListView mListView;
     private QuestionItemAdapter mAdapter;
@@ -33,11 +31,9 @@ public class ExamActivity extends AppCompatActivity implements ResultCallback {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_exam);
 
-        Log.d("MyApp", "ExamActivity.onCreate: ");
-
         mExam = AppController.getCurrentExam();
 
-        List<String> questions = mExam.getQuestionNumList();
+        List<String> questions = mExam.getQuestions();
 
         String title = mExam.getTitle();
         getSupportActionBar().setTitle(title);
@@ -109,18 +105,10 @@ public class ExamActivity extends AppCompatActivity implements ResultCallback {
     }
 
     @Override
-    protected void onResume() {
-        super.onResume();
-        Log.d("MyApp", "ExamActivity.onResume: ");
-    }
-
-    @Override
     protected void onStart() {
         super.onStart();
 
-        Log.d("MyApp", "ExamActivity.onStart: ");
-
-        mExam.getResult().load();
+//        mExam.getResult().load();
 
         int position = Store.getQuestionIdx();
         mListView.setSelection(position);
@@ -129,29 +117,22 @@ public class ExamActivity extends AppCompatActivity implements ResultCallback {
         updateView();
     }
 
-    @Override
-    protected void onStop() {
-        super.onStop();
-
-        Log.d("MyApp", "ExamActivity.onStop: ");
-    }
-
     private void updateView() {
-        int total = mExam.getCount();
-        int answerd = mExam.getResult().getAnswerdCount();
-        int right = mExam.getResult().countRightAnswers();
-
-        float perc_answerd = total == 0 ? 0 : (float) (100 * answerd / total);
-        float perc_right = answerd == 0 ? 0 : (float) (100 * right / answerd);
-
-        TextView text_total_value = (TextView) findViewById(R.id.text_value1);
-        text_total_value.setText(String.format("%d of %d (%.0f%%)", answerd, total, perc_answerd));
-
-        TextView text_answerd_value = (TextView) findViewById(R.id.text_value2);
-        text_answerd_value.setText(String.format("%d of %d (%.0f%%)", right, answerd, perc_right));
-
-        ProgressView progressView = (ProgressView) findViewById(R.id.view_progress);
-        progressView.setProgress(mExam);
+//        int total = mExam.getCount();
+//        int answerd = mExam.getResult().getAnswerdCount();
+//        int right = mExam.getResult().countRightAnswers();
+//
+//        float perc_answerd = total == 0 ? 0 : (float) (100 * answerd / total);
+//        float perc_right = answerd == 0 ? 0 : (float) (100 * right / answerd);
+//
+//        TextView text_total_value = (TextView) findViewById(R.id.text_value1);
+//        text_total_value.setText(String.format("%d of %d (%.0f%%)", answerd, total, perc_answerd));
+//
+//        TextView text_answerd_value = (TextView) findViewById(R.id.text_value2);
+//        text_answerd_value.setText(String.format("%d of %d (%.0f%%)", right, answerd, perc_right));
+//
+//        ProgressView progressView = (ProgressView) findViewById(R.id.view_progress);
+//        progressView.setProgress(mExam);
     }
 
     private void goQuestion(int idx) {
@@ -169,14 +150,6 @@ public class ExamActivity extends AppCompatActivity implements ResultCallback {
     protected void onRestoreInstanceState(Bundle savedInstanceState) {
         super.onRestoreInstanceState(savedInstanceState);
         Toast.makeText(this, "Restore state", Toast.LENGTH_SHORT).show();
-
-//        mExam.restoreState(savedInstanceState);
     }
 
-    @Override
-    protected void onSaveInstanceState(Bundle outState) {
-        super.onSaveInstanceState(outState);
-
-//        mExam.saveState(outState);
-    }
 }

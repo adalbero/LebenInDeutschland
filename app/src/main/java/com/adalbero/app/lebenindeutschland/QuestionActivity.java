@@ -14,8 +14,8 @@ import android.widget.Toast;
 
 import com.adalbero.app.lebenindeutschland.controller.AppController;
 import com.adalbero.app.lebenindeutschland.controller.Store;
-import com.adalbero.app.lebenindeutschland.data.Exam;
 import com.adalbero.app.lebenindeutschland.data.Question;
+import com.adalbero.app.lebenindeutschland.data.exam.Exam2;
 
 import java.util.List;
 
@@ -24,7 +24,7 @@ import static com.adalbero.app.lebenindeutschland.R.id.btn_next;
 public class QuestionActivity extends AppCompatActivity implements ResultCallback {
 
     private Question mQuestion;
-    private Exam mExam;
+    private Exam2 mExam;
 
     private List<String> mQuestionNumList;
     private QuestionViewHolder mQuestionViewHolder;
@@ -41,7 +41,7 @@ public class QuestionActivity extends AppCompatActivity implements ResultCallbac
 
         mExam = AppController.getCurrentExam();
 
-        mQuestionNumList = mExam.getQuestionNumList();
+        mQuestionNumList = mExam.getQuestions();
 
         mBtnPrev = (Button) findViewById(R.id.btn_prev);
         mBtnPrev.setOnClickListener(new View.OnClickListener() {
@@ -147,9 +147,9 @@ public class QuestionActivity extends AppCompatActivity implements ResultCallbac
     }
 
     private void updateProgress() {
-        if (mProgressView != null) {
-            mProgressView.setProgress(mExam);
-        }
+//        if (mProgressView != null) {
+//            mProgressView.setProgress(mExam);
+//        }
     }
 
     private void doClose() {

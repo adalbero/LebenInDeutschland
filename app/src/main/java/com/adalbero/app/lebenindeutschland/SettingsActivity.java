@@ -23,16 +23,12 @@ public class SettingsActivity extends AppCompatActivity {
     public static final String PREF_LAND = "pref.land";
     public static final String PREF_VERSION = "pref.version";
 
-    private AppController mAppControler;
-
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_settings);
 
         getSupportActionBar().setTitle("Settings");
-
-        mAppControler = AppController.getInstance();
     }
 
     @Override
@@ -53,14 +49,14 @@ public class SettingsActivity extends AppCompatActivity {
             super.onCreate(savedInstanceState);
             addPreferencesFromResource(R.xml.preferences);
 
-            initLand();
+            initBundesland();
 
             Preference pref1 = findPreference(PREF_VERSION);
             pref1.setSummary(appVersion());
             pref1.setOnPreferenceClickListener(this);
         }
 
-        private void initLand() {
+        private void initBundesland() {
             ListPreference listPreference = (ListPreference) findPreference(PREF_LAND);
             List<String> list = AppController.getInstance().getQuestionDB().listDistinctLand();
             int n = list.size();
@@ -96,34 +92,23 @@ public class SettingsActivity extends AppCompatActivity {
         }
 
         private void doDebug() {
-//            upgrade();
+//            remove();
 //            Store.resetPrefs();
 //            Store.resetExam();
             dumpSharedPreferences();
         }
 
-        private void upgrade() {
+        private void remove() {
             Map<String, ?> prefs = PreferenceManager.getDefaultSharedPreferences(
                     AppController.getInstance()).getAll();
             Set<String> keys = new TreeSet<>(prefs.keySet());
+
             for (String key : keys) {
-                Object value = prefs.get(key);
-                String str = (value == null ? null : "" + value);
+                if (key.startsWith("App.")) continue;
+                if (key.startsWith("question.")) continue;
 
-                if (key.endsWith(".tags") && !key.startsWith("question.")) {
-                    String newKey = "question." + key;
-                    Store.setString(newKey, str);
-                    Store.remove(key);
-                }
-
+                Store.remove(key);
             }
-
-            Store.remove("Search.terms");
-            Store.remove("exam_name");
-            Store.remove("list_name");
-            Store.remove("pref_key_land");
-            Store.remove("question_idx");
-
         }
 
         private void dumpSharedPreferences() {
@@ -131,10 +116,11 @@ public class SettingsActivity extends AppCompatActivity {
                     AppController.getInstance()).getAll();
             Set<String> keys = new TreeSet<>(prefs.keySet());
             for (String key : keys) {
+                if (key.startsWith("question.")) continue;
+
                 Object value = prefs.get(key);
-                if (!key.startsWith("question.")) {
-                    Log.d("MyApp", key + " : " + value);
-                }
+
+                Log.d("MyApp", key + " : " + value);
             }
         }
 

@@ -12,10 +12,8 @@ import android.widget.ArrayAdapter;
 import android.widget.ImageView;
 import android.widget.TextView;
 
-import com.adalbero.app.lebenindeutschland.data.Exam;
-import com.adalbero.app.lebenindeutschland.data.Exam300;
-import com.adalbero.app.lebenindeutschland.data.ExamHeader;
-import com.adalbero.app.lebenindeutschland.data.ExamLand;
+import com.adalbero.app.lebenindeutschland.data.exam.Exam2;
+import com.adalbero.app.lebenindeutschland.data.exam.Exam2Header;
 
 import java.util.List;
 
@@ -23,10 +21,10 @@ import java.util.List;
  * Created by Adalbero on 16/05/2017.
  */
 
-public class ExamItemAdapter extends ArrayAdapter<Exam> {
+public class ExamItemAdapter extends ArrayAdapter<Exam2> {
     private final LayoutInflater mInflater;
 
-    public ExamItemAdapter(Context context, List<Exam> data) {
+    public ExamItemAdapter(Context context, List<Exam2> data) {
         super(context, R.layout.exam_item, data);
 
         mInflater = LayoutInflater.from(context);
@@ -42,7 +40,7 @@ public class ExamItemAdapter extends ArrayAdapter<Exam> {
             view = convertView;
         }
 
-        final Exam exam = getItem(position);
+        final Exam2 exam = getItem(position);
 
         String name = exam.getTitle();
         int style = Typeface.NORMAL;
@@ -50,7 +48,7 @@ public class ExamItemAdapter extends ArrayAdapter<Exam> {
         int visible = View.VISIBLE;
         int gravity = Gravity.LEFT;
 
-        if (exam instanceof ExamHeader) {
+        if (exam instanceof Exam2Header) {
             style = Typeface.BOLD | Typeface.ITALIC;
             visible = View.GONE;
             name = "\n" + name;
@@ -66,8 +64,9 @@ public class ExamItemAdapter extends ArrayAdapter<Exam> {
 
         ImageView btn_icon = (ImageView)view.findViewById(R.id.img_icon);
         btn_icon.setVisibility(visible);
-        btn_icon.setImageDrawable(parent.getResources().getDrawable(exam.getIcon()));
-        if (exam instanceof ExamLand || exam instanceof Exam300)
+        btn_icon.setImageDrawable(exam.getIcon());
+
+        if (exam.isIconColor())
             btn_icon.setColorFilter(Color.TRANSPARENT);
 
         TextView text_name = (TextView) view.findViewById(R.id.text_name);

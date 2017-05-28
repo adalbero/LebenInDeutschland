@@ -6,6 +6,7 @@ import android.preference.PreferenceManager;
 import com.adalbero.app.lebenindeutschland.SettingsActivity;
 
 import java.util.ArrayList;
+import java.util.Arrays;
 import java.util.List;
 import java.util.Map;
 import java.util.Set;
@@ -121,5 +122,34 @@ public class Store {
 
     public static Set<String> getTagTerms() {
         return getPreferences().getStringSet(KEY_TAGS_TERMS, null);
+    }
+
+    public static void setList(String key, List<String> list) {
+        String str = list.toString();
+        setString(key, str);
+    }
+
+    public static List<String> getList(String key) {
+        String str = getString(key, null);
+
+        if (str == null) return null;
+
+        str = str.substring(1, str.length() - 1);
+
+        String[] vet = str.split(",");
+        return Arrays.asList(vet);
+    }
+
+    public static void setSet(String key, Set<String> set) {
+        List<String> list = new ArrayList<>(set);
+        setList(key, list);
+    }
+
+    public static Set<String> getSet(String key) {
+        List<String> list = getList(key);
+
+        if (list == null) return null;
+
+        return new TreeSet<>(list);
     }
 }

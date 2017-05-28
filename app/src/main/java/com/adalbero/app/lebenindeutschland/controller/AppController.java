@@ -7,17 +7,17 @@ import android.support.v4.content.ContextCompat;
 import android.util.Log;
 
 import com.adalbero.app.lebenindeutschland.R;
-import com.adalbero.app.lebenindeutschland.data.Exam;
-import com.adalbero.app.lebenindeutschland.data.Exam300;
-import com.adalbero.app.lebenindeutschland.data.ExamByArea;
-import com.adalbero.app.lebenindeutschland.data.ExamBySearch;
-import com.adalbero.app.lebenindeutschland.data.ExamByTag;
-import com.adalbero.app.lebenindeutschland.data.ExamByThema;
-import com.adalbero.app.lebenindeutschland.data.ExamHeader;
 import com.adalbero.app.lebenindeutschland.data.ExamLand;
-import com.adalbero.app.lebenindeutschland.data.ExamSimulate;
 import com.adalbero.app.lebenindeutschland.data.Question;
 import com.adalbero.app.lebenindeutschland.data.QuestionDB;
+import com.adalbero.app.lebenindeutschland.data.exam.Exam2;
+import com.adalbero.app.lebenindeutschland.data.exam.Exam2All;
+import com.adalbero.app.lebenindeutschland.data.exam.Exam2Area;
+import com.adalbero.app.lebenindeutschland.data.exam.Exam2Header;
+import com.adalbero.app.lebenindeutschland.data.exam.Exam2Land;
+import com.adalbero.app.lebenindeutschland.data.exam.Exam2Random;
+import com.adalbero.app.lebenindeutschland.data.exam.Exam2Tag;
+import com.adalbero.app.lebenindeutschland.data.exam.Exam2Thema;
 import com.google.android.gms.ads.AdRequest;
 import com.google.android.gms.ads.AdView;
 import com.google.android.gms.ads.MobileAds;
@@ -35,7 +35,7 @@ public class AppController extends Application {
     private static AppController mInstance;
 
     private QuestionDB mQuestionDB;
-    private List<Exam> mExamList;
+    private List<Exam2> mExamList;
     private ExamLand mExamLand;
 
     public static AppController getInstance() {
@@ -73,7 +73,7 @@ public class AppController extends Application {
         app.mQuestionDB.load(app);
     }
 
-    public static List<Exam> getExamList() {
+    public static List<Exam2> getExamList() {
         AppController app = getInstance();
 
         if (app.mExamList == null) {
@@ -86,27 +86,29 @@ public class AppController extends Application {
     // TODO: cache examList
     public static void loadExamList() {
 
-        List<Exam> examList = new ArrayList<>();
+        List<Exam2> examList = new ArrayList<>();
 
-        examList.add(new ExamHeader("Liste"));
-        examList.add(new Exam300("Alle"));
-        examList.add(getExamLand());
+        examList.add(new Exam2Header("Liste"));
+        examList.add(new Exam2All("Alle"));
+        examList.add(new Exam2Land("Select Bundesland"));
+        examList.add(new Exam2Random("Test"));
+        examList.add(new Exam2Tag("Tags"));
 
-        examList.add(new ExamHeader("Themen"));
-        examList.add(new ExamByArea("Politik in der Demokratie"));
-        examList.add(new ExamByArea("Geschichte und Verantwortung"));
-        examList.add(new ExamByArea("Mensch und Gesellschaft"));
+        examList.add(new Exam2Header("Themen"));
+        examList.add(new Exam2Area("Politik in der Demokratie"));
+        examList.add(new Exam2Area("Geschichte und Verantwortung"));
+        examList.add(new Exam2Area("Mensch und Gesellschaft"));
 
-        examList.add(new ExamHeader("Themengebiete"));
+        examList.add(new Exam2Header("Themengebiete"));
         List<String> themas = getQuestionDB().listAllTheme();
         for (String thema : themas) {
-            examList.add(new ExamByThema(thema));
+            examList.add(new Exam2Thema(thema));
         }
-
-        examList.add(new ExamHeader("Filter"));
-        examList.add(new ExamBySearch("Search"));
-        examList.add(new ExamByTag("Tags"));
-        examList.add(new ExamSimulate("Probetest"));
+//
+//        examList.add(new ExamHeader("Filter"));
+//        examList.add(new ExamBySearch("Search"));
+//        examList.add(new ExamByTag("Tags"));
+//        examList.add(new ExamSimulate("Probetest"));
 //        Set<String> tags = getQuestionDB().getAllTags();
 //        for (String tag : tags) {
 //            ExamTag examTag = new ExamTag(tag);
@@ -115,7 +117,7 @@ public class AppController extends Application {
 //                examList.add(examTag);
 //        }
 
-        examList.add(new ExamHeader(""));
+        examList.add(new Exam2Header(""));
 
         getInstance().mExamList = examList;
     }
@@ -134,14 +136,14 @@ public class AppController extends Application {
         return app.mExamLand;
     }
 
-    public static Exam getCurrentExam() {
+    public static Exam2 getCurrentExam() {
         String name = Store.getExamName();
         return getExam(name);
     }
 
-    public static Exam getExam(String name) {
+    public static Exam2 getExam(String name) {
         if (name != null) {
-            for (Exam exam : getExamList()) {
+            for (Exam2 exam : getExamList()) {
                 if (exam.getName().equals(name)) {
                     return exam;
                 }
