@@ -29,6 +29,7 @@ public class QuestionViewHolder implements View.OnClickListener, ResultCallback 
     private boolean mQuestionPage;
 
     private TextView mViewHeader;
+    private TextView mViewNum;
     private LinearLayout mViewTags;
     private View mViewStatus;
     private TextView mViewQuestion;
@@ -50,6 +51,7 @@ public class QuestionViewHolder implements View.OnClickListener, ResultCallback 
         mCallback = callback;
 
         mViewHeader = (TextView) view.findViewById(R.id.view_header);
+        mViewNum = (TextView) view.findViewById(R.id.view_num);
         mViewTags = (LinearLayout) view.findViewById(R.id.view_tags);
 
         mViewStatus = view.findViewById(R.id.view_status);
@@ -83,8 +85,15 @@ public class QuestionViewHolder implements View.OnClickListener, ResultCallback 
         boolean inline = Store.getExamInline();
 
         if (mViewHeader != null) {
-            String header = String.format("Question #%s - %s", mQuestion.getNum(), mQuestion.getTheme());
+//            String header = String.format("Question #%s - %s", mQuestion.getNum(), mQuestion.getTheme());
+            String header = String.format(mQuestion.getTheme());
             mViewHeader.setText(header);
+            mViewHeader.setBackgroundColor(mQuestion.getAreaColor());
+        }
+
+        if (mViewNum != null) {
+            String num = mQuestion.getNum();
+            mViewNum.setText(num);
             mViewHeader.setBackgroundColor(mQuestion.getAreaColor());
         }
 

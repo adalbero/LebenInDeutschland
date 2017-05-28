@@ -40,12 +40,10 @@ public class Exam2Search extends Exam2 {
     }
 
     private List<String> getTerms() {
-        if (mTerms == null) {
-            mTerms = new ArrayList<>();
-            List<String> terms = Store.getList(KEY);
-            if (terms != null) {
-                mTerms.addAll(terms);
-            }
+        mTerms = new ArrayList<>();
+        List<String> terms = Store.getList(KEY);
+        if (terms != null) {
+            mTerms.addAll(terms);
         }
 
         return mTerms;
@@ -81,7 +79,7 @@ public class Exam2Search extends Exam2 {
         boolean bExclude = false;
         boolean bInclude = false;
 
-        String text= q.getSharedContent();
+        String text = q.getSharedContent();
         text = normalize(text);
 
         boolean flag = false;
@@ -156,8 +154,6 @@ public class Exam2Search extends Exam2 {
 
         builder.show();
     }
-
-
 
 
 }

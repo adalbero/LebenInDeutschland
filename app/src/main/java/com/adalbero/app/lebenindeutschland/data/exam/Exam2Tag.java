@@ -26,12 +26,10 @@ public class Exam2Tag extends Exam2 implements ResultCallback {
     }
 
     private Set<String> getTags() {
-        if (mTags == null) {
-            mTags = new TreeSet<>();
-            Set<String> tags = Store.getSet(KEY);
-            if (tags != null) {
-                mTags.addAll(tags);
-            }
+        mTags = new TreeSet<>();
+        Set<String> tags = Store.getSet(KEY);
+        if (tags != null) {
+            mTags.addAll(tags);
         }
 
         return mTags;
