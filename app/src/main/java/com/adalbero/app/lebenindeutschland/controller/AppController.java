@@ -4,7 +4,6 @@ import android.app.Activity;
 import android.app.Application;
 import android.graphics.drawable.Drawable;
 import android.support.v4.content.ContextCompat;
-import android.util.Log;
 
 import com.adalbero.app.lebenindeutschland.R;
 import com.adalbero.app.lebenindeutschland.data.ExamLand;
@@ -16,6 +15,7 @@ import com.adalbero.app.lebenindeutschland.data.exam.Exam2Area;
 import com.adalbero.app.lebenindeutschland.data.exam.Exam2Header;
 import com.adalbero.app.lebenindeutschland.data.exam.Exam2Land;
 import com.adalbero.app.lebenindeutschland.data.exam.Exam2Random;
+import com.adalbero.app.lebenindeutschland.data.exam.Exam2Search;
 import com.adalbero.app.lebenindeutschland.data.exam.Exam2Tag;
 import com.adalbero.app.lebenindeutschland.data.exam.Exam2Thema;
 import com.google.android.gms.ads.AdRequest;
@@ -46,11 +46,7 @@ public class AppController extends Application {
     public void onCreate() {
         super.onCreate();
 
-        Log.d("MyApp", "AppController.onCreate: ");
-
         mInstance = this;
-
-//        getPreferences().edit().remove(SettingsActivity.PREF_LAND).commit();
 
         loadQuestionDB();
         loadExamList();
@@ -88,34 +84,25 @@ public class AppController extends Application {
 
         List<Exam2> examList = new ArrayList<>();
 
-        examList.add(new Exam2Header("Liste"));
+        examList.add(new Exam2Header("Questions"));
         examList.add(new Exam2All("Alle"));
-        examList.add(new Exam2Land("Select Bundesland"));
+        examList.add(new Exam2Land("Land"));
         examList.add(new Exam2Random("Test"));
+
+        examList.add(new Exam2Header("Filter"));
+        examList.add(new Exam2Search("Search"));
         examList.add(new Exam2Tag("Tags"));
 
-        examList.add(new Exam2Header("Themen"));
+        examList.add(new Exam2Header("By Thema"));
         examList.add(new Exam2Area("Politik in der Demokratie"));
         examList.add(new Exam2Area("Geschichte und Verantwortung"));
         examList.add(new Exam2Area("Mensch und Gesellschaft"));
 
-        examList.add(new Exam2Header("Themengebiete"));
+        examList.add(new Exam2Header("By Topic"));
         List<String> themas = getQuestionDB().listAllTheme();
         for (String thema : themas) {
             examList.add(new Exam2Thema(thema));
         }
-//
-//        examList.add(new ExamHeader("Filter"));
-//        examList.add(new ExamBySearch("Search"));
-//        examList.add(new ExamByTag("Tags"));
-//        examList.add(new ExamSimulate("Probetest"));
-//        Set<String> tags = getQuestionDB().getAllTags();
-//        for (String tag : tags) {
-//            ExamTag examTag = new ExamTag(tag);
-//            examTag.init();
-//            if (examTag.getCount() > 0)
-//                examList.add(examTag);
-//        }
 
         examList.add(new Exam2Header(""));
 
@@ -145,6 +132,7 @@ public class AppController extends Application {
         if (name != null) {
             for (Exam2 exam : getExamList()) {
                 if (exam.getName().equals(name)) {
+                    exam.onUpdate();
                     return exam;
                 }
             }

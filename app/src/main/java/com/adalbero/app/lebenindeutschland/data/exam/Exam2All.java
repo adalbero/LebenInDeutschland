@@ -18,6 +18,11 @@ public class Exam2All extends Exam2 {
     }
 
     @Override
+    protected int onGetColorResource() {
+        return R.color.colorAll;
+    }
+
+    @Override
     public int onGetIconResource() {
         return R.drawable.wappen_de;
     }

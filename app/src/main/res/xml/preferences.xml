@@ -1,7 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <PreferenceScreen xmlns:android="http://schemas.android.com/apk/res/android">
-    <PreferenceCategory
-        android:title="Land">
+    <PreferenceCategory android:title="Bundesland">
 
         <ListPreference
             android:key="pref.land"
@@ -16,6 +15,19 @@
             android:key="pref.version"
             android:summary="unknown"
             android:title="Version" />
+
+    </PreferenceCategory>
+
+    <PreferenceCategory
+        android:key="debug.category"
+        android:title="Deug">
+
+        <Preference
+            android:key="debug.dump"
+            android:title="Dump variables" />
+        <Preference
+            android:key="debug.remove.all"
+            android:title="Clear all variables" />
 
     </PreferenceCategory>
 

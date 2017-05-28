@@ -27,49 +27,6 @@ public class ExamBySearch extends ExamDynamic {
         dialog(activity, callback);
     }
 
-    @Override
-    protected boolean isFilter(Question q) {
-        if (terms == null) return false;
-
-        boolean bExclude = false;
-        boolean bInclude = false;
-
-        String text= q.getSharedContent();
-        text = normalize(text);
-
-        boolean flag = false;
-        for (String term : terms) {
-            if (term.length() == 0)
-                continue;
-
-            if (term.charAt(0) == '-') {
-                term = term.substring(1);
-                bExclude = true;
-            } else if (term.charAt(0) == '+') {
-                term = term.substring(1);
-                bInclude = true;
-            }
-
-            term = normalize(term);
-            if (text.indexOf(term) >= 0) {
-                if (bExclude) return false;
-                flag = true;
-            } else {
-                if (bInclude) return false;
-            }
-        }
-
-        return flag;
-    }
-
-    private String normalize(String text) {
-        text = text.replaceAll("[ä]", "a");
-        text = text.replaceAll("[ö]", "o");
-        text = text.replaceAll("[ü]", "u");
-        text = text.toLowerCase();
-
-        return text;
-    }
 
     @Override
     public String getTitle() {

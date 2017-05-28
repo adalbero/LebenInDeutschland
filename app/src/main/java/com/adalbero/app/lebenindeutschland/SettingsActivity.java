@@ -6,22 +6,25 @@ import android.os.Bundle;
 import android.os.PersistableBundle;
 import android.preference.ListPreference;
 import android.preference.Preference;
+import android.preference.PreferenceCategory;
 import android.preference.PreferenceFragment;
-import android.preference.PreferenceManager;
 import android.support.v7.app.AppCompatActivity;
-import android.util.Log;
+import android.widget.Toast;
 
 import com.adalbero.app.lebenindeutschland.controller.AppController;
-import com.adalbero.app.lebenindeutschland.controller.Store;
+import com.adalbero.app.lebenindeutschland.controller.Debug;
 
 import java.util.List;
-import java.util.Map;
-import java.util.Set;
-import java.util.TreeSet;
+
+import static com.adalbero.app.lebenindeutschland.R.xml.preferences;
 
 public class SettingsActivity extends AppCompatActivity {
     public static final String PREF_LAND = "pref.land";
     public static final String PREF_VERSION = "pref.version";
+
+    public static final String DEBUG_CATEGORY = "debug.category";
+    public static final String DEBUG_DUMP = "debug.dump";
+    public static final String DEBUG_REMOVE_ALL = "debug.remove.all";
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -44,16 +47,28 @@ public class SettingsActivity extends AppCompatActivity {
     }
 
     public static class SettingsFragment extends PreferenceFragment implements Preference.OnPreferenceClickListener {
+        private PreferenceCategory mDebugCategory;
+        private int mDebugClick;
+        private final int DEBUG_CLICKS = 3;
+
         @Override
         public void onCreate(Bundle savedInstanceState) {
             super.onCreate(savedInstanceState);
-            addPreferencesFromResource(R.xml.preferences);
+            addPreferencesFromResource(preferences);
 
             initBundesland();
 
             Preference pref1 = findPreference(PREF_VERSION);
             pref1.setSummary(appVersion());
             pref1.setOnPreferenceClickListener(this);
+
+            mDebugCategory = (PreferenceCategory) findPreference(DEBUG_CATEGORY);
+
+            findPreference(DEBUG_DUMP).setOnPreferenceClickListener(this);
+            findPreference(DEBUG_REMOVE_ALL).setOnPreferenceClickListener(this);
+
+            mDebugClick = 0;
+            getPreferenceScreen().removePreference(mDebugCategory);
         }
 
         private void initBundesland() {
@@ -64,7 +79,7 @@ public class SettingsActivity extends AppCompatActivity {
             String land_code[] = new String[n];
             String land_name[] = new String[n];
 
-            for (int i=0; i<n; i++) {
+            for (int i = 0; i < n; i++) {
                 String value = list.get(i);
                 land_code[i] = value;
                 land_name[i] = value.substring(3);
@@ -85,43 +100,21 @@ public class SettingsActivity extends AppCompatActivity {
 
         @Override
         public boolean onPreferenceClick(Preference preference) {
-            if (preference.getKey().equals(PREF_VERSION) ) {
-                doDebug();
+            String key = preference.getKey();
+            if (key.equals(PREF_VERSION)) {
+                if (mDebugClick == DEBUG_CLICKS - 1) {
+                    Toast.makeText(getActivity(), "Enable Debug Mode", Toast.LENGTH_SHORT).show();
+                    getPreferenceScreen().addPreference(mDebugCategory);
+                } else {
+                    mDebugClick++;
+                }
+            } else if (key.equals(DEBUG_DUMP)) {
+                Debug.dumpSharedPreferences();
+            } else if (key.equals(DEBUG_REMOVE_ALL)) {
+                Debug.removeAll();
             }
+
             return false;
-        }
-
-        private void doDebug() {
-//            remove();
-//            Store.resetPrefs();
-//            Store.resetExam();
-            dumpSharedPreferences();
-        }
-
-        private void remove() {
-            Map<String, ?> prefs = PreferenceManager.getDefaultSharedPreferences(
-                    AppController.getInstance()).getAll();
-            Set<String> keys = new TreeSet<>(prefs.keySet());
-
-            for (String key : keys) {
-                if (key.startsWith("App.")) continue;
-                if (key.startsWith("question.")) continue;
-
-                Store.remove(key);
-            }
-        }
-
-        private void dumpSharedPreferences() {
-            Map<String, ?> prefs = PreferenceManager.getDefaultSharedPreferences(
-                    AppController.getInstance()).getAll();
-            Set<String> keys = new TreeSet<>(prefs.keySet());
-            for (String key : keys) {
-                if (key.startsWith("question.")) continue;
-
-                Object value = prefs.get(key);
-
-                Log.d("MyApp", key + " : " + value);
-            }
         }
 
     }

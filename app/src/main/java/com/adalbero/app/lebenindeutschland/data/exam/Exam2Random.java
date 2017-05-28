@@ -86,12 +86,19 @@ public class Exam2Random extends Exam2 {
 
     @Override
     public int getSize() {
-        return 33;
+        update();
+        return super.getSize();
     }
 
     @Override
     protected int onGetIconResource() {
         return R.drawable.ic_simulate;
     }
+
+    @Override
+    protected int onGetColorResource() {
+        return R.color.colorTest;
+    }
+
 
 }

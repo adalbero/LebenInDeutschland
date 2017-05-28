@@ -3,6 +3,8 @@ package com.adalbero.app.lebenindeutschland.data.exam;
 import android.app.Activity;
 import android.content.Intent;
 
+import com.adalbero.app.lebenindeutschland.R;
+import com.adalbero.app.lebenindeutschland.ResultCallback;
 import com.adalbero.app.lebenindeutschland.SettingsActivity;
 import com.adalbero.app.lebenindeutschland.controller.AppController;
 import com.adalbero.app.lebenindeutschland.controller.Store;
@@ -13,29 +15,36 @@ import com.adalbero.app.lebenindeutschland.data.Question;
  */
 
 public class Exam2Land extends Exam2 {
+    private String mLand;
+
     public Exam2Land(String name) {
         super(name);
     }
 
-    public void setName(String name) {
-        mName = name;
+    public void setLand(String name) {
+        mLand = name;
         update();
     }
 
     @Override
     protected boolean onFilter(Question q) {
-        return q.getTheme().equals(mName);
+        return q.getTheme().equals(mLand);
     }
 
     @Override
     public void onUpdate() {
         String name = Store.getSelectedLandName();
-        setName(name);
+        setLand(name);
     }
 
+    @Override
     public String getTitle() {
+        if (mLand == null) {
+            return "Select Bundesland...";
+        }
+
         int n = getSize();
-        return getName() + " (" + n + ")";
+        return mLand + " (" + n + ")";
     }
 
     @Override
@@ -48,13 +57,17 @@ public class Exam2Land extends Exam2 {
         return resId;
     }
 
+    @Override
+    protected int onGetColorResource() {
+        return R.color.colorLand;
+    }
+
     public boolean isIconColor() {
         return true;
     }
 
-
-
-    public boolean onPrompt(Activity activity) {
+    @Override
+    public boolean onPrompt(Activity activity, ResultCallback callback) {
         String code = Store.getSelectedLandCode();
         if (code == null) {
             activity.startActivity(new Intent(activity, SettingsActivity.class));

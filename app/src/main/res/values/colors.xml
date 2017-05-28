@@ -10,11 +10,14 @@
     <color name="colorWrongDark">#EF9A9A</color>
     <color name="colorNotAnswerd">#BDBDBD</color>
 
+    <color name="colorAll" tag="Gray 600">#757575</color>
+    <color name="colorLand" tag="Red 200">#EF9A9A</color>
+    <color name="colorTest" tag="Yellow 400">#FFEE58</color>
     <color name="colorArea0">#BCAAA4</color>
     <color name="colorArea1">#FFE082</color>
     <color name="colorArea2">#A2DAF4</color>
     <color name="colorArea3">#C5D882</color>
-    <color name="colorLand">#CE93D8</color>
+
     <color name="colorQuestion">#616161</color>
     <color name="colorOptions">#616161</color>
     <color name="colorBackground">#FFFFFF</color>
