@@ -1,11 +1,18 @@
 <?xml version="1.0" encoding="utf-8"?>
 <PreferenceScreen xmlns:android="http://schemas.android.com/apk/res/android">
-    <PreferenceCategory android:title="Bundesland">
+    <PreferenceCategory android:title="Preferences">
 
         <ListPreference
             android:key="pref.land"
             android:summary="%s"
             android:title="Select Bundesland" />
+
+        <CheckBoxPreference
+            android:defaultValue="false"
+            android:key="pref.inline.mode"
+            android:summaryOff="Show question in it's own view"
+            android:summaryOn="Respond to question in the list view "
+            android:title="Question Inline" />
 
     </PreferenceCategory>
 

@@ -9,7 +9,7 @@ import android.support.v4.content.ContextCompat;
 import android.util.AttributeSet;
 import android.view.View;
 
-import com.adalbero.app.lebenindeutschland.data.result.Exam2Result;
+import com.adalbero.app.lebenindeutschland.data.result.ResultInfo;
 
 /**
  * Created by Adalbero on 19/05/2017.
@@ -18,22 +18,14 @@ import com.adalbero.app.lebenindeutschland.data.result.Exam2Result;
 public class ProgressView extends View {
     Paint paint = new Paint();
 
-    private int total;
-    private int right;
-    private int wrong;
+    private ResultInfo mResultInfo;
 
     public ProgressView(Context context, AttributeSet attrs) {
         super(context, attrs);
     }
 
-    public void setProgress(Exam2Result result) {
-        int total = result.getCount();
-        int answerd = result.getAnswerdCount();
-        int right = result.countRightAnswers();
-
-        this.total = total;
-        this.right = right;
-        this.wrong = answerd - right;
+    public void setProgress(ResultInfo resultInfo) {
+        mResultInfo = resultInfo;
 
         invalidate();
     }
@@ -50,18 +42,20 @@ public class ProgressView extends View {
 
         paint.setStyle(Paint.Style.FILL);
 
-        int dx = (total == 0 ? w: w / total);
-        int corner = h / 2;
+        float dx = (mResultInfo.total == 0 ? w : (float) w / mResultInfo.total);
+        float corner = h / 2;
 
-        for (int i=0; i<total; i++) {
-            paint.setColor( i < right ? colorRight : i < right + wrong ? colorWrong : colorNotAnswerd);
-            rectF.set(i*dx, 2, (i+1)*dx, h-2);
+        if (dx < corner)
+            corner = 0;
+
+        for (int i = 0; i < mResultInfo.total; i++) {
+            paint.setColor(i < mResultInfo.right ? colorRight : i < mResultInfo.answered ? colorWrong : colorNotAnswerd);
+            rectF.set(i * dx, 2, (i + 1) * dx, h - 2);
             canvas.drawRoundRect(rectF, corner, corner, paint);
-
         }
 
         paint.setColor(Color.RED);
-        rectF.set(w/2-2, 0, w/2+2, h);
+        rectF.set(w / 2 - 2, 0, w / 2 + 2, h);
         canvas.drawRect(rectF, paint);
     }
 

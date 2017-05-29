@@ -19,7 +19,7 @@ import java.util.TreeSet;
 public class Store {
     public static final String KEY_EXAM_NAME = "exam.name";
     public static final String KEY_QUESTION_IDX = "exam.question.idx";
-    public static final String KEY_EXAM_INLINE = "pref.inline";
+    public static final String KEY_EXAM_INLINE = "pref.inline.mode";
     public static final String KEY_TAGS_TERMS = "pref.Tags.terms";
 
     public static void remove(String key) {
@@ -69,6 +69,16 @@ public class Store {
         return getPreferences().getInt(key, def);
     }
 
+    public static void setBoolean(String key, boolean value) {
+        SharedPreferences.Editor edit = getPreferences().edit();
+        edit.putBoolean(key, value);
+        edit.commit();
+    }
+
+    public static boolean getBoolean(String key, boolean def) {
+        return getPreferences().getBoolean(key, def);
+    }
+
     public static String getExamName() {
         String name = Store.getString(KEY_EXAM_NAME, null);
         return name;
@@ -100,12 +110,12 @@ public class Store {
     }
 
     public static void setExamInline(boolean inline) {
-        Store.setInt(KEY_EXAM_INLINE, inline ? 1 : 0);
+        Store.setBoolean(KEY_EXAM_INLINE, inline);
     }
 
     public static boolean getExamInline() {
-        int inline = Store.getInt(KEY_EXAM_INLINE, 0);
-        return (inline == 1);
+        boolean inline = Store.getBoolean(KEY_EXAM_INLINE, false);
+        return inline;
     }
 
     public static void resetExam() {

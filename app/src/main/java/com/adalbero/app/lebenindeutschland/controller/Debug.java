@@ -22,7 +22,7 @@ public class Debug {
 
             Object value = prefs.get(key);
 
-            Log.d("MyApp", key + " : " + value);
+            Log.i("MyApp", key + " : " + value);
         }
     }
 

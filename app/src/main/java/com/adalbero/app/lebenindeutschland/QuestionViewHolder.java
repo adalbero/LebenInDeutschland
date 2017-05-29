@@ -65,6 +65,13 @@ public class QuestionViewHolder implements View.OnClickListener, ResultCallback 
         mViewImage = (ImageView) view.findViewById(R.id.view_image);
         mViewImageAlt = (ImageView) view.findViewById(R.id.view_image_alt);
 
+        mViewTags.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                goTagDialog();
+            }
+        });
+
         for (CheckedTextView btn : mViewOptions) {
             btn.setOnClickListener(this);
         }
@@ -85,7 +92,6 @@ public class QuestionViewHolder implements View.OnClickListener, ResultCallback 
         boolean inline = Store.getExamInline();
 
         if (mViewHeader != null) {
-//            String header = String.format("Question #%s - %s", mQuestion.getNum(), mQuestion.getTheme());
             String header = String.format(mQuestion.getTheme());
             mViewHeader.setText(header);
             mViewHeader.setBackgroundColor(mQuestion.getAreaColor());
@@ -111,13 +117,10 @@ public class QuestionViewHolder implements View.OnClickListener, ResultCallback 
             mViewQuestion.setText(mQuestion.getQuestion());
         }
 
-        if (mQuestionPage || inline) {
-            mViewTags.setOnClickListener(new View.OnClickListener() {
-                @Override
-                public void onClick(View v) {
-                    goTagDialog();
-                }
-            });
+        final boolean b = mQuestionPage || inline;
+
+        if (b) {
+            mViewTags.setClickable(true);
 
             mGroupOptions.setVisibility(View.VISIBLE);
             for (int i = 0; i < mViewOptions.length; i++) {
@@ -153,8 +156,9 @@ public class QuestionViewHolder implements View.OnClickListener, ResultCallback 
                 mViewImage.setVisibility(View.GONE);
             if (mViewImageAlt != null)
                 mViewImageAlt.setVisibility(View.GONE);
-            if (mViewTags != null)
-                mViewTags.setOnClickListener(null);
+            if (mViewTags != null) {
+                mViewTags.setClickable(false);
+            }
         }
 
         return mView;
@@ -233,7 +237,7 @@ public class QuestionViewHolder implements View.OnClickListener, ResultCallback 
     @Override
     public void onResult(Object parent, Object param) {
         if (parent instanceof TagDialogFragment) {
-            TagDialogFragment dialog = (TagDialogFragment)parent;
+            TagDialogFragment dialog = (TagDialogFragment) parent;
             Set<String> tags = dialog.getSelected();
             mQuestion.setTags(tags);
             show(mQuestion);

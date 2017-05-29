@@ -27,24 +27,49 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_weight="0"
+        android:gravity="bottom"
         android:orientation="horizontal">
 
         <Button
             android:id="@+id/btn_prev"
-            android:layout_width="150dp"
+            android:layout_width="130dp"
             android:layout_height="60dp"
             android:layout_marginLeft="8dp"
             android:layout_weight="0"
-            android:text="Zurück" />
+            android:text="Previous" />
 
-        <Space
-            android:layout_width="10dp"
-            android:layout_height="10dp"
-            android:layout_weight="1" />
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/view_result"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="8dp"
+                android:text="Pass"
+                android:textAlignment="center"
+                android:textSize="24sp"
+                android:textStyle="bold"
+                android:visibility="gone" />
+
+            <TextView
+                android:id="@+id/view_clock"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="8dp"
+                android:text="00:00"
+                android:textAlignment="center"
+                android:textSize="36sp"
+                android:textStyle="bold" />
+
+        </LinearLayout>
 
         <Button
             android:id="@+id/btn_next"
-            android:layout_width="150dp"
+            android:layout_width="130dp"
             android:layout_height="60dp"
             android:layout_marginRight="8dp"
             android:layout_weight="0"
@@ -67,4 +92,5 @@
         android:layout_height="50dp"
         app:adSize="SMART_BANNER"
         app:adUnitId="@string/banner" />
+
 </LinearLayout>

@@ -24,7 +24,7 @@ public class Exam2Result {
     private Exam2 mExam;
 
     public Exam2Result() {
-        getAnswerList();
+//        getAnswerList();
     }
 
     public Exam2 getExam() {
@@ -50,6 +50,11 @@ public class Exam2Result {
         return mAnswerList;
     }
 
+    public void reset() {
+        mAnswerList = null;
+        getAnswerList();
+    }
+
     public void saveAnserList() {
         Store.setList(KEY_ANSWER_LIST, getAnswerList());
     }
@@ -70,38 +75,33 @@ public class Exam2Result {
         return getAnswerList().size();
     }
 
-    public int getAnswerdCount() {
-        List<String> answerList = getAnswerList();
-        int count = 0;
-
-        for (int i = 0; i < answerList.size(); i++) {
-            if (answerList.get(i) != null) {
-                count++;
-            }
-        }
-
-        return count;
-    }
-
-    public int countRightAnswers() {
+    public ResultInfo getResult() {
         Exam2 exam = getExam();
         List<String> answerList = getAnswerList();
 
-        int right = 0;
+        ResultInfo result = new ResultInfo();
+        result.total = getCount();
 
         for (int i = 0; i < answerList.size(); i++) {
-            String answer = answerList.get(i);
-            if (answer != null) {
-                String num = exam.getQuestions().get(i);
-                Question q = getQuestionDB().findByNum(num);
-                if (q != null) {
-                    if (answer.charAt(0) - 'a' == q.getAnswer())
-                        right++;
+            if (answerList.get(i) != null) {
+                result.answered++;
+
+                String answer = answerList.get(i);
+                if (answer != null) {
+                    String num = exam.getQuestions().get(i);
+                    Question q = getQuestionDB().findByNum(num);
+                    if (q != null) {
+                        if (answer.charAt(0) - 'a' == q.getAnswer())
+                            result.right++;
+                    }
                 }
             }
+
         }
 
-        return right;
+        result.wrong = result.answered - result.right;
+
+        return result;
     }
 
     public int getAnswerStatus(String num) {

@@ -2,32 +2,35 @@ package com.adalbero.app.lebenindeutschland;
 
 import android.content.Intent;
 import android.os.Bundle;
+import android.support.v4.content.ContextCompat;
 import android.support.v7.app.AppCompatActivity;
 import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
 import android.widget.Button;
 import android.widget.ScrollView;
-import android.widget.Toast;
+import android.widget.TextView;
 
 import com.adalbero.app.lebenindeutschland.controller.AppController;
+import com.adalbero.app.lebenindeutschland.controller.Clock;
 import com.adalbero.app.lebenindeutschland.controller.Store;
 import com.adalbero.app.lebenindeutschland.data.exam.Exam2;
 import com.adalbero.app.lebenindeutschland.data.question.Question;
 import com.adalbero.app.lebenindeutschland.data.result.Exam2Result;
+import com.adalbero.app.lebenindeutschland.data.result.ResultInfo;
 
 import java.util.List;
-
-import static com.adalbero.app.lebenindeutschland.R.id.btn_next;
 
 public class QuestionActivity extends AppCompatActivity implements ResultCallback {
 
     private Question mQuestion;
     private Exam2Result mResult;
+    private Clock mClock;
 
     private List<String> mQuestionNumList;
     private QuestionViewHolder mQuestionViewHolder;
 
+    private TextView mResultView;
     private Button mBtnPrev;
     private Button mBtnNext;
 
@@ -51,13 +54,16 @@ public class QuestionActivity extends AppCompatActivity implements ResultCallbac
             }
         });
 
-        mBtnNext = (Button) findViewById(btn_next);
+        mBtnNext = (Button) findViewById(R.id.btn_next);
         mBtnNext.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 goNext();
             }
         });
+        mResultView = (TextView) findViewById(R.id.view_result);
+
+        mClock = new Clock((TextView) findViewById(R.id.view_clock));
 
         mProgressView = (ProgressView) findViewById(R.id.view_progress);
 
@@ -71,7 +77,16 @@ public class QuestionActivity extends AppCompatActivity implements ResultCallbac
     protected void onStart() {
         super.onStart();
 
+        mResult.reset();
+
         showView();
+        mClock.start();
+    }
+
+    @Override
+    protected void onStop() {
+        super.onStop();
+        mClock.pause();
     }
 
     @Override
@@ -118,13 +133,29 @@ public class QuestionActivity extends AppCompatActivity implements ResultCallbac
 
         mQuestionViewHolder.show(mQuestion);
 
-        updateProgress();
+        updateResult();
     }
 
-    private void updateProgress() {
+    private void updateResult() {
+        ResultInfo resultInfo = mResult.getResult();
+
         if (mProgressView != null) {
-            mProgressView.setProgress(mResult);
+            mProgressView.setProgress(resultInfo);
         }
+
+        if (resultInfo.isFinished()) {
+            mClock.stop();
+
+            if (resultInfo.isPass()) {
+                mResultView.setText("Pass");
+                mResultView.setTextColor(ContextCompat.getColor(this, R.color.colorRightDark));
+            } else {
+                mResultView.setText("Fail");
+                mResultView.setTextColor(ContextCompat.getColor(this, R.color.colorWrongDark));
+            }
+            mResultView.setVisibility(View.VISIBLE);
+        }
+
     }
 
     private void doClose() {
@@ -157,14 +188,8 @@ public class QuestionActivity extends AppCompatActivity implements ResultCallbac
     @Override
     public void onResult(Object parent, Object param) {
         if (parent instanceof QuestionViewHolder) {
-            updateProgress();
+            updateResult();
         }
-    }
-
-    @Override
-    protected void onRestoreInstanceState(Bundle savedInstanceState) {
-        super.onRestoreInstanceState(savedInstanceState);
-        Toast.makeText(this, "Restore state", Toast.LENGTH_SHORT).show();
     }
 
 }

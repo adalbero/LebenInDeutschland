@@ -85,10 +85,6 @@ public class AppController extends Application {
         examList.add(new Exam2Land("Land"));
         examList.add(new Exam2Random("Test"));
 
-        examList.add(new Exam2Header("Filter"));
-        examList.add(new Exam2Search("Search"));
-        examList.add(new Exam2Tag("Tags"));
-
         examList.add(new Exam2Header("By Thema"));
         examList.add(new Exam2Area("Politik in der Demokratie"));
         examList.add(new Exam2Area("Geschichte und Verantwortung"));
@@ -99,6 +95,10 @@ public class AppController extends Application {
         for (String thema : themas) {
             examList.add(new Exam2Thema(thema));
         }
+
+        examList.add(new Exam2Header("Filter"));
+        examList.add(new Exam2Search("Search"));
+        examList.add(new Exam2Tag("Tags"));
 
         examList.add(new Exam2Header(""));
 
