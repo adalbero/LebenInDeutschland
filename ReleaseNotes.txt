@@ -1,0 +1,15 @@
+Ver 1.1.0
+- [Fix] API Level 16 (Android Jelly Bean 4.1)
+- [New] Text to Speech
+
+Ver 1.0.0
+- [New] Select Bundesland
+- [New] List of all questions
+- [New] List of Bundesland questions
+- [New] Test Simulator
+- [New] Filter questions by Topic
+- [New] Search for questions
+- [New] Tags
+- [New] Send to...
+- [New] Progress (time, right/wrong answers)
+- [New] Question inline
