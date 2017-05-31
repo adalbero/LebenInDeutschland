@@ -46,9 +46,9 @@
 
             <TextView
                 android:id="@+id/view_result"
-                android:layout_width="match_parent"
+                android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_marginLeft="8dp"
+                android:layout_gravity="center_horizontal"
                 android:text="Pass"
                 android:textAlignment="center"
                 android:textSize="24sp"
@@ -57,9 +57,9 @@
 
             <TextView
                 android:id="@+id/view_clock"
-                android:layout_width="match_parent"
+                android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_marginLeft="8dp"
+                android:layout_gravity="center_horizontal"
                 android:text="00:00"
                 android:textAlignment="center"
                 android:textSize="36sp"

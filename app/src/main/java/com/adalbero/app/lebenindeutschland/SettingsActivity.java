@@ -28,6 +28,8 @@ public class SettingsActivity extends AppCompatActivity {
     public static final String DEBUG_REMOVE_EXAM = "debug.remove.exam";
     public static final String DEBUG_REMOVE_PREF = "debug.remove.pref";
 
+    public static final String BETA_CATEGORY = "beta.category";
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -50,6 +52,8 @@ public class SettingsActivity extends AppCompatActivity {
 
     public static class SettingsFragment extends PreferenceFragment implements Preference.OnPreferenceClickListener {
         private PreferenceCategory mDebugCategory;
+        private PreferenceCategory mBetaCategory;
+
         private int mDebugClick;
         private final int DEBUG_CLICKS = 3;
 
@@ -72,7 +76,11 @@ public class SettingsActivity extends AppCompatActivity {
             findPreference(DEBUG_REMOVE_PREF).setOnPreferenceClickListener(this);
 
             mDebugClick = 0;
+
+            mBetaCategory = (PreferenceCategory) findPreference(BETA_CATEGORY);
+
             getPreferenceScreen().removePreference(mDebugCategory);
+            getPreferenceScreen().removePreference(mBetaCategory);
         }
 
         private void initBundesland() {
@@ -109,6 +117,7 @@ public class SettingsActivity extends AppCompatActivity {
                 if (mDebugClick == DEBUG_CLICKS - 1) {
                     Toast.makeText(getActivity(), "Enable Debug Mode", Toast.LENGTH_SHORT).show();
                     getPreferenceScreen().addPreference(mDebugCategory);
+                    getPreferenceScreen().addPreference(mBetaCategory);
                 } else {
                     mDebugClick++;
                 }

@@ -146,11 +146,11 @@ public class Question {
     }
 
     public String getSharedContent() {
-        String result = this.getQuestion() + "\n";
-        result += "a) " + this.getOptions()[0] + "\n";
-        result += "b) " + this.getOptions()[1] + "\n";
-        result += "c) " + this.getOptions()[2] + "\n";
-        result += "d) " + this.getOptions()[3] + "\n";
+        String result = this.getQuestion() + ".\n";
+        result += "a) " + this.getOptions()[0] + ".\n";
+        result += "b) " + this.getOptions()[1] + ".\n";
+        result += "c) " + this.getOptions()[2] + ".\n";
+        result += "d) " + this.getOptions()[3] + ".\n";
 
         return result;
     }

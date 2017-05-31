@@ -31,17 +31,33 @@
 
         <Preference
             android:key="debug.dump"
+            android:summary="Dump variabels in console"
             android:title="Dump variables" />
         <Preference
             android:key="debug.remove.all"
+            android:summary="Delete all variables from memory (including preferences)"
             android:title="Clear all variables" />
         <Preference
             android:key="debug.remove.exam"
+            android:summary="Delete variables from Exam run"
             android:title="Clear exam variables" />
         <Preference
             android:key="debug.remove.pref"
+            android:summary="Delete preferences variables"
             android:title="Clear preference variables" />
 
+    </PreferenceCategory>
+
+    <PreferenceCategory
+        android:key="beta.category"
+        android:title="Beta">
+
+        <CheckBoxPreference
+            android:defaultValue="false"
+            android:key="beta.pref.voice"
+            android:summary="*** BETA FEATURE ***\nEnabel voice command to select an option"
+            android:title="Enable Voice Command"
+            />
     </PreferenceCategory>
 
 </PreferenceScreen>

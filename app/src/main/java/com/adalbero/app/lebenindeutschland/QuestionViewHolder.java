@@ -3,6 +3,7 @@ package com.adalbero.app.lebenindeutschland;
 import android.app.Activity;
 import android.graphics.Color;
 import android.graphics.drawable.Drawable;
+import android.text.TextUtils;
 import android.util.DisplayMetrics;
 import android.view.View;
 import android.widget.CheckedTextView;
@@ -210,6 +211,7 @@ public class QuestionViewHolder implements View.OnClickListener, ResultCallback 
             View view = activity.getLayoutInflater().inflate(R.layout.tag_text, null);
             TextView textView = (TextView) view;
             textView.setText(tag);
+            textView.setEllipsize(TextUtils.TruncateAt.END);
             group_tag.addView(textView);
             Space space = new Space(activity);
             space.setMinimumWidth(10);
@@ -226,6 +228,10 @@ public class QuestionViewHolder implements View.OnClickListener, ResultCallback 
         dialog.show(activity.getFragmentManager(), "tag");
     }
 
+
+    public void clickAntwort(int idx) {
+        mViewOptions[idx].callOnClick();
+    }
 
     @Override
     public void onClick(View v) {
