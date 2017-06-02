@@ -11,7 +11,7 @@ public class ResultInfo {
     public int wrong;
 
     public boolean isFinished() {
-        return total == answered;
+        return total > 0 && total == answered;
     }
 
     public float getAnsweredPerc() {

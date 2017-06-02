@@ -1,3 +1,8 @@
+Ver 1.1.1
+- [New] Button layout
+- [Fix] Null in Tag/Search
+- [Fix] Voice Recognition keywords
+
 Ver 1.1.0
 - [Fix] API Level 16 (Android Jelly Bean 4.1)
 - [New] Text to Speech

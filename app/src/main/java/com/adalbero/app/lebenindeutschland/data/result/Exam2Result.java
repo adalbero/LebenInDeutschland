@@ -40,7 +40,7 @@ public class Exam2Result {
         if (exam == null) {
             mAnswerList = null;
         } else if (mAnswerList == null) {
-            mAnswerList = Store.getList(KEY_ANSWER_LIST);
+            mAnswerList = Store.getListWithNull(KEY_ANSWER_LIST);
             if (mAnswerList == null) {
                 String answers[] = new String[exam.getSize()];
                 mAnswerList = Arrays.asList(answers);

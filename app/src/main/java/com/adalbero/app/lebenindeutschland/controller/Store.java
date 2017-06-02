@@ -128,6 +128,14 @@ public class Store {
     }
 
     public static List<String> getList(String key) {
+        return getList(key, false);
+    }
+
+    public static List<String> getListWithNull(String key) {
+        return getList(key, true);
+    }
+
+    private static List<String> getList(String key, boolean canNull) {
         String str = getString(key, null);
 
         if (str == null) return null;
@@ -141,7 +149,7 @@ public class Store {
             String value = list.get(i);
             value = value.trim();
 
-            if (value.equals("null")) {
+            if (canNull && value.equals("null")) {
                 value = null;
             }
 

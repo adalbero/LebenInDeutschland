@@ -84,7 +84,7 @@ public class Exam2Search extends Exam2 {
 
         boolean flag = false;
         for (String term : mTerms) {
-            if (term.length() == 0)
+            if (term == null || term.length() == 0)
                 continue;
 
             if (term.charAt(0) == '-') {

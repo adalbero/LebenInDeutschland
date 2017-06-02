@@ -146,13 +146,20 @@ public class Question {
     }
 
     public String getSharedContent() {
-        String result = this.getQuestion() + ".\n";
-        result += "a) " + this.getOptions()[0] + ".\n";
-        result += "b) " + this.getOptions()[1] + ".\n";
-        result += "c) " + this.getOptions()[2] + ".\n";
-        result += "d) " + this.getOptions()[3] + ".\n";
+        String result = this.getQuestion();
+        result += formatContent("\na) " + this.getOptions()[0], ";");
+        result += formatContent("\nb) " + this.getOptions()[1], ";");
+        result += formatContent("\nc) " + this.getOptions()[2], ";");
+        result += formatContent("\nd) " + this.getOptions()[3], ";");
 
         return result;
+    }
+
+    private String formatContent(String text, String end) {
+        if (!text.endsWith(".")) {
+            text = text + end;
+        }
+        return text;
     }
 
     public void autoTag() {

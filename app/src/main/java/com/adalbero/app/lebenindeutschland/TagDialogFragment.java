@@ -14,6 +14,7 @@ import com.adalbero.app.lebenindeutschland.controller.AppController;
 
 import java.util.ArrayList;
 import java.util.HashSet;
+import java.util.Iterator;
 import java.util.List;
 import java.util.Set;
 
@@ -65,12 +66,24 @@ public class TagDialogFragment extends DialogFragment {
         Set<String> tags = AppController.getInstance().getQuestionDB().getAllTags();
         List<String> data = new ArrayList(tags);
 
+        removeOldTags(data);
+
         TagItemAdapter adapter = new TagItemAdapter(v.getContext(), data, selected);
         ListView listView = (ListView)v.findViewById(R.id.list_view);
         listView.setAdapter(adapter);
 
         newTag = (TextView)v.findViewById((R.id.new_tag));
         newTag.setVisibility(allowNewTag ? View.VISIBLE : View.GONE);
+    }
+
+    private void removeOldTags(List<String> data) {
+        Iterator<String> iter = selected.iterator();
+        while(iter.hasNext()){
+            String tag = iter.next();
+            if (!data.contains(tag))
+                iter.remove();
+        }
+
     }
 
     public void setTags(Set<String> tags, ResultCallback callback, boolean allowNewTag) {

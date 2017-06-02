@@ -9,6 +9,7 @@ import android.widget.CheckedTextView;
 
 import java.util.List;
 import java.util.Set;
+import java.util.TreeSet;
 
 /**
  * Created by Adalbero on 20/05/2017.
@@ -22,6 +23,7 @@ public class TagItemAdapter extends ArrayAdapter<String> {
         super(context, R.layout.tag_item, objects);
 
         mInflater = LayoutInflater.from(context);
+
         mSelected = selected;
     }
 

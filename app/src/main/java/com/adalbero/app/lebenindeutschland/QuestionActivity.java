@@ -1,33 +1,29 @@
 package com.adalbero.app.lebenindeutschland;
 
-import android.content.ActivityNotFoundException;
 import android.content.Intent;
-import android.os.Build;
 import android.os.Bundle;
 import android.speech.RecognizerIntent;
-import android.speech.tts.TextToSpeech;
 import android.support.v4.content.ContextCompat;
-import android.support.v7.app.AlertDialog;
 import android.support.v7.app.AppCompatActivity;
-import android.util.Log;
 import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
-import android.widget.Button;
+import android.widget.ImageButton;
 import android.widget.ScrollView;
 import android.widget.TextView;
 import android.widget.Toast;
 
 import com.adalbero.app.lebenindeutschland.controller.AppController;
 import com.adalbero.app.lebenindeutschland.controller.Clock;
+import com.adalbero.app.lebenindeutschland.controller.Dialog;
 import com.adalbero.app.lebenindeutschland.controller.Store;
+import com.adalbero.app.lebenindeutschland.controller.Voice;
 import com.adalbero.app.lebenindeutschland.data.exam.Exam2;
 import com.adalbero.app.lebenindeutschland.data.question.Question;
 import com.adalbero.app.lebenindeutschland.data.result.Exam2Result;
 import com.adalbero.app.lebenindeutschland.data.result.ResultInfo;
 
 import java.util.List;
-import java.util.Locale;
 
 public class QuestionActivity extends AppCompatActivity implements ResultCallback {
 
@@ -39,12 +35,12 @@ public class QuestionActivity extends AppCompatActivity implements ResultCallbac
     private QuestionViewHolder mQuestionViewHolder;
 
     private TextView mResultView;
-    private Button mBtnPrev;
-    private Button mBtnNext;
+    private ImageButton mBtnPrev;
+    private ImageButton mBtnNext;
 
     private ProgressView mProgressView;
 
-    private TextToSpeech mTTS;
+    private Voice mVoice;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -56,7 +52,7 @@ public class QuestionActivity extends AppCompatActivity implements ResultCallbac
 
         mResult = new Exam2Result();
 
-        mBtnPrev = (Button) findViewById(R.id.btn_prev);
+        mBtnPrev = (ImageButton) findViewById(R.id.btn_prev);
         mBtnPrev.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -64,7 +60,7 @@ public class QuestionActivity extends AppCompatActivity implements ResultCallbac
             }
         });
 
-        mBtnNext = (Button) findViewById(R.id.btn_next);
+        mBtnNext = (ImageButton) findViewById(R.id.btn_next);
         mBtnNext.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -82,7 +78,7 @@ public class QuestionActivity extends AppCompatActivity implements ResultCallbac
 
         AppController.initAdView(this);
 
-        mTTS = new TextToSpeech(this.getApplicationContext(), ttsListener);
+        mVoice = new Voice(getApplicationContext());
     }
 
     @Override
@@ -100,8 +96,8 @@ public class QuestionActivity extends AppCompatActivity implements ResultCallbac
         super.onStop();
         mClock.pause();
 
-        if (mTTS != null) {
-            mTTS.shutdown();
+        if (mVoice != null) {
+            mVoice.shutdown();
         }
     }
 
@@ -121,10 +117,10 @@ public class QuestionActivity extends AppCompatActivity implements ResultCallbac
     public boolean onOptionsItemSelected(MenuItem item) {
         switch (item.getItemId()) {
             case R.id.menu_tts:
-                doTTS();
+                doSpeak();
                 return true;
             case R.id.menu_voice:
-                displaySpeechRecognizer();
+                doSpeachRecognize();
                 return true;
             case R.id.menu_share:
                 goShare();
@@ -132,11 +128,6 @@ public class QuestionActivity extends AppCompatActivity implements ResultCallbac
             default:
                 return super.onOptionsItemSelected(item);
         }
-    }
-
-    private void doTTS() {
-        String text = mQuestion.getSharedContent();
-        speak(text);
     }
 
     private void goShare() {
@@ -161,8 +152,8 @@ public class QuestionActivity extends AppCompatActivity implements ResultCallbac
         ScrollView scrollView = (ScrollView) findViewById(R.id.scroll_view);
         scrollView.scrollTo(0, 0);
 
-        mBtnPrev.setText(idx > 0 ? "Previous" : "Close");
-        mBtnNext.setText(idx < count - 1 ? "Next" : "Finish");
+        mBtnPrev.setImageDrawable(ContextCompat.getDrawable(this, idx > 0 ? R.drawable.ic_prev : R.drawable.ic_close));
+        mBtnNext.setImageDrawable(ContextCompat.getDrawable(this, idx < count - 1 ? R.drawable.ic_next : R.drawable.ic_close));
 
         mQuestionViewHolder.show(mQuestion);
 
@@ -225,31 +216,24 @@ public class QuestionActivity extends AppCompatActivity implements ResultCallbac
         }
     }
 
-    private static final int SPEECH_REQUEST_CODE = 0;
+    private void doSpeak() {
+        String text = mQuestion.getSharedContent();
+        mVoice.speak(text);
+    }
 
-    private void displaySpeechRecognizer() {
-        Intent intent = new Intent(RecognizerIntent.ACTION_RECOGNIZE_SPEECH);
-        intent.putExtra(RecognizerIntent.EXTRA_LANGUAGE_MODEL,
-                RecognizerIntent.LANGUAGE_MODEL_FREE_FORM);
-        intent.putExtra(RecognizerIntent.EXTRA_LANGUAGE, "de-DE");
-//        intent.putExtra(RecognizerIntent.EXTRA_PROMPT, "Antwort");
+    private void doSpeachRecognize() {
+        boolean ok = mVoice.speechRecognizer(this, "de-DE", null);
 
-        try {
-            startActivityForResult(intent, SPEECH_REQUEST_CODE);
-        } catch (ActivityNotFoundException ex) {
-            AlertDialog.Builder builder = new AlertDialog.Builder(this);
-            builder.setMessage("Speech Recognizer not found in this device")
-                    .setPositiveButton("OK", null);
-            builder.show();
+        if (!ok) {
+            Dialog.promptDialog(this, "Speech Recognizer not found in this device");
         }
     }
 
     @Override
     protected void onActivityResult(int requestCode, int resultCode,
                                     Intent data) {
-        if (requestCode == SPEECH_REQUEST_CODE && resultCode == RESULT_OK) {
-            List<String> results = data.getStringArrayListExtra(
-                    RecognizerIntent.EXTRA_RESULTS);
+        if (requestCode == Voice.SPEECH_REQUEST_CODE && resultCode == RESULT_OK) {
+            List<String> results = data.getStringArrayListExtra(RecognizerIntent.EXTRA_RESULTS);
             String spokenText = results.get(0);
             Toast.makeText(this, spokenText, Toast.LENGTH_SHORT).show();
 
@@ -257,64 +241,70 @@ public class QuestionActivity extends AppCompatActivity implements ResultCallbac
             if (answer >= 0 && answer <= 3) {
                 mQuestionViewHolder.clickAntwort(answer);
             } else if (answer == -2) {
-                speak("Genauer bitte");
+                mVoice.speak("Genauer bitte");
             } else {
-                speak("Entschuldigung, ich habe dich nicht verstanden");
+                mVoice.speak("Entschuldigung, ich habe dich nicht verstanden");
             }
         }
+
         super.onActivityResult(requestCode, resultCode, data);
     }
 
     private int findAnswer(String text) {
-        if (text.equalsIgnoreCase("antwort 1"))
-            return 0;
-        if (text.equalsIgnoreCase("antwort 2"))
-            return 1;
-        if (text.equalsIgnoreCase("antwort 3"))
-            return 2;
-        if (text.equalsIgnoreCase("antwort 4"))
-            return 3;
+        int result = -1;
 
-        int result = 0;
+        if (text == null || text.length() == 0)
+            return result;
+
+        text = normalize(text);
+
+        String keywords[] = {"antwort", "nummer"};
+        char ch = Character.MIN_VALUE;
+
+        for (int i=0; i<keywords.length; i++) {
+            if (text.startsWith(keywords[i])) {
+                if (text.length() >= keywords[i].length() + 1) {
+                    ch = text.charAt(keywords[i].length());
+                    break;
+                }
+            }
+        }
+
+        if (ch != Character.MIN_VALUE) {
+            switch (ch) {
+                case '1':
+                case 'a':
+                    return 0;
+                case '2':
+                case 'b':
+                    return 1;
+                case '3':
+                case 'c':
+                    return 2;
+                case '4':
+                case 'd':
+                    return 3;
+                default:
+                    return result;
+            }
+        }
+
         for (int i = 0; i < 4; i++) {
             String opt = mQuestion.getOptions()[i];
-            opt = opt.replaceAll("\\\\s+", "");
-            text = text.replaceAll("\\\\s+", "");
-            String regex = "(?i)(.*)" + text + "(.*)";
-            boolean m = opt.matches(regex);
-            if (m)
-                result |= 1 << i;
+            opt = normalize(opt);
+            if (opt.indexOf(text) >= 0) {
+                if (result != -1) return -2;
+                result = i;
+            }
         }
 
-        Log.d("MyApp", "QuestionActivity.findAnswer: result=" + result);
-
-        if (result == 1) return 0;
-        if (result == 2) return 1;
-        if (result == 4) return 2;
-        if (result == 8) return 3;
-
-        if (result != 0) return -2;
-
-        return -1;
+        return result;
     }
 
-    private void speak(String text) {
-        if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.LOLLIPOP) {
-            mTTS.speak(text, TextToSpeech.QUEUE_ADD, null, "DEFAULT");
-        } else {
-            mTTS.speak(text, TextToSpeech.QUEUE_ADD, null);
-        }
+    private String normalize(String text) {
+        text = text.toLowerCase();
+        text = text.replaceAll("[\\s.,;:/_()\\[\\]\"'-]+", "");
+        return text;
     }
 
-    private TextToSpeech.OnInitListener ttsListener =
-            new TextToSpeech.OnInitListener() {
-                @Override
-                public void onInit(final int status) {
-                    if (status == TextToSpeech.SUCCESS) {
-                        mTTS.setLanguage(Locale.GERMAN);
-                    } else {
-                        Log.d("MyApp", "Error starting the text to speech engine.");
-                    }
-                }
-            };
 }

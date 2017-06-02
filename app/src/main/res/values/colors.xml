@@ -19,6 +19,8 @@
     <color name="colorArea3">@color/LightBlue_200</color>
 
     <color name="colorQuestion">@color/Gray_700</color>
+    <color name="colorButton">@color/Indigo_400</color>
+    <color name="colorButtonPressed">@color/Indigo_500</color>
     <color name="colorOptions">@color/Gray_700</color>
     <color name="colorBackground">@color/White</color>
     <color name="colorCardBG">@color/Gray_300</color>
