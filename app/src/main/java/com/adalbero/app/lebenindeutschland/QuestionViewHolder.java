@@ -13,6 +13,7 @@ import android.widget.Space;
 import android.widget.TextView;
 
 import com.adalbero.app.lebenindeutschland.controller.AppController;
+import com.adalbero.app.lebenindeutschland.controller.Statistics;
 import com.adalbero.app.lebenindeutschland.controller.Store;
 import com.adalbero.app.lebenindeutschland.data.question.Question;
 import com.adalbero.app.lebenindeutschland.data.result.Exam2Result;
@@ -28,10 +29,12 @@ public class QuestionViewHolder implements View.OnClickListener, ResultCallback 
     private Question mQuestion;
     private Exam2Result mResult;
     private boolean mQuestionPage;
+    private Statistics mStats;
 
     private TextView mViewHeader;
     private TextView mViewNum;
     private LinearLayout mViewTags;
+    private StatView mViewStat;
     private View mViewStatus;
     private TextView mViewQuestion;
     private CheckedTextView mViewOptions[] = new CheckedTextView[4];
@@ -42,18 +45,26 @@ public class QuestionViewHolder implements View.OnClickListener, ResultCallback 
     private ResultCallback mCallback;
     private boolean hasSpace;
 
-    private static int COLOR_RIGHT = AppController.getInstance().getBackgroundColor(R.color.colorRight);
-    private static int COLOR_WRONG = AppController.getInstance().getBackgroundColor(R.color.colorWrong);
+    private static int COLOR_RIGHT = AppController.getInstance().getBackgroundColor(R.color.colorRightLight);
+    private static int COLOR_WRONG = AppController.getInstance().getBackgroundColor(R.color.colorWrongLight);
 
     public QuestionViewHolder(View view, Exam2Result result, boolean questionPage, ResultCallback callback) {
         mView = view;
         mResult = result;
         mQuestionPage = questionPage;
         mCallback = callback;
+        mStats = Statistics.getInstance();
 
         mViewHeader = (TextView) view.findViewById(R.id.view_header);
         mViewNum = (TextView) view.findViewById(R.id.view_num);
         mViewTags = (LinearLayout) view.findViewById(R.id.view_tags);
+        mViewStat = (StatView) view.findViewById(R.id.view_stat);
+        mViewStat.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                goStatDialog();
+            }
+        });
 
         mViewStatus = view.findViewById(R.id.view_status);
         mViewQuestion = (TextView) view.findViewById(R.id.view_question);
@@ -106,6 +117,10 @@ public class QuestionViewHolder implements View.OnClickListener, ResultCallback 
 
         if (mViewTags != null) {
             showTagView();
+        }
+
+        if (mViewStat != null) {
+            mViewStat.setQuestion(mQuestion);
         }
 
         if (mViewStatus != null) {
@@ -229,6 +244,14 @@ public class QuestionViewHolder implements View.OnClickListener, ResultCallback 
     }
 
 
+    private void goStatDialog() {
+        Activity activity = (Activity) mView.getContext();
+
+        StatQuestionDialogFragment dialog = new StatQuestionDialogFragment();
+        dialog.setQuestion(mQuestion);
+        dialog.show(activity.getFragmentManager(), "stat");
+    }
+
     public void clickAntwort(int idx) {
         mViewOptions[idx].callOnClick();
     }
@@ -236,7 +259,10 @@ public class QuestionViewHolder implements View.OnClickListener, ResultCallback 
     @Override
     public void onClick(View v) {
         String answer = (String) v.getTag();
+
         mResult.setAnswer(mQuestion.getNum(), answer);
+        mStats.addAnswer(mQuestion, answer);
+
         showResult();
     }
 

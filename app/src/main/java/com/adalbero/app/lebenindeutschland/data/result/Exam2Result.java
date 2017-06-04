@@ -119,8 +119,8 @@ public class Exam2Result {
     public int getStatusColor(String num) {
         int status = getAnswerStatus(num);
         int colorStatus = ContextCompat.getColor(AppController.getInstance(),
-                status == 1 ? R.color.colorRightDark
-                        : status == 0 ? R.color.colorWrongDark
+                status == 1 ? R.color.colorRight
+                        : status == 0 ? R.color.colorWrong
                         : R.color.colorNotAnswerd);
         return colorStatus;
     }

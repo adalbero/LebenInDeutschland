@@ -14,4 +14,5 @@ public class Dialog {
                 .setPositiveButton("OK", null);
         builder.show();
     }
+
 }

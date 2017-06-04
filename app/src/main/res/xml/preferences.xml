@@ -16,6 +16,20 @@
 
     </PreferenceCategory>
 
+    <PreferenceCategory android:title="Statistics">
+
+        <ListPreference
+            android:key="pref.stat.max"
+            android:summary="%s"
+            android:title="Statistic History" />
+
+        <Preference
+            android:key="pref.remove.stat"
+            android:summary="Clear statistics"
+            android:title="Clear all statistics" />
+
+    </PreferenceCategory>
+
     <PreferenceCategory android:title="About">
 
         <Preference
@@ -26,13 +40,28 @@
     </PreferenceCategory>
 
     <PreferenceCategory
+        android:key="beta.category"
+        android:title="Beta">
+
+        <CheckBoxPreference
+            android:defaultValue="false"
+            android:key="beta.pref.voice"
+            android:summary="*** BETA FEATURE ***\nEnabel voice command to select an option"
+            android:title="Enable Voice Command" />
+    </PreferenceCategory>
+
+    <PreferenceCategory
         android:key="debug.category"
-        android:title="Deug">
+        android:title="Debug">
 
         <Preference
             android:key="debug.dump"
             android:summary="Dump variabels in console"
             android:title="Dump variables" />
+        <Preference
+            android:key="debug.dump.stat"
+            android:summary="Dump statistics in console"
+            android:title="Dump statistics" />
         <Preference
             android:key="debug.remove.all"
             android:summary="Delete all variables from memory (including preferences)"
@@ -45,19 +74,11 @@
             android:key="debug.remove.pref"
             android:summary="Delete preferences variables"
             android:title="Clear preference variables" />
+        <Preference
+            android:key="debug.test"
+            android:summary="Execute 100 tests randomly"
+            android:title="Simulat test" />
 
-    </PreferenceCategory>
-
-    <PreferenceCategory
-        android:key="beta.category"
-        android:title="Beta">
-
-        <CheckBoxPreference
-            android:defaultValue="false"
-            android:key="beta.pref.voice"
-            android:summary="*** BETA FEATURE ***\nEnabel voice command to select an option"
-            android:title="Enable Voice Command"
-            />
     </PreferenceCategory>
 
 </PreferenceScreen>

@@ -4,10 +4,12 @@
     <color name="colorPrimaryDark">@color/Indigo_700</color>
     <color name="colorAccent">@color/Indigo_500</color>
 
-    <color name="colorRight">@color/Green_100</color>
-    <color name="colorRightDark">@color/Green_200</color>
-    <color name="colorWrong">@color/Red_100</color>
-    <color name="colorWrongDark">@color/Red_200</color>
+    <color name="colorRightLight">@color/Green_100</color>
+    <color name="colorRight">@color/Green_200</color>
+    <color name="colorRightDark">@color/Green_300</color>
+    <color name="colorWrongLight">@color/Red_100</color>
+    <color name="colorWrong">@color/Red_200</color>
+    <color name="colorWrongDark">@color/Red_300</color>
     <color name="colorNotAnswerd">@color/Gray_400</color>
 
     <color name="colorAll">@color/Teal_200</color>
@@ -17,6 +19,7 @@
     <color name="colorArea1">@color/Amber_200</color>
     <color name="colorArea2">@color/LightGreeen_200</color>
     <color name="colorArea3">@color/LightBlue_200</color>
+    <color name="colorStat">@color/BlueGray_200</color>
 
     <color name="colorQuestion">@color/Gray_700</color>
     <color name="colorButton">@color/Indigo_400</color>

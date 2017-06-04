@@ -12,6 +12,7 @@ import android.widget.ArrayAdapter;
 import android.widget.ImageView;
 import android.widget.TextView;
 
+import com.adalbero.app.lebenindeutschland.controller.Statistics;
 import com.adalbero.app.lebenindeutschland.data.exam.Exam2;
 import com.adalbero.app.lebenindeutschland.data.exam.Exam2Header;
 
@@ -24,10 +25,13 @@ import java.util.List;
 public class ExamItemAdapter extends ArrayAdapter<Exam2> {
     private final LayoutInflater mInflater;
 
+    public Statistics mStat;
+
     public ExamItemAdapter(Context context, List<Exam2> data) {
         super(context, R.layout.exam_item, data);
 
         mInflater = LayoutInflater.from(context);
+        mStat = Statistics.getInstance();
     }
 
     @Override
@@ -48,14 +52,20 @@ public class ExamItemAdapter extends ArrayAdapter<Exam2> {
         int visible = View.VISIBLE;
         int gravity = Gravity.LEFT;
 
+        StatView viewStat = (StatView) view.findViewById(R.id.view_stat);
+
         if (exam instanceof Exam2Header) {
             style = Typeface.BOLD | Typeface.ITALIC;
             visible = View.GONE;
             name = "\n" + name;
             gravity = Gravity.CENTER_HORIZONTAL;
+            viewStat.setVisibility(View.GONE);
         } else {
+            viewStat.setVisibility(View.VISIBLE);
             color = exam.getColor();
         }
+
+        viewStat.setExam(exam);
 
         View item_view = view.findViewById(R.id.item_view);
         GradientDrawable background = (GradientDrawable)parent.getResources().getDrawable(R.drawable.shape_roundrect);

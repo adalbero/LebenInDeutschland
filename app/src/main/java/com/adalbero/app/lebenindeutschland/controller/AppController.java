@@ -13,6 +13,7 @@ import com.adalbero.app.lebenindeutschland.data.exam.Exam2Header;
 import com.adalbero.app.lebenindeutschland.data.exam.Exam2Land;
 import com.adalbero.app.lebenindeutschland.data.exam.Exam2Random;
 import com.adalbero.app.lebenindeutschland.data.exam.Exam2Search;
+import com.adalbero.app.lebenindeutschland.data.exam.Exam2Stat;
 import com.adalbero.app.lebenindeutschland.data.exam.Exam2Tag;
 import com.adalbero.app.lebenindeutschland.data.exam.Exam2Thema;
 import com.adalbero.app.lebenindeutschland.data.question.QuestionDB;
@@ -99,6 +100,13 @@ public class AppController extends Application {
         examList.add(new Exam2Header("Filter"));
         examList.add(new Exam2Search("Search"));
         examList.add(new Exam2Tag("Tags"));
+
+        examList.add(new Exam2Header("Statistics"));
+        examList.add(new Exam2Stat("Mostly wrong", Exam2Stat.FILTER_MOSTLY_WRONG));
+        examList.add(new Exam2Stat("Last response wrong", Exam2Stat.FILTER_LAST_WRONG));
+        examList.add(new Exam2Stat("Not responded", Exam2Stat.FILTER_NOT_RESPONDED));
+        examList.add(new Exam2Stat("Last response right", Exam2Stat.FILTER_LAST_RIGHT));
+        examList.add(new Exam2Stat("Mostly right", Exam2Stat.FILTER_MOSTLY_RIGHT));
 
         examList.add(new Exam2Header(""));
 

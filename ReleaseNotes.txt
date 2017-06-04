@@ -16,5 +16,5 @@ Ver 1.0.0
 - [New] Search for questions
 - [New] Tags
 - [New] Send to...
-- [New] Progress (time, right/wrong answers)
+- [New] Progress (time, right/wrong mAnswers)
 - [New] Question inline

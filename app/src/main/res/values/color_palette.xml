@@ -2,6 +2,9 @@
 <resources>
     <color name="Red_100">#ffcdd2</color>
     <color name="Red_200">#EF9A9A</color>
+    <color name="Red_300">#E57373</color>
+    <color name="Red_400">#EF5350</color>
+    <color name="Red_500">#F44336</color>
 
     <color name="Pink_200">#F48FB1</color>
 
@@ -26,6 +29,9 @@
 
     <color name="Green_100">#c8e6c9</color>
     <color name="Green_200">#A5D6A7</color>
+    <color name="Green_300">#81C784</color>
+    <color name="Green_400">#66BB6A</color>
+    <color name="Green_500">#4CAF50</color>
 
     <color name="LightGreeen_100">#DCEDC8</color>
     <color name="LightGreeen_200">#C5E1A5</color>
@@ -49,6 +55,7 @@
     <color name="Gray_500">#9E9E9E</color>
     <color name="Gray_700">#616161</color>
 
+    <color name="BlueGray_100">#CFD8DC</color>
     <color name="BlueGray_200">#B0BEC5</color>
 
     <color name="Black">#000000</color>

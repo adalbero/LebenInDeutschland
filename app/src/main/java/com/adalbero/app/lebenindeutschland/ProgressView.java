@@ -36,8 +36,8 @@ public class ProgressView extends View {
         int w = canvas.getWidth();
         RectF rectF = new RectF();
 
-        int colorRight = ContextCompat.getColor(getContext(), R.color.colorRightDark);
-        int colorWrong = ContextCompat.getColor(getContext(), R.color.colorWrongDark);
+        int colorRight = ContextCompat.getColor(getContext(), R.color.colorRight);
+        int colorWrong = ContextCompat.getColor(getContext(), R.color.colorWrong);
         int colorNotAnswerd = ContextCompat.getColor(getContext(), R.color.colorNotAnswerd);
 
         paint.setStyle(Paint.Style.FILL);

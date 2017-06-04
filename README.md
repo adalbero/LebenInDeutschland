@@ -10,6 +10,6 @@ Main features:
 * Text to Speech. Your phone can read the question for you
 * If you dont understand a question, you can send it to Google Translator
 * Test Simulator - randomly select 33 questions
-* Keep track of your progress (time, right/wrong answers)
+* Keep track of your progress (time, right/wrong mAnswers)
 
 #AFG #LiD #Einbürgerungstest

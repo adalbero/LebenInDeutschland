@@ -84,7 +84,7 @@ public class Clock {
             if (mResultView != null) {
                 mResultView.setText("Time Out");
                 mResultView.setVisibility(View.VISIBLE);
-                mResultView.setTextColor(ContextCompat.getColor(mClockView.getContext(), R.color.colorWrongDark));
+                mResultView.setTextColor(ContextCompat.getColor(mClockView.getContext(), R.color.colorWrong));
             }
         }
     }
