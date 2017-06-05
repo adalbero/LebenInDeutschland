@@ -140,7 +140,7 @@
         android:layout_marginRight="8dp"
         android:layout_marginTop="0dp"
         android:text="100%"
-        android:textSize="24sp"
+        android:textSize="36sp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintLeft_toLeftOf="parent"
         app:layout_constraintRight_toLeftOf="@+id/view_stat"
