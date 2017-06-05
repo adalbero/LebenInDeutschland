@@ -9,13 +9,15 @@ import com.adalbero.app.lebenindeutschland.data.question.Question;
  */
 
 public class Exam2Stat extends Exam2 {
-    public static final int FILTER_MOSTLY_WRONG = 0;
-    public static final int FILTER_LAST_WRONG = 1;
-    public static final int FILTER_NOT_RESPONDED = 2;
-    public static final int FILTER_LAST_RIGHT = 3;
-    public static final int FILTER_MOSTLY_RIGHT = 4;
+    public static final int FILTER_ONCE_WRONG = 0;
+    public static final int FILTER_MOSTLY_WRONG = 1;
+    public static final int FILTER_LAST_WRONG = 2;
+    public static final int FILTER_NOT_ANSWERED = 3;
+    public static final int FILTER_LAST_RIGHT = 4;
+    public static final int FILTER_MOSTLY_RIGHT = 5;
 
     private int colors[] = {
+            R.color.Red_400,
             R.color.Red_200,
             R.color.Red_100,
             R.color.BlueGray_100,
@@ -54,16 +56,18 @@ public class Exam2Stat extends Exam2 {
         Statistics.Info info = mStat.getQuestionStat(num);
 
         switch (mFilterMode) {
-            case FILTER_NOT_RESPONDED:
-                return !info.isResponded();
-            case FILTER_LAST_RIGHT:
-                return info.isAnswerRight(0);
+            case FILTER_ONCE_WRONG:
+                return info.isAnswered() && info.getNumWrong() > 0;
+            case FILTER_MOSTLY_WRONG:
+                return info.isAnswered() && info.getRightProgress() <= 0.5f;
             case FILTER_LAST_WRONG:
                 return info.isAnswerWrong(0);
+            case FILTER_NOT_ANSWERED:
+                return !info.isAnswered();
+            case FILTER_LAST_RIGHT:
+                return info.isAnswerRight(0);
             case FILTER_MOSTLY_RIGHT:
-                return info.isResponded() && info.getRating() > 0.5f;
-            case FILTER_MOSTLY_WRONG:
-                return info.isResponded() && info.getRating() <= 0.5f;
+                return info.isAnswered() && info.getRightProgress() > 0.5f;
             default:
                 return false;
         }
@@ -71,7 +75,6 @@ public class Exam2Stat extends Exam2 {
 
     @Override
     protected int onGetColorResource() {
-//        return R.color.colorStat;
         return colors[mFilterMode];
     }
 

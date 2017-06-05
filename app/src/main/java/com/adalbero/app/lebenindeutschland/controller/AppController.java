@@ -34,6 +34,7 @@ public class AppController extends Application {
 
     private QuestionDB mQuestionDB;
     private List<Exam2> mExamList;
+    private int mExamIdx;
 
     public static AppController getInstance() {
         return mInstance;
@@ -102,10 +103,11 @@ public class AppController extends Application {
         examList.add(new Exam2Tag("Tags"));
 
         examList.add(new Exam2Header("Statistics"));
+        examList.add(new Exam2Stat("At least once wrong", Exam2Stat.FILTER_ONCE_WRONG));
         examList.add(new Exam2Stat("Mostly wrong", Exam2Stat.FILTER_MOSTLY_WRONG));
-        examList.add(new Exam2Stat("Last response wrong", Exam2Stat.FILTER_LAST_WRONG));
-        examList.add(new Exam2Stat("Not responded", Exam2Stat.FILTER_NOT_RESPONDED));
-        examList.add(new Exam2Stat("Last response right", Exam2Stat.FILTER_LAST_RIGHT));
+        examList.add(new Exam2Stat("Last answer wrong", Exam2Stat.FILTER_LAST_WRONG));
+        examList.add(new Exam2Stat("Not answered yet", Exam2Stat.FILTER_NOT_ANSWERED));
+        examList.add(new Exam2Stat("Last answer right", Exam2Stat.FILTER_LAST_RIGHT));
         examList.add(new Exam2Stat("Mostly right", Exam2Stat.FILTER_MOSTLY_RIGHT));
 
         examList.add(new Exam2Header(""));
@@ -164,4 +166,11 @@ public class AppController extends Application {
         adView.loadAd(adRequest);
     }
 
+    public static void setExamIdx(int idx) {
+        getInstance().mExamIdx = idx;
+    }
+
+    public static int getExamIdx() {
+        return getInstance().mExamIdx;
+    }
 }

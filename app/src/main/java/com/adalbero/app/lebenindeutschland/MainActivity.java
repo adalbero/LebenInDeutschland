@@ -10,6 +10,7 @@ import android.widget.AdapterView;
 import android.widget.ListView;
 
 import com.adalbero.app.lebenindeutschland.controller.AppController;
+import com.adalbero.app.lebenindeutschland.controller.Dialog;
 import com.adalbero.app.lebenindeutschland.controller.Store;
 import com.adalbero.app.lebenindeutschland.data.exam.Exam2;
 import com.adalbero.app.lebenindeutschland.data.exam.Exam2Header;
@@ -21,20 +22,22 @@ public class MainActivity extends AppCompatActivity implements ResultCallback {
 
     private List<Exam2> data;
     private ExamItemAdapter mAdapter;
+    private ListView mListView;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
+
         setContentView(R.layout.activity_main);
 
         updateData();
 
         mAdapter = new ExamItemAdapter(this, data);
 
-        ListView listView = (ListView) findViewById(R.id.list_view);
-        listView.setAdapter(mAdapter);
+        mListView = (ListView) findViewById(R.id.list_view);
+        mListView.setAdapter(mAdapter);
 
-        listView.setOnItemClickListener(new AdapterView.OnItemClickListener() {
+        mListView.setOnItemClickListener(new AdapterView.OnItemClickListener() {
             @Override
             public void onItemClick(AdapterView<?> adapter, View v, int position, long id) {
                 onItemSelected(position);
@@ -50,6 +53,7 @@ public class MainActivity extends AppCompatActivity implements ResultCallback {
         if (exam instanceof Exam2Header) return;
 
         Store.resetExam();
+        AppController.setExamIdx(position);
 
         if (exam.onPrompt(this, this)) {
             return;
@@ -63,6 +67,10 @@ public class MainActivity extends AppCompatActivity implements ResultCallback {
         for (Exam2 exam : AppController.getExamList()) {
             exam.onUpdate();
             data.add(exam);
+        }
+
+        if (mAdapter != null) {
+            mAdapter.notifyDataSetChanged();
         }
     }
 
@@ -86,7 +94,10 @@ public class MainActivity extends AppCompatActivity implements ResultCallback {
     @Override
     protected void onStart() {
         super.onStart();
-        mAdapter.notifyDataSetChanged();
+
+        mListView.setSelection(AppController.getExamIdx());
+
+        updateData();
     }
 
     private void goSettings() {
@@ -94,6 +105,14 @@ public class MainActivity extends AppCompatActivity implements ResultCallback {
     }
 
     private void goExam(String examName) {
+        Exam2 exam = AppController.getExam(examName);
+
+        if (exam.getSize() == 0) {
+            Dialog.promptDialog(this, "No questions in list " + exam.getTitle(false));
+            updateData();
+            return;
+        }
+
         Store.setExamName(examName);
         Store.setQuestionIdx(0);
 
@@ -106,4 +125,5 @@ public class MainActivity extends AppCompatActivity implements ResultCallback {
         String name = (String)param;
         goExam(name);
     }
+
 }

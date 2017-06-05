@@ -14,6 +14,7 @@ import android.widget.Toast;
 
 import com.adalbero.app.lebenindeutschland.controller.AppController;
 import com.adalbero.app.lebenindeutschland.controller.Clock;
+import com.adalbero.app.lebenindeutschland.controller.Statistics;
 import com.adalbero.app.lebenindeutschland.controller.Store;
 import com.adalbero.app.lebenindeutschland.data.exam.Exam2;
 import com.adalbero.app.lebenindeutschland.data.question.Question;
@@ -25,30 +26,32 @@ import java.util.List;
 
 public class ExamActivity extends AppCompatActivity implements ResultCallback {
 
-    private List<Question> data;
+    private Exam2 mExam;
     private Exam2Result mResult;
     private Clock mClock;
 
     private ListView mListView;
     private TextView mClockView;
     private TextView mResultView;
+    private StatView mStatView;
+
     private QuestionItemAdapter mAdapter;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
+
         setContentView(R.layout.activity_exam);
 
-        Exam2 exam = AppController.getCurrentExam();
+        mExam = AppController.getCurrentExam();
 
-        List<String> questions = exam.getQuestions();
-
-        String title = exam.getTitle();
+        String title = mExam.getTitle(false);
         getSupportActionBar().setTitle(title);
 
         mResult = new Exam2Result();
 
-        data = new ArrayList();
+        List<String> questions = mExam.getQuestions();
+        List<Question> data = new ArrayList();
         if (questions != null) {
             for (String questionNum : questions) {
                 Question q = AppController.getQuestionDB().findByNum(questionNum);
@@ -62,6 +65,15 @@ public class ExamActivity extends AppCompatActivity implements ResultCallback {
         mClock = new Clock(mClockView);
 
         mResultView = (TextView) findViewById(R.id.view_result);
+
+        mStatView = (StatView) findViewById(R.id.view_stat);
+        mStatView.setExam(mExam);
+        mStatView.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                goStatDialog();
+            }
+        });
 
         mListView = (ListView) findViewById(R.id.list_view);
         mListView.setAdapter(mAdapter);
@@ -143,8 +155,18 @@ public class ExamActivity extends AppCompatActivity implements ResultCallback {
         mClock.pause();
     }
 
+    private void updateStat() {
+        mStatView.setExam(mExam);
+        TextView viewRating = (TextView) findViewById(R.id.view_rating);
+        float rating = Statistics.getInstance().getRating(mExam.getQuestions());
+
+        viewRating.setText(String.format("%.0f", 100*rating));
+    }
+
     private void updateResult() {
         ResultInfo resultInfo = mResult.getResult();
+
+        updateStat();
 
         TextView text_total_value = (TextView) findViewById(R.id.text_value1);
         text_total_value.setText(String.format("%d of %d (%.0f%%)", resultInfo.answered, resultInfo.total, resultInfo.getAnsweredPerc()));
@@ -179,5 +201,13 @@ public class ExamActivity extends AppCompatActivity implements ResultCallback {
     public void onResult(Object parent, Object param) {
         updateResult();
     }
+
+    private void goStatDialog() {
+        ExamStatDialog dialog = new ExamStatDialog();
+        dialog.setExamp(mExam);
+        dialog.show(this.getFragmentManager(), "stat");
+    }
+
+
 
 }

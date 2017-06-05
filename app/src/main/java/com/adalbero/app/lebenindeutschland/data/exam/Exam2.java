@@ -77,8 +77,8 @@ public class Exam2 {
         return mName;
     }
 
-    public String getTitle() {
-        return getName() + " (" + getSize() + ")";
+    public String getTitle(boolean showSize) {
+        return getName() + (showSize ? " (" + getSize() + ")" : "");
     }
 
     public int getSize() {

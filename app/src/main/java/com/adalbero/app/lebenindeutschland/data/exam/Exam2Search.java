@@ -62,9 +62,9 @@ public class Exam2Search extends Exam2 {
     }
 
     @Override
-    public String getTitle() {
+    public String getTitle(boolean showSize) {
         String str = getTermsString();
-        return super.getTitle() + ": " + str;
+        return super.getTitle(showSize) + ": " + str;
     }
 
     @Override

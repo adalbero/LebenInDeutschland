@@ -38,13 +38,13 @@ public class Exam2Land extends Exam2 {
     }
 
     @Override
-    public String getTitle() {
+    public String getTitle(boolean showSize) {
         if (mLand == null) {
             return "Select Bundesland...";
         }
 
         int n = getSize();
-        return mLand + " (" + n + ")";
+        return mLand + (showSize ? " (" + n + ")" : "");
     }
 
     @Override

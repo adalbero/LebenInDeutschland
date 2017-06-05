@@ -1,0 +1,150 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:layout_marginTop="8dp"
+    android:background="@drawable/shape_result_bg"
+    tools:showIn="@layout/activity_exam">
+
+    <TextView
+        android:id="@+id/view_header"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="16dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="8dp"
+        android:text="Progress:"
+        android:textSize="24sp"
+        android:textStyle="bold"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/view_clock"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="16dp"
+        android:layout_marginRight="16dp"
+        android:text="00:00"
+        android:textSize="24sp"
+        android:textStyle="bold"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/view_header" />
+
+    <TextView
+        android:id="@+id/view_question"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:text="Answered"
+        android:textSize="18sp"
+        app:layout_constraintLeft_toLeftOf="@+id/view_header"
+        app:layout_constraintTop_toBottomOf="@+id/view_header" />
+
+    <TextView
+        android:id="@+id/text_value1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="0"
+        android:textSize="18sp"
+        app:layout_constraintRight_toRightOf="@+id/view_clock"
+        app:layout_constraintTop_toTopOf="@+id/view_question" />
+
+    <TextView
+        android:id="@+id/text_label2"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:text="Right"
+        android:textSize="18sp"
+        app:layout_constraintLeft_toLeftOf="@+id/view_question"
+        app:layout_constraintRight_toRightOf="@+id/view_question"
+        app:layout_constraintTop_toBottomOf="@+id/view_question" />
+
+    <TextView
+        android:id="@+id/text_value2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="0"
+        android:textSize="18sp"
+        app:layout_constraintRight_toRightOf="@+id/text_value1"
+        app:layout_constraintTop_toTopOf="@+id/text_label2" />
+
+    <com.adalbero.app.lebenindeutschland.ProgressView
+        android:id="@+id/view_progress"
+        android:layout_width="0dp"
+        android:layout_height="10dp"
+        android:layout_marginEnd="16dp"
+        android:layout_marginLeft="16dp"
+        android:layout_marginRight="16dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="6dp"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/text_label2"
+        app:layout_constraintHorizontal_bias="0.0" />
+
+    <TextView
+        android:id="@+id/view_result"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="8dp"
+        android:layout_marginLeft="8dp"
+        android:layout_marginRight="8dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="8dp"
+        android:rotation="-45"
+        android:text="Pass"
+        android:textSize="30sp"
+        android:textStyle="bold"
+        android:visibility="gone"
+        app:layout_constraintBottom_toTopOf="@+id/view_progress"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:visibility="visible" />
+
+    <com.adalbero.app.lebenindeutschland.StatView
+        android:id="@+id/view_stat"
+        android:layout_width="130dp"
+        android:layout_height="0dp"
+        android:layout_gravity="center_vertical"
+        android:layout_marginBottom="8dp"
+        android:layout_marginRight="0dp"
+        android:layout_marginTop="8dp"
+        android:layout_weight="0"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintRight_toRightOf="@+id/view_clock"
+        app:layout_constraintTop_toBottomOf="@+id/view_progress"
+        app:layout_constraintVertical_bias="0.0"
+        app:layout_goneMarginRight="16dp" />
+
+    <TextView
+        android:id="@+id/view_stat_header"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="0dp"
+        android:layout_marginTop="0dp"
+        android:text="Statistics:"
+        android:textSize="24sp"
+        android:textStyle="bold"
+        app:layout_constraintLeft_toLeftOf="@+id/view_header"
+        app:layout_constraintTop_toTopOf="@+id/view_stat" />
+
+    <TextView
+        android:id="@+id/view_rating"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="0dp"
+        android:layout_marginLeft="8dp"
+        android:layout_marginRight="8dp"
+        android:layout_marginTop="0dp"
+        android:text="100%"
+        android:textSize="24sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toLeftOf="@+id/view_stat"
+        app:layout_constraintTop_toBottomOf="@+id/view_stat_header"
+        app:layout_constraintVertical_bias="0.39999998" />
+
+</android.support.constraint.ConstraintLayout>

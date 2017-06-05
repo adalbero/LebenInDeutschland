@@ -11,7 +11,7 @@
             android:defaultValue="false"
             android:key="pref.inline.mode"
             android:summaryOff="Show question in it's own view"
-            android:summaryOn="Respond to question in the list view "
+            android:summaryOn="Respond to question directly in the list view "
             android:title="Question Inline" />
 
     </PreferenceCategory>
@@ -21,12 +21,13 @@
         <ListPreference
             android:key="pref.stat.max"
             android:summary="%s"
-            android:title="Statistic History" />
+            android:defaultValue="5"
+            android:title="Statistics History" />
 
         <Preference
             android:key="pref.remove.stat"
-            android:summary="Clear statistics"
-            android:title="Clear all statistics" />
+            android:summary="Clear statistics of all questions"
+            android:title="Clear statistics" />
 
     </PreferenceCategory>
 

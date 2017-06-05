@@ -11,6 +11,7 @@
     <color name="colorWrong">@color/Red_200</color>
     <color name="colorWrongDark">@color/Red_300</color>
     <color name="colorNotAnswerd">@color/Gray_400</color>
+    <color name="colorNotAnswerdLight">@color/Gray_300</color>
 
     <color name="colorAll">@color/Teal_200</color>
     <color name="colorLand">@color/Purble_200</color>
@@ -19,7 +20,6 @@
     <color name="colorArea1">@color/Amber_200</color>
     <color name="colorArea2">@color/LightGreeen_200</color>
     <color name="colorArea3">@color/LightBlue_200</color>
-    <color name="colorStat">@color/BlueGray_200</color>
 
     <color name="colorQuestion">@color/Gray_700</color>
     <color name="colorButton">@color/Indigo_400</color>
@@ -29,4 +29,6 @@
     <color name="colorCardBG">@color/Gray_300</color>
     <color name="colorTagBG">@color/Gray_300</color>
     <color name="colorTagIcon">@color/Gray_500</color>
+    <color name="colorStat">@color/BlueGray_200</color>
+    <color name="colorStatBG">@color/Gray_300</color>
 </resources>

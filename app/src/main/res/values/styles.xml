@@ -12,4 +12,8 @@
         <item name="android:button">@drawable/custom_btn_radio</item>
     </style>
 
+    <style name="StatDialog" parent="Theme.AppCompat.Light.Dialog.Alert">
+        <!-- Used for the background -->
+        <item name="android:background">@color/colorStatBG</item>
+    </style>
 </resources>

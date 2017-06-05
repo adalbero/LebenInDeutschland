@@ -15,7 +15,7 @@ public class Exam2Header extends Exam2 {
     }
 
     @Override
-    public String getTitle() {
+    public String getTitle(boolean showSize) {
         return getName();
     }
 

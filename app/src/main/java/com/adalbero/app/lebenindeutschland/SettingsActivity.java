@@ -121,9 +121,9 @@ public class SettingsActivity extends AppCompatActivity {
             String values[] = new String[]{"1", "3", "5", "10"};
             String labels[] = new String[values.length];
 
-            labels[0] = "Keep just last response";
+            labels[0] = "Keep just last answer";
             for (int i=1; i<values.length; i++) {
-                labels[i] = String.format("Keep last %s responses", values[i]);
+                labels[i] = String.format("Keep last %s answers", values[i]);
             }
 
             listPreference.setEntryValues(values);

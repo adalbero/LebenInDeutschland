@@ -59,7 +59,19 @@ public class Statistics {
     }
 
 
-    public float getProgress(List<String> questions) {
+    public float getRating(List<String> questions) {
+        if (questions == null || questions.size() == 0) return 0f;
+
+        float rating = 0f;
+
+        for (String num : questions) {
+            rating += getQuestionStat(num).getRating();
+        }
+
+        return rating / questions.size();
+    }
+
+    public float getAnswerProgress(List<String> questions) {
         if (questions == null || questions.size() == 0) return 0f;
 
         float progress = 0f;
@@ -73,24 +85,41 @@ public class Statistics {
         return progress / questions.size();
     }
 
-    public float getRating(List<String> questions) {
+    public float getRightProgress(List<String> questions) {
         if (questions == null || questions.size() == 0) return 0f;
 
-        float rating = 0f;
-        int responded = 0;
+        float progress = 0f;
+        int answered = 0;
 
         for (String num : questions) {
             Info info = getQuestionStat(num);
-            if (info.isResponded()) {
-                rating += info.getRating();
-                responded++;
+            if (info.isAnswered()) {
+                progress += info.getRightProgress();
+                answered++;
             }
         }
 
-        return rating / responded;
+        return answered == 0 ? 0 : progress / answered;
     }
 
-    public static int getMax() {
+    public float getLastRightProgress(List<String> questions) {
+        if (questions == null || questions.size() == 0) return 0f;
+
+        float progress = 0f;
+        int answered = 0;
+
+        for (String num : questions) {
+            Info info = getQuestionStat(num);
+            if (info.isAnswered()) {
+                progress += info.isAnswerRight(0) ? 1 : 0;
+                answered++;
+            }
+        }
+
+        return answered == 0 ? 0 : progress / answered;
+    }
+
+    public static int getHistorySize() {
         int def = 5;
 
         try {
@@ -114,40 +143,76 @@ public class Statistics {
             return mAnswers;
         }
 
+        public String getAnswer(int i) {
+            if(i >= getNumAnswered()) {
+                return ANSWER_EMPTY;
+            }
+
+            return mAnswers.get(i);
+        }
+
         public void add(boolean answer) {
             String value = (answer ? ANSWER_RIGHT : ANSWER_WRONG);
             getAnswers();
 
             mAnswers.add(0, value);
-            int n = getMax();
+            int n = getHistorySize();
             while (mAnswers.size() > n) {
                 mAnswers.remove(n);
             }
             save();
         }
 
-        public int getNumResponded() {
-            return getAnswers().size();
+        public int getNumAnswered() {
+            return Math.min(getAnswers().size(), getHistorySize());
         }
 
         public int getNumRight() {
-            int ret = 0;
-            for (String value : getAnswers()) {
-                if (ANSWER_RIGHT.equals(value))
-                    ret++;
+            int n = getNumAnswered();
+
+            int count = 0;
+            for (int i=0; i<n; i++) {
+                if (isAnswerRight(i))
+                    count++;
             }
-            return ret;
+
+            return count;
+        }
+
+        public int getNumWrong() {
+            return getNumAnswered() - getNumRight();
         }
 
         public float getRating() {
-            int t = getNumResponded();
+            int size = getNumAnswered();
+            if (size == 0) return 0f;
+
+            int n = getNumAnswered();
+            int points = 0;
+            int totalWeight = 0;
+            for (int i=0; i<n; i++) {
+                String answer = getAnswer(i);
+                int weight = size - i;
+                totalWeight += weight;
+                if (ANSWER_RIGHT.equals(answer)) {
+                    points += weight;
+                }
+            }
+
+            float rating = (float)points / totalWeight;
+
+            return rating;
+        }
+
+        public float getRightProgress() {
+            int t = getNumAnswered();
             int r = getNumRight();
 
             return (t == 0 ? 0f : (float) r / t);
         }
 
-        public boolean isResponded() {
-            return getNumResponded() > 0;
+        public boolean isAnswered() {
+            return getNumAnswered() > 0;
         }
 
         public boolean isAnswerRight(int i) {
@@ -156,11 +221,6 @@ public class Statistics {
 
         public boolean isAnswerWrong(int i) {
             return ANSWER_WRONG.equals(getAnswer(i));
-        }
-
-        public String getAnswer(int i) {
-            if (i >= getAnswers().size()) return ANSWER_EMPTY;
-            return getAnswers().get(i);
         }
 
         public String getLast() {

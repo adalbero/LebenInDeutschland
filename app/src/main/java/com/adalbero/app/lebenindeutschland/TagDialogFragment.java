@@ -13,10 +13,10 @@ import android.widget.TextView;
 import com.adalbero.app.lebenindeutschland.controller.AppController;
 
 import java.util.ArrayList;
-import java.util.HashSet;
 import java.util.Iterator;
 import java.util.List;
 import java.util.Set;
+import java.util.TreeSet;
 
 /**
  * Created by Adalbero on 20/05/2017.
@@ -88,7 +88,7 @@ public class TagDialogFragment extends DialogFragment {
 
     public void setTags(Set<String> tags, ResultCallback callback, boolean allowNewTag) {
         mCallback = callback;
-        selected = new HashSet<>(tags);
+        selected = new TreeSet<>(tags);
         this.allowNewTag = allowNewTag;
     }
 

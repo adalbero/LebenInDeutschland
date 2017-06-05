@@ -42,10 +42,10 @@ public class Exam2Tag extends Exam2 implements ResultCallback {
     }
 
     @Override
-    public String getTitle() {
+    public String getTitle(boolean showSize) {
         String str = getTags().toString();
         str = str.substring(1, str.length() - 1);
-        return super.getTitle() + ": " + str;
+        return super.getTitle(showSize) + ": " + str;
     }
 
     @Override

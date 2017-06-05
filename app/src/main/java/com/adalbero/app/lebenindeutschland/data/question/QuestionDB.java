@@ -12,9 +12,9 @@ import java.io.InputStreamReader;
 import java.util.ArrayList;
 import java.util.Collections;
 import java.util.Comparator;
-import java.util.HashSet;
 import java.util.List;
 import java.util.Set;
+import java.util.TreeSet;
 
 /**
  * Created by Adalbero on 17/05/2017.
@@ -98,7 +98,7 @@ public class QuestionDB {
 
 
     public Set<String> getAllTags() {
-        Set<String> tags = new HashSet();
+        Set<String> tags = new TreeSet();
 
         for (Question q : mQuestions) {
             tags.addAll(q.getTags());

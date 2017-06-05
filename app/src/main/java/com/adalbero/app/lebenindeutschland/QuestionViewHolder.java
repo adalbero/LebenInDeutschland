@@ -247,7 +247,7 @@ public class QuestionViewHolder implements View.OnClickListener, ResultCallback 
     private void goStatDialog() {
         Activity activity = (Activity) mView.getContext();
 
-        StatQuestionDialogFragment dialog = new StatQuestionDialogFragment();
+        QuestionStatDialog dialog = new QuestionStatDialog();
         dialog.setQuestion(mQuestion);
         dialog.show(activity.getFragmentManager(), "stat");
     }

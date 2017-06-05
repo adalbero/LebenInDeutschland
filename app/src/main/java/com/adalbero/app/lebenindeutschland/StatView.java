@@ -24,6 +24,7 @@ public class StatView extends View {
 
     private float mProgress;
     private float mRating;
+    private float mLastRating;
 
     Statistics mStat;
 
@@ -38,10 +39,10 @@ public class StatView extends View {
         invalidate();
     }
 
-
     public void setExam(Exam2 exam) {
-        mProgress = (exam.getSize() == 0 ? 0f : mStat.getProgress(exam.getQuestions()));
-        mRating = mStat.getRating(exam.getQuestions());
+        mProgress = (exam.getSize() == 0 ? 0f : mStat.getAnswerProgress(exam.getQuestions()));
+        mRating = mStat.getRightProgress(exam.getQuestions());
+        mLastRating = mStat.getLastRightProgress(exam.getQuestions());
 
         mQuestionNum = null;
 
@@ -63,7 +64,7 @@ public class StatView extends View {
         RectF rectF = new RectF();
 
         Statistics.Info info = mStat.getQuestionStat(mQuestionNum);
-        int size = mStat.getMax();
+        int size = mStat.getHistorySize();
 
         int colorRight = ContextCompat.getColor(getContext(), R.color.colorRight);
         int colorWrong = ContextCompat.getColor(getContext(), R.color.colorWrong);
@@ -91,14 +92,28 @@ public class StatView extends View {
 
         int colorRight = ContextCompat.getColor(getContext(), R.color.colorRightDark);
         int colorWrong = ContextCompat.getColor(getContext(), R.color.colorWrongDark);
+        int colorLastRight = ContextCompat.getColor(getContext(), R.color.colorRight);
+        int colorLastWrong = ContextCompat.getColor(getContext(), R.color.colorWrong);
         int colorNotAnswerd = ContextCompat.getColor(getContext(), R.color.colorNotAnswerd);
+        int colorNotAnswerdLight = ContextCompat.getColor(getContext(), R.color.colorNotAnswerdLight);
 
         paint.setStyle(Paint.Style.FILL);
+        paint.setAntiAlias(true);
 
-        rect.set(0, 0, w, h);
+        float x = w/2f;
+        float y = h/2f;
+
+        float r1 = Math.min(w, h)/2f;
+        float r2 = r1 * .6f;
+        float r3 = r1 * .2f;
+
+        rect.set(x-r1, y-r1, x+r1, y+r1);
+
+        // Not answered
         paint.setColor(colorNotAnswerd);
         canvas.drawOval(rect, paint);
 
+        // Right answered
         int startAngle = -90;
         int sweepAngle = (int) (360 * mProgress);
         paint.setColor(colorWrong);
@@ -108,21 +123,29 @@ public class StatView extends View {
         paint.setColor(colorRight);
         canvas.drawArc(rect, startAngle, sweepAngle, true, paint);
 
-        float d = .25f;
-        rect.set(0 + w*d, 0 + h*d, w - w*d, h - h*d);
+        // Last answer
+        rect.set(x-r2, y-r2, x+r2, y+r2);
+
+        paint.setColor(colorNotAnswerdLight);
+        canvas.drawOval(rect, paint);
+
+        startAngle = -90;
+        sweepAngle = (int) (360 * mProgress);
+        paint.setColor(colorLastWrong);
+        canvas.drawArc(rect, startAngle, sweepAngle, true, paint);
+
+        sweepAngle = (int) (360 * mLastRating * mProgress);
+        paint.setColor(colorLastRight);
+        canvas.drawArc(rect, startAngle, sweepAngle, true, paint);
+
+//        Paint transparent = new Paint();
+//        transparent.setColor(Color.WHITE);
+//        transparent.setXfermode(new PorterDuffXfermode(PorterDuff.Mode.XOR));
+
+        rect.set(x-r3, y-r3, x+r3, y+r3);
         paint.setColor(Color.WHITE);
         canvas.drawOval(rect, paint);
 
-        if (false) {
-            String text = String.format("%d", (int) (mRating * 100));
-            float x = w / 2;
-            float y = ((h / 2) - ((paint.ascent() - paint.descent()) / 2));
-
-            paint.setTextAlign(Paint.Align.CENTER);
-            paint.setTextSize(40);
-            paint.setColor(Color.BLACK);
-            canvas.drawText(text, x, y, paint);
-        }
     }
 
 }

@@ -46,7 +46,7 @@ public class ExamItemAdapter extends ArrayAdapter<Exam2> {
 
         final Exam2 exam = getItem(position);
 
-        String name = exam.getTitle();
+        String name = exam.getTitle(true);
         int style = Typeface.NORMAL;
         int color = Color.TRANSPARENT;
         int visible = View.VISIBLE;
