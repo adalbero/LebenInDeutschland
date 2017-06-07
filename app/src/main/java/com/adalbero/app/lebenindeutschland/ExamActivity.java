@@ -35,7 +35,9 @@ public class ExamActivity extends AppCompatActivity implements ResultCallback {
     private TextView mResultView;
     private StatView mStatView;
 
+    private List<Question> mData;
     private QuestionItemAdapter mAdapter;
+    private int mSortMethod;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -50,16 +52,8 @@ public class ExamActivity extends AppCompatActivity implements ResultCallback {
 
         mResult = new Exam2Result();
 
-        List<String> questions = mExam.getQuestions();
-        List<Question> data = new ArrayList();
-        if (questions != null) {
-            for (String questionNum : questions) {
-                Question q = AppController.getQuestionDB().findByNum(questionNum);
-                data.add(q);
-            }
-        }
-
-        mAdapter = new QuestionItemAdapter(this, data, mResult, this);
+        updateData();
+        mAdapter = new QuestionItemAdapter(this, mData, mResult, this);
 
         mClockView = (TextView) findViewById(R.id.view_clock);
         mClock = new Clock(mClockView);
@@ -121,6 +115,9 @@ public class ExamActivity extends AppCompatActivity implements ResultCallback {
     @Override
     public boolean onOptionsItemSelected(MenuItem item) {
         switch (item.getItemId()) {
+            case R.id.menu_sort:
+                goSortDialog();
+                return true;
             case R.id.menu_expand:
                 setInline(true);
                 return true;
@@ -155,12 +152,31 @@ public class ExamActivity extends AppCompatActivity implements ResultCallback {
         mClock.pause();
     }
 
+    private void updateData() {
+        List<String> questions = mExam.getQuestions();
+        mData = new ArrayList();
+        if (questions != null) {
+            for (String questionNum : questions) {
+                Question q = AppController.getQuestionDB().findByNum(questionNum);
+                mData.add(q);
+            }
+        }
+
+        if (mAdapter != null) {
+            mAdapter.clear();
+            mAdapter.addAll(mData);
+            mAdapter.notifyDataSetChanged();
+
+            mListView.setSelection(0);
+        }
+    }
+
     private void updateStat() {
         mStatView.setExam(mExam);
         TextView viewRating = (TextView) findViewById(R.id.view_rating);
         float rating = Statistics.getInstance().getRating(mExam.getQuestions());
 
-        viewRating.setText(String.format("%.0f", 100*rating));
+        viewRating.setText(String.format("%.0f", 100 * rating));
     }
 
     private void updateResult() {
@@ -197,8 +213,30 @@ public class ExamActivity extends AppCompatActivity implements ResultCallback {
         this.startActivity(intent);
     }
 
+    private void goSortDialog() {
+        SortDialog dialog = new SortDialog();
+        dialog.setCallback(this);
+        dialog.show(this.getFragmentManager(), "sort");
+    }
+
+    private void doSort() {
+        mExam.doSort(mSortMethod);
+
+        updateData();
+    }
+
     @Override
     public void onResult(Object parent, Object param) {
+        if ("SORT".equals(parent)) {
+            try {
+                mSortMethod = (int) param;
+            } catch (Exception ex) {
+            }
+
+            doSort();
+            return;
+        }
+
         updateResult();
     }
 
@@ -207,7 +245,6 @@ public class ExamActivity extends AppCompatActivity implements ResultCallback {
         dialog.setExamp(mExam);
         dialog.show(this.getFragmentManager(), "stat");
     }
-
 
 
 }

@@ -1,7 +1,15 @@
+Ver 1.3.0
+- [New] Sorted Lists: by number, by rating or shuffle
+- [Fix] BETA - Voice recognition improvments
+
+Ver 1.2.0
+- [New] Statistics
+- [New] Statistics lists
+
 Ver 1.1.1
-- [New] Button layout
+- [New] Round button layout
 - [Fix] Null in Tag/Search
-- [Fix] Voice Recognition keywords
+- [Fix] BETA - Voice Recognition keywords
 
 Ver 1.1.0
 - [Fix] API Level 16 (Android Jelly Bean 4.1)

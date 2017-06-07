@@ -22,7 +22,7 @@ import java.util.TreeSet;
  * Created by Adalbero on 20/05/2017.
  */
 
-public class TagDialogFragment extends DialogFragment {
+public class TagDialog extends DialogFragment {
 
     private ResultCallback mCallback;
 
@@ -49,13 +49,13 @@ public class TagDialogFragment extends DialogFragment {
                         if (text != null && text.length() > 0) {
                             selected.add(text.trim());
                         }
-                        mCallback.onResult(TagDialogFragment.this, null);
+                        mCallback.onResult(TagDialog.this, null);
                     }
                 })
                 .setNegativeButton(android.R.string.cancel, new DialogInterface.OnClickListener() {
                     @Override
                     public void onClick(DialogInterface dialog, int id) {
-                        TagDialogFragment.this.getDialog().cancel();
+                        TagDialog.this.getDialog().cancel();
                     }
                 });
 

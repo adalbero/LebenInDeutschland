@@ -5,6 +5,7 @@ import android.os.Bundle;
 import android.speech.RecognizerIntent;
 import android.support.v4.content.ContextCompat;
 import android.support.v7.app.AppCompatActivity;
+import android.util.Log;
 import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
@@ -222,7 +223,11 @@ public class QuestionActivity extends AppCompatActivity implements ResultCallbac
     }
 
     private void doSpeachRecognize() {
-        boolean ok = mVoice.speechRecognizer(this, "de-DE", null);
+        boolean ok = mVoice.speechRecognizer(this, "de-DE",
+                "Sagen Sie z.B: " +
+                        "\n☞ Antwort (A,B,C oder D)" +
+                        "\n☞ Nummer (1,2,3 oder 4)" +
+                        "\n☞ Teil der Antwort");
 
         if (!ok) {
             Dialog.promptDialog(this, "Speech Recognizer not found in this device");
@@ -234,69 +239,93 @@ public class QuestionActivity extends AppCompatActivity implements ResultCallbac
                                     Intent data) {
         if (requestCode == Voice.SPEECH_REQUEST_CODE && resultCode == RESULT_OK) {
             List<String> results = data.getStringArrayListExtra(RecognizerIntent.EXTRA_RESULTS);
-            String spokenText = results.get(0);
+
+            String result[] = findAnswer(results);
+            String answer = result[0];
+            String spokenText = result[1];
             Toast.makeText(this, spokenText, Toast.LENGTH_SHORT).show();
 
-            int answer = findAnswer(spokenText);
-            if (answer >= 0 && answer <= 3) {
-                mQuestionViewHolder.clickAntwort(answer);
-            } else if (answer == -2) {
-                mVoice.speak("Genauer bitte");
-            } else {
+            if (answer == null) {
                 mVoice.speak("Entschuldigung, ich habe dich nicht verstanden");
+            } else if (answer.equals(GENAUER_BITTE)) {
+                mVoice.speak(GENAUER_BITTE);
+            } else {
+                mQuestionViewHolder.clickAntwort(answer);
             }
         }
 
         super.onActivityResult(requestCode, resultCode, data);
     }
 
-    private int findAnswer(String text) {
-        int result = -1;
+    private static final String GENAUER_BITTE = "Genauer bitte";
 
-        if (text == null || text.length() == 0)
-            return result;
+    private String[] findAnswer(List<String> results) {
+        String result[] = new String[2];
 
-        text = normalize(text);
+        for (String text : results) {
+            if (text != null && text.length() > 0) {
 
-        String keywords[] = {"antwort", "nummer"};
-        char ch = Character.MIN_VALUE;
+                result[1] = text;
+                text = normalize(text);
 
-        for (int i=0; i<keywords.length; i++) {
-            if (text.startsWith(keywords[i])) {
-                if (text.length() >= keywords[i].length() + 1) {
-                    ch = text.charAt(keywords[i].length());
-                    break;
+                Log.d("MyApp", "QuestionActivity.findAnswer: " + text);
+                String keywords[] = {"antwort", "nummer"};
+                char ch = Character.MIN_VALUE;
+
+                for (int i = 0; i < keywords.length; i++) {
+                    if (text.startsWith(keywords[i])) {
+                        if (text.length() >= keywords[i].length() + 1) {
+                            ch = text.charAt(keywords[i].length());
+                            break;
+                        }
+                    }
+                }
+
+                if (ch != Character.MIN_VALUE) {
+                    switch (ch) {
+                        case '1':
+                        case 'a':
+                            result[0] = "a";
+                            return result;
+                        case '2':
+                        case 'b':
+                            result[0] = "b";
+                            return result;
+                        case '3':
+                        case 'c':
+                            result[0] = "c";
+                            return result;
+                        case '4':
+                        case 'd':
+                            result[0] = "d";
+                            return result;
+                        default:
+                            continue; // next text
+                    }
+                }
+
+                int count = -1;
+                for (int i = 0; i < 4; i++) {
+                    String opt = mQuestion.getOptions()[i];
+                    opt = normalize(opt);
+                    if (opt.indexOf(text) >= 0) {
+                        if (count != -1) {
+                            result[0] = GENAUER_BITTE;
+                            return result;
+                        }
+                        count = i;
+                    }
+                }
+
+                if (count >= 0) {
+                    result[0] = "abcd".substring(count);
+                    return result;
                 }
             }
         }
 
-        if (ch != Character.MIN_VALUE) {
-            switch (ch) {
-                case '1':
-                case 'a':
-                    return 0;
-                case '2':
-                case 'b':
-                    return 1;
-                case '3':
-                case 'c':
-                    return 2;
-                case '4':
-                case 'd':
-                    return 3;
-                default:
-                    return result;
-            }
-        }
-
-        for (int i = 0; i < 4; i++) {
-            String opt = mQuestion.getOptions()[i];
-            opt = normalize(opt);
-            if (opt.indexOf(text) >= 0) {
-                if (result != -1) return -2;
-                result = i;
-            }
-        }
+        result[0] = null;
+        result[1] = results.get(0);
 
         return result;
     }

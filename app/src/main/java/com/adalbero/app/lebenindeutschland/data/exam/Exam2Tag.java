@@ -4,7 +4,7 @@ import android.app.Activity;
 
 import com.adalbero.app.lebenindeutschland.R;
 import com.adalbero.app.lebenindeutschland.ResultCallback;
-import com.adalbero.app.lebenindeutschland.TagDialogFragment;
+import com.adalbero.app.lebenindeutschland.TagDialog;
 import com.adalbero.app.lebenindeutschland.controller.Store;
 import com.adalbero.app.lebenindeutschland.data.question.Question;
 
@@ -75,7 +75,7 @@ public class Exam2Tag extends Exam2 implements ResultCallback {
 
     public void dialog(Activity activity, ResultCallback callback) {
         this.mCallback = callback;
-        TagDialogFragment dialog = new TagDialogFragment();
+        TagDialog dialog = new TagDialog();
         dialog.setTags(getTags(), this, false);
         dialog.show(activity.getFragmentManager(), "tag");
     }
@@ -88,8 +88,8 @@ public class Exam2Tag extends Exam2 implements ResultCallback {
 
     @Override
     public void onResult(Object parent, Object param) {
-        if (parent instanceof TagDialogFragment) {
-            TagDialogFragment dialog = (TagDialogFragment) parent;
+        if (parent instanceof TagDialog) {
+            TagDialog dialog = (TagDialog) parent;
             Set<String> selected = dialog.getSelected();
             setTags(selected);
 

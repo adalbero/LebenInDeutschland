@@ -8,9 +8,12 @@ import com.adalbero.app.lebenindeutschland.ResultCallback;
 import com.adalbero.app.lebenindeutschland.controller.AppController;
 import com.adalbero.app.lebenindeutschland.controller.Store;
 import com.adalbero.app.lebenindeutschland.data.question.Question;
+import com.adalbero.app.lebenindeutschland.data.question.QuestionComparator;
 import com.adalbero.app.lebenindeutschland.data.question.QuestionDB;
 
 import java.util.ArrayList;
+import java.util.Collections;
+import java.util.Comparator;
 import java.util.List;
 
 /**
@@ -44,7 +47,7 @@ public class Exam2 {
     public int getQuestionIdx(String num) {
         List<String> list = getQuestions();
 
-        for (int i=0; i<list.size(); i++) {
+        for (int i = 0; i < list.size(); i++) {
             if (list.get(i).equals(num)) {
                 return i;
             }
@@ -126,6 +129,20 @@ public class Exam2 {
 
     public boolean isIconColor() {
         return false;
+    }
+
+    public void doSort(int method) {
+        int reverse = (method >= 0 ? 1 : -1);
+        method = Math.abs(method);
+
+        List<String> list = getQuestions();
+
+        if (method == QuestionComparator.METHOD_SHUFFLE) {
+            Collections.shuffle(list);
+        } else {
+            Comparator<String> comparator = new QuestionComparator(method, reverse);
+            Collections.sort(list, comparator);
+        }
     }
 
 }

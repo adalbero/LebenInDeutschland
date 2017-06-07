@@ -101,6 +101,7 @@ public class QuestionViewHolder implements View.OnClickListener, ResultCallback 
 
     public View show(Question question) {
         mQuestion = question;
+        // TODO: question null?
         boolean inline = Store.getExamInline();
 
         if (mViewHeader != null) {
@@ -237,7 +238,7 @@ public class QuestionViewHolder implements View.OnClickListener, ResultCallback 
     private void goTagDialog() {
         Activity activity = (Activity) mView.getContext();
 
-        TagDialogFragment dialog = new TagDialogFragment();
+        TagDialog dialog = new TagDialog();
         Set<String> tags = mQuestion.getTags();
         dialog.setTags(tags, this, true);
         dialog.show(activity.getFragmentManager(), "tag");
@@ -252,8 +253,26 @@ public class QuestionViewHolder implements View.OnClickListener, ResultCallback 
         dialog.show(activity.getFragmentManager(), "stat");
     }
 
+    public void clickAntwort(String antwort) {
+        String list = "abcd";
+
+        if (antwort != null && antwort.length() > 0) {
+            char ch = antwort.charAt(0);
+
+            for (int i = 0; i < list.length(); i++) {
+                if (list.charAt(i) == ch) {
+                    clickAntwort(i);
+                    return;
+                }
+            }
+        }
+    }
+
+
     public void clickAntwort(int idx) {
-        mViewOptions[idx].callOnClick();
+        if (mViewOptions[idx].isClickable()) {
+            mViewOptions[idx].callOnClick();
+        }
     }
 
     @Override
@@ -268,8 +287,8 @@ public class QuestionViewHolder implements View.OnClickListener, ResultCallback 
 
     @Override
     public void onResult(Object parent, Object param) {
-        if (parent instanceof TagDialogFragment) {
-            TagDialogFragment dialog = (TagDialogFragment) parent;
+        if (parent instanceof TagDialog) {
+            TagDialog dialog = (TagDialog) parent;
             Set<String> tags = dialog.getSelected();
             mQuestion.setTags(tags);
             show(mQuestion);
