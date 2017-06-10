@@ -3,8 +3,8 @@ package com.adalbero.app.lebenindeutschland.controller;
 import android.preference.PreferenceManager;
 import android.util.Log;
 
-import com.adalbero.app.lebenindeutschland.data.exam.Exam2;
-import com.adalbero.app.lebenindeutschland.data.exam.Exam2Random;
+import com.adalbero.app.lebenindeutschland.data.exam.Exam;
+import com.adalbero.app.lebenindeutschland.data.exam.ExamRandom;
 import com.adalbero.app.lebenindeutschland.data.question.Question;
 
 import java.util.Map;
@@ -78,13 +78,13 @@ public class Debug {
         float wrong = 0.2f;
 
         Statistics stat = Statistics.getInstance();
-        Exam2 exam = new Exam2Random("Debug");
+        Exam exam = new ExamRandom("Debug");
         Random random = new Random();
 
         for (int i=0; i<times; i++) {
-            exam.onUpdate();
-            for (String num : exam.getQuestions()) {
-                Question q = AppController.getQuestionDB().findByNum(num);
+            exam.resetQuestionList();
+            for (String num : exam.getQuestionList()) {
+                Question q = AppController.getQuestionDB().getQuestion(num);
                 String answer = q.getAnswerLetter();
                 if (random.nextFloat() <= wrong)
                     answer = "x";

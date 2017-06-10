@@ -67,7 +67,7 @@ public class Voice {
                     if (status == TextToSpeech.SUCCESS) {
                         mTTS.setLanguage(Locale.GERMAN);
                     } else {
-                        Log.d("MyApp", "Error starting the text to speech engine.");
+                        Log.e("MyApp", "Error starting the text to speech engine.");
                     }
                 }
             };

@@ -8,7 +8,7 @@ import com.adalbero.app.lebenindeutschland.data.question.Question;
  * Created by Adalbero on 03/06/2017.
  */
 
-public class Exam2Stat extends Exam2 {
+public class ExamStat extends Exam {
     public static final int FILTER_ONCE_WRONG = 0;
     public static final int FILTER_MOSTLY_WRONG = 1;
     public static final int FILTER_LAST_WRONG = 2;
@@ -28,21 +28,16 @@ public class Exam2Stat extends Exam2 {
     private Statistics mStat;
     private int mFilterMode;
 
-    public Exam2Stat(String name, int filterMode) {
+    public ExamStat(String name, int filterMode) {
         super(name);
 
         mFilterMode = filterMode;
     }
 
     @Override
-    public void onCreate() {
+    protected void createQuestionList() {
         mStat = Statistics.getInstance();
-        super.onCreate();
-    }
-
-    @Override
-    public void onUpdate() {
-        update();
+        super.createQuestionList();
     }
 
     @Override
@@ -51,7 +46,7 @@ public class Exam2Stat extends Exam2 {
     }
 
     @Override
-    protected boolean onFilter(Question q) {
+    protected boolean onFilterQuestion(Question q) {
         String num = q.getNum();
         Statistics.Info info = mStat.getQuestionStat(num);
 

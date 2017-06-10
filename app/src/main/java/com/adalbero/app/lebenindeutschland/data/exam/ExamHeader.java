@@ -7,10 +7,10 @@ import java.util.List;
  * Created by Adalbero on 27/05/2017.
  */
 
-public class Exam2Header extends Exam2 {
+public class ExamHeader extends Exam {
     private static List<String> EMPTY_LIST = new ArrayList<>();
 
-    public Exam2Header(String name) {
+    public ExamHeader(String name) {
         super(name);
     }
 
@@ -20,7 +20,7 @@ public class Exam2Header extends Exam2 {
     }
 
     @Override
-    protected List<String> onGetQuestions() {
-        return EMPTY_LIST;
+    protected void createQuestionList() {
+        setQuestionList(EMPTY_LIST);
     }
 }

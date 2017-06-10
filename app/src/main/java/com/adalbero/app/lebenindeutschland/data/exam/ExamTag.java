@@ -9,27 +9,24 @@ import com.adalbero.app.lebenindeutschland.controller.Store;
 import com.adalbero.app.lebenindeutschland.data.question.Question;
 
 import java.util.Set;
-import java.util.TreeSet;
 
 /**
  * Created by Adalbero on 27/05/2017.
  */
 
-public class Exam2Tag extends Exam2 implements ResultCallback {
+public class ExamTag extends Exam implements ResultCallback {
     private static final String KEY = "pref.tags";
 
     private Set<String> mTags;
     private ResultCallback mCallback;
 
-    public Exam2Tag(String name) {
+    public ExamTag(String name) {
         super(name);
     }
 
     private Set<String> getTags() {
-        mTags = new TreeSet<>();
-        Set<String> tags = Store.getSet(KEY);
-        if (tags != null) {
-            mTags.addAll(tags);
+        if (mTags == null) {
+            mTags = Store.getSet(KEY);
         }
 
         return mTags;
@@ -38,7 +35,8 @@ public class Exam2Tag extends Exam2 implements ResultCallback {
     private void setTags(Set<String> tags) {
         mTags = tags;
         Store.setSet(KEY, tags);
-        update();
+
+        invalidateQuestionList();
     }
 
     @Override
@@ -49,9 +47,10 @@ public class Exam2Tag extends Exam2 implements ResultCallback {
     }
 
     @Override
-    protected boolean onFilter(Question q) {
-        if (mTags != null) {
-            for (String tag : mTags) {
+    protected boolean onFilterQuestion(Question q) {
+        Set<String> tags = getTags();
+        if (tags != null) {
+            for (String tag : tags) {
                 if (q.hasTag(tag)) {
                     return true;
                 }
@@ -59,12 +58,6 @@ public class Exam2Tag extends Exam2 implements ResultCallback {
         }
 
         return false;
-    }
-
-    @Override
-    public void onUpdate() {
-        getTags();
-        update();
     }
 
     @Override
@@ -92,8 +85,6 @@ public class Exam2Tag extends Exam2 implements ResultCallback {
             TagDialog dialog = (TagDialog) parent;
             Set<String> selected = dialog.getSelected();
             setTags(selected);
-
-            update();
 
             mCallback.onResult(this, getName());
         }

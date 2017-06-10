@@ -30,7 +30,7 @@ public class QuestionStatDialog extends DialogFragment {
     public Dialog onCreateDialog(Bundle savedInstanceState) {
         if (savedInstanceState != null) {
             String num = savedInstanceState.getString("question.num", "1");
-            mQuestion = AppController.getQuestionDB().findByNum(num);
+            mQuestion = AppController.getQuestionDB().getQuestion(num);
         }
 
         Context context = getActivity();

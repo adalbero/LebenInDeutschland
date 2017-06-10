@@ -14,27 +14,28 @@ import com.adalbero.app.lebenindeutschland.data.question.Question;
  * Created by Adalbero on 27/05/2017.
  */
 
-public class Exam2Land extends Exam2 {
+public class ExamLand extends Exam {
     private String mLand;
 
-    public Exam2Land(String name) {
+    public ExamLand(String name) {
         super(name);
     }
 
-    public void setLand(String name) {
-        mLand = name;
-        update();
-    }
-
     @Override
-    protected boolean onFilter(Question q) {
+    protected boolean onFilterQuestion(Question q) {
         return q.getTheme().equals(mLand);
     }
 
     @Override
-    public void onUpdate() {
+    protected void createQuestionList() {
         String name = Store.getSelectedLandName();
-        setLand(name);
+        mLand = name;
+        super.createQuestionList();
+    }
+
+    @Override
+    public void resetQuestionList() {
+        createQuestionList();
     }
 
     @Override

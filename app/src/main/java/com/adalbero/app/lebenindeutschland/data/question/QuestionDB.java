@@ -45,7 +45,7 @@ public class QuestionDB {
 
     }
 
-    public Question findByNum(String num) {
+    public Question getQuestion(String num) {
         int count = mQuestions.size();
         for (int idx=0; idx<count; idx++) {
             Question q = mQuestions.get(idx);
@@ -89,7 +89,7 @@ public class QuestionDB {
                 "152", "50", "191", "173", "33", "244", "297", "264"};
 
         for (String num : list) {
-            Question q = findByNum(num);
+            Question q = getQuestion(num);
             result.add(q.getTheme());
         }
 

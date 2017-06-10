@@ -12,15 +12,15 @@ import android.widget.ListView;
 import com.adalbero.app.lebenindeutschland.controller.AppController;
 import com.adalbero.app.lebenindeutschland.controller.Dialog;
 import com.adalbero.app.lebenindeutschland.controller.Store;
-import com.adalbero.app.lebenindeutschland.data.exam.Exam2;
-import com.adalbero.app.lebenindeutschland.data.exam.Exam2Header;
+import com.adalbero.app.lebenindeutschland.data.exam.Exam;
+import com.adalbero.app.lebenindeutschland.data.exam.ExamHeader;
 
 import java.util.ArrayList;
 import java.util.List;
 
 public class MainActivity extends AppCompatActivity implements ResultCallback {
 
-    private List<Exam2> data;
+    private List<Exam> data;
     private ExamItemAdapter mAdapter;
     private ListView mListView;
 
@@ -48,9 +48,9 @@ public class MainActivity extends AppCompatActivity implements ResultCallback {
     }
 
     private void onItemSelected(int position) {
-        Exam2 exam = data.get(position);
+        Exam exam = data.get(position);
 
-        if (exam instanceof Exam2Header) return;
+        if (exam instanceof ExamHeader) return;
 
         Store.resetExam();
         AppController.setExamIdx(position);
@@ -63,15 +63,22 @@ public class MainActivity extends AppCompatActivity implements ResultCallback {
     }
 
     private void updateData() {
-        data = new ArrayList();
-        for (Exam2 exam : AppController.getExamList()) {
-            exam.onUpdate();
-            data.add(exam);
+
+        if (data == null) {
+            data = new ArrayList();
+            for (Exam exam : AppController.getExamList()) {
+                data.add(exam);
+            }
+        } else {
+            for (Exam exam : data) {
+                exam.resetQuestionList();
+            }
+
+            if (mAdapter != null) {
+                mAdapter.notifyDataSetChanged();
+            }
         }
 
-        if (mAdapter != null) {
-            mAdapter.notifyDataSetChanged();
-        }
     }
 
     @Override
@@ -105,7 +112,7 @@ public class MainActivity extends AppCompatActivity implements ResultCallback {
     }
 
     private void goExam(String examName) {
-        Exam2 exam = AppController.getExam(examName);
+        Exam exam = AppController.getExam(examName);
 
         if (exam.getSize() == 0) {
             Dialog.promptDialog(this, "No questions in list " + exam.getTitle(false));

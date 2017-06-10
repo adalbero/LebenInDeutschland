@@ -6,16 +6,16 @@ import android.graphics.drawable.Drawable;
 import android.support.v4.content.ContextCompat;
 
 import com.adalbero.app.lebenindeutschland.R;
-import com.adalbero.app.lebenindeutschland.data.exam.Exam2;
-import com.adalbero.app.lebenindeutschland.data.exam.Exam2All;
-import com.adalbero.app.lebenindeutschland.data.exam.Exam2Area;
-import com.adalbero.app.lebenindeutschland.data.exam.Exam2Header;
-import com.adalbero.app.lebenindeutschland.data.exam.Exam2Land;
-import com.adalbero.app.lebenindeutschland.data.exam.Exam2Random;
-import com.adalbero.app.lebenindeutschland.data.exam.Exam2Search;
-import com.adalbero.app.lebenindeutschland.data.exam.Exam2Stat;
-import com.adalbero.app.lebenindeutschland.data.exam.Exam2Tag;
-import com.adalbero.app.lebenindeutschland.data.exam.Exam2Thema;
+import com.adalbero.app.lebenindeutschland.data.exam.Exam;
+import com.adalbero.app.lebenindeutschland.data.exam.ExamAll;
+import com.adalbero.app.lebenindeutschland.data.exam.ExamArea;
+import com.adalbero.app.lebenindeutschland.data.exam.ExamHeader;
+import com.adalbero.app.lebenindeutschland.data.exam.ExamLand;
+import com.adalbero.app.lebenindeutschland.data.exam.ExamRandom;
+import com.adalbero.app.lebenindeutschland.data.exam.ExamSearch;
+import com.adalbero.app.lebenindeutschland.data.exam.ExamStat;
+import com.adalbero.app.lebenindeutschland.data.exam.ExamTag;
+import com.adalbero.app.lebenindeutschland.data.exam.ExamThema;
 import com.adalbero.app.lebenindeutschland.data.question.QuestionDB;
 import com.google.android.gms.ads.AdRequest;
 import com.google.android.gms.ads.AdView;
@@ -33,7 +33,7 @@ public class AppController extends Application {
     private static AppController mInstance;
 
     private QuestionDB mQuestionDB;
-    private List<Exam2> mExamList;
+    private List<Exam> mExamList;
     private int mExamIdx;
 
     public static AppController getInstance() {
@@ -67,7 +67,7 @@ public class AppController extends Application {
         app.mQuestionDB.load(app);
     }
 
-    public static List<Exam2> getExamList() {
+    public static List<Exam> getExamList() {
         AppController app = getInstance();
 
         if (app.mExamList == null) {
@@ -80,51 +80,50 @@ public class AppController extends Application {
     // TODO: cache examList
     public static void loadExamList() {
 
-        List<Exam2> examList = new ArrayList<>();
+        List<Exam> examList = new ArrayList<>();
 
-        examList.add(new Exam2Header("Questions"));
-        examList.add(new Exam2All("Alle"));
-        examList.add(new Exam2Land("Land"));
-        examList.add(new Exam2Random("Test"));
+        examList.add(new ExamHeader("Questions"));
+        examList.add(new ExamAll("Alle"));
+        examList.add(new ExamLand("Land"));
+        examList.add(new ExamRandom("Test"));
 
-        examList.add(new Exam2Header("By Thema"));
-        examList.add(new Exam2Area("Politik in der Demokratie"));
-        examList.add(new Exam2Area("Geschichte und Verantwortung"));
-        examList.add(new Exam2Area("Mensch und Gesellschaft"));
+        examList.add(new ExamHeader("By Thema"));
+        examList.add(new ExamArea("Politik in der Demokratie"));
+        examList.add(new ExamArea("Geschichte und Verantwortung"));
+        examList.add(new ExamArea("Mensch und Gesellschaft"));
 
-        examList.add(new Exam2Header("By Topic"));
+        examList.add(new ExamHeader("By Topic"));
         List<String> themas = getQuestionDB().listAllTheme();
         for (String thema : themas) {
-            examList.add(new Exam2Thema(thema));
+            examList.add(new ExamThema(thema));
         }
 
-        examList.add(new Exam2Header("Filter"));
-        examList.add(new Exam2Search("Search"));
-        examList.add(new Exam2Tag("Tags"));
+        examList.add(new ExamHeader("Filter"));
+        examList.add(new ExamSearch("Search"));
+        examList.add(new ExamTag("Tags"));
 
-        examList.add(new Exam2Header("Statistics"));
-        examList.add(new Exam2Stat("At least once wrong", Exam2Stat.FILTER_ONCE_WRONG));
-        examList.add(new Exam2Stat("Mostly wrong", Exam2Stat.FILTER_MOSTLY_WRONG));
-        examList.add(new Exam2Stat("Last answer wrong", Exam2Stat.FILTER_LAST_WRONG));
-        examList.add(new Exam2Stat("Not answered yet", Exam2Stat.FILTER_NOT_ANSWERED));
-        examList.add(new Exam2Stat("Last answer right", Exam2Stat.FILTER_LAST_RIGHT));
-        examList.add(new Exam2Stat("Mostly right", Exam2Stat.FILTER_MOSTLY_RIGHT));
+        examList.add(new ExamHeader("Statistics"));
+        examList.add(new ExamStat("At least once wrong", ExamStat.FILTER_ONCE_WRONG));
+        examList.add(new ExamStat("Mostly wrong", ExamStat.FILTER_MOSTLY_WRONG));
+        examList.add(new ExamStat("Last answer wrong", ExamStat.FILTER_LAST_WRONG));
+        examList.add(new ExamStat("Not answered yet", ExamStat.FILTER_NOT_ANSWERED));
+        examList.add(new ExamStat("Last answer right", ExamStat.FILTER_LAST_RIGHT));
+        examList.add(new ExamStat("Mostly right", ExamStat.FILTER_MOSTLY_RIGHT));
 
-        examList.add(new Exam2Header(""));
+        examList.add(new ExamHeader(""));
 
         getInstance().mExamList = examList;
     }
 
-    public static Exam2 getCurrentExam() {
+    public static Exam getCurrentExam() {
         String name = Store.getExamName();
         return getExam(name);
     }
 
-    public static Exam2 getExam(String name) {
+    public static Exam getExam(String name) {
         if (name != null) {
-            for (Exam2 exam : getExamList()) {
+            for (Exam exam : getExamList()) {
                 if (exam.getName().equals(name)) {
-                    exam.onUpdate();
                     return exam;
                 }
             }

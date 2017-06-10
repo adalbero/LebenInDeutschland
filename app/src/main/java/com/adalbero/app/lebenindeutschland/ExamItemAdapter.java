@@ -13,8 +13,8 @@ import android.widget.ImageView;
 import android.widget.TextView;
 
 import com.adalbero.app.lebenindeutschland.controller.Statistics;
-import com.adalbero.app.lebenindeutschland.data.exam.Exam2;
-import com.adalbero.app.lebenindeutschland.data.exam.Exam2Header;
+import com.adalbero.app.lebenindeutschland.data.exam.Exam;
+import com.adalbero.app.lebenindeutschland.data.exam.ExamHeader;
 
 import java.util.List;
 
@@ -22,12 +22,12 @@ import java.util.List;
  * Created by Adalbero on 16/05/2017.
  */
 
-public class ExamItemAdapter extends ArrayAdapter<Exam2> {
+public class ExamItemAdapter extends ArrayAdapter<Exam> {
     private final LayoutInflater mInflater;
 
     public Statistics mStat;
 
-    public ExamItemAdapter(Context context, List<Exam2> data) {
+    public ExamItemAdapter(Context context, List<Exam> data) {
         super(context, R.layout.exam_item, data);
 
         mInflater = LayoutInflater.from(context);
@@ -44,7 +44,7 @@ public class ExamItemAdapter extends ArrayAdapter<Exam2> {
             view = convertView;
         }
 
-        final Exam2 exam = getItem(position);
+        final Exam exam = getItem(position);
 
         String name = exam.getTitle(true);
         int style = Typeface.NORMAL;
@@ -52,34 +52,33 @@ public class ExamItemAdapter extends ArrayAdapter<Exam2> {
         int visible = View.VISIBLE;
         int gravity = Gravity.LEFT;
 
-        StatView viewStat = (StatView) view.findViewById(R.id.view_stat);
-
-        if (exam instanceof Exam2Header) {
+        if (exam instanceof ExamHeader) {
             style = Typeface.BOLD | Typeface.ITALIC;
             visible = View.GONE;
             name = "\n" + name;
             gravity = Gravity.CENTER_HORIZONTAL;
-            viewStat.setVisibility(View.GONE);
         } else {
-            viewStat.setVisibility(View.VISIBLE);
             color = exam.getColor();
         }
 
+
+        StatView viewStat = view.findViewById(R.id.view_stat);
         viewStat.setExam(exam);
+        viewStat.setVisibility(visible);
 
         View item_view = view.findViewById(R.id.item_view);
-        GradientDrawable background = (GradientDrawable)parent.getResources().getDrawable(R.drawable.shape_roundrect);
+        GradientDrawable background = (GradientDrawable) parent.getResources().getDrawable(R.drawable.shape_roundrect);
         background.setColor(color);
         item_view.setBackground(background);
 
-        ImageView btn_icon = (ImageView)view.findViewById(R.id.img_icon);
+        ImageView btn_icon = view.findViewById(R.id.img_icon);
         btn_icon.setVisibility(visible);
         btn_icon.setImageDrawable(exam.getIcon());
 
         if (exam.isIconColor())
             btn_icon.setColorFilter(Color.TRANSPARENT);
 
-        TextView text_name = (TextView) view.findViewById(R.id.text_name);
+        TextView text_name = view.findViewById(R.id.text_name);
         text_name.setText(name);
         text_name.setTypeface(null, style);
         text_name.setGravity(gravity);
@@ -88,4 +87,5 @@ public class ExamItemAdapter extends ArrayAdapter<Exam2> {
 
         return view;
     }
+
 }

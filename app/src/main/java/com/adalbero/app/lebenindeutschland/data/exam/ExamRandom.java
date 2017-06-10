@@ -1,9 +1,6 @@
 package com.adalbero.app.lebenindeutschland.data.exam;
 
-import android.app.Activity;
-
 import com.adalbero.app.lebenindeutschland.R;
-import com.adalbero.app.lebenindeutschland.ResultCallback;
 import com.adalbero.app.lebenindeutschland.controller.Store;
 
 import java.util.ArrayList;
@@ -14,17 +11,13 @@ import java.util.List;
  * Created by Adalbero on 27/05/2017.
  */
 
-public class Exam2Random extends Exam2 {
+public class ExamRandom extends Exam {
     private List<Integer> idx_all;
     private List<Integer> idx_land;
 
-    public Exam2Random(String name) {
+    public ExamRandom(String name) {
         super(name);
 
-    }
-
-    @Override
-    public void onCreate() {
         idx_all = new ArrayList<>();
         idx_land = new ArrayList<>();
 
@@ -32,34 +25,15 @@ public class Exam2Random extends Exam2 {
             idx_all.add(i);
             if (i <= 10) idx_land.add(i);
         }
-
-        super.onCreate();
     }
 
     @Override
-    public boolean onPrompt(Activity activity, ResultCallback callback) {
-        update();
-        return false;
+    public String getTitle(boolean showSize) {
+        return super.getTitle(showSize);
     }
 
     @Override
-    protected List<String> onGetQuestions() {
-        String key = getParamKey("questions");
-
-        List<String> list = Store.getList(key);
-
-        if (list != null) {
-            return list;
-        }
-
-        list = random();
-
-        Store.setList(key, list);
-
-        return list;
-    }
-
-    private List<String> random() {
+    protected void createQuestionList() {
         List<String> list = new ArrayList<>();
         String landCode = Store.getSelectedLandCode();
 
@@ -81,13 +55,7 @@ public class Exam2Random extends Exam2 {
 
         Collections.shuffle(list);
 
-        return list;
-    }
-
-    @Override
-    public int getSize() {
-        update();
-        return super.getSize();
+        setQuestionList(list);
     }
 
     @Override
@@ -99,6 +67,5 @@ public class Exam2Random extends Exam2 {
     protected int onGetColorResource() {
         return R.color.colorTest;
     }
-
 
 }

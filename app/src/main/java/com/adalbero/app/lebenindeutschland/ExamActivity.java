@@ -16,7 +16,7 @@ import com.adalbero.app.lebenindeutschland.controller.AppController;
 import com.adalbero.app.lebenindeutschland.controller.Clock;
 import com.adalbero.app.lebenindeutschland.controller.Statistics;
 import com.adalbero.app.lebenindeutschland.controller.Store;
-import com.adalbero.app.lebenindeutschland.data.exam.Exam2;
+import com.adalbero.app.lebenindeutschland.data.exam.Exam;
 import com.adalbero.app.lebenindeutschland.data.question.Question;
 import com.adalbero.app.lebenindeutschland.data.result.Exam2Result;
 import com.adalbero.app.lebenindeutschland.data.result.ResultInfo;
@@ -26,7 +26,7 @@ import java.util.List;
 
 public class ExamActivity extends AppCompatActivity implements ResultCallback {
 
-    private Exam2 mExam;
+    private Exam mExam;
     private Exam2Result mResult;
     private Clock mClock;
 
@@ -153,11 +153,11 @@ public class ExamActivity extends AppCompatActivity implements ResultCallback {
     }
 
     private void updateData() {
-        List<String> questions = mExam.getQuestions();
+        List<String> questions = mExam.getQuestionList();
         mData = new ArrayList();
         if (questions != null) {
             for (String questionNum : questions) {
-                Question q = AppController.getQuestionDB().findByNum(questionNum);
+                Question q = AppController.getQuestionDB().getQuestion(questionNum);
                 mData.add(q);
             }
         }
@@ -174,7 +174,7 @@ public class ExamActivity extends AppCompatActivity implements ResultCallback {
     private void updateStat() {
         mStatView.setExam(mExam);
         TextView viewRating = (TextView) findViewById(R.id.view_rating);
-        float rating = Statistics.getInstance().getRating(mExam.getQuestions());
+        float rating = Statistics.getInstance().getRating(mExam.getQuestionList());
 
         viewRating.setText(String.format("%.0f", 100 * rating));
     }
@@ -220,7 +220,7 @@ public class ExamActivity extends AppCompatActivity implements ResultCallback {
     }
 
     private void doSort() {
-        mExam.doSort(mSortMethod);
+        mExam.sortQuestionList(mSortMethod);
 
         updateData();
     }

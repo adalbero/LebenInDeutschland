@@ -10,8 +10,10 @@ import android.util.AttributeSet;
 import android.view.View;
 
 import com.adalbero.app.lebenindeutschland.controller.Statistics;
-import com.adalbero.app.lebenindeutschland.data.exam.Exam2;
+import com.adalbero.app.lebenindeutschland.data.exam.Exam;
 import com.adalbero.app.lebenindeutschland.data.question.Question;
+
+import java.util.List;
 
 /**
  * Created by Adalbero on 02/06/2017.
@@ -39,10 +41,12 @@ public class StatView extends View {
         invalidate();
     }
 
-    public void setExam(Exam2 exam) {
-        mProgress = (exam.getSize() == 0 ? 0f : mStat.getAnswerProgress(exam.getQuestions()));
-        mRating = mStat.getRightProgress(exam.getQuestions());
-        mLastRating = mStat.getLastRightProgress(exam.getQuestions());
+    public void setExam(Exam exam) {
+        List<String> list = exam.getQuestionList();
+
+        mProgress = (exam.getSize() == 0 ? 0f : mStat.getAnswerProgress(list));
+        mRating = mStat.getRightProgress(list);
+        mLastRating = mStat.getLastRightProgress(list);
 
         mQuestionNum = null;
 
@@ -137,10 +141,6 @@ public class StatView extends View {
         sweepAngle = (int) (360 * mLastRating * mProgress);
         paint.setColor(colorLastRight);
         canvas.drawArc(rect, startAngle, sweepAngle, true, paint);
-
-//        Paint transparent = new Paint();
-//        transparent.setColor(Color.WHITE);
-//        transparent.setXfermode(new PorterDuffXfermode(PorterDuff.Mode.XOR));
 
         rect.set(x-r3, y-r3, x+r3, y+r3);
         paint.setColor(Color.WHITE);

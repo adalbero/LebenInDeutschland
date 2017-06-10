@@ -5,7 +5,7 @@ import android.support.v4.content.ContextCompat;
 import com.adalbero.app.lebenindeutschland.R;
 import com.adalbero.app.lebenindeutschland.controller.AppController;
 import com.adalbero.app.lebenindeutschland.controller.Store;
-import com.adalbero.app.lebenindeutschland.data.exam.Exam2;
+import com.adalbero.app.lebenindeutschland.data.exam.Exam;
 import com.adalbero.app.lebenindeutschland.data.question.Question;
 
 import java.util.Arrays;
@@ -21,13 +21,13 @@ public class Exam2Result {
     private static final String KEY_ANSWER_LIST = "exam.result.answers";
 
     private List<String> mAnswerList;
-    private Exam2 mExam;
+    private Exam mExam;
 
     public Exam2Result() {
 //        getAnswerList();
     }
 
-    public Exam2 getExam() {
+    public Exam getExam() {
         if (mExam == null) {
             mExam = AppController.getCurrentExam();
         }
@@ -36,7 +36,7 @@ public class Exam2Result {
     }
 
     public List<String> getAnswerList() {
-        Exam2 exam = getExam();
+        Exam exam = getExam();
         if (exam == null) {
             mAnswerList = null;
         } else if (mAnswerList == null) {
@@ -76,7 +76,7 @@ public class Exam2Result {
     }
 
     public ResultInfo getResult() {
-        Exam2 exam = getExam();
+        Exam exam = getExam();
         List<String> answerList = getAnswerList();
 
         ResultInfo result = new ResultInfo();
@@ -88,8 +88,8 @@ public class Exam2Result {
 
                 String answer = answerList.get(i);
                 if (answer != null) {
-                    String num = exam.getQuestions().get(i);
-                    Question q = getQuestionDB().findByNum(num);
+                    String num = exam.getQuestionList().get(i);
+                    Question q = getQuestionDB().getQuestion(num);
                     if (q != null) {
                         if (answer.charAt(0) - 'a' == q.getAnswer())
                             result.right++;
@@ -108,7 +108,7 @@ public class Exam2Result {
         String answer = getAnswer(num);
         if (answer == null) return -1;
 
-        Question q = AppController.getQuestionDB().findByNum(num);
+        Question q = AppController.getQuestionDB().getQuestion(num);
 
         if (answer.charAt(0) - 'a' == q.getAnswer())
             return 1;

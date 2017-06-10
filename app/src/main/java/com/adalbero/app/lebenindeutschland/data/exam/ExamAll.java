@@ -7,13 +7,13 @@ import com.adalbero.app.lebenindeutschland.data.question.Question;
  * Created by Adalbero on 27/05/2017.
  */
 
-public class Exam2All extends Exam2 {
-    public Exam2All(String name) {
+public class ExamAll extends Exam {
+    public ExamAll(String name) {
         super(name);
     }
 
     @Override
-    protected boolean onFilter(Question q) {
+    protected boolean onFilterQuestion(Question q) {
         return !q.getAreaCode().equals("land");
     }
 

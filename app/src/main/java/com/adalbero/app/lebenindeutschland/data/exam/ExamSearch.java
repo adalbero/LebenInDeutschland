@@ -11,7 +11,6 @@ import com.adalbero.app.lebenindeutschland.ResultCallback;
 import com.adalbero.app.lebenindeutschland.controller.Store;
 import com.adalbero.app.lebenindeutschland.data.question.Question;
 
-import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.List;
 
@@ -19,13 +18,28 @@ import java.util.List;
  * Created by Adalbero on 28/05/2017.
  */
 
-public class Exam2Search extends Exam2 {
+public class ExamSearch extends Exam {
     private static final String KEY = "pref.search";
 
     private List<String> mTerms;
 
-    public Exam2Search(String name) {
+    public ExamSearch(String name) {
         super(name);
+    }
+
+    private List<String> getTerms() {
+        if (mTerms == null) {
+            mTerms = Store.getList(KEY);
+        }
+
+        return mTerms;
+    }
+
+    private void setTerms(List<String> terms) {
+        mTerms = terms;
+        Store.setList(KEY, mTerms);
+
+        invalidateQuestionList();
     }
 
     private String getTermsString() {
@@ -39,26 +53,10 @@ public class Exam2Search extends Exam2 {
         return str;
     }
 
-    private List<String> getTerms() {
-        mTerms = new ArrayList<>();
-        List<String> terms = Store.getList(KEY);
-        if (terms != null) {
-            mTerms.addAll(terms);
-        }
-
-        return mTerms;
-    }
-
     private void setTermsString(String str) {
         String vet[] = str.split("[ ,;]");
         List<String> terms = Arrays.asList(vet);
         setTerms(terms);
-    }
-
-    private void setTerms(List<String> terms) {
-        mTerms = terms;
-        Store.setList(KEY, terms);
-        update();
     }
 
     @Override
@@ -73,8 +71,9 @@ public class Exam2Search extends Exam2 {
     }
 
     @Override
-    protected boolean onFilter(Question q) {
-        if (mTerms == null || mTerms.size() == 0) return false;
+    protected boolean onFilterQuestion(Question q) {
+        List<String> terms = getTerms();
+        if (terms == null || terms.size() == 0) return false;
 
         boolean bExclude = false;
         boolean bInclude = false;
@@ -83,7 +82,7 @@ public class Exam2Search extends Exam2 {
         text = normalize(text);
 
         boolean flag = false;
-        for (String term : mTerms) {
+        for (String term : terms) {
             if (term == null || term.length() == 0)
                 continue;
 
@@ -117,12 +116,6 @@ public class Exam2Search extends Exam2 {
     }
 
     @Override
-    public void onUpdate() {
-        getTerms();
-        update();
-    }
-
-    @Override
     public boolean onPrompt(Activity activity, ResultCallback callback) {
         dialog(activity, callback);
         return true;
@@ -142,7 +135,7 @@ public class Exam2Search extends Exam2 {
             public void onClick(DialogInterface dialog, int which) {
                 String text = input.getText().toString();
                 setTermsString(text);
-                callback.onResult(Exam2Search.this, getName());
+                callback.onResult(ExamSearch.this, getName());
             }
         });
         builder.setNegativeButton("Cancel", new DialogInterface.OnClickListener() {

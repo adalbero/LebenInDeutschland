@@ -7,16 +7,16 @@ import com.adalbero.app.lebenindeutschland.data.question.Question;
  * Created by Adalbero on 27/05/2017.
  */
 
-public class Exam2Area extends Exam2 {
+public class ExamArea extends Exam {
     private int mColor;
 
-    public Exam2Area(String name) {
+    public ExamArea(String name) {
         super(name);
     }
 
     @Override
-    protected boolean onFilter(Question q) {
-        return q.getArea().equals(mName);
+    protected boolean onFilterQuestion(Question q) {
+        return q.getArea().equals(getName());
     }
 
     @Override
@@ -25,8 +25,8 @@ public class Exam2Area extends Exam2 {
             if (getSize() == 0) {
                 mColor = super.getColor();
             } else {
-                String num = mQuestionNumList.get(0);
-                mColor = AppController.getInstance().getQuestionDB().findByNum(num).getAreaColor();
+                String num = getQuestionList().get(0);
+                mColor = AppController.getInstance().getQuestionDB().getQuestion(num).getAreaColor();
             }
         }
 

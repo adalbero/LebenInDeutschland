@@ -5,7 +5,6 @@ import android.os.Bundle;
 import android.speech.RecognizerIntent;
 import android.support.v4.content.ContextCompat;
 import android.support.v7.app.AppCompatActivity;
-import android.util.Log;
 import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
@@ -19,7 +18,7 @@ import com.adalbero.app.lebenindeutschland.controller.Clock;
 import com.adalbero.app.lebenindeutschland.controller.Dialog;
 import com.adalbero.app.lebenindeutschland.controller.Store;
 import com.adalbero.app.lebenindeutschland.controller.Voice;
-import com.adalbero.app.lebenindeutschland.data.exam.Exam2;
+import com.adalbero.app.lebenindeutschland.data.exam.Exam;
 import com.adalbero.app.lebenindeutschland.data.question.Question;
 import com.adalbero.app.lebenindeutschland.data.result.Exam2Result;
 import com.adalbero.app.lebenindeutschland.data.result.ResultInfo;
@@ -32,7 +31,7 @@ public class QuestionActivity extends AppCompatActivity implements ResultCallbac
     private Exam2Result mResult;
     private Clock mClock;
 
-    private List<String> mQuestionNumList;
+    private List<String> mQuestionList;
     private QuestionViewHolder mQuestionViewHolder;
 
     private TextView mResultView;
@@ -48,8 +47,8 @@ public class QuestionActivity extends AppCompatActivity implements ResultCallbac
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_question2);
 
-        Exam2 exam = AppController.getCurrentExam();
-        mQuestionNumList = exam.getQuestions();
+        Exam exam = AppController.getCurrentExam();
+        mQuestionList = exam.getQuestionList();
 
         mResult = new Exam2Result();
 
@@ -142,10 +141,10 @@ public class QuestionActivity extends AppCompatActivity implements ResultCallbac
 
     private void showView() {
         final int idx = Store.getQuestionIdx();
-        final int count = mQuestionNumList.size();
+        final int count = mQuestionList.size();
 
-        String num = mQuestionNumList.get(idx);
-        mQuestion = AppController.getQuestionDB().findByNum(num);
+        String num = mQuestionList.get(idx);
+        mQuestion = AppController.getQuestionDB().getQuestion(num);
 
         String title = String.format("Question %d of %d", (idx + 1), count);
         getSupportActionBar().setTitle(title);
@@ -200,7 +199,7 @@ public class QuestionActivity extends AppCompatActivity implements ResultCallbac
 
     private void goNext() {
         final int idx = Store.getQuestionIdx();
-        final int count = mQuestionNumList.size();
+        final int count = mQuestionList.size();
 
         if (idx < count - 1) {
             Store.setQuestionIdx(idx + 1);
@@ -268,7 +267,6 @@ public class QuestionActivity extends AppCompatActivity implements ResultCallbac
                 result[1] = text;
                 text = normalize(text);
 
-                Log.d("MyApp", "QuestionActivity.findAnswer: " + text);
                 String keywords[] = {"antwort", "nummer"};
                 char ch = Character.MIN_VALUE;
 

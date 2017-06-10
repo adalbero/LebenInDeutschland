@@ -11,7 +11,7 @@ import android.widget.TextView;
 
 import com.adalbero.app.lebenindeutschland.controller.AppController;
 import com.adalbero.app.lebenindeutschland.controller.Statistics;
-import com.adalbero.app.lebenindeutschland.data.exam.Exam2;
+import com.adalbero.app.lebenindeutschland.data.exam.Exam;
 
 import java.util.List;
 
@@ -20,9 +20,9 @@ import java.util.List;
  */
 
 public class ExamStatDialog extends DialogFragment {
-    private Exam2 mExam;
+    private Exam mExam;
 
-    public void setExamp(Exam2 exam) {
+    public void setExamp(Exam exam) {
         mExam = exam;
     }
 
@@ -56,7 +56,7 @@ public class ExamStatDialog extends DialogFragment {
         getDialog().cancel();
     }
 
-    public Exam2 getExam() {
+    public Exam getExam() {
         if (mExam == null) {
             mExam = AppController.getCurrentExam();
         }
@@ -67,7 +67,7 @@ public class ExamStatDialog extends DialogFragment {
     public void initView(View v) {
         Statistics mStat = Statistics.getInstance();
         getExam();
-        List<String> questions = mExam.getQuestions();
+        List<String> questions = mExam.getQuestionList();
 
         StatView viewStat = (StatView) v.findViewById(R.id.view_stat);
         viewStat.setExam(mExam);
