@@ -47,7 +47,7 @@
                 app:layout_constraintRight_toLeftOf="@+id/view_stat"
                 app:layout_constraintTop_toBottomOf="@+id/view_rating_label" />
 
-            <com.adalbero.app.lebenindeutschland.StatView
+            <com.adalbero.app.lebenindeutschland.ui.common.StatView
                 android:id="@+id/view_stat"
                 android:layout_width="128dp"
                 android:layout_height="128dp"

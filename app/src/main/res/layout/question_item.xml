@@ -43,7 +43,7 @@
         app:layout_constraintRight_toRightOf="@+id/view_question"
         app:layout_constraintTop_toBottomOf="@+id/view_header">
 
-        <com.adalbero.app.lebenindeutschland.StatView
+        <com.adalbero.app.lebenindeutschland.ui.common.StatView
             android:id="@+id/view_stat"
             android:layout_width="32dp"
             android:layout_height="8dp"

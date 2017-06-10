@@ -1,4 +1,4 @@
-package com.adalbero.app.lebenindeutschland;
+package com.adalbero.app.lebenindeutschland.ui.main;
 
 import android.content.Context;
 import android.graphics.Color;
@@ -12,6 +12,8 @@ import android.widget.ArrayAdapter;
 import android.widget.ImageView;
 import android.widget.TextView;
 
+import com.adalbero.app.lebenindeutschland.R;
+import com.adalbero.app.lebenindeutschland.ui.common.StatView;
 import com.adalbero.app.lebenindeutschland.controller.Statistics;
 import com.adalbero.app.lebenindeutschland.data.exam.Exam;
 import com.adalbero.app.lebenindeutschland.data.exam.ExamHeader;

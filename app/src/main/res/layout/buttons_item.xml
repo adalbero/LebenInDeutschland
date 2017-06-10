@@ -75,7 +75,7 @@
 
     </LinearLayout>
 
-    <com.adalbero.app.lebenindeutschland.ProgressView
+    <com.adalbero.app.lebenindeutschland.ui.common.ProgressView
         android:id="@+id/view_progress"
         android:layout_width="match_parent"
         android:layout_height="10dp"

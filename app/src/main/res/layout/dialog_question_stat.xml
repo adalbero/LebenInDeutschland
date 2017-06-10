@@ -8,7 +8,7 @@
         android:layout_height="match_parent"
         android:orientation="vertical">
 
-        <com.adalbero.app.lebenindeutschland.StatView
+        <com.adalbero.app.lebenindeutschland.ui.common.StatView
             android:id="@+id/view_stat"
             android:layout_width="match_parent"
             android:layout_height="32dp"

@@ -10,6 +10,14 @@ public class ResultInfo {
     public int right;
     public int wrong;
 
+    public int getTotal() { return total; }
+
+    public int getRight() { return right; }
+
+    public int getWrong() { return wrong; }
+
+    public int getAnswered() { return answered; }
+
     public boolean isFinished() {
         return total > 0 && total == answered;
     }

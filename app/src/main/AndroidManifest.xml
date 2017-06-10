@@ -12,7 +12,7 @@
         android:label="@string/app_name"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name="com.adalbero.app.lebenindeutschland.MainActivity">
+        <activity android:name="com.adalbero.app.lebenindeutschland.ui.main.MainActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
@@ -20,14 +20,14 @@
             </intent-filter>
         </activity>
         <activity
-            android:name="com.adalbero.app.lebenindeutschland.ExamActivity"
-            android:parentActivityName="com.adalbero.app.lebenindeutschland.MainActivity" />
+            android:name="com.adalbero.app.lebenindeutschland.ui.exam.ExamActivity"
+            android:parentActivityName="com.adalbero.app.lebenindeutschland.ui.main.MainActivity" />
         <activity
-            android:name="com.adalbero.app.lebenindeutschland.QuestionActivity"
-            android:parentActivityName="com.adalbero.app.lebenindeutschland.ExamActivity" />
+            android:name="com.adalbero.app.lebenindeutschland.ui.question.QuestionActivity"
+            android:parentActivityName="com.adalbero.app.lebenindeutschland.ui.exam.ExamActivity" />
         <activity
-            android:name="com.adalbero.app.lebenindeutschland.SettingsActivity"
-            android:parentActivityName="com.adalbero.app.lebenindeutschland.MainActivity" />
+            android:name="com.adalbero.app.lebenindeutschland.ui.settings.SettingsActivity"
+            android:parentActivityName="com.adalbero.app.lebenindeutschland.ui.main.MainActivity" />
     </application>
 
 </manifest>

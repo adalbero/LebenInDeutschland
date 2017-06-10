@@ -3,8 +3,8 @@ package com.adalbero.app.lebenindeutschland.data.exam;
 import android.app.Activity;
 
 import com.adalbero.app.lebenindeutschland.R;
-import com.adalbero.app.lebenindeutschland.ResultCallback;
-import com.adalbero.app.lebenindeutschland.TagDialog;
+import com.adalbero.app.lebenindeutschland.ui.common.ResultCallback;
+import com.adalbero.app.lebenindeutschland.ui.common.TagDialog;
 import com.adalbero.app.lebenindeutschland.controller.Store;
 import com.adalbero.app.lebenindeutschland.data.question.Question;
 

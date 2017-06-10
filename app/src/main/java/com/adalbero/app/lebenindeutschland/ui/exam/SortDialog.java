@@ -1,4 +1,4 @@
-package com.adalbero.app.lebenindeutschland;
+package com.adalbero.app.lebenindeutschland.ui.exam;
 
 import android.app.Dialog;
 import android.app.DialogFragment;
@@ -9,6 +9,9 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.widget.CheckBox;
 import android.widget.RadioButton;
+
+import com.adalbero.app.lebenindeutschland.R;
+import com.adalbero.app.lebenindeutschland.ui.common.ResultCallback;
 
 /**
  * Created by Adalbero on 07/06/2017.

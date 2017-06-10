@@ -1,4 +1,4 @@
-package com.adalbero.app.lebenindeutschland;
+package com.adalbero.app.lebenindeutschland.ui.question;
 
 import android.app.Activity;
 import android.graphics.Color;
@@ -12,11 +12,15 @@ import android.widget.LinearLayout;
 import android.widget.Space;
 import android.widget.TextView;
 
+import com.adalbero.app.lebenindeutschland.R;
+import com.adalbero.app.lebenindeutschland.ui.common.ResultCallback;
+import com.adalbero.app.lebenindeutschland.ui.common.StatView;
+import com.adalbero.app.lebenindeutschland.ui.common.TagDialog;
 import com.adalbero.app.lebenindeutschland.controller.AppController;
 import com.adalbero.app.lebenindeutschland.controller.Statistics;
 import com.adalbero.app.lebenindeutschland.controller.Store;
 import com.adalbero.app.lebenindeutschland.data.question.Question;
-import com.adalbero.app.lebenindeutschland.data.result.Exam2Result;
+import com.adalbero.app.lebenindeutschland.data.result.ExamResult;
 
 import java.util.Set;
 
@@ -27,7 +31,7 @@ import java.util.Set;
 public class QuestionViewHolder implements View.OnClickListener, ResultCallback {
     private View mView;
     private Question mQuestion;
-    private Exam2Result mResult;
+    private ExamResult mResult;
     private boolean mQuestionPage;
     private Statistics mStats;
 
@@ -48,7 +52,7 @@ public class QuestionViewHolder implements View.OnClickListener, ResultCallback 
     private static int COLOR_RIGHT = AppController.getInstance().getBackgroundColor(R.color.colorRightLight);
     private static int COLOR_WRONG = AppController.getInstance().getBackgroundColor(R.color.colorWrongLight);
 
-    public QuestionViewHolder(View view, Exam2Result result, boolean questionPage, ResultCallback callback) {
+    public QuestionViewHolder(View view, ExamResult result, boolean questionPage, ResultCallback callback) {
         mView = view;
         mResult = result;
         mQuestionPage = questionPage;

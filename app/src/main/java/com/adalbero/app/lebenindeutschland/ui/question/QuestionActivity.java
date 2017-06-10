@@ -1,4 +1,4 @@
-package com.adalbero.app.lebenindeutschland;
+package com.adalbero.app.lebenindeutschland.ui.question;
 
 import android.content.Intent;
 import android.os.Bundle;
@@ -13,6 +13,8 @@ import android.widget.ScrollView;
 import android.widget.TextView;
 import android.widget.Toast;
 
+import com.adalbero.app.lebenindeutschland.R;
+import com.adalbero.app.lebenindeutschland.controller.Analytics;
 import com.adalbero.app.lebenindeutschland.controller.AppController;
 import com.adalbero.app.lebenindeutschland.controller.Clock;
 import com.adalbero.app.lebenindeutschland.controller.Dialog;
@@ -20,21 +22,27 @@ import com.adalbero.app.lebenindeutschland.controller.Store;
 import com.adalbero.app.lebenindeutschland.controller.Voice;
 import com.adalbero.app.lebenindeutschland.data.exam.Exam;
 import com.adalbero.app.lebenindeutschland.data.question.Question;
-import com.adalbero.app.lebenindeutschland.data.result.Exam2Result;
+import com.adalbero.app.lebenindeutschland.data.result.ExamResult;
 import com.adalbero.app.lebenindeutschland.data.result.ResultInfo;
+import com.adalbero.app.lebenindeutschland.ui.common.ProgressView;
+import com.adalbero.app.lebenindeutschland.ui.common.ResultCallback;
+import com.google.firebase.analytics.FirebaseAnalytics;
 
 import java.util.List;
 
 public class QuestionActivity extends AppCompatActivity implements ResultCallback {
 
+    private FirebaseAnalytics mFirebaseAnalytics;
+
     private Question mQuestion;
-    private Exam2Result mResult;
+    private ExamResult mResult;
     private Clock mClock;
 
     private List<String> mQuestionList;
     private QuestionViewHolder mQuestionViewHolder;
 
     private TextView mResultView;
+
     private ImageButton mBtnPrev;
     private ImageButton mBtnNext;
 
@@ -45,12 +53,15 @@ public class QuestionActivity extends AppCompatActivity implements ResultCallbac
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
+        mFirebaseAnalytics = FirebaseAnalytics.getInstance(this);
+
         setContentView(R.layout.activity_question2);
 
         Exam exam = AppController.getCurrentExam();
         mQuestionList = exam.getQuestionList();
 
-        mResult = new Exam2Result();
+        mResult = new ExamResult();
+        Analytics.setLogResult(!mResult.getResult().isFinished());
 
         mBtnPrev = (ImageButton) findViewById(R.id.btn_prev);
         mBtnPrev.setOnClickListener(new View.OnClickListener() {
@@ -178,6 +189,8 @@ public class QuestionActivity extends AppCompatActivity implements ResultCallbac
                 mResultView.setTextColor(ContextCompat.getColor(this, R.color.colorWrongDark));
             }
             mResultView.setVisibility(View.VISIBLE);
+
+            Analytics.logTestResult(mFirebaseAnalytics, mClock, mResult);
         }
 
     }

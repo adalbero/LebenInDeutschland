@@ -85,7 +85,7 @@
             app:layout_constraintTop_toTopOf="@+id/text_label2" />
 
 
-        <com.adalbero.app.lebenindeutschland.ProgressView
+        <com.adalbero.app.lebenindeutschland.ui.common.ProgressView
             android:id="@+id/view_progress"
             android:layout_width="0dp"
             android:layout_height="10dp"
@@ -142,7 +142,7 @@
             android:textSize="24sp"
             android:textStyle="bold" />
 
-        <com.adalbero.app.lebenindeutschland.StatView
+        <com.adalbero.app.lebenindeutschland.ui.common.StatView
             android:id="@+id/view_stat"
             android:layout_width="match_parent"
             android:layout_height="44dp"

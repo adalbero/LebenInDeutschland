@@ -1,4 +1,4 @@
-package com.adalbero.app.lebenindeutschland;
+package com.adalbero.app.lebenindeutschland.ui.common;
 
 import android.content.Context;
 import android.view.LayoutInflater;
@@ -7,9 +7,10 @@ import android.view.ViewGroup;
 import android.widget.ArrayAdapter;
 import android.widget.CheckedTextView;
 
+import com.adalbero.app.lebenindeutschland.R;
+
 import java.util.List;
 import java.util.Set;
-import java.util.TreeSet;
 
 /**
  * Created by Adalbero on 20/05/2017.

@@ -17,13 +17,13 @@ import static com.adalbero.app.lebenindeutschland.controller.AppController.getQu
  * Created by Adalbero on 28/05/2017.
  */
 
-public class Exam2Result {
+public class ExamResult {
     private static final String KEY_ANSWER_LIST = "exam.result.answers";
 
     private List<String> mAnswerList;
     private Exam mExam;
 
-    public Exam2Result() {
+    public ExamResult() {
 //        getAnswerList();
     }
 

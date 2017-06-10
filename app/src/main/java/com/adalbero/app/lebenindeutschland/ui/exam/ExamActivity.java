@@ -1,4 +1,4 @@
-package com.adalbero.app.lebenindeutschland;
+package com.adalbero.app.lebenindeutschland.ui.exam;
 
 import android.content.Intent;
 import android.os.Bundle;
@@ -12,22 +12,31 @@ import android.widget.ListView;
 import android.widget.TextView;
 import android.widget.Toast;
 
+import com.adalbero.app.lebenindeutschland.R;
+import com.adalbero.app.lebenindeutschland.controller.Analytics;
 import com.adalbero.app.lebenindeutschland.controller.AppController;
 import com.adalbero.app.lebenindeutschland.controller.Clock;
 import com.adalbero.app.lebenindeutschland.controller.Statistics;
 import com.adalbero.app.lebenindeutschland.controller.Store;
 import com.adalbero.app.lebenindeutschland.data.exam.Exam;
 import com.adalbero.app.lebenindeutschland.data.question.Question;
-import com.adalbero.app.lebenindeutschland.data.result.Exam2Result;
+import com.adalbero.app.lebenindeutschland.data.result.ExamResult;
 import com.adalbero.app.lebenindeutschland.data.result.ResultInfo;
+import com.adalbero.app.lebenindeutschland.ui.common.ProgressView;
+import com.adalbero.app.lebenindeutschland.ui.common.ResultCallback;
+import com.adalbero.app.lebenindeutschland.ui.common.StatView;
+import com.adalbero.app.lebenindeutschland.ui.question.QuestionActivity;
+import com.google.firebase.analytics.FirebaseAnalytics;
 
 import java.util.ArrayList;
 import java.util.List;
 
 public class ExamActivity extends AppCompatActivity implements ResultCallback {
 
+    private FirebaseAnalytics mFirebaseAnalytics;
+
     private Exam mExam;
-    private Exam2Result mResult;
+    private ExamResult mResult;
     private Clock mClock;
 
     private ListView mListView;
@@ -42,6 +51,7 @@ public class ExamActivity extends AppCompatActivity implements ResultCallback {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
+        mFirebaseAnalytics = FirebaseAnalytics.getInstance(this);
 
         setContentView(R.layout.activity_exam);
 
@@ -50,7 +60,8 @@ public class ExamActivity extends AppCompatActivity implements ResultCallback {
         String title = mExam.getTitle(false);
         getSupportActionBar().setTitle(title);
 
-        mResult = new Exam2Result();
+        mResult = new ExamResult();
+        Analytics.setLogResult(!mResult.getResult().isFinished());
 
         updateData();
         mAdapter = new QuestionItemAdapter(this, mData, mResult, this);
@@ -110,6 +121,8 @@ public class ExamActivity extends AppCompatActivity implements ResultCallback {
 
         invalidateOptionsMenu();
         mAdapter.notifyDataSetChanged();
+
+        Analytics.logUserProperty(mFirebaseAnalytics, Store.PREF_EXAM_INLINE, "" + inline);
     }
 
     @Override
@@ -203,7 +216,10 @@ public class ExamActivity extends AppCompatActivity implements ResultCallback {
                 mResultView.setText("Fail");
                 mResultView.setTextColor(ContextCompat.getColor(this, R.color.colorWrongDark));
             }
+
             mResultView.setVisibility(View.VISIBLE);
+
+            Analytics.logTestResult(mFirebaseAnalytics, mClock, mResult);
         }
     }
 

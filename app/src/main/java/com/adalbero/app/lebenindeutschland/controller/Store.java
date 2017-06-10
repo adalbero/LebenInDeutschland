@@ -3,8 +3,6 @@ package com.adalbero.app.lebenindeutschland.controller;
 import android.content.SharedPreferences;
 import android.preference.PreferenceManager;
 
-import com.adalbero.app.lebenindeutschland.SettingsActivity;
-
 import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.List;
@@ -19,8 +17,12 @@ import java.util.TreeSet;
 public class Store {
     public static final String KEY_EXAM_NAME = "exam.name";
     public static final String KEY_QUESTION_IDX = "exam.question.idx";
-    public static final String KEY_EXAM_INLINE = "pref.inline.mode";
-    public static final String KEY_TAGS_TERMS = "pref.Tags.terms";
+
+    public static final String PREF_EXAM_INLINE = "pref.inline.mode";
+    public static final String PREF_LAND = "pref.land";
+    public static final String PREF_VERSION = "pref.version";
+    public static final String PREF_STAT_MAX = "pref.stat.max";
+    public static final String PREF_REMOVE_STAT = "pref.remove.stat";
 
     public static void remove(String key) {
         getPreferences().edit().remove(key).commit();
@@ -98,23 +100,23 @@ public class Store {
     }
 
     public static String getSelectedLandCode() {
-        String value = Store.getString(SettingsActivity.PREF_LAND, null);
+        String value = Store.getString(PREF_LAND, null);
         if (value == null) return null;
         return value.substring(0, 2);
     }
 
     public static String getSelectedLandName() {
-        String value = Store.getString(SettingsActivity.PREF_LAND, null);
+        String value = Store.getString(PREF_LAND, null);
         if (value == null) return null;
         return value.substring(3);
     }
 
     public static void setExamInline(boolean inline) {
-        Store.setBoolean(KEY_EXAM_INLINE, inline);
+        Store.setBoolean(PREF_EXAM_INLINE, inline);
     }
 
     public static boolean getExamInline() {
-        boolean inline = Store.getBoolean(KEY_EXAM_INLINE, false);
+        boolean inline = Store.getBoolean(PREF_EXAM_INLINE, false);
         return inline;
     }
 

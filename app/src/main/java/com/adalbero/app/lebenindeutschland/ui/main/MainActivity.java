@@ -1,4 +1,4 @@
-package com.adalbero.app.lebenindeutschland;
+package com.adalbero.app.lebenindeutschland.ui.main;
 
 import android.content.Intent;
 import android.os.Bundle;
@@ -9,16 +9,23 @@ import android.view.View;
 import android.widget.AdapterView;
 import android.widget.ListView;
 
+import com.adalbero.app.lebenindeutschland.R;
+import com.adalbero.app.lebenindeutschland.ui.common.ResultCallback;
+import com.adalbero.app.lebenindeutschland.ui.settings.SettingsActivity;
 import com.adalbero.app.lebenindeutschland.controller.AppController;
 import com.adalbero.app.lebenindeutschland.controller.Dialog;
 import com.adalbero.app.lebenindeutschland.controller.Store;
 import com.adalbero.app.lebenindeutschland.data.exam.Exam;
 import com.adalbero.app.lebenindeutschland.data.exam.ExamHeader;
+import com.adalbero.app.lebenindeutschland.ui.exam.ExamActivity;
+import com.google.firebase.analytics.FirebaseAnalytics;
 
 import java.util.ArrayList;
 import java.util.List;
 
 public class MainActivity extends AppCompatActivity implements ResultCallback {
+
+    private FirebaseAnalytics mFirebaseAnalytics;
 
     private List<Exam> data;
     private ExamItemAdapter mAdapter;
@@ -27,6 +34,7 @@ public class MainActivity extends AppCompatActivity implements ResultCallback {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
+        mFirebaseAnalytics = FirebaseAnalytics.getInstance(this);
 
         setContentView(R.layout.activity_main);
 

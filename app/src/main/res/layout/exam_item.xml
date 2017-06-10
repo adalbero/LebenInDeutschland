@@ -21,7 +21,7 @@
         android:tint="@android:color/black"
         app:srcCompat="@drawable/ic_exam" />
 
-    <com.adalbero.app.lebenindeutschland.StatView
+    <com.adalbero.app.lebenindeutschland.ui.common.StatView
         android:id="@+id/view_stat"
         android:layout_width="32dp"
         android:layout_height="32dp"

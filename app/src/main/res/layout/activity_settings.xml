@@ -6,7 +6,7 @@
 
     <fragment
         android:id="@+id/fragment"
-        android:name="com.adalbero.app.lebenindeutschland.SettingsActivity$SettingsFragment"
+        android:name="com.adalbero.app.lebenindeutschland.ui.settings.SettingsFragment"
         android:layout_width="match_parent"
         android:layout_height="wrap_content" />
 

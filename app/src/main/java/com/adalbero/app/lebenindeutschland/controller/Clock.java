@@ -63,6 +63,14 @@ public class Clock {
         }
     }
 
+    public int getTime() {
+        return (int) (1000 * mTime);
+    }
+
+    public String getTimeString() {
+        return format(mTime);
+    }
+
     private String format(int timeInSec) {
         Date date = new Date(timeInSec * 1000);
         DateFormat formatter = new SimpleDateFormat(timeInSec > 60 * 60 ? "H:mm:ss" : "mm:ss");

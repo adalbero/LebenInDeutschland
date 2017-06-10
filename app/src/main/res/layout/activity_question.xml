@@ -4,7 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context="com.adalbero.app.lebenindeutschland.QuestionActivity">
+    tools:context="com.adalbero.app.lebenindeutschland.ui.question.QuestionActivity">
 
     <LinearLayout
         android:id="@+id/tags_view"
@@ -201,7 +201,7 @@
         app:layout_constraintBottom_toBottomOf="@+id/btn_prev"
         app:layout_constraintRight_toRightOf="parent" />
 
-    <com.adalbero.app.lebenindeutschland.ProgressView
+    <com.adalbero.app.lebenindeutschland.ui.common.ProgressView
         android:id="@+id/view_progress"
         android:layout_width="0dp"
         android:layout_height="10dp"
