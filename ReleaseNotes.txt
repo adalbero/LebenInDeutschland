@@ -1,3 +1,6 @@
+Ver 1.3.2
+- [Fix] Search and Tags NPE when empty
+
 Ver 1.3.1
 - [New] Google Analytics for Firebaes
 - [Fix] Sorted list loosing order

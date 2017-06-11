@@ -7,10 +7,11 @@ import android.text.InputType;
 import android.widget.EditText;
 
 import com.adalbero.app.lebenindeutschland.R;
-import com.adalbero.app.lebenindeutschland.ui.common.ResultCallback;
 import com.adalbero.app.lebenindeutschland.controller.Store;
 import com.adalbero.app.lebenindeutschland.data.question.Question;
+import com.adalbero.app.lebenindeutschland.ui.common.ResultCallback;
 
+import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.List;
 
@@ -30,6 +31,9 @@ public class ExamSearch extends Exam {
     private List<String> getTerms() {
         if (mTerms == null) {
             mTerms = Store.getList(KEY);
+            if (mTerms == null) {
+                mTerms = new ArrayList<>();
+            }
         }
 
         return mTerms;
