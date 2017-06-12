@@ -8,43 +8,20 @@
   "client": [
     {
       "client_info": {
-        "mobilesdk_app_id": "1:366269767:android:1f44ad31967a6dbd",
-        "android_client_info": {
-          "package_name": "com.adalbero.app.lebenindeutschland"
-        }
-      },
-      "oauth_client": [
-        {
-          "client_id": "366269767-5ajenmfj0db741j7pi3gfp4915qb52jv.apps.googleusercontent.com",
-          "client_type": 3
-        }
-      ],
-      "api_key": [
-        {
-          "current_key": "AIzaSyA51eCbo8n8byOeOIRFW13qyo-4e9KGa38"
-        }
-      ],
-      "services": {
-        "analytics_service": {
-          "status": 1
-        },
-        "appinvite_service": {
-          "status": 1,
-          "other_platform_oauth_client": []
-        },
-        "ads_service": {
-          "status": 2
-        }
-      }
-    },
-    {
-      "client_info": {
         "mobilesdk_app_id": "1:366269767:android:03216c44991f83da",
         "android_client_info": {
           "package_name": "com.adalbero.app.lebenindeutchland"
         }
       },
       "oauth_client": [
+        {
+          "client_id": "366269767-3gmch34m31tsrp6mq6uvlaiq9j426qel.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.adalbero.app.lebenindeutchland",
+            "certificate_hash": "9a698a50e73d6f3301099f32f62d507615c715a6"
+          }
+        },
         {
           "client_id": "366269767-44al986pmn0f0r7f9d2uhcvmnpi9nuge.apps.googleusercontent.com",
           "client_type": 1,
@@ -75,6 +52,37 @@
               "client_type": 3
             }
           ]
+        },
+        "ads_service": {
+          "status": 2
+        }
+      }
+    },
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:366269767:android:2beb4ccc8cfbe187",
+        "android_client_info": {
+          "package_name": "com.adalbero.app.lebenindeutchland.debug"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "366269767-5ajenmfj0db741j7pi3gfp4915qb52jv.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyA51eCbo8n8byOeOIRFW13qyo-4e9KGa38"
+        }
+      ],
+      "services": {
+        "analytics_service": {
+          "status": 1
+        },
+        "appinvite_service": {
+          "status": 1,
+          "other_platform_oauth_client": []
         },
         "ads_service": {
           "status": 2
