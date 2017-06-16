@@ -10,14 +10,15 @@ import android.widget.AdapterView;
 import android.widget.ListView;
 
 import com.adalbero.app.lebenindeutschland.R;
-import com.adalbero.app.lebenindeutschland.ui.common.ResultCallback;
-import com.adalbero.app.lebenindeutschland.ui.settings.SettingsActivity;
+import com.adalbero.app.lebenindeutschland.controller.Analytics;
 import com.adalbero.app.lebenindeutschland.controller.AppController;
 import com.adalbero.app.lebenindeutschland.controller.Dialog;
 import com.adalbero.app.lebenindeutschland.controller.Store;
 import com.adalbero.app.lebenindeutschland.data.exam.Exam;
 import com.adalbero.app.lebenindeutschland.data.exam.ExamHeader;
+import com.adalbero.app.lebenindeutschland.ui.common.ResultCallback;
 import com.adalbero.app.lebenindeutschland.ui.exam.ExamActivity;
+import com.adalbero.app.lebenindeutschland.ui.settings.SettingsActivity;
 import com.google.firebase.analytics.FirebaseAnalytics;
 
 import java.util.ArrayList;
@@ -30,6 +31,8 @@ public class MainActivity extends AppCompatActivity implements ResultCallback {
     private List<Exam> data;
     private ExamItemAdapter mAdapter;
     private ListView mListView;
+
+    private static boolean newSession = true;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -53,6 +56,13 @@ public class MainActivity extends AppCompatActivity implements ResultCallback {
         });
 
         AppController.initAdView(this);
+
+        if (newSession) {
+            String land = Store.getString(Store.PREF_LAND, "NO_LAND");
+            Analytics.logBundesland(mFirebaseAnalytics, land);
+
+            newSession = false;
+        }
     }
 
     private void onItemSelected(int position) {
@@ -64,6 +74,8 @@ public class MainActivity extends AppCompatActivity implements ResultCallback {
         AppController.setExamIdx(position);
 
         if (exam.onPrompt(this, this)) {
+            String terms = exam.getName() + ":" + exam.getQualification();
+            Analytics.logSearch(mFirebaseAnalytics, terms);
             return;
         }
 
@@ -115,6 +127,12 @@ public class MainActivity extends AppCompatActivity implements ResultCallback {
         updateData();
     }
 
+    @Override
+    protected void onResume() {
+        super.onResume();
+        mFirebaseAnalytics.setCurrentScreen(this, "Main", null);
+    }
+
     private void goSettings() {
         startActivity(new Intent(this, SettingsActivity.class));
     }
@@ -133,6 +151,8 @@ public class MainActivity extends AppCompatActivity implements ResultCallback {
 
         Intent intent = new Intent(this, ExamActivity.class);
         this.startActivity(intent);
+
+        Analytics.logViewExam(mFirebaseAnalytics, exam.getName());
     }
 
     @Override

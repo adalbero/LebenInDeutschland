@@ -1,3 +1,8 @@
+Ver 1.3.3 (8) - 16/06/2017
+- [Fix] NPE View Question: Empty Question, Bug report
+- [New] Firebase Crash Report
+- [New] Analytics (User Land, Features, Screen, Share, Search, Exam View
+
 Ver 1.3.2 (7) - 11/06/2017
 - [Fix] Search and Tags NPE when empty
 

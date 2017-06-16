@@ -5,6 +5,7 @@ import android.os.Bundle;
 import android.speech.RecognizerIntent;
 import android.support.v4.content.ContextCompat;
 import android.support.v7.app.AppCompatActivity;
+import android.util.Log;
 import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
@@ -27,6 +28,7 @@ import com.adalbero.app.lebenindeutschland.data.result.ResultInfo;
 import com.adalbero.app.lebenindeutschland.ui.common.ProgressView;
 import com.adalbero.app.lebenindeutschland.ui.common.ResultCallback;
 import com.google.firebase.analytics.FirebaseAnalytics;
+import com.google.firebase.crash.FirebaseCrash;
 
 import java.util.List;
 
@@ -40,7 +42,7 @@ public class QuestionActivity extends AppCompatActivity implements ResultCallbac
 
     private List<String> mQuestionList;
     private QuestionViewHolder mQuestionViewHolder;
-
+    private String mExamName;
     private TextView mResultView;
 
     private ImageButton mBtnPrev;
@@ -59,6 +61,7 @@ public class QuestionActivity extends AppCompatActivity implements ResultCallbac
 
         Exam exam = AppController.getCurrentExam();
         mQuestionList = exam.getQuestionList();
+        mExamName = exam.getTitle(false);
 
         mResult = new ExamResult();
         Analytics.setLogResult(!mResult.getResult().isFinished());
@@ -100,6 +103,12 @@ public class QuestionActivity extends AppCompatActivity implements ResultCallbac
 
         showView();
         mClock.start();
+    }
+
+    @Override
+    protected void onResume() {
+        super.onResume();
+        mFirebaseAnalytics.setCurrentScreen(this, "Question of: " + mExamName, null);
     }
 
     @Override
@@ -148,6 +157,8 @@ public class QuestionActivity extends AppCompatActivity implements ResultCallbac
         sendIntent.putExtra(Intent.EXTRA_TEXT, text);
         sendIntent.setType("text/plain");
         startActivity(Intent.createChooser(sendIntent, "Send to..."));
+
+        Analytics.logShare(mFirebaseAnalytics, mQuestion.getNum());
     }
 
     private void showView() {
@@ -165,6 +176,17 @@ public class QuestionActivity extends AppCompatActivity implements ResultCallbac
 
         mBtnPrev.setImageDrawable(ContextCompat.getDrawable(this, idx > 0 ? R.drawable.ic_prev : R.drawable.ic_close));
         mBtnNext.setImageDrawable(ContextCompat.getDrawable(this, idx < count - 1 ? R.drawable.ic_next : R.drawable.ic_close));
+
+        // TODO: força erro
+//        if (idx == 5) mQuestion = null;
+
+        if (mQuestion == null) {
+            String exam = AppController.getCurrentExam().getTitle(true);
+            String land = Store.getSelectedLandName();
+            String msg = String.format("Question==null  count=%d  idx=%d  num=%s  land=%s  exam=%s",
+                    count, idx, num, land, exam);
+            FirebaseCrash.logcat(Log.DEBUG, "MyApp", msg);
+        }
 
         mQuestionViewHolder.show(mQuestion);
 
@@ -232,6 +254,8 @@ public class QuestionActivity extends AppCompatActivity implements ResultCallbac
     private void doSpeak() {
         String text = mQuestion.getSharedContent();
         mVoice.speak(text);
+
+        Analytics.logFeature(mFirebaseAnalytics, "doSpeak", mQuestion.getNum());
     }
 
     private void doSpeachRecognize() {
@@ -242,7 +266,9 @@ public class QuestionActivity extends AppCompatActivity implements ResultCallbac
                         "\n☞ Teil der Antwort");
 
         if (!ok) {
-            Dialog.promptDialog(this, "Speech Recognizer not found in this device");
+            String msg = "Speech Recognizer not found in this device";
+            Dialog.promptDialog(this, msg);
+            FirebaseCrash.report(new RuntimeException(msg));
         }
     }
 
@@ -259,10 +285,13 @@ public class QuestionActivity extends AppCompatActivity implements ResultCallbac
 
             if (answer == null) {
                 mVoice.speak("Entschuldigung, ich habe dich nicht verstanden");
+                Analytics.logFeature(mFirebaseAnalytics, "Voice", spokenText + ": " + "nicht verstanden");
             } else if (answer.equals(GENAUER_BITTE)) {
                 mVoice.speak(GENAUER_BITTE);
+                Analytics.logFeature(mFirebaseAnalytics, "Voice", spokenText + ": " + GENAUER_BITTE);
             } else {
                 mQuestionViewHolder.clickAntwort(answer);
+                Analytics.logFeature(mFirebaseAnalytics, "Voice", spokenText + ": " + answer);
             }
         }
 

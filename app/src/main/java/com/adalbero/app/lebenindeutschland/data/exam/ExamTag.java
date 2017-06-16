@@ -44,9 +44,16 @@ public class ExamTag extends Exam implements ResultCallback {
     }
 
     @Override
-    public String getTitle(boolean showSize) {
+    public String getQualification() {
         String str = getTags().toString();
         str = str.substring(1, str.length() - 1);
+
+        return str;
+    }
+
+    @Override
+    public String getTitle(boolean showSize) {
+        String str = getQualification();
         return super.getTitle(showSize) + ": " + str;
     }
 

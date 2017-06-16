@@ -122,7 +122,7 @@ public class ExamActivity extends AppCompatActivity implements ResultCallback {
         invalidateOptionsMenu();
         mAdapter.notifyDataSetChanged();
 
-        Analytics.logUserProperty(mFirebaseAnalytics, Store.PREF_EXAM_INLINE, "" + inline);
+        Analytics.logFeature(mFirebaseAnalytics, Store.PREF_EXAM_INLINE, "" + inline);
     }
 
     @Override
@@ -157,6 +157,13 @@ public class ExamActivity extends AppCompatActivity implements ResultCallback {
 
         mClock.start();
     }
+
+    @Override
+    protected void onResume() {
+        super.onResume();
+        mFirebaseAnalytics.setCurrentScreen(this, "Exam: " + mExam.getTitle(true), null);
+    }
+
 
     @Override
     protected void onStop() {
@@ -238,6 +245,7 @@ public class ExamActivity extends AppCompatActivity implements ResultCallback {
     private void doSort() {
         mExam.sortQuestionList(mSortMethod);
 
+        Analytics.logFeature(mFirebaseAnalytics, "doSort", "" + mSortMethod);
         updateData();
     }
 

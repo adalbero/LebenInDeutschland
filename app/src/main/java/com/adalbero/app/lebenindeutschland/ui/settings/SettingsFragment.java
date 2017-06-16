@@ -85,6 +85,12 @@ public class SettingsFragment extends PreferenceFragment implements Preference.O
         getPreferenceScreen().removePreference(mBetaCategory);
     }
 
+    @Override
+    public void onResume() {
+        super.onResume();
+        mFirebaseAnalytics.setCurrentScreen(getActivity(), "Settings", null);
+    }
+
     private void initBundesland() {
         ListPreference listPreference = (ListPreference) findPreference(PREF_LAND);
         listPreference.setOnPreferenceChangeListener(this);
@@ -138,6 +144,7 @@ public class SettingsFragment extends PreferenceFragment implements Preference.O
                 Toast.makeText(getActivity(), "Enable Debug Mode", Toast.LENGTH_SHORT).show();
                 getPreferenceScreen().addPreference(mDebugCategory);
                 getPreferenceScreen().addPreference(mBetaCategory);
+                Analytics.logFeature(mFirebaseAnalytics, "Debug", "enable");
             } else {
                 mDebugClick++;
             }
@@ -186,7 +193,11 @@ public class SettingsFragment extends PreferenceFragment implements Preference.O
         String key = preference.getKey();
         String value = "" + obj;
 
-        Analytics.logUserProperty(mFirebaseAnalytics, key, value);
+        if (Store.PREF_LAND.equals(key)) {
+            Analytics.logBundesland(mFirebaseAnalytics, value);
+        } else if (Store.PREF_STAT_MAX.equals(key)) {
+            Analytics.logFeature(mFirebaseAnalytics, key, value);
+        }
 
         return true;
     }

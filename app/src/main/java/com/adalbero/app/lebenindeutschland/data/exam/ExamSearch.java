@@ -64,8 +64,13 @@ public class ExamSearch extends Exam {
     }
 
     @Override
+    public String getQualification() {
+        return getTermsString();
+    }
+
+    @Override
     public String getTitle(boolean showSize) {
-        String str = getTermsString();
+        String str = getQualification();
         return super.getTitle(showSize) + ": " + str;
     }
 

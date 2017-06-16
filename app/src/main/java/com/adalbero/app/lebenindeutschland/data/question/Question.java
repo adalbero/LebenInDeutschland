@@ -26,6 +26,20 @@ public class Question {
 
     private Set<String> tags;
 
+    public static final Question EMPTY_QUESTION;
+
+    static {
+        EMPTY_QUESTION = new Question();
+        EMPTY_QUESTION.setNum("0");
+        EMPTY_QUESTION.setQuestion("Question");
+        EMPTY_QUESTION.setOptions(new String[]{"A", "B", "C", "D"});
+        EMPTY_QUESTION.setAnswer(0);
+        EMPTY_QUESTION.setAreaCode("AreaCode");
+        EMPTY_QUESTION.setArea("Area");
+        EMPTY_QUESTION.setTheme("Theme");
+        EMPTY_QUESTION.setImage("-");
+    }
+
     public static Question parse(String line) {
         Question question = new Question();
         String vet[] = line.split(";");
@@ -182,11 +196,15 @@ public class Question {
     }
 
     public Set<String> getTags() {
+        if (tags == null) {
+            tags = new HashSet<>();
+        }
+
         return tags;
     }
 
     public boolean hasTag(String tag) {
-        return tags.contains(tag);
+        return getTags().contains(tag);
     }
 
     private String getKey() {

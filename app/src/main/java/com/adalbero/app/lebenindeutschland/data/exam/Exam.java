@@ -45,6 +45,10 @@ public class Exam {
         return getQuestionList().size();
     }
 
+    public String getQualification() {
+        return "";
+    }
+
     public List<String> getQuestionList() {
         if (mQuestionList == null) {
             loadQuestionList();

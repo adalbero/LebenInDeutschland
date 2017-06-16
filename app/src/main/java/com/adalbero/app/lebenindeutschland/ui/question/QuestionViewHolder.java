@@ -13,14 +13,15 @@ import android.widget.Space;
 import android.widget.TextView;
 
 import com.adalbero.app.lebenindeutschland.R;
-import com.adalbero.app.lebenindeutschland.ui.common.ResultCallback;
-import com.adalbero.app.lebenindeutschland.ui.common.StatView;
-import com.adalbero.app.lebenindeutschland.ui.common.TagDialog;
 import com.adalbero.app.lebenindeutschland.controller.AppController;
 import com.adalbero.app.lebenindeutschland.controller.Statistics;
 import com.adalbero.app.lebenindeutschland.controller.Store;
 import com.adalbero.app.lebenindeutschland.data.question.Question;
 import com.adalbero.app.lebenindeutschland.data.result.ExamResult;
+import com.adalbero.app.lebenindeutschland.ui.common.ResultCallback;
+import com.adalbero.app.lebenindeutschland.ui.common.StatView;
+import com.adalbero.app.lebenindeutschland.ui.common.TagDialog;
+import com.google.firebase.crash.FirebaseCrash;
 
 import java.util.Set;
 
@@ -49,8 +50,8 @@ public class QuestionViewHolder implements View.OnClickListener, ResultCallback 
     private ResultCallback mCallback;
     private boolean hasSpace;
 
-    private static int COLOR_RIGHT = AppController.getInstance().getBackgroundColor(R.color.colorRightLight);
-    private static int COLOR_WRONG = AppController.getInstance().getBackgroundColor(R.color.colorWrongLight);
+    private static int COLOR_RIGHT = AppController.getBackgroundColor(R.color.colorRightLight);
+    private static int COLOR_WRONG = AppController.getBackgroundColor(R.color.colorWrongLight);
 
     public QuestionViewHolder(View view, ExamResult result, boolean questionPage, ResultCallback callback) {
         mView = view;
@@ -104,8 +105,15 @@ public class QuestionViewHolder implements View.OnClickListener, ResultCallback 
 
 
     public View show(Question question) {
-        mQuestion = question;
         // TODO: question null?
+        if (question == null) {
+            FirebaseCrash.report(new NullPointerException("Question==null"));
+
+            question = Question.EMPTY_QUESTION;
+        }
+
+        mQuestion = question;
+
         boolean inline = Store.getExamInline();
 
         if (mViewHeader != null) {
@@ -129,7 +137,7 @@ public class QuestionViewHolder implements View.OnClickListener, ResultCallback 
         }
 
         if (mViewStatus != null) {
-            String num = question.getNum();
+            String num = mQuestion.getNum();
             int color = mResult.getStatusColor(num);
             mViewStatus.setBackgroundColor(color);
         }

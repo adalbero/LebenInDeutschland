@@ -64,7 +64,7 @@ public class QuestionComparator implements Comparator<String> {
             return r1 - r2;
 
         // if 0 less answerd is better, if > 0 more answerd is better
-        if (r1 == 0)
+        if (r1 != 0)
             inv = -1;
 
         r1 = stat1.getNumAnswered();

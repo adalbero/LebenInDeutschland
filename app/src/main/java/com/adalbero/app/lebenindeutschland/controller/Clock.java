@@ -63,12 +63,8 @@ public class Clock {
         }
     }
 
-    public int getTime() {
-        return (int) (1000 * mTime);
-    }
-
-    public String getTimeString() {
-        return format(mTime);
+    public int getExamDuration() {
+        return 60 * 60 - mTime;
     }
 
     private String format(int timeInSec) {

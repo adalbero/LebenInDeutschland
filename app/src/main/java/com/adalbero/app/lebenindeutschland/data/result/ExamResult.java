@@ -61,14 +61,19 @@ public class ExamResult {
 
     public void setAnswer(String num, String answer) {
         int idx = getExam().getQuestionIdx(num);
-        getAnswerList().set(idx, answer);
-        saveAnserList();
+        if (idx >= 0) {
+            getAnswerList().set(idx, answer);
+            saveAnserList();
+        }
     }
 
     public String getAnswer(String num) {
         int idx = getExam().getQuestionIdx(num);
-        if (idx < 0) return null;
-        return getAnswerList().get(idx);
+        if (idx >= 0) {
+            return getAnswerList().get(idx);
+        } else {
+            return null;
+        }
     }
 
     public int getCount() {
