@@ -19,9 +19,9 @@
     <PreferenceCategory android:title="Statistics">
 
         <ListPreference
+            android:defaultValue="5"
             android:key="pref.stat.max"
             android:summary="%s"
-            android:defaultValue="5"
             android:title="Statistics History" />
 
         <Preference
@@ -55,6 +55,10 @@
         android:key="debug.category"
         android:title="Debug">
 
+        <EditTextPreference
+            android:key="debug.userid"
+            android:summary="Identifies the debug session id"
+            android:title="Debug ID" />
         <Preference
             android:key="debug.dump"
             android:summary="Dump variabels in console"

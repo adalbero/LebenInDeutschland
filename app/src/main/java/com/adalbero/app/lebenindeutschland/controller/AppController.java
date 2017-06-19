@@ -150,7 +150,7 @@ public class AppController extends Application {
         String ADS_APP_ID = "ca-app-pub-5723913637413365~4650789131";
         String DEVICE_NEXUS_5X = "4218740A6FE03A56FFF5F7EA8E178378";
 
-        AdView adView = (AdView) activity.findViewById(R.id.adView);
+        AdView adView = activity.findViewById(R.id.adView);
 
         if (adView == null) return;
 

@@ -13,6 +13,7 @@ import android.widget.Space;
 import android.widget.TextView;
 
 import com.adalbero.app.lebenindeutschland.R;
+import com.adalbero.app.lebenindeutschland.controller.Analytics;
 import com.adalbero.app.lebenindeutschland.controller.AppController;
 import com.adalbero.app.lebenindeutschland.controller.Statistics;
 import com.adalbero.app.lebenindeutschland.controller.Store;
@@ -21,6 +22,7 @@ import com.adalbero.app.lebenindeutschland.data.result.ExamResult;
 import com.adalbero.app.lebenindeutschland.ui.common.ResultCallback;
 import com.adalbero.app.lebenindeutschland.ui.common.StatView;
 import com.adalbero.app.lebenindeutschland.ui.common.TagDialog;
+import com.google.firebase.analytics.FirebaseAnalytics;
 import com.google.firebase.crash.FirebaseCrash;
 
 import java.util.Set;
@@ -30,6 +32,8 @@ import java.util.Set;
  */
 
 public class QuestionViewHolder implements View.OnClickListener, ResultCallback {
+    private FirebaseAnalytics mFirebaseAnalytics;
+
     private View mView;
     private Question mQuestion;
     private ExamResult mResult;
@@ -54,6 +58,8 @@ public class QuestionViewHolder implements View.OnClickListener, ResultCallback 
     private static int COLOR_WRONG = AppController.getBackgroundColor(R.color.colorWrongLight);
 
     public QuestionViewHolder(View view, ExamResult result, boolean questionPage, ResultCallback callback) {
+        mFirebaseAnalytics = FirebaseAnalytics.getInstance(view.getContext());
+
         mView = view;
         mResult = result;
         mQuestionPage = questionPage;
@@ -263,6 +269,9 @@ public class QuestionViewHolder implements View.OnClickListener, ResultCallback 
         QuestionStatDialog dialog = new QuestionStatDialog();
         dialog.setQuestion(mQuestion);
         dialog.show(activity.getFragmentManager(), "stat");
+
+        Analytics.logFeature(mFirebaseAnalytics, "Question Stat", mQuestion.getNum());
+
     }
 
     public void clickAntwort(String antwort) {
@@ -290,9 +299,12 @@ public class QuestionViewHolder implements View.OnClickListener, ResultCallback 
     @Override
     public void onClick(View v) {
         String answer = (String) v.getTag();
+        String num = mQuestion.getNum();
 
-        mResult.setAnswer(mQuestion.getNum(), answer);
+        mResult.setAnswer(num, answer);
         mStats.addAnswer(mQuestion, answer);
+
+        Analytics.logQuestionAnswer(mFirebaseAnalytics, mResult, num);
 
         showResult();
     }
@@ -303,6 +315,9 @@ public class QuestionViewHolder implements View.OnClickListener, ResultCallback 
             TagDialog dialog = (TagDialog) parent;
             Set<String> tags = dialog.getSelected();
             mQuestion.setTags(tags);
+
+            Analytics.logQuestionTagged(mFirebaseAnalytics, mQuestion);
+
             show(mQuestion);
         }
     }

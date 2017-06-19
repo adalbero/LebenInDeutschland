@@ -30,6 +30,7 @@ import com.google.firebase.analytics.FirebaseAnalytics;
 
 import java.util.ArrayList;
 import java.util.List;
+import java.util.Map;
 
 public class ExamActivity extends AppCompatActivity implements ResultCallback {
 
@@ -61,7 +62,6 @@ public class ExamActivity extends AppCompatActivity implements ResultCallback {
         getSupportActionBar().setTitle(title);
 
         mResult = new ExamResult();
-        Analytics.setLogResult(!mResult.getResult().isFinished());
 
         updateData();
         mAdapter = new QuestionItemAdapter(this, mData, mResult, this);
@@ -226,7 +226,7 @@ public class ExamActivity extends AppCompatActivity implements ResultCallback {
 
             mResultView.setVisibility(View.VISIBLE);
 
-            Analytics.logTestResult(mFirebaseAnalytics, mClock, mResult);
+            Analytics.logExamFinish(mFirebaseAnalytics, mClock, mResult);
         }
     }
 
@@ -243,10 +243,24 @@ public class ExamActivity extends AppCompatActivity implements ResultCallback {
     }
 
     private void doSort() {
+        Map<String, String> answerMap = mResult.getAnswerMap();
         mExam.sortQuestionList(mSortMethod);
+        mResult.setAnswerMap(answerMap);
 
-        Analytics.logFeature(mFirebaseAnalytics, "doSort", "" + mSortMethod);
+        Analytics.logFeature(mFirebaseAnalytics, "Sort", getSortMethodText(mSortMethod));
         updateData();
+    }
+
+    public String getSortMethodText(int sortMethod) {
+        if (sortMethod == 0) {
+            return "sort by question shuffle";
+        } else if (Math.abs(sortMethod) == 1) {
+            return "sort by question number " + (sortMethod > 0 ? "ascending" : "descending");
+        } else if (Math.abs(sortMethod) == 2) {
+            return "sort by question rating " + (sortMethod > 0 ? "ascending" : "descending");
+        } else {
+            return "sort by " + sortMethod;
+        }
     }
 
     @Override
@@ -268,6 +282,8 @@ public class ExamActivity extends AppCompatActivity implements ResultCallback {
         ExamStatDialog dialog = new ExamStatDialog();
         dialog.setExamp(mExam);
         dialog.show(this.getFragmentManager(), "stat");
+
+        Analytics.logFeature(mFirebaseAnalytics, "Exam Stat", mExam.getName());
     }
 
 

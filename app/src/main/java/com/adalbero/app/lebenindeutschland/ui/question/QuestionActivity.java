@@ -64,7 +64,6 @@ public class QuestionActivity extends AppCompatActivity implements ResultCallbac
         mExamName = exam.getTitle(false);
 
         mResult = new ExamResult();
-        Analytics.setLogResult(!mResult.getResult().isFinished());
 
         mBtnPrev = (ImageButton) findViewById(R.id.btn_prev);
         mBtnPrev.setOnClickListener(new View.OnClickListener() {
@@ -158,7 +157,7 @@ public class QuestionActivity extends AppCompatActivity implements ResultCallbac
         sendIntent.setType("text/plain");
         startActivity(Intent.createChooser(sendIntent, "Send to..."));
 
-        Analytics.logShare(mFirebaseAnalytics, mQuestion.getNum());
+        Analytics.logFeature(mFirebaseAnalytics, "Share", mQuestion.getNum());
     }
 
     private void showView() {
@@ -212,7 +211,7 @@ public class QuestionActivity extends AppCompatActivity implements ResultCallbac
             }
             mResultView.setVisibility(View.VISIBLE);
 
-            Analytics.logTestResult(mFirebaseAnalytics, mClock, mResult);
+            Analytics.logExamFinish(mFirebaseAnalytics, mClock, mResult);
         }
 
     }
@@ -255,7 +254,7 @@ public class QuestionActivity extends AppCompatActivity implements ResultCallbac
         String text = mQuestion.getSharedContent();
         mVoice.speak(text);
 
-        Analytics.logFeature(mFirebaseAnalytics, "doSpeak", mQuestion.getNum());
+        Analytics.logFeature(mFirebaseAnalytics, "Speek", mQuestion.getNum());
     }
 
     private void doSpeachRecognize() {

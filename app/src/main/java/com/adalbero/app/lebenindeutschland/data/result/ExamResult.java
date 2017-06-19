@@ -7,9 +7,12 @@ import com.adalbero.app.lebenindeutschland.controller.AppController;
 import com.adalbero.app.lebenindeutschland.controller.Store;
 import com.adalbero.app.lebenindeutschland.data.exam.Exam;
 import com.adalbero.app.lebenindeutschland.data.question.Question;
+import com.google.firebase.crash.FirebaseCrash;
 
 import java.util.Arrays;
+import java.util.HashMap;
 import java.util.List;
+import java.util.Map;
 
 import static com.adalbero.app.lebenindeutschland.controller.AppController.getQuestionDB;
 
@@ -24,7 +27,15 @@ public class ExamResult {
     private Exam mExam;
 
     public ExamResult() {
-//        getAnswerList();
+        Store.setInt(Store.KEY_RESULT_LOGGED, getResult().isFinished() ? 1 : 0);
+    }
+
+    public boolean isResultLooged() {
+        return Store.getInt(Store.KEY_RESULT_LOGGED, 0) == 1;
+    }
+
+    public void setResultLogged() {
+        Store.setInt(Store.KEY_RESULT_LOGGED, 1);
     }
 
     public Exam getExam() {
@@ -48,6 +59,33 @@ public class ExamResult {
         }
 
         return mAnswerList;
+    }
+
+    public Map<String, String> getAnswerMap() {
+        Map<String, String> answerMap = new HashMap<>();
+        List<String> answerList = getAnswerList();
+        List<String> questionList = getExam().getQuestionList();
+
+        for (int i = 0; i < questionList.size(); i++) {
+            String num = questionList.get(i);
+            answerMap.put(num, answerList.get(i));
+        }
+
+        return answerMap;
+    }
+
+    public void setAnswerMap(Map<String, String> answerMap) {
+        List<String> questionList = getExam().getQuestionList();
+        String answers[] = new String[questionList.size()];
+        mAnswerList = Arrays.asList(answers);
+
+        for (int i = 0; i < questionList.size(); i++) {
+            String num = questionList.get(i);
+            String answer = answerMap.get(num);
+            mAnswerList.set(i, answer);
+        }
+
+        saveAnserList();
     }
 
     public void reset() {
@@ -83,6 +121,7 @@ public class ExamResult {
     public ResultInfo getResult() {
         Exam exam = getExam();
         List<String> answerList = getAnswerList();
+        List<String> questionList = exam.getQuestionList();
 
         ResultInfo result = new ResultInfo();
         result.total = getCount();
@@ -93,11 +132,18 @@ public class ExamResult {
 
                 String answer = answerList.get(i);
                 if (answer != null) {
-                    String num = exam.getQuestionList().get(i);
-                    Question q = getQuestionDB().getQuestion(num);
-                    if (q != null) {
-                        if (answer.charAt(0) - 'a' == q.getAnswer())
-                            result.right++;
+                    try {
+                        String num = questionList.get(i);
+                        Question q = getQuestionDB().getQuestion(num);
+                        if (q != null) {
+                            if (answer.charAt(0) - 'a' == q.getAnswer())
+                                result.right++;
+                        }
+                    } catch (IndexOutOfBoundsException ex) {
+                        FirebaseCrash.log("Exam: " + exam.getTitle(true));
+                        FirebaseCrash.log("answerList=" + answerList.toString());
+                        FirebaseCrash.log("answerList=" + answerList.toString());
+                        FirebaseCrash.report(ex);
                     }
                 }
             }

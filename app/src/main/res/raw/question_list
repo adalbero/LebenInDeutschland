@@ -115,7 +115,7 @@ num;question;a;b;c;d;solution;area_code;area;thema;image
 114;An demokratischen Wahlen in Deutschland teilzunehmen ist ...;eine Pflicht.;ein Recht.;ein Zwang.;eine Last.;b;politik;Politik in der Demokratie;Wahlen und Beteiligung;-
 115;Was bedeutet „aktives Wahlrecht“ in Deutschland?;Man kann gewählt werden.;Man muss wählen gehen.;Man kann wählen.;Man muss zur Auszählung der Stimmen gehen.;c;politik;Politik in der Demokratie;Wahlen und Beteiligung;-
 116;Wenn Sie bei einer Bundestagswahl in Deutschland wählen dürfen, heißt das ...;aktive Wahlkampagne.;aktives Wahlverfahren.;aktiver Wahlkampf.;aktives Wahlrecht.;d;politik;Politik in der Demokratie;Wahlen und Beteiligung;-
-17;Wie viel Prozent der Zweitstimmen müssen Parteien mindestens bekommen, um in den Deutschen Bundestag gewählt zu werden?;0,03;0,04;0,05;0,06;c;politik;Politik in der Demokratie;Wahlen und Beteiligung;-
+117;Wie viel Prozent der Zweitstimmen müssen Parteien mindestens bekommen, um in den Deutschen Bundestag gewählt zu werden?;3%;4%;5%;6%;c;politik;Politik in der Demokratie;Wahlen und Beteiligung;-
 118;Was regelt das Wahlrecht in Deutschland?;Wer wählen darf, muss wählen.;Alle die wollen, können wählen.;Wer nicht wählt, verliert das Recht zu wählen.;Wer wählen darf, kann wählen.;d;politik;Politik in der Demokratie;Wahlen und Beteiligung;-
 119;Wahlen in Deutschland sind frei. Was bedeutet das?;Alle verurteilten Straftäter / Straftäterinnen dürfen nicht wählen.;Wenn ich wählen gehen möchte, muss mein Arbeitgeber / meine Arbeitgeberin mir frei geben.;Jede Person kann ohne Zwang entscheiden, ob sie wählen möchte und wen sie wählen möchte.;Ich kann frei entscheiden, wo ich wählen gehen möchte.;c;politik;Politik in der Demokratie;Wahlen und Beteiligung;-
 120;Das Wahlsystem in Deutschland ist ein ...;Zensuswahlrecht.;Dreiklassenwahlrecht.;Mehrheits- und Verhältniswahlrecht.;allgemeines Männerwahlrecht.;c;politik;Politik in der Demokratie;Wahlen und Beteiligung;-
@@ -416,7 +416,7 @@ SH-4;Ab welchem Alter darf man in Schleswig-Holstein bei Kommunalwahlen wählen?
 SH-5;Welche Farben hat die Landesflagge von Schleswig-Holstein?;weiß-blau;blau-weiß-rot;weiß-rot;grün-weiß-rot;b;land;Bundesland;Schleswig-Holstein;-
 SH-6;Wo können Sie sich in Schleswig-Holstein über politische Themen informieren?;bei der Verbraucherzentrale;beim Ordnungsamt der Gemeinde;bei der Landeszentrale für politische Bildung;bei den Kirchen;c;land;Bundesland;Schleswig-Holstein;-
 SH-7;Die Landeshauptstadt von Schleswig-Holstein heißt …;Husum.;Flensburg.;Lübeck.;Kiel.;d;land;Bundesland;Schleswig-Holstein;-
-SH-8;Welches Bundesland ist Schleswig-Holstein?;1;2;3;4;a;land;Bundesland;Schleswig-Holstein;frage_he_8
+SH-8;Welches Bundesland ist Schleswig-Holstein?;1;2;3;4;a;land;Bundesland;Schleswig-Holstein;frage_sh_8
 SH-9;Wie nennt man den Regierungschef / die Regierungschefin in Schleswig-Holstein?;Erster Minister / Erste Ministerin;Premierminister / Premierministerin;Bürgermeister / Bürgermeisterin;Ministerpräsident / Ministerpräsidentin;d;land;Bundesland;Schleswig-Holstein;-
 SH-10;Welchen Minister / welche Ministerin hat Schleswig-Holstein nicht?;Justizminister / Justizministerin;Außenminister / Außenministerin;Finanzminister / Finanzministerin;Innenminister / Innenministerin;b;land;Bundesland;Schleswig-Holstein;-
 SL-1;Welches Wappen gehört zum Bundesland Saarland?;1;2;3;4;d;land;Bundesland;Saarland;frage_sl_1

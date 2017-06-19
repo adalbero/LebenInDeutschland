@@ -32,8 +32,6 @@ public class MainActivity extends AppCompatActivity implements ResultCallback {
     private ExamItemAdapter mAdapter;
     private ListView mListView;
 
-    private static boolean newSession = true;
-
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -57,12 +55,7 @@ public class MainActivity extends AppCompatActivity implements ResultCallback {
 
         AppController.initAdView(this);
 
-        if (newSession) {
-            String land = Store.getString(Store.PREF_LAND, "NO_LAND");
-            Analytics.logBundesland(mFirebaseAnalytics, land);
-
-            newSession = false;
-        }
+        Analytics.init(mFirebaseAnalytics);
     }
 
     private void onItemSelected(int position) {
@@ -74,8 +67,6 @@ public class MainActivity extends AppCompatActivity implements ResultCallback {
         AppController.setExamIdx(position);
 
         if (exam.onPrompt(this, this)) {
-            String terms = exam.getName() + ":" + exam.getQualification();
-            Analytics.logSearch(mFirebaseAnalytics, terms);
             return;
         }
 
@@ -152,12 +143,18 @@ public class MainActivity extends AppCompatActivity implements ResultCallback {
         Intent intent = new Intent(this, ExamActivity.class);
         this.startActivity(intent);
 
-        Analytics.logViewExam(mFirebaseAnalytics, exam.getName());
+        Analytics.logExamView(mFirebaseAnalytics, exam);
     }
 
     @Override
     public void onResult(Object parent, Object param) {
-        String name = (String)param;
+        String name = (String) param;
+
+        if (parent instanceof Exam) {
+            Exam exam = (Exam) parent;
+            Analytics.logSearch(mFirebaseAnalytics, exam);
+        }
+
         goExam(name);
     }
 

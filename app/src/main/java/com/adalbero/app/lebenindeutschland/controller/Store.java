@@ -17,12 +17,16 @@ import java.util.TreeSet;
 public class Store {
     public static final String KEY_EXAM_NAME = "exam.name";
     public static final String KEY_QUESTION_IDX = "exam.question.idx";
+    public static final String KEY_RESULT_LOGGED = "exam.result.logged";
 
     public static final String PREF_EXAM_INLINE = "pref.inline.mode";
     public static final String PREF_LAND = "pref.land";
     public static final String PREF_VERSION = "pref.version";
     public static final String PREF_STAT_MAX = "pref.stat.max";
     public static final String PREF_REMOVE_STAT = "pref.remove.stat";
+
+    public static final String DEBUG_ANALYTICS_VER = "debug.analytics.ver";
+    public static final String DEBUG_USERID = "debug.userid";
 
     public static void remove(String key) {
         getPreferences().edit().remove(key).commit();
