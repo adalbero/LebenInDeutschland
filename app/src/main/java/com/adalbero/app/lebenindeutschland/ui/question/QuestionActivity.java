@@ -254,7 +254,7 @@ public class QuestionActivity extends AppCompatActivity implements ResultCallbac
         String text = mQuestion.getSharedContent();
         mVoice.speak(text);
 
-        Analytics.logFeature(mFirebaseAnalytics, "Speek", mQuestion.getNum());
+        Analytics.logFeature(mFirebaseAnalytics, "Speak", mQuestion.getNum());
     }
 
     private void doSpeachRecognize() {

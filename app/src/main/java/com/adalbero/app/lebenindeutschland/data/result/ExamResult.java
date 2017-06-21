@@ -1,6 +1,7 @@
 package com.adalbero.app.lebenindeutschland.data.result;
 
 import android.support.v4.content.ContextCompat;
+import android.util.Log;
 
 import com.adalbero.app.lebenindeutschland.R;
 import com.adalbero.app.lebenindeutschland.controller.AppController;
@@ -140,9 +141,9 @@ public class ExamResult {
                                 result.right++;
                         }
                     } catch (IndexOutOfBoundsException ex) {
-                        FirebaseCrash.log("Exam: " + exam.getTitle(true));
-                        FirebaseCrash.log("answerList=" + answerList.toString());
-                        FirebaseCrash.log("answerList=" + answerList.toString());
+                        FirebaseCrash.logcat(Log.DEBUG, "MyApp", "Exam: " + exam.getTitle(true));
+                        FirebaseCrash.logcat(Log.DEBUG, "MyApp", "questionList=" + questionList.toString());
+                        FirebaseCrash.logcat(Log.DEBUG, "MyApp", "answerList=" + answerList.toString());
                         FirebaseCrash.report(ex);
                     }
                 }

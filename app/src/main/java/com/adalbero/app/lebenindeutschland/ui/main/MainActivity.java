@@ -63,6 +63,7 @@ public class MainActivity extends AppCompatActivity implements ResultCallback {
 
         if (exam instanceof ExamHeader) return;
 
+        // Todo: limpar aqui ou onStart?
         Store.resetExam();
         AppController.setExamIdx(position);
 

@@ -122,7 +122,7 @@ public class ExamActivity extends AppCompatActivity implements ResultCallback {
         invalidateOptionsMenu();
         mAdapter.notifyDataSetChanged();
 
-        Analytics.logFeature(mFirebaseAnalytics, Store.PREF_EXAM_INLINE, "" + inline);
+        Analytics.logFeature(mFirebaseAnalytics, "Inline Mode", "" + inline);
     }
 
     @Override

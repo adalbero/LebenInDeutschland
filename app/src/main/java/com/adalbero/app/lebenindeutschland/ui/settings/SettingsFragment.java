@@ -196,7 +196,7 @@ public class SettingsFragment extends PreferenceFragment implements Preference.O
         if (Store.PREF_LAND.equals(key)) {
             Analytics.logBundesland(mFirebaseAnalytics, value);
         } else if (Store.PREF_STAT_MAX.equals(key)) {
-            Analytics.logFeature(mFirebaseAnalytics, key, value);
+            Analytics.logFeature(mFirebaseAnalytics, "Stat History", value);
         } else if (Store.DEBUG_USERID.equals(key)) {
             Analytics.logUserId(mFirebaseAnalytics, value);
         }

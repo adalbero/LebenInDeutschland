@@ -1,7 +1,6 @@
 package com.adalbero.app.lebenindeutschland.controller;
 
 import android.os.Bundle;
-import android.util.Log;
 
 import com.adalbero.app.lebenindeutschland.data.exam.Exam;
 import com.adalbero.app.lebenindeutschland.data.question.Question;
@@ -48,11 +47,11 @@ public class Analytics {
 
         setUserProperty(firebaseAnalytics, "lid_land", value);
 
-        logFeature(firebaseAnalytics, "lid_land", value);
+        logFeature(firebaseAnalytics, "Land", value);
     }
 
     public static void logFeature(FirebaseAnalytics firebaseAnalytics, String name, String value) {
-        value = name + ":" + value;
+        //value = name + ":" + value;
 
         Bundle bundle = new Bundle();
         bundle.putString("lid_feature_name", name);
@@ -72,7 +71,6 @@ public class Analytics {
     }
 
     public static void logExamFinish(FirebaseAnalytics firebaseAnalytics, Clock mClock, ExamResult result) {
-        Log.d("MyApp", "Analytics.logExamFinish: try to log: is logged" + result.isResultLooged());
         if (result.isResultLooged()) return;
 
         ResultInfo resultInfo = result.getResult();
@@ -85,7 +83,6 @@ public class Analytics {
 
         firebaseAnalytics.logEvent("lid_exam_finish", bundle);
 
-        Log.d("MyApp", "Analytics.logExamFinish: result logged");
         result.setResultLogged();
     }
 
@@ -100,6 +97,8 @@ public class Analytics {
         bundle.putInt("lid_search_count", count);
 
         firebaseAnalytics.logEvent("lid_search", bundle);
+
+        logFeature(firebaseAnalytics, examName, terms);
     }
 
     public static void logQuestionAnswer(FirebaseAnalytics firebaseAnalytics, ExamResult result, String num) {
@@ -126,6 +125,8 @@ public class Analytics {
         bundle.putString("lid_question_tags", tags);
 
         firebaseAnalytics.logEvent("lid_question_tagged", bundle);
+
+        logFeature(firebaseAnalytics, "Question Tagged", tags);
 
     }
 
