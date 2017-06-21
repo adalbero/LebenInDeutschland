@@ -4,12 +4,12 @@ import android.app.Activity;
 import android.graphics.drawable.Drawable;
 
 import com.adalbero.app.lebenindeutschland.R;
-import com.adalbero.app.lebenindeutschland.ui.common.ResultCallback;
 import com.adalbero.app.lebenindeutschland.controller.AppController;
 import com.adalbero.app.lebenindeutschland.controller.Store;
 import com.adalbero.app.lebenindeutschland.data.question.Question;
 import com.adalbero.app.lebenindeutschland.data.question.QuestionComparator;
 import com.adalbero.app.lebenindeutschland.data.question.QuestionDB;
+import com.adalbero.app.lebenindeutschland.ui.common.ResultCallback;
 
 import java.util.ArrayList;
 import java.util.Collections;
@@ -123,7 +123,11 @@ public class Exam {
     }
 
     protected String getParamKey(String key) {
-        return "exam." + getName() + "." + key;
+        String name = getName();
+        name = name.replaceAll(" ", "");
+        name = name.toLowerCase();
+
+        return "exam." + name + "." + key;
     }
 
     public int getQuestionIdx(String num) {

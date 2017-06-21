@@ -67,7 +67,9 @@ public class ExamResult {
         List<String> answerList = getAnswerList();
         List<String> questionList = getExam().getQuestionList();
 
-        for (int i = 0; i < questionList.size(); i++) {
+        int n = Math.min(questionList.size(), answerList.size());
+
+        for (int i = 0; i < n; i++) {
             String num = questionList.get(i);
             answerMap.put(num, answerList.get(i));
         }
@@ -108,8 +110,10 @@ public class ExamResult {
 
     public String getAnswer(String num) {
         int idx = getExam().getQuestionIdx(num);
-        if (idx >= 0) {
-            return getAnswerList().get(idx);
+        List<String> answerList = getAnswerList();
+
+        if (idx >= 0 && idx < answerList.size()) {
+            return answerList.get(idx);
         } else {
             return null;
         }
@@ -127,24 +131,27 @@ public class ExamResult {
         ResultInfo result = new ResultInfo();
         result.total = getCount();
 
-        for (int i = 0; i < answerList.size(); i++) {
+        if (answerList.size() != questionList.size()) {
+            FirebaseCrash.logcat(Log.DEBUG, "MyApp", "Exam: " + exam.getTitle(true));
+            FirebaseCrash.logcat(Log.DEBUG, "MyApp", "questionList=" + questionList.toString());
+            FirebaseCrash.logcat(Log.DEBUG, "MyApp", "answerList=" + answerList.toString());
+
+            FirebaseCrash.report(new IndexOutOfBoundsException("questionList != answerList"));
+        }
+
+        int n = Math.min(questionList.size(), answerList.size());
+
+        for (int i = 0; i < n; i++) {
             if (answerList.get(i) != null) {
                 result.answered++;
 
                 String answer = answerList.get(i);
                 if (answer != null) {
-                    try {
-                        String num = questionList.get(i);
-                        Question q = getQuestionDB().getQuestion(num);
-                        if (q != null) {
-                            if (answer.charAt(0) - 'a' == q.getAnswer())
-                                result.right++;
-                        }
-                    } catch (IndexOutOfBoundsException ex) {
-                        FirebaseCrash.logcat(Log.DEBUG, "MyApp", "Exam: " + exam.getTitle(true));
-                        FirebaseCrash.logcat(Log.DEBUG, "MyApp", "questionList=" + questionList.toString());
-                        FirebaseCrash.logcat(Log.DEBUG, "MyApp", "answerList=" + answerList.toString());
-                        FirebaseCrash.report(ex);
+                    String num = questionList.get(i);
+                    Question q = getQuestionDB().getQuestion(num);
+                    if (q != null) {
+                        if (answer.charAt(0) - 'a' == q.getAnswer())
+                            result.right++;
                     }
                 }
             }
