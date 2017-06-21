@@ -155,7 +155,7 @@ public class QuestionActivity extends AppCompatActivity implements ResultCallbac
         sendIntent.setAction(Intent.ACTION_SEND);
         sendIntent.putExtra(Intent.EXTRA_TEXT, text);
         sendIntent.setType("text/plain");
-        startActivity(Intent.createChooser(sendIntent, "Send to..."));
+        startActivity(Intent.createChooser(sendIntent, "Select Google Translator"));
 
         Analytics.logFeature(mFirebaseAnalytics, "Share", mQuestion.getNum());
     }

@@ -17,7 +17,7 @@
     <item
         android:id="@+id/menu_share"
         android:title="Share"
-        android:icon="@drawable/ic_share"
+        android:icon="@drawable/ic_translate"
         app:showAsAction="always" />
 
 </menu>
