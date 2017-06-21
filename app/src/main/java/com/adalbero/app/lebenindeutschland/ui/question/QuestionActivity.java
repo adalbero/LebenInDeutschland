@@ -1,6 +1,8 @@
 package com.adalbero.app.lebenindeutschland.ui.question;
 
+import android.content.ComponentName;
 import android.content.Intent;
+import android.content.pm.ResolveInfo;
 import android.os.Bundle;
 import android.speech.RecognizerIntent;
 import android.support.v4.content.ContextCompat;
@@ -142,22 +144,11 @@ public class QuestionActivity extends AppCompatActivity implements ResultCallbac
                 doSpeachRecognize();
                 return true;
             case R.id.menu_share:
-                goShare();
+                goTranslate();
                 return true;
             default:
                 return super.onOptionsItemSelected(item);
         }
-    }
-
-    private void goShare() {
-        String text = mQuestion.getSharedContent();
-        Intent sendIntent = new Intent();
-        sendIntent.setAction(Intent.ACTION_SEND);
-        sendIntent.putExtra(Intent.EXTRA_TEXT, text);
-        sendIntent.setType("text/plain");
-        startActivity(Intent.createChooser(sendIntent, "Select Google Translator"));
-
-        Analytics.logFeature(mFirebaseAnalytics, "Share", mQuestion.getNum());
     }
 
     private void showView() {
@@ -255,6 +246,44 @@ public class QuestionActivity extends AppCompatActivity implements ResultCallbac
         mVoice.speak(text);
 
         Analytics.logFeature(mFirebaseAnalytics, "Speak", mQuestion.getNum());
+    }
+
+    private void goTranslate() {
+        final String GOOGLE_TRANSLATOR = "com.google.android.apps.translate";
+
+        Intent sendIntent = new Intent();
+
+        String text = mQuestion.getSharedContent();
+        String num = mQuestion.getNum();
+
+        sendIntent.setAction(Intent.ACTION_SEND);
+        sendIntent.putExtra(Intent.EXTRA_TEXT, text);
+        sendIntent.setType("text/plain");
+
+        if (setComponent(sendIntent, GOOGLE_TRANSLATOR)) {
+            startActivity(Intent.createChooser(sendIntent, "Select Google Translator"));
+        } else {
+            Dialog.appNotFoundDialog(this, "Google Translator", GOOGLE_TRANSLATOR);
+            num = "App not found";
+        }
+
+        Analytics.logFeature(mFirebaseAnalytics, "Translate", num);
+    }
+
+    private boolean setComponent(Intent intent, String app) {
+        List<ResolveInfo> intentList = getPackageManager().queryIntentActivities(intent, 0);
+
+        for (ResolveInfo ri : intentList) {
+            String packageName = ri.activityInfo.packageName;
+            String activityName = ri.activityInfo.name;
+
+            if (packageName.equals(app)) {
+                intent.setComponent(new ComponentName(packageName, activityName));
+                return true;
+            }
+        }
+
+        return false;
     }
 
     private void doSpeachRecognize() {

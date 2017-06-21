@@ -181,6 +181,8 @@ public class SettingsFragment extends PreferenceFragment implements Preference.O
                         Debug.removeStat();
                         Statistics.getInstance().update();
                         Toast.makeText(context, "Statistics removed", Toast.LENGTH_SHORT).show();
+
+                        Analytics.logFeature(mFirebaseAnalytics, "Clear Stat", "Stats removed");
                     }
                 })
                 .setNegativeButton("No", null);

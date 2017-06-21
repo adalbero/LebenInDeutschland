@@ -47,7 +47,7 @@ public class Analytics {
 
         setUserProperty(firebaseAnalytics, "lid_land", value);
 
-        logFeature(firebaseAnalytics, "Land", value);
+        logFeature(firebaseAnalytics, "Select Land", value);
     }
 
     public static void logFeature(FirebaseAnalytics firebaseAnalytics, String name, String value) {

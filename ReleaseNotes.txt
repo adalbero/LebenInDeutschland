@@ -1,3 +1,8 @@
+Ver 1.3.5 (10) - 21/06/2017
+- [Fix] IndexOutOfBounds em ExamResult
+- [Upd] Replace Share with direct Google Translate
+- [Upd] Analytics: normalize custom events
+
 Ver 1.3.4 (9) - 19/06/2017
 - [Fix] NPE View Question: Question 117 fixed
 - [Fix] Sort list with old answers
