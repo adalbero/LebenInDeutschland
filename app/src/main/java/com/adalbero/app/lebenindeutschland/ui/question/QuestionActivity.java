@@ -167,9 +167,6 @@ public class QuestionActivity extends AppCompatActivity implements ResultCallbac
         mBtnPrev.setImageDrawable(ContextCompat.getDrawable(this, idx > 0 ? R.drawable.ic_prev : R.drawable.ic_close));
         mBtnNext.setImageDrawable(ContextCompat.getDrawable(this, idx < count - 1 ? R.drawable.ic_next : R.drawable.ic_close));
 
-        // TODO: força erro
-//        if (idx == 5) mQuestion = null;
-
         if (mQuestion == null) {
             String exam = AppController.getCurrentExam().getTitle(true);
             String land = Store.getSelectedLandName();

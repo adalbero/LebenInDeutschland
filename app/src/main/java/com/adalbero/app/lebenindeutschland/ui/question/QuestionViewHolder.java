@@ -111,7 +111,6 @@ public class QuestionViewHolder implements View.OnClickListener, ResultCallback 
 
 
     public View show(Question question) {
-        // TODO: question null?
         if (question == null) {
             FirebaseCrash.report(new NullPointerException("Question==null"));
 

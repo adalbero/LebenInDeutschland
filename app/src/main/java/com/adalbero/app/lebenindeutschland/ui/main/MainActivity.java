@@ -63,8 +63,6 @@ public class MainActivity extends AppCompatActivity implements ResultCallback {
 
         if (exam instanceof ExamHeader) return;
 
-        // Todo: limpar aqui ou onStart?
-        // Store.resetExam();
         AppController.setExamIdx(position);
 
         if (exam.onPrompt(this, this)) {
@@ -116,8 +114,7 @@ public class MainActivity extends AppCompatActivity implements ResultCallback {
 
         mListView.setSelection(AppController.getExamIdx());
 
-        // Todo: reset aqui?
-        Store.resetExam();
+        Store.resetExamResult();
 
         updateData();
     }

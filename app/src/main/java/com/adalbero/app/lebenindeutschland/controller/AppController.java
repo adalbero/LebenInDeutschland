@@ -77,7 +77,6 @@ public class AppController extends Application {
         return app.mExamList;
     }
 
-    // TODO: cache examList
     public static void loadExamList() {
 
         List<Exam> examList = new ArrayList<>();

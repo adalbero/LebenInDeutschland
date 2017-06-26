@@ -128,6 +128,10 @@ public class Store {
         removeGroup("exam");
     }
 
+    public static void resetExamResult() {
+        removeGroup("exam.result");
+    }
+
     public static void setList(String key, List<String> list) {
         String str = list.toString();
         setString(key, str);

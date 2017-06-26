@@ -46,9 +46,6 @@ public class QuestionItemAdapter extends ArrayAdapter<Question> {
 
         Question question = getItem(position);
 
-        // TODO: força um erro na última questão.
-//        if (position == 3) question = null;
-
         if (question == null) {
             String examName = AppController.getCurrentExam().getTitle(true);
             String land = Store.getSelectedLandName();
