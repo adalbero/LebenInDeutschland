@@ -20,6 +20,7 @@ import com.adalbero.app.lebenindeutschland.data.question.QuestionDB;
 import com.google.android.gms.ads.AdRequest;
 import com.google.android.gms.ads.AdView;
 import com.google.android.gms.ads.MobileAds;
+import com.google.firebase.crash.FirebaseCrash;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -149,19 +150,22 @@ public class AppController extends Application {
         String ADS_APP_ID = "ca-app-pub-5723913637413365~4650789131";
         String DEVICE_NEXUS_5X = "4218740A6FE03A56FFF5F7EA8E178378";
 
-        AdView adView = activity.findViewById(R.id.adView);
+        try {
+            AdView adView = activity.findViewById(R.id.adView);
+            if (adView == null) return;
 
-        if (adView == null) return;
+            MobileAds.initialize(getInstance(), ADS_APP_ID);
 
-        MobileAds.initialize(getInstance(), ADS_APP_ID);
-
-        AdRequest adRequest = new AdRequest.Builder()
-                .addTestDevice(AdRequest.DEVICE_ID_EMULATOR)
-                .addTestDevice(DEVICE_NEXUS_5X)
-                .build();
+            AdRequest adRequest = new AdRequest.Builder()
+                    .addTestDevice(AdRequest.DEVICE_ID_EMULATOR)
+                    .addTestDevice(DEVICE_NEXUS_5X)
+                    .build();
 
 
-        adView.loadAd(adRequest);
+            adView.loadAd(adRequest);
+        } catch (Exception ex) {
+            FirebaseCrash.report(ex);
+        }
     }
 
     public static void setExamIdx(int idx) {
