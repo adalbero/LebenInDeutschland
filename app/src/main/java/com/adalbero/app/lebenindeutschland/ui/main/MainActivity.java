@@ -197,7 +197,7 @@ public class MainActivity extends AppCompatActivity implements ResultCallback {
         } else if (parent instanceof WelcomeDialog) {
             String land = (String)param;
 
-            Store.setLand(land);
+//            Store.setLand(land);
             Analytics.logBundesland(mFirebaseAnalytics, land);
 
             updateData();

@@ -43,7 +43,7 @@ public class Question {
     public static Question parse(String line) {
         Question question = new Question();
         String vet[] = line.split(";");
-        String defTags = null;
+        int len = vet.length;
 
         int idx = 0;
         try {
@@ -60,12 +60,11 @@ public class Question {
             question.setArea(vet[idx++]);
             question.setTheme(vet[idx++]);
             question.setImage(vet[idx++]);
-            defTags = vet[idx++];
+            question.loadTags(idx < len ? vet[idx++] : "");
         } catch (Exception ex) {
-            Log.e("MyApp", "Question.parse: " + ex.getMessage(), ex);
+            Log.e("MyApp", "Question.parse["+question.getNum()+"]: " + ex.getMessage(), ex);
         }
 
-        question.loadTags(defTags);
 
 //        question.autoTag();
 

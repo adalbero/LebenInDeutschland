@@ -56,7 +56,7 @@ public class SettingsFragment extends PreferenceFragment implements Preference.O
 
         addPreferencesFromResource(preferences);
 
-        initBundesland();
+//        initBundesland();
         initStatistics();
 
         Preference pref1 = findPreference(PREF_VERSION);
@@ -65,6 +65,9 @@ public class SettingsFragment extends PreferenceFragment implements Preference.O
 
         Preference prefInline = findPreference(Store.PREF_EXAM_INLINE);
         prefInline.setOnPreferenceChangeListener(this);
+
+        Preference prefLand = findPreference(Store.PREF_LAND);
+        prefLand.setOnPreferenceChangeListener(this);
 
         findPreference(Store.PREF_REMOVE_STAT).setOnPreferenceClickListener(this);
 
@@ -196,6 +199,8 @@ public class SettingsFragment extends PreferenceFragment implements Preference.O
         String value = "" + obj;
 
         if (Store.PREF_LAND.equals(key)) {
+            Preference prefLand = findPreference(Store.PREF_LAND);
+            prefLand.setSummary("" + obj);
             Analytics.logBundesland(mFirebaseAnalytics, value);
         } else if (Store.PREF_STAT_MAX.equals(key)) {
             Analytics.logFeature(mFirebaseAnalytics, "Stat History", value);
