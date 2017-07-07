@@ -16,7 +16,7 @@ import java.util.TreeSet;
  */
 
 public class ExamTag extends Exam implements ResultCallback {
-    private static final String KEY = "pref.tags";
+    public static final String KEY = "pref.tags";
 
     private Set<String> mTags;
     private ResultCallback mCallback;
@@ -80,6 +80,7 @@ public class ExamTag extends Exam implements ResultCallback {
     public void dialog(Activity activity, ResultCallback callback) {
         this.mCallback = callback;
         TagDialog dialog = new TagDialog();
+        dialog.setTitle("Search for questions with tags:");
         dialog.setTags(getTags(), this, false);
         dialog.show(activity.getFragmentManager(), "tag");
     }

@@ -43,6 +43,7 @@ public class Question {
     public static Question parse(String line) {
         Question question = new Question();
         String vet[] = line.split(";");
+        String defTags = null;
 
         int idx = 0;
         try {
@@ -59,14 +60,14 @@ public class Question {
             question.setArea(vet[idx++]);
             question.setTheme(vet[idx++]);
             question.setImage(vet[idx++]);
+            defTags = vet[idx++];
         } catch (Exception ex) {
             Log.e("MyApp", "Question.parse: " + ex.getMessage(), ex);
         }
 
-//        question.tags = new HashSet<>();
-        question.loadTags();
+        question.loadTags(defTags);
 
-        question.autoTag();
+//        question.autoTag();
 
         return question;
     }
@@ -213,9 +214,10 @@ public class Question {
         return key;
     }
 
-    public void loadTags() {
+    public void loadTags(String defTags) {
         String key = getKey();
-        String value = Store.getString(key, "");
+        String value = Store.getString(key, defTags);
+        if (value == null) value = "";
 
         tags = new HashSet<>();
         String items[] = value.split(",");

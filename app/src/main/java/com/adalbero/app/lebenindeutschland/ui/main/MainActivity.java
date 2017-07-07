@@ -16,12 +16,16 @@ import com.adalbero.app.lebenindeutschland.controller.Dialog;
 import com.adalbero.app.lebenindeutschland.controller.Store;
 import com.adalbero.app.lebenindeutschland.data.exam.Exam;
 import com.adalbero.app.lebenindeutschland.data.exam.ExamHeader;
+import com.adalbero.app.lebenindeutschland.data.exam.ExamLand;
+import com.adalbero.app.lebenindeutschland.data.exam.ExamSearch;
+import com.adalbero.app.lebenindeutschland.data.exam.ExamTag;
 import com.adalbero.app.lebenindeutschland.ui.common.ResultCallback;
 import com.adalbero.app.lebenindeutschland.ui.exam.ExamActivity;
 import com.adalbero.app.lebenindeutschland.ui.settings.SettingsActivity;
 import com.google.firebase.analytics.FirebaseAnalytics;
 
 import java.util.ArrayList;
+import java.util.Arrays;
 import java.util.List;
 
 public class MainActivity extends AppCompatActivity implements ResultCallback {
@@ -39,11 +43,13 @@ public class MainActivity extends AppCompatActivity implements ResultCallback {
 
         setContentView(R.layout.activity_main);
 
+        init();
+
         updateData();
 
         mAdapter = new ExamItemAdapter(this, data);
 
-        mListView = (ListView) findViewById(R.id.list_view);
+        mListView = findViewById(R.id.list_view);
         mListView.setAdapter(mAdapter);
 
         mListView.setOnItemClickListener(new AdapterView.OnItemClickListener() {
@@ -58,6 +64,18 @@ public class MainActivity extends AppCompatActivity implements ResultCallback {
         Analytics.init(mFirebaseAnalytics);
     }
 
+    private void init() {
+        if (Store.getString(ExamSearch.KEY, null) == null) {
+            List<String> terms = Arrays.asList(new String[] {"DDR"});
+            Store.setList(ExamSearch.KEY, terms);
+        }
+
+        if (Store.getString(ExamTag.KEY, null) == null) {
+            List<String> terms = Arrays.asList(new String[] {"image"});
+            Store.setList(ExamTag.KEY, terms);
+        }
+    }
+
     private void onItemSelected(int position) {
         Exam exam = data.get(position);
 
@@ -67,6 +85,12 @@ public class MainActivity extends AppCompatActivity implements ResultCallback {
 
         if (exam.onPrompt(this, this)) {
             return;
+        } else if (exam instanceof ExamLand) {
+            String land = Store.getSelectedLandCode();
+            if (land == null) {
+                doSelectLand();
+                return;
+            }
         }
 
         goExam(exam.getName());
@@ -103,6 +127,9 @@ public class MainActivity extends AppCompatActivity implements ResultCallback {
             case R.id.menu_settings:
                 goSettings();
                 return true;
+            case R.id.menu_test:
+                doTest();
+                return true;
             default:
                 return super.onOptionsItemSelected(item);
         }
@@ -115,6 +142,10 @@ public class MainActivity extends AppCompatActivity implements ResultCallback {
         mListView.setSelection(AppController.getExamIdx());
 
         Store.resetExamResult();
+
+        if (Store.getLand() == null) {
+            doSelectLand();
+        }
 
         updateData();
     }
@@ -147,16 +178,34 @@ public class MainActivity extends AppCompatActivity implements ResultCallback {
         Analytics.logExamView(mFirebaseAnalytics, exam);
     }
 
-    @Override
-    public void onResult(Object parent, Object param) {
-        String name = (String) param;
-
-        if (parent instanceof Exam) {
-            Exam exam = (Exam) parent;
-            Analytics.logSearch(mFirebaseAnalytics, exam);
-        }
-
-        goExam(name);
+    private void doSelectLand() {
+        WelcomeDialog dialog = new WelcomeDialog();
+        dialog.setCallback(this);
+        dialog.show(this.getFragmentManager(), "land");
     }
 
+    @Override
+    public void onResult(Object parent, Object param) {
+
+        if (parent instanceof Exam) {
+            String name = (String) param;
+
+            Exam exam = (Exam) parent;
+            Analytics.logSearch(mFirebaseAnalytics, exam);
+
+            goExam(name);
+        } else if (parent instanceof WelcomeDialog) {
+            String land = (String)param;
+
+            Store.setLand(land);
+            Analytics.logBundesland(mFirebaseAnalytics, land);
+
+            updateData();
+        }
+
+    }
+
+    private void doTest() {
+        doSelectLand();
+    }
 }

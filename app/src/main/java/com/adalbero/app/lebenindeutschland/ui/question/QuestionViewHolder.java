@@ -43,6 +43,7 @@ public class QuestionViewHolder implements View.OnClickListener, ResultCallback 
     private TextView mViewHeader;
     private TextView mViewNum;
     private LinearLayout mViewTags;
+    private ImageView mViewTagButton;
     private StatView mViewStat;
     private View mViewStatus;
     private TextView mViewQuestion;
@@ -66,10 +67,11 @@ public class QuestionViewHolder implements View.OnClickListener, ResultCallback 
         mCallback = callback;
         mStats = Statistics.getInstance();
 
-        mViewHeader = (TextView) view.findViewById(R.id.view_header);
-        mViewNum = (TextView) view.findViewById(R.id.view_num);
-        mViewTags = (LinearLayout) view.findViewById(R.id.view_tags);
-        mViewStat = (StatView) view.findViewById(R.id.view_stat);
+        mViewHeader = view.findViewById(R.id.view_header);
+        mViewNum = view.findViewById(R.id.view_num);
+        mViewTags = view.findViewById(R.id.view_tags);
+        mViewTagButton = view.findViewById(R.id.img_tag);
+        mViewStat = view.findViewById(R.id.view_stat);
         mViewStat.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -155,6 +157,7 @@ public class QuestionViewHolder implements View.OnClickListener, ResultCallback 
 
         if (b) {
             mViewTags.setClickable(true);
+            mViewTagButton.setVisibility(View.VISIBLE);
 
             mGroupOptions.setVisibility(View.VISIBLE);
             for (int i = 0; i < mViewOptions.length; i++) {
@@ -193,6 +196,8 @@ public class QuestionViewHolder implements View.OnClickListener, ResultCallback 
             if (mViewTags != null) {
                 mViewTags.setClickable(false);
             }
+            if (mViewTagButton != null)
+                mViewTagButton.setVisibility(View.GONE);
         }
 
         return mView;
@@ -256,6 +261,7 @@ public class QuestionViewHolder implements View.OnClickListener, ResultCallback 
         Activity activity = (Activity) mView.getContext();
 
         TagDialog dialog = new TagDialog();
+        dialog.setTitle("Tag this question with...");
         Set<String> tags = mQuestion.getTags();
         dialog.setTags(tags, this, true);
         dialog.show(activity.getFragmentManager(), "tag");

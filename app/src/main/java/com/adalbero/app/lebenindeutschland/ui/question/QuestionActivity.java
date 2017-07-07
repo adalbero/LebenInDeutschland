@@ -152,8 +152,12 @@ public class QuestionActivity extends AppCompatActivity implements ResultCallbac
     }
 
     private void showView() {
-        final int idx = Store.getQuestionIdx();
-        final int count = mQuestionList.size();
+        int idx = Store.getQuestionIdx();
+        int count = mQuestionList.size();
+
+        if (idx < 0 || idx >= count) {
+            idx = 0;
+        }
 
         String num = mQuestionList.get(idx);
         mQuestion = AppController.getQuestionDB().getQuestion(num);

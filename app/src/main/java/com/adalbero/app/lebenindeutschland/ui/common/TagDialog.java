@@ -30,6 +30,11 @@ public class TagDialog extends DialogFragment {
     public Set<String> selected;
     private TextView newTag;
     private boolean allowNewTag;
+    private String title;
+
+    public void setTitle(String title) {
+        this.title = title;
+    }
 
     @Override
     public Dialog onCreateDialog(Bundle savedInstanceState) {
@@ -40,8 +45,11 @@ public class TagDialog extends DialogFragment {
         View view = inflater.inflate(R.layout.dialog_tag, null);
         initView(view);
 
+
+        if (title == null) title = "Tags";
+
         builder.setView(view)
-                .setTitle("Tags")
+                .setTitle(title)
                 .setPositiveButton(android.R.string.ok, new DialogInterface.OnClickListener() {
                     @Override
                     public void onClick(DialogInterface dialog, int id) {
@@ -70,19 +78,21 @@ public class TagDialog extends DialogFragment {
         removeOldTags(data);
 
         TagItemAdapter adapter = new TagItemAdapter(v.getContext(), data, selected);
-        ListView listView = (ListView)v.findViewById(R.id.list_view);
+        ListView listView = v.findViewById(R.id.list_view);
         listView.setAdapter(adapter);
 
-        newTag = (TextView)v.findViewById((R.id.new_tag));
+        newTag = v.findViewById((R.id.new_tag));
         newTag.setVisibility(allowNewTag ? View.VISIBLE : View.GONE);
     }
 
     private void removeOldTags(List<String> data) {
-        Iterator<String> iter = selected.iterator();
-        while(iter.hasNext()){
-            String tag = iter.next();
-            if (!data.contains(tag))
-                iter.remove();
+        if (selected != null) {
+            Iterator<String> iter = selected.iterator();
+            while (iter.hasNext()) {
+                String tag = iter.next();
+                if (!data.contains(tag))
+                    iter.remove();
+            }
         }
 
     }

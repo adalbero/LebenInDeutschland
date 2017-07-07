@@ -20,7 +20,7 @@ import java.util.List;
  */
 
 public class ExamSearch extends Exam {
-    private static final String KEY = "pref.search";
+    public static final String KEY = "pref.search";
 
     private List<String> mTerms;
 
@@ -86,11 +86,12 @@ public class ExamSearch extends Exam {
 
         boolean bExclude = false;
         boolean bInclude = false;
+        boolean bByNum = false;
 
         String text = q.getSharedContent();
         text = normalize(text);
 
-        boolean flag = false;
+        boolean result = false;
         for (String term : terms) {
             if (term == null || term.length() == 0)
                 continue;
@@ -101,18 +102,28 @@ public class ExamSearch extends Exam {
             } else if (term.charAt(0) == '+') {
                 term = term.substring(1);
                 bInclude = true;
+            } else if (term.charAt(0) == '#') {
+                term = term.substring(1);
+                bByNum = true;
             }
 
             term = normalize(term);
-            if (text.indexOf(term) >= 0) {
-                if (bExclude) return false;
-                flag = true;
+            if (bByNum) {
+                String num = q.getNum();
+                if (term.equals(num)) {
+                    result = true;
+                }
             } else {
-                if (bInclude) return false;
+                if (text.indexOf(term) >= 0) {
+                    if (bExclude) return false;
+                    result = true;
+                } else {
+                    if (bInclude) return false;
+                }
             }
         }
 
-        return flag;
+        return result;
     }
 
     private String normalize(String text) {

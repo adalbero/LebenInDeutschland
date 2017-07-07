@@ -28,7 +28,7 @@
     <color name="colorBackground">@color/White</color>
     <color name="colorCardBG">@color/Gray_300</color>
     <color name="colorTagBG">@color/Gray_300</color>
-    <color name="colorTagIcon">@color/Gray_500</color>
+    <color name="colorTagIcon">@color/White</color>
     <color name="colorStat">@color/BlueGray_200</color>
     <color name="colorStatBG">@color/Gray_300</color>
 </resources>

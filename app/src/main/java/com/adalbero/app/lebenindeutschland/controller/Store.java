@@ -181,4 +181,12 @@ public class Store {
 
         return new TreeSet<>(list);
     }
+
+    public static void setLand(String land) {
+        setString(Store.PREF_LAND, land);
+    }
+
+    public static String getLand() {
+        return getString(Store.PREF_LAND, null);
+    }
 }
