@@ -102,24 +102,22 @@ public class ExamSearch extends Exam {
             } else if (term.charAt(0) == '+') {
                 term = term.substring(1);
                 bInclude = true;
-            } else if (term.charAt(0) == '#') {
-                term = term.substring(1);
-                bByNum = true;
             }
 
             term = normalize(term);
-            if (bByNum) {
-                String num = q.getNum();
-                if (term.equals(num)) {
-                    result = true;
-                }
+            if (text.indexOf(term) >= 0) {
+                if (bExclude) return false;
+                result = true;
             } else {
-                if (text.indexOf(term) >= 0) {
-                    if (bExclude) return false;
-                    result = true;
-                } else {
-                    if (bInclude) return false;
-                }
+                if (bInclude) return false;
+            }
+
+            if (q.getNum().equals(term)) {
+                result = true;
+            }
+
+            if (q.getTags().contains(term)) {
+                result = true;
             }
         }
 
