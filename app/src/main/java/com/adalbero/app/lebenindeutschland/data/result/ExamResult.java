@@ -49,13 +49,15 @@ public class ExamResult {
 
     public List<String> getAnswerList() {
         Exam exam = getExam();
+        int n = exam.getSize();
+
         if (exam == null) {
             mAnswerList = null;
         } else if (mAnswerList == null) {
             mAnswerList = Store.getListWithNull(KEY_ANSWER_LIST);
-            if (mAnswerList == null) {
-                String answers[] = new String[exam.getSize()];
-                mAnswerList = Arrays.asList(answers);
+            if (mAnswerList == null || mAnswerList.size() != n) {
+                // reset answer list.
+                mAnswerList = Arrays.asList(new String[n]);
             }
         }
 
