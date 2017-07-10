@@ -66,19 +66,19 @@ public class QuestionStatDialog extends DialogFragment {
         boolean lastRight = info.isAnswerRight(0);
         float rating = info.getRating();
 
-        StatView viewStat = (StatView)v.findViewById(R.id.view_stat);
+        StatView viewStat = v.findViewById(R.id.view_stat);
         viewStat.setQuestion(mQuestion);
 
-        TextView viewRating = (TextView)v.findViewById(R.id.view_rating);
-        viewRating.setText(String.format("Rating: %.0f", 100*rating));
+        TextView viewRating = v.findViewById(R.id.view_rating);
+        viewRating.setText(String.format("Rating: %.0f", 100 * rating));
 
-        TextView viewText = (TextView)v.findViewById(R.id.view_header);
+        TextView viewText = v.findViewById(R.id.view_header);
 
-        TextView viewLabel1 = (TextView)v.findViewById(R.id.view_label1);
-        TextView viewValue1 = (TextView)v.findViewById(R.id.view_value1);
+        TextView viewLabel1 = v.findViewById(R.id.view_label1);
+        TextView viewValue1 = v.findViewById(R.id.view_value1);
 
-        TextView viewLabel2 = (TextView)v.findViewById(R.id.view_label2);
-        TextView viewValue2 = (TextView)v.findViewById(R.id.view_value2);
+        TextView viewLabel2 = v.findViewById(R.id.view_label2);
+        TextView viewValue2 = v.findViewById(R.id.view_value2);
 
         if (n > 1) {
             viewText.setText(String.format("History of the last %d answers:", n));
@@ -88,7 +88,7 @@ public class QuestionStatDialog extends DialogFragment {
 
         if (n > 1 && isAnswered) {
             viewLabel1.setText("Right answers:");
-            viewValue1.setText(String.format("%d of %d (%.0f%%)", info.getNumRight(), info.getNumAnswered(), 100*info.getRightProgress()));
+            viewValue1.setText(String.format("%d of %d (%.0f%%)", info.getNumRight(), info.getNumAnswered(), 100 * info.getRightProgress()));
         } else {
             viewLabel1.setVisibility(View.GONE);
             viewValue1.setVisibility(View.GONE);

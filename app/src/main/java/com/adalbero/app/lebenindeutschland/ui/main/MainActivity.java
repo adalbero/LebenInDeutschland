@@ -60,18 +60,16 @@ public class MainActivity extends AppCompatActivity implements ResultCallback {
         });
 
         AppController.initAdView(this);
-
-        Analytics.init(mFirebaseAnalytics);
     }
 
     private void init() {
         if (Store.getString(ExamSearch.KEY, null) == null) {
-            List<String> terms = Arrays.asList(new String[] {"DDR"});
+            List<String> terms = Arrays.asList(new String[]{"DDR"});
             Store.setList(ExamSearch.KEY, terms);
         }
 
         if (Store.getString(ExamTag.KEY, null) == null) {
-            List<String> terms = Arrays.asList(new String[] {"image"});
+            List<String> terms = Arrays.asList(new String[]{"image"});
             Store.setList(ExamTag.KEY, terms);
         }
     }
@@ -195,9 +193,8 @@ public class MainActivity extends AppCompatActivity implements ResultCallback {
 
             goExam(name);
         } else if (parent instanceof WelcomeDialog) {
-            String land = (String)param;
+            String land = (String) param;
 
-//            Store.setLand(land);
             Analytics.logBundesland(mFirebaseAnalytics, land);
 
             updateData();

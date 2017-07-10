@@ -39,7 +39,7 @@ public class TagItemAdapter extends ArrayAdapter<String> {
 
         String text = getItem(position);
 
-        final CheckedTextView textView = (CheckedTextView) view.findViewById(R.id.text1);
+        final CheckedTextView textView = view.findViewById(R.id.text1);
         textView.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {

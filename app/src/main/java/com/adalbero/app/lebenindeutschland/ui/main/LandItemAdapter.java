@@ -87,13 +87,13 @@ public class LandItemAdapter extends ArrayAdapter<String> implements View.OnClic
         }
 
         if (view != null && view instanceof RadioButton) {
-            RadioButton radio = (RadioButton)view;
+            RadioButton radio = (RadioButton) view;
 
             if (!radio.isChecked()) {
                 radio.setChecked(true);
             }
 
-            selectedLand = (String)radio.getTag();
+            selectedLand = (String) radio.getTag();
 
             if (dialog != null) {
                 dialog.setEnabled(true);

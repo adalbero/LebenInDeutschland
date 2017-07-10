@@ -13,16 +13,12 @@ import android.support.v7.app.AlertDialog;
 import android.widget.Toast;
 
 import com.adalbero.app.lebenindeutschland.controller.Analytics;
-import com.adalbero.app.lebenindeutschland.controller.AppController;
 import com.adalbero.app.lebenindeutschland.controller.Debug;
 import com.adalbero.app.lebenindeutschland.controller.Statistics;
 import com.adalbero.app.lebenindeutschland.controller.Store;
 import com.google.firebase.analytics.FirebaseAnalytics;
 
-import java.util.List;
-
 import static com.adalbero.app.lebenindeutschland.R.xml.preferences;
-import static com.adalbero.app.lebenindeutschland.controller.Store.PREF_LAND;
 import static com.adalbero.app.lebenindeutschland.controller.Store.PREF_REMOVE_STAT;
 import static com.adalbero.app.lebenindeutschland.controller.Store.PREF_VERSION;
 
@@ -56,7 +52,6 @@ public class SettingsFragment extends PreferenceFragment implements Preference.O
 
         addPreferencesFromResource(preferences);
 
-//        initBundesland();
         initStatistics();
 
         Preference pref1 = findPreference(PREF_VERSION);
@@ -92,26 +87,6 @@ public class SettingsFragment extends PreferenceFragment implements Preference.O
     public void onResume() {
         super.onResume();
         mFirebaseAnalytics.setCurrentScreen(getActivity(), "Settings", null);
-    }
-
-    private void initBundesland() {
-        ListPreference listPreference = (ListPreference) findPreference(PREF_LAND);
-        listPreference.setOnPreferenceChangeListener(this);
-
-        List<String> list = AppController.getInstance().getQuestionDB().listDistinctLand();
-        int n = list.size();
-
-        String land_code[] = new String[n];
-        String land_name[] = new String[n];
-
-        for (int i = 0; i < n; i++) {
-            String value = list.get(i);
-            land_code[i] = value;
-            land_name[i] = value.substring(3);
-        }
-
-        listPreference.setEntries(land_name);
-        listPreference.setEntryValues(land_code);
     }
 
     private void initStatistics() {
@@ -204,8 +179,6 @@ public class SettingsFragment extends PreferenceFragment implements Preference.O
             Analytics.logBundesland(mFirebaseAnalytics, value);
         } else if (Store.PREF_STAT_MAX.equals(key)) {
             Analytics.logFeature(mFirebaseAnalytics, "Stat History", value);
-        } else if (Store.DEBUG_USERID.equals(key)) {
-            Analytics.logUserId(mFirebaseAnalytics, value);
         }
 
         return true;

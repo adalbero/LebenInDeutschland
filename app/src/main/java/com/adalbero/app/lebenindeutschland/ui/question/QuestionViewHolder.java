@@ -80,15 +80,15 @@ public class QuestionViewHolder implements View.OnClickListener, ResultCallback 
         });
 
         mViewStatus = view.findViewById(R.id.view_status);
-        mViewQuestion = (TextView) view.findViewById(R.id.view_question);
+        mViewQuestion = view.findViewById(R.id.view_question);
 
         mGroupOptions = view.findViewById(R.id.group_options);
-        mViewOptions[0] = (CheckedTextView) view.findViewById(R.id.view_option_a);
-        mViewOptions[1] = (CheckedTextView) view.findViewById(R.id.view_option_b);
-        mViewOptions[2] = (CheckedTextView) view.findViewById(R.id.view_option_c);
-        mViewOptions[3] = (CheckedTextView) view.findViewById(R.id.view_option_d);
-        mViewImage = (ImageView) view.findViewById(R.id.view_image);
-        mViewImageAlt = (ImageView) view.findViewById(R.id.view_image_alt);
+        mViewOptions[1] = view.findViewById(R.id.view_option_b);
+        mViewOptions[0] = view.findViewById(R.id.view_option_a);
+        mViewOptions[2] = view.findViewById(R.id.view_option_c);
+        mViewOptions[3] = view.findViewById(R.id.view_option_d);
+        mViewImage = view.findViewById(R.id.view_image);
+        mViewImageAlt = view.findViewById(R.id.view_image_alt);
 
         mViewTags.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -114,7 +114,7 @@ public class QuestionViewHolder implements View.OnClickListener, ResultCallback 
 
     public View show(Question question) {
         if (question == null) {
-            FirebaseCrash.report(new NullPointerException("Question==null"));
+            FirebaseCrash.report(new NullPointerException("Question == null"));
 
             question = Question.EMPTY_QUESTION;
         }
@@ -242,7 +242,7 @@ public class QuestionViewHolder implements View.OnClickListener, ResultCallback 
     private void showTagView() {
         Activity activity = (Activity) mView.getContext();
 
-        LinearLayout group_tag = (LinearLayout) mViewTags.findViewById(R.id.group_tag);
+        LinearLayout group_tag = mViewTags.findViewById(R.id.group_tag);
         group_tag.removeAllViews();
         Set<String> tags = mQuestion.getTags();
         for (String tag : tags) {

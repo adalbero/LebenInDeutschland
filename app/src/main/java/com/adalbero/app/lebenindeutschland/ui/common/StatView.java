@@ -105,14 +105,14 @@ public class StatView extends View {
         paint.setStyle(Paint.Style.FILL);
         paint.setAntiAlias(true);
 
-        float x = w/2f;
-        float y = h/2f;
+        float x = w / 2f;
+        float y = h / 2f;
 
-        float r1 = Math.min(w, h)/2f;
+        float r1 = Math.min(w, h) / 2f;
         float r2 = r1 * .6f;
         float r3 = r1 * .2f;
 
-        rect.set(x-r1, y-r1, x+r1, y+r1);
+        rect.set(x - r1, y - r1, x + r1, y + r1);
 
         // Not answered
         paint.setColor(colorNotAnswerd);
@@ -129,7 +129,7 @@ public class StatView extends View {
         canvas.drawArc(rect, startAngle, sweepAngle, true, paint);
 
         // Last answer
-        rect.set(x-r2, y-r2, x+r2, y+r2);
+        rect.set(x - r2, y - r2, x + r2, y + r2);
 
         paint.setColor(colorNotAnswerdLight);
         canvas.drawOval(rect, paint);
@@ -143,7 +143,7 @@ public class StatView extends View {
         paint.setColor(colorLastRight);
         canvas.drawArc(rect, startAngle, sweepAngle, true, paint);
 
-        rect.set(x-r3, y-r3, x+r3, y+r3);
+        rect.set(x - r3, y - r3, x + r3, y + r3);
         paint.setColor(Color.WHITE);
         canvas.drawOval(rect, paint);
 

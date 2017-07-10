@@ -66,12 +66,12 @@ public class ExamActivity extends AppCompatActivity implements ResultCallback {
         updateData();
         mAdapter = new QuestionItemAdapter(this, mData, mResult, this);
 
-        mClockView = (TextView) findViewById(R.id.view_clock);
+        mClockView = findViewById(R.id.view_clock);
         mClock = new Clock(mClockView);
 
-        mResultView = (TextView) findViewById(R.id.view_result);
+        mResultView = findViewById(R.id.view_result);
 
-        mStatView = (StatView) findViewById(R.id.view_stat);
+        mStatView = findViewById(R.id.view_stat);
         mStatView.setExam(mExam);
         mStatView.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -80,7 +80,7 @@ public class ExamActivity extends AppCompatActivity implements ResultCallback {
             }
         });
 
-        mListView = (ListView) findViewById(R.id.list_view);
+        mListView = findViewById(R.id.list_view);
         mListView.setAdapter(mAdapter);
 
         mListView.setOnItemClickListener(new AdapterView.OnItemClickListener() {

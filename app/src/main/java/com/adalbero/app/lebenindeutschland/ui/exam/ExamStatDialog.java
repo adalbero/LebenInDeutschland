@@ -71,7 +71,7 @@ public class ExamStatDialog extends DialogFragment {
         getExam();
         List<String> questions = mExam.getQuestionList();
 
-        StatView viewStat = (StatView) v.findViewById(R.id.view_stat);
+        StatView viewStat = v.findViewById(R.id.view_stat);
         viewStat.setExam(mExam);
 
         int size = mExam.getSize();
@@ -81,14 +81,14 @@ public class ExamStatDialog extends DialogFragment {
         float lastRightProgress = mStat.getLastRightProgress(questions);
         float rating = mStat.getRating(questions);
 
-        TextView viewRating = (TextView) v.findViewById(R.id.view_rating);
-        viewRating.setText(String.format("%.0f", 100*rating));
+        TextView viewRating = v.findViewById(R.id.view_rating);
+        viewRating.setText(String.format("%.0f", 100 * rating));
 
-        TextView viewHeader = (TextView) v.findViewById(R.id.view_header);
+        TextView viewHeader = v.findViewById(R.id.view_header);
         viewHeader.setText(String.format("History of %d questions in this list:", size));
 
-        TextView viewLabel1 = (TextView) v.findViewById(R.id.view_label1);
-        TextView viewValue1 = (TextView) v.findViewById(R.id.view_value1);
+        TextView viewLabel1 = v.findViewById(R.id.view_label1);
+        TextView viewValue1 = v.findViewById(R.id.view_value1);
 
         if (answered == size) {
             viewLabel1.setText("All questions answered at least once.");
@@ -98,14 +98,14 @@ public class ExamStatDialog extends DialogFragment {
             viewValue1.setText(String.format("(%d) %.0f%%", size - answered, 100 - 100 * answerProgress));
         }
 
-        TextView viewLabel2 = (TextView) v.findViewById(R.id.view_label2);
-        TextView viewValue2 = (TextView) v.findViewById(R.id.view_value2);
+        TextView viewLabel2 = v.findViewById(R.id.view_label2);
+        TextView viewValue2 = v.findViewById(R.id.view_value2);
 
         viewLabel2.setText("Last answer right:");
         viewValue2.setText(String.format("(%d) %.0f%%", (int) (answered * lastRightProgress), 100 * lastRightProgress));
 
-        TextView viewLabel3 = (TextView) v.findViewById(R.id.view_label3);
-        TextView viewValue3 = (TextView) v.findViewById(R.id.view_value3);
+        TextView viewLabel3 = v.findViewById(R.id.view_label3);
+        TextView viewValue3 = v.findViewById(R.id.view_value3);
 
         viewLabel3.setText("Right answers:");
         viewValue3.setText(String.format("%.0f%%", 100 * rightProgress));

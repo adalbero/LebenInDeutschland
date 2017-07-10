@@ -67,7 +67,7 @@ public class QuestionActivity extends AppCompatActivity implements ResultCallbac
 
         mResult = new ExamResult();
 
-        mBtnPrev = (ImageButton) findViewById(R.id.btn_prev);
+        mBtnPrev = findViewById(R.id.btn_prev);
         mBtnPrev.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -75,18 +75,18 @@ public class QuestionActivity extends AppCompatActivity implements ResultCallbac
             }
         });
 
-        mBtnNext = (ImageButton) findViewById(R.id.btn_next);
+        mBtnNext = findViewById(R.id.btn_next);
         mBtnNext.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 goNext();
             }
         });
-        mResultView = (TextView) findViewById(R.id.view_result);
+        mResultView = findViewById(R.id.view_result);
 
         mClock = new Clock((TextView) findViewById(R.id.view_clock));
 
-        mProgressView = (ProgressView) findViewById(R.id.view_progress);
+        mProgressView = findViewById(R.id.view_progress);
 
         View contentView = findViewById(R.id.item_question);
         mQuestionViewHolder = new QuestionViewHolder(contentView, mResult, true, this);
@@ -165,7 +165,7 @@ public class QuestionActivity extends AppCompatActivity implements ResultCallbac
         String title = String.format("Question %d of %d", (idx + 1), count);
         getSupportActionBar().setTitle(title);
 
-        ScrollView scrollView = (ScrollView) findViewById(R.id.scroll_view);
+        ScrollView scrollView = findViewById(R.id.scroll_view);
         scrollView.scrollTo(0, 0);
 
         mBtnPrev.setImageDrawable(ContextCompat.getDrawable(this, idx > 0 ? R.drawable.ic_prev : R.drawable.ic_close));
