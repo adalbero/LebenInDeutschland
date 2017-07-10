@@ -1,4 +1,20 @@
-Ver 1.3.6 (11) - 2/06/2017
+Backlist ToDo:
+- String extraction
+- German translate
+- Exam finish history
+- Round loucher icon
+
+Ver 1.4.0 (12) - 10/07/2017
+- [New] Exercise List
+- [Upd] Analytics Normalizing
+- [Upd] List subtitle
+- [Upd] Tag feature improvments
+- [New] Voice Command
+- [New] Exam and Question titlebar subtitle
+- [New] Welcome screen. Select Bundesland
+- [Upd] Bundesland Wappen on select list
+
+Ver 1.3.6 (11) - 02/06/2017
 - [Fix] Isssue#3 NPE QuestionActivity, ExamActivity
 
 Ver 1.3.5 (10) - 21/06/2017

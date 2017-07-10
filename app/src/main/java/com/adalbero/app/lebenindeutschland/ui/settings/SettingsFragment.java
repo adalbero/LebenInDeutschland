@@ -148,7 +148,7 @@ public class SettingsFragment extends PreferenceFragment implements Preference.O
         } else if (key.equals(PREF_REMOVE_STAT)) {
             doRemoveStat();
         } else if (key.equals(DEBUG_TEST)) {
-            Debug.doTest(100);
+            Debug.doTest(25);
             Toast.makeText(getActivity(), "100 tests executed", Toast.LENGTH_SHORT).show();
         }
 

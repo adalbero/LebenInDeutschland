@@ -125,11 +125,6 @@ public class QuestionActivity extends AppCompatActivity implements ResultCallbac
     @Override
     public boolean onCreateOptionsMenu(Menu menu) {
         getMenuInflater().inflate(R.menu.question_menu, menu);
-//        MenuItem item = menu.findItem(R.id.menu_voice);
-//        if (item != null) {
-//            boolean enableVoice = Store.getBoolean("beta.pref.voice", false);
-//            item.setVisible(enableVoice);
-//        }
 
         return true;
     }
