@@ -125,11 +125,11 @@ public class QuestionActivity extends AppCompatActivity implements ResultCallbac
     @Override
     public boolean onCreateOptionsMenu(Menu menu) {
         getMenuInflater().inflate(R.menu.question_menu, menu);
-        MenuItem item = menu.findItem(R.id.menu_voice);
-        if (item != null) {
-            boolean enableVoice = Store.getBoolean("beta.pref.voice", false);
-            item.setVisible(enableVoice);
-        }
+//        MenuItem item = menu.findItem(R.id.menu_voice);
+//        if (item != null) {
+//            boolean enableVoice = Store.getBoolean("beta.pref.voice", false);
+//            item.setVisible(enableVoice);
+//        }
 
         return true;
     }
@@ -289,10 +289,10 @@ public class QuestionActivity extends AppCompatActivity implements ResultCallbac
 
     private void doSpeachRecognize() {
         boolean ok = mVoice.speechRecognizer(this, "de-DE",
-                "Sagen Sie z.B: " +
-                        "\n☞ Antwort (A,B,C oder D)" +
-                        "\n☞ Nummer (1,2,3 oder 4)" +
-                        "\n☞ Teil der Antwort");
+                "Sagen Sie: " +
+                        "\nder Antworttext" +
+                        "\noder: \"Antwort\" (A,B,C,D)" +
+                        "\noder: \"Nummer\" (1,2,3,4)");
 
         if (!ok) {
             String msg = "Speech Recognizer not found in this device";
@@ -300,6 +300,9 @@ public class QuestionActivity extends AppCompatActivity implements ResultCallbac
             FirebaseCrash.report(new RuntimeException(msg));
         }
     }
+
+    private static final String GENAUER_BITTE = "Es gibt mehr als eine antwort. Genauer bitte";
+    private static final String ENTSCHULDIGUNG = "Entschuldigung, ich habe dich nicht verstanden";
 
     @Override
     protected void onActivityResult(int requestCode, int resultCode,
@@ -312,22 +315,22 @@ public class QuestionActivity extends AppCompatActivity implements ResultCallbac
             String spokenText = result[1];
             Toast.makeText(this, spokenText, Toast.LENGTH_SHORT).show();
 
+            String msg;
             if (answer == null) {
-                mVoice.speak("Entschuldigung, ich habe dich nicht verstanden");
-                Analytics.logFeature(mFirebaseAnalytics, "Voice", spokenText + ": " + "nicht verstanden");
+                mVoice.speak(ENTSCHULDIGUNG);
+                msg = "N";
             } else if (answer.equals(GENAUER_BITTE)) {
                 mVoice.speak(GENAUER_BITTE);
-                Analytics.logFeature(mFirebaseAnalytics, "Voice", spokenText + ": " + GENAUER_BITTE);
+                msg = "G";
             } else {
                 mQuestionViewHolder.clickAntwort(answer);
-                Analytics.logFeature(mFirebaseAnalytics, "Voice", spokenText + ": " + answer);
+                msg = mQuestion.getAnswerLetter().equals(answer) ? "R" : "W";
             }
+            Analytics.logFeature(mFirebaseAnalytics, "Voice", String.format("[%-5s,%1s] %s", mQuestion.getNum(), msg, spokenText));
         }
 
         super.onActivityResult(requestCode, resultCode, data);
     }
-
-    private static final String GENAUER_BITTE = "Genauer bitte";
 
     private String[] findAnswer(List<String> results) {
         String result[] = new String[2];
@@ -344,11 +347,15 @@ public class QuestionActivity extends AppCompatActivity implements ResultCallbac
                 for (int i = 0; i < keywords.length; i++) {
                     if (text.startsWith(keywords[i])) {
                         if (text.length() >= keywords[i].length() + 1) {
-                            ch = text.charAt(keywords[i].length());
+                            text = text.substring(keywords[i].length());
+                            ch = text.charAt(0);
                             break;
                         }
                     }
                 }
+
+                if (text.matches("ein|eins|eine"))
+                    ch = '1';
 
                 if (ch != Character.MIN_VALUE) {
                     switch (ch) {
