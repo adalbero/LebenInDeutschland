@@ -64,13 +64,13 @@ public class QuestionStatDialog extends DialogFragment {
         int n = mStat.getHistorySize();
         boolean isAnswered = info.isAnswered();
         boolean lastRight = info.isAnswerRight(0);
-        float rating = info.getRating();
+        int rating = info.getRatingInt();
 
         StatView viewStat = v.findViewById(R.id.view_stat);
         viewStat.setQuestion(mQuestion);
 
         TextView viewRating = v.findViewById(R.id.view_rating);
-        viewRating.setText(String.format("Rating: %.0f", 100 * rating));
+        viewRating.setText(String.format("Rating: %d", rating));
 
         TextView viewText = v.findViewById(R.id.view_header);
 

@@ -275,8 +275,7 @@ public class QuestionViewHolder implements View.OnClickListener, ResultCallback 
         dialog.setQuestion(mQuestion);
         dialog.show(activity.getFragmentManager(), "stat");
 
-        Analytics.logFeature(mFirebaseAnalytics, "Question Stat", mQuestion.getNum());
-
+        Analytics.logFeatureQuestionStat(mFirebaseAnalytics, mQuestion);
     }
 
     public void clickAntwort(String antwort) {
@@ -309,7 +308,7 @@ public class QuestionViewHolder implements View.OnClickListener, ResultCallback 
         mResult.setAnswer(num, answer);
         mStats.addAnswer(mQuestion, answer);
 
-        Analytics.logQuestionAnswer(mFirebaseAnalytics, mResult, num);
+        Analytics.logQuestionAnswer(mFirebaseAnalytics, mResult, mQuestion);
 
         showResult();
     }
@@ -321,7 +320,7 @@ public class QuestionViewHolder implements View.OnClickListener, ResultCallback 
             Set<String> tags = dialog.getSelected();
             mQuestion.setTags(tags);
 
-            Analytics.logQuestionTagged(mFirebaseAnalytics, mQuestion);
+            Analytics.logFeatureTagged(mFirebaseAnalytics, mQuestion);
 
             show(mQuestion);
         }

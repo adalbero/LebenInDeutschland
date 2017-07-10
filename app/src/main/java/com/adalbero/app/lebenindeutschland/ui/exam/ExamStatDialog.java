@@ -79,10 +79,10 @@ public class ExamStatDialog extends DialogFragment {
         int answered = (int) (size * answerProgress);
         float rightProgress = mStat.getRightProgress(questions);
         float lastRightProgress = mStat.getLastRightProgress(questions);
-        float rating = mStat.getRating(questions);
+        int rating = mStat.getRatingInt(questions);
 
         TextView viewRating = v.findViewById(R.id.view_rating);
-        viewRating.setText(String.format("%.0f", 100 * rating));
+        viewRating.setText(String.format("%d", rating));
 
         TextView viewHeader = v.findViewById(R.id.view_header);
         viewHeader.setText(String.format("History of %d questions in this list:", size));

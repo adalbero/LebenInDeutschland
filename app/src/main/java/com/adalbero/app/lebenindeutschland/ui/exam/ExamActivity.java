@@ -122,7 +122,7 @@ public class ExamActivity extends AppCompatActivity implements ResultCallback {
         invalidateOptionsMenu();
         mAdapter.notifyDataSetChanged();
 
-        Analytics.logFeature(mFirebaseAnalytics, "Inline Mode", "" + inline);
+        Analytics.logFeatureInlineMode(mFirebaseAnalytics, "" + inline, mExam);
     }
 
     @Override
@@ -202,6 +202,8 @@ public class ExamActivity extends AppCompatActivity implements ResultCallback {
     private void updateResult() {
         ResultInfo resultInfo = mResult.getResult();
 
+        getSupportActionBar().setSubtitle(String.format("%d of %d", mResult.getResult().getAnswered(), mResult.getCount()));
+
         updateStat();
 
         TextView text_total_value = (TextView) findViewById(R.id.text_value1);
@@ -247,7 +249,7 @@ public class ExamActivity extends AppCompatActivity implements ResultCallback {
         mExam.sortQuestionList(mSortMethod);
         mResult.setAnswerMap(answerMap);
 
-        Analytics.logFeature(mFirebaseAnalytics, "Sort", getSortMethodText(mSortMethod));
+        Analytics.logFeatureSort(mFirebaseAnalytics, getSortMethodText(mSortMethod), mExam);
         updateData();
     }
 
@@ -283,7 +285,7 @@ public class ExamActivity extends AppCompatActivity implements ResultCallback {
         dialog.setExamp(mExam);
         dialog.show(this.getFragmentManager(), "stat");
 
-        Analytics.logFeature(mFirebaseAnalytics, "Exam Stat", mExam.getName());
+        Analytics.logFeatureExamStat(mFirebaseAnalytics, mExam);
     }
 
 

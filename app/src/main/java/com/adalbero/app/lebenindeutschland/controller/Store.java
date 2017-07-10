@@ -19,7 +19,7 @@ public class Store {
     public static final String KEY_QUESTION_IDX = "exam.question.idx";
     public static final String KEY_RESULT_LOGGED = "exam.result.logged";
 
-    public static final String PREF_EXAM_INLINE = "pref.inline.mode";
+    public static final String PREF_INLINE_MODE = "pref.inline.mode";
     public static final String PREF_LAND = "pref.land";
     public static final String PREF_VERSION = "pref.version";
     public static final String PREF_STAT_MAX = "pref.stat.max";
@@ -116,11 +116,11 @@ public class Store {
     }
 
     public static void setExamInline(boolean inline) {
-        Store.setBoolean(PREF_EXAM_INLINE, inline);
+        Store.setBoolean(PREF_INLINE_MODE, inline);
     }
 
     public static boolean getExamInline() {
-        boolean inline = Store.getBoolean(PREF_EXAM_INLINE, false);
+        boolean inline = Store.getBoolean(PREF_INLINE_MODE, false);
         return inline;
     }
 

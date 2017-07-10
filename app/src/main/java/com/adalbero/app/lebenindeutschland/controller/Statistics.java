@@ -35,6 +35,7 @@ public class Statistics {
         mQuestions = null;
         getQuestions();
     }
+
     private Map<String, Info> getQuestions() {
         if (mQuestions == null) {
             mQuestions = new HashMap<>();
@@ -69,6 +70,10 @@ public class Statistics {
         }
 
         return rating / questions.size();
+    }
+
+    public int getRatingInt(List<String> questions) {
+        return (int) (100 * getRating(questions));
     }
 
     public float getAnswerProgress(List<String> questions) {
@@ -144,7 +149,7 @@ public class Statistics {
         }
 
         public String getAnswer(int i) {
-            if(i >= getNumAnswered()) {
+            if (i >= getNumAnswered()) {
                 return ANSWER_EMPTY;
             }
 
@@ -171,7 +176,7 @@ public class Statistics {
             int n = getNumAnswered();
 
             int count = 0;
-            for (int i=0; i<n; i++) {
+            for (int i = 0; i < n; i++) {
                 if (isAnswerRight(i))
                     count++;
             }
@@ -190,7 +195,7 @@ public class Statistics {
             int n = getNumAnswered();
             int points = 0;
             int totalWeight = 0;
-            for (int i=0; i<n; i++) {
+            for (int i = 0; i < n; i++) {
                 String answer = getAnswer(i);
                 int weight = size - i;
                 totalWeight += weight;
@@ -199,9 +204,13 @@ public class Statistics {
                 }
             }
 
-            float rating = (float)points / totalWeight;
+            float rating = (float) points / totalWeight;
 
             return rating;
+        }
+
+        public int getRatingInt() {
+            return (int) (100 * getRating());
         }
 
         public float getRightProgress() {

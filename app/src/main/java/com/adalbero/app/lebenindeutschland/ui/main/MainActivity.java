@@ -125,9 +125,9 @@ public class MainActivity extends AppCompatActivity implements ResultCallback {
             case R.id.menu_settings:
                 goSettings();
                 return true;
-            case R.id.menu_test:
-                doTest();
-                return true;
+//            case R.id.menu_test:
+//                doTest();
+//                return true;
             default:
                 return super.onOptionsItemSelected(item);
         }
@@ -172,8 +172,6 @@ public class MainActivity extends AppCompatActivity implements ResultCallback {
 
         Intent intent = new Intent(this, ExamActivity.class);
         this.startActivity(intent);
-
-        Analytics.logExamView(mFirebaseAnalytics, exam);
     }
 
     private void doSelectLand() {
@@ -189,20 +187,20 @@ public class MainActivity extends AppCompatActivity implements ResultCallback {
             String name = (String) param;
 
             Exam exam = (Exam) parent;
-            Analytics.logSearch(mFirebaseAnalytics, exam);
+            Analytics.logFeatureSearch(mFirebaseAnalytics, exam);
 
             goExam(name);
         } else if (parent instanceof WelcomeDialog) {
             String land = (String) param;
 
-            Analytics.logBundesland(mFirebaseAnalytics, land);
+            Analytics.logFeatureLand(mFirebaseAnalytics, land, true);
 
             updateData();
         }
 
     }
 
-    private void doTest() {
-        doSelectLand();
-    }
+//    private void doTest() {
+//        doSelectLand();
+//    }
 }

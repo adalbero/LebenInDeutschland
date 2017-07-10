@@ -58,7 +58,7 @@ public class SettingsFragment extends PreferenceFragment implements Preference.O
         pref1.setSummary(appVersion());
         pref1.setOnPreferenceClickListener(this);
 
-        Preference prefInline = findPreference(Store.PREF_EXAM_INLINE);
+        Preference prefInline = findPreference(Store.PREF_INLINE_MODE);
         prefInline.setOnPreferenceChangeListener(this);
 
         Preference prefLand = findPreference(Store.PREF_LAND);
@@ -122,7 +122,7 @@ public class SettingsFragment extends PreferenceFragment implements Preference.O
                 Toast.makeText(getActivity(), "Enable Debug Mode", Toast.LENGTH_SHORT).show();
                 getPreferenceScreen().addPreference(mDebugCategory);
                 getPreferenceScreen().addPreference(mBetaCategory);
-                Analytics.logFeature(mFirebaseAnalytics, "Debug", "enable");
+                Analytics.logFeatureDebug(mFirebaseAnalytics, "enable");
             } else {
                 mDebugClick++;
             }
@@ -160,7 +160,7 @@ public class SettingsFragment extends PreferenceFragment implements Preference.O
                         Statistics.getInstance().update();
                         Toast.makeText(context, "Statistics removed", Toast.LENGTH_SHORT).show();
 
-                        Analytics.logFeature(mFirebaseAnalytics, "Clear Stat", "Stats removed");
+                        Analytics.logFeatureClearStat(mFirebaseAnalytics);
                     }
                 })
                 .setNegativeButton("No", null);
@@ -176,9 +176,11 @@ public class SettingsFragment extends PreferenceFragment implements Preference.O
         if (Store.PREF_LAND.equals(key)) {
             Preference prefLand = findPreference(Store.PREF_LAND);
             prefLand.setSummary("" + obj);
-            Analytics.logBundesland(mFirebaseAnalytics, value);
+            Analytics.logFeatureLand(mFirebaseAnalytics, value, false);
         } else if (Store.PREF_STAT_MAX.equals(key)) {
-            Analytics.logFeature(mFirebaseAnalytics, "Stat History", value);
+            Analytics.logFeatureStatHistory(mFirebaseAnalytics, value);
+        } else if (Store.PREF_INLINE_MODE.equals(key)) {
+            Analytics.logFeatureInlineMode(mFirebaseAnalytics, value, null);
         }
 
         return true;

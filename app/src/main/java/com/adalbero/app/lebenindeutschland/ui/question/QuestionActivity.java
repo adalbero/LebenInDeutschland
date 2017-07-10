@@ -162,8 +162,8 @@ public class QuestionActivity extends AppCompatActivity implements ResultCallbac
         String num = mQuestionList.get(idx);
         mQuestion = AppController.getQuestionDB().getQuestion(num);
 
-        String title = String.format("Question %d of %d", (idx + 1), count);
-        getSupportActionBar().setTitle(title);
+        getSupportActionBar().setTitle(String.format("Question %s", num));
+        getSupportActionBar().setSubtitle(String.format("%d of %d", (idx + 1), count));
 
         ScrollView scrollView = findViewById(R.id.scroll_view);
         scrollView.scrollTo(0, 0);
@@ -246,7 +246,7 @@ public class QuestionActivity extends AppCompatActivity implements ResultCallbac
         String text = mQuestion.getSharedContent();
         mVoice.speak(text);
 
-        Analytics.logFeature(mFirebaseAnalytics, "Speak", mQuestion.getNum());
+        Analytics.logFeatureSpeak(mFirebaseAnalytics, mQuestion);
     }
 
     private void goTranslate() {
@@ -255,20 +255,21 @@ public class QuestionActivity extends AppCompatActivity implements ResultCallbac
         Intent sendIntent = new Intent();
 
         String text = mQuestion.getSharedContent();
-        String num = mQuestion.getNum();
 
         sendIntent.setAction(Intent.ACTION_SEND);
         sendIntent.putExtra(Intent.EXTRA_TEXT, text);
         sendIntent.setType("text/plain");
 
+        String msg;
         if (setComponent(sendIntent, GOOGLE_TRANSLATOR)) {
             startActivity(Intent.createChooser(sendIntent, "Select Google Translator"));
+            msg = "OK";
         } else {
             Dialog.appNotFoundDialog(this, "Google Translator", GOOGLE_TRANSLATOR);
-            num = "App not found";
+            msg = "App not found";
         }
 
-        Analytics.logFeature(mFirebaseAnalytics, "Translate", num);
+        Analytics.logFeatureTranslate(mFirebaseAnalytics, msg, mQuestion);
     }
 
     private boolean setComponent(Intent intent, String app) {
@@ -297,7 +298,8 @@ public class QuestionActivity extends AppCompatActivity implements ResultCallbac
         if (!ok) {
             String msg = "Speech Recognizer not found in this device";
             Dialog.promptDialog(this, msg);
-            FirebaseCrash.report(new RuntimeException(msg));
+//            FirebaseCrash.report(new RuntimeException(msg));
+            Analytics.logFeatureVoice(mFirebaseAnalytics, "E: Speech Recognizer not found", mQuestion);
         }
     }
 
@@ -326,7 +328,7 @@ public class QuestionActivity extends AppCompatActivity implements ResultCallbac
                 mQuestionViewHolder.clickAntwort(answer);
                 msg = mQuestion.getAnswerLetter().equals(answer) ? "R" : "W";
             }
-            Analytics.logFeature(mFirebaseAnalytics, "Voice", String.format("[%-5s,%1s] %s", mQuestion.getNum(), msg, spokenText));
+            Analytics.logFeatureVoice(mFirebaseAnalytics, String.format("[%1s: %s", msg, spokenText), mQuestion);
         }
 
         super.onActivityResult(requestCode, resultCode, data);
