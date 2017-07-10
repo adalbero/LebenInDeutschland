@@ -82,6 +82,9 @@ public class QuestionComparator implements Comparator<String> {
             return inv * (r1 - r2);
 
         // greater num
-        return compareNum(num1, num2);
+//        return compareNum(num1, num2);
+
+        // don't mather
+        return 0;
     }
 }

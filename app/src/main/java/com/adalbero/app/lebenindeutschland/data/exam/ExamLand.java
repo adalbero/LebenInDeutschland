@@ -12,8 +12,8 @@ import com.adalbero.app.lebenindeutschland.data.question.Question;
 public class ExamLand extends Exam {
     private String mLand;
 
-    public ExamLand(String name) {
-        super(name);
+    public ExamLand(String name, String subtitle) {
+        super(name, subtitle);
     }
 
     @Override

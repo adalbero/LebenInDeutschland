@@ -24,8 +24,8 @@ public class ExamSearch extends Exam {
 
     private List<String> mTerms;
 
-    public ExamSearch(String name) {
-        super(name);
+    public ExamSearch(String name, String subtitle) {
+        super(name, subtitle);
     }
 
     private List<String> getTerms() {

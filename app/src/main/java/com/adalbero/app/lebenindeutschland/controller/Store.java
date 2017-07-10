@@ -24,9 +24,7 @@ public class Store {
     public static final String PREF_VERSION = "pref.version";
     public static final String PREF_STAT_MAX = "pref.stat.max";
     public static final String PREF_REMOVE_STAT = "pref.remove.stat";
-
-    public static final String DEBUG_ANALYTICS_VER = "debug.analytics.ver";
-    public static final String DEBUG_USERID = "debug.userid";
+    public static final String PREF_EXERCISE_SIZE = "pref.exercise.size";
 
     public static void remove(String key) {
         getPreferences().edit().remove(key).commit();
@@ -188,5 +186,10 @@ public class Store {
 
     public static String getLand() {
         return getString(Store.PREF_LAND, null);
+    }
+
+
+    public static int getExcerciseSize() {
+        return Integer.parseInt(getString(PREF_EXERCISE_SIZE, "20"));
     }
 }

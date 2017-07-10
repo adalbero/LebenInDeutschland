@@ -8,8 +8,8 @@ import com.adalbero.app.lebenindeutschland.data.question.Question;
  */
 
 public class ExamAll extends Exam {
-    public ExamAll(String name) {
-        super(name);
+    public ExamAll(String name, String subtitle) {
+        super(name, subtitle);
     }
 
     @Override

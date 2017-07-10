@@ -1,5 +1,6 @@
 package com.adalbero.app.lebenindeutschland.data.exam;
 
+import com.adalbero.app.lebenindeutschland.R;
 import com.adalbero.app.lebenindeutschland.controller.AppController;
 import com.adalbero.app.lebenindeutschland.data.question.Question;
 
@@ -11,7 +12,12 @@ public class ExamArea extends Exam {
     private int mColor;
 
     public ExamArea(String name) {
-        super(name);
+        super(name, null);
+    }
+
+    @Override
+    public String getSubtitle() {
+        return "by Thema";
     }
 
     @Override
@@ -31,6 +37,24 @@ public class ExamArea extends Exam {
         }
 
         return mColor;
+    }
+
+    @Override
+    protected int onGetIconResource() {
+        String area = getArea();
+
+        if (area.startsWith("Politik"))
+            return R.drawable.ic_thema_politic;
+        else if (area.startsWith("Geschichte"))
+            return R.drawable.ic_thema_history;
+        else if (area.startsWith("Mensch"))
+            return R.drawable.ic_thema_mensh;
+        else
+            return super.onGetIconResource();
+    }
+
+    protected String getArea() {
+        return getTitle(false);
     }
 
 }

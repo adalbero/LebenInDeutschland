@@ -7,6 +7,12 @@
             android:summary="%s"
             android:title="Bundesland" />
 
+        <ListPreference
+            android:defaultValue="20"
+            android:key="pref.exercise.size"
+            android:summary="%s"
+            android:title="Questions in Exercise List" />
+
         <CheckBoxPreference
             android:defaultValue="false"
             android:key="pref.inline.mode"

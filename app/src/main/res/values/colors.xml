@@ -15,6 +15,7 @@
 
     <color name="colorAll">@color/Teal_200</color>
     <color name="colorLand">@color/Purble_200</color>
+    <color name="colorExercise">@color/Indigo_200</color>
     <color name="colorTest">@color/DeepOrange_200</color>
     <color name="colorExam">@color/Brown_200</color>
     <color name="colorArea1">@color/Amber_200</color>

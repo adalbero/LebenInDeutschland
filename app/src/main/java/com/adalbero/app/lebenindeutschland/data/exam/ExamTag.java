@@ -21,8 +21,8 @@ public class ExamTag extends Exam implements ResultCallback {
     private Set<String> mTags;
     private ResultCallback mCallback;
 
-    public ExamTag(String name) {
-        super(name);
+    public ExamTag(String name, String subtitle) {
+        super(name, subtitle);
     }
 
     private Set<String> getTags() {

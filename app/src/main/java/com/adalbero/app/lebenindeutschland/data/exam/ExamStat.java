@@ -28,8 +28,8 @@ public class ExamStat extends Exam {
     private Statistics mStat;
     private int mFilterMode;
 
-    public ExamStat(String name, int filterMode) {
-        super(name);
+    public ExamStat(String name, String subtitle, int filterMode) {
+        super(name, subtitle);
 
         mFilterMode = filterMode;
     }

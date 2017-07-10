@@ -9,6 +9,7 @@ import com.adalbero.app.lebenindeutschland.R;
 import com.adalbero.app.lebenindeutschland.data.exam.Exam;
 import com.adalbero.app.lebenindeutschland.data.exam.ExamAll;
 import com.adalbero.app.lebenindeutschland.data.exam.ExamArea;
+import com.adalbero.app.lebenindeutschland.data.exam.ExamExercise;
 import com.adalbero.app.lebenindeutschland.data.exam.ExamHeader;
 import com.adalbero.app.lebenindeutschland.data.exam.ExamLand;
 import com.adalbero.app.lebenindeutschland.data.exam.ExamRandom;
@@ -83,9 +84,10 @@ public class AppController extends Application {
         List<Exam> examList = new ArrayList<>();
 
         examList.add(new ExamHeader("Questions"));
-        examList.add(new ExamAll("Alle"));
-        examList.add(new ExamLand("Land"));
-        examList.add(new ExamRandom("Test"));
+        examList.add(new ExamAll("Alle", "All general questions"));
+        examList.add(new ExamLand("Land", "Questions specific to your Bundesland"));
+        examList.add(new ExamExercise("Exercise", "Random questions not answered yet"));
+        examList.add(new ExamRandom("Test", "Exam simulator. 33 Random questions"));
 
         examList.add(new ExamHeader("By Thema"));
         examList.add(new ExamArea("Politik in der Demokratie"));
@@ -99,16 +101,16 @@ public class AppController extends Application {
         }
 
         examList.add(new ExamHeader("Filter"));
-        examList.add(new ExamSearch("Search"));
-        examList.add(new ExamTag("Tags"));
+        examList.add(new ExamSearch("Search", "Search questions by keyword"));
+        examList.add(new ExamTag("Tags", "Search questions by tag"));
 
         examList.add(new ExamHeader("Statistics"));
-        examList.add(new ExamStat("At least once wrong", ExamStat.FILTER_ONCE_WRONG));
-        examList.add(new ExamStat("Mostly wrong", ExamStat.FILTER_MOSTLY_WRONG));
-        examList.add(new ExamStat("Last answer wrong", ExamStat.FILTER_LAST_WRONG));
-        examList.add(new ExamStat("Not answered yet", ExamStat.FILTER_NOT_ANSWERED));
-        examList.add(new ExamStat("Last answer right", ExamStat.FILTER_LAST_RIGHT));
-        examList.add(new ExamStat("Mostly right", ExamStat.FILTER_MOSTLY_RIGHT));
+        examList.add(new ExamStat("At least once wrong", "Questions answered at least one time wrong", ExamStat.FILTER_ONCE_WRONG));
+        examList.add(new ExamStat("Mostly wrong", "Questions answered more wrong than right", ExamStat.FILTER_MOSTLY_WRONG));
+        examList.add(new ExamStat("Last answer wrong", "Questions answered wrong the last time", ExamStat.FILTER_LAST_WRONG));
+        examList.add(new ExamStat("Not answered yet", "Questions never answered", ExamStat.FILTER_NOT_ANSWERED));
+        examList.add(new ExamStat("Last answer right", "Questions answered right the last time", ExamStat.FILTER_LAST_RIGHT));
+        examList.add(new ExamStat("Mostly right", "Questions answered more right than wrong", ExamStat.FILTER_MOSTLY_RIGHT));
 
         examList.add(new ExamHeader(""));
 

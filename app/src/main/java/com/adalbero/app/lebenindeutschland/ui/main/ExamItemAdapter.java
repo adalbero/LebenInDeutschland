@@ -40,11 +40,11 @@ public class ExamItemAdapter extends ArrayAdapter<Exam> {
     public View getView(int position, View convertView, ViewGroup parent) {
         final View view;
 
-        if (convertView == null) {
+//        if (convertView == null) {
             view = mInflater.inflate(R.layout.exam_item, parent, false);
-        } else {
-            view = convertView;
-        }
+//        } else {
+//            view = convertView;
+//        }
 
         final Exam exam = getItem(position);
 
@@ -84,6 +84,17 @@ public class ExamItemAdapter extends ArrayAdapter<Exam> {
         text_name.setText(name);
         text_name.setTypeface(null, style);
         text_name.setGravity(gravity);
+
+        TextView text_subtitle = view.findViewById(R.id.text_subtitle);
+        String subtitle = exam.getSubtitle();
+        if (subtitle == null) {
+            text_subtitle.setVisibility(View.GONE);
+        } else {
+            text_subtitle.setVisibility(View.VISIBLE);
+            text_subtitle.setText(subtitle);
+            text_subtitle.setGravity(gravity);
+        }
+
         View btn_details = view.findViewById(R.id.img_details);
         btn_details.setVisibility(visible);
 

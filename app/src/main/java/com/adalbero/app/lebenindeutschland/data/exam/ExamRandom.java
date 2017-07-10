@@ -15,8 +15,8 @@ public class ExamRandom extends Exam {
     private List<Integer> idx_all;
     private List<Integer> idx_land;
 
-    public ExamRandom(String name) {
-        super(name);
+    public ExamRandom(String name, String subtitle) {
+        super(name, subtitle);
 
         idx_all = new ArrayList<>();
         idx_land = new ArrayList<>();

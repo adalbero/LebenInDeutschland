@@ -78,7 +78,7 @@ public class Debug {
         float wrong = 0.2f;
 
         Statistics stat = Statistics.getInstance();
-        Exam exam = new ExamRandom("Debug");
+        Exam exam = new ExamRandom("Debug", null);
         Random random = new Random();
 
         for (int i=0; i<times; i++) {

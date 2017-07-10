@@ -49,6 +49,7 @@ public class SettingsFragment extends PreferenceFragment implements Preference.O
 
         addPreferencesFromResource(preferences);
 
+        initExcerciseSize();
         initStatistics();
 
         Preference pref1 = findPreference(PREF_VERSION);
@@ -81,6 +82,21 @@ public class SettingsFragment extends PreferenceFragment implements Preference.O
     public void onResume() {
         super.onResume();
         mFirebaseAnalytics.setCurrentScreen(getActivity(), "Settings", null);
+    }
+
+    private void initExcerciseSize() {
+        ListPreference listPreference = (ListPreference) findPreference(Store.PREF_EXERCISE_SIZE);
+        listPreference.setOnPreferenceChangeListener(this);
+
+        String values[] = new String[]{"10", "20", "30", "50", "100"};
+        String labels[] = new String[values.length];
+
+        for (int i = 0; i < values.length; i++) {
+            labels[i] = String.format("%s questions", values[i]);
+        }
+
+        listPreference.setEntryValues(values);
+        listPreference.setEntries(labels);
     }
 
     private void initStatistics() {

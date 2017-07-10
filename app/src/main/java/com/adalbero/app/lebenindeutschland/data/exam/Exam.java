@@ -23,10 +23,12 @@ import java.util.List;
 public class Exam {
     public static final String QUESTIONS = "questions";
     private String mName;
+    private String mSubtitle;
     private List<String> mQuestionList;
 
-    public Exam(String name) {
+    public Exam(String name, String subtitle) {
         mName = name;
+        mSubtitle = subtitle;
     }
 
     public void setName(String name) {
@@ -39,6 +41,10 @@ public class Exam {
 
     public String getTitle(boolean showSize) {
         return getName() + (showSize ? " (" + getSize() + ")" : "");
+    }
+
+    public String getSubtitle() {
+        return mSubtitle;
     }
 
     public int getSize() {

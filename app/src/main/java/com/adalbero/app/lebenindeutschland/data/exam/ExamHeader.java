@@ -11,7 +11,7 @@ public class ExamHeader extends Exam {
     private static List<String> EMPTY_LIST = new ArrayList<>();
 
     public ExamHeader(String name) {
-        super(name);
+        super(name, null);
     }
 
     @Override
