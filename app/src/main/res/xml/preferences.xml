@@ -41,24 +41,9 @@
     </PreferenceCategory>
 
     <PreferenceCategory
-        android:key="beta.category"
-        android:title="Beta">
-
-        <CheckBoxPreference
-            android:defaultValue="false"
-            android:key="beta.pref.voice"
-            android:summary="*** BETA FEATURE ***\nEnabel voice command to select an option"
-            android:title="Enable Voice Command" />
-    </PreferenceCategory>
-
-    <PreferenceCategory
         android:key="debug.category"
         android:title="Debug">
 
-        <EditTextPreference
-            android:key="debug.userid"
-            android:summary="Identifies the debug session id"
-            android:title="Debug ID" />
         <Preference
             android:key="debug.dump"
             android:summary="Dump variabels in console"

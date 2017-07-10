@@ -29,8 +29,6 @@ import static com.adalbero.app.lebenindeutschland.controller.Store.PREF_VERSION;
 public class SettingsFragment extends PreferenceFragment implements Preference.OnPreferenceClickListener, Preference.OnPreferenceChangeListener {
     private FirebaseAnalytics mFirebaseAnalytics;
 
-    public static final String BETA_CATEGORY = "beta.category";
-
     public static final String DEBUG_CATEGORY = "debug.category";
     public static final String DEBUG_DUMP = "debug.dump";
     public static final String DEBUG_DUMP_STAT = "debug.dump.stat";
@@ -40,7 +38,6 @@ public class SettingsFragment extends PreferenceFragment implements Preference.O
     public static final String DEBUG_TEST = "debug.test";
 
     private PreferenceCategory mDebugCategory;
-    private PreferenceCategory mBetaCategory;
 
     private int mDebugClick;
     private final int DEBUG_CLICKS = 3;
@@ -77,10 +74,7 @@ public class SettingsFragment extends PreferenceFragment implements Preference.O
 
         mDebugClick = 0;
 
-        mBetaCategory = (PreferenceCategory) findPreference(BETA_CATEGORY);
-
         getPreferenceScreen().removePreference(mDebugCategory);
-        getPreferenceScreen().removePreference(mBetaCategory);
     }
 
     @Override
@@ -121,7 +115,6 @@ public class SettingsFragment extends PreferenceFragment implements Preference.O
             if (mDebugClick == DEBUG_CLICKS - 1) {
                 Toast.makeText(getActivity(), "Enable Debug Mode", Toast.LENGTH_SHORT).show();
                 getPreferenceScreen().addPreference(mDebugCategory);
-                getPreferenceScreen().addPreference(mBetaCategory);
                 Analytics.logFeatureDebug(mFirebaseAnalytics, "enable");
             } else {
                 mDebugClick++;
