@@ -7,10 +7,9 @@ android {
         applicationId "com.adalbero.app.lebenindeutchland"
         minSdkVersion 16
         targetSdkVersion 26
-        versionCode 12
-        versionName '1.4.0'
+        versionCode 13
+        versionName '1.4.1'
         testInstrumentationRunner "android.support.test.runner.AndroidJUnitRunner"
-//        vectorDrawables.useSupportLibrary = true
     }
     buildTypes {
         debug {
@@ -37,7 +36,7 @@ dependencies {
     compile 'com.android.support:design:26.0.0-beta1'
 
     compile 'com.android.support.constraint:constraint-layout:1.0.2'
-
+''
     compile 'com.google.android.gms:play-services-ads:11.0.2'
     compile 'com.google.firebase:firebase-core:11.0.2'
     compile 'com.google.firebase:firebase-crash:11.0.2'
