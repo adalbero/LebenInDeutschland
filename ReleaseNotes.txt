@@ -8,7 +8,7 @@ Ver 1.4.0 (12) - 10/07/2017
 - [New] Exercise List
 - [Upd] Analytics Normalizing
 - [Upd] List subtitle
-- [Upd] Tag feature improvments
+- [Upd] Tag feature improvements
 - [New] Voice Command
 - [New] Exam and Question titlebar subtitle
 - [New] Welcome screen. Select Bundesland
