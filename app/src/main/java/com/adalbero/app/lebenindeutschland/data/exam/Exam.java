@@ -1,7 +1,6 @@
 package com.adalbero.app.lebenindeutschland.data.exam;
 
 import android.app.Activity;
-import android.graphics.drawable.Drawable;
 
 import com.adalbero.app.lebenindeutschland.R;
 import com.adalbero.app.lebenindeutschland.controller.AppController;
@@ -154,19 +153,14 @@ public class Exam {
 
     public int getColor() {
         int resId = onGetColorResource();
-        return AppController.getInstance().getBackgroundColor(resId);
+        return AppController.getCompatColor(resId);
     }
 
     protected int onGetColorResource() {
         return R.color.colorExam;
     }
 
-    public Drawable getIcon() {
-        int resId = onGetIconResource();
-        return AppController.getInstance().getResources().getDrawable(resId);
-    }
-
-    protected int onGetIconResource() {
+    public int getIconResource() {
         return R.drawable.ic_exam;
     }
 

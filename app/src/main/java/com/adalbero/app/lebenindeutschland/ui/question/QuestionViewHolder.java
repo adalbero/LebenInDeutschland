@@ -2,7 +2,6 @@ package com.adalbero.app.lebenindeutschland.ui.question;
 
 import android.app.Activity;
 import android.graphics.Color;
-import android.graphics.drawable.Drawable;
 import android.text.TextUtils;
 import android.util.DisplayMetrics;
 import android.view.View;
@@ -55,8 +54,8 @@ public class QuestionViewHolder implements View.OnClickListener, ResultCallback 
     private ResultCallback mCallback;
     private boolean hasSpace;
 
-    private static int COLOR_RIGHT = AppController.getBackgroundColor(R.color.colorRightLight);
-    private static int COLOR_WRONG = AppController.getBackgroundColor(R.color.colorWrongLight);
+    private static int COLOR_RIGHT = AppController.getCompatColor(R.color.colorRightLight);
+    private static int COLOR_WRONG = AppController.getCompatColor(R.color.colorWrongLight);
 
     public QuestionViewHolder(View view, ExamResult result, boolean questionPage, ResultCallback callback) {
         mFirebaseAnalytics = FirebaseAnalytics.getInstance(view.getContext());
@@ -101,7 +100,8 @@ public class QuestionViewHolder implements View.OnClickListener, ResultCallback 
             btn.setOnClickListener(this);
         }
 
-        DisplayMetrics displayMetrics = AppController.getInstance().getResources().getDisplayMetrics();
+        DisplayMetrics displayMetrics = AppController.getDisplayMetrics();
+
         float h = displayMetrics.heightPixels / displayMetrics.density;
         float w = displayMetrics.widthPixels / displayMetrics.density;
 
@@ -172,14 +172,13 @@ public class QuestionViewHolder implements View.OnClickListener, ResultCallback 
                     mViewImage.setVisibility(View.GONE);
                     mViewImageAlt.setVisibility(View.GONE);
                 } else {
-                    Drawable drawable = AppController.getInstance().getDrawable(imageName);
-
+                    int resId = AppController.getImageResourceByName(imageName);
                     if (hasSpace) {
-                        mViewImageAlt.setImageDrawable(drawable);
+                        mViewImageAlt.setImageResource(resId);
                         mViewImageAlt.setVisibility(View.VISIBLE);
                         mViewImage.setVisibility(View.GONE);
                     } else {
-                        mViewImage.setImageDrawable(drawable);
+                        mViewImage.setImageResource(resId);
                         mViewImage.setVisibility(View.VISIBLE);
                         mViewImageAlt.setVisibility(View.GONE);
                     }

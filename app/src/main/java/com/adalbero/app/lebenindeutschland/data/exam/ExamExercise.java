@@ -66,7 +66,7 @@ public class ExamExercise extends Exam {
     }
 
     @Override
-    protected int onGetIconResource() {
+    public int getIconResource() {
         return R.drawable.ic_exercise;
     }
 

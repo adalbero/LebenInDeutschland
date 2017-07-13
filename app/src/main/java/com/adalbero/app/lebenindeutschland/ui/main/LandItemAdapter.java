@@ -1,7 +1,7 @@
 package com.adalbero.app.lebenindeutschland.ui.main;
 
 import android.content.Context;
-import android.graphics.drawable.Drawable;
+import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -12,6 +12,7 @@ import android.widget.TextView;
 
 import com.adalbero.app.lebenindeutschland.R;
 import com.adalbero.app.lebenindeutschland.controller.AppController;
+import com.google.firebase.crash.FirebaseCrash;
 
 import java.util.List;
 
@@ -65,9 +66,18 @@ public class LandItemAdapter extends ArrayAdapter<String> implements View.OnClic
 
         ImageView iconView = view.findViewById(R.id.icon_land);
         String iconName = "wappen_" + code.toLowerCase();
-        int resId = AppController.getResource("drawable", iconName);
-        Drawable icon = AppController.getInstance().getResources().getDrawable(resId);
-        iconView.setImageDrawable(icon);
+        // Bug#4 fixed, but if still...
+        try {
+            int resId = AppController.getImageResourceByName(iconName);
+            iconView.setImageResource(resId);
+
+            if (iconName.equals("wappen_ni")) throw new Exception("Teste");
+            iconView.setVisibility(View.VISIBLE);
+            FirebaseCrash.logcat(Log.DEBUG, "MyApp", iconName);
+        } catch (Exception ex) {
+            iconView.setVisibility(View.INVISIBLE);
+            FirebaseCrash.report(ex);
+        }
 
         TextView textView = view.findViewById(R.id.text_land);
         textView.setText(name);

@@ -13,6 +13,7 @@ import android.widget.ImageView;
 import android.widget.TextView;
 
 import com.adalbero.app.lebenindeutschland.R;
+import com.adalbero.app.lebenindeutschland.controller.AppController;
 import com.adalbero.app.lebenindeutschland.ui.common.StatView;
 import com.adalbero.app.lebenindeutschland.controller.Statistics;
 import com.adalbero.app.lebenindeutschland.data.exam.Exam;
@@ -69,13 +70,13 @@ public class ExamItemAdapter extends ArrayAdapter<Exam> {
         viewStat.setVisibility(visible);
 
         View item_view = view.findViewById(R.id.item_view);
-        GradientDrawable background = (GradientDrawable) parent.getResources().getDrawable(R.drawable.shape_roundrect);
+        GradientDrawable background = (GradientDrawable) AppController.getCompatDrawable(R.drawable.shape_roundrect);
         background.setColor(color);
         item_view.setBackground(background);
 
         ImageView btn_icon = view.findViewById(R.id.img_icon);
         btn_icon.setVisibility(visible);
-        btn_icon.setImageDrawable(exam.getIcon());
+        btn_icon.setImageResource(exam.getIconResource());
 
         if (exam.isIconColor())
             btn_icon.setColorFilter(Color.TRANSPARENT);

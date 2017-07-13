@@ -23,7 +23,7 @@ public class ExamAll extends Exam {
     }
 
     @Override
-    public int onGetIconResource() {
+    public int getIconResource() {
         return R.drawable.wappen_de;
     }
 

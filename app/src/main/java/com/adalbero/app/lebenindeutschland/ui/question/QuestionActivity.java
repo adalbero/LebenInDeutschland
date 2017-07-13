@@ -163,8 +163,8 @@ public class QuestionActivity extends AppCompatActivity implements ResultCallbac
         ScrollView scrollView = findViewById(R.id.scroll_view);
         scrollView.scrollTo(0, 0);
 
-        mBtnPrev.setImageDrawable(ContextCompat.getDrawable(this, idx > 0 ? R.drawable.ic_prev : R.drawable.ic_close));
-        mBtnNext.setImageDrawable(ContextCompat.getDrawable(this, idx < count - 1 ? R.drawable.ic_next : R.drawable.ic_close));
+        mBtnPrev.setImageResource(idx > 0 ? R.drawable.ic_prev : R.drawable.ic_close);
+        mBtnNext.setImageResource(idx < count - 1 ? R.drawable.ic_next : R.drawable.ic_close);
 
         if (mQuestion == null) {
             String exam = AppController.getCurrentExam().getTitle(true);

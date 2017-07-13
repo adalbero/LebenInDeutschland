@@ -44,12 +44,12 @@ public class ExamLand extends Exam {
     }
 
     @Override
-    public int onGetIconResource() {
+    public int getIconResource() {
         String code = Store.getSelectedLandCode();
-        if (code == null) return super.onGetIconResource();
+        if (code == null) return super.getIconResource();
 
         String name = "wappen_" + code.toLowerCase();
-        int resId = AppController.getResource("drawable", name);
+        int resId = AppController.getImageResourceByName(name);
         return resId;
     }
 

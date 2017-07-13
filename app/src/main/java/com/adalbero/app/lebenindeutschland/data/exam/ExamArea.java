@@ -40,7 +40,7 @@ public class ExamArea extends Exam {
     }
 
     @Override
-    protected int onGetIconResource() {
+    public int getIconResource() {
         String area = getArea();
 
         if (area.startsWith("Politik"))
@@ -50,7 +50,7 @@ public class ExamArea extends Exam {
         else if (area.startsWith("Mensch"))
             return R.drawable.ic_thema_mensh;
         else
-            return super.onGetIconResource();
+            return super.getIconResource();
     }
 
     protected String getArea() {

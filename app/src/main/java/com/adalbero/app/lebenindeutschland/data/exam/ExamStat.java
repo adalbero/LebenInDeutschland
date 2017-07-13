@@ -41,7 +41,7 @@ public class ExamStat extends Exam {
     }
 
     @Override
-    protected int onGetIconResource() {
+    public int getIconResource() {
         return R.drawable.ic_stat;
     }
 

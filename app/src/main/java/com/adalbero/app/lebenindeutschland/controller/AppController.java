@@ -4,6 +4,7 @@ import android.app.Activity;
 import android.app.Application;
 import android.graphics.drawable.Drawable;
 import android.support.v4.content.ContextCompat;
+import android.util.DisplayMetrics;
 
 import com.adalbero.app.lebenindeutschland.R;
 import com.adalbero.app.lebenindeutschland.data.exam.Exam;
@@ -23,6 +24,7 @@ import com.google.android.gms.ads.AdView;
 import com.google.android.gms.ads.MobileAds;
 import com.google.firebase.crash.FirebaseCrash;
 
+import java.io.InputStream;
 import java.util.ArrayList;
 import java.util.List;
 
@@ -66,7 +68,7 @@ public class AppController extends Application {
         AppController app = getInstance();
 
         app.mQuestionDB = new QuestionDB();
-        app.mQuestionDB.load(app);
+        app.mQuestionDB.load();
     }
 
     public static List<Exam> getExamList() {
@@ -134,18 +136,24 @@ public class AppController extends Application {
         return null;
     }
 
-    public static int getResource(String type, String name) {
-        int resourceId = getInstance().getResources().getIdentifier(name, type, getInstance().getPackageName());
-        return resourceId;
+    public static int getImageResourceByName(String name) {
+        return getInstance().getResources().getIdentifier(name, "drawable", getInstance().getPackageName());
     }
 
-    public static Drawable getDrawable(String name) {
-        int resourceId = getResource("drawable", name);
-        return getInstance().getResources().getDrawable(resourceId);
+    public static Drawable getCompatDrawable(int resId) {
+        return ContextCompat.getDrawable(getInstance(), resId);
     }
 
-    public static int getBackgroundColor(int resource) {
-        return ContextCompat.getColor(getInstance(), resource);
+    public static int getCompatColor(int resId) {
+        return ContextCompat.getColor(getInstance(), resId);
+    }
+
+    public static DisplayMetrics getDisplayMetrics() {
+        return getInstance().getResources().getDisplayMetrics();
+    }
+
+    public static InputStream openRawResource(int resId) {
+        return getInstance().getResources().openRawResource(resId);
     }
 
     public static void initAdView(Activity activity) {

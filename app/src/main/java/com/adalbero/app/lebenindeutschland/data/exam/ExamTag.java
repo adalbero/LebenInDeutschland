@@ -86,7 +86,7 @@ public class ExamTag extends Exam implements ResultCallback {
     }
 
     @Override
-    protected int onGetIconResource() {
+    public int getIconResource() {
         return R.drawable.ic_tag;
     }
 

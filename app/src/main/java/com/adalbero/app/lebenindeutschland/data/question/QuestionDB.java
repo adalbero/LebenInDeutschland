@@ -1,9 +1,9 @@
 package com.adalbero.app.lebenindeutschland.data.question;
 
-import android.content.Context;
 import android.util.Log;
 
 import com.adalbero.app.lebenindeutschland.R;
+import com.adalbero.app.lebenindeutschland.controller.AppController;
 
 import java.io.BufferedReader;
 import java.io.IOException;
@@ -23,12 +23,12 @@ import java.util.TreeSet;
 public class QuestionDB {
     private List<Question> mQuestions;
 
-    public void load(Context context) {
+    public void load() {
         mQuestions = new ArrayList<>();
 
         int idx = 1;
         try {
-            InputStream inputStream = context.getResources().openRawResource(R.raw.question_list);
+            InputStream inputStream = AppController.openRawResource(R.raw.question_list);
             BufferedReader reader = new BufferedReader(new InputStreamReader(inputStream));
 
             String line;
@@ -84,7 +84,7 @@ public class QuestionDB {
     }
 
     public List<String> listAllTheme() {
-        List<String> result = new ArrayList();
+        List<String> result = new ArrayList<>();
         String list[] = {"13", "3", "24", "23", "1", "5", "59", "46", "95", "21", "56", "102",
                 "152", "50", "191", "173", "33", "244", "297", "264"};
 
@@ -98,7 +98,7 @@ public class QuestionDB {
 
 
     public Set<String> getAllTags() {
-        Set<String> tags = new TreeSet();
+        Set<String> tags = new TreeSet<>();
 
         for (Question q : mQuestions) {
             tags.addAll(q.getTags());
