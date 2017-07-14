@@ -151,7 +151,7 @@ public class MainActivity extends AppCompatActivity implements ResultCallback {
     @Override
     protected void onResume() {
         super.onResume();
-        mFirebaseAnalytics.setCurrentScreen(this, "Main", null);
+//        mFirebaseAnalytics.setCurrentScreen(this, "Main", null);
     }
 
     private void goSettings() {

@@ -1,8 +1,16 @@
-Backlist ToDo:
+Backlist:
 - String extraction
 - German translate
 - Exam finish history
-- Round loucher icon
+
+Ver 1.4.1 (13) - 14/07/2017
+- [Fix] ResourceNotFound
+- [Fix] Timer not reseting
+- [Upd] UI: option background, checkbox PNG
+- [Upd] Compat Vector Drawable
+- [Upd] Analytics: new Exam Start
+- [Del] Analytics: custom screen_view
+- [New] Round launcher icon
 
 Ver 1.4.0 (12) - 10/07/2017
 - [New] Exercise List

@@ -81,7 +81,7 @@ public class SettingsFragment extends PreferenceFragment implements Preference.O
     @Override
     public void onResume() {
         super.onResume();
-        mFirebaseAnalytics.setCurrentScreen(getActivity(), "Settings", null);
+//        mFirebaseAnalytics.setCurrentScreen(getActivity(), "Settings", null);
     }
 
     private void initExcerciseSize() {

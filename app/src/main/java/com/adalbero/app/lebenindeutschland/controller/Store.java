@@ -31,14 +31,18 @@ public class Store {
     }
 
     public static void removeGroup(String path) {
+        SharedPreferences.Editor edit = getPreferences().edit();
+
         if (!path.endsWith("."))
             path = path + ".";
 
         for (String key : getAllKeys()) {
             if (key.startsWith(path)) {
-                remove(key);
+                edit.remove(key);
             }
         }
+
+        edit.commit();
     }
 
     public static List<String> getAllKeys() {

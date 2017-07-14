@@ -155,13 +155,16 @@ public class ExamActivity extends AppCompatActivity implements ResultCallback {
 
         updateResult();
 
-        mClock.start();
+        boolean isNew = mClock.start();
+        if (isNew) {
+            Analytics.logExamStart(mFirebaseAnalytics, mExam);
+        }
     }
 
     @Override
     protected void onResume() {
         super.onResume();
-        mFirebaseAnalytics.setCurrentScreen(this, "Exam: " + mExam.getTitle(true), null);
+//        mFirebaseAnalytics.setCurrentScreen(this, "Exam: " + mExam.getTitle(true), null);
     }
 
 

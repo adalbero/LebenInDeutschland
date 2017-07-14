@@ -72,9 +72,10 @@ public class LandItemAdapter extends ArrayAdapter<String> implements View.OnClic
             iconView.setImageResource(resId);
 
             iconView.setVisibility(View.VISIBLE);
-            FirebaseCrash.logcat(Log.DEBUG, "MyApp", iconName);
         } catch (Exception ex) {
             iconView.setVisibility(View.INVISIBLE);
+
+            FirebaseCrash.logcat(Log.DEBUG, "MyApp", iconName);
             FirebaseCrash.report(ex);
         }
 

@@ -30,9 +30,14 @@ public class Clock {
         mDefaultTime = Store.getInt(KEY_CLOCK_DEFAULT, 1 * 60 * 60);
     }
 
-    public void start() {
-        mTime = Store.getInt(KEY_CLOCK_TIME, mDefaultTime);
+    public boolean start() {
         boolean stop = Store.getInt(KEY_CLOCK_STOP, 0) == 1;
+
+        mTime = Store.getInt(KEY_CLOCK_TIME, mDefaultTime);
+        boolean isNew = mTime == mDefaultTime;
+        if (isNew) {
+            Store.setInt(KEY_CLOCK_TIME, mTime);
+        }
 
         if (mCountDouwn != null) {
             mCountDouwn.cancel();
@@ -47,8 +52,10 @@ public class Clock {
                 @Override
                 public void onTick(long millisUntilFinished) {
                     mTime = (int) (millisUntilFinished / 1000);
-                    Store.setInt(KEY_CLOCK_TIME, mTime);
-                    updateView();
+                    if (Store.getInt(KEY_CLOCK_TIME, -1) != -1) {
+                        Store.setInt(KEY_CLOCK_TIME, mTime);
+                        updateView();
+                    }
                 }
 
                 @Override
@@ -61,6 +68,8 @@ public class Clock {
 
             mCountDouwn.start();
         }
+
+        return isNew;
     }
 
     public int getExamDuration() {

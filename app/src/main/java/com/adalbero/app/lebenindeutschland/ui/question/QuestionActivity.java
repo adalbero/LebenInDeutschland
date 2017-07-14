@@ -109,7 +109,7 @@ public class QuestionActivity extends AppCompatActivity implements ResultCallbac
     @Override
     protected void onResume() {
         super.onResume();
-        mFirebaseAnalytics.setCurrentScreen(this, "Question of: " + mExamName, null);
+//        mFirebaseAnalytics.setCurrentScreen(this, "Question of: " + mExamName, null);
     }
 
     @Override
