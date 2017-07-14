@@ -71,7 +71,6 @@ public class LandItemAdapter extends ArrayAdapter<String> implements View.OnClic
             int resId = AppController.getImageResourceByName(iconName);
             iconView.setImageResource(resId);
 
-            if (iconName.equals("wappen_ni")) throw new Exception("Teste");
             iconView.setVisibility(View.VISIBLE);
             FirebaseCrash.logcat(Log.DEBUG, "MyApp", iconName);
         } catch (Exception ex) {

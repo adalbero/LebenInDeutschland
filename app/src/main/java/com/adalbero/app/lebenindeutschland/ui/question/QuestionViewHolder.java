@@ -1,7 +1,6 @@
 package com.adalbero.app.lebenindeutschland.ui.question;
 
 import android.app.Activity;
-import android.graphics.Color;
 import android.text.TextUtils;
 import android.util.DisplayMetrics;
 import android.view.View;
@@ -54,6 +53,8 @@ public class QuestionViewHolder implements View.OnClickListener, ResultCallback 
     private ResultCallback mCallback;
     private boolean hasSpace;
 
+//    private static int COLOR_DEFAULT = Color.TRANSPARENT;
+    private static int COLOR_DEFAULT = AppController.getCompatColor(R.color.colorOption);
     private static int COLOR_RIGHT = AppController.getCompatColor(R.color.colorRightLight);
     private static int COLOR_WRONG = AppController.getCompatColor(R.color.colorWrongLight);
 
@@ -218,13 +219,13 @@ public class QuestionViewHolder implements View.OnClickListener, ResultCallback 
 
         int color;
         if (response == null) {
-            color = Color.TRANSPARENT;
+            color = COLOR_DEFAULT;
         } else if (btn.getTag().equals(answer)) {
             color = COLOR_RIGHT;
         } else if (btn.getTag().equals(response)) {
             color = COLOR_WRONG;
         } else {
-            color = Color.TRANSPARENT;
+            color = COLOR_DEFAULT;
         }
 
         btn.setBackgroundColor(color);

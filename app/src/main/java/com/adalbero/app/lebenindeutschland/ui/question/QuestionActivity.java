@@ -293,7 +293,6 @@ public class QuestionActivity extends AppCompatActivity implements ResultCallbac
         if (!ok) {
             String msg = "Speech Recognizer not found in this device";
             Dialog.promptDialog(this, msg);
-//            FirebaseCrash.report(new RuntimeException(msg));
             Analytics.logFeatureVoice(mFirebaseAnalytics, "E: Speech Recognizer not found", mQuestion);
         }
     }
@@ -323,7 +322,7 @@ public class QuestionActivity extends AppCompatActivity implements ResultCallbac
                 mQuestionViewHolder.clickAntwort(answer);
                 msg = mQuestion.getAnswerLetter().equals(answer) ? "R" : "W";
             }
-            Analytics.logFeatureVoice(mFirebaseAnalytics, String.format("[%1s: %s", msg, spokenText), mQuestion);
+            Analytics.logFeatureVoice(mFirebaseAnalytics, String.format("%1s: %s", msg, spokenText), mQuestion);
         }
 
         super.onActivityResult(requestCode, resultCode, data);
@@ -338,7 +337,7 @@ public class QuestionActivity extends AppCompatActivity implements ResultCallbac
                 result[1] = text;
                 text = normalize(text);
 
-                String keywords[] = {"antwort", "nummer"};
+                String keywords[] = {"antwort", "antworte", "nummer"};
                 char ch = Character.MIN_VALUE;
 
                 for (int i = 0; i < keywords.length; i++) {
@@ -381,7 +380,7 @@ public class QuestionActivity extends AppCompatActivity implements ResultCallbac
                 for (int i = 0; i < 4; i++) {
                     String opt = mQuestion.getOptions()[i];
                     opt = normalize(opt);
-                    if (opt.indexOf(text) >= 0) {
+                    if (opt.contains(text)) {
                         if (count != -1) {
                             result[0] = GENAUER_BITTE;
                             return result;

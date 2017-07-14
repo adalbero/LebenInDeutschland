@@ -12,6 +12,7 @@
     <color name="colorWrongDark">@color/Red_300</color>
     <color name="colorNotAnswerd">@color/Gray_400</color>
     <color name="colorNotAnswerdLight">@color/Gray_300</color>
+    <color name="colorOption">@color/Gray_100</color>
 
     <color name="colorAll">@color/Teal_200</color>
     <color name="colorLand">@color/Purble_200</color>

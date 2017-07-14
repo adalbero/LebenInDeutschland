@@ -14,6 +14,7 @@ import com.google.firebase.analytics.FirebaseAnalytics;
 public class Analytics {
 
     public static final String LID_FEATURE = "lid_feature";
+    public static final String LID_EXAM_START = "lid_exam_start";
     public static final String LID_EXAM_FINISH = "lid_exam_finish";
     public static final String LID_QUESTION_ANSWERED = "lid_question_answered";
 
@@ -101,6 +102,14 @@ public class Analytics {
 
     public static void logFeatureTranslate(FirebaseAnalytics firebaseAnalytics, String value, Question question) {
         logFeature(firebaseAnalytics, "Translate", value, null, question);
+    }
+
+    public static void logExamStart(FirebaseAnalytics firebaseAnalytics, Exam exam) {
+
+        Bundle bundle = new Bundle();
+        bundle.putString(LID_PARAM_EXAM_NAME, exam.getName());
+
+        firebaseAnalytics.logEvent(LID_EXAM_START, bundle);
     }
 
     public static void logExamFinish(FirebaseAnalytics firebaseAnalytics, Clock clock, ExamResult result) {
