@@ -44,6 +44,11 @@
             android:summary="unknown"
             android:title="Version" />
 
+        <Preference
+            android:key="pref.database"
+            android:summary="Q2-2018"
+            android:title="Database" />
+
     </PreferenceCategory>
 
     <PreferenceCategory

@@ -1,1 +1,1 @@
-include ':app', ':sandbox'
+include ':app', ':sandbox', ':FragenSpider'

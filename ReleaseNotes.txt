@@ -3,6 +3,11 @@ Backlist:
 - German translate
 - Exam finish history
 
+Ver 1.5.0 (15) - 14/04/2018
+- [Upd] Database Q2-2018
+- [Upd] Target API 27 (Android 8.1 Oreo)
+- [New] Setting: Database Version
+
 Ver 1.4.1 (13) - 14/07/2017
 - [Fix] ResourceNotFound
 - [Fix] Timer not reseting

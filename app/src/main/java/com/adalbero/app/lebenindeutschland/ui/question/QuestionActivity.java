@@ -258,7 +258,7 @@ public class QuestionActivity extends AppCompatActivity implements ResultCallbac
         String msg;
         if (setComponent(sendIntent, GOOGLE_TRANSLATOR)) {
             startActivity(Intent.createChooser(sendIntent, "Select Google Translator"));
-            msg = "OK";
+            msg = null;
         } else {
             Dialog.appNotFoundDialog(this, "Google Translator", GOOGLE_TRANSLATOR);
             msg = "App not found";
