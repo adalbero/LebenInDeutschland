@@ -1,0 +1,298 @@
+Initialized native services in: C:\Users\Adalbero\.gradle\native
+Found daemon DaemonInfo{pid=12776, address=[ec8aaa61-7d10-4e7d-afe4-61ade02e3bac port:51686, addresses:[/127.0.0.1, /0:0:0:0:0:0:0:1]], state=Idle, lastBusy=1547384413721, context=DefaultDaemonContext[uid=7c3a9f60-76fb-420f-a2a9-e73cf1708d6d,javaHome=C:\Java\android-studio-2.2\jre,daemonRegistryDir=C:\Users\Adalbero\.gradle\daemon,pid=12776,idleTimeout=10800000,daemonOpts=-Xmx1536m,-Dfile.encoding=windows-1252,-Duser.country=BR,-Duser.language=pt,-Duser.variant]} however its context does not match the desired criteria.
+Java home is different.
+Wanted: DefaultDaemonContext[uid=null,javaHome=C:\Program Files\Java\jdk1.8.0_60,daemonRegistryDir=C:\Users\Adalbero\.gradle\daemon,pid=14260,idleTimeout=null,daemonOpts=-Xmx1536m,-Dfile.encoding=windows-1252,-Duser.country=BR,-Duser.language=pt,-Duser.variant]
+Actual: DefaultDaemonContext[uid=7c3a9f60-76fb-420f-a2a9-e73cf1708d6d,javaHome=C:\Java\android-studio-2.2\jre,daemonRegistryDir=C:\Users\Adalbero\.gradle\daemon,pid=12776,idleTimeout=10800000,daemonOpts=-Xmx1536m,-Dfile.encoding=windows-1252,-Duser.country=BR,-Duser.language=pt,-Duser.variant]
+
+  Looking for a different daemon...
+The client will now receive all logging from the daemon (pid: 12636). The daemon log file: C:\Users\Adalbero\.gradle\daemon\4.6\daemon-12636.out.log
+Starting 5th build in daemon [uptime: 33 mins 22.912 secs, performance: 100%, no major garbage collections]
+Using 4 worker leases.
+Starting Build
+Settings evaluated using settings file 'C:\Projetos\Android2017\app\LebenInDeutchland\settings.gradle'.
+Projects loaded. Root project using build file 'C:\Projetos\Android2017\app\LebenInDeutchland\build.gradle'.
+Included projects: [root project 'LebenInDeutchland', project ':app', project ':FragenSpider', project ':sandbox']
+Evaluating root project 'LebenInDeutchland' using build file 'C:\Projetos\Android2017\app\LebenInDeutchland\build.gradle'.
+Evaluating project ':app' using build file 'C:\Projetos\Android2017\app\LebenInDeutchland\app\build.gradle'.
+Creating configuration androidTestUtil
+Creating configuration compile
+Creating configuration apk
+Creating configuration provided
+Creating configuration api
+Creating configuration implementation
+Creating configuration runtimeOnly
+Creating configuration compileOnly
+Creating configuration wearApp
+Creating configuration annotationProcessor
+Creating configuration androidTestCompile
+Creating configuration androidTestApk
+Creating configuration androidTestProvided
+Creating configuration androidTestApi
+Creating configuration androidTestImplementation
+Creating configuration androidTestRuntimeOnly
+Creating configuration androidTestCompileOnly
+Creating configuration androidTestWearApp
+Creating configuration androidTestAnnotationProcessor
+Creating configuration testCompile
+Creating configuration testApk
+Creating configuration testProvided
+Creating configuration testApi
+Creating configuration testImplementation
+Creating configuration testRuntimeOnly
+Creating configuration testCompileOnly
+Creating configuration testWearApp
+Creating configuration testAnnotationProcessor
+Creating configuration debugCompile
+Creating configuration debugApk
+Creating configuration debugProvided
+Creating configuration debugApi
+Creating configuration debugImplementation
+Creating configuration debugRuntimeOnly
+Creating configuration debugCompileOnly
+Creating configuration debugWearApp
+Creating configuration debugAnnotationProcessor
+Creating configuration androidTestDebugCompile
+Creating configuration androidTestDebugApk
+Creating configuration androidTestDebugProvided
+Creating configuration androidTestDebugApi
+Creating configuration androidTestDebugImplementation
+Creating configuration androidTestDebugRuntimeOnly
+Creating configuration androidTestDebugCompileOnly
+Creating configuration androidTestDebugWearApp
+Creating configuration androidTestDebugAnnotationProcessor
+Creating configuration testDebugCompile
+Creating configuration testDebugApk
+Creating configuration testDebugProvided
+Creating configuration testDebugApi
+Creating configuration testDebugImplementation
+Creating configuration testDebugRuntimeOnly
+Creating configuration testDebugCompileOnly
+Creating configuration testDebugWearApp
+Creating configuration testDebugAnnotationProcessor
+Creating configuration releaseCompile
+Creating configuration releaseApk
+Creating configuration releaseProvided
+Creating configuration releaseApi
+Creating configuration releaseImplementation
+Creating configuration releaseRuntimeOnly
+Creating configuration releaseCompileOnly
+Creating configuration releaseWearApp
+Creating configuration releaseAnnotationProcessor
+Creating configuration testReleaseCompile
+Creating configuration testReleaseApk
+Creating configuration testReleaseProvided
+Creating configuration testReleaseApi
+Creating configuration testReleaseImplementation
+Creating configuration testReleaseRuntimeOnly
+Creating configuration testReleaseCompileOnly
+Creating configuration testReleaseWearApp
+Creating configuration testReleaseAnnotationProcessor
+Parsing the SDK, no caching allowed
+SDK initialized in 876 ms
+Using incremental javac compilation for :app debug.
+Using incremental javac compilation for :app debugUnitTest.
+Using incremental javac compilation for :app release.
+Using incremental javac compilation for :app releaseUnitTest.
+Using incremental javac compilation for :app debugAndroidTest.
+registerResGeneratingTask is deprecated, use registerGeneratedResFolders(FileCollection)
+registerResGeneratingTask is deprecated, use registerGeneratedResFolders(FileCollection)
+Evaluating project ':FragenSpider' using build file 'C:\Projetos\Android2017\app\LebenInDeutchland\FragenSpider\build.gradle'.
+Evaluating project ':sandbox' using build file 'C:\Projetos\Android2017\app\LebenInDeutchland\sandbox\build.gradle'.
+All projects evaluated.
+Analytics other plugin to proto: Unknown plugin type org.gradle.api.plugins.JavaLibraryPlugin expected enum ORG_GRADLE_API_PLUGINS_JAVALIBRARYPLUGIN
+Selected primary task ':app:assembleDebug' from project :app
+Tasks to be executed: [task ':app:checkDebugClasspath', task ':app:preBuild', task ':app:preDebugBuild', task ':app:compileDebugAidl', task ':app:compileDebugRenderscript', task ':app:checkDebugManifest', task ':app:generateDebugBuildConfig', task ':app:prepareLintJar', task ':app:mainApkListPersistenceDebug', task ':app:generateDebugResValues', task ':app:generateDebugResources', task ':app:processDebugGoogleServices', task ':app:mergeDebugResources', task ':app:createDebugCompatibleScreenManifests', task ':app:processDebugManifest', task ':app:splitsDiscoveryTaskDebug', task ':app:processDebugResources', task ':app:generateDebugSources', task ':app:javaPreCompileDebug', task ':app:compileDebugJavaWithJavac', task ':app:compileDebugNdk', task ':app:compileDebugSources', task ':app:mergeDebugShaders', task ':app:compileDebugShaders', task ':app:generateDebugAssets', task ':app:mergeDebugAssets', task ':app:transformClassesWithDexBuilderForDebug', task ':app:transformDexArchiveWithExternalLibsDexMergerForDebug', task ':app:transformDexArchiveWithDexMergerForDebug', task ':app:mergeDebugJniLibFolders', task ':app:transformNativeLibsWithMergeJniLibsForDebug', task ':app:checkDebugLibraries', task ':app:processDebugJavaRes', task ':app:transformResourcesWithMergeJavaResForDebug', task ':app:validateSigningDebug', task ':app:packageDebug', task ':app:assembleDebug']
+:app:checkDebugClasspath (Thread[Task worker for ':',5,main]) started.
+:app:checkDebugClasspath
+Registered task dependencies: app:debugCompileClasspath
+Starting dependency analysis
+Skipping task ':app:checkDebugClasspath' as it is up-to-date.
+:app:checkDebugClasspath UP-TO-DATE
+:app:checkDebugClasspath (Thread[Task worker for ':',5,main]) completed. Took 1.084 secs.
+:app:preBuild (Thread[Task worker for ':' Thread 3,5,main]) started.
+:app:preBuild
+Skipping task ':app:preBuild' as it has no actions.
+:app:preBuild UP-TO-DATE
+:app:preBuild (Thread[Task worker for ':' Thread 3,5,main]) completed. Took 0.0 secs.
+:app:preDebugBuild (Thread[Task worker for ':' Thread 3,5,main]) started.
+:app:preDebugBuild
+Skipping task ':app:preDebugBuild' as it is up-to-date.
+:app:preDebugBuild UP-TO-DATE
+:app:preDebugBuild (Thread[Task worker for ':' Thread 3,5,main]) completed. Took 0.036 secs.
+:app:compileDebugAidl (Thread[Task worker for ':' Thread 3,5,main]) started.
+:app:compileDebugAidl
+Skipping task ':app:compileDebugAidl' as it has no source files and no previous output files.
+:app:compileDebugAidl NO-SOURCE
+:app:compileDebugAidl (Thread[Task worker for ':' Thread 3,5,main]) completed. Took 0.001 secs.
+:app:compileDebugRenderscript (Thread[Task worker for ':' Thread 3,5,main]) started.
+:app:compileDebugRenderscript
+Skipping task ':app:compileDebugRenderscript' as it is up-to-date.
+:app:compileDebugRenderscript UP-TO-DATE
+:app:compileDebugRenderscript (Thread[Task worker for ':' Thread 3,5,main]) completed. Took 0.011 secs.
+:app:checkDebugManifest (Thread[Task worker for ':' Thread 3,5,main]) started.
+:app:checkDebugManifest
+Skipping task ':app:checkDebugManifest' as it is up-to-date.
+:app:checkDebugManifest UP-TO-DATE
+:app:checkDebugManifest (Thread[Task worker for ':' Thread 3,5,main]) completed. Took 0.001 secs.
+:app:generateDebugBuildConfig (Thread[Task worker for ':' Thread 3,5,main]) started.
+:app:generateDebugBuildConfig
+Skipping task ':app:generateDebugBuildConfig' as it is up-to-date.
+:app:generateDebugBuildConfig UP-TO-DATE
+:app:generateDebugBuildConfig (Thread[Task worker for ':' Thread 3,5,main]) completed. Took 0.012 secs.
+:app:prepareLintJar (Thread[Task worker for ':' Thread 3,5,main]) started.
+:app:prepareLintJar
+Skipping task ':app:prepareLintJar' as it is up-to-date.
+:app:prepareLintJar UP-TO-DATE
+:app:prepareLintJar (Thread[Task worker for ':' Thread 3,5,main]) completed. Took 0.001 secs.
+:app:mainApkListPersistenceDebug (Thread[Task worker for ':' Thread 3,5,main]) started.
+:app:mainApkListPersistenceDebug
+Skipping task ':app:mainApkListPersistenceDebug' as it is up-to-date.
+:app:mainApkListPersistenceDebug UP-TO-DATE
+:app:mainApkListPersistenceDebug (Thread[Task worker for ':' Thread 3,5,main]) completed. Took 0.001 secs.
+:app:generateDebugResValues (Thread[Task worker for ':' Thread 3,5,main]) started.
+:app:generateDebugResValues
+Skipping task ':app:generateDebugResValues' as it is up-to-date.
+:app:generateDebugResValues UP-TO-DATE
+:app:generateDebugResValues (Thread[Task worker for ':' Thread 3,5,main]) completed. Took 0.011 secs.
+:app:generateDebugResources (Thread[Daemon worker Thread 4,5,main]) started.
+:app:generateDebugResources
+Skipping task ':app:generateDebugResources' as it has no actions.
+:app:generateDebugResources UP-TO-DATE
+:app:generateDebugResources (Thread[Daemon worker Thread 4,5,main]) completed. Took 0.0 secs.
+:app:processDebugGoogleServices (Thread[Daemon worker Thread 4,5,main]) started.
+:app:processDebugGoogleServices
+Task ':app:processDebugGoogleServices' is not up-to-date because:
+  Task has not declared any outputs.
+Parsing json file: C:\Projetos\Android2017\app\LebenInDeutchland\app\google-services.json
+:app:processDebugGoogleServices (Thread[Daemon worker Thread 4,5,main]) completed. Took 0.029 secs.
+:app:mergeDebugResources (Thread[Daemon worker Thread 4,5,main]) started.
+:app:mergeDebugResources
+Skipping task ':app:mergeDebugResources' as it is up-to-date.
+:app:mergeDebugResources UP-TO-DATE
+:app:mergeDebugResources (Thread[Daemon worker Thread 4,5,main]) completed. Took 0.382 secs.
+:app:createDebugCompatibleScreenManifests (Thread[Task worker for ':' Thread 3,5,main]) started.
+:app:createDebugCompatibleScreenManifests
+Skipping task ':app:createDebugCompatibleScreenManifests' as it is up-to-date.
+:app:createDebugCompatibleScreenManifests UP-TO-DATE
+:app:createDebugCompatibleScreenManifests (Thread[Task worker for ':' Thread 3,5,main]) completed. Took 0.003 secs.
+:app:processDebugManifest (Thread[Task worker for ':' Thread 3,5,main]) started.
+:app:processDebugManifest
+Skipping task ':app:processDebugManifest' as it is up-to-date.
+:app:processDebugManifest UP-TO-DATE
+:app:processDebugManifest (Thread[Task worker for ':' Thread 3,5,main]) completed. Took 0.015 secs.
+:app:splitsDiscoveryTaskDebug (Thread[Task worker for ':' Thread 3,5,main]) started.
+:app:splitsDiscoveryTaskDebug
+Skipping task ':app:splitsDiscoveryTaskDebug' as it is up-to-date.
+:app:splitsDiscoveryTaskDebug UP-TO-DATE
+:app:splitsDiscoveryTaskDebug (Thread[Task worker for ':' Thread 3,5,main]) completed. Took 0.002 secs.
+:app:processDebugResources (Thread[Task worker for ':' Thread 3,5,main]) started.
+:app:processDebugResources
+Skipping task ':app:processDebugResources' as it is up-to-date.
+:app:processDebugResources UP-TO-DATE
+:app:processDebugResources (Thread[Task worker for ':' Thread 3,5,main]) completed. Took 0.202 secs.
+:app:generateDebugSources (Thread[Daemon worker Thread 4,5,main]) started.
+:app:generateDebugSources
+Skipping task ':app:generateDebugSources' as it has no actions.
+:app:generateDebugSources UP-TO-DATE
+:app:generateDebugSources (Thread[Daemon worker Thread 4,5,main]) completed. Took 0.0 secs.
+:app:javaPreCompileDebug (Thread[Daemon worker Thread 4,5,main]) started.
+:app:javaPreCompileDebug
+Skipping task ':app:javaPreCompileDebug' as it is up-to-date.
+:app:javaPreCompileDebug UP-TO-DATE
+:app:javaPreCompileDebug (Thread[Daemon worker Thread 4,5,main]) completed. Took 0.003 secs.
+:app:compileDebugJavaWithJavac (Thread[Daemon worker Thread 4,5,main]) started.
+:app:compileDebugJavaWithJavac
+file or directory 'C:\Projetos\Android2017\app\LebenInDeutchland\app\src\debug\java', not found
+file or directory 'C:\Projetos\Android2017\app\LebenInDeutchland\app\build\generated\source\aidl\debug', not found
+Skipping task ':app:compileDebugJavaWithJavac' as it is up-to-date.
+:app:compileDebugJavaWithJavac UP-TO-DATE
+:app:compileDebugJavaWithJavac (Thread[Daemon worker Thread 4,5,main]) completed. Took 0.112 secs.
+:app:compileDebugNdk (Thread[Daemon worker Thread 4,5,main]) started.
+:app:compileDebugNdk
+Skipping task ':app:compileDebugNdk' as it has no source files and no previous output files.
+:app:compileDebugNdk NO-SOURCE
+:app:compileDebugNdk (Thread[Daemon worker Thread 4,5,main]) completed. Took 0.001 secs.
+:app:compileDebugSources (Thread[Daemon worker Thread 4,5,main]) started.
+:app:compileDebugSources
+Skipping task ':app:compileDebugSources' as it has no actions.
+:app:compileDebugSources UP-TO-DATE
+:app:compileDebugSources (Thread[Daemon worker Thread 4,5,main]) completed. Took 0.0 secs.
+:app:mergeDebugShaders (Thread[Daemon worker Thread 4,5,main]) started.
+:app:mergeDebugShaders
+Skipping task ':app:mergeDebugShaders' as it is up-to-date.
+:app:mergeDebugShaders UP-TO-DATE
+:app:mergeDebugShaders (Thread[Daemon worker Thread 4,5,main]) completed. Took 0.002 secs.
+:app:compileDebugShaders (Thread[Daemon worker Thread 4,5,main]) started.
+:app:compileDebugShaders
+Skipping task ':app:compileDebugShaders' as it is up-to-date.
+:app:compileDebugShaders UP-TO-DATE
+:app:compileDebugShaders (Thread[Daemon worker Thread 4,5,main]) completed. Took 0.002 secs.
+:app:generateDebugAssets (Thread[Task worker for ':',5,main]) started.
+:app:generateDebugAssets
+Skipping task ':app:generateDebugAssets' as it has no actions.
+:app:generateDebugAssets UP-TO-DATE
+:app:generateDebugAssets (Thread[Task worker for ':',5,main]) completed. Took 0.0 secs.
+:app:mergeDebugAssets (Thread[Task worker for ':',5,main]) started.
+:app:mergeDebugAssets
+Skipping task ':app:mergeDebugAssets' as it is up-to-date.
+:app:mergeDebugAssets UP-TO-DATE
+:app:mergeDebugAssets (Thread[Task worker for ':',5,main]) completed. Took 0.005 secs.
+:app:transformClassesWithDexBuilderForDebug (Thread[Task worker for ':',5,main]) started.
+:app:transformClassesWithDexBuilderForDebug
+Skipping task ':app:transformClassesWithDexBuilderForDebug' as it is up-to-date.
+:app:transformClassesWithDexBuilderForDebug UP-TO-DATE
+:app:transformClassesWithDexBuilderForDebug (Thread[Task worker for ':',5,main]) completed. Took 0.209 secs.
+:app:transformDexArchiveWithExternalLibsDexMergerForDebug (Thread[Task worker for ':',5,main]) started.
+:app:transformDexArchiveWithExternalLibsDexMergerForDebug
+Skipping task ':app:transformDexArchiveWithExternalLibsDexMergerForDebug' as it is up-to-date.
+:app:transformDexArchiveWithExternalLibsDexMergerForDebug UP-TO-DATE
+:app:transformDexArchiveWithExternalLibsDexMergerForDebug (Thread[Task worker for ':',5,main]) completed. Took 0.002 secs.
+:app:transformDexArchiveWithDexMergerForDebug (Thread[Task worker for ':',5,main]) started.
+:app:transformDexArchiveWithDexMergerForDebug
+Skipping task ':app:transformDexArchiveWithDexMergerForDebug' as it is up-to-date.
+:app:transformDexArchiveWithDexMergerForDebug UP-TO-DATE
+:app:transformDexArchiveWithDexMergerForDebug (Thread[Task worker for ':',5,main]) completed. Took 0.006 secs.
+:app:mergeDebugJniLibFolders (Thread[Daemon worker Thread 4,5,main]) started.
+:app:mergeDebugJniLibFolders
+Skipping task ':app:mergeDebugJniLibFolders' as it is up-to-date.
+:app:mergeDebugJniLibFolders UP-TO-DATE
+:app:mergeDebugJniLibFolders (Thread[Daemon worker Thread 4,5,main]) completed. Took 0.002 secs.
+:app:transformNativeLibsWithMergeJniLibsForDebug (Thread[Daemon worker Thread 4,5,main]) started.
+:app:transformNativeLibsWithMergeJniLibsForDebug
+Skipping task ':app:transformNativeLibsWithMergeJniLibsForDebug' as it is up-to-date.
+:app:transformNativeLibsWithMergeJniLibsForDebug UP-TO-DATE
+:app:transformNativeLibsWithMergeJniLibsForDebug (Thread[Daemon worker Thread 4,5,main]) completed. Took 0.04 secs.
+:app:checkDebugLibraries (Thread[Daemon worker Thread 4,5,main]) started.
+:app:checkDebugLibraries
+Skipping task ':app:checkDebugLibraries' as it is up-to-date.
+:app:checkDebugLibraries UP-TO-DATE
+:app:checkDebugLibraries (Thread[Daemon worker Thread 4,5,main]) completed. Took 0.001 secs.
+:app:processDebugJavaRes (Thread[Daemon worker Thread 4,5,main]) started.
+:app:processDebugJavaRes
+Skipping task ':app:processDebugJavaRes' as it has no source files and no previous output files.
+:app:processDebugJavaRes NO-SOURCE
+:app:processDebugJavaRes (Thread[Daemon worker Thread 4,5,main]) completed. Took 0.0 secs.
+:app:transformResourcesWithMergeJavaResForDebug (Thread[Daemon worker Thread 4,5,main]) started.
+:app:transformResourcesWithMergeJavaResForDebug
+Skipping task ':app:transformResourcesWithMergeJavaResForDebug' as it is up-to-date.
+:app:transformResourcesWithMergeJavaResForDebug UP-TO-DATE
+:app:transformResourcesWithMergeJavaResForDebug (Thread[Daemon worker Thread 4,5,main]) completed. Took 0.027 secs.
+:app:validateSigningDebug (Thread[Daemon worker Thread 4,5,main]) started.
+:app:validateSigningDebug
+Skipping task ':app:validateSigningDebug' as it is up-to-date.
+:app:validateSigningDebug UP-TO-DATE
+:app:validateSigningDebug (Thread[Daemon worker Thread 4,5,main]) completed. Took 0.001 secs.
+:app:packageDebug (Thread[Daemon worker Thread 4,5,main]) started.
+:app:packageDebug
+Skipping task ':app:packageDebug' as it is up-to-date.
+:app:packageDebug UP-TO-DATE
+:app:packageDebug (Thread[Daemon worker Thread 4,5,main]) completed. Took 0.029 secs.
+:app:assembleDebug (Thread[Daemon worker Thread 4,5,main]) started.
+:app:assembleDebug
+Skipping task ':app:assembleDebug' as it has no actions.
+:app:assembleDebug UP-TO-DATE
+:app:assembleDebug (Thread[Daemon worker Thread 4,5,main]) completed. Took 0.0 secs.
+
+BUILD SUCCESSFUL in 6s
+28 actionable tasks: 1 executed, 27 up-to-date
+VCS Checkout Cache (C:\Projetos\Android2017\app\LebenInDeutchland\.gradle\vcsWorkingDirs) has not been cleaned up in 0 days

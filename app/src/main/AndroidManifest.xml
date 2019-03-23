@@ -35,6 +35,10 @@
         <activity
             android:name=".ui.settings.SettingsActivity"
             android:parentActivityName=".ui.main.MainActivity" />
+        <meta-data
+            android:name="com.google.android.gms.ads.APPLICATION_ID"
+            android:value="ca-app-pub-5723913637413365~5385598334"/>
+
     </application>
 
 </manifest>

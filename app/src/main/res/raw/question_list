@@ -370,7 +370,7 @@ HH-8;Welches Bundesland ist Hamburg?;1;2;3;4;c;land;Bundesland;Hamburg;frage_hh_
 HH-9;Wie nennt man den Regierungschef / die Regierungschefin des Stadtstaates Hamburg?;Ministerpräsident / Ministerpräsidentin;Erster Bürgermeister / Erste Bürgermeisterin;Regierender Senator / Regierende Senatorin;Oberbürgermeister / Oberbürgermeisterin;b;land;Bundesland;Hamburg;-;
 HH-10;Welchen Senator / welche Senatorin hat Hamburg nicht?;Justizsenator / Justizsenatorin;Senator / Senatorin für Außenbeziehungen;Finanzsenator / Finanzsenatorin;Innensenator / Innensenatorin;b;land;Bundesland;Hamburg;-;
 MV-1;Welches Wappen gehört zum Bundesland Mecklenburg-Vorpommern?;1;2;3;4;c;land;Bundesland;Mecklenburg-Vorpommern;frage_mv_1;image
-MV-2;Welches ist ein Landkreis in Mecklenburg-Vorpommern?;Prignitz;Demmin;Vogtlandkreis;Rhein-Sieg-Kreis;b;land;Bundesland;Mecklenburg-Vorpommern;-;
+MV-2;Welches ist ein Landkreis in Mecklenburg-Vorpommern?;Prignitz;Mecklenburgische Seenplatte;Vogtlandkreis;Rhein-Sieg-Kreis;b;land;Bundesland;Mecklenburg-Vorpommern;-;
 MV-3;Für wie viele Jahre wird der Landtag in Mecklenburg-Vorpommern gewählt?;3;4;5;6;c;land;Bundesland;Mecklenburg-Vorpommern;-;
 MV-4;Ab welchem Alter darf man in Mecklenburg-Vorpommern bei Kommunalwahlen wählen?;14;16;18;20;b;land;Bundesland;Mecklenburg-Vorpommern;-;
 MV-5;Welche Farben hat die Landesflagge von Mecklenburg-Vorpommern?;schwarz-rot-gold;blau-weiß-gelb-rot;grün-weiß-rot;schwarz-gelb;b;land;Bundesland;Mecklenburg-Vorpommern;-;
