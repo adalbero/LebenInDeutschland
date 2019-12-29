@@ -42,7 +42,7 @@ public class FragenSpider {
             Tags tags = new Tags();
             tags.areaCode = vet[1];
             tags.area = vet[2];
-            tags.thema = vet[3];
+            tags.theme = vet[3];
             tags.image = vet[4];
             if (vet.length > 5)
                 tags.tags = vet[5];
@@ -58,7 +58,7 @@ public class FragenSpider {
         FileWriter fout = new FileWriter(file);
         BufferedWriter out = new BufferedWriter(fout);
 
-        out.write("num;question;a;b;c;d;solution;area_code;area;thema;image;Tags");
+        out.write("num;question;a;b;c;d;solution;area_code;area;theme;image;Tags");
         out.newLine();
 
         for (Question q : questionList) {

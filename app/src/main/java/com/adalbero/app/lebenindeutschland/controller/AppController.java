@@ -17,7 +17,7 @@ import com.adalbero.app.lebenindeutschland.data.exam.ExamRandom;
 import com.adalbero.app.lebenindeutschland.data.exam.ExamSearch;
 import com.adalbero.app.lebenindeutschland.data.exam.ExamStat;
 import com.adalbero.app.lebenindeutschland.data.exam.ExamTag;
-import com.adalbero.app.lebenindeutschland.data.exam.ExamThema;
+import com.adalbero.app.lebenindeutschland.data.exam.ExamTheme;
 import com.adalbero.app.lebenindeutschland.data.question.QuestionDB;
 import com.google.android.gms.ads.AdRequest;
 import com.google.android.gms.ads.AdView;
@@ -91,15 +91,15 @@ public class AppController extends Application {
         examList.add(new ExamExercise("Exercise", "Random questions not answered yet"));
         examList.add(new ExamRandom("Test", "Exam simulator. 33 Random questions"));
 
-        examList.add(new ExamHeader("By Thema"));
+        examList.add(new ExamHeader("By Theme"));
         examList.add(new ExamArea("Politik in der Demokratie"));
         examList.add(new ExamArea("Geschichte und Verantwortung"));
         examList.add(new ExamArea("Mensch und Gesellschaft"));
 
         examList.add(new ExamHeader("By Topic"));
-        List<String> themas = getQuestionDB().listAllTheme();
-        for (String thema : themas) {
-            examList.add(new ExamThema(thema));
+        List<String> themes = getQuestionDB().listAllTheme();
+        for (String theme : themes) {
+            examList.add(new ExamTheme(theme));
         }
 
         examList.add(new ExamHeader("Filter"));

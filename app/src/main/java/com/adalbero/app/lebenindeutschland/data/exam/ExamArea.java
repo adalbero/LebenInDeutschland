@@ -17,7 +17,7 @@ public class ExamArea extends Exam {
 
     @Override
     public String getSubtitle() {
-        return "by Thema";
+        return "by Theme";
     }
 
     @Override
@@ -44,11 +44,11 @@ public class ExamArea extends Exam {
         String area = getArea();
 
         if (area.startsWith("Politik"))
-            return R.drawable.ic_thema_politic;
+            return R.drawable.ic_theme_politic;
         else if (area.startsWith("Geschichte"))
-            return R.drawable.ic_thema_history;
+            return R.drawable.ic_theme_history;
         else if (area.startsWith("Mensch"))
-            return R.drawable.ic_thema_mensh;
+            return R.drawable.ic_theme_mensh;
         else
             return super.getIconResource();
     }

@@ -7,8 +7,8 @@ import com.adalbero.app.lebenindeutschland.data.question.Question;
  * Created by Adalbero on 27/05/2017.
  */
 
-public class ExamThema extends ExamArea {
-    public ExamThema(String name) {
+public class ExamTheme extends ExamArea {
+    public ExamTheme(String name) {
         super(name);
     }
 
