@@ -1,6 +1,6 @@
 package com.adalbero.app.lebenindeutschland.data.result;
 
-import android.support.v4.content.ContextCompat;
+import androidx.core.content.ContextCompat;
 import android.util.Log;
 
 import com.adalbero.app.lebenindeutschland.R;

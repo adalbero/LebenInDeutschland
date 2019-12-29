@@ -3,7 +3,7 @@ package com.adalbero.app.lebenindeutschland.controller;
 import android.app.Activity;
 import android.app.Application;
 import android.graphics.drawable.Drawable;
-import android.support.v4.content.ContextCompat;
+import androidx.core.content.ContextCompat;
 import android.util.DisplayMetrics;
 
 import com.adalbero.app.lebenindeutschland.R;

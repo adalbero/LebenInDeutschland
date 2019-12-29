@@ -2,7 +2,7 @@ package com.adalbero.app.lebenindeutschland.ui.settings;
 
 import android.os.Bundle;
 import android.os.PersistableBundle;
-import android.support.v7.app.AppCompatActivity;
+import androidx.appcompat.app.AppCompatActivity;
 
 import com.adalbero.app.lebenindeutschland.R;
 

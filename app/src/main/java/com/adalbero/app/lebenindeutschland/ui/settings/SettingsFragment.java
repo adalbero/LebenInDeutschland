@@ -9,7 +9,7 @@ import android.preference.ListPreference;
 import android.preference.Preference;
 import android.preference.PreferenceCategory;
 import android.preference.PreferenceFragment;
-import android.support.v7.app.AlertDialog;
+import androidx.appcompat.app.AlertDialog;
 import android.widget.Toast;
 
 import com.adalbero.app.lebenindeutschland.controller.Analytics;

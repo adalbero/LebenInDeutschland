@@ -1,7 +1,7 @@
 package com.adalbero.app.lebenindeutschland.controller;
 
 import android.os.CountDownTimer;
-import android.support.v4.content.ContextCompat;
+import androidx.core.content.ContextCompat;
 import android.view.View;
 import android.widget.TextView;
 
