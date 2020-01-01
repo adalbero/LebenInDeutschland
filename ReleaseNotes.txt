@@ -3,7 +3,20 @@ Backlist:
 - German translate
 - Exam finish history
 
-Ver 1.5.0 (15) - 14/04/2018
+Ver 1.7.0 (17) - 
+- [Upd] Database Q1-2020
+- [Upd] Target API 29 (Android 10)
+- [Fix] Typo: Theme
+
+Ver 1.6.1 (16) - 
+- [Fix] bug
+
+Ver 1.6.0 (15) - 
+- [Upd] Database Q2-2019
+- [Upd] Target API 28 (Android 9 Pie)
+- [Fix] Typo: Difficult
+
+Ver 1.5.0 (14) - 14/04/2018
 - [Upd] Database Q2-2018
 - [Upd] Target API 27 (Android 8.1 Oreo)
 - [New] Setting: Database Version

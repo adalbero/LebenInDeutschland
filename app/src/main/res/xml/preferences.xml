@@ -78,7 +78,7 @@
         <Preference
             android:key="debug.test"
             android:summary="Execute 100 tests randomly"
-            android:title="Simulat test" />
+            android:title="Simulate test" />
 
     </PreferenceCategory>
 
