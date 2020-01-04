@@ -5,7 +5,9 @@ import android.app.Application;
 import android.graphics.drawable.Drawable;
 import androidx.core.content.ContextCompat;
 import android.util.DisplayMetrics;
+import android.util.Log;
 
+import com.adalbero.app.lebenindeutschland.BuildConfig;
 import com.adalbero.app.lebenindeutschland.R;
 import com.adalbero.app.lebenindeutschland.data.exam.Exam;
 import com.adalbero.app.lebenindeutschland.data.exam.ExamAll;
@@ -22,7 +24,6 @@ import com.adalbero.app.lebenindeutschland.data.question.QuestionDB;
 import com.google.android.gms.ads.AdRequest;
 import com.google.android.gms.ads.AdView;
 import com.google.android.gms.ads.MobileAds;
-import com.google.firebase.crash.FirebaseCrash;
 
 import java.io.InputStream;
 import java.util.ArrayList;
@@ -157,24 +158,28 @@ public class AppController extends Application {
     }
 
     public static void initAdView(Activity activity) {
-        String ADS_APP_ID = "ca-app-pub-5723913637413365~4650789131";
-        String DEVICE_NEXUS_5X = "4218740A6FE03A56FFF5F7EA8E178378";
+        String ADS_APP_ID = activity.getString(R.string.ads_app_id);
+        String DEVICE_PIXEL3 = "ED3FDF134EDDED51DCD128B2D18F9FE2";
 
         try {
+            // Initialize
+            MobileAds.initialize(getInstance(), ADS_APP_ID);
+
+            // Load AdView
             AdView adView = activity.findViewById(R.id.adView);
             if (adView == null) return;
 
-            MobileAds.initialize(getInstance(), ADS_APP_ID);
+            AdRequest.Builder builder = new AdRequest.Builder();
+            if (BuildConfig.DEBUG) {
+                builder.addTestDevice(AdRequest.DEVICE_ID_EMULATOR);
+                builder.addTestDevice(DEVICE_PIXEL3);
+            }
 
-            AdRequest adRequest = new AdRequest.Builder()
-                    .addTestDevice(AdRequest.DEVICE_ID_EMULATOR)
-                    .addTestDevice(DEVICE_NEXUS_5X)
-                    .build();
-
+            AdRequest adRequest = builder.build();
 
             adView.loadAd(adRequest);
         } catch (Exception ex) {
-            FirebaseCrash.report(ex);
+            Log.e("LID", ex.getMessage());
         }
     }
 

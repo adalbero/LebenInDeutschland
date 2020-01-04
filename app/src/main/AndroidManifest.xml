@@ -41,7 +41,7 @@
             android:parentActivityName=".ui.main.MainActivity" />
         <meta-data
             android:name="com.google.android.gms.ads.APPLICATION_ID"
-            android:value="ca-app-pub-5723913637413365~5385598334"/>
+            android:value="ca-app-pub-6002824579891362~7981010102"/>
 
         <uses-library
             android:name="org.apache.http.legacy"
