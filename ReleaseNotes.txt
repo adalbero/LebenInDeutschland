@@ -3,7 +3,10 @@ Backlist:
 - German translate
 - Exam finish history
 
-Ver 1.7.0 (17) - 
+Ver 1.7.1 (18) - 04/01/2020
+- [Fix] New AdMob
+
+Ver 1.7.0 (17) - 01/01/2020
 - [Upd] Database Q1-2020
 - [Upd] Target API 29 (Android 10)
 - [Fix] Typo: Theme
