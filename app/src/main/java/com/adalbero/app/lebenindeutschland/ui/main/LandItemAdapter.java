@@ -12,7 +12,7 @@ import android.widget.TextView;
 
 import com.adalbero.app.lebenindeutschland.R;
 import com.adalbero.app.lebenindeutschland.controller.AppController;
-import com.google.firebase.crash.FirebaseCrash;
+import com.crashlytics.android.Crashlytics;
 
 import java.util.List;
 
@@ -75,8 +75,8 @@ public class LandItemAdapter extends ArrayAdapter<String> implements View.OnClic
         } catch (Exception ex) {
             iconView.setVisibility(View.INVISIBLE);
 
-            FirebaseCrash.logcat(Log.DEBUG, "MyApp", iconName);
-            FirebaseCrash.report(ex);
+            Crashlytics.log(Log.DEBUG, "lid", "icon=" + iconName);
+            Crashlytics.logException(ex);
         }
 
         TextView textView = view.findViewById(R.id.text_land);

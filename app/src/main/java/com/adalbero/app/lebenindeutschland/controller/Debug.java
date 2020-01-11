@@ -28,7 +28,7 @@ public class Debug {
 
             Object value = prefs.get(key);
 
-            Log.i("MyApp", key + " : " + value);
+            Log.i("lid", key + " : " + value);
         }
     }
 
@@ -37,13 +37,13 @@ public class Debug {
                 AppController.getInstance()).getAll();
         Set<String> keys = new TreeSet<>(prefs.keySet());
 
-        Log.i("MyApp", "Dump Statistics");
+        Log.i("lid", "Dump Statistics");
         for (String key : keys) {
             if (key.startsWith("stat.")) {
 
                 Object value = prefs.get(key);
 
-                Log.i("MyApp", key + " : " + value);
+                Log.i("lid", key + " : " + value);
             }
         }
     }

@@ -4,6 +4,7 @@ import android.util.Log;
 
 import com.adalbero.app.lebenindeutschland.R;
 import com.adalbero.app.lebenindeutschland.controller.AppController;
+import com.crashlytics.android.Crashlytics;
 
 import java.io.BufferedReader;
 import java.io.IOException;
@@ -40,7 +41,12 @@ public class QuestionDB {
                 idx++;
             }
         } catch (IOException e) {
-            Log.e("MyApp", "QuestionDB.load: line:" + idx, e);
+            String msg = "QuestionDB.load: line:" + idx;
+
+            Log.e("lid", msg, e);
+
+            Crashlytics.log(Log.DEBUG, "lid", msg);
+            Crashlytics.logException(e);
         }
 
     }

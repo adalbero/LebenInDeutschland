@@ -21,7 +21,6 @@ import com.adalbero.app.lebenindeutschland.ui.common.ResultCallback;
 import com.adalbero.app.lebenindeutschland.ui.common.StatView;
 import com.adalbero.app.lebenindeutschland.ui.common.TagDialog;
 import com.google.firebase.analytics.FirebaseAnalytics;
-import com.google.firebase.crash.FirebaseCrash;
 
 import java.util.Set;
 
@@ -115,7 +114,7 @@ public class QuestionViewHolder implements View.OnClickListener, ResultCallback 
 
     public View show(Question question) {
         if (question == null) {
-            FirebaseCrash.report(new NullPointerException("Question == null"));
+//            FirebaseCrash.report(new NullPointerException("Question == null"));
 
             question = Question.EMPTY_QUESTION;
         }

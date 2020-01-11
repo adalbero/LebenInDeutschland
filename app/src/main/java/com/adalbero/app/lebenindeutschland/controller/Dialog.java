@@ -5,7 +5,12 @@ import android.content.DialogInterface;
 import android.content.Intent;
 import android.net.Uri;
 import androidx.appcompat.app.AlertDialog;
+
+import android.util.Log;
+import android.webkit.ConsoleMessage;
 import android.widget.Toast;
+
+import com.crashlytics.android.Crashlytics;
 
 /**
  * Created by Adalbero on 01/06/2017.
@@ -31,8 +36,8 @@ public class Dialog {
                             .setData(Uri.parse("market://details?id=" + pack));
                     context.startActivity(goToMarket);
                 } catch (Exception ex) {
-                    Toast.makeText(context, "Fail to install " + text, Toast.LENGTH_SHORT).show();
-
+                    String msg = "Fail to install " + text;
+                    Toast.makeText(context, msg, Toast.LENGTH_SHORT).show();
                 }
             }
         });

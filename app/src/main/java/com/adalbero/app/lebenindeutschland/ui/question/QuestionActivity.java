@@ -29,8 +29,8 @@ import com.adalbero.app.lebenindeutschland.data.result.ExamResult;
 import com.adalbero.app.lebenindeutschland.data.result.ResultInfo;
 import com.adalbero.app.lebenindeutschland.ui.common.ProgressView;
 import com.adalbero.app.lebenindeutschland.ui.common.ResultCallback;
+import com.crashlytics.android.Crashlytics;
 import com.google.firebase.analytics.FirebaseAnalytics;
-import com.google.firebase.crash.FirebaseCrash;
 
 import java.util.List;
 
@@ -171,7 +171,8 @@ public class QuestionActivity extends AppCompatActivity implements ResultCallbac
             String land = Store.getSelectedLandName();
             String msg = String.format("Question==null  count=%d  idx=%d  num=%s  land=%s  exam=%s",
                     count, idx, num, land, exam);
-            FirebaseCrash.logcat(Log.DEBUG, "MyApp", msg);
+
+            Crashlytics.logException(new NullPointerException((msg)));
         }
 
         mQuestionViewHolder.show(mQuestion);

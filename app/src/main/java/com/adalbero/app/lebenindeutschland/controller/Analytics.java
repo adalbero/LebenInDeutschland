@@ -13,6 +13,7 @@ import com.google.firebase.analytics.FirebaseAnalytics;
 
 public class Analytics {
 
+    public static final String LID_APP_CREATE = "lid_app_create";
     public static final String LID_FEATURE = "lid_feature";
     public static final String LID_EXAM_START = "lid_exam_start";
     public static final String LID_EXAM_FINISH = "lid_exam_finish";
@@ -102,6 +103,10 @@ public class Analytics {
 
     public static void logFeatureTranslate(FirebaseAnalytics firebaseAnalytics, String value, Question question) {
         logFeature(firebaseAnalytics, "Translate", value, null, question);
+    }
+
+    public static void logAppCreate(FirebaseAnalytics firebaseAnalytics) {
+        firebaseAnalytics.logEvent(LID_APP_CREATE, null);
     }
 
     public static void logExamStart(FirebaseAnalytics firebaseAnalytics, Exam exam) {

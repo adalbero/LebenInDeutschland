@@ -14,7 +14,7 @@ import com.adalbero.app.lebenindeutschland.data.question.Question;
 import com.adalbero.app.lebenindeutschland.data.result.ExamResult;
 import com.adalbero.app.lebenindeutschland.ui.common.ResultCallback;
 import com.adalbero.app.lebenindeutschland.ui.question.QuestionViewHolder;
-import com.google.firebase.crash.FirebaseCrash;
+import com.crashlytics.android.Crashlytics;
 
 import java.util.List;
 
@@ -50,7 +50,8 @@ public class QuestionItemAdapter extends ArrayAdapter<Question> {
             String examName = AppController.getCurrentExam().getTitle(true);
             String land = Store.getSelectedLandName();
             String msg = String.format("Question==null  position=%d  land=%s  exam=%s", position, land, examName);
-            FirebaseCrash.logcat(Log.DEBUG, "MyApp", msg);
+
+            Crashlytics.logException(new NullPointerException((msg)));
         }
 
         QuestionViewHolder holder = new QuestionViewHolder(view, mResult, false, mCallback);

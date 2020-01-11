@@ -6,6 +6,7 @@ import android.util.Log;
 import com.adalbero.app.lebenindeutschland.R;
 import com.adalbero.app.lebenindeutschland.controller.AppController;
 import com.adalbero.app.lebenindeutschland.controller.Store;
+import com.crashlytics.android.Crashlytics;
 
 import java.util.HashSet;
 import java.util.Set;
@@ -62,7 +63,11 @@ public class Question {
             question.setImage(vet[idx++]);
             question.loadTags(idx < len ? vet[idx++] : "");
         } catch (Exception ex) {
-            Log.e("MyApp", "Question.parse["+question.getNum()+"]: " + ex.getMessage(), ex);
+            String msg = "Question.parse["+question.getNum()+"]: " + ex.getMessage();
+
+            Log.e("lid", msg, ex);
+
+            Crashlytics.logException(ex);
         }
 
 

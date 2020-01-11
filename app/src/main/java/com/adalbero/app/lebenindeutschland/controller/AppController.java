@@ -21,9 +21,11 @@ import com.adalbero.app.lebenindeutschland.data.exam.ExamStat;
 import com.adalbero.app.lebenindeutschland.data.exam.ExamTag;
 import com.adalbero.app.lebenindeutschland.data.exam.ExamTheme;
 import com.adalbero.app.lebenindeutschland.data.question.QuestionDB;
+import com.crashlytics.android.Crashlytics;
 import com.google.android.gms.ads.AdRequest;
 import com.google.android.gms.ads.AdView;
 import com.google.android.gms.ads.MobileAds;
+import com.google.firebase.analytics.FirebaseAnalytics;
 
 import java.io.InputStream;
 import java.util.ArrayList;
@@ -50,6 +52,7 @@ public class AppController extends Application {
         super.onCreate();
 
         mInstance = this;
+        Analytics.logAppCreate(FirebaseAnalytics.getInstance(this));
 
         // Initialize Ads
         String ADS_APP_ID = this.getString(R.string.ads_app_id);
@@ -180,7 +183,8 @@ public class AppController extends Application {
 
             adView.loadAd(adRequest);
         } catch (Exception ex) {
-            Log.e("LID", ex.getMessage());
+            Log.e("lid", ex.getMessage(), ex);
+            Crashlytics.logException(ex);
         }
     }
 
