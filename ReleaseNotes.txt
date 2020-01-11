@@ -3,6 +3,13 @@ Backlist:
 - German translate
 - Exam finish history
 
+Ver 1.7.2 (19) - 11/01/2020
+- [Fix] Fix Ads view
+- [Upd] AndroidX SDK
+- [Upd] Firebase SDK
+- [New] Crashlytics SDK
+- [Fix] ListPreference CLOSE button
+
 Ver 1.7.1 (18) - 04/01/2020
 - [Fix] New AdMob
 
