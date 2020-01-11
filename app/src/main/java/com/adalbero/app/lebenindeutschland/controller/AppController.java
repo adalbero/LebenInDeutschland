@@ -51,6 +51,10 @@ public class AppController extends Application {
 
         mInstance = this;
 
+        // Initialize Ads
+        String ADS_APP_ID = this.getString(R.string.ads_app_id);
+        MobileAds.initialize(getInstance(), ADS_APP_ID);
+
         loadQuestionDB();
         loadExamList();
     }
@@ -158,13 +162,10 @@ public class AppController extends Application {
     }
 
     public static void initAdView(Activity activity) {
-        String ADS_APP_ID = activity.getString(R.string.ads_app_id);
+
         String DEVICE_PIXEL3 = "ED3FDF134EDDED51DCD128B2D18F9FE2";
 
         try {
-            // Initialize
-            MobileAds.initialize(getInstance(), ADS_APP_ID);
-
             // Load AdView
             AdView adView = activity.findViewById(R.id.adView);
             if (adView == null) return;
