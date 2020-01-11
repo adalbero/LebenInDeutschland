@@ -10,6 +10,7 @@
         <ListPreference
             android:defaultValue="20"
             android:key="pref.exercise.size"
+            android:negativeButtonText="Close"
             android:summary="%s"
             android:title="Questions in Exercise List" />
 
@@ -27,6 +28,7 @@
         <ListPreference
             android:defaultValue="5"
             android:key="pref.stat.max"
+            android:negativeButtonText="Close"
             android:summary="%s"
             android:title="Statistics History" />
 
