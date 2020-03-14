@@ -27,7 +27,7 @@ public class TagDialog extends DialogFragment {
 
     private ResultCallback mCallback;
 
-    public Set<String> selected;
+    public Set<String> selected =  new TreeSet<>();
     private TextView newTag;
     private boolean allowNewTag;
     private String title;
