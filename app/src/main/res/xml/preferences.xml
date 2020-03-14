@@ -59,7 +59,7 @@
 
         <Preference
             android:key="debug.dump"
-            android:summary="Dump variabels in console"
+            android:summary="Dump variables in console"
             android:title="Dump variables" />
         <Preference
             android:key="debug.dump.stat"
