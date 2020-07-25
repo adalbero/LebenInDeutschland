@@ -22,7 +22,7 @@ public class Clock {
 
     private TextView mClockView;
     private int mTime;
-    private CountDownTimer mCountDouwn;
+    private CountDownTimer mCountDown;
     private int mDefaultTime;
 
     public Clock(TextView clockView) {
@@ -39,15 +39,15 @@ public class Clock {
             Store.setInt(KEY_CLOCK_TIME, mTime);
         }
 
-        if (mCountDouwn != null) {
-            mCountDouwn.cancel();
+        if (mCountDown != null) {
+            mCountDown.cancel();
         }
 
         if (stop) {
             updateView();
         } else {
             Store.setInt(KEY_CLOCK_STOP, 0);
-            mCountDouwn = new CountDownTimer(mTime * 1000, 1000) {
+            mCountDown = new CountDownTimer(mTime * 1000, 1000) {
 
                 @Override
                 public void onTick(long millisUntilFinished) {
@@ -66,7 +66,7 @@ public class Clock {
                 }
             };
 
-            mCountDouwn.start();
+            mCountDown.start();
         }
 
         return isNew;
@@ -103,14 +103,14 @@ public class Clock {
     }
 
     public void pause() {
-        if (mCountDouwn != null)
-            mCountDouwn.cancel();
+        if (mCountDown != null)
+            mCountDown.cancel();
     }
 
     public void stop() {
         Store.setInt(KEY_CLOCK_STOP, 1);
-        if (mCountDouwn != null)
-            mCountDouwn.cancel();
+        if (mCountDown != null)
+            mCountDown.cancel();
         updateView();
     }
 

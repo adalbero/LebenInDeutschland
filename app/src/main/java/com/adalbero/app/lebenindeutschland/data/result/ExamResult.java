@@ -8,7 +8,7 @@ import com.adalbero.app.lebenindeutschland.controller.AppController;
 import com.adalbero.app.lebenindeutschland.controller.Store;
 import com.adalbero.app.lebenindeutschland.data.exam.Exam;
 import com.adalbero.app.lebenindeutschland.data.question.Question;
-import com.crashlytics.android.Crashlytics;
+import com.google.firebase.crashlytics.FirebaseCrashlytics;
 
 import java.util.Arrays;
 import java.util.HashMap;
@@ -134,10 +134,12 @@ public class ExamResult {
         result.total = getCount();
 
         if (answerList.size() != questionList.size()) {
-            Crashlytics.log(Log.DEBUG, "lid", "Exam: " + exam.getTitle(true));
-            Crashlytics.log(Log.DEBUG, "lid", "questionList=" + questionList.toString());
-            Crashlytics.log(Log.DEBUG, "lid", "answerList=" + answerList.toString());
-            Crashlytics.logException(new IndexOutOfBoundsException("questionList != answerList"));
+            FirebaseCrashlytics crashlytics = FirebaseCrashlytics.getInstance();
+
+            crashlytics.log("lid: Exam: " + exam.getTitle(true));
+            crashlytics.log("lid: questionList=" + questionList.toString());
+            crashlytics.log("lid: answerList=" + answerList.toString());
+            crashlytics.recordException(new IndexOutOfBoundsException("questionList != answerList"));
         }
 
         int n = Math.min(questionList.size(), answerList.size());

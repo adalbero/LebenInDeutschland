@@ -44,7 +44,7 @@ public class QuestionViewHolder implements View.OnClickListener, ResultCallback 
     private StatView mViewStat;
     private View mViewStatus;
     private TextView mViewQuestion;
-    private CheckedTextView mViewOptions[] = new CheckedTextView[4];
+    private CheckedTextView[] mViewOptions = new CheckedTextView[4];
     private ImageView mViewImage;
     private ImageView mViewImageAlt;
     private View mGroupOptions;

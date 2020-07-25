@@ -29,8 +29,8 @@ import com.adalbero.app.lebenindeutschland.data.result.ExamResult;
 import com.adalbero.app.lebenindeutschland.data.result.ResultInfo;
 import com.adalbero.app.lebenindeutschland.ui.common.ProgressView;
 import com.adalbero.app.lebenindeutschland.ui.common.ResultCallback;
-import com.crashlytics.android.Crashlytics;
 import com.google.firebase.analytics.FirebaseAnalytics;
+import com.google.firebase.crashlytics.FirebaseCrashlytics;
 
 import java.util.List;
 
@@ -172,7 +172,7 @@ public class QuestionActivity extends AppCompatActivity implements ResultCallbac
             String msg = String.format("Question==null  count=%d  idx=%d  num=%s  land=%s  exam=%s",
                     count, idx, num, land, exam);
 
-            Crashlytics.logException(new NullPointerException((msg)));
+            FirebaseCrashlytics.getInstance().recordException(new NullPointerException((msg)));
         }
 
         mQuestionViewHolder.show(mQuestion);
@@ -330,7 +330,7 @@ public class QuestionActivity extends AppCompatActivity implements ResultCallbac
     }
 
     private String[] findAnswer(List<String> results) {
-        String result[] = new String[2];
+        String[] result = new String[2];
 
         for (String text : results) {
             if (text != null && text.length() > 0) {
@@ -338,7 +338,7 @@ public class QuestionActivity extends AppCompatActivity implements ResultCallbac
                 result[1] = text;
                 text = normalize(text);
 
-                String keywords[] = {"antwort", "antworte", "nummer"};
+                String[] keywords = {"antwort", "antworte", "nummer"};
                 char ch = Character.MIN_VALUE;
 
                 for (int i = 0; i < keywords.length; i++) {

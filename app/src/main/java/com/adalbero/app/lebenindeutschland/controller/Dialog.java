@@ -6,11 +6,7 @@ import android.content.Intent;
 import android.net.Uri;
 import androidx.appcompat.app.AlertDialog;
 
-import android.util.Log;
-import android.webkit.ConsoleMessage;
 import android.widget.Toast;
-
-import com.crashlytics.android.Crashlytics;
 
 /**
  * Created by Adalbero on 01/06/2017.

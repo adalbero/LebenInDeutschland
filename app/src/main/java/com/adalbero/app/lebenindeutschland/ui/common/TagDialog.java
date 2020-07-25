@@ -73,7 +73,7 @@ public class TagDialog extends DialogFragment {
 
     public void initView(View v) {
         Set<String> tags = AppController.getInstance().getQuestionDB().getAllTags();
-        List<String> data = new ArrayList(tags);
+        List<String> data = new ArrayList<>(tags);
 
         removeOldTags(data);
 

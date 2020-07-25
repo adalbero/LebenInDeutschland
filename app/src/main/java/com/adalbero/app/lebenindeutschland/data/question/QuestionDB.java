@@ -4,7 +4,7 @@ import android.util.Log;
 
 import com.adalbero.app.lebenindeutschland.R;
 import com.adalbero.app.lebenindeutschland.controller.AppController;
-import com.crashlytics.android.Crashlytics;
+import com.google.firebase.crashlytics.FirebaseCrashlytics;
 
 import java.io.BufferedReader;
 import java.io.IOException;
@@ -44,9 +44,10 @@ public class QuestionDB {
             String msg = "QuestionDB.load: line:" + idx;
 
             Log.e("lid", msg, e);
+            FirebaseCrashlytics crashlytics = FirebaseCrashlytics.getInstance();
 
-            Crashlytics.log(Log.DEBUG, "lid", msg);
-            Crashlytics.logException(e);
+            crashlytics.log("lid: " + msg);
+            crashlytics.recordException(e);
         }
 
     }

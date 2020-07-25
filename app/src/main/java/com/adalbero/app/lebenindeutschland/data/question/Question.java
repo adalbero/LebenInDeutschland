@@ -6,7 +6,7 @@ import android.util.Log;
 import com.adalbero.app.lebenindeutschland.R;
 import com.adalbero.app.lebenindeutschland.controller.AppController;
 import com.adalbero.app.lebenindeutschland.controller.Store;
-import com.crashlytics.android.Crashlytics;
+import com.google.firebase.crashlytics.FirebaseCrashlytics;
 
 import java.util.HashSet;
 import java.util.Set;
@@ -43,14 +43,14 @@ public class Question {
 
     public static Question parse(String line) {
         Question question = new Question();
-        String vet[] = line.split(";");
+        String[] vet = line.split(";");
         int len = vet.length;
 
         int idx = 0;
         try {
             question.setNum(vet[idx++]);
             question.setQuestion(vet[idx++]);
-            String options[] = new String[4];
+            String[] options = new String[4];
             options[0] = vet[idx++];
             options[1] = vet[idx++];
             options[2] = vet[idx++];
@@ -67,7 +67,7 @@ public class Question {
 
             Log.e("lid", msg, ex);
 
-            Crashlytics.logException(ex);
+            FirebaseCrashlytics.getInstance().recordException(ex);
         }
 
 
@@ -224,7 +224,7 @@ public class Question {
         if (value == null) value = "";
 
         tags = new HashSet<>();
-        String items[] = value.split(",");
+        String[] items = value.split(",");
         for (String item : items) {
             if (item.trim().length() > 0)
                 tags.add(item.trim());

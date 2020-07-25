@@ -1,7 +1,6 @@
 package com.adalbero.app.lebenindeutschland.ui.exam;
 
 import android.content.Context;
-import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -14,7 +13,7 @@ import com.adalbero.app.lebenindeutschland.data.question.Question;
 import com.adalbero.app.lebenindeutschland.data.result.ExamResult;
 import com.adalbero.app.lebenindeutschland.ui.common.ResultCallback;
 import com.adalbero.app.lebenindeutschland.ui.question.QuestionViewHolder;
-import com.crashlytics.android.Crashlytics;
+import com.google.firebase.crashlytics.FirebaseCrashlytics;
 
 import java.util.List;
 
@@ -51,7 +50,7 @@ public class QuestionItemAdapter extends ArrayAdapter<Question> {
             String land = Store.getSelectedLandName();
             String msg = String.format("Question==null  position=%d  land=%s  exam=%s", position, land, examName);
 
-            Crashlytics.logException(new NullPointerException((msg)));
+            FirebaseCrashlytics.getInstance().recordException(new NullPointerException((msg)));
         }
 
         QuestionViewHolder holder = new QuestionViewHolder(view, mResult, false, mCallback);

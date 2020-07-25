@@ -4,6 +4,8 @@ import android.app.Activity;
 import android.app.Application;
 import android.graphics.drawable.Drawable;
 import androidx.core.content.ContextCompat;
+import androidx.multidex.MultiDexApplication;
+
 import android.util.DisplayMetrics;
 import android.util.Log;
 
@@ -21,11 +23,12 @@ import com.adalbero.app.lebenindeutschland.data.exam.ExamStat;
 import com.adalbero.app.lebenindeutschland.data.exam.ExamTag;
 import com.adalbero.app.lebenindeutschland.data.exam.ExamTheme;
 import com.adalbero.app.lebenindeutschland.data.question.QuestionDB;
-import com.crashlytics.android.Crashlytics;
 import com.google.android.gms.ads.AdRequest;
 import com.google.android.gms.ads.AdView;
 import com.google.android.gms.ads.MobileAds;
+import com.google.android.gms.ads.RequestConfiguration;
 import com.google.firebase.analytics.FirebaseAnalytics;
+import com.google.firebase.crashlytics.FirebaseCrashlytics;
 
 import java.io.InputStream;
 import java.util.ArrayList;
@@ -35,7 +38,7 @@ import java.util.List;
  * Created by Adalbero on 16/05/2017.
  */
 
-public class AppController extends Application {
+public class AppController extends MultiDexApplication {
 
     private static AppController mInstance;
 
@@ -173,18 +176,26 @@ public class AppController extends Application {
             AdView adView = activity.findViewById(R.id.adView);
             if (adView == null) return;
 
-            AdRequest.Builder builder = new AdRequest.Builder();
+//            AdRequest.Builder builder = new AdRequest.Builder();
             if (BuildConfig.DEBUG) {
-                builder.addTestDevice(AdRequest.DEVICE_ID_EMULATOR);
-                builder.addTestDevice(DEVICE_PIXEL3);
+//                builder.addTestDevice(AdRequest.DEVICE_ID_EMULATOR);
+//                builder.addTestDevice(DEVICE_PIXEL3);
+                List<String> testDevices = new ArrayList<>();
+                testDevices.add(AdRequest.DEVICE_ID_EMULATOR);
+                testDevices.add(DEVICE_PIXEL3);
+
+                RequestConfiguration requestConfiguration
+                        = new RequestConfiguration.Builder()
+                        .setTestDeviceIds(testDevices)
+                        .build();
+                MobileAds.setRequestConfiguration(requestConfiguration);
             }
 
-            AdRequest adRequest = builder.build();
+            adView.loadAd(new AdRequest.Builder().build());
 
-            adView.loadAd(adRequest);
         } catch (Exception ex) {
             Log.e("lid", ex.getMessage(), ex);
-            Crashlytics.logException(ex);
+            FirebaseCrashlytics.getInstance().recordException(ex);
         }
     }
 
