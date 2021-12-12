@@ -23,6 +23,7 @@
         >
         <activity
             android:name=".ui.main.MainActivity"
+            android:exported="false"
             android:configChanges="keyboardHidden|orientation">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
@@ -32,12 +33,15 @@
         </activity>
         <activity
             android:name=".ui.exam.ExamActivity"
+            android:exported="false"
             android:parentActivityName=".ui.main.MainActivity" />
         <activity
             android:name=".ui.question.QuestionActivity"
+            android:exported="false"
             android:parentActivityName=".ui.exam.ExamActivity" />
         <activity
             android:name=".ui.settings.SettingsActivity"
+            android:exported="false"
             android:parentActivityName=".ui.main.MainActivity" />
         <meta-data
             android:name="com.google.android.gms.ads.APPLICATION_ID"
