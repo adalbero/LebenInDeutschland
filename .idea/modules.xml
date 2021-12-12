@@ -2,10 +2,10 @@
 <project version="4">
   <component name="ProjectModuleManager">
     <modules>
-      <module fileurl="file://$PROJECT_DIR$/FragenSpider/FragenSpider.iml" filepath="$PROJECT_DIR$/FragenSpider/FragenSpider.iml" group="LebenInDeutschland/FragenSpider" />
-      <module fileurl="file://$PROJECT_DIR$/LebenInDeutschland.iml" filepath="$PROJECT_DIR$/LebenInDeutschland.iml" group="LebenInDeutschland" />
-      <module fileurl="file://$PROJECT_DIR$/app/app.iml" filepath="$PROJECT_DIR$/app/app.iml" group="LebenInDeutschland/app" />
-      <module fileurl="file://$PROJECT_DIR$/sandbox/sandbox.iml" filepath="$PROJECT_DIR$/sandbox/sandbox.iml" group="LebenInDeutschland/sandbox" />
+      <module fileurl="file://$PROJECT_DIR$/LebenInDeutschland.iml" filepath="$PROJECT_DIR$/LebenInDeutschland.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/FragenSpider/LebenInDeutschland.FragenSpider.iml" filepath="$PROJECT_DIR$/.idea/modules/FragenSpider/LebenInDeutschland.FragenSpider.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/app/LebenInDeutschland.app.iml" filepath="$PROJECT_DIR$/.idea/modules/app/LebenInDeutschland.app.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/sandbox/LebenInDeutschland.sandbox.iml" filepath="$PROJECT_DIR$/.idea/modules/sandbox/LebenInDeutschland.sandbox.iml" />
     </modules>
   </component>
 </project>

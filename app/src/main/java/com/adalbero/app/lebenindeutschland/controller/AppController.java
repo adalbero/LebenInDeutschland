@@ -58,8 +58,9 @@ public class AppController extends MultiDexApplication {
         Analytics.logAppCreate(FirebaseAnalytics.getInstance(this));
 
         // Initialize Ads
-        String ADS_APP_ID = this.getString(R.string.ads_app_id);
-        MobileAds.initialize(getInstance(), ADS_APP_ID);
+//        String ADS_APP_ID = this.getString(R.string.ads_app_id);
+//        MobileAds.initialize(getInstance(), ADS_APP_ID);
+        MobileAds.initialize(getInstance());
 
         loadQuestionDB();
         loadExamList();
