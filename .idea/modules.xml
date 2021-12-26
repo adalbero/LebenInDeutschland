@@ -2,7 +2,7 @@
 <project version="4">
   <component name="ProjectModuleManager">
     <modules>
-      <module fileurl="file://$PROJECT_DIR$/LebenInDeutschland.iml" filepath="$PROJECT_DIR$/LebenInDeutschland.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/LebenInDeutschland.iml" filepath="$PROJECT_DIR$/.idea/modules/LebenInDeutschland.iml" />
       <module fileurl="file://$PROJECT_DIR$/.idea/modules/FragenSpider/LebenInDeutschland.FragenSpider.iml" filepath="$PROJECT_DIR$/.idea/modules/FragenSpider/LebenInDeutschland.FragenSpider.iml" />
       <module fileurl="file://$PROJECT_DIR$/.idea/modules/app/LebenInDeutschland.app.iml" filepath="$PROJECT_DIR$/.idea/modules/app/LebenInDeutschland.app.iml" />
       <module fileurl="file://$PROJECT_DIR$/.idea/modules/sandbox/LebenInDeutschland.sandbox.iml" filepath="$PROJECT_DIR$/.idea/modules/sandbox/LebenInDeutschland.sandbox.iml" />

@@ -5,8 +5,10 @@ import android.content.Intent;
 import android.content.pm.ResolveInfo;
 import android.os.Bundle;
 import android.speech.RecognizerIntent;
+
 import androidx.core.content.ContextCompat;
 import androidx.appcompat.app.AppCompatActivity;
+
 import android.util.Log;
 import android.view.Menu;
 import android.view.MenuItem;
@@ -269,19 +271,31 @@ public class QuestionActivity extends AppCompatActivity implements ResultCallbac
     }
 
     private boolean setComponent(Intent intent, String app) {
-        List<ResolveInfo> intentList = getPackageManager().queryIntentActivities(intent, 0);
 
-        for (ResolveInfo ri : intentList) {
-            String packageName = ri.activityInfo.packageName;
-            String activityName = ri.activityInfo.name;
+        // Dec/2021 Fix: Translator stopped working. Hardcoded.
+        try {
+            intent.setComponent(new ComponentName(app,
+                    "com.google.android.apps.translate.TranslateActivity"));
+            startActivity(Intent.createChooser(intent, "Select Google Translator"));
 
-            if (packageName.equals(app)) {
-                intent.setComponent(new ComponentName(packageName, activityName));
-                return true;
-            }
+            return true;
+        } catch (Exception ex) {
+            return false;
         }
 
-        return false;
+//        List<ResolveInfo> intentList = getPackageManager().queryIntentActivities(intent, 0);
+//
+//        for (ResolveInfo ri : intentList) {
+//            String packageName = ri.activityInfo.packageName;
+//            String activityName = ri.activityInfo.name;
+//
+//            if (packageName.equals(app)) {
+//                intent.setComponent(new ComponentName(packageName, activityName));
+//                return true;
+//            }
+//        }
+//
+//        return false;
     }
 
     private void doSpeachRecognize() {
