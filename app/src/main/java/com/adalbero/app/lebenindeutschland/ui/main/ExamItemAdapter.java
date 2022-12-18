@@ -1,5 +1,7 @@
 package com.adalbero.app.lebenindeutschland.ui.main;
 
+import static android.graphics.Typeface.*;
+
 import android.content.Context;
 import android.graphics.Color;
 import android.graphics.Typeface;
@@ -50,13 +52,13 @@ public class ExamItemAdapter extends ArrayAdapter<Exam> {
         final Exam exam = getItem(position);
 
         String name = exam.getTitle(true);
-        int style = Typeface.NORMAL;
+        int style = NORMAL;
         int color = Color.TRANSPARENT;
         int visible = View.VISIBLE;
         int gravity = Gravity.LEFT;
 
         if (exam instanceof ExamHeader) {
-            style = Typeface.BOLD | Typeface.ITALIC;
+            style = Typeface.BOLD + Typeface.ITALIC;
             visible = View.GONE;
             name = "\n" + name;
             gravity = Gravity.CENTER_HORIZONTAL;

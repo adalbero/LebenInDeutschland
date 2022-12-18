@@ -16,7 +16,8 @@ import java.util.List;
 import java.util.Map;
 
 public class FragenSpider {
-    private static final String HOME = "C:\\Projects\\LiD\\Android\\LebenInDeutschland\\FragenSpider";
+//    private static final String HOME = "C:\\Projects\\LiD\\Android\\LebenInDeutschland\\FragenSpider";
+    private static final String HOME = "/Users/adalbero/Projects/LebenInDeutschland/FragenSpider";
 
     public static void main(String[] args) throws Exception {
         System.out.println("BEGIN");
@@ -32,7 +33,7 @@ public class FragenSpider {
     public static Map<String, Tags> loadTags() throws IOException {
         Map<String, Tags> tagList = new HashMap<>();
 
-        File file = new File(HOME + "\\src\\main\\resources\\tags.csv");
+        File file = new File(HOME + "/src/main/resources/tags.csv");
         BufferedReader reader = new BufferedReader(new FileReader(file));
 
         String line;
