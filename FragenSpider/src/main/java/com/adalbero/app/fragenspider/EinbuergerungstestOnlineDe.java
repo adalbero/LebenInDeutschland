@@ -31,7 +31,7 @@ public class EinbuergerungstestOnlineDe {
         return list;
     }
 
-    static String REGEX_QUESTION = "(<div class=\"mb-8.*?\".+?</div>)";
+    static String REGEX_QUESTION = "(<div class=\"mb-8.*?\">.*?<ul>.+?</ul>.*?</div>)";
 
     public static void pareQuestions(List<Question> list, String text, String state) {
         Pattern p = Pattern.compile(REGEX_QUESTION, Pattern.DOTALL);
@@ -87,6 +87,7 @@ public class EinbuergerungstestOnlineDe {
         Matcher m = p.matcher(text);
         int idx = 0;
 
+//        System.out.println(text);
         while (m.find()) {
             q.answers[idx] = m.group(2);
             if (m.group(1) != null) {

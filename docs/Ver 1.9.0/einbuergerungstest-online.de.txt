@@ -19,7 +19,7 @@ num;question;a;b;c;d;solution;area_code;area;theme;image;Tags
 18;Welches Grundrecht ist in Artikel 1 des Grundgesetzes der Bundesrepublik Deutschland garantiert?;die Unantastbarkeit der Menschenwürde;das Recht auf Leben;Religionsfreiheit;Meinungsfreiheit;a;politik;Politik in der Demokratie;Grundrechte;-;
 19;Was versteht man unter dem Recht der „Freizügigkeit“ in Deutschland?;Man darf sich seinen Wohnort selbst aussuchen.;Man kann seinen Beruf wechseln.;Man darf sich für eine andere Religion entscheiden.;Man darf sich in der Öffentlichkeit nur leicht bekleidet bewegen.;a;politik;Politik in der Demokratie;Grundrechte;-;
 20;Eine Partei in Deutschland verfolgt das Ziel, eine Diktatur zu errichten. Sie ist dann ...;tolerant.;rechtsstaatlich orientiert.;gesetzestreu.;verfassungswidrig.;d;politik;Politik in der Demokratie;Verfassungsorgane;-;
-21;Welches ist das Wappen der Bundesrepublik Deutschland?;null;null;null;null;a;politik;Politik in der Demokratie;Staatssymbole;frage_21;image
+21;Welches ist das Wappen der Bundesrepublik Deutschland?;1;2;3;4;a;politik;Politik in der Demokratie;Staatssymbole;frage_21;image
 22;Was für eine Staatsform hat Deutschland?;Monarchie;Diktatur;Republik;Fürstentum;c;politik;Politik in der Demokratie;Verfassungsprinzipien;-;
 23;In Deutschland sind die meisten Erwerbstätigen ...;bei einer Firma oder Behörde beschäftigt.;in kleinen Familienunternehmen beschäftigt.;ehrenamtlich für ein Bundesland tätig.;selbständig mit einer eigenen Firma tätig.;a;politik;Politik in der Demokratie;Sozialsystem;-;
 24;Wie viele Bundesländer hat die Bundesrepublik Deutschland?;14;15;16;17;c;politik;Politik in der Demokratie;Föderalismus;-;
@@ -53,7 +53,7 @@ num;question;a;b;c;d;solution;area_code;area;theme;image;Tags
 52;Was bedeutet „Volkssouveränität“? Alle Staatsgewalt geht vom ...;Volke aus.;Bundestag aus.;preußischen König aus.;Bundesverfassungsgericht aus.;a;politik;Politik in der Demokratie;Verfassungsprinzipien;-;
 53;Was bedeutet „Rechtsstaat“ in Deutschland?;Der Staat hat Recht.;Es gibt nur rechte Parteien.;Die Bürger und Bürgerinnen entscheiden über Gesetze.;Der Staat muss die Gesetze einhalten.;d;politik;Politik in der Demokratie;Verfassungsprinzipien;-;
 54;Was ist keine staatliche Gewalt in Deutschland?;Legislative;Judikative;Exekutive;Direktive;d;politik;Politik in der Demokratie;Verfassungsprinzipien;-;
-55;Was zeigt dieses Bild?;null;null;null;null;a;politik;Politik in der Demokratie;Verfassungsorgane;frage_55;image
+55;Was zeigt dieses Bild?;den Bundestagssitz in Berlin;das Bundesverfassungsgericht in Karlsruhe;das Bundesratsgebäude in Berlin;das Bundeskanzleramt in Berlin;a;politik;Politik in der Demokratie;Verfassungsorgane;frage_55;image
 56;Welches Amt gehört in Deutschland zur Gemeindeverwaltung?;Pfarramt;Ordnungsamt;Finanzamt;Auswärtiges Amt;b;politik;Politik in der Demokratie;Kommune;-;difficult
 57;Wer wird meistens zum Präsidenten / zur Präsidentin des Deutschen Bundestages gewählt?;der / die älteste Abgeordnete im Parlament;der Ministerpräsident / die Ministerpräsidentin des größten Bundeslandes;ein Abgeordneter / eine Abgeordnete der stärksten Fraktion;ein ehemaliger Bundeskanzler / eine ehemalige Bundeskanzlerin;c;politik;Politik in der Demokratie;Verfassungsorgane;-;
 58;Wer ernennt in Deutschland die Minister / die Ministerinnen der Bundesregierung?;der Präsident / die Präsidentin des Bundesverfassungsgerichtes;der Bundespräsident / die Bundespräsidentin;der Bundesratspräsident / die Bundesratspräsidentin;der Bundestagspräsident / die Bundestagspräsidentin;b;politik;Politik in der Demokratie;Verfassungsorgane;-;
@@ -68,7 +68,7 @@ num;question;a;b;c;d;solution;area_code;area;theme;image;Tags
 67;Was ist in Deutschland vor allem eine Aufgabe der Bundesländer?;Verteidigungspolitik;Außenpolitik;Wirtschaftspolitik;Schulpolitik;d;politik;Politik in der Demokratie;Föderalismus;-;
 68;Warum kontrolliert der Staat in Deutschland das Schulwesen?;weil es in Deutschland nur staatliche Schulen gibt;weil alle Schüler und Schülerinnen einen Schulabschluss haben müssen;weil es in den Bundesländern verschiedene Schulen gibt;weil es nach dem Grundgesetz seine Aufgabe ist;d;politik;Politik in der Demokratie;Aufgaben des Staates;-;
 69;Die Bundesrepublik Deutschland hat einen dreistufigen Verwaltungsaufbau. Wie heißt die unterste politische Stufe?;Stadträte;Landräte;Gemeinden;Bezirksämter;c;politik;Politik in der Demokratie;Kommune;-;
-70;Der deutsche Bundespräsident Gustav Heinemann gibt Helmut Schmidt 1974 die Ernennungsurkunde zum deutschen Bundeskanzler. Was gehört zu den Aufgaben des deutschen Bundespräsidenten / der deutschen Bundespräsidentin?;null;null;null;null;a;politik;Politik in der Demokratie;Verfassungsorgane;frage_70;image,date,person
+70;Der deutsche Bundespräsident Gustav Heinemann gibt Helmut Schmidt 1974 die Ernennungsurkunde zum deutschen Bundeskanzler. Was gehört zu den Aufgaben des deutschen Bundespräsidenten / der deutschen Bundespräsidentin?;Er / Sie führt die Regierungsgeschäfte.;Er / Sie kontrolliert die Regierungspartei.;Er / Sie wählt die Minister / Ministerinnen aus.;Er / Sie schlägt den Kanzler / die Kanzlerin zur Wahl vor.;d;politik;Politik in der Demokratie;Verfassungsorgane;frage_70;image,date,person
 71;Wo hält sich der deutsche Bundeskanzler / die deutsche Bundeskanzlerin am häufigsten auf? Am häufigsten ist er / sie ...;in Bonn, weil sich dort das Bundeskanzleramt und der Bundestag befinden.;in Berlin, weil sich dort das Bundeskanzleramt und der Bundestag befinden.;auf Schloss Meseberg, dem Gästehaus der Bundesregierung, um Staatsgäste zu empfangen.;auf Schloss Bellevue, dem Amtssitz des Bundespräsidenten / der Bundespräsidentin, um Staatsgäste zu empfangen.;b;politik;Politik in der Demokratie;Verfassungsorgane;-;
 72;Wie heißt der jetzige Bundeskanzler / die jetzige Bundeskanzlerin von Deutschland?;Gerhard Schröder;Angela Merkel;Franziska Giffey;Olaf Scholz;d;politik;Politik in der Demokratie;Verfassungsorgane;-;person
 73;Die beiden größten Fraktionen im Deutschen Bundestag heißen zurzeit ...;CDU/CSU und SPD.;Die Linke und Bündnis 90/Die Grünen.;FDP und SPD.;Die Linke und FDP.;a;politik;Politik in der Demokratie;Parteien;-;
@@ -128,7 +128,7 @@ num;question;a;b;c;d;solution;area_code;area;theme;image;Tags
 127;Warum gibt es die 5 %-Hürde im Wahlgesetz der Bundesrepublik Deutschland? Es gibt sie, weil ...;die Programme von vielen kleinen Parteien viele Gemeinsamkeiten haben.;die Bürger und Bürgerinnen bei vielen kleinen Parteien die Orientierung verlieren können.;viele kleine Parteien die Regierungsbildung erschweren.;die kleinen Parteien nicht so viel Geld haben, um die Politiker und Politikerinnen zu bezahlen.;c;politik;Politik in der Demokratie;Wahlen und Beteiligung;-;difficult
 128;Parlamentsmitglieder, die von den Bürgern und Bürgerinnen gewählt werden, nennt man ...;Abgeordnete.;Kanzler / Kanzlerinnen.;Botschafter / Botschafterinnen.;Ministerpräsidenten / Ministerpräsidentinnen.;a;politik;Politik in der Demokratie;Wahlen und Beteiligung;-;difficult
 129;Vom Volk gewählt wird in Deutschland ...;der Bundeskanzler / die Bundeskanzlerin.;der Ministerpräsident / die Ministerpräsidentin eines Bundeslandes.;der Bundestag.;der Bundespräsident / die Bundespräsidentin.;c;politik;Politik in der Demokratie;Verfassungsorgane;-;
-130;Welcher Stimmzettel wäre bei einer Bundestagswahl gültig?;null;null;null;null;a;politik;Politik in der Demokratie;Wahlen und Beteiligung;frage_130;image
+130;Welcher Stimmzettel wäre bei einer Bundestagswahl gültig?;1;2;3;4;a;politik;Politik in der Demokratie;Wahlen und Beteiligung;frage_130;image
 131;In Deutschland ist ein Bürgermeister / eine Bürgermeisterin ...;der Leiter / die Leiterin einer Schule.;der Chef / die Chefin einer Bank.;das Oberhaupt einer Gemeinde.;der / die Vorsitzende einer Partei.;c;politik;Politik in der Demokratie;Kommune;-;
 132;Viele Menschen in Deutschland arbeiten in ihrer Freizeit ehrenamtlich. Was bedeutet das?;Sie arbeiten als Soldaten / Soldatinnen.;Sie arbeiten freiwillig und unbezahlt in Vereinen und Verbänden.;Sie arbeiten in der Bundesregierung.;Sie arbeiten in einem Krankenhaus und verdienen dabei Geld.;b;politik;Politik in der Demokratie;Wahlen und Beteiligung;-;
 133;Was ist bei Bundestags- und Landtagswahlen in Deutschland erlaubt?;Der Ehemann wählt für seine Frau mit.;Man kann durch Briefwahl seine Stimme abgeben.;Man kann am Wahltag telefonisch seine Stimme abgeben.;Kinder ab dem Alter von 14 Jahren dürfen wählen.;b;politik;Politik in der Demokratie;Wahlen und Beteiligung;-;
@@ -174,18 +174,18 @@ num;question;a;b;c;d;solution;area_code;area;theme;image;Tags
 173;Die Bundesrepublik Deutschland ist ein Gründungsmitglied ...;des Nordatlantikpakts (NATO).;der Vereinten Nationen (VN).;der Europäischen Union (EU).;des Warschauer Pakts.;c;geschichte;Geschichte und Verantwortung;Deutschland in Europa;-;
 174;Wann wurde die DDR gegründet?;1947;1949;1953;1956;b;geschichte;Geschichte und Verantwortung;Wichtige Stationen nach 1945;-;date
 175;Wie viele Besatzungszonen gab es in Deutschland nach dem Zweiten Weltkrieg?;3;4;5;6;b;geschichte;Geschichte und Verantwortung;Der Nationalsozialismus und seine Folgen;-;
-176;Wie waren die Besatzungszonen Deutschlands nach 1945 verteilt?;null;null;null;null;a;geschichte;Geschichte und Verantwortung;Der Nationalsozialismus und seine Folgen;frage_176;image
+176;Wie waren die Besatzungszonen Deutschlands nach 1945 verteilt?;1=Großbritannien, 2=Sowjetunion, 3=Frankreich, 4=USA;1=Sowjetunion, 2=Großbritannien, 3=USA, 4=Frankreich;1=Großbritannien, 2=Sowjetunion, 3=USA, 4=Frankreich;1=Großbritannien, 2=USA, 3=Sowjetunion, 4=Frankreich;c;geschichte;Geschichte und Verantwortung;Der Nationalsozialismus und seine Folgen;frage_176;image
 177;Welche deutsche Stadt wurde nach dem Zweiten Weltkrieg in vier Sektoren aufgeteilt?;München;Berlin;Dresden;Frankfurt/Oder;b;geschichte;Geschichte und Verantwortung;Der Nationalsozialismus und seine Folgen;-;
 178;Vom Juni 1948 bis zum Mai 1949 wurden die Bürger und Bürgerinnen von West-Berlin durch eine Luftbrücke versorgt. Welcher Umstand war dafür verantwortlich?;Für Frankreich war eine Versorgung der West-Berliner Bevölkerung mit dem Flugzeug kostengünstiger.;Die amerikanischen Soldaten / Soldatinnen hatten beim Landtransport Angst vor Überfällen.;Für Großbritannien war die Versorgung über die Luftbrücke schneller.;Die Sowjetunion unterbrach den gesamten Verkehr auf dem Landwege.;d;geschichte;Geschichte und Verantwortung;Wichtige Stationen nach 1945;-;date
 179;Wie endete der Zweite Weltkrieg in Europa offiziell?;mit dem Tod Adolf Hitlers;durch die bedingungslose Kapitulation Deutschlands;mit dem Rückzug der Deutschen aus den besetzten Gebieten;durch eine Revolution in Deutschland;b;geschichte;Geschichte und Verantwortung;Der Nationalsozialismus und seine Folgen;-;
 180;Der erste Bundeskanzler der Bundesrepublik Deutschland war ...;Ludwig Erhard.;Willy Brandt.;Konrad Adenauer.;Gerhard Schröder.;c;geschichte;Geschichte und Verantwortung;Wichtige Stationen nach 1945;-;person
-181;Was wollte Willy Brandt mit seinem Kniefall 1970 im ehemaligen jüdischen Ghetto in Warschau ausdrücken?;null;null;null;null;a;geschichte;Geschichte und Verantwortung;Wichtige Stationen nach 1945;frage_181;image,date,person
+181;Was wollte Willy Brandt mit seinem Kniefall 1970 im ehemaligen jüdischen Ghetto in Warschau ausdrücken?;Er hat sich den ehemaligen Alliierten unterworfen.;Er bat Polen und die polnischen Juden um Vergebung.;Er zeigte seine Demut vor dem Warschauer Pakt.;Er sprach ein Gebet am Grab des Unbekannten Soldaten.;b;geschichte;Geschichte und Verantwortung;Wichtige Stationen nach 1945;frage_181;image,date,person
 182;Welche Parteien wurden 1946 zwangsweise zur SED vereint, der Einheitspartei der späteren DDR?;KPD und SPD;SPD und CDU;CDU und FDP;KPD und CSU;a;geschichte;Geschichte und Verantwortung;Wichtige Stationen nach 1945;-;date
 183;Wann war in der Bundesrepublik Deutschland das „Wirtschaftswunder“?;40er Jahre;50er Jahre;70er Jahre;80er Jahre;b;geschichte;Geschichte und Verantwortung;Wichtige Stationen nach 1945;-;
 184;Was nannten die Menschen in Deutschland sehr lange „Die Stunde Null“?;Damit wird die Zeit nach der Wende im Jahr 1989 bezeichnet.;Damit wurde der Beginn des Zweiten Weltkrieges bezeichnet.;Darunter verstand man das Ende des Zweiten Weltkrieges und den Beginn des Wiederaufbaus.;Damit ist die Stunde gemeint, in der die Uhr von der Sommerzeit auf die Winterzeit umgestellt wird.;c;geschichte;Geschichte und Verantwortung;Der Nationalsozialismus und seine Folgen;-;
 185;Wofür stand der Ausdruck „Eiserner Vorhang“? Für die Abschottung ...;des Warschauer Pakts gegen den Westen.;Norddeutschlands gegen Süddeutschland.;Nazi-Deutschlands gegen die Alliierten.;Europas gegen die USA.;a;geschichte;Geschichte und Verantwortung;Wichtige Stationen nach 1945;-;
 186;Im Jahr 1953 gab es in der DDR einen Aufstand, an den lange Zeit in der Bundesrepublik Deutschland ein Feiertag erinnerte. Wann war das?;1. Mai;17. Juni;20. Juli;9. November;b;geschichte;Geschichte und Verantwortung;Wichtige Stationen nach 1945;-;date
-187;Welcher deutsche Staat hatte eine schwarz-rot-goldene Flagge mit Hammer, Zirkel und Ährenkranz?;null;null;null;null;a;geschichte;Geschichte und Verantwortung;Wichtige Stationen nach 1945;frage_187;image
+187;Welcher deutsche Staat hatte eine schwarz-rot-goldene Flagge mit Hammer, Zirkel und Ährenkranz?;Preußen;Bundesrepublik Deutschland;DDR;„Drittes Reich“;c;geschichte;Geschichte und Verantwortung;Wichtige Stationen nach 1945;frage_187;image
 188;In welchem Jahr wurde die Mauer in Berlin gebaut?;1953;1956;1959;1961;d;geschichte;Geschichte und Verantwortung;Wichtige Stationen nach 1945;-;date
 189;Wann baute die DDR die Mauer in Berlin?;1919;1933;1961;1990;c;geschichte;Geschichte und Verantwortung;Wichtige Stationen nach 1945;-;date
 190;Was bedeutet die Abkürzung DDR?;Dritter Deutscher Rundfunk;Die Deutsche Republik;Dritte Deutsche Republik;Deutsche Demokratische Republik;d;geschichte;Geschichte und Verantwortung;Wichtige Stationen nach 1945;-;
@@ -207,14 +207,14 @@ num;question;a;b;c;d;solution;area_code;area;theme;image;Tags
 206;Was bedeutete im Jahr 1989 in Deutschland das Wort „Montagsdemonstration“?;In der Bundesrepublik waren Demonstrationen nur am Montag erlaubt.;Montags waren Demonstrationen gegen das DDR-Regime.;Am ersten Montag im Monat trafen sich in der Bundesrepublik Deutschland Demonstranten.;Montags demonstrierte man in der DDR gegen den Westen.;b;geschichte;Geschichte und Verantwortung;Wiedervereinigung;-;date
 207;In welchem Militärbündnis war die DDR Mitglied?;in der NATO;im Rheinbund;im Warschauer Pakt;im Europabündnis;c;geschichte;Geschichte und Verantwortung;Wichtige Stationen nach 1945;-;
 208;Was war die „Stasi“?;der Geheimdienst im „Dritten Reich“;eine berühmte deutsche Gedenkstätte;der Geheimdienst der DDR;ein deutscher Sportverein während des Zweiten Weltkrieges;c;geschichte;Geschichte und Verantwortung;Wichtige Stationen nach 1945;-;
-209;Welches war das Wappen der Deutschen Demokratischen Republik?;null;null;null;null;a;geschichte;Geschichte und Verantwortung;Wichtige Stationen nach 1945;frage_209;image
+209;Welches war das Wappen der Deutschen Demokratischen Republik?;1;2;3;4;d;geschichte;Geschichte und Verantwortung;Wichtige Stationen nach 1945;frage_209;image
 210;Was ereignete sich am 17. Juni 1953 in der DDR?;der feierliche Beitritt zum Warschauer Pakt;landesweite Streiks und ein Volksaufstand;der 1. SED-Parteitag;der erste Besuch Fidel Castros;b;geschichte;Geschichte und Verantwortung;Wichtige Stationen nach 1945;-;difficult
 211;Welcher Politiker steht für die „Ostverträge“?;Helmut Kohl;Willy Brandt;Michail Gorbatschow;Ludwig Erhard;b;geschichte;Geschichte und Verantwortung;Wichtige Stationen nach 1945;-;person
 212;Wie heißt Deutschland mit vollem Namen?;Bundesstaat Deutschland;Bundesländer Deutschland;Bundesrepublik Deutschland;Bundesbezirk Deutschland;c;geschichte;Geschichte und Verantwortung;Wichtige Stationen nach 1945;-;
 213;Wie viele Einwohner hat Deutschland?;70 Millionen;78 Millionen;83 Millionen;90 Millionen;c;geschichte;Geschichte und Verantwortung;Deutschland in Europa;-;
 214;Welche Farben hat die deutsche Flagge?;schwarz-rot-gold;rot-weiß-schwarz;schwarz-rot-grün;schwarz-gelb-rot;a;politik;Politik in der Demokratie;Staatssymbole;-;
 215;Wer wird als „Kanzler der Deutschen Einheit“ bezeichnet?;Gerhard Schröder;Helmut Kohl;Konrad Adenauer;Helmut Schmidt;b;geschichte;Geschichte und Verantwortung;Wichtige Stationen nach 1945;-;person
-216;Welches Symbol ist im Plenarsaal des Deutschen Bundestages zu sehen?;null;null;null;null;a;politik;Politik in der Demokratie;Staatssymbole;frage_216;image
+216;Welches Symbol ist im Plenarsaal des Deutschen Bundestages zu sehen?;die Fahne der Stadt Berlin;der Bundesadler;der Reichsadler;die Reichskrone;b;politik;Politik in der Demokratie;Staatssymbole;frage_216;image
 217;In welchem Zeitraum gab es die Deutsche Demokratische Republik (DDR)?;1919 bis 1927;1933 bis 1945;1949 bis 1990;1945 bis 1961;c;geschichte;Geschichte und Verantwortung;Wichtige Stationen nach 1945;-;date
 218;Wie viele Bundesländer kamen bei der Wiedervereinigung 1990 zur Bundesrepublik Deutschland hinzu?;4;5;6;7;b;geschichte;Geschichte und Verantwortung;Wiedervereinigung;-;date
 219;Die Bundesrepublik Deutschland hat die Grenzen von heute seit ...;1933.;1949.;1971.;1990.;d;geschichte;Geschichte und Verantwortung;Wiedervereinigung;-;date
@@ -224,7 +224,7 @@ num;question;a;b;c;d;solution;area_code;area;theme;image;Tags
 223;Welches Land ist ein Nachbarland von Deutschland?;Rumänien;Bulgarien;Polen;Griechenland;c;geschichte;Geschichte und Verantwortung;Deutschland in Europa;-;
 224;Was bedeutet die Abkürzung EU?;Europäische Unternehmen;Europäische Union;Einheitliche Union;Euro Union;b;geschichte;Geschichte und Verantwortung;Deutschland in Europa;-;
 225;In welchem anderen Land gibt es eine große deutschsprachige Bevölkerung?;Tschechien;Norwegen;Spanien;Österreich;d;geschichte;Geschichte und Verantwortung;Deutschland in Europa;-;
-226;Welche ist die Flagge der Europäischen Union?;null;null;null;null;a;geschichte;Geschichte und Verantwortung;Deutschland in Europa;frage_226;image
+226;Welche ist die Flagge der Europäischen Union?;2;1;4;3;a;geschichte;Geschichte und Verantwortung;Deutschland in Europa;frage_226;image
 227;Welches Land ist ein Nachbarland von Deutschland?;Finnland;Dänemark;Norwegen;Schweden;b;geschichte;Geschichte und Verantwortung;Deutschland in Europa;-;
 228;Wie wird der Beitritt der DDR zur Bundesrepublik Deutschland im Jahr 1990 allgemein genannt?;NATO-Osterweiterung;EU-Osterweiterung;Europäische Gemeinschaft;Deutsche Wiedervereinigung;d;geschichte;Geschichte und Verantwortung;Wiedervereinigung;-;date,difficult
 229;Welches Land ist ein Nachbarland von Deutschland?;Spanien;Bulgarien;Norwegen;Luxemburg;d;geschichte;Geschichte und Verantwortung;Deutschland in Europa;-;
@@ -233,7 +233,7 @@ num;question;a;b;c;d;solution;area_code;area;theme;image;Tags
 232;Wer wird bei der Europawahl gewählt?;die Europäische Kommission;die Länder, die in die EU eintreten dürfen;die europäische Verfassung;die Abgeordneten des Europäischen Parlaments;d;geschichte;Geschichte und Verantwortung;Deutschland in Europa;-;difficult
 233;Welches Land ist ein Nachbarland von Deutschland?;Tschechien;Bulgarien;Griechenland;Portugal;a;geschichte;Geschichte und Verantwortung;Deutschland in Europa;-;
 234;Wo ist der Sitz des Europäischen Parlaments?;London;Paris;Berlin;Straßburg;d;geschichte;Geschichte und Verantwortung;Deutschland in Europa;-;
-235;Der französische Staatspräsident François Mitterrand und der deutsche Bundeskanzler Helmut Kohl gedenken in Verdun gemeinsam der Toten beider Weltkriege. Welches Ziel der Europäischen Union wird bei diesem Treffen deutlich?;null;null;null;null;a;geschichte;Geschichte und Verantwortung;Deutschland in Europa;frage_235;image,person
+235;Der französische Staatspräsident François Mitterrand und der deutsche Bundeskanzler Helmut Kohl gedenken in Verdun gemeinsam der Toten beider Weltkriege. Welches Ziel der Europäischen Union wird bei diesem Treffen deutlich?;Freundschaft zwischen England und Deutschland;Reisefreiheit in alle Länder der EU;Frieden und Sicherheit in den Ländern der EU;Einheitliche Feiertage in den Ländern der EU;c;geschichte;Geschichte und Verantwortung;Deutschland in Europa;frage_235;image,person
 236;Wie viele Mitgliedstaaten hat die EU heute?;21;23;25;27;d;geschichte;Geschichte und Verantwortung;Deutschland in Europa;-;
 237;2007 wurde das 50-jährige Jubiläum der „Römischen Verträge“ gefeiert. Was war der Inhalt der Verträge?;Beitritt Deutschlands zur NATO;Gründung der Europäischen Wirtschaftsgemeinschaft (EWG);Verpflichtung Deutschlands zu Reparationsleistungen;Festlegung der Oder-Neiße-Linie als Ostgrenze;b;geschichte;Geschichte und Verantwortung;Deutschland in Europa;-;date
 238;An welchen Orten arbeitet das Europäische Parlament?;Paris, London und Den Haag;Straßburg, Luxemburg und Brüssel;Rom, Bern und Wien;Bonn, Zürich und Mailand;b;geschichte;Geschichte und Verantwortung;Deutschland in Europa;-;
@@ -299,163 +299,163 @@ num;question;a;b;c;d;solution;area_code;area;theme;image;Tags
 298;In der DDR lebten vor allem Migranten aus ...;Vietnam, Polen, Mosambik.;Frankreich, Rumänien, Somalia.;Chile, Ungarn, Simbabwe.;Nordkorea, Mexiko, Ägypten.;a;gesellschaft;Mensch und Gesellschaft;Migrationsgeschichte;-;
 299;Ausländische Arbeitnehmer und Arbeitnehmerinnen, die in den 50er und 60er Jahren von der Bundesrepublik Deutschland angeworben wurden, nannte man ...;Schwarzarbeiter / Schwarzarbeiterinnen.;Gastarbeiter / Gastarbeiterinnen.;Zeitarbeiter / Zeitarbeiterinnen.;Schichtarbeiter / Schichtarbeiterinnen.;b;gesellschaft;Mensch und Gesellschaft;Migrationsgeschichte;-;
 300;Aus welchem Land kamen die ersten Gastarbeiter / Gastarbeiterinnen in die Bundesrepublik Deutschland?;Italien;Spanien;Portugal;Türkei;a;gesellschaft;Mensch und Gesellschaft;Migrationsgeschichte;-;
-BB-1;Welches Wappen gehört zum Bundesland Brandenburg?;null;null;null;null;a;land;Bundesland;Brandenburg;frage_bb_1;image
+BB-1;Welches Wappen gehört zum Bundesland Brandenburg?;1;2;3;4;a;land;Bundesland;Brandenburg;frage_bb_1;image
 BB-2;Welches ist ein Landkreis in Brandenburg?;Prignitz;Rhein-Sieg-Kreis;Vogtlandkreis;Amberg-Sulzbach;a;land;Bundesland;Brandenburg;-;
 BB-3;Für wie viele Jahre wird der Landtag in Brandenburg gewählt?;3;4;5;6;c;land;Bundesland;Brandenburg;-;
 BB-4;Ab welchem Alter darf man in Brandenburg bei Kommunalwahlen wählen?;14;18;16;20;c;land;Bundesland;Brandenburg;-;
 BB-5;Welche Farben hat die Landesflagge von Brandenburg?;blau-weiß-rot;rot-weiß;grün-weiß-rot;schwarz-gelb;b;land;Bundesland;Brandenburg;-;
 BB-6;Wo können Sie sich in Brandenburg über politische Themen informieren?;bei den Kirchen;beim Ordnungsamt der Gemeinde;bei der Landeszentrale für politische Bildung;bei der Verbraucherzentrale;c;land;Bundesland;Brandenburg;-;
 BB-7;Die Landeshauptstadt von Brandenburg heißt ...;Potsdam.;Cottbus.;Brandenburg.;Frankfurt/Oder.;a;land;Bundesland;Brandenburg;-;
-BB-8;Welches Bundesland ist Brandenburg?;null;null;null;null;a;land;Bundesland;Brandenburg;frage_bb_8;image
+BB-8;Welches Bundesland ist Brandenburg?;1;2;3;4;d;land;Bundesland;Brandenburg;frage_bb_8;image
 BB-9;Wie nennt man den Regierungschef / die Regierungschefin in Brandenburg?;Erster Minister / Erste Ministerin;Premierminister / Premierministerin;Bürgermeister / Bürgermeisterin;Ministerpräsident / Ministerpräsidentin;d;land;Bundesland;Brandenburg;-;
 BB-10;Welchen Minister / welche Ministerin hat Brandenburg nicht?;Justizminister / Justizministerin;Außenminister / Außenministerin;Finanzminister / Finanzministerin;Innenminister / Innenministerin;b;land;Bundesland;Brandenburg;-;
-BE-1;Welches Wappen gehört zum Bundesland Berlin?;null;null;null;null;a;land;Bundesland;Berlin;frage_be_1;image
+BE-1;Welches Wappen gehört zum Bundesland Berlin?;1;2;3;4;d;land;Bundesland;Berlin;frage_be_1;image
 BE-2;Welches ist ein Bezirk von Berlin?;Altona;Prignitz;Pankow;Mecklenburgische Seenplatte;c;land;Bundesland;Berlin;-;
 BE-3;Für wie viele Jahre wird das Landesparlament in Berlin gewählt?;3;4;5;6;c;land;Bundesland;Berlin;-;
 BE-4;Ab welchem Alter darf man in Berlin bei Kommunalwahlen (Wahl der Bezirksverordnetenversammlung) wählen?;14;16;18;20;b;land;Bundesland;Berlin;-;
 BE-5;Welche Farben hat die Landesflagge von Berlin?;blau-weiß-rot;weiß-rot;grün-weiß-rot;schwarz-gold;b;land;Bundesland;Berlin;-;
 BE-6;Wo können Sie sich in Berlin über politische Themen informieren?;beim Ordnungsamt der Gemeinde;bei den Kirchen;bei der Verbraucherzentrale;bei der Landeszentrale für politische Bildung;d;land;Bundesland;Berlin;-;
 BE-7;Welches Bundesland ist ein Stadtstaat?;Berlin;Saarland;Brandenburg;Hessen;a;land;Bundesland;Berlin;-;
-BE-8;Welches Bundesland ist Berlin?;null;null;null;null;a;land;Bundesland;Berlin;frage_be_8;image
+BE-8;Welches Bundesland ist Berlin?;1;2;3;4;d;land;Bundesland;Berlin;frage_be_8;image
 BE-9;Wie nennt man den Regierungschef / die Regierungschefin des Stadtstaates Berlin?;Ministerpräsident / Ministerpräsidentin;Oberbürgermeister / Oberbürgermeisterin;Präsident / Präsidentin des Senats;Regierender Bürgermeister / Regierende Bürgermeisterin;d;land;Bundesland;Berlin;-;
 BE-10;Welchen Senator / welche Senatorin hat Berlin nicht?;Finanzsenator / Finanzsenatorin;Innensenator / Innensenatorin;Senator / Senatorin für Außenbeziehungen;Justizsenator / Justizsenatorin;c;land;Bundesland;Berlin;-;
-BW-1;Welches Wappen gehört zum Bundesland Baden-Württemberg?;null;null;null;null;a;land;Bundesland;Baden-Württemberg;frage_bw_1;image
+BW-1;Welches Wappen gehört zum Bundesland Baden-Württemberg?;1;2;3;4;a;land;Bundesland;Baden-Württemberg;frage_bw_1;image
 BW-2;Welches ist ein Landkreis in Baden-Württemberg?;Mecklenburgische Seenplatte;Neckar-Odenwald-Kreis;Nordfriesland;Altötting;b;land;Bundesland;Baden-Württemberg;-;
 BW-3;Für wie viele Jahre wird der Landtag in Baden-Württemberg gewählt?;3;4;5;6;c;land;Bundesland;Baden-Württemberg;-;
 BW-4;Ab welchem Alter darf man in Baden-Württemberg bei Kommunalwahlen wählen?;14;16;18;20;b;land;Bundesland;Baden-Württemberg;-;
 BW-5;Welche Farben hat die Landesflagge von Baden-Württemberg?;blau-weiß-rot;schwarz-gold;weiß-blau;grün-weiß-rot;b;land;Bundesland;Baden-Württemberg;-;
 BW-6;Wo können Sie sich in Baden-Württemberg über politische Themen informieren?;beim Ordnungsamt der Gemeinde;bei der Verbraucherzentrale;bei der Landeszentrale für politische Bildung;bei den Kirchen;c;land;Bundesland;Baden-Württemberg;-;
 BW-7;Die Landeshauptstadt von Baden-Württemberg heißt ...;Heidelberg.;Stuttgart.;Karlsruhe.;Mannheim.;b;land;Bundesland;Baden-Württemberg;-;
-BW-8;Welches Bundesland ist Baden-Württemberg?;null;null;null;null;a;land;Bundesland;Baden-Württemberg;frage_bw_8;image
+BW-8;Welches Bundesland ist Baden-Württemberg?;1;2;3;4;b;land;Bundesland;Baden-Württemberg;frage_bw_8;image
 BW-9;Wie nennt man den Regierungschef / die Regierungschefin in Baden-Württemberg?;Erster Minister / Erste Ministerin;Premierminister / Premierministerin;Bürgermeister / Bürgermeisterin;Ministerpräsident / Ministerpräsidentin;d;land;Bundesland;Baden-Württemberg;-;
 BW-10;Welchen Minister / welche Ministerin hat Baden-Württemberg nicht?;Finanzminister / Finanzministerin;Justizminister / Justizministerin;Innenminister / Innenministerin;Außenminister / Außenministerin;d;land;Bundesland;Baden-Württemberg;-;
-BY-1;Welches Wappen gehört zum Freistaat Bayern?;null;null;null;null;a;land;Bundesland;Bayern;frage_by_1;image
+BY-1;Welches Wappen gehört zum Freistaat Bayern?;1;2;3;4;b;land;Bundesland;Bayern;frage_by_1;image
 BY-2;Welches ist ein Landkreis in Bayern?;Prignitz;Rhein-Sieg-Kreis;Nordfriesland;Altötting;d;land;Bundesland;Bayern;-;
 BY-3;Für wie viele Jahre wird der Landtag in Bayern gewählt?;3;4;5;6;c;land;Bundesland;Bayern;-;
 BY-4;Ab welchem Alter darf man in Bayern bei Kommunalwahlen wählen?;14;16;18;20;c;land;Bundesland;Bayern;-;
 BY-5;Welche Farben hat die Landesflagge von Bayern?;blau-weiß-rot;weiß-blau;grün-weiß-rot;schwarz-gelb;b;land;Bundesland;Bayern;-;
 BY-6;Wo können Sie sich in Bayern über politische Themen informieren?;beim Ordnungsamt der Gemeinde;bei der Landeszentrale für politische Bildung;bei der Verbraucherzentrale;bei den Kirchen;b;land;Bundesland;Bayern;-;
 BY-7;Die Landeshauptstadt von Bayern heißt ...;Ingolstadt.;Regensburg.;Nürnberg.;München.;d;land;Bundesland;Bayern;-;
-BY-8;Welches Bundesland ist Bayern?;null;null;null;null;a;land;Bundesland;Bayern;frage_by_8;image
+BY-8;Welches Bundesland ist Bayern?;1;2;3;4;d;land;Bundesland;Bayern;frage_by_8;image
 BY-9;Wie nennt man den Regierungschef / die Regierungschefin in Bayern?;Erster Minister / Erste Ministerin;Premierminister / Premierministerin;Bürgermeister / Bürgermeisterin;Ministerpräsident / Ministerpräsidentin;d;land;Bundesland;Bayern;-;
 BY-10;Welchen Minister / welche Ministerin hat Bayern nicht?;Justizminister / Justizministerin;Außenminister / Außenministerin;Finanzminister / Finanzministerin;Innenminister / Innenministerin;b;land;Bundesland;Bayern;-;
-HB-1;Welches Wappen gehört zur Freien Hansestadt Bremen?;null;null;null;null;a;land;Bundesland;Bremen;frage_hb_1;image
+HB-1;Welches Wappen gehört zur Freien Hansestadt Bremen?;1;2;3;4;c;land;Bundesland;Bremen;frage_hb_1;image
 HB-2;Welches ist ein Stadtteil von Bremen?;Altona;Hemelingen;Pankow;Babelsberg;b;land;Bundesland;Bremen;-;
 HB-3;Für wie viele Jahre wird das Landesparlament in Bremen gewählt?;3;4;5;6;b;land;Bundesland;Bremen;-;
 HB-4;Ab welchem Alter darf man in Bremen bei den Wahlen zur Bürgerschaft (Landtag) wählen?;14;16;18;20;b;land;Bundesland;Bremen;-;
 HB-5;Welche Farben hat die Landesflagge von Bremen?;blau-weiß-rot;rot-weiß;grün-weiß-rot;schwarz-gold;b;land;Bundesland;Bremen;-;
 HB-6;Wo können Sie sich in Bremen über politische Themen informieren?;beim Ordnungsamt der Gemeinde;bei der Landeszentrale für politische Bildung;bei den Kirchen;bei der Verbraucherzentrale;b;land;Bundesland;Bremen;-;
 HB-7;Was ist ein deutscher Stadtstaat?;Bremen;München;Frankfurt;Erfurt;a;land;Bundesland;Bremen;-;
-HB-8;Welches Bundesland ist Bremen?;null;null;null;null;a;land;Bundesland;Bremen;frage_hb_8;image
+HB-8;Welches Bundesland ist Bremen?;1;2;3;4;a;land;Bundesland;Bremen;frage_hb_8;image
 HB-9;Wie nennt man den Regierungschef / die Regierungschefin des Stadtstaates Bremen?;Ministerpräsident / Ministerpräsidentin;Erster Bürgermeister / Erste Bürgermeisterin;Präsident / Präsidentin des Senats;Regierender Bürgermeister / Regierende Bürgermeisterin;c;land;Bundesland;Bremen;-;
 HB-10;Welchen Senator / welche Senatorin hat Bremen nicht?;Senator / Senatorin für Außenbeziehungen;Finanzsenator / Finanzsenatorin;Justizsenator / Justizsenatorin;Innensenator / Innensenatorin;a;land;Bundesland;Bremen;-;
-HE-1;Welches Wappen gehört zum Bundesland Hessen?;null;null;null;null;a;land;Bundesland;Hessen;frage_he_1;image
+HE-1;Welches Wappen gehört zum Bundesland Hessen?;1;2;3;4;a;land;Bundesland;Hessen;frage_he_1;image
 HE-2;Welches ist ein Landkreis in Hessen?;Ammerland;Altötting;Prignitz;Main-Taunus-Kreis;d;land;Bundesland;Hessen;-;
 HE-3;Für wie viele Jahre wird der Landtag in Hessen gewählt?;3;4;5;6;c;land;Bundesland;Hessen;-;
 HE-4;Ab welchem Alter darf man in Hessen bei Kommunalwahlen wählen?;14;16;18;20;c;land;Bundesland;Hessen;-;
 HE-5;Welche Farben hat die Landesflagge von Hessen?;blau-weiß-rot;rot-weiß;schwarz-gold;grün-weiß-rot;b;land;Bundesland;Hessen;-;
 HE-6;Wo können Sie sich in Hessen über politische Themen informieren?;bei der Landeszentrale für politische Bildung;bei der Verbraucherzentrale;beim Ordnungsamt der Gemeinde;bei den Kirchen;a;land;Bundesland;Hessen;-;
 HE-7;Die Landeshauptstadt von Hessen heißt ...;Kassel.;Darmstadt.;Frankfurt.;Wiesbaden.;d;land;Bundesland;Hessen;-;
-HE-8;Welches Bundesland ist Hessen?;null;null;null;null;a;land;Bundesland;Hessen;frage_he_8;image
+HE-8;Welches Bundesland ist Hessen?;1;2;3;4;c;land;Bundesland;Hessen;frage_he_8;image
 HE-9;Wie nennt man den Regierungschef / die Regierungschefin in Hessen?;Erster Minister / Erste Ministerin;Premierminister / Premierministerin;Bürgermeister / Bürgermeisterin;Ministerpräsident / Ministerpräsidentin;d;land;Bundesland;Hessen;-;
 HE-10;Welchen Minister / welche Ministerin hat Hessen nicht?;Justizminister / Justizministerin;Außenminister / Außenministerin;Finanzminister / Finanzministerin;Innenminister / Innenministerin;b;land;Bundesland;Hessen;-;
-HH-1;Welches Wappen gehört zur Freien und Hansestadt Hamburg?;null;null;null;null;a;land;Bundesland;Hamburg;frage_hh_1;image
+HH-1;Welches Wappen gehört zur Freien und Hansestadt Hamburg?;1;2;3;4;b;land;Bundesland;Hamburg;frage_hh_1;image
 HH-2;Welches ist ein Bezirk von Hamburg?;Altona;Hemelingen;Pankow;Mecklenburgische Seenplatte;a;land;Bundesland;Hamburg;-;
 HH-3;Für wie viele Jahre wird das Landesparlament in Hamburg gewählt?;3;4;5;6;c;land;Bundesland;Hamburg;-;
 HH-4;Ab welchem Alter darf man in Hamburg bei Kommunalwahlen (Wahl der Bezirksversammlungen) wählen?;14;16;18;20;b;land;Bundesland;Hamburg;-;
 HH-5;Welche Farben hat die Landesflagge von Hamburg?;blau-weiß-rot;weiß-rot;grün-weiß-rot;schwarz-gelb;b;land;Bundesland;Hamburg;-;
 HH-6;Wo können Sie sich in Hamburg über politische Themen informieren?;beim Ordnungsamt der Gemeinde;bei der Verbraucherzentrale;bei den Kirchen;bei der Landeszentrale für politische Bildung;d;land;Bundesland;Hamburg;-;
 HH-7;Welches Bundesland ist ein Stadtstaat?;Hamburg;Sachsen;Bayern;Thüringen;a;land;Bundesland;Hamburg;-;
-HH-8;Welches Bundesland ist Hamburg?;null;null;null;null;a;land;Bundesland;Hamburg;frage_hh_8;image
+HH-8;Welches Bundesland ist Hamburg?;1;2;3;4;c;land;Bundesland;Hamburg;frage_hh_8;image
 HH-9;Wie nennt man den Regierungschef / die Regierungschefin des Stadtstaates Hamburg?;Ministerpräsident / Ministerpräsidentin;Erster Bürgermeister / Erste Bürgermeisterin;Regierender Senator / Regierende Senatorin;Oberbürgermeister / Oberbürgermeisterin;b;land;Bundesland;Hamburg;-;
 HH-10;Welchen Senator / welche Senatorin hat Hamburg nicht?;Justizsenator / Justizsenatorin;Senator / Senatorin für Außenbeziehungen;Finanzsenator / Finanzsenatorin;Innensenator / Innensenatorin;b;land;Bundesland;Hamburg;-;
-MV-1;Welches Wappen gehört zum Bundesland Mecklenburg-Vorpommern?;null;null;null;null;a;land;Bundesland;Mecklenburg-Vorpommern;frage_mv_1;image
+MV-1;Welches Wappen gehört zum Bundesland Mecklenburg-Vorpommern?;1;2;3;4;c;land;Bundesland;Mecklenburg-Vorpommern;frage_mv_1;image
 MV-2;Welches ist ein Landkreis in Mecklenburg-Vorpommern?;Prignitz;Mecklenburgische Seenplatte;Vogtlandkreis;Rhein-Sieg-Kreis;b;land;Bundesland;Mecklenburg-Vorpommern;-;
 MV-3;Für wie viele Jahre wird der Landtag in Mecklenburg-Vorpommern gewählt?;3;4;5;6;c;land;Bundesland;Mecklenburg-Vorpommern;-;
 MV-4;Ab welchem Alter darf man in Mecklenburg-Vorpommern bei Kommunalwahlen wählen?;14;16;18;20;b;land;Bundesland;Mecklenburg-Vorpommern;-;
 MV-5;Welche Farben hat die Landesflagge von Mecklenburg-Vorpommern?;schwarz-rot-gold;blau-weiß-gelb-rot;grün-weiß-rot;schwarz-gelb;b;land;Bundesland;Mecklenburg-Vorpommern;-;
 MV-6;Wo können Sie sich in Mecklenburg-Vorpommern über politische Themen informieren?;bei der Landeszentrale für politische Bildung;bei den Kirchen;beim Ordnungsamt der Gemeinde;bei der Verbraucherzentrale;a;land;Bundesland;Mecklenburg-Vorpommern;-;
 MV-7;Die Landeshauptstadt von Mecklenburg-Vorpommern heißt ...;Greifswald.;Schwerin.;Rostock.;Wismar.;b;land;Bundesland;Mecklenburg-Vorpommern;-;
-MV-8;Welches Bundesland ist Mecklenburg-Vorpommern?;null;null;null;null;a;land;Bundesland;Mecklenburg-Vorpommern;frage_mv_8;image
+MV-8;Welches Bundesland ist Mecklenburg-Vorpommern?;1;2;3;4;c;land;Bundesland;Mecklenburg-Vorpommern;frage_mv_8;image
 MV-9;Wie nennt man den Regierungschef / die Regierungschefin in Mecklenburg-Vorpommern?;Erster Minister / Erste Ministerin;Premierminister / Premierministerin;Bürgermeister / Bürgermeisterin;Ministerpräsident / Ministerpräsidentin;d;land;Bundesland;Mecklenburg-Vorpommern;-;
 MV-10;Welchen Minister / welche Ministerin hat Mecklenburg-Vorpommern nicht?;Justizminister / Justizministerin;Außenminister / Außenministerin;Finanzminister / Finanzministerin;Innenminister / Innenministerin;b;land;Bundesland;Mecklenburg-Vorpommern;-;
-NI-1;Welches Wappen gehört zum Bundesland Niedersachsen?;null;null;null;null;a;land;Bundesland;Niedersachsen;frage_ni_1;image
+NI-1;Welches Wappen gehört zum Bundesland Niedersachsen?;1;2;3;4;c;land;Bundesland;Niedersachsen;frage_ni_1;image
 NI-2;Welches ist ein Landkreis in Niedersachsen?;Ammerland;Rhein-Sieg-Kreis;Nordfriesland;Vogtlandkreis;a;land;Bundesland;Niedersachsen;-;
 NI-3;Für wie viele Jahre wird der Landtag in Niedersachsen gewählt?;3;4;5;6;c;land;Bundesland;Niedersachsen;-;
 NI-4;Ab welchem Alter darf man in Niedersachsen bei Kommunalwahlen wählen?;14;16;18;20;b;land;Bundesland;Niedersachsen;-;
 NI-5;Welche Farben hat die Landesflagge von Niedersachsen?;weiß-blau;schwarz-rot-gold;schwarz-gelb;blau-weiß-rot;b;land;Bundesland;Niedersachsen;-;
 NI-6;Wo können Sie sich in Niedersachsen über politische Themen informieren?;bei der Landeszentrale für politische Bildung;beim Ordnungsamt der Gemeinde;bei der Verbraucherzentrale;bei den Kirchen;a;land;Bundesland;Niedersachsen;-;
 NI-7;Die Landeshauptstadt von Niedersachsen heißt ...;Hannover.;Braunschweig.;Wolfsburg.;Osnabrück.;a;land;Bundesland;Niedersachsen;-;
-NI-8;Welches Bundesland ist Niedersachsen?;null;null;null;null;a;land;Bundesland;Niedersachsen;frage_ni_8;image
+NI-8;Welches Bundesland ist Niedersachsen?;1;2;3;4;a;land;Bundesland;Niedersachsen;frage_ni_8;image
 NI-9;Wie nennt man den Regierungschef / die Regierungschefin in Niedersachsen?;Erster Minister / Erste Ministerin;Premierminister / Premierministerin;Bürgermeister / Bürgermeisterin;Ministerpräsident / Ministerpräsidentin;d;land;Bundesland;Niedersachsen;-;
 NI-10;Welchen Minister / welche Ministerin hat Niedersachsen nicht?;Justizminister / Justizministerin;Außenminister / Außenministerin;Finanzminister / Finanzministerin;Innenminister / Innenministerin;b;land;Bundesland;Niedersachsen;-;
-NW-1;Welches Wappen gehört zum Bundesland Nordrhein-Westfalen?;null;null;null;null;a;land;Bundesland;Nordrhein-Westfalen;frage_nw_1;image
+NW-1;Welches Wappen gehört zum Bundesland Nordrhein-Westfalen?;1;2;3;4;b;land;Bundesland;Nordrhein-Westfalen;frage_nw_1;image
 NW-2;Welches ist ein Landkreis in Nordrhein-Westfalen?;Ammerland;Rhein-Sieg-Kreis;Nordfriesland;Vogtlandkreis;b;land;Bundesland;Nordrhein-Westfalen;-;
 NW-3;Für wie viele Jahre wird der Landtag in Nordrhein-Westfalen gewählt?;3;4;5;6;c;land;Bundesland;Nordrhein-Westfalen;-;
 NW-4;Ab welchem Alter darf man in Nordrhein-Westfalen bei Kommunalwahlen wählen?;14;16;18;20;b;land;Bundesland;Nordrhein-Westfalen;-;
 NW-5;Welche Farben hat die Landesflagge von Nordrhein-Westfalen?;rot-weiß;grün-weiß-rot;schwarz-gold;blau-weiß-rot;b;land;Bundesland;Nordrhein-Westfalen;-;
 NW-6;Wo können Sie sich in Nordrhein-Westfalen über politische Themen informieren?;bei den Kirchen;beim Ordnungsamt der Gemeinde;bei der Verbraucherzentrale;bei der Landeszentrale für politische Bildung;d;land;Bundesland;Nordrhein-Westfalen;-;
 NW-7;Die Landeshauptstadt von Nordrhein-Westfalen heißt ...;Köln.;Bonn.;Düsseldorf.;Dortmund.;c;land;Bundesland;Nordrhein-Westfalen;-;
-NW-8;Welches Bundesland ist Nordrhein-Westfalen?;null;null;null;null;a;land;Bundesland;Nordrhein-Westfalen;frage_nw_8;image
+NW-8;Welches Bundesland ist Nordrhein-Westfalen?;1;2;3;4;c;land;Bundesland;Nordrhein-Westfalen;frage_nw_8;image
 NW-9;Wie nennt man den Regierungschef / die Regierungschefin in Nordrhein-Westfalen?;Erster Minister / Erste Ministerin;Premierminister / Premierministerin;Bürgermeister / Bürgermeisterin;Ministerpräsident / Ministerpräsidentin;d;land;Bundesland;Nordrhein-Westfalen;-;
 NW-10;Welchen Minister / welche Ministerin hat Nordrhein-Westfalen nicht?;Justizminister / Justizministerin;Außenminister / Außenministerin;Finanzminister / Finanzministerin;Innenminister / Innenministerin;b;land;Bundesland;Nordrhein-Westfalen;-;
-RP-1;Welches Wappen gehört zum Bundesland Rheinland-Pfalz?;null;null;null;null;a;land;Bundesland;Rheinland-Pfalz;frage_rp_1;image
+RP-1;Welches Wappen gehört zum Bundesland Rheinland-Pfalz?;1;2;3;4;a;land;Bundesland;Rheinland-Pfalz;frage_rp_1;image
 RP-2;Welches ist ein Landkreis in Rheinland-Pfalz?;Westerwaldkreis;Altötting;Emsland;Prignitz;a;land;Bundesland;Rheinland-Pfalz;-;
 RP-3;Für wie viele Jahre wird der Landtag in Rheinland-Pfalz gewählt?;3;4;5;6;c;land;Bundesland;Rheinland-Pfalz;-;
 RP-4;Ab welchem Alter darf man in Rheinland-Pfalz bei Kommunalwahlen wählen?;14;16;18;20;c;land;Bundesland;Rheinland-Pfalz;-;
 RP-5;Welche Farben hat die Landesflagge von Rheinland-Pfalz?;weiß-rot;schwarz-rot-gold;schwarz-gelb;grün-weiß-rot;b;land;Bundesland;Rheinland-Pfalz;-;
 RP-6;Wo können Sie sich in Rheinland-Pfalz über politische Themen informieren?;bei den Kirchen;bei der Verbraucherzentrale;beim Ordnungsamt der Gemeinde;bei der Landeszentrale für politische Bildung;d;land;Bundesland;Rheinland-Pfalz;-;
 RP-7;Die Landeshauptstadt von Rheinland-Pfalz heißt ...;Mainz.;Kaiserslautern.;Ludwigshafen.;Koblenz.;a;land;Bundesland;Rheinland-Pfalz;-;
-RP-8;Welches Bundesland ist Rheinland-Pfalz?;null;null;null;null;a;land;Bundesland;Rheinland-Pfalz;frage_rp_8;image
+RP-8;Welches Bundesland ist Rheinland-Pfalz?;1;2;3;4;a;land;Bundesland;Rheinland-Pfalz;frage_rp_8;image
 RP-9;Wie nennt man den Regierungschef / die Regierungschefin in Rheinland-Pfalz?;Erster Minister / Erste Ministerin;Premierminister / Premierministerin;Bürgermeister / Bürgermeisterin;Ministerpräsident / Ministerpräsidentin;d;land;Bundesland;Rheinland-Pfalz;-;
 RP-10;Welchen Minister / welche Ministerin hat Rheinland-Pfalz nicht?;Justizminister / Justizministerin;Außenminister / Außenministerin;Finanzminister / Finanzministerin;Innenminister / Innenministerin;b;land;Bundesland;Rheinland-Pfalz;-;
-SH-1;Welches Wappen gehört zum Bundesland Schleswig-Holstein?;null;null;null;null;a;land;Bundesland;Schleswig-Holstein;frage_sh_1;image
+SH-1;Welches Wappen gehört zum Bundesland Schleswig-Holstein?;1;2;3;4;c;land;Bundesland;Schleswig-Holstein;frage_sh_1;image
 SH-2;Welches ist ein Landkreis in Schleswig-Holstein?;Ammerland;Mecklenburgische Seenplatte;Nordfriesland;Rhein-Sieg-Kreis;c;land;Bundesland;Schleswig-Holstein;-;
 SH-3;Für wie viele Jahre wird der Landtag in Schleswig-Holstein gewählt?;3;4;5;6;c;land;Bundesland;Schleswig-Holstein;-;
 SH-4;Ab welchem Alter darf man in Schleswig-Holstein bei Kommunalwahlen wählen?;14;16;18;20;b;land;Bundesland;Schleswig-Holstein;-;
 SH-5;Welche Farben hat die Landesflagge von Schleswig-Holstein?;weiß-blau;blau-weiß-rot;weiß-rot;grün-weiß-rot;b;land;Bundesland;Schleswig-Holstein;-;
 SH-6;Wo können Sie sich in Schleswig-Holstein über politische Themen informieren?;bei der Verbraucherzentrale;beim Ordnungsamt der Gemeinde;bei dem/der Landesbeauftragten für politische Bildung;bei den Kirchen;c;land;Bundesland;Schleswig-Holstein;-;
 SH-7;Die Landeshauptstadt von Schleswig-Holstein heißt ...;Husum.;Flensburg.;Lübeck.;Kiel.;d;land;Bundesland;Schleswig-Holstein;-;
-SH-8;Welches Bundesland ist Schleswig-Holstein?;null;null;null;null;a;land;Bundesland;Schleswig-Holstein;frage_sh_8;image
+SH-8;Welches Bundesland ist Schleswig-Holstein?;1;2;3;4;a;land;Bundesland;Schleswig-Holstein;frage_sh_8;image
 SH-9;Wie nennt man den Regierungschef / die Regierungschefin in Schleswig-Holstein?;Erster Minister / Erste Ministerin;Premierminister / Premierministerin;Bürgermeister / Bürgermeisterin;Ministerpräsident / Ministerpräsidentin;d;land;Bundesland;Schleswig-Holstein;-;
 SH-10;Welchen Minister / welche Ministerin hat Schleswig-Holstein nicht?;Justizminister / Justizministerin;Außenminister / Außenministerin;Finanzminister / Finanzministerin;Innenminister / Innenministerin;b;land;Bundesland;Schleswig-Holstein;-;
-SL-1;Welches Wappen gehört zum Bundesland Saarland?;null;null;null;null;a;land;Bundesland;Saarland;frage_sl_1;image
+SL-1;Welches Wappen gehört zum Bundesland Saarland?;1;2;3;4;d;land;Bundesland;Saarland;frage_sl_1;image
 SL-2;Welches ist ein Landkreis im Saarland?;Mecklenburgische Seenplatte;Altötting;Neunkirchen;Rhein-Sieg-Kreis;c;land;Bundesland;Saarland;-;
 SL-3;Für wie viele Jahre wird der Landtag des Saarlandes gewählt?;3;4;5;6;c;land;Bundesland;Saarland;-;
 SL-4;Ab welchem Alter darf man im Saarland bei Kommunalwahlen wählen?;14;16;18;20;c;land;Bundesland;Saarland;-;
 SL-5;Welche Farben hat die Landesflagge des Saarlandes?;weiß-blau;schwarz-rot-gold;schwarz-gelb;grün-weiß-rot;b;land;Bundesland;Saarland;-;
 SL-6;Wo können Sie sich im Saarland über politische Themen informieren?;bei den Kirchen;bei der Landeszentrale für politische Bildung;bei der Verbraucherzentrale;beim Ordnungsamt der Gemeinde;b;land;Bundesland;Saarland;-;
 SL-7;Die Landeshauptstadt des Saarlandes heißt ...;Neunkirchen.;Homburg.;Saarbrücken.;Völklingen.;c;land;Bundesland;Saarland;-;
-SL-8;Welches Bundesland ist das Saarland?;null;null;null;null;a;land;Bundesland;Saarland;frage_sl_8;image
+SL-8;Welches Bundesland ist das Saarland?;1;2;3;4;b;land;Bundesland;Saarland;frage_sl_8;image
 SL-9;Wie nennt man den Regierungschef / die Regierungschefin des Saarlandes?;Erster Minister / Erste Ministerin;Premierminister / Premierministerin;Bürgermeister / Bürgermeisterin;Ministerpräsident / Ministerpräsidentin;d;land;Bundesland;Saarland;-;
 SL-10;Welchen Minister / welche Ministerin hat das Saarland nicht?;Justizminister / Justizministerin;Außenminister / Außenministerin;Finanzminister / Finanzministerin;Innenminister / Innenministerin;b;land;Bundesland;Saarland;-;
-SN-1;Welches Wappen gehört zum Freistaat Sachsen?;null;null;null;null;a;land;Bundesland;Sachsen;frage_sn_1;image
+SN-1;Welches Wappen gehört zum Freistaat Sachsen?;1;2;3;4;d;land;Bundesland;Sachsen;frage_sn_1;image
 SN-2;Welches ist ein Landkreis in Sachsen?;Vogtlandkreis;Altötting;Uckermark;Nordfriesland;a;land;Bundesland;Sachsen;-;
 SN-3;Für wie viele Jahre wird der Landtag in Sachsen gewählt?;3;4;5;6;c;land;Bundesland;Sachsen;-;
 SN-4;Ab welchem Alter darf man in Sachsen bei Kommunalwahlen wählen?;14;16;18;20;c;land;Bundesland;Sachsen;-;
 SN-5;Welche Farben hat die Landesflagge von Sachsen?;blau-weiß-rot;weiß-grün;grün-weiß-rot;schwarz-gelb;b;land;Bundesland;Sachsen;-;
 SN-6;Wo können Sie sich in Sachsen über politische Themen informieren?;bei der Landeszentrale für politische Bildung;beim Ordnungsamt der Gemeinde;bei den Kirchen;bei der Verbraucherzentrale;a;land;Bundesland;Sachsen;-;
 SN-7;Die Landeshauptstadt von Sachsen heißt ...;Leipzig.;Dresden.;Chemnitz.;Zwickau.;b;land;Bundesland;Sachsen;-;
-SN-8;Welches Bundesland ist Sachsen?;null;null;null;null;a;land;Bundesland;Sachsen;frage_sn_8;image
+SN-8;Welches Bundesland ist Sachsen?;1;2;3;4;d;land;Bundesland;Sachsen;frage_sn_8;image
 SN-9;Wie nennt man den Regierungschef / die Regierungschefin in Sachsen?;Erster Minister / Erste Ministerin;Premierminister / Premierministerin;Bürgermeister / Bürgermeisterin;Ministerpräsident / Ministerpräsidentin;d;land;Bundesland;Sachsen;-;
 SN-10;Welchen Minister / welche Ministerin hat Sachsen nicht?;Justizminister / Justizministerin;Außenminister / Außenministerin;Finanzminister / Finanzministerin;Innenminister / Innenministerin;b;land;Bundesland;Sachsen;-;
-ST-1;Welches Wappen gehört zum Bundesland Sachsen-Anhalt?;null;null;null;null;a;land;Bundesland;Sachsen-Anhalt;frage_st_1;image
+ST-1;Welches Wappen gehört zum Bundesland Sachsen-Anhalt?;1;2;3;4;d;land;Bundesland;Sachsen-Anhalt;frage_st_1;image
 ST-2;Welches ist ein Landkreis in Sachsen-Anhalt?;Ammerland;Altötting;Uckermark;Börde;d;land;Bundesland;Sachsen-Anhalt;-;
 ST-3;Für wie viele Jahre wird der Landtag in Sachsen-Anhalt gewählt?;3;4;5;6;c;land;Bundesland;Sachsen-Anhalt;-;
 ST-4;Ab welchem Alter darf man in Sachsen-Anhalt bei Kommunalwahlen wählen?;14;16;18;20;b;land;Bundesland;Sachsen-Anhalt;-;
 ST-5;Welche Farben hat die Landesflagge von Sachsen-Anhalt?;blau-weiß-rot;gelb-schwarz;grün-weiß-rot;weiß-rot;b;land;Bundesland;Sachsen-Anhalt;-;
 ST-6;Wo können Sie sich in Sachsen-Anhalt über politische Themen informieren?;bei den Kirchen;bei der Landeszentrale für politische Bildung;beim Ordnungsamt der Gemeinde;bei der Verbraucherzentrale;b;land;Bundesland;Sachsen-Anhalt;-;
 ST-7;Die Landeshauptstadt von Sachsen-Anhalt heißt ...;Halle.;Dessau.;Magdeburg.;Wittenberg.;c;land;Bundesland;Sachsen-Anhalt;-;
-ST-8;Welches Bundesland ist Sachsen-Anhalt?;null;null;null;null;a;land;Bundesland;Sachsen-Anhalt;frage_st_8;image
+ST-8;Welches Bundesland ist Sachsen-Anhalt?;1;2;3;4;c;land;Bundesland;Sachsen-Anhalt;frage_st_8;image
 ST-9;Wie nennt man den Regierungschef / die Regierungschefin in Sachsen-Anhalt?;Erster Minister / Erste Ministerin;Premierminister / Premierministerin;Bürgermeister / Bürgermeisterin;Ministerpräsident / Ministerpräsidentin;d;land;Bundesland;Sachsen-Anhalt;-;
 ST-10;Welchen Minister / welche Ministerin hat Sachsen-Anhalt nicht?;Justizminister / Justizministerin;Außenminister / Außenministerin;Finanzminister / Finanzministerin;Innenminister / Innenministerin;b;land;Bundesland;Sachsen-Anhalt;-;
-TH-1;Welches Wappen gehört zum Freistaat Thüringen?;null;null;null;null;a;land;Bundesland;Thüringen;frage_th_1;image
+TH-1;Welches Wappen gehört zum Freistaat Thüringen?;1;2;3;4;d;land;Bundesland;Thüringen;frage_th_1;image
 TH-2;Welches ist ein Landkreis in Thüringen?;Ammerland;Altötting;Nordfriesland;Wartburgkreis;d;land;Bundesland;Thüringen;-;
 TH-3;Für wie viele Jahre wird der Landtag in Thüringen gewählt?;3;4;5;6;c;land;Bundesland;Thüringen;-;
 TH-4;Ab welchem Alter darf man in Thüringen bei Kommunalwahlen wählen?;14;18;16;20;c;land;Bundesland;Thüringen;-;
 TH-5;Welche Farben hat die Landesflagge von Thüringen?;blau-weiß-rot;weiß-rot;grün-weiß-rot;schwarz-gold;b;land;Bundesland;Thüringen;-;
 TH-6;Wo können Sie sich in Thüringen über politische Themen informieren?;bei den Kirchen;bei der Verbraucherzentrale;bei der Landeszentrale für politische Bildung;beim Ordnungsamt der Gemeinde;c;land;Bundesland;Thüringen;-;
 TH-7;Die Landeshauptstadt von Thüringen heißt ...;Eisenach.;Erfurt.;Gera.;Jena.;b;land;Bundesland;Thüringen;-;
-TH-8;Welches Bundesland ist Thüringen?;null;null;null;null;a;land;Bundesland;Thüringen;frage_th_8;image
+TH-8;Welches Bundesland ist Thüringen?;1;2;3;4;b;land;Bundesland;Thüringen;frage_th_8;image
 TH-9;Wie nennt man den Regierungschef / die Regierungschefin in Thüringen?;Erster Minister / Erste Ministerin;Premierminister / Premierministerin;Bürgermeister / Bürgermeisterin;Ministerpräsident / Ministerpräsidentin;d;land;Bundesland;Thüringen;-;
 TH-10;Welchen Minister / welche Ministerin hat Thüringen nicht?;Justizminister / Justizministerin;Außenminister / Außenministerin;Finanzminister / Finanzministerin;Innenminister / Innenministerin;b;land;Bundesland;Thüringen;-;
