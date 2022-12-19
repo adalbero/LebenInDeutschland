@@ -1,3 +1,4 @@
+num;question;a;b;c;d;solution;area_code;area;theme;image;Tags
 1;In Deutschland dürfen Menschen offen etwas gegen die Regierung sagen, weil ...;hier Religionsfreiheit gilt.;die Menschen Steuern zahlen.;die Menschen das Wahlrecht haben.;hier Meinungsfreiheit gilt.;d;politik;Politik in der Demokratie;Grundrechte;-;
 2;In Deutschland können Eltern bis zum 14. Lebensjahr ihres Kindes entscheiden, ob es in der Schule am ...;Geschichtsunterricht teilnimmt.;Religionsunterricht teilnimmt.;Politikunterricht teilnimmt.;Sprachunterricht teilnimmt.;b;politik;Politik in der Demokratie;Grundrechte;-;
 3;Deutschland ist ein Rechtsstaat. Was ist damit gemeint?;Alle Einwohner / Einwohnerinnen und der Staat müssen sich an die Gesetze halten.;Der Staat muss sich nicht an die Gesetze halten.;Nur Deutsche müssen die Gesetze befolgen.;Die Gerichte machen die Gesetze.;a;politik;Politik in der Demokratie;Verfassungsprinzipien;-;

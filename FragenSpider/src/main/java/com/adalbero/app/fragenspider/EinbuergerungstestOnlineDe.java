@@ -10,8 +10,8 @@ import java.util.regex.Pattern;
  * Created by Adalbero on 18/02/2018.
  */
 
-public class EinbuergerungstestOnline {
-    private static final String BASE_URL = "https://www.einbuergerungstest-online.eu/fragen/";
+public class EinbuergerungstestOnlineDe {
+    private static final String BASE_URL = "https://www.einbuergerungstest-online.de/fragen/";
 
     public static List<Question> spider() throws IOException {
 
@@ -31,7 +31,7 @@ public class EinbuergerungstestOnline {
         return list;
     }
 
-    static String REGEX_QUESTION = "(<div class=\"row\".+?<.ul>\\s*<.div>\\s*<.div>)";
+    static String REGEX_QUESTION = "(<div class=\"mb-8.*?\".+?</div>)";
 
     public static void pareQuestions(List<Question> list, String text, String state) {
         Pattern p = Pattern.compile(REGEX_QUESTION, Pattern.DOTALL);
@@ -56,7 +56,7 @@ public class EinbuergerungstestOnline {
         }
     }
 
-    static String REGEX_NUM = "<div class=\"row\" id=\"frage-(.+?)\">";
+    static String REGEX_NUM = "Frage.*?([0-9]+):";
 
     public static void parseNum(Question q, String text) {
         Pattern p = Pattern.compile(REGEX_NUM, Pattern.DOTALL);
@@ -66,7 +66,7 @@ public class EinbuergerungstestOnline {
         q.num = m.group(1);
      }
 
-    static String REGEX_TEXT = "<p>(?:<a.+?>)?(.+?)(?:<.a>)?<.p>";
+    static String REGEX_TEXT = "<strong class=\"font-semibold\">(?:.\\s*<a.+?>)?\\s*(.+?)(?:\\s*</a>)?\\s*</strong>";
 
     public static void parseText(Question q, String text) {
         Pattern p = Pattern.compile(REGEX_TEXT, Pattern.DOTALL);
@@ -79,7 +79,8 @@ public class EinbuergerungstestOnline {
         q.text = str;
     }
 
-    static String REGEX_ANSWER = "<li>(<span.*?>)?(.*?)(?:<.span>)?<.li>";
+//    static String REGEX_ANSWER = "<li>\\S*<span.*?>\\S*(<span.*?>.*?</span>)?\\S*(.*?)\\S*</span>\\S*</li>";
+    static String REGEX_ANSWER = "<li.*?>\\s*<span.*?>(\\s*<span.*?>.*?</span>)?\\s*(.*?)\\s*</span>\\s*</li>";
 
     public static void parseAnswers(Question q, String text) {
         Pattern p = Pattern.compile(REGEX_ANSWER, Pattern.DOTALL);
