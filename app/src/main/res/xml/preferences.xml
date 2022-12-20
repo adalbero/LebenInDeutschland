@@ -51,6 +51,11 @@
             android:summary="Q1-2023"
             android:title="Database" />
 
+        <Preference
+            android:key="pref.policy"
+            android:summary="View"
+            android:title="Privacy Policy" />
+
     </PreferenceCategory>
 
     <PreferenceCategory

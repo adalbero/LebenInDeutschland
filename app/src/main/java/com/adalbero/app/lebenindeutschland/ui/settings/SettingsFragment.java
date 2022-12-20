@@ -2,8 +2,10 @@ package com.adalbero.app.lebenindeutschland.ui.settings;
 
 import android.content.Context;
 import android.content.DialogInterface;
+import android.content.Intent;
 import android.content.pm.PackageInfo;
 import android.content.pm.PackageManager;
+import android.net.Uri;
 import android.os.Bundle;
 import android.preference.ListPreference;
 import android.preference.Preference;
@@ -21,6 +23,7 @@ import com.google.firebase.analytics.FirebaseAnalytics;
 import static com.adalbero.app.lebenindeutschland.R.xml.preferences;
 import static com.adalbero.app.lebenindeutschland.controller.Store.PREF_REMOVE_STAT;
 import static com.adalbero.app.lebenindeutschland.controller.Store.PREF_VERSION;
+import static com.adalbero.app.lebenindeutschland.controller.Store.PREF_POLICY;
 
 /**
  * Created by Adalbero on 10/06/2017.
@@ -63,6 +66,8 @@ public class SettingsFragment extends PreferenceFragment implements Preference.O
         prefLand.setOnPreferenceChangeListener(this);
 
         findPreference(Store.PREF_REMOVE_STAT).setOnPreferenceClickListener(this);
+
+        findPreference(Store.PREF_POLICY).setOnPreferenceClickListener(this);
 
         mDebugCategory = (PreferenceCategory) findPreference(DEBUG_CATEGORY);
 
@@ -135,6 +140,8 @@ public class SettingsFragment extends PreferenceFragment implements Preference.O
             } else {
                 mDebugClick++;
             }
+        } else if (key.equals(PREF_POLICY)) {
+            doOpenPolicy();
         } else if (key.equals(DEBUG_DUMP)) {
             Debug.dumpSharedPreferences();
         } else if (key.equals(DEBUG_DUMP_STAT)) {
@@ -153,6 +160,11 @@ public class SettingsFragment extends PreferenceFragment implements Preference.O
         }
 
         return false;
+    }
+
+    private void doOpenPolicy() {
+        String url="https://lidtest.de/policy.html#policy";
+        startActivity(new Intent(Intent.ACTION_VIEW, Uri.parse(url)));
     }
 
     private void doRemoveStat() {
