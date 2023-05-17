@@ -2,14 +2,13 @@ package com.adalbero.app.lebenindeutschland.ui.question;
 
 import android.content.ComponentName;
 import android.content.Intent;
-import android.content.pm.ResolveInfo;
 import android.os.Bundle;
 import android.speech.RecognizerIntent;
 
+import androidx.annotation.NonNull;
 import androidx.core.content.ContextCompat;
 import androidx.appcompat.app.AppCompatActivity;
 
-import android.util.Log;
 import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
@@ -35,6 +34,7 @@ import com.google.firebase.analytics.FirebaseAnalytics;
 import com.google.firebase.crashlytics.FirebaseCrashlytics;
 
 import java.util.List;
+import java.util.Locale;
 
 public class QuestionActivity extends AppCompatActivity implements ResultCallback {
 
@@ -70,23 +70,13 @@ public class QuestionActivity extends AppCompatActivity implements ResultCallbac
         mResult = new ExamResult();
 
         mBtnPrev = findViewById(R.id.btn_prev);
-        mBtnPrev.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                goPrev();
-            }
-        });
+        mBtnPrev.setOnClickListener(v -> goPrev());
 
         mBtnNext = findViewById(R.id.btn_next);
-        mBtnNext.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                goNext();
-            }
-        });
+        mBtnNext.setOnClickListener(v -> goNext());
         mResultView = findViewById(R.id.view_result);
 
-        mClock = new Clock((TextView) findViewById(R.id.view_clock));
+        mClock = new Clock(findViewById(R.id.view_clock));
 
         mProgressView = findViewById(R.id.view_progress);
 
@@ -125,7 +115,7 @@ public class QuestionActivity extends AppCompatActivity implements ResultCallbac
     }
 
     @Override
-    public boolean onCreateOptionsMenu(Menu menu) {
+    public boolean onCreateOptionsMenu(@NonNull Menu menu) {
         getMenuInflater().inflate(R.menu.question_menu, menu);
 
         return true;
@@ -138,7 +128,7 @@ public class QuestionActivity extends AppCompatActivity implements ResultCallbac
                 doSpeak();
                 return true;
             case R.id.menu_voice:
-                doSpeachRecognize();
+                doSpeechRecognize();
                 return true;
             case R.id.menu_share:
                 goTranslate();
@@ -159,8 +149,8 @@ public class QuestionActivity extends AppCompatActivity implements ResultCallbac
         String num = mQuestionList.get(idx);
         mQuestion = AppController.getQuestionDB().getQuestion(num);
 
-        getSupportActionBar().setTitle(String.format("Question %s", num));
-        getSupportActionBar().setSubtitle(String.format("%d of %d", (idx + 1), count));
+        getSupportActionBar().setTitle(String.format(Locale.US, "Question %s", num));
+        getSupportActionBar().setSubtitle(String.format(Locale.US, "%d of %d", (idx + 1), count));
 
         ScrollView scrollView = findViewById(R.id.scroll_view);
         scrollView.scrollTo(0, 0);
@@ -171,7 +161,7 @@ public class QuestionActivity extends AppCompatActivity implements ResultCallbac
         if (mQuestion == null) {
             String exam = AppController.getCurrentExam().getTitle(true);
             String land = Store.getSelectedLandName();
-            String msg = String.format("Question==null  count=%d  idx=%d  num=%s  land=%s  exam=%s",
+            String msg = String.format(Locale.US, "Question==null  count=%d  idx=%d  num=%s  land=%s  exam=%s",
                     count, idx, num, land, exam);
 
             FirebaseCrashlytics.getInstance().recordException(new NullPointerException((msg)));
@@ -272,7 +262,7 @@ public class QuestionActivity extends AppCompatActivity implements ResultCallbac
         Analytics.logFeatureTranslate(mFirebaseAnalytics, msg, mQuestion);
     }
 
-    private void doSpeachRecognize() {
+    private void doSpeechRecognize() {
         boolean ok = mVoice.speechRecognizer(this, "de-DE",
                 "Sagen Sie: " +
                         "\nder Antworttext" +
@@ -295,7 +285,7 @@ public class QuestionActivity extends AppCompatActivity implements ResultCallbac
         if (requestCode == Voice.SPEECH_REQUEST_CODE && resultCode == RESULT_OK) {
             List<String> results = data.getStringArrayListExtra(RecognizerIntent.EXTRA_RESULTS);
 
-            String result[] = findAnswer(results);
+            String[] result = findAnswer(results);
             String answer = result[0];
             String spokenText = result[1];
             Toast.makeText(this, spokenText, Toast.LENGTH_SHORT).show();
@@ -329,10 +319,10 @@ public class QuestionActivity extends AppCompatActivity implements ResultCallbac
                 String[] keywords = {"antwort", "antworte", "nummer"};
                 char ch = Character.MIN_VALUE;
 
-                for (int i = 0; i < keywords.length; i++) {
-                    if (text.startsWith(keywords[i])) {
-                        if (text.length() >= keywords[i].length() + 1) {
-                            text = text.substring(keywords[i].length());
+                for (String keyword : keywords) {
+                    if (text.startsWith(keyword)) {
+                        if (text.length() >= keyword.length() + 1) {
+                            text = text.substring(keyword.length());
                             ch = text.charAt(0);
                             break;
                         }
