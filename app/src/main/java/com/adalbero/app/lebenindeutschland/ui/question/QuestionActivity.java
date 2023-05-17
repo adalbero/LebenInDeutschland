@@ -248,54 +248,28 @@ public class QuestionActivity extends AppCompatActivity implements ResultCallbac
     }
 
     private void goTranslate() {
-        final String GOOGLE_TRANSLATOR = "com.google.android.apps.translate";
-
-        Intent sendIntent = new Intent();
-
+        String GOOGLE_TRANSLATOR = "com.google.android.apps.translate";
         String text = mQuestion.getSharedContent();
 
+        Intent sendIntent = new Intent();
         sendIntent.setAction(Intent.ACTION_SEND);
         sendIntent.putExtra(Intent.EXTRA_TEXT, text);
+        sendIntent.putExtra("from", "de");
         sendIntent.setType("text/plain");
 
         String msg;
-        if (setComponent(sendIntent, GOOGLE_TRANSLATOR)) {
-            startActivity(Intent.createChooser(sendIntent, "Select Google Translator"));
+        try {
+            sendIntent.setComponent(new ComponentName(GOOGLE_TRANSLATOR,
+                    "com.google.android.apps.translate.TranslateActivity"));
+
+            startActivity(sendIntent);
             msg = null;
-        } else {
+        } catch (Exception ex) {
             Dialog.appNotFoundDialog(this, "Google Translator", GOOGLE_TRANSLATOR);
             msg = "App not found";
         }
 
         Analytics.logFeatureTranslate(mFirebaseAnalytics, msg, mQuestion);
-    }
-
-    private boolean setComponent(Intent intent, String app) {
-
-        // Dec/2021 Fix: Translator stopped working. Hardcoded.
-        try {
-            intent.setComponent(new ComponentName(app,
-                    "com.google.android.apps.translate.TranslateActivity"));
-            startActivity(Intent.createChooser(intent, "Select Google Translator"));
-
-            return true;
-        } catch (Exception ex) {
-            return false;
-        }
-
-//        List<ResolveInfo> intentList = getPackageManager().queryIntentActivities(intent, 0);
-//
-//        for (ResolveInfo ri : intentList) {
-//            String packageName = ri.activityInfo.packageName;
-//            String activityName = ri.activityInfo.name;
-//
-//            if (packageName.equals(app)) {
-//                intent.setComponent(new ComponentName(packageName, activityName));
-//                return true;
-//            }
-//        }
-//
-//        return false;
     }
 
     private void doSpeachRecognize() {
