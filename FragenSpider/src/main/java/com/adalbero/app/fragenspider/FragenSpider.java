@@ -16,8 +16,8 @@ import java.util.List;
 import java.util.Map;
 
 public class FragenSpider {
-//    private static final String HOME = "C:\\Projects\\LiD\\Android\\LebenInDeutschland\\FragenSpider";
-    private static final String HOME = "/Users/adalbero/Projects/LebenInDeutschland/FragenSpider";
+    private static final String HOME = "C:\\Projects\\LebenInDeutschland\\FragenSpider";
+//    private static final String HOME = "/Users/adalbero/Projects/LebenInDeutschland/FragenSpider";
 
     public static void main(String[] args) throws Exception {
         System.out.println("BEGIN");

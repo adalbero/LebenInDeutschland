@@ -43,11 +43,7 @@ public class ExamItemAdapter extends ArrayAdapter<Exam> {
     public View getView(int position, View convertView, ViewGroup parent) {
         final View view;
 
-//        if (convertView == null) {
-            view = mInflater.inflate(R.layout.exam_item, parent, false);
-//        } else {
-//            view = convertView;
-//        }
+        view = mInflater.inflate(R.layout.exam_item, parent, false);
 
         final Exam exam = getItem(position);
 
@@ -55,7 +51,7 @@ public class ExamItemAdapter extends ArrayAdapter<Exam> {
         int style = NORMAL;
         int color = Color.TRANSPARENT;
         int visible = View.VISIBLE;
-        int gravity = Gravity.LEFT;
+        int gravity = Gravity.START;
 
         if (exam instanceof ExamHeader) {
             style = Typeface.BOLD + Typeface.ITALIC;

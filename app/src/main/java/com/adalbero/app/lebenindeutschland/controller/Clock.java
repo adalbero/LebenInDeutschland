@@ -89,11 +89,11 @@ public class Clock {
 
         mClockView.setText(format(mTime));
         if (stop || isTimout()) {
-            mClockView.setTextColor(ContextCompat.getColor(mClockView.getContext(), R.color.colorNotAnswerd));
+            mClockView.setTextColor(ContextCompat.getColor(mClockView.getContext(), R.color.colorNotAnswered));
         }
 
         if (isTimout()) {
-            TextView mResultView = (TextView) mClockView.getRootView().findViewById(R.id.view_result);
+            TextView mResultView = mClockView.getRootView().findViewById(R.id.view_result);
             if (mResultView != null) {
                 mResultView.setText("Time Out");
                 mResultView.setVisibility(View.VISIBLE);

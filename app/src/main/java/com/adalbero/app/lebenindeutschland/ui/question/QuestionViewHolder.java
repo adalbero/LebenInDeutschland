@@ -71,12 +71,7 @@ public class QuestionViewHolder implements View.OnClickListener, ResultCallback 
         mViewTags = view.findViewById(R.id.view_tags);
         mViewTagButton = view.findViewById(R.id.img_tag);
         mViewStat = view.findViewById(R.id.view_stat);
-        mViewStat.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                goStatDialog();
-            }
-        });
+        mViewStat.setOnClickListener(v -> goStatDialog());
 
         mViewStatus = view.findViewById(R.id.view_status);
         mViewQuestion = view.findViewById(R.id.view_question);
@@ -89,12 +84,7 @@ public class QuestionViewHolder implements View.OnClickListener, ResultCallback 
         mViewImage = view.findViewById(R.id.view_image);
         mViewImageAlt = view.findViewById(R.id.view_image_alt);
 
-        mViewTags.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                goTagDialog();
-            }
-        });
+        mViewTags.setOnClickListener(v -> goTagDialog());
 
         for (CheckedTextView btn : mViewOptions) {
             btn.setOnClickListener(this);

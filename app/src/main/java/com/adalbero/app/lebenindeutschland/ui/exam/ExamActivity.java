@@ -2,12 +2,13 @@ package com.adalbero.app.lebenindeutschland.ui.exam;
 
 import android.content.Intent;
 import android.os.Bundle;
+
+import androidx.annotation.NonNull;
 import androidx.core.content.ContextCompat;
 import androidx.appcompat.app.AppCompatActivity;
 import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
-import android.widget.AdapterView;
 import android.widget.ListView;
 import android.widget.TextView;
 import android.widget.Toast;
@@ -30,6 +31,7 @@ import com.google.firebase.analytics.FirebaseAnalytics;
 
 import java.util.ArrayList;
 import java.util.List;
+import java.util.Locale;
 import java.util.Map;
 
 public class ExamActivity extends AppCompatActivity implements ResultCallback {
@@ -73,23 +75,15 @@ public class ExamActivity extends AppCompatActivity implements ResultCallback {
 
         mStatView = findViewById(R.id.view_stat);
         mStatView.setExam(mExam);
-        mStatView.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                goStatDialog();
-            }
-        });
+        mStatView.setOnClickListener(v -> goStatDialog());
 
         mListView = findViewById(R.id.list_view);
         mListView.setAdapter(mAdapter);
 
-        mListView.setOnItemClickListener(new AdapterView.OnItemClickListener() {
-            @Override
-            public void onItemClick(AdapterView<?> adapter, View v, int position, long id) {
-                boolean inline = Store.getExamInline();
-                if (!inline)
-                    goQuestion(position);
-            }
+        mListView.setOnItemClickListener((adapter, v, position, id) -> {
+            boolean inline = Store.getExamInline();
+            if (!inline)
+                goQuestion(position);
         });
 
         AppController.initAdView(this);
@@ -97,7 +91,7 @@ public class ExamActivity extends AppCompatActivity implements ResultCallback {
     }
 
     @Override
-    public boolean onCreateOptionsMenu(Menu menu) {
+    public boolean onCreateOptionsMenu(@NonNull Menu menu) {
         getMenuInflater().inflate(R.menu.exam_menu, menu);
 
         return true;
@@ -177,7 +171,7 @@ public class ExamActivity extends AppCompatActivity implements ResultCallback {
 
     private void updateData() {
         List<String> questions = mExam.getQuestionList();
-        mData = new ArrayList();
+        mData = new ArrayList<>();
         if (questions != null) {
             for (String questionNum : questions) {
                 Question q = AppController.getQuestionDB().getQuestion(questionNum);
@@ -196,26 +190,26 @@ public class ExamActivity extends AppCompatActivity implements ResultCallback {
 
     private void updateStat() {
         mStatView.setExam(mExam);
-        TextView viewRating = (TextView) findViewById(R.id.view_rating);
+        TextView viewRating = findViewById(R.id.view_rating);
         float rating = Statistics.getInstance().getRating(mExam.getQuestionList());
 
-        viewRating.setText(String.format("%.0f", 100 * rating));
+        viewRating.setText(String.format(Locale.US, "%.0f", 100 * rating));
     }
 
     private void updateResult() {
         ResultInfo resultInfo = mResult.getResult();
 
-        getSupportActionBar().setSubtitle(String.format("%d of %d", mResult.getResult().getAnswered(), mResult.getCount()));
+        getSupportActionBar().setSubtitle(String.format(Locale.US, "%d of %d", mResult.getResult().getAnswered(), mResult.getCount()));
 
         updateStat();
 
-        TextView text_total_value = (TextView) findViewById(R.id.text_value1);
-        text_total_value.setText(String.format("%d of %d (%.0f%%)", resultInfo.answered, resultInfo.total, resultInfo.getAnsweredPerc()));
+        TextView text_total_value = findViewById(R.id.text_value1);
+        text_total_value.setText(String.format(Locale.US, "%d of %d (%.0f%%)", resultInfo.answered, resultInfo.total, resultInfo.getAnsweredPerc()));
 
-        TextView text_answerd_value = (TextView) findViewById(R.id.text_value2);
-        text_answerd_value.setText(String.format("%d of %d (%.0f%%)", resultInfo.right, resultInfo.answered, resultInfo.getRightPerc()));
+        TextView text_answered_value = findViewById(R.id.text_value2);
+        text_answered_value.setText(String.format(Locale.US, "%d of %d (%.0f%%)", resultInfo.right, resultInfo.answered, resultInfo.getRightPerc()));
 
-        ProgressView progressView = (ProgressView) findViewById(R.id.view_progress);
+        ProgressView progressView = findViewById(R.id.view_progress);
         progressView.setProgress(resultInfo);
 
         if (resultInfo.isFinished()) {
@@ -285,7 +279,7 @@ public class ExamActivity extends AppCompatActivity implements ResultCallback {
 
     private void goStatDialog() {
         ExamStatDialog dialog = new ExamStatDialog();
-        dialog.setExamp(mExam);
+        dialog.setExam(mExam);
         dialog.show(this.getFragmentManager(), "stat");
 
         Analytics.logFeatureExamStat(mFirebaseAnalytics, mExam);

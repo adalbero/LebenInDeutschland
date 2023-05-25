@@ -2,7 +2,6 @@ package com.adalbero.app.lebenindeutschland.ui.common;
 
 import android.app.Dialog;
 import android.app.DialogFragment;
-import android.content.DialogInterface;
 import android.os.Bundle;
 import androidx.appcompat.app.AlertDialog;
 import android.view.LayoutInflater;
@@ -50,29 +49,21 @@ public class TagDialog extends DialogFragment {
 
         builder.setView(view)
                 .setTitle(title)
-                .setPositiveButton(android.R.string.ok, new DialogInterface.OnClickListener() {
-                    @Override
-                    public void onClick(DialogInterface dialog, int id) {
-                        // sign in the user ...
-                        String text = newTag.getText().toString();
-                        if (text != null && text.length() > 0) {
-                            selected.add(text.trim());
-                        }
-                        mCallback.onResult(TagDialog.this, null);
+                .setPositiveButton(android.R.string.ok, (dialog, id) -> {
+                    // sign in the user ...
+                    String text = newTag.getText().toString();
+                    if (text.length() > 0) {
+                        selected.add(text.trim());
                     }
+                    mCallback.onResult(TagDialog.this, null);
                 })
-                .setNegativeButton(android.R.string.cancel, new DialogInterface.OnClickListener() {
-                    @Override
-                    public void onClick(DialogInterface dialog, int id) {
-                        TagDialog.this.getDialog().cancel();
-                    }
-                });
+                .setNegativeButton(android.R.string.cancel, (dialog, id) -> TagDialog.this.getDialog().cancel());
 
         return builder.create();
     }
 
     public void initView(View v) {
-        Set<String> tags = AppController.getInstance().getQuestionDB().getAllTags();
+        Set<String> tags = AppController.getQuestionDB().getAllTags();
         List<String> data = new ArrayList<>(tags);
 
         removeOldTags(data);

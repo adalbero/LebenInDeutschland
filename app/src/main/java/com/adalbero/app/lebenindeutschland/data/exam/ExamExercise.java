@@ -51,7 +51,7 @@ public class ExamExercise extends Exam {
         // order by rating
         Collections.sort(all310, new QuestionComparator(2, 1));
 
-        int size = Store.getExcerciseSize();
+        int size = Store.getExerciseSize();
 
         // pick 20 first
         List<String> list = new ArrayList<>();

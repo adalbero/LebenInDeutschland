@@ -32,7 +32,7 @@ public class ExamArea extends Exam {
                 mColor = super.getColor();
             } else {
                 String num = getQuestionList().get(0);
-                mColor = AppController.getInstance().getQuestionDB().getQuestion(num).getAreaColor();
+                mColor = AppController.getQuestionDB().getQuestion(num).getAreaColor();
             }
         }
 

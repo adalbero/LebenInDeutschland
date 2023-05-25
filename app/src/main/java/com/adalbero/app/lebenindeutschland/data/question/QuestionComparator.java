@@ -40,7 +40,7 @@ public class QuestionComparator implements Comparator<String> {
             return Integer.valueOf(num);
         } catch (Exception ex) {
             try {
-                return 300 + Integer.valueOf(num.substring(3));
+                return 300 + Integer.parseInt(num.substring(3));
             } catch (Exception ex2) {
                 return 0;
             }
@@ -63,7 +63,7 @@ public class QuestionComparator implements Comparator<String> {
         if (r1 != r2)
             return r1 - r2;
 
-        // if 0 less answerd is better, if > 0 more answerd is better
+        // if 0 less answered is better, if > 0 more answered is better
         if (r1 != 0)
             inv = -1;
 

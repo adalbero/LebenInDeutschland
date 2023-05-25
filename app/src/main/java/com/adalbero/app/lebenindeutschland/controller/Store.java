@@ -194,7 +194,7 @@ public class Store {
     }
 
 
-    public static int getExcerciseSize() {
+    public static int getExerciseSize() {
         return Integer.parseInt(getString(PREF_EXERCISE_SIZE, "20"));
     }
 }

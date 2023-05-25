@@ -141,7 +141,7 @@ public class Question {
     }
 
     public int getAreaColor() {
-        int colorRes = 0;
+        int colorRes;
         if (areaCode.equals("politik"))
             colorRes = R.color.colorArea1;
         else if (areaCode.equals("gesellschaft"))

@@ -2,11 +2,11 @@ package com.adalbero.app.lebenindeutschland.ui.main;
 
 import android.content.Intent;
 import android.os.Bundle;
+
+import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
 import android.view.Menu;
 import android.view.MenuItem;
-import android.view.View;
-import android.widget.AdapterView;
 import android.widget.ListView;
 
 import com.adalbero.app.lebenindeutschland.R;
@@ -25,7 +25,7 @@ import com.adalbero.app.lebenindeutschland.ui.settings.SettingsActivity;
 import com.google.firebase.analytics.FirebaseAnalytics;
 
 import java.util.ArrayList;
-import java.util.Arrays;
+import java.util.Collections;
 import java.util.List;
 
 public class MainActivity extends AppCompatActivity implements ResultCallback {
@@ -52,24 +52,19 @@ public class MainActivity extends AppCompatActivity implements ResultCallback {
         mListView = findViewById(R.id.list_view);
         mListView.setAdapter(mAdapter);
 
-        mListView.setOnItemClickListener(new AdapterView.OnItemClickListener() {
-            @Override
-            public void onItemClick(AdapterView<?> adapter, View v, int position, long id) {
-                onItemSelected(position);
-            }
-        });
+        mListView.setOnItemClickListener((adapter, v, position, id) -> onItemSelected(position));
 
         AppController.initAdView(this);
     }
 
     private void init() {
         if (Store.getString(ExamSearch.KEY, null) == null) {
-            List<String> terms = Arrays.asList(new String[]{"DDR"});
+            List<String> terms = Collections.singletonList("DDR");
             Store.setList(ExamSearch.KEY, terms);
         }
 
         if (Store.getString(ExamTag.KEY, null) == null) {
-            List<String> terms = Arrays.asList(new String[]{"image"});
+            List<String> terms = Collections.singletonList("image");
             Store.setList(ExamTag.KEY, terms);
         }
     }
@@ -97,10 +92,8 @@ public class MainActivity extends AppCompatActivity implements ResultCallback {
     private void updateData() {
 
         if (data == null) {
-            data = new ArrayList();
-            for (Exam exam : AppController.getExamList()) {
-                data.add(exam);
-            }
+            data = new ArrayList<>();
+            data.addAll(AppController.getExamList());
         } else {
             for (Exam exam : data) {
                 exam.resetQuestionList();
@@ -114,7 +107,7 @@ public class MainActivity extends AppCompatActivity implements ResultCallback {
     }
 
     @Override
-    public boolean onCreateOptionsMenu(Menu menu) {
+    public boolean onCreateOptionsMenu(@NonNull Menu menu) {
         getMenuInflater().inflate(R.menu.main_menu, menu);
         return true;
     }
@@ -125,9 +118,6 @@ public class MainActivity extends AppCompatActivity implements ResultCallback {
             case R.id.menu_settings:
                 goSettings();
                 return true;
-//            case R.id.menu_test:
-//                doTest();
-//                return true;
             default:
                 return super.onOptionsItemSelected(item);
         }
@@ -200,7 +190,4 @@ public class MainActivity extends AppCompatActivity implements ResultCallback {
 
     }
 
-//    private void doTest() {
-//        doSelectLand();
-//    }
 }

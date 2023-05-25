@@ -69,11 +69,11 @@ public class StatView extends View {
         RectF rectF = new RectF();
 
         Statistics.Info info = mStat.getQuestionStat(mQuestionNum);
-        int size = mStat.getHistorySize();
+        int size = Statistics.getHistorySize();
 
         int colorRight = ContextCompat.getColor(getContext(), R.color.colorRight);
         int colorWrong = ContextCompat.getColor(getContext(), R.color.colorWrong);
-        int colorNotAnswerd = ContextCompat.getColor(getContext(), R.color.colorNotAnswerd);
+        int colorNotAnswered = ContextCompat.getColor(getContext(), R.color.colorNotAnswered);
 
         paint.setStyle(Paint.Style.FILL);
 
@@ -84,7 +84,7 @@ public class StatView extends View {
             corner = 0;
 
         for (int i = 0; i < size; i++) {
-            paint.setColor(info.isAnswerRight(i) ? colorRight : info.isAnswerWrong(i) ? colorWrong : colorNotAnswerd);
+            paint.setColor(info.isAnswerRight(i) ? colorRight : info.isAnswerWrong(i) ? colorWrong : colorNotAnswered);
             rectF.set(i * dx, 2, (i + 1) * dx, h - 2);
             canvas.drawRoundRect(rectF, corner, corner, paint);
         }
@@ -99,8 +99,8 @@ public class StatView extends View {
         int colorWrong = ContextCompat.getColor(getContext(), R.color.colorWrongDark);
         int colorLastRight = ContextCompat.getColor(getContext(), R.color.colorRight);
         int colorLastWrong = ContextCompat.getColor(getContext(), R.color.colorWrong);
-        int colorNotAnswerd = ContextCompat.getColor(getContext(), R.color.colorNotAnswerd);
-        int colorNotAnswerdLight = ContextCompat.getColor(getContext(), R.color.colorNotAnswerdLight);
+        int colorNotAnswered = ContextCompat.getColor(getContext(), R.color.colorNotAnswered);
+        int colorNotAnsweredLight = ContextCompat.getColor(getContext(), R.color.colorNotAnsweredLight);
 
         paint.setStyle(Paint.Style.FILL);
         paint.setAntiAlias(true);
@@ -115,7 +115,7 @@ public class StatView extends View {
         rect.set(x - r1, y - r1, x + r1, y + r1);
 
         // Not answered
-        paint.setColor(colorNotAnswerd);
+        paint.setColor(colorNotAnswered);
         canvas.drawOval(rect, paint);
 
         // Right answered
@@ -131,7 +131,7 @@ public class StatView extends View {
         // Last answer
         rect.set(x - r2, y - r2, x + r2, y + r2);
 
-        paint.setColor(colorNotAnswerdLight);
+        paint.setColor(colorNotAnsweredLight);
         canvas.drawOval(rect, paint);
 
         startAngle = -90;

@@ -62,17 +62,4 @@ public class ExamLand extends Exam {
         return true;
     }
 
-//    @Override
-//    public boolean onPrompt(Activity activity, ResultCallback callback) {
-//        String code = Store.getSelectedLandCode();
-//        if (code == null) {
-//            activity.startActivity(new Intent(activity, SettingsActivity.class));
-//
-//            return true;
-//        }
-//
-//        return false;
-//    }
-
-
 }

@@ -70,7 +70,7 @@ public class Exam {
         List<String> list = new ArrayList<>();
 
         String land = Store.getSelectedLandName();
-        QuestionDB questionDB = AppController.getInstance().getQuestionDB();
+        QuestionDB questionDB = AppController.getQuestionDB();
         for (Question q : questionDB.listAll()) {
             if (q.getAreaCode().equals("land") & !q.getTheme().equals(land))
                 continue;

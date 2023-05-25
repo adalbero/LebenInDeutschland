@@ -119,7 +119,7 @@ public class Analytics {
 
     public static void logExamFinish(FirebaseAnalytics firebaseAnalytics, Clock clock, ExamResult result) {
 
-        if (result.isResultLooged()) return;
+        if (result.isResultLogged()) return;
         result.setResultLogged();
 
         Bundle bundle = new Bundle();

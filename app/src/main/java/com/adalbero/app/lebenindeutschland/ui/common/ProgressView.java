@@ -18,6 +18,7 @@ import com.adalbero.app.lebenindeutschland.data.result.ResultInfo;
 
 public class ProgressView extends View {
     Paint paint = new Paint();
+    RectF rectF = new RectF();
 
     private ResultInfo mResultInfo;
 
@@ -35,11 +36,10 @@ public class ProgressView extends View {
     public void onDraw(Canvas canvas) {
         int h = canvas.getHeight();
         int w = canvas.getWidth();
-        RectF rectF = new RectF();
 
         int colorRight = ContextCompat.getColor(getContext(), R.color.colorRight);
         int colorWrong = ContextCompat.getColor(getContext(), R.color.colorWrong);
-        int colorNotAnswerd = ContextCompat.getColor(getContext(), R.color.colorNotAnswerd);
+        int colorNotAnswered = ContextCompat.getColor(getContext(), R.color.colorNotAnswered);
 
         paint.setStyle(Paint.Style.FILL);
 
@@ -50,7 +50,7 @@ public class ProgressView extends View {
             corner = 0;
 
         for (int i = 0; i < mResultInfo.total; i++) {
-            paint.setColor(i < mResultInfo.right ? colorRight : i < mResultInfo.answered ? colorWrong : colorNotAnswerd);
+            paint.setColor(i < mResultInfo.right ? colorRight : i < mResultInfo.answered ? colorWrong : colorNotAnswered);
             rectF.set(i * dx, 2, (i + 1) * dx, h - 2);
             canvas.drawRoundRect(rectF, corner, corner, paint);
         }

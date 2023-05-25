@@ -55,8 +55,6 @@ public class Debug {
 
         for (String key : keys) {
             if (key.startsWith("App Restrictions")) continue;
-//            if (key.startsWith("question.")) continue;
-//            if (key.startsWith("stat.")) continue;
 
             Store.remove(key);
         }

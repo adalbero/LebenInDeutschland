@@ -24,17 +24,14 @@ public class Dialog {
         AlertDialog.Builder builder = new AlertDialog.Builder(context);
         builder.setMessage(text + " not found");
         builder.setPositiveButton("OK", null);
-        builder.setNegativeButton("Install", new DialogInterface.OnClickListener() {
-            @Override
-            public void onClick(DialogInterface dialogInterface, int i) {
-                try {
-                    Intent goToMarket = new Intent(Intent.ACTION_VIEW)
-                            .setData(Uri.parse("market://details?id=" + pack));
-                    context.startActivity(goToMarket);
-                } catch (Exception ex) {
-                    String msg = "Fail to install " + text;
-                    Toast.makeText(context, msg, Toast.LENGTH_SHORT).show();
-                }
+        builder.setNegativeButton("Install", (dialogInterface, i) -> {
+            try {
+                Intent goToMarket = new Intent(Intent.ACTION_VIEW)
+                        .setData(Uri.parse("market://details?id=" + pack));
+                context.startActivity(goToMarket);
+            } catch (Exception ex) {
+                String msg = "Fail to install " + text;
+                Toast.makeText(context, msg, Toast.LENGTH_SHORT).show();
             }
         });
         builder.show();

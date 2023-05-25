@@ -48,7 +48,7 @@
 
         <Preference
             android:key="pref.database"
-            android:summary="Q1-2023"
+            android:summary="Q3-2023"
             android:title="Database" />
 
         <Preference

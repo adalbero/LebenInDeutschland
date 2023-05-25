@@ -3,7 +3,6 @@ package com.adalbero.app.lebenindeutschland.ui.question;
 import android.app.Dialog;
 import android.app.DialogFragment;
 import android.content.Context;
-import android.content.DialogInterface;
 import android.os.Bundle;
 import androidx.core.content.ContextCompat;
 import androidx.appcompat.app.AlertDialog;
@@ -16,6 +15,8 @@ import com.adalbero.app.lebenindeutschland.ui.common.StatView;
 import com.adalbero.app.lebenindeutschland.controller.AppController;
 import com.adalbero.app.lebenindeutschland.controller.Statistics;
 import com.adalbero.app.lebenindeutschland.data.question.Question;
+
+import java.util.Locale;
 
 /**
  * Created by Adalbero on 03/06/2017.
@@ -46,13 +47,8 @@ public class QuestionStatDialog extends DialogFragment {
         initView(view);
 
         builder.setView(view)
-                .setTitle(String.format("Statisics: Question %s", mQuestion.getNum()))
-                .setPositiveButton("Close", new DialogInterface.OnClickListener() {
-                    @Override
-                    public void onClick(DialogInterface dialog, int id) {
-                        QuestionStatDialog.this.getDialog().cancel();
-                    }
-                });
+                .setTitle(String.format("Statistics: Question %s", mQuestion.getNum()))
+                .setPositiveButton("Close", (dialog, id) -> QuestionStatDialog.this.getDialog().cancel());
 
         return builder.create();
     }
@@ -61,7 +57,7 @@ public class QuestionStatDialog extends DialogFragment {
         Statistics mStat = Statistics.getInstance();
 
         Statistics.Info info = mStat.getQuestionStat(mQuestion.getNum());
-        int n = mStat.getHistorySize();
+        int n = Statistics.getHistorySize();
         boolean isAnswered = info.isAnswered();
         boolean lastRight = info.isAnswerRight(0);
         int rating = info.getRatingInt();
@@ -70,7 +66,7 @@ public class QuestionStatDialog extends DialogFragment {
         viewStat.setQuestion(mQuestion);
 
         TextView viewRating = v.findViewById(R.id.view_rating);
-        viewRating.setText(String.format("Rating: %d", rating));
+        viewRating.setText(String.format(Locale.US, "Rating: %d", rating));
 
         TextView viewText = v.findViewById(R.id.view_header);
 
@@ -81,14 +77,14 @@ public class QuestionStatDialog extends DialogFragment {
         TextView viewValue2 = v.findViewById(R.id.view_value2);
 
         if (n > 1) {
-            viewText.setText(String.format("History of the last %d answers:", n));
+            viewText.setText(String.format(Locale.US, "History of the last %d answers:", n));
         } else {
             viewText.setText("History of the last answer:");
         }
 
         if (n > 1 && isAnswered) {
             viewLabel1.setText("Right answers:");
-            viewValue1.setText(String.format("%d of %d (%.0f%%)", info.getNumRight(), info.getNumAnswered(), 100 * info.getRightProgress()));
+            viewValue1.setText(String.format(Locale.US, "%d of %d (%.0f%%)", info.getNumRight(), info.getNumAnswered(), 100 * info.getRightProgress()));
         } else {
             viewLabel1.setVisibility(View.GONE);
             viewValue1.setVisibility(View.GONE);

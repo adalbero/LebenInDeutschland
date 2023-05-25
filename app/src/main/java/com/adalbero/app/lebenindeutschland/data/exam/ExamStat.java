@@ -16,7 +16,7 @@ public class ExamStat extends Exam {
     public static final int FILTER_LAST_RIGHT = 4;
     public static final int FILTER_MOSTLY_RIGHT = 5;
 
-    private int colors[] = {
+    private final int[] colors = {
             R.color.Red_400,
             R.color.Red_200,
             R.color.Red_100,

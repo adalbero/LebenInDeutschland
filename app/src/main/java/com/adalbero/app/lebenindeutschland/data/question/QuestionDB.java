@@ -12,7 +12,6 @@ import java.io.InputStream;
 import java.io.InputStreamReader;
 import java.util.ArrayList;
 import java.util.Collections;
-import java.util.Comparator;
 import java.util.List;
 import java.util.Set;
 import java.util.TreeSet;
@@ -80,19 +79,14 @@ public class QuestionDB {
             }
         }
 
-        Collections.sort(result, new Comparator<String>() {
-            @Override
-            public int compare(String o1, String o2) {
-                return o1.substring(3).compareTo(o2.substring(3));
-            }
-        });
+        Collections.sort(result, (o1, o2) -> o1.substring(3).compareTo(o2.substring(3)));
 
         return result;
     }
 
     public List<String> listAllTheme() {
         List<String> result = new ArrayList<>();
-        String list[] = {"13", "3", "24", "23", "1", "5", "59", "46", "95", "21", "56", "102",
+        String[] list = {"13", "3", "24", "23", "1", "5", "59", "46", "95", "21", "56", "102",
                 "152", "50", "191", "173", "33", "244", "297", "264"};
 
         for (String num : list) {

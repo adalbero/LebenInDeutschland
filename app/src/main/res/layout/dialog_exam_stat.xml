@@ -99,7 +99,7 @@
                     android:layout_gravity="center_vertical"
                     android:layout_marginRight="4dp"
                     android:layout_weight="0"
-                    android:background="@color/colorNotAnswerd" />
+                    android:background="@color/colorNotAnswered" />
 
                 <TextView
                     android:id="@+id/view_label1"

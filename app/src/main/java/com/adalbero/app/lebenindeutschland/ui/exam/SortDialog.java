@@ -38,28 +38,17 @@ public class SortDialog extends DialogFragment implements View.OnClickListener {
 
         builder.setView(view)
                 .setTitle("Sort list by ...")
-                .setPositiveButton(android.R.string.ok, new DialogInterface.OnClickListener() {
-                    @Override
-                    public void onClick(DialogInterface dialog, int id) {
-                        if (mCallback != null) {
-                            mCallback.onResult("SORT", mReverse * mSortMethod);
-                        }
+                .setPositiveButton(android.R.string.ok, (dialog, id) -> {
+                    if (mCallback != null) {
+                        mCallback.onResult("SORT", mReverse * mSortMethod);
                     }
                 })
-                .setNegativeButton(android.R.string.cancel, new DialogInterface.OnClickListener() {
-                    @Override
-                    public void onClick(DialogInterface dialog, int id) {
-                        SortDialog.this.getDialog().cancel();
-                    }
-                });
+                .setNegativeButton(android.R.string.cancel, (dialog, id) -> SortDialog.this.getDialog().cancel());
 
         AlertDialog dialog = builder.create();
-        dialog.setOnShowListener(new DialogInterface.OnShowListener() {
-            @Override
-            public void onShow(DialogInterface dialog) {
-                enablePositiveButton(false);
-                hideReverse(true);
-            }
+        dialog.setOnShowListener(dialog1 -> {
+            enablePositiveButton(false);
+            hideReverse(true);
         });
         return dialog;
     }
@@ -80,7 +69,7 @@ public class SortDialog extends DialogFragment implements View.OnClickListener {
     public void onClick(View v) {
         if (v instanceof RadioButton) {
             try {
-                mSortMethod = Integer.valueOf((String) v.getTag());
+                mSortMethod = Integer.parseInt((String) v.getTag());
                 hideReverse(mSortMethod == 0);
 
                 enablePositiveButton(true);

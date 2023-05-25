@@ -58,7 +58,7 @@ public class ExamSearch extends Exam {
     }
 
     private void setTermsString(String str) {
-        String vet[] = str.split("[ ,;]");
+        String[] vet = str.split("[ ,;]");
         List<String> terms = Arrays.asList(vet);
         setTerms(terms);
     }
@@ -105,7 +105,7 @@ public class ExamSearch extends Exam {
             }
 
             term = normalize(term);
-            if (text.indexOf(term) >= 0) {
+            if (text.contains(term)) {
                 if (bExclude) return false;
                 result = true;
             } else {
@@ -148,20 +148,12 @@ public class ExamSearch extends Exam {
         input.setText(getTermsString());
         builder.setView(input);
 
-        builder.setPositiveButton("OK", new DialogInterface.OnClickListener() {
-            @Override
-            public void onClick(DialogInterface dialog, int which) {
-                String text = input.getText().toString();
-                setTermsString(text);
-                callback.onResult(ExamSearch.this, getName());
-            }
+        builder.setPositiveButton("OK", (dialog, which) -> {
+            String text = input.getText().toString();
+            setTermsString(text);
+            callback.onResult(ExamSearch.this, getName());
         });
-        builder.setNegativeButton("Cancel", new DialogInterface.OnClickListener() {
-            @Override
-            public void onClick(DialogInterface dialog, int which) {
-                dialog.cancel();
-            }
-        });
+        builder.setNegativeButton("Cancel", (dialog, which) -> dialog.cancel());
 
         builder.show();
     }

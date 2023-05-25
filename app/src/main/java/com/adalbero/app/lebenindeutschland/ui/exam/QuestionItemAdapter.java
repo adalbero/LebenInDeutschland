@@ -16,6 +16,7 @@ import com.adalbero.app.lebenindeutschland.ui.question.QuestionViewHolder;
 import com.google.firebase.crashlytics.FirebaseCrashlytics;
 
 import java.util.List;
+import java.util.Locale;
 
 /**
  * Created by Adalbero on 16/05/2017.
@@ -48,7 +49,7 @@ public class QuestionItemAdapter extends ArrayAdapter<Question> {
         if (question == null) {
             String examName = AppController.getCurrentExam().getTitle(true);
             String land = Store.getSelectedLandName();
-            String msg = String.format("Question==null  position=%d  land=%s  exam=%s", position, land, examName);
+            String msg = String.format(Locale.US, "Question==null  position=%d  land=%s  exam=%s", position, land, examName);
 
             FirebaseCrashlytics.getInstance().recordException(new NullPointerException((msg)));
         }

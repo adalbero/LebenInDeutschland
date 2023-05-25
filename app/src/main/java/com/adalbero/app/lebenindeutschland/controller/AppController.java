@@ -1,7 +1,6 @@
 package com.adalbero.app.lebenindeutschland.controller;
 
 import android.app.Activity;
-import android.app.Application;
 import android.graphics.drawable.Drawable;
 import androidx.core.content.ContextCompat;
 import androidx.multidex.MultiDexApplication;
@@ -57,9 +56,6 @@ public class AppController extends MultiDexApplication {
         mInstance = this;
         Analytics.logAppCreate(FirebaseAnalytics.getInstance(this));
 
-        // Initialize Ads
-//        String ADS_APP_ID = this.getString(R.string.ads_app_id);
-//        MobileAds.initialize(getInstance(), ADS_APP_ID);
         MobileAds.initialize(getInstance());
 
         loadQuestionDB();

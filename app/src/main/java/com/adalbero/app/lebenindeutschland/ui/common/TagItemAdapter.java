@@ -40,16 +40,13 @@ public class TagItemAdapter extends ArrayAdapter<String> {
         String text = getItem(position);
 
         final CheckedTextView textView = view.findViewById(R.id.text1);
-        textView.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                if (textView.isChecked()) {
-                    textView.setChecked(false);
-                    mSelected.remove(textView.getText().toString());
-                } else {
-                    textView.setChecked(true);
-                    mSelected.add(textView.getText().toString());
-                }
+        textView.setOnClickListener(v -> {
+            if (textView.isChecked()) {
+                textView.setChecked(false);
+                mSelected.remove(textView.getText().toString());
+            } else {
+                textView.setChecked(true);
+                mSelected.add(textView.getText().toString());
             }
         });
         textView.setText(text);

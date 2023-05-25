@@ -1,7 +1,6 @@
 package com.adalbero.app.lebenindeutschland.data.result;
 
 import androidx.core.content.ContextCompat;
-import android.util.Log;
 
 import com.adalbero.app.lebenindeutschland.R;
 import com.adalbero.app.lebenindeutschland.controller.AppController;
@@ -31,7 +30,7 @@ public class ExamResult {
         Store.setInt(Store.KEY_RESULT_LOGGED, getResult().isFinished() ? 1 : 0);
     }
 
-    public boolean isResultLooged() {
+    public boolean isResultLogged() {
         return Store.getInt(Store.KEY_RESULT_LOGGED, 0) == 1;
     }
 
@@ -49,11 +48,11 @@ public class ExamResult {
 
     public List<String> getAnswerList() {
         Exam exam = getExam();
-        int n = exam.getSize();
 
         if (exam == null) {
             mAnswerList = null;
         } else if (mAnswerList == null) {
+            int n = exam.getSize();
             mAnswerList = Store.getListWithNull(KEY_ANSWER_LIST);
             if (mAnswerList == null || mAnswerList.size() != n) {
                 // reset answer list.
@@ -81,7 +80,7 @@ public class ExamResult {
 
     public void setAnswerMap(Map<String, String> answerMap) {
         List<String> questionList = getExam().getQuestionList();
-        String answers[] = new String[questionList.size()];
+        String[] answers = new String[questionList.size()];
         mAnswerList = Arrays.asList(answers);
 
         for (int i = 0; i < questionList.size(); i++) {
@@ -90,7 +89,7 @@ public class ExamResult {
             mAnswerList.set(i, answer);
         }
 
-        saveAnserList();
+        saveAnswerList();
     }
 
     public void reset() {
@@ -98,7 +97,7 @@ public class ExamResult {
         getAnswerList();
     }
 
-    public void saveAnserList() {
+    public void saveAnswerList() {
         Store.setList(KEY_ANSWER_LIST, getAnswerList());
     }
 
@@ -106,7 +105,7 @@ public class ExamResult {
         int idx = getExam().getQuestionIdx(num);
         if (idx >= 0) {
             getAnswerList().set(idx, answer);
-            saveAnserList();
+            saveAnswerList();
         }
     }
 
@@ -137,8 +136,8 @@ public class ExamResult {
             FirebaseCrashlytics crashlytics = FirebaseCrashlytics.getInstance();
 
             crashlytics.log("lid: Exam: " + exam.getTitle(true));
-            crashlytics.log("lid: questionList=" + questionList.toString());
-            crashlytics.log("lid: answerList=" + answerList.toString());
+            crashlytics.log("lid: questionList=" + questionList);
+            crashlytics.log("lid: answerList=" + answerList);
             crashlytics.recordException(new IndexOutOfBoundsException("questionList != answerList"));
         }
 
@@ -183,7 +182,7 @@ public class ExamResult {
         int colorStatus = ContextCompat.getColor(AppController.getInstance(),
                 status == 1 ? R.color.colorRight
                         : status == 0 ? R.color.colorWrong
-                        : R.color.colorNotAnswerd);
+                        : R.color.colorNotAnswered);
         return colorStatus;
     }
 

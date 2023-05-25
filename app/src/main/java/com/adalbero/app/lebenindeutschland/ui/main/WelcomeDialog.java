@@ -2,7 +2,6 @@ package com.adalbero.app.lebenindeutschland.ui.main;
 
 import android.app.Dialog;
 import android.app.DialogFragment;
-import android.content.DialogInterface;
 import android.os.Bundle;
 import androidx.appcompat.app.AlertDialog;
 import android.view.LayoutInflater;
@@ -42,14 +41,11 @@ public class WelcomeDialog extends DialogFragment {
         builder.setView(view)
                 .setCancelable(false)
                 .setTitle("Welcome!")
-                .setPositiveButton("OK", new DialogInterface.OnClickListener() {
-                    @Override
-                    public void onClick(DialogInterface dialog, int id) {
-                        String land = adapter.getLand();
-                        Store.setLand(land);
-                        if (callback != null) {
-                            callback.onResult(WelcomeDialog.this, land);
-                        }
+                .setPositiveButton("OK", (dialog, id) -> {
+                    String land = adapter.getLand();
+                    Store.setLand(land);
+                    if (callback != null) {
+                        callback.onResult(WelcomeDialog.this, land);
                     }
                 });
 
@@ -71,7 +67,7 @@ public class WelcomeDialog extends DialogFragment {
     }
 
     public void initView(View v) {
-        List<String> data = AppController.getInstance().getQuestionDB().listDistinctLand();
+        List<String> data = AppController.getQuestionDB().listDistinctLand();
         String land = Store.getLand();
 
         adapter = new LandItemAdapter(v.getContext(), data, this);
