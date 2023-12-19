@@ -12,18 +12,21 @@ import android.preference.Preference;
 import android.preference.PreferenceCategory;
 import android.preference.PreferenceFragment;
 import androidx.appcompat.app.AlertDialog;
+
+import android.util.Log;
 import android.widget.Toast;
 
 import com.adalbero.app.lebenindeutschland.controller.Analytics;
 import com.adalbero.app.lebenindeutschland.controller.Debug;
 import com.adalbero.app.lebenindeutschland.controller.Statistics;
 import com.adalbero.app.lebenindeutschland.controller.Store;
+import com.google.android.ump.ConsentInformation;
+import com.google.android.ump.UserMessagingPlatform;
 import com.google.firebase.analytics.FirebaseAnalytics;
 
 import static com.adalbero.app.lebenindeutschland.R.xml.preferences;
 import static com.adalbero.app.lebenindeutschland.controller.Store.PREF_REMOVE_STAT;
 import static com.adalbero.app.lebenindeutschland.controller.Store.PREF_VERSION;
-import static com.adalbero.app.lebenindeutschland.controller.Store.PREF_POLICY;
 
 /**
  * Created by Adalbero on 10/06/2017.
@@ -31,7 +34,11 @@ import static com.adalbero.app.lebenindeutschland.controller.Store.PREF_POLICY;
 
 public class SettingsFragment extends PreferenceFragment implements Preference.OnPreferenceClickListener, Preference.OnPreferenceChangeListener {
     private FirebaseAnalytics mFirebaseAnalytics;
+    private ConsentInformation consentInformation;
 
+    public static final String PRIVACY_CATEGORY = "privacy.category";
+    public static final String PREF_PRIVACY_POLICY = "pref.privacy.policy";
+    public static final String PREF_PRIVACY_OPTIONS = "pref.privacy.options";
     public static final String DEBUG_CATEGORY = "debug.category";
     public static final String DEBUG_DUMP = "debug.dump";
     public static final String DEBUG_DUMP_STAT = "debug.dump.stat";
@@ -49,6 +56,7 @@ public class SettingsFragment extends PreferenceFragment implements Preference.O
     public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         mFirebaseAnalytics = FirebaseAnalytics.getInstance(getActivity());
+        consentInformation = UserMessagingPlatform.getConsentInformation(getActivity());
 
         addPreferencesFromResource(preferences);
 
@@ -65,9 +73,18 @@ public class SettingsFragment extends PreferenceFragment implements Preference.O
         Preference prefLand = findPreference(Store.PREF_LAND);
         prefLand.setOnPreferenceChangeListener(this);
 
-        findPreference(Store.PREF_REMOVE_STAT).setOnPreferenceClickListener(this);
+        findPreference(PREF_REMOVE_STAT).setOnPreferenceClickListener(this);
 
-        findPreference(Store.PREF_POLICY).setOnPreferenceClickListener(this);
+        PreferenceCategory privacyCategory = (PreferenceCategory) findPreference(PRIVACY_CATEGORY);
+
+        Preference prefPrivacyPolicy = findPreference(PREF_PRIVACY_POLICY);
+        prefPrivacyPolicy.setOnPreferenceClickListener(this);
+
+        Preference prefPrivacyOptions = findPreference(PREF_PRIVACY_OPTIONS);
+        prefPrivacyOptions.setOnPreferenceClickListener(this);
+        if (consentInformation.getPrivacyOptionsRequirementStatus() != ConsentInformation.PrivacyOptionsRequirementStatus.REQUIRED) {
+            privacyCategory.removePreference(prefPrivacyOptions);
+        }
 
         mDebugCategory = (PreferenceCategory) findPreference(DEBUG_CATEGORY);
 
@@ -81,6 +98,7 @@ public class SettingsFragment extends PreferenceFragment implements Preference.O
         mDebugClick = 0;
 
         getPreferenceScreen().removePreference(mDebugCategory);
+
     }
 
     @Override
@@ -140,13 +158,16 @@ public class SettingsFragment extends PreferenceFragment implements Preference.O
             } else {
                 mDebugClick++;
             }
-        } else if (key.equals(PREF_POLICY)) {
-            doOpenPolicy();
+        } else if (key.equals(PREF_PRIVACY_POLICY)) {
+            doOpenPrivacyPolicy();
+        } else if (key.equals(PREF_PRIVACY_OPTIONS)) {
+            doOpenPrivacyOptions();
         } else if (key.equals(DEBUG_DUMP)) {
             Debug.dumpSharedPreferences();
         } else if (key.equals(DEBUG_DUMP_STAT)) {
             Debug.dumpStatistics();
         } else if (key.equals(DEBUG_REMOVE_ALL)) {
+            consentInformation.reset();
             Debug.removeAll();
         } else if (key.equals(DEBUG_REMOVE_EXAM)) {
             Debug.removeExam();
@@ -162,9 +183,20 @@ public class SettingsFragment extends PreferenceFragment implements Preference.O
         return false;
     }
 
-    private void doOpenPolicy() {
+    private void doOpenPrivacyPolicy() {
         String url="https://lidtest.de/policy.html#policy";
         startActivity(new Intent(Intent.ACTION_VIEW, Uri.parse(url)));
+    }
+
+    private void doOpenPrivacyOptions() {
+        UserMessagingPlatform.showPrivacyOptionsForm(
+                getActivity(),
+                formError -> {
+                    if (formError != null) {
+                        Log.e("lid:SettingsFragment", String.format("doOpenPrivacyOptions: %s", formError));
+                    }
+                }
+        );
     }
 
     private void doRemoveStat() {

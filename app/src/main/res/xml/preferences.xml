@@ -48,13 +48,24 @@
 
         <Preference
             android:key="pref.database"
-            android:summary="Q3-2023"
+            android:summary="Q1-2024"
             android:title="Database" />
 
+    </PreferenceCategory>
+
+    <PreferenceCategory
+        android:key="privacy.category"
+        android:title="Privacy">
+
         <Preference
-            android:key="pref.policy"
+            android:key="pref.privacy.policy"
             android:summary="View"
             android:title="Privacy Policy" />
+
+        <Preference
+            android:key="pref.privacy.options"
+            android:summary="Manage"
+            android:title="Privacy Options" />
 
     </PreferenceCategory>
 

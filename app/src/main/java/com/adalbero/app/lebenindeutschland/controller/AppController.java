@@ -2,6 +2,7 @@ package com.adalbero.app.lebenindeutschland.controller;
 
 import android.app.Activity;
 import android.graphics.drawable.Drawable;
+
 import androidx.core.content.ContextCompat;
 import androidx.multidex.MultiDexApplication;
 
@@ -39,8 +40,8 @@ import java.util.List;
 
 public class AppController extends MultiDexApplication {
 
+    private static final String TAG = "lid:AppController";
     private static AppController mInstance;
-
     private QuestionDB mQuestionDB;
     private List<Exam> mExamList;
     private int mExamIdx;
@@ -55,8 +56,6 @@ public class AppController extends MultiDexApplication {
 
         mInstance = this;
         Analytics.logAppCreate(FirebaseAnalytics.getInstance(this));
-
-        MobileAds.initialize(getInstance());
 
         loadQuestionDB();
         loadExamList();
@@ -173,10 +172,7 @@ public class AppController extends MultiDexApplication {
             AdView adView = activity.findViewById(R.id.adView);
             if (adView == null) return;
 
-//            AdRequest.Builder builder = new AdRequest.Builder();
             if (BuildConfig.DEBUG) {
-//                builder.addTestDevice(AdRequest.DEVICE_ID_EMULATOR);
-//                builder.addTestDevice(DEVICE_PIXEL3);
                 List<String> testDevices = new ArrayList<>();
                 testDevices.add(AdRequest.DEVICE_ID_EMULATOR);
                 testDevices.add(DEVICE_PIXEL3);
@@ -188,10 +184,11 @@ public class AppController extends MultiDexApplication {
                 MobileAds.setRequestConfiguration(requestConfiguration);
             }
 
+            Log.d(TAG, "adView.loadAd");
             adView.loadAd(new AdRequest.Builder().build());
 
         } catch (Exception ex) {
-            Log.e("lid", ex.getMessage(), ex);
+            Log.e(TAG, ex.getMessage(), ex);
             FirebaseCrashlytics.getInstance().recordException(ex);
         }
     }

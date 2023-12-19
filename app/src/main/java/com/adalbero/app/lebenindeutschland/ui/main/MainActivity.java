@@ -5,6 +5,8 @@ import android.os.Bundle;
 
 import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
+
+import android.util.Log;
 import android.view.Menu;
 import android.view.MenuItem;
 import android.widget.ListView;
@@ -22,16 +24,25 @@ import com.adalbero.app.lebenindeutschland.data.exam.ExamTag;
 import com.adalbero.app.lebenindeutschland.ui.common.ResultCallback;
 import com.adalbero.app.lebenindeutschland.ui.exam.ExamActivity;
 import com.adalbero.app.lebenindeutschland.ui.settings.SettingsActivity;
+import com.google.android.gms.ads.MobileAds;
+import com.google.android.ump.ConsentForm;
+import com.google.android.ump.ConsentInformation;
+import com.google.android.ump.ConsentRequestParameters;
+import com.google.android.ump.UserMessagingPlatform;
 import com.google.firebase.analytics.FirebaseAnalytics;
 
 import java.util.ArrayList;
 import java.util.Collections;
 import java.util.List;
+import java.util.concurrent.atomic.AtomicBoolean;
 
 public class MainActivity extends AppCompatActivity implements ResultCallback {
 
-    private FirebaseAnalytics mFirebaseAnalytics;
+    private static final String TAG = "lid:MainActivity";
 
+    private FirebaseAnalytics mFirebaseAnalytics;
+    private ConsentInformation consentInformation;
+    private final AtomicBoolean isMobileAdsInitializeCalled = new AtomicBoolean(false);
     private List<Exam> data;
     private ExamItemAdapter mAdapter;
     private ListView mListView;
@@ -39,9 +50,13 @@ public class MainActivity extends AppCompatActivity implements ResultCallback {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
+
         mFirebaseAnalytics = FirebaseAnalytics.getInstance(this);
+        consentInformation = UserMessagingPlatform.getConsentInformation(this);
 
         setContentView(R.layout.activity_main);
+
+        requestConsent();
 
         init();
 
@@ -53,7 +68,57 @@ public class MainActivity extends AppCompatActivity implements ResultCallback {
         mListView.setAdapter(mAdapter);
 
         mListView.setOnItemClickListener((adapter, v, position, id) -> onItemSelected(position));
+   }
 
+    private void requestConsent() {
+
+        ConsentRequestParameters params = new ConsentRequestParameters
+                .Builder()
+                .build();
+
+        consentInformation.requestConsentInfoUpdate(
+                this,
+                params,
+                (ConsentInformation.OnConsentInfoUpdateSuccessListener) () -> {
+                    UserMessagingPlatform.loadAndShowConsentFormIfRequired(
+                            this,
+                            (ConsentForm.OnConsentFormDismissedListener) loadAndShowError -> {
+                                if (loadAndShowError != null) {
+                                    // Consent gathering failed.
+                                    Log.w(TAG, String.format("ConsentFormDismissed: [%s] %s",
+                                            loadAndShowError.getErrorCode(),
+                                            loadAndShowError.getMessage()));
+                                }
+
+                                // Consent has been gathered.
+                                if (consentInformation.canRequestAds()) {
+                                    initializeMobileAdsSdk();
+                                }
+                            }
+                    );
+                },
+                (ConsentInformation.OnConsentInfoUpdateFailureListener) requestConsentError -> {
+                    // Consent gathering failed.
+                    Log.w(TAG, String.format("ConsentInfoUpdateFailure: [%s] %s",
+                            requestConsentError.getErrorCode(),
+                            requestConsentError.getMessage()));
+                });
+
+        if (consentInformation.canRequestAds()) {
+            initializeMobileAdsSdk();
+        }
+    }
+
+    private void initializeMobileAdsSdk() {
+        if (isMobileAdsInitializeCalled.getAndSet(true)) {
+            return;
+        }
+
+
+        Log.d(TAG, "initializeMobileAdsSdk - " + consentInformation.getConsentStatus());
+
+        // Initialize the Google Mobile Ads SDK.
+        MobileAds.initialize(this);
         AppController.initAdView(this);
     }
 
