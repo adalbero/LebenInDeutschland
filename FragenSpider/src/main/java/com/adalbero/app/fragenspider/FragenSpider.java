@@ -10,14 +10,13 @@ import java.io.InputStream;
 import java.io.InputStreamReader;
 import java.io.Reader;
 import java.net.URL;
-import java.nio.charset.Charset;
+import java.nio.charset.StandardCharsets;
 import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
 
 public class FragenSpider {
-    private static final String HOME = "C:\\Projects\\LebenInDeutschland\\FragenSpider";
-//    private static final String HOME = "/Users/adalbero/Projects/LebenInDeutschland/FragenSpider";
+    private static final String HOME = "C:\\Projects\\LebenInDeutschland\\LebenInDeutschland\\FragenSpider";
 
     public static void main(String[] args) throws Exception {
         System.out.println("BEGIN");
@@ -39,7 +38,7 @@ public class FragenSpider {
 
         String line;
         while ( (line = reader.readLine()) != null) {
-            String vet[] = line.split(";");
+            String[] vet = line.split(";");
 
             Tags tags = new Tags();
             tags.areaCode = vet[1];
@@ -65,7 +64,7 @@ public class FragenSpider {
 
         for (Question q : questionList) {
             Tags tags = tagList.get(q.num);
-            String line = q.toString() + tags.toString();
+            String line = q + tags.toString();
 
             System.out.println(line);
 
@@ -86,13 +85,14 @@ public class FragenSpider {
                 try {
                     stream.close();
                 } catch (IOException e) {
+                    e.printStackTrace();
                 }
             }
         }
     }
 
     public static String loadStream(InputStream stream) throws IOException {
-        Reader reader = new InputStreamReader(stream, Charset.forName("UTF-8"));
+        Reader reader = new InputStreamReader(stream, StandardCharsets.UTF_8);
         char[] buffer = new char[1024];
         int count;
         StringBuilder str = new StringBuilder();
