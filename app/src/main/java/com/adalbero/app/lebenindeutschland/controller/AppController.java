@@ -3,6 +3,7 @@ package com.adalbero.app.lebenindeutschland.controller;
 import android.app.Activity;
 import android.graphics.drawable.Drawable;
 
+import androidx.annotation.NonNull;
 import androidx.core.content.ContextCompat;
 import androidx.multidex.MultiDexApplication;
 
@@ -23,10 +24,14 @@ import com.adalbero.app.lebenindeutschland.data.exam.ExamStat;
 import com.adalbero.app.lebenindeutschland.data.exam.ExamTag;
 import com.adalbero.app.lebenindeutschland.data.exam.ExamTheme;
 import com.adalbero.app.lebenindeutschland.data.question.QuestionDB;
+import com.google.android.gms.ads.AdListener;
 import com.google.android.gms.ads.AdRequest;
 import com.google.android.gms.ads.AdView;
+import com.google.android.gms.ads.LoadAdError;
 import com.google.android.gms.ads.MobileAds;
 import com.google.android.gms.ads.RequestConfiguration;
+import com.google.android.ump.ConsentInformation;
+import com.google.android.ump.UserMessagingPlatform;
 import com.google.firebase.analytics.FirebaseAnalytics;
 import com.google.firebase.crashlytics.FirebaseCrashlytics;
 
@@ -42,6 +47,8 @@ public class AppController extends MultiDexApplication {
 
     private static final String TAG = "lid:AppController";
     private static AppController mInstance;
+    private FirebaseAnalytics mFirebaseAnalytics;
+    private ConsentInformation consentInformation;
     private QuestionDB mQuestionDB;
     private List<Exam> mExamList;
     private int mExamIdx;
@@ -55,7 +62,10 @@ public class AppController extends MultiDexApplication {
         super.onCreate();
 
         mInstance = this;
-        Analytics.logAppCreate(FirebaseAnalytics.getInstance(this));
+        mFirebaseAnalytics = FirebaseAnalytics.getInstance(getInstance());
+        consentInformation = UserMessagingPlatform.getConsentInformation(getInstance());
+
+        Analytics.logAppCreate(mFirebaseAnalytics);
 
         loadQuestionDB();
         loadExamList();
@@ -171,6 +181,34 @@ public class AppController extends MultiDexApplication {
             // Load AdView
             AdView adView = activity.findViewById(R.id.adView);
             if (adView == null) return;
+
+            adView.setAdListener(new AdListener() {
+                @Override
+                public void onAdLoaded() {
+                    log("Ad loaded");
+                }
+
+                @Override
+                public void onAdFailedToLoad(@NonNull LoadAdError loadAdError) {
+                    log("Ad failed: " + loadAdError.getMessage());
+                }
+
+                @Override
+                public void onAdClicked() {
+                    log("Ad clicked");
+                }
+
+                @Override
+                public void onAdImpression() {
+                    log("Ad impression");
+                }
+
+                private void log(String msg) {
+                    String title = activity.getClass().getSimpleName();
+                    Log.d(TAG, String.format("[%s] (Consent: %s) %s", title, Analytics.getConsentStatus(getInstance().consentInformation), msg));
+                    Analytics.logAdsStatus(getInstance().mFirebaseAnalytics, getInstance().consentInformation, title, msg);
+                }
+            });
 
             if (BuildConfig.DEBUG) {
                 List<String> testDevices = new ArrayList<>();

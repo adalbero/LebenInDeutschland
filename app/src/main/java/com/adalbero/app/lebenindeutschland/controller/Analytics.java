@@ -5,6 +5,7 @@ import android.os.Bundle;
 import com.adalbero.app.lebenindeutschland.data.exam.Exam;
 import com.adalbero.app.lebenindeutschland.data.question.Question;
 import com.adalbero.app.lebenindeutschland.data.result.ExamResult;
+import com.google.android.ump.ConsentInformation;
 import com.google.firebase.analytics.FirebaseAnalytics;
 
 /**
@@ -18,7 +19,11 @@ public class Analytics {
     public static final String LID_EXAM_START = "lid_exam_start";
     public static final String LID_EXAM_FINISH = "lid_exam_finish";
     public static final String LID_QUESTION_ANSWERED = "lid_question_answered";
-
+    public static final String LID_AD_STATUS = "lid_ad_status";
+    public static final String LID_AD_ACTIVITY = "lid_ad_activity";
+    public static final String LID_AD_MESSAGE = "lid_ad_message";
+    public static final String LID_AD_CAN_REQUEST = "lid_ad_can_request";
+    public static final String LID_AD_CONSENT_STATUS = "lid_ad_consent_status";
     public static final String LID_PARAM_FEATURE_NAME = "lid_feature_name";
     public static final String LID_PARAM_FEATURE_VALUE = "lid_feature_value";
     public static final String LID_PARAM_QUESTION_NUM = "lid_question_num";
@@ -26,6 +31,7 @@ public class Analytics {
     public static final String LID_PARAM_EXAM_SCORE = "lid_exam_score";
     public static final String LID_PARAM_EXAM_DURATION = "lid_exam_duration_sec";
     public static final String LID_PARAM_QUESTION_RIGHT = "lid_question_right";
+    public static final String LID_PARAM_QUESTION_ANSWER = "lid_question_answer";
 
     private static void logFeature(FirebaseAnalytics firebaseAnalytics, String name, String value, Exam exam, Question question) {
 
@@ -38,7 +44,9 @@ public class Analytics {
         if (question != null)
             bundle.putString(LID_PARAM_QUESTION_NUM, question.getNum());
 
-        firebaseAnalytics.logEvent(LID_FEATURE, bundle);
+        if (firebaseAnalytics != null) {
+            firebaseAnalytics.logEvent(LID_FEATURE, bundle);
+        }
     }
 
     public static void logFeatureLand(FirebaseAnalytics firebaseAnalytics, String land, boolean isNew) {
@@ -60,8 +68,16 @@ public class Analytics {
         logFeature(firebaseAnalytics, "Debug", value, null, null);
     }
 
+    public static void logFeaturePolicy(FirebaseAnalytics firebaseAnalytics, String value) {
+        logFeature(firebaseAnalytics, "Policy", value, null, null);
+    }
+
     public static void logFeatureClearStat(FirebaseAnalytics firebaseAnalytics) {
         logFeature(firebaseAnalytics, "Clear Stat", null, null, null);
+    }
+
+    public static void logFeatureClearAll(FirebaseAnalytics firebaseAnalytics) {
+        logFeature(firebaseAnalytics, "Clear All", null, null, null);
     }
 
     public static void logFeatureSearch(FirebaseAnalytics firebaseAnalytics, Exam exam) {
@@ -136,8 +152,33 @@ public class Analytics {
         bundle.putString(LID_PARAM_EXAM_NAME, result.getExam().getName());
         bundle.putString(LID_PARAM_QUESTION_NUM, question.getNum());
         bundle.putInt(LID_PARAM_QUESTION_RIGHT, result.getAnswerStatus(question.getNum()));
+        bundle.putString(LID_PARAM_QUESTION_ANSWER, result.getAnswerStatus(question.getNum()) == 1 ? "right" : "wrong");
 
         firebaseAnalytics.logEvent(LID_QUESTION_ANSWERED, bundle);
     }
+
+    public static void logAdsStatus(FirebaseAnalytics firebaseAnalytics, ConsentInformation consentInformation, String activity, String msg) {
+        Bundle bundle = new Bundle();
+        bundle.putString(LID_AD_ACTIVITY, activity);
+        bundle.putString(LID_AD_MESSAGE, msg);
+
+            if (consentInformation != null) {
+                bundle.putBoolean(LID_AD_CAN_REQUEST, consentInformation.canRequestAds());
+                bundle.putString(LID_AD_CONSENT_STATUS, getConsentStatus(consentInformation));
+            }
+
+        firebaseAnalytics.logEvent(LID_AD_STATUS, bundle);
+    }
+
+    public static String getConsentStatus(ConsentInformation consentInformation) {
+        String[] values = new String[]{"UNKNOWN", "NOT_REQUIRED", "REQUIRED", "OBTAINED"};
+
+        try {
+            return values[consentInformation.getConsentStatus()];
+        } catch (IndexOutOfBoundsException ex) {
+            return "";
+        }
+    }
+
 
 }

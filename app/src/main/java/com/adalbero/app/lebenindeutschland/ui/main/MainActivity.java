@@ -107,6 +107,7 @@ public class MainActivity extends AppCompatActivity implements ResultCallback {
         if (consentInformation.canRequestAds()) {
             initializeMobileAdsSdk();
         }
+
     }
 
     private void initializeMobileAdsSdk() {

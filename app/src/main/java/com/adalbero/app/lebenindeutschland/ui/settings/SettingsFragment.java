@@ -104,7 +104,6 @@ public class SettingsFragment extends PreferenceFragment implements Preference.O
     @Override
     public void onResume() {
         super.onResume();
-//        mFirebaseAnalytics.setCurrentScreen(getActivity(), "Settings", null);
     }
 
     private void initExcerciseSize() {
@@ -167,8 +166,7 @@ public class SettingsFragment extends PreferenceFragment implements Preference.O
         } else if (key.equals(DEBUG_DUMP_STAT)) {
             Debug.dumpStatistics();
         } else if (key.equals(DEBUG_REMOVE_ALL)) {
-            consentInformation.reset();
-            Debug.removeAll();
+            doRemoveAll();
         } else if (key.equals(DEBUG_REMOVE_EXAM)) {
             Debug.removeExam();
         } else if (key.equals(DEBUG_REMOVE_PREF)) {
@@ -184,11 +182,15 @@ public class SettingsFragment extends PreferenceFragment implements Preference.O
     }
 
     private void doOpenPrivacyPolicy() {
+        Analytics.logFeaturePolicy(mFirebaseAnalytics, "View Privacy Policy");
+
         String url="https://lidtest.de/policy.html#policy";
         startActivity(new Intent(Intent.ACTION_VIEW, Uri.parse(url)));
     }
 
     private void doOpenPrivacyOptions() {
+        Analytics.logFeaturePolicy(mFirebaseAnalytics, "Manage Policy Options");
+
         UserMessagingPlatform.showPrivacyOptionsForm(
                 getActivity(),
                 formError -> {
@@ -197,6 +199,12 @@ public class SettingsFragment extends PreferenceFragment implements Preference.O
                     }
                 }
         );
+    }
+
+    private void doRemoveAll() {
+        Analytics.logFeatureClearAll(mFirebaseAnalytics);
+        consentInformation.reset();
+        Debug.removeAll();
     }
 
     private void doRemoveStat() {
