@@ -22,8 +22,8 @@ public class FragenSpider {
         System.out.println("BEGIN");
 
         Map<String, Tags> tagList = loadTags();
-//        List<Question> questionList = EinbuergerungstestOnlineEu.spider();
-        List<Question> questionList = EinbuergerungstestOnlineDe.spider();
+        List<Question> questionList = EinbuergerungstestOnlineEu.spider();
+//        List<Question> questionList = EinbuergerungstestOnlineDe.spider();
 
         saveFile(questionList, tagList);
 
