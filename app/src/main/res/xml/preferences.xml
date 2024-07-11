@@ -51,6 +51,10 @@
             android:summary="Q3-2024"
             android:title="Database" />
 
+        <Preference
+            android:key="pref.donate"
+            android:summary="This App is supported by Ads. Click here if you want to buy me a coffee and leave a message. Thanks."
+            android:title="Donate" />
     </PreferenceCategory>
 
     <PreferenceCategory

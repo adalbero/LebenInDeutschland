@@ -36,6 +36,7 @@ public class SettingsFragment extends PreferenceFragment implements Preference.O
     private FirebaseAnalytics mFirebaseAnalytics;
     private ConsentInformation consentInformation;
 
+    public static final String PREF_DONATE = "pref.donate";
     public static final String PRIVACY_CATEGORY = "privacy.category";
     public static final String PREF_PRIVACY_POLICY = "pref.privacy.policy";
     public static final String PREF_PRIVACY_OPTIONS = "pref.privacy.options";
@@ -74,6 +75,9 @@ public class SettingsFragment extends PreferenceFragment implements Preference.O
         prefLand.setOnPreferenceChangeListener(this);
 
         findPreference(PREF_REMOVE_STAT).setOnPreferenceClickListener(this);
+
+        Preference prefDonate = findPreference(PREF_DONATE);
+        prefDonate.setOnPreferenceClickListener(this);
 
         PreferenceCategory privacyCategory = (PreferenceCategory) findPreference(PRIVACY_CATEGORY);
 
@@ -157,6 +161,8 @@ public class SettingsFragment extends PreferenceFragment implements Preference.O
             } else {
                 mDebugClick++;
             }
+        } else if (key.equals(PREF_DONATE)) {
+            doOpenDonate();
         } else if (key.equals(PREF_PRIVACY_POLICY)) {
             doOpenPrivacyPolicy();
         } else if (key.equals(PREF_PRIVACY_OPTIONS)) {
@@ -179,6 +185,13 @@ public class SettingsFragment extends PreferenceFragment implements Preference.O
         }
 
         return false;
+    }
+
+    private void doOpenDonate() {
+        Analytics.logFeaturePolicy(mFirebaseAnalytics, "Donate");
+
+        String url="https://ko-fi.com/appadalbero";
+        startActivity(new Intent(Intent.ACTION_VIEW, Uri.parse(url)));
     }
 
     private void doOpenPrivacyPolicy() {
