@@ -39,10 +39,10 @@
     "num": "5",
     "question": "Wahlen in Deutschland sind frei. Was bedeutet das?",
     "a": "Man darf Geld annehmen, wenn man dafür einen bestimmten Kandidaten / eine bestimmte Kandidatin wählt.",
-    "b": "Der Wähler darf bei der Wahl weder beeinflusst noch zu einer bestimmten Stimmabgabe gezwungen werden und keine Nachteile durch die Wahl haben.",
-    "c": "Nur Personen, die noch nie im Gefängnis waren, dürfen wählen.",
+    "b": "Nur Personen, die noch nie im Gefängnis waren, dürfen wählen.",
+    "c": "Der Wähler darf bei der Wahl weder beeinflusst noch zu einer bestimmten Stimmabgabe gezwungen werden und keine Nachteile durch die Wahl haben.",
     "d": "Alle wahlberechtigten Personen müssen wählen.",
-    "solution": "b"
+    "solution": "c"
   },
   {
     "num": "6",
@@ -111,10 +111,10 @@
     "num": "13",
     "question": "Im Parlament steht der Begriff „Opposition“ für...",
     "a": "die regierenden Parteien.",
-    "b": "alle Abgeordneten, die nicht zu der Regierungspartei/den Regierungsparteien gehören.",
-    "c": "die Fraktion mit den meisten Abgeordneten.",
-    "d": "alle Parteien, die bei der letzten Wahl die 5%-Hürde erreichen konnten.",
-    "solution": "b"
+    "b": "die Fraktion mit den meisten Abgeordneten.",
+    "c": "alle Parteien, die bei der letzten Wahl die 5%-Hürde erreichen konnten.",
+    "d": "alle Abgeordneten, die nicht zu der Regierungspartei/den Regierungsparteien gehören.",
+    "solution": "d"
   },
   {
     "num": "14",
@@ -200,11 +200,11 @@
   {
     "num": "23",
     "question": "In Deutschland sind die meisten Erwerbstätigen ...",
-    "a": "bei einer Firma oder Behörde beschäftigt.",
-    "b": "in kleinen Familienunternehmen beschäftigt.",
-    "c": "ehrenamtlich für ein Bundesland tätig.",
-    "d": "selbständig mit einer eigenen Firma tätig.",
-    "solution": "a"
+    "a": "in kleinen Familienunternehmen beschäftigt.",
+    "b": "ehrenamtlich für ein Bundesland tätig.",
+    "c": "selbständig mit einer eigenen Firma tätig.",
+    "d": "bei einer Firma oder Behörde beschäftigt.",
+    "solution": "d"
   },
   {
     "num": "24",
@@ -218,11 +218,11 @@
   {
     "num": "25",
     "question": "Was ist kein Bundesland der Bundesrepublik Deutschland?",
-    "a": "Nordrhein-Westfalen",
-    "b": "Elsass-Lothringen",
+    "a": "Elsass-Lothringen",
+    "b": "Nordrhein-Westfalen",
     "c": "Mecklenburg-Vorpommern",
     "d": "Sachsen-Anhalt",
-    "solution": "b"
+    "solution": "a"
   },
   {
     "num": "26",
@@ -326,10 +326,10 @@
   {
     "num": "37",
     "question": "Wie werden die Regierungschefs / Regierungschefinnen der meisten Bundesländer in Deutschland genannt?",
-    "a": "Erster Minister / Erste Ministerin",
-    "b": "Premierminister / Premierministerin",
-    "c": "Senator / Senatorin",
-    "d": "Ministerpräsident / Ministerpräsidentin",
+    "a": "Erster Minister/ Erste Ministerin",
+    "b": "Premierminister/ Premierministerin",
+    "c": "Senator/ Senatorin",
+    "d": "Ministerpräsident/ Ministerpräsidentin",
     "solution": "d"
   },
   {
@@ -508,9 +508,9 @@
     "question": "Wer wird meistens zum Präsidenten / zur Präsidentin des Deutschen Bundestages gewählt?",
     "a": "der / die älteste Abgeordnete im Parlament",
     "b": "der Ministerpräsident / die Ministerpräsidentin des größten Bundeslandes",
-    "c": "ein Abgeordneter / eine Abgeordnete der stärksten Fraktion",
-    "d": "ein ehemaliger Bundeskanzler / eine ehemalige Bundeskanzlerin",
-    "solution": "c"
+    "c": "ein ehemaliger Bundeskanzler / eine ehemalige Bundeskanzlerin",
+    "d": "ein Abgeordneter / eine Abgeordnete der stärksten Fraktion",
+    "solution": "d"
   },
   {
     "num": "58",
@@ -633,10 +633,10 @@
     "num": "71",
     "question": "Wo hält sich der deutsche Bundeskanzler / die deutsche Bundeskanzlerin am häufigsten auf? Am häufigsten ist er / sie ...",
     "a": "in Bonn, weil sich dort das Bundeskanzleramt und der Bundestag befinden.",
-    "b": "in Berlin, weil sich dort das Bundeskanzleramt und der Bundestag befinden.",
-    "c": "auf Schloss Meseberg, dem Gästehaus der Bundesregierung, um Staatsgäste zu empfangen.",
-    "d": "auf Schloss Bellevue, dem Amtssitz des Bundespräsidenten / der Bundespräsidentin, um Staatsgäste zu empfangen.",
-    "solution": "b"
+    "b": "auf Schloss Meseberg, dem Gästehaus der Bundesregierung, um Staatsgäste zu empfangen.",
+    "c": "auf Schloss Bellevue, dem Amtssitz des Bundespräsidenten / der Bundespräsidentin, um Staatsgäste zu empfangen.",
+    "d": "in Berlin, weil sich dort das Bundeskanzleramt und der Bundestag befinden.",
+    "solution": "d"
   },
   {
     "num": "72",
@@ -733,9 +733,9 @@
     "question": "Wer leitet das deutsche Bundeskabinett?",
     "a": "der Bundestagspräsident / die Bundestagspräsidentin",
     "b": "der Bundespräsident / die Bundespräsidentin",
-    "c": "der Bundeskanzler / die Bundeskanzlerin",
-    "d": "der Bundesratspräsident / die Bundesratspräsidentin",
-    "solution": "c"
+    "c": "der Bundesratspräsident / die Bundesratspräsidentin",
+    "d": "der Bundeskanzler / die Bundeskanzlerin",
+    "solution": "d"
   },
   {
     "num": "83",
@@ -830,11 +830,11 @@
   {
     "num": "93",
     "question": "Je mehr „Zweitstimmen“ eine Partei bei einer Bundestagswahl bekommt, desto ...",
-    "a": "mehr Sitze erhält die Partei im Parlament.",
-    "b": "weniger Erststimmen kann sie haben.",
-    "c": "mehr Direktkandidaten der Partei ziehen ins Parlament ein.",
-    "d": "größer ist das Risiko, eine Koalition bilden zu müssen.",
-    "solution": "a"
+    "a": "weniger Erststimmen kann sie haben.",
+    "b": "mehr Direktkandidaten der Partei ziehen ins Parlament ein.",
+    "c": "größer ist das Risiko, eine Koalition bilden zu müssen.",
+    "d": "mehr Sitze erhält die Partei im Parlament.",
+    "solution": "d"
   },
   {
     "num": "94",
@@ -875,11 +875,11 @@
   {
     "num": "98",
     "question": "Wenn Abgeordnete im Deutschen Bundestag ihre Fraktion wechseln, ...",
-    "a": "kann die Regierung ihre Mehrheit verlieren.",
-    "b": "dürfen sie nicht mehr an den Sitzungen des Parlaments teilnehmen.",
+    "a": "dürfen sie nicht mehr an den Sitzungen des Parlaments teilnehmen.",
+    "b": "kann die Regierung ihre Mehrheit verlieren.",
     "c": "muss der Bundespräsident / die Bundespräsidentin zuvor sein / ihr Einverständnis geben.",
     "d": "dürfen die Wähler / Wählerinnen dieser Abgeordneten noch einmal wählen.",
-    "solution": "a"
+    "solution": "b"
   },
   {
     "num": "99",
@@ -893,11 +893,11 @@
   {
     "num": "100",
     "question": "Was gehört nicht zur gesetzlichen Sozialversicherung?",
-    "a": "die gesetzliche Rentenversicherung",
-    "b": "die Lebensversicherung",
+    "a": "die Lebensversicherung",
+    "b": "die gesetzliche Rentenversicherung",
     "c": "die Arbeitslosenversicherung",
     "d": "die Pflegeversicherung",
-    "solution": "b"
+    "solution": "a"
   },
   {
     "num": "101",
@@ -911,11 +911,11 @@
   {
     "num": "102",
     "question": "Womit kann man in der Bundesrepublik Deutschland geehrt werden, wenn man auf politischem, wirtschaftlichem, kulturellem, geistigem oder sozialem Gebiet eine besondere Leistung erbracht hat? Mit dem ...",
-    "a": "Bundesadler",
-    "b": "Bundesverdienstkreuz",
+    "a": "Bundesverdienstkreuz",
+    "b": "Bundesadler",
     "c": "Vaterländischen Verdienstorden",
     "d": "Ehrentitel \"Held der Deutschen Demokratischen Republik\"",
-    "solution": "b"
+    "solution": "a"
   },
   {
     "num": "103",
@@ -1046,10 +1046,10 @@
   {
     "num": "117",
     "question": "Wie viel Prozent der Zweitstimmen müssen Parteien mindestens bekommen, um in den Deutschen Bundestag gewählt zu werden?",
-    "a": "3 %",
-    "b": "4 %",
-    "c": "5 %",
-    "d": "6 %",
+    "a": "3%",
+    "b": "4%",
+    "c": "5%",
+    "d": "6%",
     "solution": "c"
   },
   {
@@ -1082,7 +1082,7 @@
   {
     "num": "121",
     "question": "Eine Partei möchte in den Deutschen Bundestag. Sie muss aber einen Mindestanteil an Wählerstimmen haben. Das heißt ...",
-    "a": "5 %-Hürde.",
+    "a": "5%-Hürde.",
     "b": "Zulassungsgrenze.",
     "c": "Basiswert.",
     "d": "Richtlinie.",
@@ -1298,10 +1298,10 @@
   {
     "num": "145",
     "question": "In Deutschland wird die Staatsgewalt geteilt. Für welche Staatsgewalt arbeitet ein Richter / eine Richterin? Für die ...",
-    "a": "Judikative.",
-    "b": "Exekutive.",
-    "c": "Presse.",
-    "d": "Legislative.",
+    "a": "Judikative",
+    "b": "Exekutive",
+    "c": "Presse",
+    "d": "Legislative",
     "solution": "a"
   },
   {
@@ -1353,10 +1353,10 @@
     "num": "151",
     "question": "Wer baute die Mauer in Berlin?",
     "a": "Großbritannien",
-    "b": "die Bundesrepublik Deutschland",
-    "c": "die DDR",
+    "b": "die DDR",
+    "c": "die Bundesrepublik Deutschland",
     "d": "die USA",
-    "solution": "c"
+    "solution": "b"
   },
   {
     "num": "152",
@@ -1487,11 +1487,11 @@
   {
     "num": "166",
     "question": "Bei welchen Demonstrationen in Deutschland riefen die Menschen „Wir sind das Volk“?",
-    "a": "bei den Montagsdemonstrationen 1989 in der DDR",
-    "b": "beim Arbeiteraufstand 1953 in der DDR",
-    "c": "bei den Demonstrationen 1968 in der Bundesrepublik Deutschland",
-    "d": "bei den Anti-Atomkraft-Demonstrationen 1985 in der Bundesrepublik Deutschland",
-    "solution": "a"
+    "a": "beim Arbeiteraufstand 1953 in der DDR",
+    "b": "bei den Demonstrationen 1968 in der Bundesrepublik Deutschland",
+    "c": "bei den Anti-Atomkraft-Demonstrationen 1985 in der Bundesrepublik Deutschland",
+    "d": "bei den Montagsdemonstrationen 1989 in der DDR",
+    "solution": "d"
   },
   {
     "num": "167",
@@ -1523,11 +1523,11 @@
   {
     "num": "170",
     "question": "Was gab es während der Zeit des Nationalsozialismus in Deutschland?",
-    "a": "das Recht zur freien Entfaltung der Persönlichkeit",
-    "b": "Pressefreiheit",
-    "c": "das Verbot von Parteien",
+    "a": "das Verbot von Parteien",
+    "b": "das Recht zur freien Entfaltung der Persönlichkeit",
+    "c": "Pressefreiheit",
     "d": "den Schutz der Menschenwürde",
-    "solution": "c"
+    "solution": "a"
   },
   {
     "num": "171",
@@ -1541,10 +1541,10 @@
   {
     "num": "172",
     "question": "In welcher Besatzungszone wurde die DDR gegründet? In der ...",
-    "a": "amerikanischen Besatzungszone.",
-    "b": "französischen Besatzungszone.",
-    "c": "britischen Besatzungszone.",
-    "d": "sowjetischen Besatzungszone.",
+    "a": "amerikanischen Besatzungszone",
+    "b": "französischen Besatzungszone",
+    "c": "britischen Besatzungszone",
+    "d": "sowjetischen Besatzungszone",
     "solution": "d"
   },
   {
@@ -1658,10 +1658,10 @@
   {
     "num": "185",
     "question": "Wofür stand der Ausdruck „Eiserner Vorhang“? Für die Abschottung ...",
-    "a": "des Warschauer Pakts gegen den Westen.",
-    "b": "Norddeutschlands gegen Süddeutschland.",
-    "c": "Nazi-Deutschlands gegen die Alliierten.",
-    "d": "Europas gegen die USA.",
+    "a": "des Warschauer Pakts gegen den Westen",
+    "b": "Norddeutschlands gegen Süddeutschland",
+    "c": "Nazi-Deutschlands gegen die Alliierten",
+    "d": "Europas gegen die USA",
     "solution": "a"
   },
   {
@@ -1678,9 +1678,9 @@
     "question": "Welcher deutsche Staat hatte eine schwarz-rot-goldene Flagge mit Hammer, Zirkel und Ährenkranz?",
     "a": "Preußen",
     "b": "Bundesrepublik Deutschland",
-    "c": "DDR",
-    "d": "\"Drittes Reich\"",
-    "solution": "c"
+    "c": "\"Drittes Reich\"",
+    "d": "DDR",
+    "solution": "d"
   },
   {
     "num": "188",
@@ -1805,7 +1805,7 @@
     "a": "Niedersachsen, Nordrhein-Westfalen, Hessen, Schleswig-Holstein, Brandenburg",
     "b": "Mecklenburg-Vorpommern, Brandenburg, Sachsen, Sachsen-Anhalt, Thüringen",
     "c": "Bayern, Baden-Württemberg, Rheinland-Pfalz, Thüringen, Sachsen",
-    "d": "Sachsen, Thüringen, Hessen, Niedersachsen, Brandenburg",
+    "d": "Sachsen, Thüringen, Hessen, Niedersachen, Brandenburg",
     "solution": "b"
   },
   {
