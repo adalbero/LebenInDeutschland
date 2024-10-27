@@ -40,25 +40,26 @@ const NAME = 'BAMF';
     const browser = await puppeteer.launch({ headless: false });
     const page = await browser.newPage();
     await page.setViewport({ width: 1080, height: 1024 });
-    page.setDefaultTimeout(3_000);
+    page.setDefaultTimeout(5_000);
 
     try {
         const list = ['', ...Object.keys(bundeslands)];
         for (let bundesland of list) {
             await fetchQuestions(page, bundesland);
-        }
 
-        const data = {
-            name: NAME,
-            url: URL,
-            timestamp: new Date().toISOString(),
-            questions
-        }
+            const data = {
+                name: NAME,
+                url: URL,
+                timestamp: new Date().toISOString(),
+                questions
+            }
 
-        fs.writeFileSync(`data/data-${data.timestamp.substring(0, 10)}-${data.name}.json`, JSON.stringify(data, null, 2));
+            fs.writeFileSync(`data/data-${data.timestamp.substring(0, 10)}-${data.name}.json`, JSON.stringify(data, null, 2));
+        }
         // console.log(data);
     } catch (e: any) {
         console.error(e.message);
+        console.error(e);
     }
 
     console.log('==> END');
@@ -124,7 +125,7 @@ async function clickNext(page: Page) {
 }
 
 async function getQuestionNumber(page: Page): Promise<string> {
-    const title = await getText(page, '#R35611889984881931 > tbody > tr:nth-child(1) > td');
+    const title = await getText(page, 'table[aria-live="polite"] > tbody > tr:nth-child(1) > td');
     return /Aufgabe (\d+) von/.exec(title || '0')?.[1] ?? '0';
 }
 
