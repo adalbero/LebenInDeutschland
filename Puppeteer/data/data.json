@@ -1,29 +1,1202 @@
-{
-  "timestamp": "2024-07-07T16:58:09.386Z",
-  "questions": [
-    {
-      "number": "Aufgabe 301 von 310",
-      "title": "MD5:ddb8c95f2e09984cddf24e9a4e348f9a",
-      "options": [
-        "1",
-        "2",
-        "3",
-        "4"
-      ],
-      "correct": 0,
-      "bundesland": "Baden-Wutenberg"
-    },
-    {
-      "number": "Aufgabe 302 von 310",
-      "title": "MD5:e598483917203596d0794f8c4289b733",
-      "options": [
-        "Mecklenburgische Seenplatte",
-        "Neckar-Odenwald-Kreis",
-        "Nordfriesland",
-        "Altötting"
-      ],
-      "correct": 1,
-      "bundesland": "Baden-Wutenberg"
-    }
-  ]
-}
+[
+  {
+    "number": "1",
+    "title": "MD5:25e196027c610eaafdc195ce79960dee",
+    "options": [
+      "hier Religionsfreiheit gilt.",
+      "die Menschen Steuern zahlen.",
+      "die Menschen das Wahlrecht haben.",
+      "hier Meinungsfreiheit gilt."
+    ],
+    "correct": 3,
+    "bundesland": ""
+  },
+  {
+    "number": "2",
+    "title": "MD5:d4732a3e5c70e3cb4b3e4af220f7ae74",
+    "options": [
+      "Geschichtsunterricht teilnimmt.",
+      "Religionsunterricht teilnimmt.",
+      "Politikunterricht teilnimmt.",
+      "Sprachunterricht teilnimmt."
+    ],
+    "correct": 1,
+    "bundesland": ""
+  },
+  {
+    "number": "3",
+    "title": "MD5:0b51626df3ca5ea4292ee68e8ae1c25e",
+    "options": [
+      "Alle Einwohner / Einwohnerinnen und der Staat müssen sich an die Gesetze halten.",
+      "Der Staat muss sich nicht an die Gesetze halten.",
+      "Nur Deutsche müssen die Gesetze befolgen.",
+      "Die Gerichte machen die Gesetze."
+    ],
+    "correct": 0,
+    "bundesland": ""
+  },
+  {
+    "number": "4",
+    "title": "MD5:676d5792c1c580f2a0516f146e561ad8",
+    "options": [
+      "Waffenbesitz",
+      "Faustrecht",
+      "Meinungsfreiheit",
+      "Selbstjustiz"
+    ],
+    "correct": 2,
+    "bundesland": ""
+  },
+  {
+    "number": "5",
+    "title": "MD5:37e918f2084a026f204f61c6b67894b1",
+    "options": [
+      "Man darf Geld annehmen, wenn man dafür einen bestimmten Kandidaten / eine bestimmte Kandidatin wählt.",
+      "Nur Personen, die noch nie im Gefängnis waren, dürfen wählen.",
+      "Der Wähler darf bei der Wahl weder beeinflusst noch zu einer bestimmten Stimmabgabe gezwungen werden und keine Nachteile durch die Wahl haben.",
+      "Alle wahlberechtigten Personen müssen wählen."
+    ],
+    "correct": 2,
+    "bundesland": ""
+  },
+  {
+    "number": "6",
+    "title": "MD5:ae55fad5acc9a41735d45d126c6989c6",
+    "options": [
+      "Volksgesetz",
+      "Bundesgesetz",
+      "Deutsches Gesetz",
+      "Grundgesetz"
+    ],
+    "correct": 3,
+    "bundesland": ""
+  },
+  {
+    "number": "7",
+    "title": "MD5:d3f940741dfb677dc280e4b718fe307d",
+    "options": [
+      "Glaubens- und Gewissensfreiheit.",
+      "Unterhaltung.",
+      "Arbeit.",
+      "Wohnung."
+    ],
+    "correct": 0,
+    "bundesland": ""
+  },
+  {
+    "number": "8",
+    "title": "MD5:64e98eed8d6e7e281170c97188bb6660",
+    "options": [
+      "Die Würde des Menschen ist unantastbar.",
+      "Alle sollen gleich viel Geld haben.",
+      "Jeder Mensch darf seine Meinung sagen.",
+      "Alle sind vor dem Gesetz gleich."
+    ],
+    "correct": 1,
+    "bundesland": ""
+  },
+  {
+    "number": "9",
+    "title": "MD5:ac07a4dfc66d9d407e7aac9d09d88952",
+    "options": [
+      "Schutz der Familie",
+      "Menschenwürde",
+      "Asyl",
+      "Meinungsfreiheit"
+    ],
+    "correct": 2,
+    "bundesland": ""
+  },
+  {
+    "number": "10",
+    "title": "MD5:de8b69b009d45d2713d324e9c8be5712",
+    "options": [
+      "die Prügelstrafe",
+      "die Folter",
+      "die Todesstrafe",
+      "die Geldstrafe"
+    ],
+    "correct": 3,
+    "bundesland": ""
+  },
+  {
+    "number": "11",
+    "title": "MD5:376bf82cec8b822b30a0416e2fa42620",
+    "options": [
+      "Grundgesetz",
+      "Bundesverfassung",
+      "Gesetzbuch",
+      "Verfassungsvertrag"
+    ],
+    "correct": 0,
+    "bundesland": ""
+  },
+  {
+    "number": "12",
+    "title": "MD5:7d9827b0b73839ea5f67b392ef73b386",
+    "options": [
+      "Ja, wenn mehr als die Hälfte der Abgeordneten im Bundestag dafür sind.",
+      "Ja, aber dazu müssen zwei Drittel der Abgeordneten im Bundestag dafür sein.",
+      "Nein, denn die Pressefreiheit ist ein Grundrecht. Sie kann nicht abgeschafft werden.",
+      "Nein, denn nur der Bundesrat kann die Pressefreiheit abschaffen."
+    ],
+    "correct": 2,
+    "bundesland": ""
+  },
+  {
+    "number": "13",
+    "title": "MD5:f7f7d3b170cf470113e65ba83292a4f1",
+    "options": [
+      "die regierenden Parteien.",
+      "die Fraktion mit den meisten Abgeordneten.",
+      "alle Parteien, die bei der letzten Wahl die 5%-Hürde erreichen konnten.",
+      "alle Abgeordneten, die nicht zu der Regierungspartei/den Regierungsparteien gehören."
+    ],
+    "correct": 3,
+    "bundesland": ""
+  },
+  {
+    "number": "14",
+    "title": "Meinungsfreiheit in Deutschland heißt zum Beispiel, dass ich",
+    "options": [
+      "Passanten auf der Straße beschimpfen darf",
+      "meine Meinung im Internet äußern kann",
+      "Nazi-, Hamas- oder Islamischer Staat-Symbole öffentlich tragen darf",
+      "meine Meinung nur dann äußern darf, solange ich der Regierung nicht widerspreche"
+    ],
+    "correct": 1,
+    "bundesland": ""
+  },
+  {
+    "number": "15",
+    "title": "MD5:e1646e7854b16f2f5cc9d9c841b26355",
+    "options": [
+      "Militärdienst",
+      "Zwangsarbeit",
+      "freie Berufswahl",
+      "Arbeit im Ausland"
+    ],
+    "correct": 1,
+    "bundesland": ""
+  },
+  {
+    "number": "16",
+    "title": "MD5:6b393af34a17c2332cf894ca3578e732",
+    "options": [
+      "bei der öffentlichen Verbreitung falscher Behauptungen über einzelne Personen",
+      "bei Meinungsäußerungen über die Bundesregierung",
+      "bei Diskussionen über Religionen",
+      "bei Kritik am Staat"
+    ],
+    "correct": 0,
+    "bundesland": ""
+  },
+  {
+    "number": "17",
+    "title": "MD5:825fe1e8f0fcc4d98fb18e3866560d9e",
+    "options": [
+      "Meinungsfreiheit der Einwohner und Einwohnerinnen.",
+      "Petitionen der Bürger und Bürgerinnen.",
+      "Versammlungsfreiheit der Einwohner und Einwohnerinnen.",
+      "Ungleichbehandlung der Bürger und Bürgerinnen durch den Staat. "
+    ],
+    "correct": 3,
+    "bundesland": ""
+  },
+  {
+    "number": "18",
+    "title": "MD5:2c6233cfbee628c3e4884524a38d4df0",
+    "options": [
+      "die Unantastbarkeit der Menschenwürde",
+      "das Recht auf Leben",
+      "Religionsfreiheit",
+      "Meinungsfreiheit"
+    ],
+    "correct": 0,
+    "bundesland": ""
+  },
+  {
+    "number": "19",
+    "title": "MD5:3c5c82b32547f6d907f8ddc7dcc27044",
+    "options": [
+      "Man darf sich seinen Wohnort selbst aussuchen.",
+      "Man kann seinen Beruf wechseln.",
+      "Man darf sich für eine andere Religion entscheiden.",
+      "Man darf sich in der Öffentlichkeit nur leicht bekleidet bewegen."
+    ],
+    "correct": 0,
+    "bundesland": ""
+  },
+  {
+    "number": "20",
+    "title": "MD5:4b6e958b36bcb3dc29dfdedea3b4863a",
+    "options": [
+      "tolerant.",
+      "rechtsstaatlich orientiert.",
+      "gesetzestreu.",
+      "verfassungswidrig."
+    ],
+    "correct": 3,
+    "bundesland": ""
+  },
+  {
+    "number": "21",
+    "title": "MD5:772f38c6a051f594a4bf60d67200cc76",
+    "options": [
+      "1",
+      "2",
+      "3",
+      "4"
+    ],
+    "correct": 0,
+    "bundesland": ""
+  },
+  {
+    "number": "22",
+    "title": "MD5:71ba00ef823ec5ba2714a0083b2d4b99",
+    "options": [
+      "Monarchie",
+      "Diktatur",
+      "Republik",
+      "Fürstentum"
+    ],
+    "correct": 2,
+    "bundesland": ""
+  },
+  {
+    "number": "23",
+    "title": "MD5:43ab8dbce75b29d372d250d207d7ba3e",
+    "options": [
+      "in kleinen Familienunternehmen beschäftigt.",
+      "ehrenamtlich für ein Bundesland tätig.",
+      "selbständig mit einer eigenen Firma tätig.",
+      "bei einer Firma oder Behörde beschäftigt."
+    ],
+    "correct": 3,
+    "bundesland": ""
+  },
+  {
+    "number": "24",
+    "title": "MD5:d0a6db0d3fe0cfcd40fd5b981bd3c849",
+    "options": [
+      "14",
+      "15",
+      "16",
+      "17"
+    ],
+    "correct": 2,
+    "bundesland": ""
+  },
+  {
+    "number": "25",
+    "title": "MD5:46567dac63132c5774ea1310fc1afa05",
+    "options": [
+      "Elsass-Lothringen",
+      "Nordrhein-Westfalen",
+      "Mecklenburg-Vorpommern",
+      "Sachsen-Anhalt"
+    ],
+    "correct": 0,
+    "bundesland": ""
+  },
+  {
+    "number": "26",
+    "title": "MD5:d80233b05872d3efd078f8d51472644a",
+    "options": [
+      "eine kommunistische Republik.",
+      "ein demokratischer und sozialer Bundesstaat.",
+      "eine kapitalistische und soziale Monarchie.",
+      "ein sozialer und sozialistischer Bundesstaat."
+    ],
+    "correct": 1,
+    "bundesland": ""
+  },
+  {
+    "number": "27",
+    "title": "MD5:d80233b05872d3efd078f8d51472644a",
+    "options": [
+      "ein sozialistischer Staat.",
+      "ein Bundesstaat.",
+      "eine Diktatur.",
+      "eine Monarchie."
+    ],
+    "correct": 1,
+    "bundesland": ""
+  },
+  {
+    "number": "28",
+    "title": "MD5:f5b672e56db0c6e29fb62cd7a4b6a8af",
+    "options": [
+      "das Militär",
+      "die Wirtschaft",
+      "das wahlberechtigte Volk",
+      "die Verwaltung"
+    ],
+    "correct": 2,
+    "bundesland": ""
+  },
+  {
+    "number": "29",
+    "title": "MD5:ff71dbb3d35cdfcb91b6f204e0ee3bfd",
+    "options": [
+      "Löwe",
+      "Adler",
+      "Bär",
+      "Pferd"
+    ],
+    "correct": 1,
+    "bundesland": ""
+  },
+  {
+    "number": "30",
+    "title": "MD5:017d41610446846966a8b98a64f980d9",
+    "options": [
+      "regelmäßige Wahlen",
+      "Pressezensur",
+      "Meinungsfreiheit",
+      "verschiedene Parteien"
+    ],
+    "correct": 1,
+    "bundesland": ""
+  },
+  {
+    "number": "31",
+    "title": "MD5:10710f5dacef3068ee455132e10b768c",
+    "options": [
+      "Einheit.",
+      "Koalition.",
+      "Ministerium.",
+      "Fraktion."
+    ],
+    "correct": 1,
+    "bundesland": ""
+  },
+  {
+    "number": "32",
+    "title": "MD5:ee2e90fa19b6c471234d4ed0d95f4ca2",
+    "options": [
+      "Gesetzgebung",
+      "Regierung",
+      "Presse",
+      "Rechtsprechung"
+    ],
+    "correct": 2,
+    "bundesland": ""
+  },
+  {
+    "number": "33",
+    "title": "MD5:d77bc97f4e915e6df2f265880c3b20b6",
+    "options": [
+      "sind Staat und Religionsgemeinschaften voneinander getrennt.",
+      "bilden die Religionsgemeinschaften den Staat.",
+      "ist der Staat abhängig von den Religionsgemeinschaften. ",
+      "bilden Staat und Religionsgemeinschaften eine Einheit."
+    ],
+    "correct": 0,
+    "bundesland": ""
+  },
+  {
+    "number": "34",
+    "title": "MD5:9dccf87eedfea92106c44caddba8532f",
+    "options": [
+      "eine Demokratie",
+      "ein Rechtsstaat",
+      "eine Monarchie",
+      "ein Sozialstaat"
+    ],
+    "correct": 2,
+    "bundesland": ""
+  },
+  {
+    "number": "35",
+    "title": "MD5:c779bb0f088a183789d73a679e55f93c",
+    "options": [
+      "Kirchensteuern",
+      "Sozialabgaben",
+      "Spendengeldern",
+      "Vereinsbeiträgen"
+    ],
+    "correct": 1,
+    "bundesland": ""
+  },
+  {
+    "number": "36",
+    "title": "MD5:6c00b3ca89a49429696caca9c433c7e1",
+    "options": [
+      "die Krankenversicherung",
+      "die Autoversicherung",
+      "die Gebäudeversicherung",
+      "die Haftpflichtversicherung"
+    ],
+    "correct": 0,
+    "bundesland": ""
+  },
+  {
+    "number": "37",
+    "title": "MD5:9a66e3f17e05b4fd5d4dbe5eea62781a",
+    "options": [
+      "Erster Minister/ Erste Ministerin",
+      "Premierminister/ Premierministerin",
+      "Senator/ Senatorin",
+      "Ministerpräsident/ Ministerpräsidentin"
+    ],
+    "correct": 3,
+    "bundesland": ""
+  },
+  {
+    "number": "38",
+    "title": "MD5:0d4893163da14d0d91d3223b6e5c9015",
+    "options": [
+      "Staatenverbund.",
+      "Bundesstaat. ",
+      "Staatenbund.",
+      "Zentralstaat. "
+    ],
+    "correct": 1,
+    "bundesland": ""
+  },
+  {
+    "number": "39",
+    "title": "MD5:dd0581cefa3cace33dae2d6a37f6fd0b",
+    "options": [
+      "einen eigenen Außenminister / eine eigene Außenministerin",
+      "eine eigene Währung",
+      "eine eigene Armee",
+      "eine eigene Regierung"
+    ],
+    "correct": 3,
+    "bundesland": ""
+  },
+  {
+    "number": "40",
+    "title": "MD5:a448ecc5ec95b51befc768a9d1327653",
+    "options": [
+      "Völker, hört die Signale ...",
+      "Einigkeit und Recht und Freiheit ...",
+      "Freude schöner Götterfunken ...",
+      "Deutschland einig Vaterland ..."
+    ],
+    "correct": 1,
+    "bundesland": ""
+  },
+  {
+    "number": "41",
+    "title": "MD5:5ad84cd93ddf641c479397299729bc27",
+    "options": [
+      "weil dadurch die unterschiedlichen Meinungen der Bürger und Bürgerinnen vertreten werden",
+      "damit Bestechung in der Politik begrenzt wird",
+      "um politische Demonstrationen zu verhindern",
+      "um wirtschaftlichen Wettbewerb anzuregen"
+    ],
+    "correct": 0,
+    "bundesland": ""
+  },
+  {
+    "number": "42",
+    "title": "MD5:64c5eab0101f9957f54846618648e4fe",
+    "options": [
+      "die Regierung",
+      "das Parlament",
+      "die Gerichte",
+      "die Polizei"
+    ],
+    "correct": 1,
+    "bundesland": ""
+  },
+  {
+    "number": "43",
+    "title": "MD5:ebb42356b69fb0709c81dcb6e9235da4",
+    "options": [
+      "wenn ihr Wahlkampf zu teuer ist",
+      "wenn sie gegen die Verfassung kämpft",
+      "wenn sie Kritik am Staatsoberhaupt äußert",
+      "wenn ihr Programm eine neue Richtung vorschlägt"
+    ],
+    "correct": 1,
+    "bundesland": ""
+  },
+  {
+    "number": "44",
+    "title": "MD5:5b941e233abed9ada5b5d38ea30fe06e",
+    "options": [
+      "Abgeordnete des EU-Parlaments",
+      "den Bundespräsidenten / die Bundespräsidentin",
+      "Landtagsabgeordnete",
+      "Bundestagsabgeordnete "
+    ],
+    "correct": 1,
+    "bundesland": ""
+  },
+  {
+    "number": "45",
+    "title": "MD5:6d6dde0847277a4f861f51eb8f531514",
+    "options": [
+      "Sozialversicherung",
+      "Unfallversicherung",
+      "Hausratversicherung",
+      "Haftpflicht- und Feuerversicherung"
+    ],
+    "correct": 0,
+    "bundesland": ""
+  },
+  {
+    "number": "46",
+    "title": "MD5:141a14206fd19762a0cad2bf3a058e7b",
+    "options": [
+      "Er baut Straßen und Schulen.",
+      "Er verkauft Lebensmittel und Kleidung.",
+      "Er versorgt alle Einwohner und Einwohnerinnen kostenlos mit Zeitungen.",
+      "Er produziert Autos und Busse."
+    ],
+    "correct": 0,
+    "bundesland": ""
+  },
+  {
+    "number": "47",
+    "title": "MD5:29d69c5b8a2fefceea25ef0e60c269e8",
+    "options": [
+      "Er bezahlt für alle Staatsangehörigen Urlaubsreisen.",
+      "Er zahlt Kindergeld.",
+      "Er unterstützt Museen.",
+      "Er fördert Sportler und Sportlerinnen."
+    ],
+    "correct": 0,
+    "bundesland": ""
+  },
+  {
+    "number": "48",
+    "title": "MD5:4b4fbc87f3ec01002b0e880a0308cb87",
+    "options": [
+      "der Bundesrat",
+      "der Bundespräsident / die Bundespräsidentin",
+      "die Bürgerversammlung",
+      "die Regierung"
+    ],
+    "correct": 2,
+    "bundesland": ""
+  },
+  {
+    "number": "49",
+    "title": "MD5:fc4bcfb1452ba007684b96c536532f39",
+    "options": [
+      "die Lehrer und Lehrerinnen",
+      "die Bundesländer",
+      "das Familienministerium",
+      "die Universitäten"
+    ],
+    "correct": 1,
+    "bundesland": ""
+  },
+  {
+    "number": "50",
+    "title": "MD5:5f749f026f78ba7e760a48a0f34d8484",
+    "options": [
+      "freie Zentralwirtschaft.",
+      "soziale Marktwirtschaft.",
+      "gelenkte Zentralwirtschaft.",
+      "Planwirtschaft."
+    ],
+    "correct": 1,
+    "bundesland": ""
+  },
+  {
+    "number": "51",
+    "title": "MD5:957583ede383d53b0fc7c700a635e8e1",
+    "options": [
+      "Menschen sich kritisch über die Regierung äußern können.",
+      "Bürger friedlich demonstrieren gehen dürfen.",
+      "Menschen von einer Privatpolizei ohne Grund verhaftet werden.",
+      "jemand ein Verbrechen begeht und deshalb verhaftet wird."
+    ],
+    "correct": 2,
+    "bundesland": ""
+  },
+  {
+    "number": "52",
+    "title": "MD5:03e299245893bdbbdb4fc7b894095ea3",
+    "options": [
+      "Volke aus.",
+      "Bundestag aus.",
+      "preußischen König aus.",
+      "Bundesverfassungsgericht aus."
+    ],
+    "correct": 0,
+    "bundesland": ""
+  },
+  {
+    "number": "53",
+    "title": "MD5:67e13233f3c759af03afe360cda6ed75",
+    "options": [
+      "Der Staat hat Recht.",
+      "Es gibt nur rechte Parteien.",
+      "Die Bürger und Bürgerinnen entscheiden über Gesetze.",
+      "Der Staat muss die Gesetze einhalten."
+    ],
+    "correct": 3,
+    "bundesland": ""
+  },
+  {
+    "number": "54",
+    "title": "MD5:ee2e90fa19b6c471234d4ed0d95f4ca2",
+    "options": [
+      "Legislative",
+      "Judikative",
+      "Exekutive",
+      "Direktive"
+    ],
+    "correct": 3,
+    "bundesland": ""
+  },
+  {
+    "number": "55",
+    "title": "MD5:2e586a7bac20bba1b100cdfa28de80bc",
+    "options": [
+      "den Bundestagssitz in Berlin",
+      "das Bundesverfassungsgericht in Karlsruhe",
+      "das Bundesratsgebäude in Berlin",
+      "das Bundeskanzleramt in Berlin"
+    ],
+    "correct": 0,
+    "bundesland": ""
+  },
+  {
+    "number": "56",
+    "title": "MD5:df59eb8c16d4517571921c1f16d57d55",
+    "options": [
+      "Pfarramt",
+      "Ordnungsamt",
+      "Finanzamt",
+      "Auswärtiges Amt"
+    ],
+    "correct": 1,
+    "bundesland": ""
+  },
+  {
+    "number": "57",
+    "title": "MD5:aa8698935d4711a9f5875567e8be4332",
+    "options": [
+      "der / die älteste Abgeordnete im Parlament",
+      "der Ministerpräsident / die Ministerpräsidentin des größten Bundeslandes",
+      "ein ehemaliger Bundeskanzler / eine ehemalige Bundeskanzlerin",
+      "ein Abgeordneter / eine Abgeordnete der stärksten Fraktion"
+    ],
+    "correct": 3,
+    "bundesland": ""
+  },
+  {
+    "number": "58",
+    "title": "MD5:56415274e69050ece0ddc1c770b978d1",
+    "options": [
+      "der Präsident / die Präsidentin des Bundesverfassungsgerichtes",
+      "der Bundespräsident / die Bundespräsidentin",
+      "der Bundesratspräsident / die Bundesratspräsidentin",
+      "der Bundestagspräsident / die Bundestagspräsidentin"
+    ],
+    "correct": 1,
+    "bundesland": ""
+  },
+  {
+    "number": "59",
+    "title": "Vor wie vielen Jahren gab es erstmals eine jüdische Gemeinde auf dem Gebiet des heutigen Deutschlands?",
+    "options": [
+      "vor etwa 300 Jahren",
+      "vor etwa 700 Jahren",
+      "vor etwa 1150 Jahren",
+      "vor etwa 1700 Jahren"
+    ],
+    "correct": 3,
+    "bundesland": ""
+  },
+  {
+    "number": "60",
+    "title": "MD5:3515ac9179499c4b45e075bf99492287",
+    "options": [
+      "Exekutive.",
+      "Legislative.",
+      "Direktive.",
+      "Judikative."
+    ],
+    "correct": 1,
+    "bundesland": ""
+  },
+  {
+    "number": "61",
+    "title": "MD5:173a3465393e62bb8d84c59a24fe0cbc",
+    "options": [
+      "Der König / die Königin herrscht über das Volk.",
+      "Das Bundesverfassungsgericht steht über der Verfassung.",
+      "Die Interessenverbände üben die Souveränität zusammen mit der Regierung aus. ",
+      "Die Staatsgewalt geht vom Volke aus."
+    ],
+    "correct": 3,
+    "bundesland": ""
+  },
+  {
+    "number": "62",
+    "title": "MD5:5cf019daef572415a21ee55f5a425cbb",
+    "options": [
+      "Kommunalwahl.",
+      "Landtagswahl.",
+      "Europawahl.",
+      "Bundestagswahl."
+    ],
+    "correct": 1,
+    "bundesland": ""
+  },
+  {
+    "number": "63",
+    "title": "MD5:9edb73457cc46628fc4aa04d683b7ce8",
+    "options": [
+      "die Polizei",
+      "die Gerichte",
+      "das Finanzamt",
+      "die Ministerien"
+    ],
+    "correct": 1,
+    "bundesland": ""
+  },
+  {
+    "number": "64",
+    "title": "MD5:0ae86401526a60e49eda49916e836a03",
+    "options": [
+      "vier Besatzungszonen.",
+      "einen Oststaat und einen Weststaat.",
+      "16 Kantone.",
+      "Bund, Länder und Kommunen."
+    ],
+    "correct": 3,
+    "bundesland": ""
+  },
+  {
+    "number": "65",
+    "title": "MD5:b665c4b51d049a2d44ae0cde6b2810bb",
+    "options": [
+      "Gesetze zu entwerfen.",
+      "die Bundesregierung zu kontrollieren.",
+      "den Bundeskanzler / die Bundeskanzlerin zu wählen.",
+      "das Bundeskabinett zu bilden."
+    ],
+    "correct": 3,
+    "bundesland": ""
+  },
+  {
+    "number": "66",
+    "title": "Welche Städte haben die größten jüdischen Gemeinden in Deutschland?",
+    "options": [
+      "Berlin und München",
+      "Hamburg und Essen",
+      "Nürnberg und Stuttgart",
+      "Worms und Speyer"
+    ],
+    "correct": 0,
+    "bundesland": ""
+  },
+  {
+    "number": "67",
+    "title": "MD5:f0c416011c9eb01aebe627611ef436ec",
+    "options": [
+      "Verteidigungspolitik",
+      "Außenpolitik",
+      "Wirtschaftspolitik",
+      "Schulpolitik"
+    ],
+    "correct": 3,
+    "bundesland": ""
+  },
+  {
+    "number": "68",
+    "title": "MD5:f5993e53c6c2ce186c83b8cd703784f2",
+    "options": [
+      "weil es in Deutschland nur staatliche Schulen gibt",
+      "weil alle Schüler und Schülerinnen einen Schulabschluss haben müssen",
+      "weil es in den Bundesländern verschiedene Schulen gibt",
+      "weil es nach dem Grundgesetz seine Aufgabe ist"
+    ],
+    "correct": 3,
+    "bundesland": ""
+  },
+  {
+    "number": "69",
+    "title": "MD5:7e898175b0eb17689b2771cd871fa3d5",
+    "options": [
+      "Stadträte",
+      "Landräte",
+      "Gemeinden",
+      "Bezirksämter"
+    ],
+    "correct": 2,
+    "bundesland": ""
+  },
+  {
+    "number": "70",
+    "title": "MD5:2a4d8f47d696bee1d7b161b89c14373f",
+    "options": [
+      "Er / Sie führt die Regierungsgeschäfte.",
+      "Er / Sie kontrolliert die Regierungspartei. ",
+      "Er / Sie wählt die Minister / Ministerinnen aus.",
+      "Er / Sie schlägt den Kanzler / die Kanzlerin zur Wahl vor."
+    ],
+    "correct": 3,
+    "bundesland": ""
+  },
+  {
+    "number": "71",
+    "title": "MD5:983d114f36dea486dbc84521944a8834",
+    "options": [
+      "in Bonn, weil sich dort das Bundeskanzleramt und der Bundestag befinden.",
+      "auf Schloss Meseberg, dem Gästehaus der Bundesregierung, um Staatsgäste zu empfangen.",
+      "auf Schloss Bellevue, dem Amtssitz des Bundespräsidenten / der Bundespräsidentin, um Staatsgäste zu empfangen.",
+      "in Berlin, weil sich dort das Bundeskanzleramt und der Bundestag befinden."
+    ],
+    "correct": 3,
+    "bundesland": ""
+  },
+  {
+    "number": "72",
+    "title": "MD5:d5df81eeca1f405eb435cb389440c882",
+    "options": [
+      "Gerhard Schröder",
+      "Angela Merkel",
+      "Franziska Giffey",
+      "Olaf Scholz"
+    ],
+    "correct": 3,
+    "bundesland": ""
+  },
+  {
+    "number": "73",
+    "title": "MD5:6f7444c6b79c1b52cb1d480c43ffa84a",
+    "options": [
+      "CDU/CSU und SPD.",
+      "Die Linke und Bündnis 90/Die Grünen.",
+      "FDP und SPD.",
+      "Die Linke und FDP."
+    ],
+    "correct": 0,
+    "bundesland": ""
+  },
+  {
+    "number": "74",
+    "title": "MD5:8fc9a637f4209589d20a780e020f524e",
+    "options": [
+      "Bundesversammlung",
+      "Volkskammer",
+      "Bundestag",
+      "Bundesgerichtshof"
+    ],
+    "correct": 2,
+    "bundesland": ""
+  },
+  {
+    "number": "75",
+    "title": "MD5:0b8129e99512193243f776c4743a4d06",
+    "options": [
+      "Frank-Walter Steinmeier",
+      "Bärbel Bas",
+      "Bodo Ramelow",
+      "Joachim Gauck"
+    ],
+    "correct": 0,
+    "bundesland": ""
+  },
+  {
+    "number": "76",
+    "title": "MD5:e415a57a4174372a84f64615c4a60c94",
+    "options": [
+      "Christliche Deutsche Union",
+      "Club Deutscher Unternehmer",
+      "Christlicher Deutscher Umweltschutz ",
+      "Christlich Demokratische Union"
+    ],
+    "correct": 3,
+    "bundesland": ""
+  },
+  {
+    "number": "77",
+    "title": "MD5:772858fa1de9f3cc3e14406cf23514ab",
+    "options": [
+      "die deutsche Polizei",
+      "ein deutscher Hafen",
+      "eine deutsche Bürgerinitiative",
+      "die deutsche Armee"
+    ],
+    "correct": 3,
+    "bundesland": ""
+  },
+  {
+    "number": "78",
+    "title": "MD5:ad041ae212e650bfab0ddf4c678595dc",
+    "options": [
+      "Sozialistische Partei Deutschlands",
+      "Sozialpolitische Partei Deutschlands",
+      "Sozialdemokratische Partei Deutschlands",
+      "Sozialgerechte Partei Deutschlands"
+    ],
+    "correct": 2,
+    "bundesland": ""
+  },
+  {
+    "number": "79",
+    "title": "MD5:d5b8c3e5b251b3b45dfdd15d8b26b9b1",
+    "options": [
+      "Friedliche Demonstrative Partei",
+      "Freie Deutschland Partei",
+      "Führende Demokratische Partei",
+      "Freie Demokratische Partei"
+    ],
+    "correct": 3,
+    "bundesland": ""
+  },
+  {
+    "number": "80",
+    "title": "MD5:4fb2217746513b08b8b247ec1f283118",
+    "options": [
+      "Oberlandesgericht",
+      "Amtsgericht",
+      "Bundesverfassungsgericht",
+      "Verwaltungsgericht"
+    ],
+    "correct": 2,
+    "bundesland": ""
+  },
+  {
+    "number": "81",
+    "title": "MD5:9e717a08b6c3991844de90c1d8647b1c",
+    "options": [
+      "der Bundesrat",
+      "die Bundesversammlung",
+      "das Volk",
+      "der Bundestag"
+    ],
+    "correct": 3,
+    "bundesland": ""
+  },
+  {
+    "number": "82",
+    "title": "MD5:c9c5b401838202eebbe515aa0b171354",
+    "options": [
+      "der Bundestagspräsident / die Bundestagspräsidentin",
+      "der Bundespräsident / die Bundespräsidentin",
+      "der Bundesratspräsident / die Bundesratspräsidentin",
+      "der Bundeskanzler / die Bundeskanzlerin "
+    ],
+    "correct": 3,
+    "bundesland": ""
+  },
+  {
+    "number": "83",
+    "title": "MD5:606f55954e1769be4af73c55544cb8fc",
+    "options": [
+      "das Volk",
+      "die Bundesversammlung",
+      "der Bundestag",
+      "die Bundesregierung"
+    ],
+    "correct": 2,
+    "bundesland": ""
+  },
+  {
+    "number": "84",
+    "title": "MD5:b30a59cd96ec5a90df356e86a2d3ef28",
+    "options": [
+      "regiert das Land.",
+      "entwirft die Gesetze.",
+      "repräsentiert das Land.",
+      "überwacht die Einhaltung der Gesetze."
+    ],
+    "correct": 2,
+    "bundesland": ""
+  },
+  {
+    "number": "85",
+    "title": "MD5:5ad5a8b595112b5ef3991a4559cc32f1",
+    "options": [
+      "die Abgeordneten des Bundestages",
+      "die Minister und Ministerinnen der Bundesregierung",
+      "die Regierungsvertreter der Bundesländer",
+      "die Parteimitglieder"
+    ],
+    "correct": 2,
+    "bundesland": ""
+  },
+  {
+    "number": "86",
+    "title": "MD5:04e9b51ed0389c82414235650655018a",
+    "options": [
+      "die Bundesversammlung",
+      "der Bundesrat",
+      "das Bundesparlament",
+      "das Bundesverfassungsgericht"
+    ],
+    "correct": 0,
+    "bundesland": ""
+  },
+  {
+    "number": "87",
+    "title": "MD5:d574ea0427a9a22633e35479c9c3ee51",
+    "options": [
+      "der Bundeskanzler / die Bundeskanzlerin",
+      "der Bundespräsident / die Bundespräsidentin",
+      "der Bundesratspräsident / die Bundesratspräsidentin",
+      "der Bundestagspräsident / die Bundestagspräsidentin"
+    ],
+    "correct": 1,
+    "bundesland": ""
+  },
+  {
+    "number": "88",
+    "title": "MD5:a874e2fdc263358f0969713bdb1d8b48",
+    "options": [
+      "kontrolliert die Regierung.",
+      "entscheidet, wer Bundesminister / Bundesministerin wird.",
+      "bestimmt, wer im Bundesrat sitzt.",
+      "schlägt die Regierungschefs / Regierungschefinnen der Länder vor."
+    ],
+    "correct": 0,
+    "bundesland": ""
+  },
+  {
+    "number": "89",
+    "title": "MD5:f16a96740ac05e14d1a6ed107b54b791",
+    "options": [
+      "Verband",
+      "Ältestenrat",
+      "Fraktion",
+      "Opposition"
+    ],
+    "correct": 2,
+    "bundesland": ""
+  },
+  {
+    "number": "90",
+    "title": "MD5:1e8c11ea9933f63b01812d2e2bbcbe61",
+    "options": [
+      "den Bundesrat.",
+      "die Bundesversammlung.",
+      "den Bundestag.",
+      "die Bundesregierung."
+    ],
+    "correct": 0,
+    "bundesland": ""
+  },
+  {
+    "number": "91",
+    "title": "MD5:4f58daa9608e5ad4a2f8fb8fc9cd0070",
+    "options": [
+      "schwieriger, wenn sich dadurch die Mehrheit im Bundestag ändert.",
+      "leichter, wenn dadurch neue Parteien in den Bundesrat kommen.",
+      "schwieriger, wenn dadurch die Mehrheit im Bundesrat verändert wird.",
+      "leichter, wenn es sich um ein reiches Bundesland handelt."
+    ],
+    "correct": 2,
+    "bundesland": ""
+  },
+  {
+    "number": "92",
+    "title": "MD5:a2ff8d16ed62771c73857012e4d84915",
+    "options": [
+      "Christlich Sichere Union",
+      "Christlich Süddeutsche Union",
+      "Christlich Sozialer Unternehmerverband",
+      "Christlich Soziale Union"
+    ],
+    "correct": 3,
+    "bundesland": ""
+  },
+  {
+    "number": "93",
+    "title": "MD5:07a4396493f821dc757302faf7fb6a6c",
+    "options": [
+      "weniger Erststimmen kann sie haben.",
+      "mehr Direktkandidaten der Partei ziehen ins Parlament ein.",
+      "größer ist das Risiko, eine Koalition bilden zu müssen.",
+      "mehr Sitze erhält die Partei im Parlament."
+    ],
+    "correct": 3,
+    "bundesland": ""
+  },
+  {
+    "number": "94",
+    "title": "MD5:62fcc31a54e909c71ae5d0bfe8647139",
+    "options": [
+      "16",
+      "18",
+      "21",
+      "23"
+    ],
+    "correct": 1,
+    "bundesland": ""
+  },
+  {
+    "number": "95",
+    "title": "MD5:f3d2cfc211e320423638cbe968b18c21",
+    "options": [
+      "Wahlpflicht",
+      "Schulpflicht",
+      "Schweigepflicht",
+      "Religionspflicht"
+    ],
+    "correct": 1,
+    "bundesland": ""
+  },
+  {
+    "number": "96",
+    "title": "Wie kann jemand, der den Holocaust leugnet, bestraft werden?",
+    "options": [
+      "Kürzung sozialer Leistungen",
+      "bis zu 100 Sozialstunden",
+      "gar nicht, Holocaustleugnung ist erlaubt",
+      "mit Freiheitsstrafe bis zu fünf Jahren oder mit Geldstrafe"
+    ],
+    "correct": 3,
+    "bundesland": ""
+  },
+  {
+    "number": "97",
+    "title": "MD5:5085334d2d4a3a732a5bc35e02c573e7",
+    "options": [
+      "Sozialversicherung",
+      "Sozialhilfe",
+      "Kindergeld",
+      "Wohngeld"
+    ],
+    "correct": 0,
+    "bundesland": ""
+  },
+  {
+    "number": "98",
+    "title": "MD5:b28dc316fb0308d8412fe09785e1fd10",
+    "options": [
+      "dürfen sie nicht mehr an den Sitzungen des Parlaments teilnehmen.",
+      "kann die Regierung ihre Mehrheit verlieren.",
+      "muss der Bundespräsident / die Bundespräsidentin zuvor sein / ihr Einverständnis geben.",
+      "dürfen die Wähler / Wählerinnen dieser Abgeordneten noch einmal wählen."
+    ],
+    "correct": 1,
+    "bundesland": ""
+  },
+  {
+    "number": "99",
+    "title": "MD5:4b0b5da681d9f543e19ccbde68fb7938",
+    "options": [
+      "Arbeitgeber / Arbeitgeberinnen und Arbeitnehmer / Arbeitnehmerinnen",
+      "nur Arbeitnehmer / Arbeitnehmerinnen",
+      "alle Staatsangehörigen",
+      "nur Arbeitgeber / Arbeitgeberinnen"
+    ],
+    "correct": 0,
+    "bundesland": ""
+  },
+  {
+    "number": "100",
+    "title": "MD5:1bb44dc351235e59466fb0f33e4444f2",
+    "options": [
+      "die Lebensversicherung",
+      "die gesetzliche Rentenversicherung",
+      "die Arbeitslosenversicherung",
+      "die Pflegeversicherung"
+    ],
+    "correct": 0,
+    "bundesland": ""
+  }
+]

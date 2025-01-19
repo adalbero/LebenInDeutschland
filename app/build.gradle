@@ -1,13 +1,13 @@
 apply plugin: 'com.android.application'
 
 android {
-    compileSdk 34
+    compileSdk 35
     defaultConfig {
         applicationId "com.adalbero.app.lebenindeutchland"
         minSdkVersion 21
-        targetSdk 34
-        versionCode 32
-        versionName '1.12.0'
+        targetSdk 35
+        versionCode 33
+        versionName '1.13.0'
         testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
         vectorDrawables.useSupportLibrary = true
         multiDexEnabled true
@@ -36,15 +36,15 @@ dependencies {
     implementation fileTree(include: ['*.jar'], dir: 'libs')
 
     implementation 'androidx.browser:browser:1.8.0'
-    implementation 'androidx.constraintlayout:constraintlayout:2.1.4'
+    implementation 'androidx.constraintlayout:constraintlayout:2.2.0'
     implementation 'androidx.multidex:multidex:2.0.1'
 
     implementation 'com.google.android.material:material:1.12.0'
-    implementation 'com.google.android.ump:user-messaging-platform:2.2.0'
+    implementation 'com.google.android.ump:user-messaging-platform:3.1.0'
 
-    implementation 'com.google.firebase:firebase-analytics:22.0.2'
-    implementation 'com.google.firebase:firebase-ads:23.2.0'
-    implementation 'com.google.firebase:firebase-crashlytics:19.0.2'
+    implementation 'com.google.firebase:firebase-analytics:22.2.0'
+    implementation 'com.google.firebase:firebase-ads:23.6.0'
+    implementation 'com.google.firebase:firebase-crashlytics:19.4.0'
 
     implementation 'com.android.support:multidex:1.0.3'
 }

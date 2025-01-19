@@ -2,6 +2,10 @@ import puppeteer, { Page } from 'puppeteer';
 const crypto = require('node:crypto');
 const fs = require('node:fs');
 
+const OFFSET = 0;
+const SIZE = 300;
+const DELAY = 1_000;
+
 interface Question {
     number: string;
     title: string;
@@ -15,6 +19,7 @@ interface Bundesland {
 }
 
 const bundeslands: Bundesland = {
+    '': '300',
     'Brandenburg': 'BB',
     'Berlin': 'BE',
     'Baden-Württemberg': 'BW',
@@ -37,13 +42,14 @@ const URL = 'https://oet.bamf.de/ords/oetut/';
 const NAME = 'BAMF';
 
 (async () => {
-    const browser = await puppeteer.launch({ headless: false });
+    const browser = await puppeteer.launch({ headless: false, timeout: 30_000 });
     const page = await browser.newPage();
     await page.setViewport({ width: 1080, height: 1024 });
     page.setDefaultTimeout(5_000);
 
     try {
-        const list = ['', ...Object.keys(bundeslands)];
+        // const list = ['', ...Object.keys(bundeslands)];
+        const list = [...Object.keys(bundeslands)];
         for (let bundesland of list) {
             await fetchQuestions(page, bundesland);
 
@@ -69,9 +75,11 @@ const NAME = 'BAMF';
 
 async function fetchQuestions(page: Page, bundesland: string) {
     const n = bundesland ? 10 : 300;
+    const start = OFFSET * SIZE;
+    const end = Math.min(n, SIZE);
 
     await selectBundesland(page, bundesland);
-    for (let i = 0; i < n; i++) {
+    for (let i = start; i < end; i++) {
         await clickNext(page);
 
         const q = await parseQuestion(page);
@@ -85,6 +93,7 @@ async function fetchQuestions(page: Page, bundesland: string) {
     }
 }
 async function delay(time: number = 500) {
+    console.log('==> delay: ' + time);
     return new Promise(function (resolve) {
         setTimeout(resolve, time);
     })
@@ -97,7 +106,7 @@ async function parseQuestion(page: Page): Promise<Question> {
         options: await getOptions(page),
         correct: await getResponse(page)
     };
-    console.log(q.number);
+    console.log('--> Processed:', q.number);
     return q;
 }
 
@@ -112,6 +121,7 @@ async function selectBundesland(page: Page, text: string) {
 }
 
 async function clickNext(page: Page) {
+    await delay(DELAY);
     const START = 'input[value="Zum Fragenkatalog"]';
     const NEXT = 'input[value="nächste Aufgabe >"]';
     if ((await page.$(NEXT)) != null) {
@@ -121,7 +131,6 @@ async function clickNext(page: Page) {
         console.log('==> click start');
         await page.locator(START).click();
     }
-    await delay();
 }
 
 async function getQuestionNumber(page: Page): Promise<string> {
@@ -145,9 +154,9 @@ async function getText(page: Page, locator: string): Promise<string> {
 }
 
 async function openQuestion(page: Page, text: string) {
+    await delay(DELAY);
     console.log('==> select question: ' + text);
     await page.type('#P30_ROWNUM', text, { delay: 120 });
-    await delay();
 }
 
 async function getImageHash(page: Page) {
