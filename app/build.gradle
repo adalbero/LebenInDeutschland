@@ -1,13 +1,13 @@
 apply plugin: 'com.android.application'
 
 android {
-    compileSdk 35
+    compileSdk 34
     defaultConfig {
         applicationId "com.adalbero.app.lebenindeutchland"
         minSdkVersion 21
-        targetSdk 35
-        versionCode 33
-        versionName '1.13.0'
+        targetSdk 34
+        versionCode 34
+        versionName '1.13.1'
         testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
         vectorDrawables.useSupportLibrary = true
         multiDexEnabled true
