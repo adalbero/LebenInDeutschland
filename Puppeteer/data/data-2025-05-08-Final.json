@@ -1,0 +1,5527 @@
+{
+  "name": "BAMF",
+  "url": "https://oet.bamf.de/ords/oetut/",
+  "timestamp": "2025-05-08T05:41:06.435Z",
+  "questions": [
+    {
+      "number": "1",
+      "title": "MD5:25e196027c610eaafdc195ce79960dee",
+      "options": [
+        "hier Religionsfreiheit gilt.",
+        "die Menschen Steuern zahlen.",
+        "die Menschen das Wahlrecht haben.",
+        "hier Meinungsfreiheit gilt."
+      ],
+      "correct": 3,
+      "bundesland": ""
+    },
+    {
+      "number": "2",
+      "title": "MD5:d4732a3e5c70e3cb4b3e4af220f7ae74",
+      "options": [
+        "Geschichtsunterricht teilnimmt.",
+        "Religionsunterricht teilnimmt.",
+        "Politikunterricht teilnimmt.",
+        "Sprachunterricht teilnimmt."
+      ],
+      "correct": 1,
+      "bundesland": ""
+    },
+    {
+      "number": "3",
+      "title": "MD5:0b51626df3ca5ea4292ee68e8ae1c25e",
+      "options": [
+        "Alle Einwohner / Einwohnerinnen und der Staat müssen sich an die Gesetze halten.",
+        "Der Staat muss sich nicht an die Gesetze halten.",
+        "Nur Deutsche müssen die Gesetze befolgen.",
+        "Die Gerichte machen die Gesetze."
+      ],
+      "correct": 0,
+      "bundesland": ""
+    },
+    {
+      "number": "4",
+      "title": "MD5:676d5792c1c580f2a0516f146e561ad8",
+      "options": [
+        "Waffenbesitz",
+        "Faustrecht",
+        "Meinungsfreiheit",
+        "Selbstjustiz"
+      ],
+      "correct": 2,
+      "bundesland": ""
+    },
+    {
+      "number": "5",
+      "title": "MD5:37e918f2084a026f204f61c6b67894b1",
+      "options": [
+        "Man darf Geld annehmen, wenn man dafür einen bestimmten Kandidaten / eine bestimmte Kandidatin wählt.",
+        "Nur Personen, die noch nie im Gefängnis waren, dürfen wählen.",
+        "Der Wähler darf bei der Wahl weder beeinflusst noch zu einer bestimmten Stimmabgabe gezwungen werden und keine Nachteile durch die Wahl haben.",
+        "Alle wahlberechtigten Personen müssen wählen."
+      ],
+      "correct": 2,
+      "bundesland": ""
+    },
+    {
+      "number": "6",
+      "title": "MD5:ae55fad5acc9a41735d45d126c6989c6",
+      "options": [
+        "Volksgesetz",
+        "Bundesgesetz",
+        "Deutsches Gesetz",
+        "Grundgesetz"
+      ],
+      "correct": 3,
+      "bundesland": ""
+    },
+    {
+      "number": "7",
+      "title": "MD5:d3f940741dfb677dc280e4b718fe307d",
+      "options": [
+        "Glaubens- und Gewissensfreiheit.",
+        "Unterhaltung.",
+        "Arbeit.",
+        "Wohnung."
+      ],
+      "correct": 0,
+      "bundesland": ""
+    },
+    {
+      "number": "8",
+      "title": "MD5:64e98eed8d6e7e281170c97188bb6660",
+      "options": [
+        "Die Würde des Menschen ist unantastbar.",
+        "Alle sollen gleich viel Geld haben.",
+        "Jeder Mensch darf seine Meinung sagen.",
+        "Alle sind vor dem Gesetz gleich."
+      ],
+      "correct": 1,
+      "bundesland": ""
+    },
+    {
+      "number": "9",
+      "title": "MD5:ac07a4dfc66d9d407e7aac9d09d88952",
+      "options": [
+        "Schutz der Familie",
+        "Menschenwürde",
+        "Asyl",
+        "Meinungsfreiheit"
+      ],
+      "correct": 2,
+      "bundesland": ""
+    },
+    {
+      "number": "10",
+      "title": "MD5:de8b69b009d45d2713d324e9c8be5712",
+      "options": [
+        "die Prügelstrafe",
+        "die Folter",
+        "die Todesstrafe",
+        "die Geldstrafe"
+      ],
+      "correct": 3,
+      "bundesland": ""
+    },
+    {
+      "number": "11",
+      "title": "MD5:376bf82cec8b822b30a0416e2fa42620",
+      "options": [
+        "Grundgesetz",
+        "Bundesverfassung",
+        "Gesetzbuch",
+        "Verfassungsvertrag"
+      ],
+      "correct": 0,
+      "bundesland": ""
+    },
+    {
+      "number": "12",
+      "title": "MD5:7d9827b0b73839ea5f67b392ef73b386",
+      "options": [
+        "Ja, wenn mehr als die Hälfte der Abgeordneten im Bundestag dafür sind.",
+        "Ja, aber dazu müssen zwei Drittel der Abgeordneten im Bundestag dafür sein.",
+        "Nein, denn die Pressefreiheit ist ein Grundrecht. Sie kann nicht abgeschafft werden.",
+        "Nein, denn nur der Bundesrat kann die Pressefreiheit abschaffen."
+      ],
+      "correct": 2,
+      "bundesland": ""
+    },
+    {
+      "number": "13",
+      "title": "MD5:f7f7d3b170cf470113e65ba83292a4f1",
+      "options": [
+        "die regierenden Parteien.",
+        "die Fraktion mit den meisten Abgeordneten.",
+        "alle Parteien, die bei der letzten Wahl die 5%-Hürde erreichen konnten.",
+        "alle Abgeordneten, die nicht zu der Regierungspartei/den Regierungsparteien gehören."
+      ],
+      "correct": 3,
+      "bundesland": ""
+    },
+    {
+      "number": "14",
+      "title": "Meinungsfreiheit in Deutschland heißt zum Beispiel, dass ich",
+      "options": [
+        "Passanten auf der Straße beschimpfen darf",
+        "meine Meinung im Internet äußern kann",
+        "Nazi-, Hamas- oder Islamischer Staat-Symbole öffentlich tragen darf",
+        "meine Meinung nur dann äußern darf, solange ich der Regierung nicht widerspreche"
+      ],
+      "correct": 1,
+      "bundesland": ""
+    },
+    {
+      "number": "15",
+      "title": "MD5:e1646e7854b16f2f5cc9d9c841b26355",
+      "options": [
+        "Militärdienst",
+        "Zwangsarbeit",
+        "freie Berufswahl",
+        "Arbeit im Ausland"
+      ],
+      "correct": 1,
+      "bundesland": ""
+    },
+    {
+      "number": "16",
+      "title": "MD5:6b393af34a17c2332cf894ca3578e732",
+      "options": [
+        "bei der öffentlichen Verbreitung falscher Behauptungen über einzelne Personen",
+        "bei Meinungsäußerungen über die Bundesregierung",
+        "bei Diskussionen über Religionen",
+        "bei Kritik am Staat"
+      ],
+      "correct": 0,
+      "bundesland": ""
+    },
+    {
+      "number": "17",
+      "title": "MD5:825fe1e8f0fcc4d98fb18e3866560d9e",
+      "options": [
+        "Meinungsfreiheit der Einwohner und Einwohnerinnen.",
+        "Petitionen der Bürger und Bürgerinnen.",
+        "Versammlungsfreiheit der Einwohner und Einwohnerinnen.",
+        "Ungleichbehandlung der Bürger und Bürgerinnen durch den Staat. "
+      ],
+      "correct": 3,
+      "bundesland": ""
+    },
+    {
+      "number": "18",
+      "title": "MD5:2c6233cfbee628c3e4884524a38d4df0",
+      "options": [
+        "die Unantastbarkeit der Menschenwürde",
+        "das Recht auf Leben",
+        "Religionsfreiheit",
+        "Meinungsfreiheit"
+      ],
+      "correct": 0,
+      "bundesland": ""
+    },
+    {
+      "number": "19",
+      "title": "MD5:3c5c82b32547f6d907f8ddc7dcc27044",
+      "options": [
+        "Man darf sich seinen Wohnort selbst aussuchen.",
+        "Man kann seinen Beruf wechseln.",
+        "Man darf sich für eine andere Religion entscheiden.",
+        "Man darf sich in der Öffentlichkeit nur leicht bekleidet bewegen."
+      ],
+      "correct": 0,
+      "bundesland": ""
+    },
+    {
+      "number": "20",
+      "title": "MD5:4b6e958b36bcb3dc29dfdedea3b4863a",
+      "options": [
+        "tolerant.",
+        "rechtsstaatlich orientiert.",
+        "gesetzestreu.",
+        "verfassungswidrig."
+      ],
+      "correct": 3,
+      "bundesland": ""
+    },
+    {
+      "number": "21",
+      "title": "MD5:772f38c6a051f594a4bf60d67200cc76",
+      "options": [
+        "1",
+        "2",
+        "3",
+        "4"
+      ],
+      "correct": 0,
+      "bundesland": ""
+    },
+    {
+      "number": "22",
+      "title": "MD5:71ba00ef823ec5ba2714a0083b2d4b99",
+      "options": [
+        "Monarchie",
+        "Diktatur",
+        "Republik",
+        "Fürstentum"
+      ],
+      "correct": 2,
+      "bundesland": ""
+    },
+    {
+      "number": "23",
+      "title": "MD5:43ab8dbce75b29d372d250d207d7ba3e",
+      "options": [
+        "in kleinen Familienunternehmen beschäftigt.",
+        "ehrenamtlich für ein Bundesland tätig.",
+        "selbständig mit einer eigenen Firma tätig.",
+        "bei einer Firma oder Behörde beschäftigt."
+      ],
+      "correct": 3,
+      "bundesland": ""
+    },
+    {
+      "number": "24",
+      "title": "MD5:d0a6db0d3fe0cfcd40fd5b981bd3c849",
+      "options": [
+        "14",
+        "15",
+        "16",
+        "17"
+      ],
+      "correct": 2,
+      "bundesland": ""
+    },
+    {
+      "number": "25",
+      "title": "MD5:46567dac63132c5774ea1310fc1afa05",
+      "options": [
+        "Elsass-Lothringen",
+        "Nordrhein-Westfalen",
+        "Mecklenburg-Vorpommern",
+        "Sachsen-Anhalt"
+      ],
+      "correct": 0,
+      "bundesland": ""
+    },
+    {
+      "number": "26",
+      "title": "MD5:d80233b05872d3efd078f8d51472644a",
+      "options": [
+        "eine kommunistische Republik.",
+        "ein demokratischer und sozialer Bundesstaat.",
+        "eine kapitalistische und soziale Monarchie.",
+        "ein sozialer und sozialistischer Bundesstaat."
+      ],
+      "correct": 1,
+      "bundesland": ""
+    },
+    {
+      "number": "27",
+      "title": "MD5:d80233b05872d3efd078f8d51472644a",
+      "options": [
+        "ein sozialistischer Staat.",
+        "ein Bundesstaat.",
+        "eine Diktatur.",
+        "eine Monarchie."
+      ],
+      "correct": 1,
+      "bundesland": ""
+    },
+    {
+      "number": "28",
+      "title": "MD5:f5b672e56db0c6e29fb62cd7a4b6a8af",
+      "options": [
+        "das Militär",
+        "die Wirtschaft",
+        "das wahlberechtigte Volk",
+        "die Verwaltung"
+      ],
+      "correct": 2,
+      "bundesland": ""
+    },
+    {
+      "number": "29",
+      "title": "MD5:ff71dbb3d35cdfcb91b6f204e0ee3bfd",
+      "options": [
+        "Löwe",
+        "Adler",
+        "Bär",
+        "Pferd"
+      ],
+      "correct": 1,
+      "bundesland": ""
+    },
+    {
+      "number": "30",
+      "title": "MD5:017d41610446846966a8b98a64f980d9",
+      "options": [
+        "regelmäßige Wahlen",
+        "Pressezensur",
+        "Meinungsfreiheit",
+        "verschiedene Parteien"
+      ],
+      "correct": 1,
+      "bundesland": ""
+    },
+    {
+      "number": "31",
+      "title": "MD5:10710f5dacef3068ee455132e10b768c",
+      "options": [
+        "Einheit.",
+        "Koalition.",
+        "Ministerium.",
+        "Fraktion."
+      ],
+      "correct": 1,
+      "bundesland": ""
+    },
+    {
+      "number": "32",
+      "title": "MD5:ee2e90fa19b6c471234d4ed0d95f4ca2",
+      "options": [
+        "Gesetzgebung",
+        "Regierung",
+        "Presse",
+        "Rechtsprechung"
+      ],
+      "correct": 2,
+      "bundesland": ""
+    },
+    {
+      "number": "33",
+      "title": "MD5:d77bc97f4e915e6df2f265880c3b20b6",
+      "options": [
+        "sind Staat und Religionsgemeinschaften voneinander getrennt.",
+        "bilden die Religionsgemeinschaften den Staat.",
+        "ist der Staat abhängig von den Religionsgemeinschaften. ",
+        "bilden Staat und Religionsgemeinschaften eine Einheit."
+      ],
+      "correct": 0,
+      "bundesland": ""
+    },
+    {
+      "number": "34",
+      "title": "MD5:9dccf87eedfea92106c44caddba8532f",
+      "options": [
+        "eine Demokratie",
+        "ein Rechtsstaat",
+        "eine Monarchie",
+        "ein Sozialstaat"
+      ],
+      "correct": 2,
+      "bundesland": ""
+    },
+    {
+      "number": "35",
+      "title": "MD5:c779bb0f088a183789d73a679e55f93c",
+      "options": [
+        "Kirchensteuern",
+        "Sozialabgaben",
+        "Spendengeldern",
+        "Vereinsbeiträgen"
+      ],
+      "correct": 1,
+      "bundesland": ""
+    },
+    {
+      "number": "36",
+      "title": "MD5:6c00b3ca89a49429696caca9c433c7e1",
+      "options": [
+        "die Krankenversicherung",
+        "die Autoversicherung",
+        "die Gebäudeversicherung",
+        "die Haftpflichtversicherung"
+      ],
+      "correct": 0,
+      "bundesland": ""
+    },
+    {
+      "number": "37",
+      "title": "MD5:9a66e3f17e05b4fd5d4dbe5eea62781a",
+      "options": [
+        "Erster Minister/ Erste Ministerin",
+        "Premierminister/ Premierministerin",
+        "Senator/ Senatorin",
+        "Ministerpräsident/ Ministerpräsidentin"
+      ],
+      "correct": 3,
+      "bundesland": ""
+    },
+    {
+      "number": "38",
+      "title": "MD5:0d4893163da14d0d91d3223b6e5c9015",
+      "options": [
+        "Staatenverbund.",
+        "Bundesstaat. ",
+        "Staatenbund.",
+        "Zentralstaat. "
+      ],
+      "correct": 1,
+      "bundesland": ""
+    },
+    {
+      "number": "39",
+      "title": "MD5:dd0581cefa3cace33dae2d6a37f6fd0b",
+      "options": [
+        "einen eigenen Außenminister / eine eigene Außenministerin",
+        "eine eigene Währung",
+        "eine eigene Armee",
+        "eine eigene Regierung"
+      ],
+      "correct": 3,
+      "bundesland": ""
+    },
+    {
+      "number": "40",
+      "title": "MD5:a448ecc5ec95b51befc768a9d1327653",
+      "options": [
+        "Völker, hört die Signale ...",
+        "Einigkeit und Recht und Freiheit ...",
+        "Freude schöner Götterfunken ...",
+        "Deutschland einig Vaterland ..."
+      ],
+      "correct": 1,
+      "bundesland": ""
+    },
+    {
+      "number": "41",
+      "title": "MD5:5ad84cd93ddf641c479397299729bc27",
+      "options": [
+        "weil dadurch die unterschiedlichen Meinungen der Bürger und Bürgerinnen vertreten werden",
+        "damit Bestechung in der Politik begrenzt wird",
+        "um politische Demonstrationen zu verhindern",
+        "um wirtschaftlichen Wettbewerb anzuregen"
+      ],
+      "correct": 0,
+      "bundesland": ""
+    },
+    {
+      "number": "42",
+      "title": "MD5:64c5eab0101f9957f54846618648e4fe",
+      "options": [
+        "die Regierung",
+        "das Parlament",
+        "die Gerichte",
+        "die Polizei"
+      ],
+      "correct": 1,
+      "bundesland": ""
+    },
+    {
+      "number": "43",
+      "title": "MD5:ebb42356b69fb0709c81dcb6e9235da4",
+      "options": [
+        "wenn ihr Wahlkampf zu teuer ist",
+        "wenn sie gegen die Verfassung kämpft",
+        "wenn sie Kritik am Staatsoberhaupt äußert",
+        "wenn ihr Programm eine neue Richtung vorschlägt"
+      ],
+      "correct": 1,
+      "bundesland": ""
+    },
+    {
+      "number": "44",
+      "title": "MD5:5b941e233abed9ada5b5d38ea30fe06e",
+      "options": [
+        "Abgeordnete des EU-Parlaments",
+        "den Bundespräsidenten / die Bundespräsidentin",
+        "Landtagsabgeordnete",
+        "Bundestagsabgeordnete "
+      ],
+      "correct": 1,
+      "bundesland": ""
+    },
+    {
+      "number": "45",
+      "title": "MD5:6d6dde0847277a4f861f51eb8f531514",
+      "options": [
+        "Sozialversicherung",
+        "Unfallversicherung",
+        "Hausratversicherung",
+        "Haftpflicht- und Feuerversicherung"
+      ],
+      "correct": 0,
+      "bundesland": ""
+    },
+    {
+      "number": "46",
+      "title": "MD5:141a14206fd19762a0cad2bf3a058e7b",
+      "options": [
+        "Er baut Straßen und Schulen.",
+        "Er verkauft Lebensmittel und Kleidung.",
+        "Er versorgt alle Einwohner und Einwohnerinnen kostenlos mit Zeitungen.",
+        "Er produziert Autos und Busse."
+      ],
+      "correct": 0,
+      "bundesland": ""
+    },
+    {
+      "number": "47",
+      "title": "MD5:29d69c5b8a2fefceea25ef0e60c269e8",
+      "options": [
+        "Er bezahlt für alle Staatsangehörigen Urlaubsreisen.",
+        "Er zahlt Kindergeld.",
+        "Er unterstützt Museen.",
+        "Er fördert Sportler und Sportlerinnen."
+      ],
+      "correct": 0,
+      "bundesland": ""
+    },
+    {
+      "number": "48",
+      "title": "MD5:4b4fbc87f3ec01002b0e880a0308cb87",
+      "options": [
+        "der Bundesrat",
+        "der Bundespräsident / die Bundespräsidentin",
+        "die Bürgerversammlung",
+        "die Regierung"
+      ],
+      "correct": 2,
+      "bundesland": ""
+    },
+    {
+      "number": "49",
+      "title": "MD5:fc4bcfb1452ba007684b96c536532f39",
+      "options": [
+        "die Lehrer und Lehrerinnen",
+        "die Bundesländer",
+        "das Familienministerium",
+        "die Universitäten"
+      ],
+      "correct": 1,
+      "bundesland": ""
+    },
+    {
+      "number": "50",
+      "title": "MD5:5f749f026f78ba7e760a48a0f34d8484",
+      "options": [
+        "freie Zentralwirtschaft.",
+        "soziale Marktwirtschaft.",
+        "gelenkte Zentralwirtschaft.",
+        "Planwirtschaft."
+      ],
+      "correct": 1,
+      "bundesland": ""
+    },
+    {
+      "number": "51",
+      "title": "MD5:957583ede383d53b0fc7c700a635e8e1",
+      "options": [
+        "Menschen sich kritisch über die Regierung äußern können.",
+        "Bürger friedlich demonstrieren gehen dürfen.",
+        "Menschen von einer Privatpolizei ohne Grund verhaftet werden.",
+        "jemand ein Verbrechen begeht und deshalb verhaftet wird."
+      ],
+      "correct": 2,
+      "bundesland": ""
+    },
+    {
+      "number": "52",
+      "title": "MD5:03e299245893bdbbdb4fc7b894095ea3",
+      "options": [
+        "Volke aus.",
+        "Bundestag aus.",
+        "preußischen König aus.",
+        "Bundesverfassungsgericht aus."
+      ],
+      "correct": 0,
+      "bundesland": ""
+    },
+    {
+      "number": "53",
+      "title": "MD5:67e13233f3c759af03afe360cda6ed75",
+      "options": [
+        "Der Staat hat Recht.",
+        "Es gibt nur rechte Parteien.",
+        "Die Bürger und Bürgerinnen entscheiden über Gesetze.",
+        "Der Staat muss die Gesetze einhalten."
+      ],
+      "correct": 3,
+      "bundesland": ""
+    },
+    {
+      "number": "54",
+      "title": "MD5:ee2e90fa19b6c471234d4ed0d95f4ca2",
+      "options": [
+        "Legislative",
+        "Judikative",
+        "Exekutive",
+        "Direktive"
+      ],
+      "correct": 3,
+      "bundesland": ""
+    },
+    {
+      "number": "55",
+      "title": "MD5:2e586a7bac20bba1b100cdfa28de80bc",
+      "options": [
+        "den Bundestagssitz in Berlin",
+        "das Bundesverfassungsgericht in Karlsruhe",
+        "das Bundesratsgebäude in Berlin",
+        "das Bundeskanzleramt in Berlin"
+      ],
+      "correct": 0,
+      "bundesland": ""
+    },
+    {
+      "number": "56",
+      "title": "MD5:df59eb8c16d4517571921c1f16d57d55",
+      "options": [
+        "Pfarramt",
+        "Ordnungsamt",
+        "Finanzamt",
+        "Auswärtiges Amt"
+      ],
+      "correct": 1,
+      "bundesland": ""
+    },
+    {
+      "number": "57",
+      "title": "MD5:aa8698935d4711a9f5875567e8be4332",
+      "options": [
+        "der / die älteste Abgeordnete im Parlament",
+        "der Ministerpräsident / die Ministerpräsidentin des größten Bundeslandes",
+        "ein ehemaliger Bundeskanzler / eine ehemalige Bundeskanzlerin",
+        "ein Abgeordneter / eine Abgeordnete der stärksten Fraktion"
+      ],
+      "correct": 3,
+      "bundesland": ""
+    },
+    {
+      "number": "58",
+      "title": "MD5:56415274e69050ece0ddc1c770b978d1",
+      "options": [
+        "der Präsident / die Präsidentin des Bundesverfassungsgerichtes",
+        "der Bundespräsident / die Bundespräsidentin",
+        "der Bundesratspräsident / die Bundesratspräsidentin",
+        "der Bundestagspräsident / die Bundestagspräsidentin"
+      ],
+      "correct": 1,
+      "bundesland": ""
+    },
+    {
+      "number": "59",
+      "title": "Vor wie vielen Jahren gab es erstmals eine jüdische Gemeinde auf dem Gebiet des heutigen Deutschlands?",
+      "options": [
+        "vor etwa 300 Jahren",
+        "vor etwa 700 Jahren",
+        "vor etwa 1150 Jahren",
+        "vor etwa 1700 Jahren"
+      ],
+      "correct": 3,
+      "bundesland": ""
+    },
+    {
+      "number": "60",
+      "title": "MD5:3515ac9179499c4b45e075bf99492287",
+      "options": [
+        "Exekutive.",
+        "Legislative.",
+        "Direktive.",
+        "Judikative."
+      ],
+      "correct": 1,
+      "bundesland": ""
+    },
+    {
+      "number": "61",
+      "title": "MD5:173a3465393e62bb8d84c59a24fe0cbc",
+      "options": [
+        "Der König / die Königin herrscht über das Volk.",
+        "Das Bundesverfassungsgericht steht über der Verfassung.",
+        "Die Interessenverbände üben die Souveränität zusammen mit der Regierung aus. ",
+        "Die Staatsgewalt geht vom Volke aus."
+      ],
+      "correct": 3,
+      "bundesland": ""
+    },
+    {
+      "number": "62",
+      "title": "MD5:5cf019daef572415a21ee55f5a425cbb",
+      "options": [
+        "Kommunalwahl.",
+        "Landtagswahl.",
+        "Europawahl.",
+        "Bundestagswahl."
+      ],
+      "correct": 1,
+      "bundesland": ""
+    },
+    {
+      "number": "63",
+      "title": "MD5:9edb73457cc46628fc4aa04d683b7ce8",
+      "options": [
+        "die Polizei",
+        "die Gerichte",
+        "das Finanzamt",
+        "die Ministerien"
+      ],
+      "correct": 1,
+      "bundesland": ""
+    },
+    {
+      "number": "64",
+      "title": "MD5:0ae86401526a60e49eda49916e836a03",
+      "options": [
+        "vier Besatzungszonen.",
+        "einen Oststaat und einen Weststaat.",
+        "16 Kantone.",
+        "Bund, Länder und Kommunen."
+      ],
+      "correct": 3,
+      "bundesland": ""
+    },
+    {
+      "number": "65",
+      "title": "MD5:b665c4b51d049a2d44ae0cde6b2810bb",
+      "options": [
+        "Gesetze zu entwerfen.",
+        "die Bundesregierung zu kontrollieren.",
+        "den Bundeskanzler / die Bundeskanzlerin zu wählen.",
+        "das Bundeskabinett zu bilden."
+      ],
+      "correct": 3,
+      "bundesland": ""
+    },
+    {
+      "number": "66",
+      "title": "Welche Städte haben die größten jüdischen Gemeinden in Deutschland?",
+      "options": [
+        "Berlin und München",
+        "Hamburg und Essen",
+        "Nürnberg und Stuttgart",
+        "Worms und Speyer"
+      ],
+      "correct": 0,
+      "bundesland": ""
+    },
+    {
+      "number": "67",
+      "title": "MD5:f0c416011c9eb01aebe627611ef436ec",
+      "options": [
+        "Verteidigungspolitik",
+        "Außenpolitik",
+        "Wirtschaftspolitik",
+        "Schulpolitik"
+      ],
+      "correct": 3,
+      "bundesland": ""
+    },
+    {
+      "number": "68",
+      "title": "MD5:f5993e53c6c2ce186c83b8cd703784f2",
+      "options": [
+        "weil es in Deutschland nur staatliche Schulen gibt",
+        "weil alle Schüler und Schülerinnen einen Schulabschluss haben müssen",
+        "weil es in den Bundesländern verschiedene Schulen gibt",
+        "weil es nach dem Grundgesetz seine Aufgabe ist"
+      ],
+      "correct": 3,
+      "bundesland": ""
+    },
+    {
+      "number": "69",
+      "title": "MD5:7e898175b0eb17689b2771cd871fa3d5",
+      "options": [
+        "Stadträte",
+        "Landräte",
+        "Gemeinden",
+        "Bezirksämter"
+      ],
+      "correct": 2,
+      "bundesland": ""
+    },
+    {
+      "number": "70",
+      "title": "MD5:2a4d8f47d696bee1d7b161b89c14373f",
+      "options": [
+        "Er / Sie führt die Regierungsgeschäfte.",
+        "Er / Sie kontrolliert die Regierungspartei. ",
+        "Er / Sie wählt die Minister / Ministerinnen aus.",
+        "Er / Sie schlägt den Kanzler / die Kanzlerin zur Wahl vor."
+      ],
+      "correct": 3,
+      "bundesland": ""
+    },
+    {
+      "number": "71",
+      "title": "MD5:983d114f36dea486dbc84521944a8834",
+      "options": [
+        "in Bonn, weil sich dort das Bundeskanzleramt und der Bundestag befinden.",
+        "auf Schloss Meseberg, dem Gästehaus der Bundesregierung, um Staatsgäste zu empfangen.",
+        "auf Schloss Bellevue, dem Amtssitz des Bundespräsidenten / der Bundespräsidentin, um Staatsgäste zu empfangen.",
+        "in Berlin, weil sich dort das Bundeskanzleramt und der Bundestag befinden."
+      ],
+      "correct": 3,
+      "bundesland": ""
+    },
+    {
+      "number": "72",
+      "title": "MD5:d5df81eeca1f405eb435cb389440c882",
+      "options": [
+        "Gerhard Schröder",
+        "Angela Merkel",
+        "Ursula von der Leyen",
+        "Friedrich Merz"
+      ],
+      "correct": 3,
+      "bundesland": ""
+    },
+    {
+      "number": "73",
+      "title": "MD5:6f7444c6b79c1b52cb1d480c43ffa84a",
+      "options": [
+        "CDU/CSU und AfD.",
+        "Die Linke und Bündnis 90/Die Grünen.",
+        "Bündnis 90/Die Grünen und SPD.",
+        "Die Linke und CDU/CSU."
+      ],
+      "correct": 0,
+      "bundesland": ""
+    },
+    {
+      "number": "74",
+      "title": "MD5:8fc9a637f4209589d20a780e020f524e",
+      "options": [
+        "Bundesversammlung",
+        "Volkskammer",
+        "Bundestag",
+        "Bundesgerichtshof"
+      ],
+      "correct": 2,
+      "bundesland": ""
+    },
+    {
+      "number": "75",
+      "title": "MD5:0b8129e99512193243f776c4743a4d06",
+      "options": [
+        "Frank-Walter Steinmeier",
+        "Bärbel Bas",
+        "Bodo Ramelow",
+        "Joachim Gauck"
+      ],
+      "correct": 0,
+      "bundesland": ""
+    },
+    {
+      "number": "76",
+      "title": "MD5:e415a57a4174372a84f64615c4a60c94",
+      "options": [
+        "Christliche Deutsche Union",
+        "Club Deutscher Unternehmer",
+        "Christlicher Deutscher Umweltschutz ",
+        "Christlich Demokratische Union"
+      ],
+      "correct": 3,
+      "bundesland": ""
+    },
+    {
+      "number": "77",
+      "title": "MD5:772858fa1de9f3cc3e14406cf23514ab",
+      "options": [
+        "die deutsche Polizei",
+        "ein deutscher Hafen",
+        "eine deutsche Bürgerinitiative",
+        "die deutsche Armee"
+      ],
+      "correct": 3,
+      "bundesland": ""
+    },
+    {
+      "number": "78",
+      "title": "MD5:ad041ae212e650bfab0ddf4c678595dc",
+      "options": [
+        "Sozialistische Partei Deutschlands",
+        "Sozialpolitische Partei Deutschlands",
+        "Sozialdemokratische Partei Deutschlands",
+        "Sozialgerechte Partei Deutschlands"
+      ],
+      "correct": 2,
+      "bundesland": ""
+    },
+    {
+      "number": "79",
+      "title": "MD5:d5b8c3e5b251b3b45dfdd15d8b26b9b1",
+      "options": [
+        "Friedliche Demonstrative Partei",
+        "Freie Deutschland Partei",
+        "Führende Demokratische Partei",
+        "Freie Demokratische Partei"
+      ],
+      "correct": 3,
+      "bundesland": ""
+    },
+    {
+      "number": "80",
+      "title": "MD5:4fb2217746513b08b8b247ec1f283118",
+      "options": [
+        "Oberlandesgericht",
+        "Amtsgericht",
+        "Bundesverfassungsgericht",
+        "Verwaltungsgericht"
+      ],
+      "correct": 2,
+      "bundesland": ""
+    },
+    {
+      "number": "81",
+      "title": "MD5:9e717a08b6c3991844de90c1d8647b1c",
+      "options": [
+        "der Bundesrat",
+        "die Bundesversammlung",
+        "das Volk",
+        "der Bundestag"
+      ],
+      "correct": 3,
+      "bundesland": ""
+    },
+    {
+      "number": "82",
+      "title": "MD5:c9c5b401838202eebbe515aa0b171354",
+      "options": [
+        "der Bundestagspräsident / die Bundestagspräsidentin",
+        "der Bundespräsident / die Bundespräsidentin",
+        "der Bundesratspräsident / die Bundesratspräsidentin",
+        "der Bundeskanzler / die Bundeskanzlerin "
+      ],
+      "correct": 3,
+      "bundesland": ""
+    },
+    {
+      "number": "83",
+      "title": "MD5:606f55954e1769be4af73c55544cb8fc",
+      "options": [
+        "das Volk",
+        "die Bundesversammlung",
+        "der Bundestag",
+        "die Bundesregierung"
+      ],
+      "correct": 2,
+      "bundesland": ""
+    },
+    {
+      "number": "84",
+      "title": "MD5:b30a59cd96ec5a90df356e86a2d3ef28",
+      "options": [
+        "regiert das Land.",
+        "entwirft die Gesetze.",
+        "repräsentiert das Land.",
+        "überwacht die Einhaltung der Gesetze."
+      ],
+      "correct": 2,
+      "bundesland": ""
+    },
+    {
+      "number": "85",
+      "title": "MD5:5ad5a8b595112b5ef3991a4559cc32f1",
+      "options": [
+        "die Abgeordneten des Bundestages",
+        "die Minister und Ministerinnen der Bundesregierung",
+        "die Regierungsvertreter der Bundesländer",
+        "die Parteimitglieder"
+      ],
+      "correct": 2,
+      "bundesland": ""
+    },
+    {
+      "number": "86",
+      "title": "MD5:04e9b51ed0389c82414235650655018a",
+      "options": [
+        "die Bundesversammlung",
+        "der Bundesrat",
+        "das Bundesparlament",
+        "das Bundesverfassungsgericht"
+      ],
+      "correct": 0,
+      "bundesland": ""
+    },
+    {
+      "number": "87",
+      "title": "MD5:d574ea0427a9a22633e35479c9c3ee51",
+      "options": [
+        "der Bundeskanzler / die Bundeskanzlerin",
+        "der Bundespräsident / die Bundespräsidentin",
+        "der Bundesratspräsident / die Bundesratspräsidentin",
+        "der Bundestagspräsident / die Bundestagspräsidentin"
+      ],
+      "correct": 1,
+      "bundesland": ""
+    },
+    {
+      "number": "88",
+      "title": "MD5:a874e2fdc263358f0969713bdb1d8b48",
+      "options": [
+        "kontrolliert die Regierung.",
+        "entscheidet, wer Bundesminister / Bundesministerin wird.",
+        "bestimmt, wer im Bundesrat sitzt.",
+        "schlägt die Regierungschefs / Regierungschefinnen der Länder vor."
+      ],
+      "correct": 0,
+      "bundesland": ""
+    },
+    {
+      "number": "89",
+      "title": "MD5:f16a96740ac05e14d1a6ed107b54b791",
+      "options": [
+        "Verband",
+        "Ältestenrat",
+        "Fraktion",
+        "Opposition"
+      ],
+      "correct": 2,
+      "bundesland": ""
+    },
+    {
+      "number": "90",
+      "title": "MD5:1e8c11ea9933f63b01812d2e2bbcbe61",
+      "options": [
+        "den Bundesrat.",
+        "die Bundesversammlung.",
+        "den Bundestag.",
+        "die Bundesregierung."
+      ],
+      "correct": 0,
+      "bundesland": ""
+    },
+    {
+      "number": "91",
+      "title": "MD5:4f58daa9608e5ad4a2f8fb8fc9cd0070",
+      "options": [
+        "schwieriger, wenn sich dadurch die Mehrheit im Bundestag ändert.",
+        "leichter, wenn dadurch neue Parteien in den Bundesrat kommen.",
+        "schwieriger, wenn dadurch die Mehrheit im Bundesrat verändert wird.",
+        "leichter, wenn es sich um ein reiches Bundesland handelt."
+      ],
+      "correct": 2,
+      "bundesland": ""
+    },
+    {
+      "number": "92",
+      "title": "MD5:a2ff8d16ed62771c73857012e4d84915",
+      "options": [
+        "Christlich Sichere Union",
+        "Christlich Süddeutsche Union",
+        "Christlich Sozialer Unternehmerverband",
+        "Christlich Soziale Union"
+      ],
+      "correct": 3,
+      "bundesland": ""
+    },
+    {
+      "number": "93",
+      "title": "MD5:07a4396493f821dc757302faf7fb6a6c",
+      "options": [
+        "weniger Erststimmen kann sie haben.",
+        "mehr Direktkandidaten der Partei ziehen ins Parlament ein.",
+        "größer ist das Risiko, eine Koalition bilden zu müssen.",
+        "mehr Sitze erhält die Partei im Parlament."
+      ],
+      "correct": 3,
+      "bundesland": ""
+    },
+    {
+      "number": "94",
+      "title": "MD5:62fcc31a54e909c71ae5d0bfe8647139",
+      "options": [
+        "16",
+        "18",
+        "21",
+        "23"
+      ],
+      "correct": 1,
+      "bundesland": ""
+    },
+    {
+      "number": "95",
+      "title": "MD5:f3d2cfc211e320423638cbe968b18c21",
+      "options": [
+        "Wahlpflicht",
+        "Schulpflicht",
+        "Schweigepflicht",
+        "Religionspflicht"
+      ],
+      "correct": 1,
+      "bundesland": ""
+    },
+    {
+      "number": "96",
+      "title": "Wie kann jemand, der den Holocaust leugnet, bestraft werden?",
+      "options": [
+        "Kürzung sozialer Leistungen",
+        "bis zu 100 Sozialstunden",
+        "gar nicht, Holocaustleugnung ist erlaubt",
+        "mit Freiheitsstrafe bis zu fünf Jahren oder mit Geldstrafe"
+      ],
+      "correct": 3,
+      "bundesland": ""
+    },
+    {
+      "number": "97",
+      "title": "MD5:5085334d2d4a3a732a5bc35e02c573e7",
+      "options": [
+        "Sozialversicherung",
+        "Sozialhilfe",
+        "Kindergeld",
+        "Wohngeld"
+      ],
+      "correct": 0,
+      "bundesland": ""
+    },
+    {
+      "number": "98",
+      "title": "MD5:b28dc316fb0308d8412fe09785e1fd10",
+      "options": [
+        "dürfen sie nicht mehr an den Sitzungen des Parlaments teilnehmen.",
+        "kann die Regierung ihre Mehrheit verlieren.",
+        "muss der Bundespräsident / die Bundespräsidentin zuvor sein / ihr Einverständnis geben.",
+        "dürfen die Wähler / Wählerinnen dieser Abgeordneten noch einmal wählen."
+      ],
+      "correct": 1,
+      "bundesland": ""
+    },
+    {
+      "number": "99",
+      "title": "MD5:4b0b5da681d9f543e19ccbde68fb7938",
+      "options": [
+        "Arbeitgeber / Arbeitgeberinnen und Arbeitnehmer / Arbeitnehmerinnen",
+        "nur Arbeitnehmer / Arbeitnehmerinnen",
+        "alle Staatsangehörigen",
+        "nur Arbeitgeber / Arbeitgeberinnen"
+      ],
+      "correct": 0,
+      "bundesland": ""
+    },
+    {
+      "number": "100",
+      "title": "MD5:1bb44dc351235e59466fb0f33e4444f2",
+      "options": [
+        "die Lebensversicherung",
+        "die gesetzliche Rentenversicherung",
+        "die Arbeitslosenversicherung",
+        "die Pflegeversicherung"
+      ],
+      "correct": 0,
+      "bundesland": ""
+    },
+    {
+      "number": "101",
+      "title": "MD5:2f8c9330766279a7c9d356412f966592",
+      "options": [
+        "Jugendlichen.",
+        "Arbeitnehmer und Arbeitnehmerinnen.",
+        "Rentner und Rentnerinnen.",
+        "Arbeitgeber und Arbeitgeberinnen."
+      ],
+      "correct": 1,
+      "bundesland": ""
+    },
+    {
+      "number": "102",
+      "title": "MD5:efbaf5fac6838bd6518a396b1f8f6ed0",
+      "options": [
+        "Bundesverdienstkreuz",
+        "Bundesadler",
+        "Vaterländischen Verdienstorden",
+        "Ehrentitel \"Held der Deutschen Demokratischen Republik\""
+      ],
+      "correct": 0,
+      "bundesland": ""
+    },
+    {
+      "number": "103",
+      "title": "MD5:4535c0297d17bebd473136b4734e89f2",
+      "options": [
+        "der Bundestagsfraktionen von CDU und CSU",
+        "von SPD, FDP und Bündnis 90/Die Grünen in einer Regierung",
+        "von CSU, Die LINKE und Bündnis 90/Die Grünen in einer Regierung",
+        "der Bundestagsfraktionen von CDU und SPD"
+      ],
+      "correct": 1,
+      "bundesland": ""
+    },
+    {
+      "number": "104",
+      "title": "MD5:54538f1f473c3b0b04c0ee6665b45252",
+      "options": [
+        "Die Frau ist lange krank und arbeitsunfähig.",
+        "Die Frau kam oft zu spät zur Arbeit.",
+        "Die Frau erledigt private Sachen während der Arbeitszeit.",
+        "Die Frau bekommt ein Kind und ihr Chef weiß das."
+      ],
+      "correct": 3,
+      "bundesland": ""
+    },
+    {
+      "number": "105",
+      "title": "MD5:80e8d4a0bfd3893e4381d9b0e36dc585",
+      "options": [
+        "Sie helfen alten Menschen bei der Stimmabgabe in der Wahlkabine.",
+        "Sie schreiben die Wahlbenachrichtigungen vor der Wahl.",
+        "Sie geben Zwischenergebnisse an die Medien weiter.",
+        "Sie zählen die Stimmen nach dem Ende der Wahl."
+      ],
+      "correct": 3,
+      "bundesland": ""
+    },
+    {
+      "number": "106",
+      "title": "MD5:26b88d11204d598c0cd033c5c056913e",
+      "options": [
+        "Sie helfen Kindern und alten Menschen beim Wählen.",
+        "Sie schreiben Karten und Briefe mit der Angabe des Wahllokals.",
+        "Sie geben Zwischenergebnisse an Journalisten weiter.",
+        "Sie zählen die Stimmen nach dem Ende der Wahl."
+      ],
+      "correct": 3,
+      "bundesland": ""
+    },
+    {
+      "number": "107",
+      "title": "MD5:755c1479b1533c23f98857c1cece8a8d",
+      "options": [
+        "2 Jahre",
+        "4 Jahre",
+        "6 Jahre",
+        "8 Jahre"
+      ],
+      "correct": 1,
+      "bundesland": ""
+    },
+    {
+      "number": "108",
+      "title": "MD5:80abdab85e851b6aa01746f512bf6754",
+      "options": [
+        "in der Bundesrepublik Deutschland wohnt und wählen möchte.",
+        "Bürger / Bürgerin der Bundesrepublik Deutschland ist und mindestens 18 Jahre alt ist.",
+        "seit mindestens 3 Jahren in der Bundesrepublik Deutschland lebt.",
+        "Bürger / Bürgerin der Bundesrepublik Deutschland ist und mindestens 21 Jahre alt ist."
+      ],
+      "correct": 1,
+      "bundesland": ""
+    },
+    {
+      "number": "109",
+      "title": "MD5:5b86ab223910b0cf2d25f85c3412be5d",
+      "options": [
+        "alle drei Jahre",
+        "alle vier Jahre",
+        "alle fünf Jahre ",
+        "alle sechs Jahre"
+      ],
+      "correct": 1,
+      "bundesland": ""
+    },
+    {
+      "number": "110",
+      "title": "MD5:755c1479b1533c23f98857c1cece8a8d",
+      "options": [
+        "2 Jahre",
+        "3 Jahre",
+        "4 Jahre",
+        "5 Jahre"
+      ],
+      "correct": 2,
+      "bundesland": ""
+    },
+    {
+      "number": "111",
+      "title": "Welche Handlung mit Bezug auf den Staat Israel ist in Deutschland verboten?",
+      "options": [
+        "die Politik Israels öffentlich kritisieren",
+        "das Aufhängen einer israelischen Flagge auf dem Privatgrundstück",
+        "eine Diskussion über die Politik Israels",
+        "der öffentliche Aufruf zur Vernichtung Israels"
+      ],
+      "correct": 3,
+      "bundesland": ""
+    },
+    {
+      "number": "112",
+      "title": "MD5:7b2ce8a44f3681ebd52c3b1758f78da1",
+      "options": [
+        "speziell.",
+        "geheim.",
+        "berufsbezogen.",
+        "geschlechtsabhängig."
+      ],
+      "correct": 1,
+      "bundesland": ""
+    },
+    {
+      "number": "113",
+      "title": "MD5:223af35ba605df8477950b7c108213d9",
+      "options": [
+        "die meisten Stimmen bekommt.",
+        "die meisten Männer mehrheitlich gewählt haben.",
+        "die meisten Stimmen bei den Arbeitern / Arbeiterinnen bekommen hat.",
+        "die meisten Erststimmen für ihren Kanzlerkandidaten / ihre Kanzlerkandidatin erhalten hat."
+      ],
+      "correct": 0,
+      "bundesland": ""
+    },
+    {
+      "number": "114",
+      "title": "MD5:cf4072f232903a865db3a885f7b3d9b4",
+      "options": [
+        "eine Pflicht.",
+        "ein Recht.",
+        "ein Zwang.",
+        "eine Last."
+      ],
+      "correct": 1,
+      "bundesland": ""
+    },
+    {
+      "number": "115",
+      "title": "MD5:119091c13fcfa083218e0d550318adbf",
+      "options": [
+        "Man kann gewählt werden.",
+        "Man muss wählen gehen.",
+        "Man kann wählen.",
+        "Man muss zur Auszählung der Stimmen gehen."
+      ],
+      "correct": 2,
+      "bundesland": ""
+    },
+    {
+      "number": "116",
+      "title": "MD5:66e33219b5f3b514c9557a655d579083",
+      "options": [
+        "aktive Wahlkampagne.",
+        "aktives Wahlverfahren.",
+        "aktiver Wahlkampf.",
+        "aktives Wahlrecht."
+      ],
+      "correct": 3,
+      "bundesland": ""
+    },
+    {
+      "number": "117",
+      "title": "MD5:78e71277b74578cda77a42b388194f09",
+      "options": [
+        "3%",
+        "4%",
+        "5%",
+        "6%"
+      ],
+      "correct": 2,
+      "bundesland": ""
+    },
+    {
+      "number": "118",
+      "title": "Wer darf bei den rund 40 jüdischen Makkabi-Sportvereinen Mitglied werden?",
+      "options": [
+        "nur Deutsche",
+        "nur Israelis",
+        "nur religiöse Menschen",
+        "alle Menschen"
+      ],
+      "correct": 3,
+      "bundesland": ""
+    },
+    {
+      "number": "119",
+      "title": "MD5:637c873637bbaf3ac0f02123ea21daa7",
+      "options": [
+        "Alle verurteilten Straftäter / Straftäterinnen dürfen nicht wählen.",
+        "Wenn ich wählen gehen möchte, muss mein Arbeitgeber / meine Arbeitgeberin mir frei geben.",
+        "Jede Person kann ohne Zwang entscheiden, ob sie wählen möchte und wen sie wählen möchte.",
+        "Ich kann frei entscheiden, wo ich wählen gehen möchte."
+      ],
+      "correct": 2,
+      "bundesland": ""
+    },
+    {
+      "number": "120",
+      "title": "MD5:c9fc3680f2aa8af34d0351d08505ab15",
+      "options": [
+        "Zensuswahlrecht.",
+        "Dreiklassenwahlrecht.",
+        "Mehrheits- und Verhältniswahlrecht.",
+        "allgemeines Männerwahlrecht."
+      ],
+      "correct": 2,
+      "bundesland": ""
+    },
+    {
+      "number": "121",
+      "title": "MD5:dc0f32dbfd5bb7132abda0addb7504b9",
+      "options": [
+        "5%-Hürde. ",
+        "Zulassungsgrenze.",
+        "Basiswert.",
+        "Richtlinie."
+      ],
+      "correct": 0,
+      "bundesland": ""
+    },
+    {
+      "number": "122",
+      "title": "MD5:d7d36b033d6157cde1cac23568eacebb",
+      "options": [
+        "frei, gleich, geheim.",
+        "offen, sicher, frei.",
+        "geschlossen, gleich, sicher.",
+        "sicher, offen, freiwillig."
+      ],
+      "correct": 0,
+      "bundesland": ""
+    },
+    {
+      "number": "123",
+      "title": "MD5:0e9e5f9d6beafaf98581388ea36aaede",
+      "options": [
+        "Abstimmungsregelung im Bundestag für kleine Parteien",
+        "Anwesenheitskontrolle im Bundestag für Abstimmungen",
+        "Mindestanteil an Wählerstimmen, um ins Parlament zu kommen",
+        "Anwesenheitskontrolle im Bundesrat für Abstimmungen"
+      ],
+      "correct": 2,
+      "bundesland": ""
+    },
+    {
+      "number": "124",
+      "title": "MD5:da40748b6c27bd0cefa1318ed5ff3594",
+      "options": [
+        "des Bundeskanzlers / der Bundeskanzlerin.",
+        "der Parlamente der Länder.",
+        "des Parlaments für Deutschland.",
+        "des Bundespräsidenten / der Bundespräsidentin."
+      ],
+      "correct": 2,
+      "bundesland": ""
+    },
+    {
+      "number": "125",
+      "title": "MD5:8ef93e3aa38f1950011c4f74067443b4",
+      "options": [
+        "die Bürger und Bürgerinnen zu zwingen, ihre Stimme abzugeben.",
+        "nach dem Willen der Wählermehrheit den Wechsel der Regierung zu ermöglichen.",
+        "im Land bestehende Gesetze beizubehalten.",
+        "den Armen mehr Macht zu geben."
+      ],
+      "correct": 1,
+      "bundesland": ""
+    },
+    {
+      "number": "126",
+      "title": "MD5:cd1a68bccb9c82c34b2b0f0886251f24",
+      "options": [
+        "eine Wahlbenachrichtigung von der Gemeinde",
+        "eine Wahlerlaubnis vom Bundespräsidenten / von der Bundespräsidentin",
+        "eine Benachrichtigung von der Bundesversammlung",
+        "eine Benachrichtigung vom Pfarramt"
+      ],
+      "correct": 0,
+      "bundesland": ""
+    },
+    {
+      "number": "127",
+      "title": "MD5:2d916b740f8086b20fa9389d012a1352",
+      "options": [
+        "die Programme von vielen kleinen Parteien viele Gemeinsamkeiten haben.",
+        "die Bürger und Bürgerinnen bei vielen kleinen Parteien die Orientierung verlieren können.",
+        "viele kleine Parteien die Regierungsbildung erschweren.",
+        "die kleinen Parteien nicht so viel Geld haben, um die Politiker und Politikerinnen zu bezahlen."
+      ],
+      "correct": 2,
+      "bundesland": ""
+    },
+    {
+      "number": "128",
+      "title": "MD5:e67f57f9bb69a574afd922543919cc52",
+      "options": [
+        "Abgeordnete.",
+        "Kanzler / Kanzlerinnen.",
+        "Botschafter / Botschafterinnen.",
+        "Ministerpräsidenten / Ministerpräsidentinnen."
+      ],
+      "correct": 0,
+      "bundesland": ""
+    },
+    {
+      "number": "129",
+      "title": "MD5:0a5c7e7cde39730634db7fdec40a782b",
+      "options": [
+        "der Bundeskanzler / die Bundeskanzlerin.",
+        "der Ministerpräsident / die Ministerpräsidentin eines Bundeslandes.",
+        "der Bundestag.",
+        "der Bundespräsident / die Bundespräsidentin."
+      ],
+      "correct": 2,
+      "bundesland": ""
+    },
+    {
+      "number": "130",
+      "title": "MD5:207fb1ff7f151dd43d1415d879664186",
+      "options": [
+        "1",
+        "2",
+        "3",
+        "4"
+      ],
+      "correct": 0,
+      "bundesland": ""
+    },
+    {
+      "number": "131",
+      "title": "MD5:7862833de7a9dce382f7b4a31c38b4ec",
+      "options": [
+        "der Leiter / die Leiterin einer Schule.",
+        "der Chef / die Chefin einer Bank.",
+        "das Oberhaupt einer Gemeinde.",
+        "der / die Vorsitzende einer Partei. "
+      ],
+      "correct": 2,
+      "bundesland": ""
+    },
+    {
+      "number": "132",
+      "title": "MD5:4ccceabe9eaf9f797d38012e85314e83",
+      "options": [
+        "Sie arbeiten als Soldaten / Soldatinnen.",
+        "Sie arbeiten freiwillig und unbezahlt in Vereinen und Verbänden.",
+        "Sie arbeiten in der Bundesregierung.",
+        "Sie arbeiten in einem Krankenhaus und verdienen dabei Geld."
+      ],
+      "correct": 1,
+      "bundesland": ""
+    },
+    {
+      "number": "133",
+      "title": "MD5:d4020d3c5b000caa123325e81539131f",
+      "options": [
+        "Der Ehemann wählt für seine Frau mit. ",
+        "Man kann durch Briefwahl seine Stimme abgeben.",
+        "Man kann am Wahltag telefonisch seine Stimme abgeben.",
+        "Kinder ab dem Alter von 14 Jahren dürfen wählen."
+      ],
+      "correct": 1,
+      "bundesland": ""
+    },
+    {
+      "number": "134",
+      "title": "MD5:018420f0ae22b3d7479815e1865b31a5",
+      "options": [
+        "Ich beteilige mich an einer Bürgerinitiative für die Erhaltung der Buslinie oder gründe selber eine Initiative.",
+        "Ich werde Mitglied in einem Sportverein und trainiere Radfahren.",
+        "Ich wende mich an das Finanzamt, weil ich als Steuerzahler / Steuerzahlerin ein Recht auf die Buslinie habe.",
+        "Ich schreibe einen Brief an das Forstamt der Gemeinde."
+      ],
+      "correct": 0,
+      "bundesland": ""
+    },
+    {
+      "number": "135",
+      "title": "MD5:5d332e2ef424905780a2bb53a6be5c9c",
+      "options": [
+        "große Unternehmen",
+        "kleine Unternehmen",
+        "Selbständige",
+        "Arbeitnehmer und Arbeitnehmerinnen"
+      ],
+      "correct": 3,
+      "bundesland": ""
+    },
+    {
+      "number": "136",
+      "title": "MD5:66cf9392b01ede64832ba24cf3a9a176",
+      "options": [
+        "falscher Nebenkostenabrechnung.",
+        "ungerechtfertigter Kündigung durch Ihren Chef / Ihre Chefin.",
+        "Problemen mit den Nachbarn / Nachbarinnen.",
+        "Schwierigkeiten nach einem Verkehrsunfall."
+      ],
+      "correct": 1,
+      "bundesland": ""
+    },
+    {
+      "number": "137",
+      "title": "MD5:70493315882aa4bde406f6fd502e4dd9",
+      "options": [
+        "das Familiengericht",
+        "das Strafgericht",
+        "das Arbeitsgericht",
+        "das Amtsgericht"
+      ],
+      "correct": 2,
+      "bundesland": ""
+    },
+    {
+      "number": "138",
+      "title": "MD5:026a4188a157da39d9333920163ba735",
+      "options": [
+        "weiter arbeiten und freundlich zum Chef / zur Chefin sein",
+        "ein Mahnverfahren gegen den Arbeitgeber / die Arbeitgeberin führen",
+        "Kündigungsschutzklage erheben",
+        "den Arbeitgeber / die Arbeitgeberin bei der Polizei anzeigen"
+      ],
+      "correct": 2,
+      "bundesland": ""
+    },
+    {
+      "number": "139",
+      "title": "MD5:bb98b039f89fb4783e61afb197648e93",
+      "options": [
+        "zu einer anderen Religion übertritt.",
+        "eine Straftat begangen hat und angeklagt wird.",
+        "eine andere Meinung als die der Regierung vertritt.",
+        "sein Auto falsch geparkt hat und es abgeschleppt wird."
+      ],
+      "correct": 1,
+      "bundesland": ""
+    },
+    {
+      "number": "140",
+      "title": "MD5:8b8ec4427c5c57b0b91dc20fe4ff5861",
+      "options": [
+        "entscheidet mit Richtern / Richterinnen über Schuld und Strafe.",
+        "gibt Bürgern / Bürgerinnen rechtlichen Rat.",
+        "stellt Urkunden aus.",
+        "verteidigt den Angeklagten / die Angeklagte."
+      ],
+      "correct": 0,
+      "bundesland": ""
+    },
+    {
+      "number": "141",
+      "title": "MD5:71ac5599c0d4fe8635063d09a666c737",
+      "options": [
+        "ein Rechtsanwalt / eine Rechtsanwältin",
+        "ein Richter / eine Richterin",
+        "ein Schöffe / eine Schöffin",
+        "ein Staatsanwalt / eine Staatsanwältin"
+      ],
+      "correct": 0,
+      "bundesland": ""
+    },
+    {
+      "number": "142",
+      "title": "MD5:2735b7eab7f8096d6c6df91d789d5dff",
+      "options": [
+        "vertritt Bürger und Bürgerinnen vor einem Gericht.",
+        "arbeitet an einem Gericht und spricht Urteile.",
+        "ändert Gesetze.",
+        "betreut Jugendliche vor Gericht."
+      ],
+      "correct": 1,
+      "bundesland": ""
+    },
+    {
+      "number": "143",
+      "title": "MD5:de093314ce9e323cef4d70ba5253b892",
+      "options": [
+        "Judikative.",
+        "Exekutive.",
+        "Operative.",
+        "Legislative."
+      ],
+      "correct": 0,
+      "bundesland": ""
+    },
+    {
+      "number": "144",
+      "title": "MD5:e76a8d5cc895fac5ceb0146c74ac3c20",
+      "options": [
+        "vollziehenden Gewalt.",
+        "rechtsprechenden Gewalt.",
+        "planenden Gewalt.",
+        "gesetzgebenden Gewalt."
+      ],
+      "correct": 1,
+      "bundesland": ""
+    },
+    {
+      "number": "145",
+      "title": "MD5:3048657be214894931e15c8ee3a525e7",
+      "options": [
+        "Judikative",
+        "Exekutive",
+        "Presse",
+        "Legislative"
+      ],
+      "correct": 0,
+      "bundesland": ""
+    },
+    {
+      "number": "146",
+      "title": "MD5:35785c0ac90ca52a307abc84f5faffed",
+      "options": [
+        "Programm",
+        "Prozedur",
+        "Protokoll",
+        "Prozess"
+      ],
+      "correct": 3,
+      "bundesland": ""
+    },
+    {
+      "number": "147",
+      "title": "MD5:9699ee07fbc9a9bdf8a823fa1947e8ef",
+      "options": [
+        "Deutschland regieren",
+        "Recht sprechen",
+        "Pläne erstellen",
+        "Gesetze erlassen"
+      ],
+      "correct": 1,
+      "bundesland": ""
+    },
+    {
+      "number": "148",
+      "title": "MD5:58e7883960eeb412c21fafa25efaf4f9",
+      "options": [
+        "das Land zu verteidigen",
+        "die Bürgerinnen und Bürger abzuhören",
+        "die Gesetze zu beschließen",
+        "die Einhaltung von Gesetzen zu überwachen"
+      ],
+      "correct": 3,
+      "bundesland": ""
+    },
+    {
+      "number": "149",
+      "title": "Was ist ein Beispiel für antisemitisches Verhalten?",
+      "options": [
+        "ein jüdisches Fest besuchen",
+        "die israelische Regierung kritisieren",
+        "den Holocaust leugnen",
+        "gegen Juden Fußball spielen"
+      ],
+      "correct": 2,
+      "bundesland": ""
+    },
+    {
+      "number": "150",
+      "title": "MD5:28a66e16391987d54fc40995c265c5d5",
+      "options": [
+        "der Stellvertreter / die Stellvertreterin des Stadtoberhaupts.",
+        "ein ehrenamtlicher Richter / eine ehrenamtliche Richterin.",
+        "ein Mitglied eines Gemeinderats.",
+        "eine Person, die Jura studiert hat."
+      ],
+      "correct": 1,
+      "bundesland": ""
+    },
+    {
+      "number": "151",
+      "title": "MD5:d164337a0ef39286900ea0d5e6aef417",
+      "options": [
+        "Großbritannien",
+        "die DDR",
+        "die Bundesrepublik Deutschland",
+        "die USA"
+      ],
+      "correct": 1,
+      "bundesland": ""
+    },
+    {
+      "number": "152",
+      "title": "MD5:7b7144e674fde40aa17e84134f4fbb20",
+      "options": [
+        "1918 bis 1923",
+        "1932 bis 1950",
+        "1933 bis 1945",
+        "1945 bis 1989"
+      ],
+      "correct": 2,
+      "bundesland": ""
+    },
+    {
+      "number": "153",
+      "title": "MD5:8ed05e8b7910dd218b7e611328865d98",
+      "options": [
+        "Tod Adolf Hitlers",
+        "Beginn des Berliner Mauerbaus",
+        "Wahl von Konrad Adenauer zum Bundeskanzler",
+        "Ende des Zweiten Weltkriegs in Europa"
+      ],
+      "correct": 3,
+      "bundesland": ""
+    },
+    {
+      "number": "154",
+      "title": "MD5:dcaa7b11f30a391cce2b265fb7b3b896",
+      "options": [
+        "1933",
+        "1945",
+        "1949",
+        "1961"
+      ],
+      "correct": 1,
+      "bundesland": ""
+    },
+    {
+      "number": "155",
+      "title": "MD5:7728c34cc171d98bbbbe8988608282a6",
+      "options": [
+        "1888 bis 1918",
+        "1921 bis 1934",
+        "1933 bis 1945",
+        "1949 bis 1963 "
+      ],
+      "correct": 2,
+      "bundesland": ""
+    },
+    {
+      "number": "156",
+      "title": "MD5:55247a79de5069ae6077053c8bb79819",
+      "options": [
+        "1923",
+        "1927",
+        "1933",
+        "1936"
+      ],
+      "correct": 2,
+      "bundesland": ""
+    },
+    {
+      "number": "157",
+      "title": "MD5:1186e6cf5ea042e81e6c348573c7f66c",
+      "options": [
+        "eine Diktatur.",
+        "einen demokratischen Staat.",
+        "eine Monarchie.",
+        "ein Fürstentum."
+      ],
+      "correct": 0,
+      "bundesland": ""
+    },
+    {
+      "number": "158",
+      "title": "MD5:8e1fe2be757b8d26952d593481ee8400",
+      "options": [
+        "Diktatur.",
+        "Demokratie.",
+        "Monarchie.",
+        "Räterepublik."
+      ],
+      "correct": 0,
+      "bundesland": ""
+    },
+    {
+      "number": "159",
+      "title": "MD5:0a1fcec550a69f905ffef4015acbb715",
+      "options": [
+        "freie Wahlen",
+        "Pressezensur",
+        "willkürliche Verhaftungen",
+        "Verfolgung der Juden"
+      ],
+      "correct": 0,
+      "bundesland": ""
+    },
+    {
+      "number": "160",
+      "title": "MD5:a59f89df04f8edcce21b00efd9fc6f12",
+      "options": [
+        "der Erste Weltkrieg",
+        "der Zweite Weltkrieg",
+        "der Vietnamkrieg",
+        "der Golfkrieg"
+      ],
+      "correct": 1,
+      "bundesland": ""
+    },
+    {
+      "number": "161",
+      "title": "MD5:eee739979a6ef3db55d79ba1691bc587",
+      "options": [
+        "des staatlichen Rassismus",
+        "der Meinungsfreiheit",
+        "der allgemeinen Religionsfreiheit",
+        "der Entwicklung der Demokratie"
+      ],
+      "correct": 0,
+      "bundesland": ""
+    },
+    {
+      "number": "162",
+      "title": "MD5:4b9e389c73a3d7c467f16ef4db0bf6a2",
+      "options": [
+        "eine Goldmedaille bei den Olympischen Spielen 1936.",
+        "den Bau des Reichstagsgebäudes. ",
+        "den Aufbau der Wehrmacht.",
+        "das Attentat auf Hitler am 20. Juli 1944."
+      ],
+      "correct": 3,
+      "bundesland": ""
+    },
+    {
+      "number": "163",
+      "title": "MD5:a81aab4f4d50a0aea9537b0bc0c2e86c",
+      "options": [
+        "1925",
+        "1930",
+        "1938",
+        "1945"
+      ],
+      "correct": 2,
+      "bundesland": ""
+    },
+    {
+      "number": "164",
+      "title": "MD5:a28615b80bd1ae5dce45a19114ecebb4",
+      "options": [
+        "Mit dem Angriff auf Polen beginnt der Zweite Weltkrieg.",
+        "Die Nationalsozialisten verlieren eine Wahl und lösen den Reichstag auf.",
+        "Jüdische Geschäfte und Synagogen werden durch Nationalsozialisten und ihre Anhänger zerstört. ",
+        "Hitler wird Reichspräsident und lässt alle Parteien verbieten."
+      ],
+      "correct": 2,
+      "bundesland": ""
+    },
+    {
+      "number": "165",
+      "title": "MD5:c6f603dde79ccd63370dacc0d2f1c508",
+      "options": [
+        "Konrad Adenauer",
+        "Kurt Georg Kiesinger",
+        "Helmut Schmidt",
+        "Willy Brandt"
+      ],
+      "correct": 0,
+      "bundesland": ""
+    },
+    {
+      "number": "166",
+      "title": "MD5:7a5c17598ad4738b9032c90c32103429",
+      "options": [
+        "beim Arbeiteraufstand 1953 in der DDR",
+        "bei den Demonstrationen 1968 in der Bundesrepublik Deutschland",
+        "bei den Anti-Atomkraft-Demonstrationen 1985 in der Bundesrepublik Deutschland",
+        "bei den Montagsdemonstrationen 1989 in der DDR"
+      ],
+      "correct": 3,
+      "bundesland": ""
+    },
+    {
+      "number": "167",
+      "title": "MD5:38c2ee07008cd14cdb5313657c7c41ed",
+      "options": [
+        "Sowjetunion, Großbritannien, Polen, Schweden",
+        "Frankreich, Sowjetunion, Italien, Japan",
+        "USA, Sowjetunion, Spanien, Portugal",
+        "USA, Sowjetunion, Großbritannien, Frankreich"
+      ],
+      "correct": 3,
+      "bundesland": ""
+    },
+    {
+      "number": "168",
+      "title": "MD5:1b2b6a653864cbacb482ccd7aff4841d",
+      "options": [
+        "USA",
+        "Sowjetunion",
+        "Frankreich",
+        "Japan"
+      ],
+      "correct": 3,
+      "bundesland": ""
+    },
+    {
+      "number": "169",
+      "title": "MD5:a8c7b8c0d43f726796528f9b48207448",
+      "options": [
+        "1939",
+        "1945",
+        "1949",
+        "1951"
+      ],
+      "correct": 2,
+      "bundesland": ""
+    },
+    {
+      "number": "170",
+      "title": "MD5:bca65674c2c96044c9f347611f9d4257",
+      "options": [
+        "das Verbot von Parteien",
+        "das Recht zur freien Entfaltung der Persönlichkeit",
+        "Pressefreiheit",
+        "den Schutz der Menschenwürde"
+      ],
+      "correct": 0,
+      "bundesland": ""
+    },
+    {
+      "number": "171",
+      "title": "MD5:969e5435d5653f653dd2efe4832db5a3",
+      "options": [
+        "steuert sich allein nach Angebot und Nachfrage.",
+        "wird vom Staat geplant und gesteuert, Angebot und Nachfrage werden nicht berücksichtigt.",
+        "richtet sich nach der Nachfrage im Ausland.",
+        "richtet sich nach Angebot und Nachfrage, aber der Staat sorgt für einen sozialen Ausgleich."
+      ],
+      "correct": 3,
+      "bundesland": ""
+    },
+    {
+      "number": "172",
+      "title": "MD5:8e84438de26ee25bd2a97499788f9764",
+      "options": [
+        "amerikanischen Besatzungszone",
+        "französischen Besatzungszone",
+        "britischen Besatzungszone",
+        "sowjetischen Besatzungszone"
+      ],
+      "correct": 3,
+      "bundesland": ""
+    },
+    {
+      "number": "173",
+      "title": "MD5:9d43c39f3036b2541d39fefdb363da14",
+      "options": [
+        "des Nordatlantikpakts (NATO).",
+        "der Vereinten Nationen (VN).",
+        "der Europäischen Union (EU).",
+        "des Warschauer Pakts. "
+      ],
+      "correct": 2,
+      "bundesland": ""
+    },
+    {
+      "number": "174",
+      "title": "MD5:78bc7a7f6506c2dd51797122bbab507e",
+      "options": [
+        "1947",
+        "1949",
+        "1953",
+        "1956"
+      ],
+      "correct": 1,
+      "bundesland": ""
+    },
+    {
+      "number": "175",
+      "title": "MD5:3959c08b30dc3030cdf9b46de2debfed",
+      "options": [
+        "3",
+        "4",
+        "5",
+        "6"
+      ],
+      "correct": 1,
+      "bundesland": ""
+    },
+    {
+      "number": "176",
+      "title": "MD5:19926634c87a47509553e38eafde0753",
+      "options": [
+        "1=Großbritannien, 2=Sowjetunion, 3=Frankreich, 4=USA ",
+        "1=Sowjetunion, 2=Großbritannien, 3=USA, 4=Frankreich",
+        "1=Großbritannien, 2=Sowjetunion, 3=USA, 4=Frankreich",
+        "1=Großbritannien, 2=USA, 3=Sowjetunion, 4=Frankreich"
+      ],
+      "correct": 2,
+      "bundesland": ""
+    },
+    {
+      "number": "177",
+      "title": "MD5:94b90758ded351e26c935ae02c2acb39",
+      "options": [
+        "München",
+        "Berlin",
+        "Dresden",
+        "Frankfurt/Oder"
+      ],
+      "correct": 1,
+      "bundesland": ""
+    },
+    {
+      "number": "178",
+      "title": "MD5:21b39a89f1e3991f93da6de43a8cfcda",
+      "options": [
+        "Für Frankreich war eine Versorgung der West-Berliner Bevölkerung mit dem Flugzeug kostengünstiger.",
+        "Die amerikanischen Soldaten / Soldatinnen hatten beim Landtransport Angst vor Überfällen. ",
+        "Für Großbritannien war die Versorgung über die Luftbrücke schneller. ",
+        "Die Sowjetunion unterbrach den gesamten Verkehr auf dem Landwege."
+      ],
+      "correct": 3,
+      "bundesland": ""
+    },
+    {
+      "number": "179",
+      "title": "MD5:caa03a2e7406c89cb39e07f4bbe347f7",
+      "options": [
+        "mit dem Tod Adolf Hitlers",
+        "durch die bedingungslose Kapitulation Deutschlands",
+        "mit dem Rückzug der Deutschen aus den besetzten Gebieten",
+        "durch eine Revolution in Deutschland"
+      ],
+      "correct": 1,
+      "bundesland": ""
+    },
+    {
+      "number": "180",
+      "title": "MD5:ca953c1e3e52dcdb83942060c7eb561e",
+      "options": [
+        "Ludwig Erhard.",
+        "Willy Brandt.",
+        "Konrad Adenauer.",
+        "Gerhard Schröder."
+      ],
+      "correct": 2,
+      "bundesland": ""
+    },
+    {
+      "number": "181",
+      "title": "MD5:32b9fefd743eaca96527dfddba27623e",
+      "options": [
+        "Er hat sich den ehemaligen Alliierten unterworfen.",
+        "Er bat Polen und die polnischen Juden um Vergebung.",
+        "Er zeigte seine Demut vor dem Warschauer Pakt.",
+        "Er sprach ein Gebet am Grab des Unbekannten Soldaten. "
+      ],
+      "correct": 1,
+      "bundesland": ""
+    },
+    {
+      "number": "182",
+      "title": "Wie heißt das jüdische Gebetshaus?",
+      "options": [
+        "Basilika",
+        "Moschee",
+        "Synagoge",
+        "Kirche"
+      ],
+      "correct": 2,
+      "bundesland": ""
+    },
+    {
+      "number": "183",
+      "title": "MD5:7a301b1fea82e4c866b4a30b7c0631f2",
+      "options": [
+        "40er Jahre",
+        "50er Jahre",
+        "70er Jahre",
+        "80er Jahre"
+      ],
+      "correct": 1,
+      "bundesland": ""
+    },
+    {
+      "number": "184",
+      "title": "Auf welcher rechtlichen Grundlage wurde der Staat Israel gegründet?",
+      "options": [
+        "eine Resolution der Vereinten Nationen",
+        "ein Beschluss des Zionistenkongresses",
+        "ein Vorschlag der Bundesregierung",
+        "ein Vorschlag der UdSSR"
+      ],
+      "correct": 0,
+      "bundesland": ""
+    },
+    {
+      "number": "185",
+      "title": "MD5:bb05aabbe06caa8a43a6878dc7aed365",
+      "options": [
+        "des Warschauer Pakts gegen den Westen ",
+        "Norddeutschlands gegen Süddeutschland ",
+        "Nazi-Deutschlands gegen die Alliierten ",
+        "Europas gegen die USA"
+      ],
+      "correct": 0,
+      "bundesland": ""
+    },
+    {
+      "number": "186",
+      "title": "MD5:ee856aa222d5f7acd44c866787b95e17",
+      "options": [
+        "1. Mai",
+        "17. Juni",
+        "20. Juli",
+        "9. November"
+      ],
+      "correct": 1,
+      "bundesland": ""
+    },
+    {
+      "number": "187",
+      "title": "MD5:65ebb2b9218f4587408f6b917dee4e02",
+      "options": [
+        "Preußen",
+        "Bundesrepublik Deutschland",
+        "\"Drittes Reich\"",
+        "DDR"
+      ],
+      "correct": 3,
+      "bundesland": ""
+    },
+    {
+      "number": "188",
+      "title": "MD5:9e7a0eadde6431bf7120ba4e160e3112",
+      "options": [
+        "1953",
+        "1956",
+        "1959",
+        "1961"
+      ],
+      "correct": 3,
+      "bundesland": ""
+    },
+    {
+      "number": "189",
+      "title": "MD5:c727f5ff993ded3f12a96a8c00a8f7f3",
+      "options": [
+        "1919",
+        "1933",
+        "1961",
+        "1990"
+      ],
+      "correct": 2,
+      "bundesland": ""
+    },
+    {
+      "number": "190",
+      "title": "MD5:f85d2fc7fc965f6409db92a53a7997fd",
+      "options": [
+        "Dritter Deutscher Rundfunk",
+        "Die Deutsche Republik",
+        "Dritte Deutsche Republik",
+        "Deutsche Demokratische Republik"
+      ],
+      "correct": 3,
+      "bundesland": ""
+    },
+    {
+      "number": "191",
+      "title": "MD5:55e00916b08f02a0537088c153e62457",
+      "options": [
+        "1987",
+        "1989",
+        "1992",
+        "1995"
+      ],
+      "correct": 1,
+      "bundesland": ""
+    },
+    {
+      "number": "192",
+      "title": "MD5:abaa292759efc27300ed6294c96c130d",
+      "options": [
+        "Brandenburg",
+        "Bayern",
+        "Saarland",
+        "Hessen"
+      ],
+      "correct": 0,
+      "bundesland": ""
+    },
+    {
+      "number": "193",
+      "title": "MD5:2d141efd5f3d06ae8a0cc93d3bebdf83",
+      "options": [
+        "ohne Bürgermeister.",
+        "ein eigener Staat.",
+        "durch eine Mauer geteilt.",
+        "nur mit dem Flugzeug erreichbar."
+      ],
+      "correct": 2,
+      "bundesland": ""
+    },
+    {
+      "number": "194",
+      "title": "MD5:578a46fb43808fc390e6e1e35ca84682",
+      "options": [
+        "Einheit.",
+        "Nation.",
+        "Bundesländer.",
+        "Städte."
+      ],
+      "correct": 0,
+      "bundesland": ""
+    },
+    {
+      "number": "195",
+      "title": "MD5:abaa292759efc27300ed6294c96c130d",
+      "options": [
+        "Hessen",
+        "Sachsen-Anhalt",
+        "Nordrhein-Westfalen",
+        "Saarland"
+      ],
+      "correct": 1,
+      "bundesland": ""
+    },
+    {
+      "number": "196",
+      "title": "MD5:0b9012d1000155b0cc0465c6f01b3295",
+      "options": [
+        "von einer Diktatur zur Demokratie.",
+        "von einer liberalen Marktwirtschaft zum Sozialismus.",
+        "von einer Monarchie zur Sozialdemokratie.",
+        "von einem religiösen Staat zu einem kommunistischen Staat."
+      ],
+      "correct": 0,
+      "bundesland": ""
+    },
+    {
+      "number": "197",
+      "title": "MD5:abaa292759efc27300ed6294c96c130d",
+      "options": [
+        "Thüringen",
+        "Hessen",
+        "Bayern",
+        "Bremen"
+      ],
+      "correct": 0,
+      "bundesland": ""
+    },
+    {
+      "number": "198",
+      "title": "MD5:abaa292759efc27300ed6294c96c130d",
+      "options": [
+        "Bayern",
+        "Niedersachsen",
+        "Sachsen",
+        "Baden-Württemberg"
+      ],
+      "correct": 2,
+      "bundesland": ""
+    },
+    {
+      "number": "199",
+      "title": "MD5:35dd4718e2dc2df5bd9b735b86e77d25",
+      "options": [
+        "das Parlament.",
+        "das Ministerium für Staatssicherheit.",
+        "eine regierende Partei.",
+        "das Ministerium für Volksbildung. "
+      ],
+      "correct": 1,
+      "bundesland": ""
+    },
+    {
+      "number": "200",
+      "title": "MD5:abaa292759efc27300ed6294c96c130d",
+      "options": [
+        "Hessen",
+        "Schleswig-Holstein",
+        "Mecklenburg-Vorpommern",
+        "Saarland"
+      ],
+      "correct": 2,
+      "bundesland": ""
+    },
+    {
+      "number": "201",
+      "title": "MD5:a681bdb00d66fe551308d8083233357b",
+      "options": [
+        "Niedersachsen, Nordrhein-Westfalen, Hessen, Schleswig-Holstein, Brandenburg",
+        "Mecklenburg-Vorpommern, Brandenburg, Sachsen, Sachsen-Anhalt, Thüringen",
+        "Bayern, Baden-Württemberg, Rheinland-Pfalz, Thüringen, Sachsen",
+        "Sachsen, Thüringen, Hessen, Niedersachen, Brandenburg"
+      ],
+      "correct": 1,
+      "bundesland": ""
+    },
+    {
+      "number": "202",
+      "title": "MD5:f273bea69fd06dd9ef5e10c45b23a6e2",
+      "options": [
+        "zu den Westmächten",
+        "zum Warschauer Pakt",
+        "zur NATO",
+        "zu den blockfreien Staaten"
+      ],
+      "correct": 1,
+      "bundesland": ""
+    },
+    {
+      "number": "203",
+      "title": "MD5:5e8fc5cc9c6faf0013075d5ca4b335a4",
+      "options": [
+        "Marktwirtschaft",
+        "Planwirtschaft",
+        "Angebot und Nachfrage",
+        "Kapitalismus"
+      ],
+      "correct": 1,
+      "bundesland": ""
+    },
+    {
+      "number": "204",
+      "title": "MD5:a80847b7275d5d7c29deb90ce15c22e4",
+      "options": [
+        "Die Bundesrepublik hat die DDR besetzt.",
+        "Die heutigen fünf östlichen Bundesländer sind der Bundesrepublik Deutschland beigetreten.",
+        "Die westlichen Bundesländer sind der DDR beigetreten.",
+        "Die DDR hat die Bundesrepublik Deutschland besetzt."
+      ],
+      "correct": 1,
+      "bundesland": ""
+    },
+    {
+      "number": "205",
+      "title": "MD5:48b252abfe2583a107dfa36788dffcc8",
+      "options": [
+        "zur Europäischen Union.",
+        "zum Warschauer Pakt.",
+        "zur OPEC.",
+        "zur Europäischen Verteidigungsgemeinschaft."
+      ],
+      "correct": 0,
+      "bundesland": ""
+    },
+    {
+      "number": "206",
+      "title": "Woran erinnern die sogenannten „Stolpersteine“ in Deutschland?",
+      "options": [
+        "an berühmte deutsche Politikerinnen und Politiker",
+        "an die Opfer des Nationalsozialismus",
+        "an Verkehrstote",
+        "an bekannte jüdische Musiker"
+      ],
+      "correct": 1,
+      "bundesland": ""
+    },
+    {
+      "number": "207",
+      "title": "MD5:39543e9f87e2e369dfaa0e64c9a47559",
+      "options": [
+        "in der NATO",
+        "im Rheinbund",
+        "im Warschauer Pakt",
+        "im Europabündnis"
+      ],
+      "correct": 2,
+      "bundesland": ""
+    },
+    {
+      "number": "208",
+      "title": "MD5:5513fe3450549d9d34fb660c81974750",
+      "options": [
+        "der Geheimdienst im \"Dritten Reich\"",
+        "eine berühmte deutsche Gedenkstätte",
+        "der Geheimdienst der DDR ",
+        "ein deutscher Sportverein während des Zweiten Weltkrieges"
+      ],
+      "correct": 2,
+      "bundesland": ""
+    },
+    {
+      "number": "209",
+      "title": "MD5:cc0f53b1288e00c0b8e5bc4799ea8089",
+      "options": [
+        "1",
+        "2",
+        "3",
+        "4"
+      ],
+      "correct": 3,
+      "bundesland": ""
+    },
+    {
+      "number": "210",
+      "title": "MD5:e5f6cd65fb68a33084db0a89c9f6b9f6",
+      "options": [
+        "der feierliche Beitritt zum Warschauer Pakt",
+        "landesweite Streiks und ein Volksaufstand",
+        "der 1. SED-Parteitag",
+        "der erste Besuch Fidel Castros "
+      ],
+      "correct": 1,
+      "bundesland": ""
+    },
+    {
+      "number": "211",
+      "title": "MD5:59e59652388f168bd0ef4ef08a2222bc",
+      "options": [
+        "Helmut Kohl",
+        "Willy Brandt",
+        "Michail Gorbatschow",
+        "Ludwig Erhard"
+      ],
+      "correct": 1,
+      "bundesland": ""
+    },
+    {
+      "number": "212",
+      "title": "MD5:dfd170b4a3766d8fb472840d209797f7",
+      "options": [
+        "Bundesstaat Deutschland",
+        "Bundesländer Deutschland",
+        "Bundesrepublik Deutschland",
+        "Bundesbezirk Deutschland"
+      ],
+      "correct": 2,
+      "bundesland": ""
+    },
+    {
+      "number": "213",
+      "title": "MD5:d246c99004cac87dc9706e2a796ffccf",
+      "options": [
+        "70 Millionen",
+        "78 Millionen",
+        "84 Millionen",
+        "90 Millionen"
+      ],
+      "correct": 2,
+      "bundesland": ""
+    },
+    {
+      "number": "214",
+      "title": "MD5:9126387748ac20179e278480c2d00dcb",
+      "options": [
+        "schwarz-rot-gold",
+        "rot-weiß-schwarz",
+        "schwarz-rot-grün",
+        "schwarz-gelb-rot"
+      ],
+      "correct": 0,
+      "bundesland": ""
+    },
+    {
+      "number": "215",
+      "title": "MD5:d772d677bc83da6138c6ba23cb1fe333",
+      "options": [
+        "Gerhard Schröder",
+        "Helmut Kohl",
+        "Konrad Adenauer",
+        "Helmut Schmidt"
+      ],
+      "correct": 1,
+      "bundesland": ""
+    },
+    {
+      "number": "216",
+      "title": "MD5:f492c1bb7579360cc959149e06e59e51",
+      "options": [
+        "der Bundesadler.",
+        "die Fahne der Stadt Berlin.",
+        "der Reichsadler.",
+        "die Reichskrone."
+      ],
+      "correct": 0,
+      "bundesland": ""
+    },
+    {
+      "number": "217",
+      "title": "MD5:7c430079da6f9f89c54c6ab4ee9874c6",
+      "options": [
+        "1919 bis 1927",
+        "1933 bis 1945",
+        "1945 bis 1961",
+        "1949 bis 1990"
+      ],
+      "correct": 3,
+      "bundesland": ""
+    },
+    {
+      "number": "218",
+      "title": "MD5:4179863c2b51bfc417a6dcbc859cdc3f",
+      "options": [
+        "4",
+        "5",
+        "6",
+        "7"
+      ],
+      "correct": 1,
+      "bundesland": ""
+    },
+    {
+      "number": "219",
+      "title": "MD5:a965282ad4e7fe43b2069f204afeb69a",
+      "options": [
+        "1933",
+        "1949",
+        "1971",
+        "1990"
+      ],
+      "correct": 3,
+      "bundesland": ""
+    },
+    {
+      "number": "220",
+      "title": "MD5:23a0cd89b07466a521bf655d23a6c5f3",
+      "options": [
+        "an das Ende des Zweiten Weltkrieges",
+        "an die Verabschiedung des Grundgesetzes",
+        "an die Wiedervereinigung Deutschlands",
+        "an die Opfer des Nationalsozialismus (Tag der Befreiung des Vernichtungslagers Auschwitz)"
+      ],
+      "correct": 3,
+      "bundesland": ""
+    },
+    {
+      "number": "221",
+      "title": "MD5:d15087ece0e6ba34dc7d59d0e132acf3",
+      "options": [
+        "Deutsche können in viele Länder Europas ohne Passkontrolle reisen.",
+        "Alle Menschen können ohne Personenkontrolle in Deutschland einreisen.",
+        "Deutsche können ohne Passkontrolle in jedes Land reisen.",
+        "Deutsche können in jedem Land mit dem Euro bezahlen."
+      ],
+      "correct": 0,
+      "bundesland": ""
+    },
+    {
+      "number": "222",
+      "title": "MD5:37709f57c4525a4ec791e8f7587fcc1e",
+      "options": [
+        "Ungarn",
+        "Portugal",
+        "Spanien",
+        "Schweiz"
+      ],
+      "correct": 3,
+      "bundesland": ""
+    },
+    {
+      "number": "223",
+      "title": "MD5:37709f57c4525a4ec791e8f7587fcc1e",
+      "options": [
+        "Rumänien",
+        "Bulgarien",
+        "Polen",
+        "Griechenland"
+      ],
+      "correct": 2,
+      "bundesland": ""
+    },
+    {
+      "number": "224",
+      "title": "MD5:7010521fc0448718ec06825ed30f42c9",
+      "options": [
+        "Europäische Unternehmen",
+        "Europäische Union",
+        "Einheitliche Union",
+        "Euro Union"
+      ],
+      "correct": 1,
+      "bundesland": ""
+    },
+    {
+      "number": "225",
+      "title": "MD5:d3f4f325311d4877cc105915be9423c0",
+      "options": [
+        "Tschechien",
+        "Norwegen",
+        "Spanien ",
+        "Österreich "
+      ],
+      "correct": 3,
+      "bundesland": ""
+    },
+    {
+      "number": "226",
+      "title": "MD5:97c843de7cd74394e69079dab4ed32ef",
+      "options": [
+        "1",
+        "2",
+        "3",
+        "4"
+      ],
+      "correct": 1,
+      "bundesland": ""
+    },
+    {
+      "number": "227",
+      "title": "MD5:37709f57c4525a4ec791e8f7587fcc1e",
+      "options": [
+        "Finnland",
+        "Dänemark",
+        "Norwegen ",
+        "Schweden"
+      ],
+      "correct": 1,
+      "bundesland": ""
+    },
+    {
+      "number": "228",
+      "title": "MD5:34ca2f92eb738acdc02df8f155beb4b9",
+      "options": [
+        "NATO-Osterweiterung  ",
+        "EU-Osterweiterung",
+        "Deutsche Wiedervereinigung",
+        "Europäische Gemeinschaft"
+      ],
+      "correct": 2,
+      "bundesland": ""
+    },
+    {
+      "number": "229",
+      "title": "MD5:37709f57c4525a4ec791e8f7587fcc1e",
+      "options": [
+        "Spanien",
+        "Bulgarien",
+        "Norwegen",
+        "Luxemburg"
+      ],
+      "correct": 3,
+      "bundesland": ""
+    },
+    {
+      "number": "230",
+      "title": "MD5:6e22a75f4ef672a13a06a04cfcf38731",
+      "options": [
+        "5 Jahre.",
+        "6 Jahre.",
+        "7 Jahre.",
+        "8 Jahre."
+      ],
+      "correct": 0,
+      "bundesland": ""
+    },
+    {
+      "number": "231",
+      "title": "MD5:3d9888857643a2827e157d8579c19061",
+      "options": [
+        "Damit sind amerikanische Einwanderer in Europa gemeint.",
+        "Der Begriff meint den Einwanderungsstopp nach Europa.",
+        "Damit sind europäische Auswanderer in den USA gemeint.",
+        "Der Begriff meint den Zusammenschluss europäischer Staaten zur EU."
+      ],
+      "correct": 3,
+      "bundesland": ""
+    },
+    {
+      "number": "232",
+      "title": "MD5:4b407fb2d672fea77b88833820027146",
+      "options": [
+        "die Europäische Kommission",
+        "die Länder, die in die EU eintreten dürfen",
+        "die Abgeordneten des Europäischen Parlaments",
+        "die europäische Verfassung"
+      ],
+      "correct": 2,
+      "bundesland": ""
+    },
+    {
+      "number": "233",
+      "title": "MD5:37709f57c4525a4ec791e8f7587fcc1e",
+      "options": [
+        "Tschechien",
+        "Bulgarien",
+        "Griechenland",
+        "Portugal"
+      ],
+      "correct": 0,
+      "bundesland": ""
+    },
+    {
+      "number": "234",
+      "title": "Wo ist ein Sitz des Europäischen Parlaments?",
+      "options": [
+        "London",
+        "Paris",
+        "Berlin",
+        "Straßburg"
+      ],
+      "correct": 3,
+      "bundesland": ""
+    },
+    {
+      "number": "235",
+      "title": "MD5:10d35f636b7996ddde4edd16192b016a",
+      "options": [
+        "Freundschaft zwischen England und Deutschland",
+        "Reisefreiheit in alle Länder der EU",
+        "Frieden und Sicherheit in den Ländern der EU",
+        "einheitliche Feiertage in den Ländern der EU"
+      ],
+      "correct": 2,
+      "bundesland": ""
+    },
+    {
+      "number": "236",
+      "title": "MD5:56645739f0367f28be423b968d595157",
+      "options": [
+        "21",
+        "23",
+        "25",
+        "27"
+      ],
+      "correct": 3,
+      "bundesland": ""
+    },
+    {
+      "number": "237",
+      "title": "MD5:896f1088188a5a715621cfbc8e01804d",
+      "options": [
+        "Beitritt Deutschlands zur NATO",
+        "Gründung der Europäischen Wirtschaftsgemeinschaft (EWG)",
+        "Verpflichtung Deutschlands zu Reparationsleistungen",
+        "Festlegung der Oder-Neiße-Linie als Ostgrenze"
+      ],
+      "correct": 1,
+      "bundesland": ""
+    },
+    {
+      "number": "238",
+      "title": "MD5:3827cee457bb57b22a99a650aea3f70e",
+      "options": [
+        "Paris, London und Den Haag",
+        "Straßburg, Luxemburg und Brüssel",
+        "Rom, Bern und Wien",
+        "Bonn, Zürich und Mailand"
+      ],
+      "correct": 1,
+      "bundesland": ""
+    },
+    {
+      "number": "239",
+      "title": "MD5:711a34562a31b8a535501a7c50cf91f1",
+      "options": [
+        "durch die \"Hamburger Verträge\"",
+        "durch die \"Römischen Verträge\"",
+        "durch die \"Pariser Verträge\"",
+        "durch die \"Londoner Verträge\""
+      ],
+      "correct": 1,
+      "bundesland": ""
+    },
+    {
+      "number": "240",
+      "title": "MD5:8c103b6aa3efc8616491edcd49793270",
+      "options": [
+        "1995",
+        "1998",
+        "2002",
+        "2005"
+      ],
+      "correct": 2,
+      "bundesland": ""
+    },
+    {
+      "number": "241",
+      "title": "MD5:fe96c75eb594b6b0202fe901035f80cc",
+      "options": [
+        "Sie muss an ihre Krankenkasse schreiben.",
+        "Sie muss einen Antrag bei der Elterngeldstelle stellen.",
+        "Sie muss nichts tun, denn sie bekommt automatisch Elterngeld.",
+        "Sie muss das Arbeitsamt um Erlaubnis bitten."
+      ],
+      "correct": 1,
+      "bundesland": ""
+    },
+    {
+      "number": "242",
+      "title": "MD5:f5aaaae623f8e20eaa69bcd557904a6f",
+      "options": [
+        "der Staat",
+        "die Bundesländer",
+        "die Eltern/die Erziehungsberechtigten",
+        "die Schulen"
+      ],
+      "correct": 2,
+      "bundesland": ""
+    },
+    {
+      "number": "243",
+      "title": "MD5:00f7235cd5afc96c806d9c2e1f9e19ea",
+      "options": [
+        "Sie müssen die Demonstration anmelden.",
+        "Sie müssen nichts tun. Man darf in Deutschland jederzeit überall demonstrieren.",
+        "Sie können gar nichts tun, denn Demonstrationen sind in Deutschland grundsätzlich verboten.",
+        "Maik und Sybille müssen einen neuen Verein gründen, weil nur Vereine demonstrieren dürfen."
+      ],
+      "correct": 0,
+      "bundesland": ""
+    },
+    {
+      "number": "244",
+      "title": "MD5:e3b2561f7691623ac63cbf431654cb6a",
+      "options": [
+        "das Abitur",
+        "ein Diplom",
+        "die Prokura",
+        "eine Gesellenprüfung"
+      ],
+      "correct": 0,
+      "bundesland": ""
+    },
+    {
+      "number": "245",
+      "title": "MD5:d53831e3805b23e0a1ec48d21142a877",
+      "options": [
+        "Hans (20 Jahre) und Marie (19 Jahre)",
+        "Tom (20 Jahre) und Klaus (45 Jahre)",
+        "Sofie (35 Jahre) und Lisa (40 Jahre) ",
+        "Anne (13 Jahre) und Tim (25 Jahre)"
+      ],
+      "correct": 3,
+      "bundesland": ""
+    },
+    {
+      "number": "246",
+      "title": "MD5:b522acdfb85a1ca52dd58466e74d9cfe",
+      "options": [
+        "16",
+        "18",
+        "19",
+        "21"
+      ],
+      "correct": 1,
+      "bundesland": ""
+    },
+    {
+      "number": "247",
+      "title": "MD5:9bf359097909cdc9e0c2b00be725bcf6",
+      "options": [
+        "Elternzeit",
+        "Mutterschutz",
+        "Geburtsvorbereitung",
+        "Wochenbett"
+      ],
+      "correct": 1,
+      "bundesland": ""
+    },
+    {
+      "number": "248",
+      "title": "MD5:4bf2f23de6244ad1e3f26d75c7c66c00",
+      "options": [
+        "des Staates.",
+        "der Eltern.",
+        "der Großeltern.",
+        "der Schulen."
+      ],
+      "correct": 1,
+      "bundesland": ""
+    },
+    {
+      "number": "249",
+      "title": "MD5:42a24169e68f81b0e2806de8ad989b2d",
+      "options": [
+        "der Staat",
+        "die Eltern",
+        "die Verwandten",
+        "die Schulen"
+      ],
+      "correct": 1,
+      "bundesland": ""
+    },
+    {
+      "number": "250",
+      "title": "MD5:1eeb12f514a15a4e52a8c8faae1ca56e",
+      "options": [
+        "katholisch ist.",
+        "gut ausgebildet ist.",
+        "eine Frau ist.",
+        "Mitglied einer Partei ist."
+      ],
+      "correct": 1,
+      "bundesland": ""
+    },
+    {
+      "number": "251",
+      "title": "MD5:b8842fef13cdc03de50fbb99619e6dd9",
+      "options": [
+        "geht das niemanden etwas an.",
+        "geht das nur die Familie etwas an.",
+        "kann man dafür nicht bestraft werden.",
+        "kann man dafür bestraft werden."
+      ],
+      "correct": 3,
+      "bundesland": ""
+    },
+    {
+      "number": "252",
+      "title": "MD5:eb5910567d42cee9a968ab405400a964",
+      "options": [
+        "darf man zur gleichen Zeit nur mit einem Partner / einer Partnerin verheiratet sein.",
+        "kann man mehrere Ehepartner / Ehepartnerinnen gleichzeitig haben.",
+        "darf man nicht wieder heiraten, wenn man einmal verheiratet war.",
+        "darf eine Frau nicht wieder heiraten, wenn ihr Mann gestorben ist."
+      ],
+      "correct": 0,
+      "bundesland": ""
+    },
+    {
+      "number": "253",
+      "title": "MD5:8784a2e25366a9c8e7140311b331f2a3",
+      "options": [
+        "beim Einwohnermeldeamt",
+        "beim Standesamt",
+        "beim Ordnungsamt",
+        "beim Gewerbeamt"
+      ],
+      "correct": 0,
+      "bundesland": ""
+    },
+    {
+      "number": "254",
+      "title": "MD5:2e8fcbd9e7b8d187500a549a083a7094",
+      "options": [
+        "Der Scheidungsprozess dauert ein Jahr",
+        "Die Ehegatten sind ein Jahr verheiratet, dann ist die Scheidung möglich",
+        "Das Besuchsrecht für die Kinder gilt ein Jahr",
+        "Die Ehegatten führen mindestens ein Jahr getrennt ihr eigenes Leben. Danach ist die Scheidung möglich"
+      ],
+      "correct": 3,
+      "bundesland": ""
+    },
+    {
+      "number": "255",
+      "title": "MD5:68d98fc87fa1cd6ce8716e11d9c5d927",
+      "options": [
+        "Ordnungsamt.",
+        "Schulamt.",
+        "Jugendamt.",
+        "Gesundheitsamt."
+      ],
+      "correct": 2,
+      "bundesland": ""
+    },
+    {
+      "number": "256",
+      "title": "MD5:a2135ca5c8534b40a05802f06445c9af",
+      "options": [
+        "eine Erlaubnis der Polizei",
+        "eine Genehmigung einer Partei",
+        "eine Genehmigung des Einwohnermeldeamts",
+        "eine Gaststättenerlaubnis von der zuständigen Behörde"
+      ],
+      "correct": 3,
+      "bundesland": ""
+    },
+    {
+      "number": "257",
+      "title": "MD5:8ccb5363dd07052b82416018a11787fd",
+      "options": [
+        "einer Hochschule.",
+        "einem Abendgymnasium.",
+        "einer Hauptschule.",
+        "einer Privatuniversität."
+      ],
+      "correct": 1,
+      "bundesland": ""
+    },
+    {
+      "number": "258",
+      "title": "MD5:ac023948c588c65e131892fde89d7135",
+      "options": [
+        "Es entscheidet, welche Schule das Kind besucht.",
+        "Es kann ein Kind, das geschlagen wird oder hungern muss, aus der Familie nehmen.",
+        "Es bezahlt das Kindergeld an die Eltern.",
+        "Es kontrolliert, ob das Kind einen Kindergarten besucht."
+      ],
+      "correct": 1,
+      "bundesland": ""
+    },
+    {
+      "number": "259",
+      "title": "MD5:d2d6d1dd33e0376615d7ff9471f6fa15",
+      "options": [
+        "Rentenberechnung.",
+        "Lehrstellensuche.",
+        "Steuererklärung.",
+        "Krankenversicherung."
+      ],
+      "correct": 1,
+      "bundesland": ""
+    },
+    {
+      "number": "260",
+      "title": "MD5:ea3fcfe9310f47b496a36423f06503bb",
+      "options": [
+        "Recht auf unbegrenzte Freizeit.",
+        "Wahlfreiheit für alle Fächer.",
+        "Anspruch auf Schulgeld.",
+        "Anwesenheitspflicht."
+      ],
+      "correct": 3,
+      "bundesland": ""
+    },
+    {
+      "number": "261",
+      "title": "MD5:df5cdda11aa1f63c9f192b75041694d9",
+      "options": [
+        "einer Hochschule",
+        "einem Abendgymnasium",
+        "einer Hauptschule",
+        "einer Privatuniversität"
+      ],
+      "correct": 1,
+      "bundesland": ""
+    },
+    {
+      "number": "262",
+      "title": "MD5:6ae340e48cce393d7c3d5c6e87399d73",
+      "options": [
+        "Niemand darf z.B. wegen einer Behinderung benachteiligt werden.",
+        "Man darf andere Personen benachteiligen, wenn ausreichende persönliche Gründe hierfür vorliegen.",
+        "Niemand darf gegen Personen klagen, wenn sie benachteiligt wurden.",
+        "Es ist für alle Gesetz, benachteiligten Gruppen jährlich Geld zu spenden."
+      ],
+      "correct": 0,
+      "bundesland": ""
+    },
+    {
+      "number": "263",
+      "title": "MD5:0e8723b15fa01de429edebaf9e9882cf",
+      "options": [
+        "werden bestraft.",
+        "werden wie Erwachsene behandelt.",
+        "teilen die Strafe mit ihren Eltern.",
+        "werden nicht bestraft."
+      ],
+      "correct": 0,
+      "bundesland": ""
+    },
+    {
+      "number": "264",
+      "title": "MD5:2387764761b50a3f7d9348d436d3a2dc",
+      "options": [
+        "am Rosenmontag",
+        "am Maifeiertag",
+        "beim Oktoberfest",
+        "an Pfingsten"
+      ],
+      "correct": 0,
+      "bundesland": ""
+    },
+    {
+      "number": "265",
+      "title": "MD5:d33f6efd72f3859e210a78dbda19a337",
+      "options": [
+        "zum Einwohnermeldeamt",
+        "zum Ordnungsamt",
+        "zur Agentur für Arbeit",
+        "zum Standesamt"
+      ],
+      "correct": 3,
+      "bundesland": ""
+    },
+    {
+      "number": "266",
+      "title": "MD5:d6f8c53a0d9ccc9f408c764414b7a053",
+      "options": [
+        "wenn die Sonne untergeht",
+        "wenn die Nachbarn schlafen gehen",
+        "um 0 Uhr, Mitternacht",
+        "um 22 Uhr"
+      ],
+      "correct": 3,
+      "bundesland": ""
+    },
+    {
+      "number": "267",
+      "title": "MD5:43686bfa1fb6c6d886f539de756549f4",
+      "options": [
+        "Sie müssen die Entscheidung der volljährigen Tochter respektieren.",
+        "Sie haben das Recht, die Tochter in die elterliche Wohnung zurückzuholen.",
+        "Sie können zur Polizei gehen und die Tochter anzeigen.",
+        "Sie suchen einen anderen Mann für die Tochter."
+      ],
+      "correct": 0,
+      "bundesland": ""
+    },
+    {
+      "number": "268",
+      "title": "MD5:25721a4c468641ad3816e97586671b69",
+      "options": [
+        "Sie muss mindestens zehn Jahre in Deutschland leben, bevor sie den Führerschein machen kann.",
+        "Wenn sie kein Deutsch kann, darf sie keinen Führerschein haben.",
+        "Sie muss den Führerschein in dem Land machen, in dem man ihre Sprache spricht.",
+        "Sie kann die Theorie-Prüfung vielleicht in ihrer Muttersprache machen. Es gibt mehr als zehn Sprachen zur Auswahl."
+      ],
+      "correct": 3,
+      "bundesland": ""
+    },
+    {
+      "number": "269",
+      "title": "MD5:93468fead4b208811eb80fb2231344da",
+      "options": [
+        "monatliches Taschengeld.",
+        "einen Platz in einem Sportverein.",
+        "einen Kindergartenplatz.",
+        "einen Ferienpass."
+      ],
+      "correct": 2,
+      "bundesland": ""
+    },
+    {
+      "number": "270",
+      "title": "MD5:54b8a263332af14b3be31d07186de6e0",
+      "options": [
+        "für den Religionsunterricht.",
+        "nur für Jugendliche.",
+        "zur Weiterbildung.",
+        "nur für Rentner und Rentnerinnen."
+      ],
+      "correct": 2,
+      "bundesland": ""
+    },
+    {
+      "number": "271",
+      "title": "MD5:084fc238388dd34654de27514e65a897",
+      "options": [
+        "bunte Eier verstecken",
+        "einen Tannenbaum schmücken",
+        "sich mit Masken und Kostümen verkleiden",
+        "Kürbisse vor die Tür stellen"
+      ],
+      "correct": 1,
+      "bundesland": ""
+    },
+    {
+      "number": "272",
+      "title": "MD5:0609ae7b14e758f45b1cd9b0df39bf6b",
+      "options": [
+        "Mann und Frau sind geschieden und leben mit neuen Partnern zusammen.",
+        "Zwei Frauen leben zusammen.",
+        "Ein alleinerziehender Vater lebt mit seinen zwei Kindern zusammen.",
+        "Ein Mann ist mit zwei Frauen zur selben Zeit verheiratet."
+      ],
+      "correct": 3,
+      "bundesland": ""
+    },
+    {
+      "number": "273",
+      "title": "MD5:c62ad64127d7d65b2464db47a2b4322e",
+      "options": [
+        "zum Arzt / zur Ärztin.",
+        "zum Gesundheitsamt.",
+        "zum Einwohnermeldeamt.",
+        "zum Jugendamt."
+      ],
+      "correct": 3,
+      "bundesland": ""
+    },
+    {
+      "number": "274",
+      "title": "MD5:3c47e0ed8004cd04cd826daaad1970cb",
+      "options": [
+        "das Schweigerecht",
+        "das Briefgeheimnis",
+        "die Schweigepflicht",
+        "die Meinungsfreiheit"
+      ],
+      "correct": 1,
+      "bundesland": ""
+    },
+    {
+      "number": "275",
+      "title": "MD5:768a460a3de358d48bd8437e8fae9db0",
+      "options": [
+        "die Einwilligung der Eltern",
+        "ein Attest eines Arztes / einer Ärztin",
+        "die Einwilligung der Kinder",
+        "die Unterstützung eines Anwalts / einer Anwältin"
+      ],
+      "correct": 3,
+      "bundesland": ""
+    },
+    {
+      "number": "276",
+      "title": "MD5:4f505fb64ad07b51f481fe9b12e13dd1",
+      "options": [
+        "Ich kann nichts tun.",
+        "Ich muss mir diese Behandlung gefallen lassen.",
+        "Ich drohe der Person.",
+        "Ich kann mich beim Behördenleiter / bei der Behördenleiterin beschweren."
+      ],
+      "correct": 3,
+      "bundesland": ""
+    },
+    {
+      "number": "277",
+      "title": "MD5:cae777771b377a5ff586c7c749ff8690",
+      "options": [
+        "kein Englisch spricht.",
+        "zu hohe Gehaltsvorstellungen hat.",
+        "keine Erfahrungen in diesem Beruf hat.",
+        "Mutter ist."
+      ],
+      "correct": 3,
+      "bundesland": ""
+    },
+    {
+      "number": "278",
+      "title": "MD5:c4f3f3e902286235eed678c898c68965",
+      "options": [
+        "im Rollstuhl sitzt.",
+        "keine Erfahrung hat.",
+        "zu hohe Gehaltsvorstellungen hat.",
+        "kein Englisch spricht."
+      ],
+      "correct": 0,
+      "bundesland": ""
+    },
+    {
+      "number": "279",
+      "title": "MD5:c8cee420cfad8547d17f303191b2ca54",
+      "options": [
+        "Regeln für die Benutzung öffentlicher Verkehrsmittel.",
+        "alle Mieter und Mieterinnen im Haus.",
+        "Regeln, an die sich alle Bewohner und Bewohnerinnen halten müssen. ",
+        "die Adresse des nächsten Ordnungsamtes."
+      ],
+      "correct": 2,
+      "bundesland": ""
+    },
+    {
+      "number": "280",
+      "title": "MD5:e64e2d6323f245de3f5b4131ab7b519e",
+      "options": [
+        "nichts machen.",
+        "den Bescheid wegwerfen.",
+        "Einspruch einlegen.",
+        "warten, bis ein anderer Bescheid kommt."
+      ],
+      "correct": 2,
+      "bundesland": ""
+    },
+    {
+      "number": "281",
+      "title": "MD5:972bc39a83a9cee0b2e1c30993aad66c",
+      "options": [
+        "Meinungsfreiheit.",
+        "Gleichbehandlung.",
+        "Versammlungsfreiheit.",
+        "Freizügigkeit."
+      ],
+      "correct": 1,
+      "bundesland": ""
+    },
+    {
+      "number": "282",
+      "title": "MD5:73d897afec3c4b882b7e4c4b952c896f",
+      "options": [
+        "Vereinstrainer / Vereinstrainerin",
+        "Wahlhelfer / Wahlhelferin",
+        "Bibliotheksaufsicht",
+        "Lehrer / Lehrerin"
+      ],
+      "correct": 1,
+      "bundesland": ""
+    },
+    {
+      "number": "283",
+      "title": "MD5:c8f490421bcd1d172f6caca71ad5364c",
+      "options": [
+        "Ich lasse die Rechnung liegen.",
+        "Ich lege Widerspruch bei der Behörde ein.",
+        "Ich schicke die Rechnung an die Behörde zurück.",
+        "Ich gehe mit der Rechnung zum Finanzamt."
+      ],
+      "correct": 1,
+      "bundesland": ""
+    },
+    {
+      "number": "284",
+      "title": "MD5:ab9fa127f79c102df3a741914fa3c491",
+      "options": [
+        "Es ist egal, was man lernt.",
+        "Erwachsene müssen auch nach der Ausbildung immer weiter lernen.",
+        "Kinder lernen in der Schule alles, was im Beruf wichtig ist. Nach der Schule muss man nicht weiter lernen.",
+        "Alle müssen früher aufhören zu arbeiten, weil sich alles ändert."
+      ],
+      "correct": 1,
+      "bundesland": ""
+    },
+    {
+      "number": "285",
+      "title": "MD5:ea8698d761784a7ab64b82ce86966bd2",
+      "options": [
+        "Lohnsteuer",
+        "Beiträge zur Arbeitslosenversicherung",
+        "Beiträge zur Renten- und Krankenversicherung",
+        "Umsatzsteuer"
+      ],
+      "correct": 3,
+      "bundesland": ""
+    },
+    {
+      "number": "286",
+      "title": "MD5:2b3733d622eb8ecf14e88ee4abb15ddc",
+      "options": [
+        "der Betriebsrat",
+        "der Betriebsprüfer / die Betriebsprüferin",
+        "die Betriebsgruppe",
+        "das Betriebsmanagement"
+      ],
+      "correct": 0,
+      "bundesland": ""
+    },
+    {
+      "number": "287",
+      "title": "MD5:8853ab75c8012baa56b1fb15f8aea446",
+      "options": [
+        "die Gehaltszahlungen",
+        "die Arbeitszeit",
+        "die Kündigungsfrist",
+        "die Versícherungspflicht"
+      ],
+      "correct": 2,
+      "bundesland": ""
+    },
+    {
+      "number": "288",
+      "title": "Woraus begründet sich Deutschlands besondere Verantwortung für Israel?",
+      "options": [
+        "aus der Mitgliedschaft in der Europäischen Union (EU)",
+        "aus den nationalsozialistischen Verbrechen gegen Juden",
+        "aus dem Grundgesetz der Bundesrepublik Deutschland",
+        "aus der christlichen Tradition"
+      ],
+      "correct": 1,
+      "bundesland": ""
+    },
+    {
+      "number": "289",
+      "title": "MD5:25497543c427241c664bc95fddf97e28",
+      "options": [
+        "seine Deutschkenntnisse zu gering sind.",
+        "er zu hohe Gehaltsvorstellungen hat.",
+        "er eine dunkle Haut hat.",
+        "er keine Erfahrungen im Beruf hat."
+      ],
+      "correct": 2,
+      "bundesland": ""
+    },
+    {
+      "number": "290",
+      "title": "MD5:4cb1c8c29a89d5b911ee14f7d9189369",
+      "options": [
+        "eine Anzeige schreiben",
+        "den Fernseher reklamieren",
+        "das Gerät ungefragt austauschen",
+        "die Garantie verlängern"
+      ],
+      "correct": 1,
+      "bundesland": ""
+    },
+    {
+      "number": "291",
+      "title": "MD5:16dbd45f9763a5e5a1a4b7f7fa0395bf",
+      "options": [
+        "es eine Kirchensteuer gibt, die an die Einkommen- und Lohnsteuer geknüpft ist.",
+        "das für die Statistik in Deutschland wichtig ist.",
+        "man mehr Steuern zahlen muss, wenn man nicht zu einer Kirche gehört.",
+        "die Kirche für die Steuererklärung verantwortlich ist."
+      ],
+      "correct": 0,
+      "bundesland": ""
+    },
+    {
+      "number": "292",
+      "title": "MD5:db0379e30f63c51ecb04ba1c6b0bad71",
+      "options": [
+        "Es dürfen keine Moscheen gebaut werden.",
+        "Alle Menschen glauben an Gott.",
+        "Jeder kann glauben, was er möchte.",
+        "Der Staat entscheidet, an welchen Gott die Menschen glauben."
+      ],
+      "correct": 2,
+      "bundesland": ""
+    },
+    {
+      "number": "293",
+      "title": "MD5:7cac40fd4d97098ec9afa30d54857261",
+      "options": [
+        "Kürbisse vor die Tür stellen",
+        "einen Tannenbaum schmücken",
+        "Eier bemalen",
+        "Raketen in die Luft schießen"
+      ],
+      "correct": 2,
+      "bundesland": ""
+    },
+    {
+      "number": "294",
+      "title": "MD5:aca7ef09c980ba7b71e93265a63cbd2d",
+      "options": [
+        "christlicher Feiertag.",
+        "deutscher Gedenktag.",
+        "internationaler Trauertag.",
+        "bayerischer Brauch."
+      ],
+      "correct": 0,
+      "bundesland": ""
+    },
+    {
+      "number": "295",
+      "title": "MD5:0eb4ff907c8d6eecc862a55b74d38deb",
+      "options": [
+        "der Hinduismus",
+        "das Christentum",
+        "der Buddhismus",
+        "der Islam"
+      ],
+      "correct": 1,
+      "bundesland": ""
+    },
+    {
+      "number": "296",
+      "title": "MD5:e988d77ed3e719b102bbdfb2f0ea4b32",
+      "options": [
+        "den Buß- und Bettag.",
+        "das Erntedankfest.",
+        "die Adventszeit.",
+        "Allerheiligen."
+      ],
+      "correct": 2,
+      "bundesland": ""
+    },
+    {
+      "number": "297",
+      "title": "MD5:520b9281d6c6e43258312ee0b148b94b",
+      "options": [
+        "Italien",
+        "Polen",
+        "Marokko",
+        "Türkei"
+      ],
+      "correct": 3,
+      "bundesland": ""
+    },
+    {
+      "number": "298",
+      "title": "MD5:705a4d3917db81c582434bf3ab8f0cc6",
+      "options": [
+        "Vietnam, Polen, Mosambik.",
+        "Frankreich, Rumänien, Somalia. ",
+        "Chile, Ungarn, Simbabwe. ",
+        "Nordkorea, Mexiko, Ägypten. "
+      ],
+      "correct": 0,
+      "bundesland": ""
+    },
+    {
+      "number": "299",
+      "title": "MD5:e503dcf4c857a96046c40397f3448ec6",
+      "options": [
+        "Schwarzarbeiter / Schwarzarbeiterinnen.",
+        "Gastarbeiter / Gastarbeiterinnen.",
+        "Zeitarbeiter /Zeitarbeiterinnen.",
+        "Schichtarbeiter / Schichtarbeiterinnen."
+      ],
+      "correct": 1,
+      "bundesland": ""
+    },
+    {
+      "number": "300",
+      "title": "MD5:2313d3f3a43e799d0dfe3c8582d5c9ad",
+      "options": [
+        "Italien",
+        "Spanien",
+        "Portugal",
+        "Türkei"
+      ],
+      "correct": 0,
+      "bundesland": ""
+    },
+    {
+      "number": "BB-1",
+      "title": "MD5:37532047eba1ec68e6e4ab8daa20cb2d",
+      "options": [
+        "1",
+        "2",
+        "3",
+        "4"
+      ],
+      "correct": 0,
+      "bundesland": "Brandenburg"
+    },
+    {
+      "number": "BB-2",
+      "title": "MD5:a24d52d87bae7fd147dfbbfaf2b2eb81",
+      "options": [
+        "Prignitz",
+        "Rhein-Sieg-Kreis",
+        "Vogtlandkreis",
+        "Amberg-Sulzbach"
+      ],
+      "correct": 0,
+      "bundesland": "Brandenburg"
+    },
+    {
+      "number": "BB-3",
+      "title": "MD5:28cec78d8999a59d94d8737e825e918a",
+      "options": [
+        "3",
+        "4",
+        "5",
+        "6"
+      ],
+      "correct": 2,
+      "bundesland": "Brandenburg"
+    },
+    {
+      "number": "BB-4",
+      "title": "MD5:9584003782f400abb013443d838b72cb",
+      "options": [
+        "14",
+        "16",
+        "18",
+        "20"
+      ],
+      "correct": 1,
+      "bundesland": "Brandenburg"
+    },
+    {
+      "number": "BB-5",
+      "title": "MD5:a0ee0fd0c6ed47b7eb6034b3d77c73fa",
+      "options": [
+        "blau-weiß-rot",
+        "rot-weiß",
+        "grün-weiß-rot",
+        "schwarz-gelb"
+      ],
+      "correct": 1,
+      "bundesland": "Brandenburg"
+    },
+    {
+      "number": "BB-6",
+      "title": "MD5:ae3b64bb5ef447fbb660800061868050",
+      "options": [
+        "bei den Kirchen ",
+        "beim Ordnungsamt der Gemeinde",
+        "bei der Landeszentrale für politische Bildung",
+        "bei der Verbraucherzentrale"
+      ],
+      "correct": 2,
+      "bundesland": "Brandenburg"
+    },
+    {
+      "number": "BB-7",
+      "title": "MD5:07f8f34054fb456fa598362c868c1cb7",
+      "options": [
+        "Potsdam.",
+        "Cottbus.",
+        "Brandenburg.",
+        "Frankfurt/Oder."
+      ],
+      "correct": 0,
+      "bundesland": "Brandenburg"
+    },
+    {
+      "number": "BB-8",
+      "title": "MD5:351f0783e6a33c844846130f5f21212a",
+      "options": [
+        "1",
+        "2",
+        "3",
+        "4"
+      ],
+      "correct": 3,
+      "bundesland": "Brandenburg"
+    },
+    {
+      "number": "BB-9",
+      "title": "MD5:fd603a48e56e850b1fda0c0ed9fe6be9",
+      "options": [
+        "Erster Minister/ Erste Ministerin",
+        "Premierminister/ Premierministerin",
+        "Bürgermeister/ Bürgermeisterin",
+        "Ministerpräsident/ Ministerpräsidentin"
+      ],
+      "correct": 3,
+      "bundesland": "Brandenburg"
+    },
+    {
+      "number": "BB-10",
+      "title": "MD5:ea687ad06de3749f7d9358917b410e45",
+      "options": [
+        "Justizminister/ Justizministerin",
+        "Außenminister/ Außenministerin",
+        "Finanzminister/ Finanzministerin",
+        "Innenminister/ Innenministerin"
+      ],
+      "correct": 1,
+      "bundesland": "Brandenburg"
+    },
+    {
+      "number": "BE-1",
+      "title": "MD5:3cd1fa8958e2944bd9af9300f63c51ab",
+      "options": [
+        "1",
+        "2",
+        "3",
+        "4"
+      ],
+      "correct": 3,
+      "bundesland": "Berlin"
+    },
+    {
+      "number": "BE-2",
+      "title": "MD5:6d9cc62bb65ed865970b160b130343bd",
+      "options": [
+        "Altona",
+        "Prignitz",
+        "Pankow",
+        "Mecklenburgische Seenplatte"
+      ],
+      "correct": 2,
+      "bundesland": "Berlin"
+    },
+    {
+      "number": "BE-3",
+      "title": "MD5:732b9a443df37949249faa1ffb9e084c",
+      "options": [
+        "3",
+        "4",
+        "5",
+        "6"
+      ],
+      "correct": 2,
+      "bundesland": "Berlin"
+    },
+    {
+      "number": "BE-4",
+      "title": "MD5:5156e000bcee6b39d5db7b35672a8e58",
+      "options": [
+        "14",
+        "16",
+        "18",
+        "20"
+      ],
+      "correct": 1,
+      "bundesland": "Berlin"
+    },
+    {
+      "number": "BE-5",
+      "title": "MD5:39d8a1be4eda973a98c1886d13123b42",
+      "options": [
+        "blau-weiß-rot",
+        "weiß-rot",
+        "grün-weiß-rot",
+        "schwarz-gold"
+      ],
+      "correct": 1,
+      "bundesland": "Berlin"
+    },
+    {
+      "number": "BE-6",
+      "title": "MD5:81b31626f4537ed6ea8c94bd39e72037",
+      "options": [
+        "beim Ordnungsamt der Gemeinde",
+        "bei den Kirchen ",
+        "bei der Verbraucherzentrale",
+        "bei der Landeszentrale für politische Bildung"
+      ],
+      "correct": 3,
+      "bundesland": "Berlin"
+    },
+    {
+      "number": "BE-7",
+      "title": "MD5:e562c4f4063179c58a6d964527f44b6c",
+      "options": [
+        "Berlin",
+        "Saarland",
+        "Brandenburg",
+        "Hessen"
+      ],
+      "correct": 0,
+      "bundesland": "Berlin"
+    },
+    {
+      "number": "BE-8",
+      "title": "MD5:49d3c9a67756cfa25db4548d8193ce65",
+      "options": [
+        "1",
+        "2",
+        "3",
+        "4"
+      ],
+      "correct": 3,
+      "bundesland": "Berlin"
+    },
+    {
+      "number": "BE-9",
+      "title": "MD5:8d9eb29563ac088bdfb0ad90353547c4",
+      "options": [
+        "Ministerpräsident/ Ministerpräsidentin",
+        "Oberbürgermeister/ Oberbürgermeisterin",
+        "Präsident/ Präsidentin des Senats",
+        "Regierender Bürgermeister/ Regierende Bürgermeisterin"
+      ],
+      "correct": 3,
+      "bundesland": "Berlin"
+    },
+    {
+      "number": "BE-10",
+      "title": "MD5:2052bda813655ee22dae59db9f4d1d1e",
+      "options": [
+        "Finanzsenator / Finanzsenatorin",
+        "Innensenator / Innensenatorin ",
+        "Senator / Senatorin für Außenbeziehungen",
+        "Justizsenator / Justizsenatorin"
+      ],
+      "correct": 2,
+      "bundesland": "Berlin"
+    },
+    {
+      "number": "BW-1",
+      "title": "MD5:ddb8c95f2e09984cddf24e9a4e348f9a",
+      "options": [
+        "1",
+        "2",
+        "3",
+        "4"
+      ],
+      "correct": 0,
+      "bundesland": "Baden-Württemberg"
+    },
+    {
+      "number": "BW-2",
+      "title": "MD5:e598483917203596d0794f8c4289b733",
+      "options": [
+        "Mecklenburgische Seenplatte",
+        "Neckar-Odenwald-Kreis",
+        "Nordfriesland",
+        "Altötting"
+      ],
+      "correct": 1,
+      "bundesland": "Baden-Württemberg"
+    },
+    {
+      "number": "BW-3",
+      "title": "MD5:440943ddcfcd781660e9650ac6fae485",
+      "options": [
+        "3",
+        "4",
+        "5",
+        "6"
+      ],
+      "correct": 2,
+      "bundesland": "Baden-Württemberg"
+    },
+    {
+      "number": "BW-4",
+      "title": "MD5:9e9eff05e540335961c79b4100cd7299",
+      "options": [
+        "14",
+        "16",
+        "18",
+        "20"
+      ],
+      "correct": 1,
+      "bundesland": "Baden-Württemberg"
+    },
+    {
+      "number": "BW-5",
+      "title": "MD5:b52cd8862633199dcb6ab2877c699a90",
+      "options": [
+        "blau-weiß-rot",
+        "schwarz-gold",
+        "weiß-blau",
+        "grün-weiß-rot"
+      ],
+      "correct": 1,
+      "bundesland": "Baden-Württemberg"
+    },
+    {
+      "number": "BW-6",
+      "title": "MD5:bc1748e34036f26f28c61dd778f309e1",
+      "options": [
+        "beim Ordnungsamt der Gemeinde",
+        "bei der Verbraucherzentrale",
+        "bei der Landeszentrale für politische Bildung",
+        "bei den Kirchen"
+      ],
+      "correct": 2,
+      "bundesland": "Baden-Württemberg"
+    },
+    {
+      "number": "BW-7",
+      "title": "MD5:592ebcf98c0ae1ef2229052de47c31ee",
+      "options": [
+        "Heidelberg.",
+        "Stuttgart.",
+        "Karlsruhe.",
+        "Mannheim."
+      ],
+      "correct": 1,
+      "bundesland": "Baden-Württemberg"
+    },
+    {
+      "number": "BW-8",
+      "title": "MD5:4ad4ee9d2af706574eb2f8a66f57a153",
+      "options": [
+        "1",
+        "2",
+        "3",
+        "4"
+      ],
+      "correct": 1,
+      "bundesland": "Baden-Württemberg"
+    },
+    {
+      "number": "BW-9",
+      "title": "MD5:e22754c07017f9a7fcf456803b59192c",
+      "options": [
+        "Erster Minister/ Erste Ministerin",
+        "Premierminister/ Premierministerin",
+        "Bürgermeister/ Bürgermeisterin",
+        "Ministerpräsident/ Ministerpräsidentin"
+      ],
+      "correct": 3,
+      "bundesland": "Baden-Württemberg"
+    },
+    {
+      "number": "BW-10",
+      "title": "MD5:21f4d7f37da6973889dfceaa9467956d",
+      "options": [
+        "Finanzminister/ Finanzministerin",
+        "Justizminister/ Justizministerin",
+        "Innenminister/ Innenministerin",
+        "Außenminister/ Außenministerin"
+      ],
+      "correct": 3,
+      "bundesland": "Baden-Württemberg"
+    },
+    {
+      "number": "BY-1",
+      "title": "MD5:1c11cfe356323d89c94b695723eed07c",
+      "options": [
+        "1",
+        "2",
+        "3",
+        "4"
+      ],
+      "correct": 1,
+      "bundesland": "Bayern"
+    },
+    {
+      "number": "BY-2",
+      "title": "MD5:3ccbacdb285fffd218efc8c010a5f65c",
+      "options": [
+        "Prignitz",
+        "Rhein-Sieg-Kreis",
+        "Nordfriesland",
+        "Altötting"
+      ],
+      "correct": 3,
+      "bundesland": "Bayern"
+    },
+    {
+      "number": "BY-3",
+      "title": "MD5:df12fe358c959cc9ce840a8fe3a2d377",
+      "options": [
+        "3",
+        "4",
+        "5",
+        "6"
+      ],
+      "correct": 2,
+      "bundesland": "Bayern"
+    },
+    {
+      "number": "BY-4",
+      "title": "MD5:6a6e8492cd008742a89528ce8583f1ba",
+      "options": [
+        "14",
+        "16",
+        "18",
+        "20"
+      ],
+      "correct": 2,
+      "bundesland": "Bayern"
+    },
+    {
+      "number": "BY-5",
+      "title": "MD5:3443cafe5b431d30f8b12dd91a0a2067",
+      "options": [
+        "blau-weiß-rot",
+        "weiß-blau ",
+        "grün-weiß-rot",
+        "schwarz-gelb"
+      ],
+      "correct": 1,
+      "bundesland": "Bayern"
+    },
+    {
+      "number": "BY-6",
+      "title": "MD5:e33361b442cf8250a5bc6461ab881e2a",
+      "options": [
+        "beim Ordnungsamt der Gemeinde",
+        "bei der Landeszentrale für politische Bildung ",
+        "bei der Verbraucherzentrale",
+        "bei den Kirchen"
+      ],
+      "correct": 1,
+      "bundesland": "Bayern"
+    },
+    {
+      "number": "BY-7",
+      "title": "MD5:2bb24f19bf9d48e40e1b4aac1a8d5a0c",
+      "options": [
+        "Ingolstadt.",
+        "Regensburg.",
+        "Nürnberg.",
+        "München."
+      ],
+      "correct": 3,
+      "bundesland": "Bayern"
+    },
+    {
+      "number": "BY-8",
+      "title": "MD5:65e56798fe8ce5e27536d9bca1d0d5d8",
+      "options": [
+        "1",
+        "2",
+        "3",
+        "4"
+      ],
+      "correct": 3,
+      "bundesland": "Bayern"
+    },
+    {
+      "number": "BY-9",
+      "title": "MD5:2df0de597006d3aad73e10c3fb7e72fd",
+      "options": [
+        "Erster Minister/ Erste Ministerin",
+        "Premierminister/ Premierministerin",
+        "Bürgermeister/ Bürgermeisterin",
+        "Ministerpräsident/ Ministerpräsidentin"
+      ],
+      "correct": 3,
+      "bundesland": "Bayern"
+    },
+    {
+      "number": "BY-10",
+      "title": "MD5:78a9b112b0672af5be48fd971924e869",
+      "options": [
+        "Justizminister/ Justizministerin ",
+        "Außenminister/ Außenministerin",
+        "Finanzminister/ Finanzministerin",
+        "Innenminister/ Innenministerin"
+      ],
+      "correct": 1,
+      "bundesland": "Bayern"
+    },
+    {
+      "number": "HB-1",
+      "title": "MD5:f098da739ce6077a6a8ee44e532b1cbf",
+      "options": [
+        "1",
+        "2",
+        "3",
+        "4"
+      ],
+      "correct": 2,
+      "bundesland": "Bremen"
+    },
+    {
+      "number": "HB-2",
+      "title": "MD5:0cd50e9ec5ecac7a805d84b5301606f2",
+      "options": [
+        "Altona",
+        "Hemelingen",
+        "Pankow",
+        "Babelsberg"
+      ],
+      "correct": 1,
+      "bundesland": "Bremen"
+    },
+    {
+      "number": "HB-3",
+      "title": "MD5:c50b399187df9fc6b5d0c44e20eb86ae",
+      "options": [
+        "3",
+        "4",
+        "5",
+        "6"
+      ],
+      "correct": 1,
+      "bundesland": "Bremen"
+    },
+    {
+      "number": "HB-4",
+      "title": "MD5:ae13061a132f66cb92c8c7fb52d8e1db",
+      "options": [
+        "14",
+        "16",
+        "18",
+        "20"
+      ],
+      "correct": 1,
+      "bundesland": "Bremen"
+    },
+    {
+      "number": "HB-5",
+      "title": "MD5:ac1130a73a8004d7eb285988f947a182",
+      "options": [
+        "blau-weiß-rot",
+        "rot-weiß",
+        "grün-weiß-rot ",
+        "schwarz-gold"
+      ],
+      "correct": 1,
+      "bundesland": "Bremen"
+    },
+    {
+      "number": "HB-6",
+      "title": "MD5:0067af57b672c30e15c543dcc15f1976",
+      "options": [
+        "beim Ordnungsamt der Gemeinde ",
+        "bei der Landeszentrale für politische Bildung",
+        "bei den Kirchen",
+        "bei der Verbraucherzentrale"
+      ],
+      "correct": 1,
+      "bundesland": "Bremen"
+    },
+    {
+      "number": "HB-7",
+      "title": "MD5:be190c5227db9d6aa04e91015f7e6883",
+      "options": [
+        "Bremen",
+        "München",
+        "Frankfurt",
+        "Erfurt"
+      ],
+      "correct": 0,
+      "bundesland": "Bremen"
+    },
+    {
+      "number": "HB-8",
+      "title": "MD5:fc9557cda7a8ba477da6fe912569078b",
+      "options": [
+        "1",
+        "2",
+        "3",
+        "4"
+      ],
+      "correct": 0,
+      "bundesland": "Bremen"
+    },
+    {
+      "number": "HB-9",
+      "title": "MD5:4322de750d26fb2219163d348099d9be",
+      "options": [
+        "Ministerpräsident/ Ministerpräsidentin",
+        "Erster Bürgermeister/ Erste Bürgermeisterin",
+        "Präsident/ Präsidentin des Senats",
+        "Regierender Bürgermeister/ Regierende Bürgermeisterin"
+      ],
+      "correct": 2,
+      "bundesland": "Bremen"
+    },
+    {
+      "number": "HB-10",
+      "title": "MD5:610e1d796107653cce968d5e32a33e48",
+      "options": [
+        "Senator / Senatorin für Außenbeziehungen",
+        "Finanzsenator / Finanzsenatorin ",
+        "Justizsenator / Justizsenatorin",
+        "Innensenator / Innensenatorin"
+      ],
+      "correct": 0,
+      "bundesland": "Bremen"
+    },
+    {
+      "number": "HE-1",
+      "title": "MD5:8f78f2b2ba4a632978abd05c64f6f708",
+      "options": [
+        "1",
+        "2",
+        "3",
+        "4"
+      ],
+      "correct": 0,
+      "bundesland": "Hessen"
+    },
+    {
+      "number": "HE-2",
+      "title": "MD5:020e838b1dcfc6af9fc195bd2e8be56a",
+      "options": [
+        "Ammerland",
+        "Altötting",
+        "Prignitz",
+        "Main-Taunus-Kreis"
+      ],
+      "correct": 3,
+      "bundesland": "Hessen"
+    },
+    {
+      "number": "HE-3",
+      "title": "MD5:9f37a9ec367d2832f8376eb6f0ad9121",
+      "options": [
+        "3",
+        "4",
+        "5",
+        "6"
+      ],
+      "correct": 2,
+      "bundesland": "Hessen"
+    },
+    {
+      "number": "HE-4",
+      "title": "MD5:4de77fc0e21a2db7373d6a19629fb15a",
+      "options": [
+        "14",
+        "16",
+        "18",
+        "20"
+      ],
+      "correct": 2,
+      "bundesland": "Hessen"
+    },
+    {
+      "number": "HE-5",
+      "title": "MD5:2063c0bb43a73d238d79fe349c98073f",
+      "options": [
+        "blau-weiß-rot",
+        "rot-weiß",
+        "schwarz-gold ",
+        "grün-weiß-rot "
+      ],
+      "correct": 1,
+      "bundesland": "Hessen"
+    },
+    {
+      "number": "HE-6",
+      "title": "MD5:2705c525c0dbf6eac0d83b6b68e5cb7d",
+      "options": [
+        "bei der Landeszentrale für politische Bildung",
+        "bei der Verbraucherzentrale",
+        "beim Ordnungsamt der Gemeinde",
+        "bei den Kirchen"
+      ],
+      "correct": 0,
+      "bundesland": "Hessen"
+    },
+    {
+      "number": "HE-7",
+      "title": "MD5:f66e3bcab1909d9344e1b91ab63be1ce",
+      "options": [
+        "Kassel.",
+        "Darmstadt.",
+        "Frankfurt.",
+        "Wiesbaden."
+      ],
+      "correct": 3,
+      "bundesland": "Hessen"
+    },
+    {
+      "number": "HE-8",
+      "title": "MD5:c315eb25c37e71d3d6597f28aef90a64",
+      "options": [
+        "1",
+        "2",
+        "3",
+        "4"
+      ],
+      "correct": 2,
+      "bundesland": "Hessen"
+    },
+    {
+      "number": "HE-9",
+      "title": "MD5:0e9e326ab8287026644bc4faf3fbcfb6",
+      "options": [
+        "Erster Minister/ Erste Ministerin",
+        "Premierminister/ Premierministerin",
+        "Bürgermeister/ Bürgermeisterin",
+        "Ministerpräsident/ Ministerpräsidentin"
+      ],
+      "correct": 3,
+      "bundesland": "Hessen"
+    },
+    {
+      "number": "HE-10",
+      "title": "MD5:3592d1812b63a73d75e838cb81180356",
+      "options": [
+        "Justizminister/ Justizministerin",
+        "Außenminister/ Außenministerin",
+        "Finanzminister/ Finanzministerin",
+        "Innenminister/ Innenministerin"
+      ],
+      "correct": 1,
+      "bundesland": "Hessen"
+    },
+    {
+      "number": "HH-1",
+      "title": "MD5:d0ec3d393e33fcf56db95952511adfaf",
+      "options": [
+        "1",
+        "2",
+        "3",
+        "4"
+      ],
+      "correct": 1,
+      "bundesland": "Hamburg"
+    },
+    {
+      "number": "HH-2",
+      "title": "MD5:fb47a433b920d832e732b9a2b95a869e",
+      "options": [
+        "Altona",
+        "Hemelingen",
+        "Pankow",
+        "Mecklenburgische Seenplatte"
+      ],
+      "correct": 0,
+      "bundesland": "Hamburg"
+    },
+    {
+      "number": "HH-3",
+      "title": "MD5:41ca926198756d3ee1a68da31c984884",
+      "options": [
+        "3",
+        "4",
+        "5",
+        "6"
+      ],
+      "correct": 2,
+      "bundesland": "Hamburg"
+    },
+    {
+      "number": "HH-4",
+      "title": "MD5:b6eb3a685d0ace08cce639f83f0afc5f",
+      "options": [
+        "14",
+        "16",
+        "18",
+        "20"
+      ],
+      "correct": 1,
+      "bundesland": "Hamburg"
+    },
+    {
+      "number": "HH-5",
+      "title": "MD5:826f528e1509a3f47b83cf1e8a5ad968",
+      "options": [
+        "blau-weiß-rot",
+        "weiß-rot",
+        "grün-weiß-rot ",
+        "schwarz-gelb"
+      ],
+      "correct": 1,
+      "bundesland": "Hamburg"
+    },
+    {
+      "number": "HH-6",
+      "title": "MD5:8ecef21b2c4a7894699c6f8a1b1d86cc",
+      "options": [
+        "beim Ordnungsamt der Gemeinde",
+        "bei der Verbraucherzentrale",
+        "bei den Kirchen",
+        "bei der Landeszentrale für politische Bildung"
+      ],
+      "correct": 3,
+      "bundesland": "Hamburg"
+    },
+    {
+      "number": "HH-7",
+      "title": "MD5:e562c4f4063179c58a6d964527f44b6c",
+      "options": [
+        "Hamburg",
+        "Sachsen",
+        "Bayern",
+        "Thüringen"
+      ],
+      "correct": 0,
+      "bundesland": "Hamburg"
+    },
+    {
+      "number": "HH-8",
+      "title": "MD5:186b8e739f48b66ef26be6db97f77a10",
+      "options": [
+        "1",
+        "2",
+        "3",
+        "4"
+      ],
+      "correct": 2,
+      "bundesland": "Hamburg"
+    },
+    {
+      "number": "HH-9",
+      "title": "MD5:581a2f3798fc1bafb5d3452df22225c7",
+      "options": [
+        "Ministerpräsident / Ministerpräsidentin",
+        "Erster Bürgermeister / Erste Bürgermeisterin",
+        "Regierender Senator / Regierende Senatorin",
+        "Oberbürgermeister / Oberbürgermeisterin"
+      ],
+      "correct": 1,
+      "bundesland": "Hamburg"
+    },
+    {
+      "number": "HH-10",
+      "title": "MD5:581cf51a3e863bed7a341f51afa59b9e",
+      "options": [
+        "Justizsenator / Justizsenatorin",
+        "Senator / Senatorin für Außenbeziehungen",
+        "Finanzsenator / Finanzsenatorin",
+        "Innensenator / Innensenatorin "
+      ],
+      "correct": 1,
+      "bundesland": "Hamburg"
+    },
+    {
+      "number": "MV-1",
+      "title": "MD5:edfd7cb72973e4a347f97beb3f681ab4",
+      "options": [
+        "1",
+        "2",
+        "3",
+        "4"
+      ],
+      "correct": 2,
+      "bundesland": "Mecklenburg-Vorpommern"
+    },
+    {
+      "number": "MV-2",
+      "title": "MD5:0d2ecfdf06fa21de9df67d3d1bdf603e",
+      "options": [
+        "Prignitz ",
+        "Mecklenburgische Seenplatte",
+        "Vogtlandkreis",
+        "Rhein-Sieg-Kreis"
+      ],
+      "correct": 1,
+      "bundesland": "Mecklenburg-Vorpommern"
+    },
+    {
+      "number": "MV-3",
+      "title": "MD5:c6f7b0d380ba8dafc8d4b6854281c622",
+      "options": [
+        "3",
+        "4",
+        "5",
+        "6"
+      ],
+      "correct": 2,
+      "bundesland": "Mecklenburg-Vorpommern"
+    },
+    {
+      "number": "MV-4",
+      "title": "MD5:506911b0f1e72a347ac2735748a002e7",
+      "options": [
+        "14",
+        "16",
+        "18",
+        "20"
+      ],
+      "correct": 1,
+      "bundesland": "Mecklenburg-Vorpommern"
+    },
+    {
+      "number": "MV-5",
+      "title": "MD5:dd83db54ef059887cd8b53aa1f2bda6c",
+      "options": [
+        "schwarz-rot-gold",
+        "blau-weiß-gelb-rot",
+        "grün-weiß-rot ",
+        "schwarz-gelb"
+      ],
+      "correct": 1,
+      "bundesland": "Mecklenburg-Vorpommern"
+    },
+    {
+      "number": "MV-6",
+      "title": "MD5:1a8573212e57f6bce0bc73a25360f070",
+      "options": [
+        "bei der Landeszentrale für politische Bildung",
+        "bei den Kirchen",
+        "beim Ordnungsamt der Gemeinde",
+        "bei der Verbraucherzentrale"
+      ],
+      "correct": 0,
+      "bundesland": "Mecklenburg-Vorpommern"
+    },
+    {
+      "number": "MV-7",
+      "title": "MD5:7fabdd5752e68fefe8b236e40847b990",
+      "options": [
+        "Greifswald.",
+        "Schwerin.",
+        "Rostock.",
+        "Wismar."
+      ],
+      "correct": 1,
+      "bundesland": "Mecklenburg-Vorpommern"
+    },
+    {
+      "number": "MV-8",
+      "title": "MD5:301c6191cfad8d24f990a22bad8ad475",
+      "options": [
+        "1",
+        "2",
+        "3",
+        "4"
+      ],
+      "correct": 2,
+      "bundesland": "Mecklenburg-Vorpommern"
+    },
+    {
+      "number": "MV-9",
+      "title": "MD5:d82a96c0eb87360908a63fef19de7d6a",
+      "options": [
+        "Erster Minister/ Erste Ministerin",
+        "Premierminister/ Premierministerin",
+        "Bürgermeister/ Bürgermeisterin",
+        "Ministerpräsident/ Ministerpräsidentin"
+      ],
+      "correct": 3,
+      "bundesland": "Mecklenburg-Vorpommern"
+    },
+    {
+      "number": "MV-10",
+      "title": "MD5:0cf1eea825ac92cdaf9cdf7864216288",
+      "options": [
+        "Justizminister/ Justizministerin ",
+        "Außenminister/ Außenministerin",
+        "Finanzminister/ Finanzministerin",
+        "Innenminister/ Innenministerin"
+      ],
+      "correct": 1,
+      "bundesland": "Mecklenburg-Vorpommern"
+    },
+    {
+      "number": "NI-1",
+      "title": "MD5:45ed46520adeaefbbb00d65f6ed032b3",
+      "options": [
+        "1",
+        "2",
+        "3",
+        "4"
+      ],
+      "correct": 2,
+      "bundesland": "Niedersachsen"
+    },
+    {
+      "number": "NI-2",
+      "title": "MD5:ded73465d9a58185ee8220f319e52fab",
+      "options": [
+        "Ammerland",
+        "Rhein-Sieg-Kreis",
+        "Nordfriesland",
+        "Vogtlandkreis"
+      ],
+      "correct": 0,
+      "bundesland": "Niedersachsen"
+    },
+    {
+      "number": "NI-3",
+      "title": "MD5:4162776d8491b97a766796f22cb067fe",
+      "options": [
+        "3",
+        "4",
+        "5",
+        "6"
+      ],
+      "correct": 2,
+      "bundesland": "Niedersachsen"
+    },
+    {
+      "number": "NI-4",
+      "title": "MD5:a0cdf7fcaf2b6fd183e35415cd3380a2",
+      "options": [
+        "14",
+        "16",
+        "18",
+        "20"
+      ],
+      "correct": 1,
+      "bundesland": "Niedersachsen"
+    },
+    {
+      "number": "NI-5",
+      "title": "MD5:748bdd586c1f4755165d5490d2640157",
+      "options": [
+        "weiß-blau",
+        "schwarz-rot-gold",
+        "schwarz-gelb",
+        "blau-weiß-rot"
+      ],
+      "correct": 1,
+      "bundesland": "Niedersachsen"
+    },
+    {
+      "number": "NI-6",
+      "title": "MD5:b9de33b017f6a44f2ba2fcf0a78aa556",
+      "options": [
+        "bei der Landeszentrale für politische Bildung",
+        "beim Ordnungsamt der Gemeinde",
+        "bei der Verbraucherzentrale",
+        "bei den Kirchen"
+      ],
+      "correct": 0,
+      "bundesland": "Niedersachsen"
+    },
+    {
+      "number": "NI-7",
+      "title": "MD5:6fa66fa75ca5f57f01666c96ce694509",
+      "options": [
+        "Hannover.",
+        "Braunschweig.",
+        "Wolfsburg.",
+        "Osnabrück."
+      ],
+      "correct": 0,
+      "bundesland": "Niedersachsen"
+    },
+    {
+      "number": "NI-8",
+      "title": "MD5:3d8e55adf2f0e792c08df8a5888f2deb",
+      "options": [
+        "1",
+        "2",
+        "3",
+        "4"
+      ],
+      "correct": 0,
+      "bundesland": "Niedersachsen"
+    },
+    {
+      "number": "NI-9",
+      "title": "MD5:1b4445860ec85d93df7f0b3d263d7cf8",
+      "options": [
+        "Erster Minister/ Erste Ministerin",
+        "Premierminister/ Premierministerin",
+        "Bürgermeister/ Bürgermeisterin",
+        "Ministerpräsident/ Ministerpräsidentin"
+      ],
+      "correct": 3,
+      "bundesland": "Niedersachsen"
+    },
+    {
+      "number": "NI-10",
+      "title": "MD5:372842d79d6ac4ea42c41716f91b2640",
+      "options": [
+        "Justizminister/ Justizministerin",
+        "Außenminister/ Außenministerin",
+        "Finanzminister/ Finanzministerin",
+        "Innenminister/ Innenministerin"
+      ],
+      "correct": 1,
+      "bundesland": "Niedersachsen"
+    },
+    {
+      "number": "NW-1",
+      "title": "MD5:20fafa2ce4d7488b158f5072526acb84",
+      "options": [
+        "1",
+        "2",
+        "3",
+        "4"
+      ],
+      "correct": 1,
+      "bundesland": "Nordrhein-Westfalen"
+    },
+    {
+      "number": "NW-2",
+      "title": "MD5:1cf63f999a827a3130b4f3a894f43aa0",
+      "options": [
+        "Ammerland",
+        "Rhein-Sieg-Kreis",
+        "Nordfriesland",
+        "Vogtlandkreis"
+      ],
+      "correct": 1,
+      "bundesland": "Nordrhein-Westfalen"
+    },
+    {
+      "number": "NW-3",
+      "title": "MD5:865360ac5ed9cf88b067e3f6ba67a40c",
+      "options": [
+        "3",
+        "4",
+        "5",
+        "6"
+      ],
+      "correct": 2,
+      "bundesland": "Nordrhein-Westfalen"
+    },
+    {
+      "number": "NW-4",
+      "title": "MD5:16d101a76282e7790f79d7a8e79a5d75",
+      "options": [
+        "14",
+        "16",
+        "18",
+        "20"
+      ],
+      "correct": 1,
+      "bundesland": "Nordrhein-Westfalen"
+    },
+    {
+      "number": "NW-5",
+      "title": "MD5:95d38d5acb84f8cf73cbb6d3fbf679d7",
+      "options": [
+        "rot-weiß",
+        "grün-weiß-rot ",
+        "schwarz-gold",
+        "blau-weiß-rot"
+      ],
+      "correct": 1,
+      "bundesland": "Nordrhein-Westfalen"
+    },
+    {
+      "number": "NW-6",
+      "title": "MD5:5f7678b6fcd49c5ca78d5e88fe537a0d",
+      "options": [
+        "bei den Kirchen",
+        "beim Ordnungsamt der Gemeinde",
+        "bei der Verbraucherzentrale",
+        "bei der Landeszentrale für politische Bildung "
+      ],
+      "correct": 3,
+      "bundesland": "Nordrhein-Westfalen"
+    },
+    {
+      "number": "NW-7",
+      "title": "MD5:7d7176ed870bd6338f1138aef1a4e690",
+      "options": [
+        "Köln.",
+        "Bonn.",
+        "Düsseldorf.",
+        "Dortmund."
+      ],
+      "correct": 2,
+      "bundesland": "Nordrhein-Westfalen"
+    },
+    {
+      "number": "NW-8",
+      "title": "MD5:fb13df30147dcd997618abbda9c274df",
+      "options": [
+        "1",
+        "2",
+        "3",
+        "4"
+      ],
+      "correct": 2,
+      "bundesland": "Nordrhein-Westfalen"
+    },
+    {
+      "number": "NW-9",
+      "title": "MD5:8e18466fcaab0ca0fb2122ac64c2056e",
+      "options": [
+        "Erster Minister/ Erste Ministerin",
+        "Premierminister/ Premierministerin",
+        "Bürgermeister/ Bürgermeisterin",
+        "Ministerpräsident/ Ministerpräsidentin"
+      ],
+      "correct": 3,
+      "bundesland": "Nordrhein-Westfalen"
+    },
+    {
+      "number": "NW-10",
+      "title": "MD5:b5b2a7fb830b1a01248887f980bbf0e2",
+      "options": [
+        "Justizminister/ Justizministerin ",
+        "Außenminister/ Außenministerin",
+        "Finanzminister/ Finanzministerin",
+        "Innenminister/ Innenministerin"
+      ],
+      "correct": 1,
+      "bundesland": "Nordrhein-Westfalen"
+    },
+    {
+      "number": "RP-1",
+      "title": "MD5:d7b11e1284c40a6ca398ae54e15ed379",
+      "options": [
+        "1",
+        "2",
+        "3",
+        "4"
+      ],
+      "correct": 0,
+      "bundesland": "Rheinland-Pfalz"
+    },
+    {
+      "number": "RP-2",
+      "title": "MD5:54acda60ba1a2b88ea14ed07375ba3cb",
+      "options": [
+        "Westerwaldkreis",
+        "Altötting",
+        "Emsland",
+        "Prignitz"
+      ],
+      "correct": 0,
+      "bundesland": "Rheinland-Pfalz"
+    },
+    {
+      "number": "RP-3",
+      "title": "MD5:2f5c40357fb8a1a53a5b97e72012dc2e",
+      "options": [
+        "3",
+        "4",
+        "5",
+        "6"
+      ],
+      "correct": 2,
+      "bundesland": "Rheinland-Pfalz"
+    },
+    {
+      "number": "RP-4",
+      "title": "MD5:01c23b05ecd94ba92ffc6f86dcbc0914",
+      "options": [
+        "14",
+        "16",
+        "18",
+        "20"
+      ],
+      "correct": 2,
+      "bundesland": "Rheinland-Pfalz"
+    },
+    {
+      "number": "RP-5",
+      "title": "MD5:343084a7167af5c401d8016f6446129b",
+      "options": [
+        "weiß-rot",
+        "schwarz-rot-gold",
+        "schwarz-gelb",
+        "grün-weiß-rot"
+      ],
+      "correct": 1,
+      "bundesland": "Rheinland-Pfalz"
+    },
+    {
+      "number": "RP-6",
+      "title": "MD5:dd05b31ddbec2efe64fd9cce9b9b7ca0",
+      "options": [
+        "bei den Kirchen",
+        "bei der Verbraucherzentrale",
+        "beim Ordnungsamt der Gemeinde",
+        "bei der Landeszentrale für politische Bildung "
+      ],
+      "correct": 3,
+      "bundesland": "Rheinland-Pfalz"
+    },
+    {
+      "number": "RP-7",
+      "title": "MD5:75decc7c68f6ec5bf6c5d1c4dda9e8f5",
+      "options": [
+        "Mainz.",
+        "Kaiserslautern.",
+        "Ludwigshafen.",
+        "Koblenz."
+      ],
+      "correct": 0,
+      "bundesland": "Rheinland-Pfalz"
+    },
+    {
+      "number": "RP-8",
+      "title": "MD5:1a3189559b5740ee22b5fb496b630941",
+      "options": [
+        "1",
+        "2",
+        "3",
+        "4"
+      ],
+      "correct": 0,
+      "bundesland": "Rheinland-Pfalz"
+    },
+    {
+      "number": "RP-9",
+      "title": "MD5:da662b904f0566fe85a456f731a74823",
+      "options": [
+        "Erster Minister/ Erste Ministerin",
+        "Premierminister/ Premierministerin",
+        "Bürgermeister/ Bürgermeisterin",
+        "Ministerpräsident/ Ministerpräsidentin"
+      ],
+      "correct": 3,
+      "bundesland": "Rheinland-Pfalz"
+    },
+    {
+      "number": "RP-10",
+      "title": "MD5:3f19d74b00ee4e81aea8773d784caed5",
+      "options": [
+        "Justizminister/ Justizministerin ",
+        "Außenminister/ Außenministerin",
+        "Finanzminister/ Finanzministerin",
+        "Innenminister/ Innenministerin"
+      ],
+      "correct": 1,
+      "bundesland": "Rheinland-Pfalz"
+    },
+    {
+      "number": "SH-1",
+      "title": "MD5:ecea20747a1f05e736cdee4d73f6f4a2",
+      "options": [
+        "1",
+        "2",
+        "3",
+        "4"
+      ],
+      "correct": 2,
+      "bundesland": "Schleswig-Holstein"
+    },
+    {
+      "number": "SH-2",
+      "title": "MD5:4383236a114075f53bee78c02a7094d7",
+      "options": [
+        "Ammerland",
+        "Mecklenburgische Seenplatte",
+        "Nordfriesland",
+        "Rhein-Sieg-Kreis"
+      ],
+      "correct": 2,
+      "bundesland": "Schleswig-Holstein"
+    },
+    {
+      "number": "SH-3",
+      "title": "MD5:3ed852555b99280c0af0a13d69ff828e",
+      "options": [
+        "3",
+        "4",
+        "5",
+        "6"
+      ],
+      "correct": 2,
+      "bundesland": "Schleswig-Holstein"
+    },
+    {
+      "number": "SH-4",
+      "title": "MD5:cb52a69a5c33751c93190e2c015b7ad2",
+      "options": [
+        "14",
+        "16",
+        "18",
+        "20"
+      ],
+      "correct": 1,
+      "bundesland": "Schleswig-Holstein"
+    },
+    {
+      "number": "SH-5",
+      "title": "MD5:196b0819ca186be4ac016d5e54cca6e7",
+      "options": [
+        "weiß-blau",
+        "blau-weiß-rot",
+        "weiß-rot",
+        "grün-weiß-rot"
+      ],
+      "correct": 1,
+      "bundesland": "Schleswig-Holstein"
+    },
+    {
+      "number": "SH-6",
+      "title": "MD5:58aa742559c8b152d91592705aa1c933",
+      "options": [
+        "bei der Verbraucherzentrale",
+        "beim Ordnungsamt der Gemeinde",
+        "beim Landesbeauftragten für politische Bildung",
+        "bei den Kirchen"
+      ],
+      "correct": 2,
+      "bundesland": "Schleswig-Holstein"
+    },
+    {
+      "number": "SH-7",
+      "title": "MD5:0b6e3d47fa58962e81bf7c3df7054487",
+      "options": [
+        "Husum.",
+        "Flensburg.",
+        "Lübeck.",
+        "Kiel."
+      ],
+      "correct": 3,
+      "bundesland": "Schleswig-Holstein"
+    },
+    {
+      "number": "SH-8",
+      "title": "MD5:4367cd37d9ca32f46c2e92c3410fbfee",
+      "options": [
+        "1",
+        "2",
+        "3",
+        "4"
+      ],
+      "correct": 0,
+      "bundesland": "Schleswig-Holstein"
+    },
+    {
+      "number": "SH-9",
+      "title": "MD5:f53b9184e2740b3468bf1be7342f8621",
+      "options": [
+        "Erster Minister/ Erste Ministerin",
+        "Premierminister/ Premierministerin",
+        "Bürgermeister/ Bürgermeisterin",
+        "Ministerpräsident/ Ministerpräsidentin"
+      ],
+      "correct": 3,
+      "bundesland": "Schleswig-Holstein"
+    },
+    {
+      "number": "SH-10",
+      "title": "MD5:ff9ef68364763e9216d98d0c69622d76",
+      "options": [
+        "Justizminister/ Justizministerin ",
+        "Außenminister/ Außenministerin",
+        "Finanzminister/ Finanzministerin",
+        "Innenminister/ Innenministerin"
+      ],
+      "correct": 1,
+      "bundesland": "Schleswig-Holstein"
+    },
+    {
+      "number": "SL-1",
+      "title": "MD5:ee870c047d3f6317ece7bce1b6439c33",
+      "options": [
+        "1",
+        "2",
+        "3",
+        "4"
+      ],
+      "correct": 3,
+      "bundesland": "Saarland"
+    },
+    {
+      "number": "SL-2",
+      "title": "MD5:68ac4b857edff0c3900c355f91cfcde6",
+      "options": [
+        "Mecklenburgische Seenplatte",
+        "Altötting",
+        "Neunkirchen",
+        "Rhein-Sieg-Kreis"
+      ],
+      "correct": 2,
+      "bundesland": "Saarland"
+    },
+    {
+      "number": "SL-3",
+      "title": "MD5:86e17e0f9beb21d8a9eba3f324c501a2",
+      "options": [
+        "3",
+        "4",
+        "5",
+        "6"
+      ],
+      "correct": 2,
+      "bundesland": "Saarland"
+    },
+    {
+      "number": "SL-4",
+      "title": "MD5:0f3216bd9195d96f8ffd0e67922be8e7",
+      "options": [
+        "14",
+        "16",
+        "18",
+        "20"
+      ],
+      "correct": 2,
+      "bundesland": "Saarland"
+    },
+    {
+      "number": "SL-5",
+      "title": "MD5:b43bc20d4f8d4c13b94e93c53fd55e7c",
+      "options": [
+        "weiß-blau",
+        "schwarz-rot-gold",
+        "schwarz-gelb",
+        "grün-weiß-rot"
+      ],
+      "correct": 1,
+      "bundesland": "Saarland"
+    },
+    {
+      "number": "SL-6",
+      "title": "MD5:bbceed97af986746646737b4e5131f45",
+      "options": [
+        "bei den Kirchen",
+        "bei der Landeszentrale für politische Bildung ",
+        "bei der Verbraucherzentrale",
+        "beim Ordnungsamt der Gemeinde"
+      ],
+      "correct": 1,
+      "bundesland": "Saarland"
+    },
+    {
+      "number": "SL-7",
+      "title": "MD5:69d3df78c1f59918b4759dd4b5475b37",
+      "options": [
+        "Neunkirchen.",
+        "Homburg.",
+        "Saarbrücken.",
+        "Völklingen."
+      ],
+      "correct": 2,
+      "bundesland": "Saarland"
+    },
+    {
+      "number": "SL-8",
+      "title": "MD5:d02d7371a3e4d69f8264360fc2b1e492",
+      "options": [
+        "1",
+        "2",
+        "3",
+        "4"
+      ],
+      "correct": 1,
+      "bundesland": "Saarland"
+    },
+    {
+      "number": "SL-9",
+      "title": "MD5:a74c99c785d4a59c496ba470d54784f1",
+      "options": [
+        "Erster Minister/ Erste Ministerin",
+        "Premierminister/ Premierministerin",
+        "Bürgermeister/ Bürgermeisterin",
+        "Ministerpräsident/ Ministerpräsidentin"
+      ],
+      "correct": 3,
+      "bundesland": "Saarland"
+    },
+    {
+      "number": "SL-10",
+      "title": "MD5:8c507bf4a9c9f471c20d2da091ef598f",
+      "options": [
+        "Justizminister/ Justizministerin",
+        "Außenminister/ Außenministerin",
+        "Finanzminister/ Finanzministerin",
+        "Innenminister/ Innenministerin"
+      ],
+      "correct": 1,
+      "bundesland": "Saarland"
+    },
+    {
+      "number": "SN-1",
+      "title": "MD5:05f8df438ba7cd426015f26fff0e0d4f",
+      "options": [
+        "1",
+        "2",
+        "3",
+        "4"
+      ],
+      "correct": 3,
+      "bundesland": "Sachsen"
+    },
+    {
+      "number": "SN-2",
+      "title": "MD5:16a62d191e551594c23380bee89c4076",
+      "options": [
+        "Vogtlandkreis",
+        "Altötting",
+        "Uckermark",
+        "Nordfriesland"
+      ],
+      "correct": 0,
+      "bundesland": "Sachsen"
+    },
+    {
+      "number": "SN-3",
+      "title": "MD5:b2878426e81f0847597b1fa7264a4b5f",
+      "options": [
+        "3",
+        "4",
+        "5",
+        "6"
+      ],
+      "correct": 2,
+      "bundesland": "Sachsen"
+    },
+    {
+      "number": "SN-4",
+      "title": "MD5:f933ef06ed99a4c0238c8682178978ef",
+      "options": [
+        "14",
+        "16",
+        "18",
+        "20"
+      ],
+      "correct": 2,
+      "bundesland": "Sachsen"
+    },
+    {
+      "number": "SN-5",
+      "title": "MD5:42f031f405fc4119b3ff21d3e391366f",
+      "options": [
+        "blau-weiß-rot",
+        "weiß-grün",
+        "grün-weiß-rot ",
+        "schwarz-gelb"
+      ],
+      "correct": 1,
+      "bundesland": "Sachsen"
+    },
+    {
+      "number": "SN-6",
+      "title": "MD5:2c02c9ede3e4058eb5c8180c48cdfb24",
+      "options": [
+        "bei der Landeszentrale für politische Bildung",
+        "beim Ordnungsamt der Gemeinde",
+        "bei den Kirchen",
+        "bei der Verbraucherzentrale"
+      ],
+      "correct": 0,
+      "bundesland": "Sachsen"
+    },
+    {
+      "number": "SN-7",
+      "title": "MD5:ba23bbc6695dee662c357c83fd25d46b",
+      "options": [
+        "Leipzig.",
+        "Dresden.",
+        "Chemnitz.",
+        "Zwickau."
+      ],
+      "correct": 1,
+      "bundesland": "Sachsen"
+    },
+    {
+      "number": "SN-8",
+      "title": "MD5:db5531fe9c709ed5ae13d56d78ce5ff5",
+      "options": [
+        "1",
+        "2",
+        "3",
+        "4"
+      ],
+      "correct": 3,
+      "bundesland": "Sachsen"
+    },
+    {
+      "number": "SN-9",
+      "title": "MD5:da4d2c44518057a181793488b96a2f3a",
+      "options": [
+        "Erster Minister/ Erste Ministerin",
+        "Premierminister/ Premierministerin",
+        "Bürgermeister/ Bürgermeisterin",
+        "Ministerpräsident/ Ministerpräsidentin"
+      ],
+      "correct": 3,
+      "bundesland": "Sachsen"
+    },
+    {
+      "number": "SN-10",
+      "title": "MD5:0e1e3173a1be21813491ca916ca33337",
+      "options": [
+        "Justizminister/ Justizministerin",
+        "Außenminister/ Außenministerin",
+        "Finanzminister/ Finanzministerin",
+        "Innenminister/ Innenministerin"
+      ],
+      "correct": 1,
+      "bundesland": "Sachsen"
+    },
+    {
+      "number": "ST-1",
+      "title": "MD5:d6ca90a82f2ab9fd337824cf9f63d04c",
+      "options": [
+        "1",
+        "2",
+        "3",
+        "4"
+      ],
+      "correct": 3,
+      "bundesland": "Sachsen-Anhalt"
+    },
+    {
+      "number": "ST-2",
+      "title": "MD5:69da3caa354cd4e3335fc55e2acfba0d",
+      "options": [
+        "Ammerland",
+        "Altötting",
+        "Uckermark",
+        "Börde"
+      ],
+      "correct": 3,
+      "bundesland": "Sachsen-Anhalt"
+    },
+    {
+      "number": "ST-3",
+      "title": "MD5:13307e968ccdaecaf808c1dfd4dd65dd",
+      "options": [
+        "3",
+        "4",
+        "5",
+        "6"
+      ],
+      "correct": 2,
+      "bundesland": "Sachsen-Anhalt"
+    },
+    {
+      "number": "ST-4",
+      "title": "MD5:9188de05e9218740ccd552b72e35d405",
+      "options": [
+        "14",
+        "16",
+        "18",
+        "20"
+      ],
+      "correct": 1,
+      "bundesland": "Sachsen-Anhalt"
+    },
+    {
+      "number": "ST-5",
+      "title": "MD5:0b4d8c22c66e6ec9aa1f3bd5d7d03f95",
+      "options": [
+        "blau-weiß-rot",
+        "gelb-schwarz",
+        "grün-weiß-rot ",
+        "weiß-rot"
+      ],
+      "correct": 1,
+      "bundesland": "Sachsen-Anhalt"
+    },
+    {
+      "number": "ST-6",
+      "title": "MD5:4129fa27418ef2c3fe61ef80e2e17439",
+      "options": [
+        "bei den Kirchen",
+        "bei der Landeszentrale für politische Bildung",
+        "beim Ordnungsamt der Gemeinde",
+        "bei der Verbraucherzentrale"
+      ],
+      "correct": 1,
+      "bundesland": "Sachsen-Anhalt"
+    },
+    {
+      "number": "ST-7",
+      "title": "MD5:c517dd4b887242967b0a36324f42c705",
+      "options": [
+        "Halle.",
+        "Dessau.",
+        "Magdeburg.",
+        "Wittenberg."
+      ],
+      "correct": 2,
+      "bundesland": "Sachsen-Anhalt"
+    },
+    {
+      "number": "ST-8",
+      "title": "MD5:026cd5e3344e264e4b82e465edf83a71",
+      "options": [
+        "1",
+        "2",
+        "3",
+        "4"
+      ],
+      "correct": 2,
+      "bundesland": "Sachsen-Anhalt"
+    },
+    {
+      "number": "ST-9",
+      "title": "MD5:f8ceaf9c0f3c84b3c6daf2da7a6d51be",
+      "options": [
+        "Erster Minister/ Erste Ministerin",
+        "Premierminister/ Premierministerin",
+        "Bürgermeister/ Bürgermeisterin",
+        "Ministerpräsident/ Ministerpräsidentin"
+      ],
+      "correct": 3,
+      "bundesland": "Sachsen-Anhalt"
+    },
+    {
+      "number": "ST-10",
+      "title": "MD5:b9137cb48d4970fa4e2aeb528aaba0a2",
+      "options": [
+        "Justizminister / Justizministerin ",
+        "Außenminister/ Außenministerin",
+        "Finanzminister/ Finanzministerin",
+        "Innenminister/ Innenministerin"
+      ],
+      "correct": 1,
+      "bundesland": "Sachsen-Anhalt"
+    },
+    {
+      "number": "TH-1",
+      "title": "MD5:54f1935a9a5fafbd2c32f594dd069ce9",
+      "options": [
+        "1",
+        "2",
+        "3",
+        "4"
+      ],
+      "correct": 3,
+      "bundesland": "Thüringen"
+    },
+    {
+      "number": "TH-2",
+      "title": "MD5:3c36b95497db8a9459c80d7b2a25f936",
+      "options": [
+        "Ammerland",
+        "Altötting",
+        "Nordfriesland",
+        "Wartburgkreis"
+      ],
+      "correct": 3,
+      "bundesland": "Thüringen"
+    },
+    {
+      "number": "TH-3",
+      "title": "MD5:269cf186a61d1fb109ebd6816e310e16",
+      "options": [
+        "3",
+        "4",
+        "5",
+        "6"
+      ],
+      "correct": 2,
+      "bundesland": "Thüringen"
+    },
+    {
+      "number": "TH-4",
+      "title": "MD5:53402537709ccd0588de3aa6ce6f3f10",
+      "options": [
+        "14",
+        "16",
+        "18",
+        "20"
+      ],
+      "correct": 1,
+      "bundesland": "Thüringen"
+    },
+    {
+      "number": "TH-5",
+      "title": "MD5:117bf603248659063ce50881c6551b08",
+      "options": [
+        "blau-weiß-rot",
+        "weiß-rot",
+        "grün-weiß-rot ",
+        "schwarz-gold"
+      ],
+      "correct": 1,
+      "bundesland": "Thüringen"
+    },
+    {
+      "number": "TH-6",
+      "title": "MD5:1f3e1e9bbff9c173fda7f9453735c3e3",
+      "options": [
+        "bei den Kirchen",
+        "bei der Verbraucherzentrale",
+        "bei der Landeszentrale für politische Bildung",
+        "beim Ordnungsamt der Gemeinde"
+      ],
+      "correct": 2,
+      "bundesland": "Thüringen"
+    },
+    {
+      "number": "TH-7",
+      "title": "MD5:a403aa27204c0885f806bafc763feedd",
+      "options": [
+        "Eisenach.",
+        "Erfurt.",
+        "Gera.",
+        "Jena."
+      ],
+      "correct": 1,
+      "bundesland": "Thüringen"
+    },
+    {
+      "number": "TH-8",
+      "title": "MD5:2c3dd99807e92b68eade4ed11fb27e30",
+      "options": [
+        "1",
+        "2",
+        "3",
+        "4"
+      ],
+      "correct": 1,
+      "bundesland": "Thüringen"
+    },
+    {
+      "number": "TH-9",
+      "title": "MD5:e3759f6157e3b26a089b6ea05b4c7d76",
+      "options": [
+        "Erster Minister/ Erste Ministerin",
+        "Premierminister/ Premierministerin",
+        "Bürgermeister/ Bürgermeisterin",
+        "Ministerpräsident/ Ministerpräsidentin"
+      ],
+      "correct": 3,
+      "bundesland": "Thüringen"
+    },
+    {
+      "number": "TH-10",
+      "title": "MD5:1d8fa43c80987ae259f4cf457ae27765",
+      "options": [
+        "Justizminister/ Justizministerin",
+        "Außenminister/ Außenministerin",
+        "Finanzminister/ Finanzministerin",
+        "Innenminister/ Innenministerin"
+      ],
+      "correct": 1,
+      "bundesland": "Thüringen"
+    }
+  ]
+}

@@ -1,0 +1,367 @@
+{
+  "name": "BAMF",
+  "url": "https://oet.bamf.de/ords/oetut/",
+  "timestamp": "2025-05-08T06:16:28.548Z",
+  "questions": [
+    {
+      "number": "SN-1",
+      "title": "MD5:05f8df438ba7cd426015f26fff0e0d4f",
+      "options": [
+        "1",
+        "2",
+        "3",
+        "4"
+      ],
+      "correct": 3,
+      "bundesland": "Sachsen"
+    },
+    {
+      "number": "SN-2",
+      "title": "MD5:16a62d191e551594c23380bee89c4076",
+      "options": [
+        "Vogtlandkreis",
+        "Altötting",
+        "Uckermark",
+        "Nordfriesland"
+      ],
+      "correct": 0,
+      "bundesland": "Sachsen"
+    },
+    {
+      "number": "SN-3",
+      "title": "MD5:b2878426e81f0847597b1fa7264a4b5f",
+      "options": [
+        "3",
+        "4",
+        "5",
+        "6"
+      ],
+      "correct": 2,
+      "bundesland": "Sachsen"
+    },
+    {
+      "number": "SN-4",
+      "title": "MD5:f933ef06ed99a4c0238c8682178978ef",
+      "options": [
+        "14",
+        "16",
+        "18",
+        "20"
+      ],
+      "correct": 2,
+      "bundesland": "Sachsen"
+    },
+    {
+      "number": "SN-5",
+      "title": "MD5:42f031f405fc4119b3ff21d3e391366f",
+      "options": [
+        "blau-weiß-rot",
+        "weiß-grün",
+        "grün-weiß-rot ",
+        "schwarz-gelb"
+      ],
+      "correct": 1,
+      "bundesland": "Sachsen"
+    },
+    {
+      "number": "SN-6",
+      "title": "MD5:2c02c9ede3e4058eb5c8180c48cdfb24",
+      "options": [
+        "bei der Landeszentrale für politische Bildung",
+        "beim Ordnungsamt der Gemeinde",
+        "bei den Kirchen",
+        "bei der Verbraucherzentrale"
+      ],
+      "correct": 0,
+      "bundesland": "Sachsen"
+    },
+    {
+      "number": "SN-7",
+      "title": "MD5:ba23bbc6695dee662c357c83fd25d46b",
+      "options": [
+        "Leipzig.",
+        "Dresden.",
+        "Chemnitz.",
+        "Zwickau."
+      ],
+      "correct": 1,
+      "bundesland": "Sachsen"
+    },
+    {
+      "number": "SN-8",
+      "title": "MD5:db5531fe9c709ed5ae13d56d78ce5ff5",
+      "options": [
+        "1",
+        "2",
+        "3",
+        "4"
+      ],
+      "correct": 3,
+      "bundesland": "Sachsen"
+    },
+    {
+      "number": "SN-9",
+      "title": "MD5:da4d2c44518057a181793488b96a2f3a",
+      "options": [
+        "Erster Minister/ Erste Ministerin",
+        "Premierminister/ Premierministerin",
+        "Bürgermeister/ Bürgermeisterin",
+        "Ministerpräsident/ Ministerpräsidentin"
+      ],
+      "correct": 3,
+      "bundesland": "Sachsen"
+    },
+    {
+      "number": "SN-10",
+      "title": "MD5:0e1e3173a1be21813491ca916ca33337",
+      "options": [
+        "Justizminister/ Justizministerin",
+        "Außenminister/ Außenministerin",
+        "Finanzminister/ Finanzministerin",
+        "Innenminister/ Innenministerin"
+      ],
+      "correct": 1,
+      "bundesland": "Sachsen"
+    },
+    {
+      "number": "ST-1",
+      "title": "MD5:d6ca90a82f2ab9fd337824cf9f63d04c",
+      "options": [
+        "1",
+        "2",
+        "3",
+        "4"
+      ],
+      "correct": 3,
+      "bundesland": "Sachsen-Anhalt"
+    },
+    {
+      "number": "ST-2",
+      "title": "MD5:69da3caa354cd4e3335fc55e2acfba0d",
+      "options": [
+        "Ammerland",
+        "Altötting",
+        "Uckermark",
+        "Börde"
+      ],
+      "correct": 3,
+      "bundesland": "Sachsen-Anhalt"
+    },
+    {
+      "number": "ST-3",
+      "title": "MD5:13307e968ccdaecaf808c1dfd4dd65dd",
+      "options": [
+        "3",
+        "4",
+        "5",
+        "6"
+      ],
+      "correct": 2,
+      "bundesland": "Sachsen-Anhalt"
+    },
+    {
+      "number": "ST-4",
+      "title": "MD5:9188de05e9218740ccd552b72e35d405",
+      "options": [
+        "14",
+        "16",
+        "18",
+        "20"
+      ],
+      "correct": 1,
+      "bundesland": "Sachsen-Anhalt"
+    },
+    {
+      "number": "ST-5",
+      "title": "MD5:0b4d8c22c66e6ec9aa1f3bd5d7d03f95",
+      "options": [
+        "blau-weiß-rot",
+        "gelb-schwarz",
+        "grün-weiß-rot ",
+        "weiß-rot"
+      ],
+      "correct": 1,
+      "bundesland": "Sachsen-Anhalt"
+    },
+    {
+      "number": "ST-6",
+      "title": "MD5:4129fa27418ef2c3fe61ef80e2e17439",
+      "options": [
+        "bei den Kirchen",
+        "bei der Landeszentrale für politische Bildung",
+        "beim Ordnungsamt der Gemeinde",
+        "bei der Verbraucherzentrale"
+      ],
+      "correct": 1,
+      "bundesland": "Sachsen-Anhalt"
+    },
+    {
+      "number": "ST-7",
+      "title": "MD5:c517dd4b887242967b0a36324f42c705",
+      "options": [
+        "Halle.",
+        "Dessau.",
+        "Magdeburg.",
+        "Wittenberg."
+      ],
+      "correct": 2,
+      "bundesland": "Sachsen-Anhalt"
+    },
+    {
+      "number": "ST-8",
+      "title": "MD5:026cd5e3344e264e4b82e465edf83a71",
+      "options": [
+        "1",
+        "2",
+        "3",
+        "4"
+      ],
+      "correct": 2,
+      "bundesland": "Sachsen-Anhalt"
+    },
+    {
+      "number": "ST-9",
+      "title": "MD5:f8ceaf9c0f3c84b3c6daf2da7a6d51be",
+      "options": [
+        "Erster Minister/ Erste Ministerin",
+        "Premierminister/ Premierministerin",
+        "Bürgermeister/ Bürgermeisterin",
+        "Ministerpräsident/ Ministerpräsidentin"
+      ],
+      "correct": 3,
+      "bundesland": "Sachsen-Anhalt"
+    },
+    {
+      "number": "ST-10",
+      "title": "MD5:b9137cb48d4970fa4e2aeb528aaba0a2",
+      "options": [
+        "Justizminister / Justizministerin ",
+        "Außenminister/ Außenministerin",
+        "Finanzminister/ Finanzministerin",
+        "Innenminister/ Innenministerin"
+      ],
+      "correct": 1,
+      "bundesland": "Sachsen-Anhalt"
+    },
+    {
+      "number": "TH-1",
+      "title": "MD5:54f1935a9a5fafbd2c32f594dd069ce9",
+      "options": [
+        "1",
+        "2",
+        "3",
+        "4"
+      ],
+      "correct": 3,
+      "bundesland": "Thüringen"
+    },
+    {
+      "number": "TH-2",
+      "title": "MD5:3c36b95497db8a9459c80d7b2a25f936",
+      "options": [
+        "Ammerland",
+        "Altötting",
+        "Nordfriesland",
+        "Wartburgkreis"
+      ],
+      "correct": 3,
+      "bundesland": "Thüringen"
+    },
+    {
+      "number": "TH-3",
+      "title": "MD5:269cf186a61d1fb109ebd6816e310e16",
+      "options": [
+        "3",
+        "4",
+        "5",
+        "6"
+      ],
+      "correct": 2,
+      "bundesland": "Thüringen"
+    },
+    {
+      "number": "TH-4",
+      "title": "MD5:53402537709ccd0588de3aa6ce6f3f10",
+      "options": [
+        "14",
+        "16",
+        "18",
+        "20"
+      ],
+      "correct": 1,
+      "bundesland": "Thüringen"
+    },
+    {
+      "number": "TH-5",
+      "title": "MD5:117bf603248659063ce50881c6551b08",
+      "options": [
+        "blau-weiß-rot",
+        "weiß-rot",
+        "grün-weiß-rot ",
+        "schwarz-gold"
+      ],
+      "correct": 1,
+      "bundesland": "Thüringen"
+    },
+    {
+      "number": "TH-6",
+      "title": "MD5:1f3e1e9bbff9c173fda7f9453735c3e3",
+      "options": [
+        "bei den Kirchen",
+        "bei der Verbraucherzentrale",
+        "bei der Landeszentrale für politische Bildung",
+        "beim Ordnungsamt der Gemeinde"
+      ],
+      "correct": 2,
+      "bundesland": "Thüringen"
+    },
+    {
+      "number": "TH-7",
+      "title": "MD5:a403aa27204c0885f806bafc763feedd",
+      "options": [
+        "Eisenach.",
+        "Erfurt.",
+        "Gera.",
+        "Jena."
+      ],
+      "correct": 1,
+      "bundesland": "Thüringen"
+    },
+    {
+      "number": "TH-8",
+      "title": "MD5:2c3dd99807e92b68eade4ed11fb27e30",
+      "options": [
+        "1",
+        "2",
+        "3",
+        "4"
+      ],
+      "correct": 1,
+      "bundesland": "Thüringen"
+    },
+    {
+      "number": "TH-9",
+      "title": "MD5:e3759f6157e3b26a089b6ea05b4c7d76",
+      "options": [
+        "Erster Minister/ Erste Ministerin",
+        "Premierminister/ Premierministerin",
+        "Bürgermeister/ Bürgermeisterin",
+        "Ministerpräsident/ Ministerpräsidentin"
+      ],
+      "correct": 3,
+      "bundesland": "Thüringen"
+    },
+    {
+      "number": "TH-10",
+      "title": "MD5:1d8fa43c80987ae259f4cf457ae27765",
+      "options": [
+        "Justizminister/ Justizministerin",
+        "Außenminister/ Außenministerin",
+        "Finanzminister/ Finanzministerin",
+        "Innenminister/ Innenministerin"
+      ],
+      "correct": 1,
+      "bundesland": "Thüringen"
+    }
+  ]
+}
