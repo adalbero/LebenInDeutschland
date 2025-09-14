@@ -7,6 +7,8 @@ import android.view.ViewGroup;
 import android.widget.ArrayAdapter;
 import android.widget.CheckedTextView;
 
+import androidx.annotation.NonNull;
+
 import com.adalbero.app.lebenindeutschland.R;
 
 import java.util.List;
@@ -18,7 +20,7 @@ import java.util.Set;
 
 public class TagItemAdapter extends ArrayAdapter<String> {
     private final LayoutInflater mInflater;
-    private Set<String> mSelected;
+    private final Set<String> mSelected;
 
     public TagItemAdapter(Context context, List<String> objects, Set<String> selected) {
         super(context, R.layout.tag_item, objects);
@@ -28,8 +30,9 @@ public class TagItemAdapter extends ArrayAdapter<String> {
         mSelected = selected;
     }
 
+    @NonNull
     @Override
-    public View getView(int position, View convertView, ViewGroup parent) {
+    public View getView(int position, View convertView, @NonNull ViewGroup parent) {
         final View view;
         if (convertView == null) {
             view = mInflater.inflate(R.layout.tag_item, parent, false);

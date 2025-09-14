@@ -54,7 +54,7 @@ public class MainActivity extends AppCompatActivity implements ResultCallback {
         mFirebaseAnalytics = FirebaseAnalytics.getInstance(this);
         consentInformation = UserMessagingPlatform.getConsentInformation(this);
 
-        setContentView(R.layout.activity_main);
+        this.setContentView(R.layout.activity_main);
 
         requestConsent();
 
@@ -68,7 +68,7 @@ public class MainActivity extends AppCompatActivity implements ResultCallback {
         mListView.setAdapter(mAdapter);
 
         mListView.setOnItemClickListener((adapter, v, position, id) -> onItemSelected(position));
-   }
+    }
 
     private void requestConsent() {
 

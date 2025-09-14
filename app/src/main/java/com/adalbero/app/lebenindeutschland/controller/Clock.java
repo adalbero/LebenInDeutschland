@@ -10,20 +10,21 @@ import com.adalbero.app.lebenindeutschland.R;
 import java.text.DateFormat;
 import java.text.SimpleDateFormat;
 import java.util.Date;
+import java.util.Locale;
 
 /**
  * Created by Adalbero on 28/05/2017.
  */
 
 public class Clock {
-    private static final String KEY_CLOCK_TIME = "exam.result.mCountDouwn.time";
-    private static final String KEY_CLOCK_STOP = "exam.result.mCountDouwn.stop";
+    private static final String KEY_CLOCK_TIME = "exam.result.mCountDown.time";
+    private static final String KEY_CLOCK_STOP = "exam.result.mCountDown.stop";
     private static final String KEY_CLOCK_DEFAULT = "param.timer";
 
-    private TextView mClockView;
+    private final TextView mClockView;
     private int mTime;
     private CountDownTimer mCountDown;
-    private int mDefaultTime;
+    private final int mDefaultTime;
 
     public Clock(TextView clockView) {
         mClockView = clockView;
@@ -47,7 +48,7 @@ public class Clock {
             updateView();
         } else {
             Store.setInt(KEY_CLOCK_STOP, 0);
-            mCountDown = new CountDownTimer(mTime * 1000, 1000) {
+            mCountDown = new CountDownTimer(mTime * 1000L, 1000) {
 
                 @Override
                 public void onTick(long millisUntilFinished) {
@@ -77,25 +78,23 @@ public class Clock {
     }
 
     private String format(int timeInSec) {
-        Date date = new Date(timeInSec * 1000);
-        DateFormat formatter = new SimpleDateFormat(timeInSec > 60 * 60 ? "H:mm:ss" : "mm:ss");
-        String text = formatter.format(date);
-
-        return text;
+        Date date = new Date(timeInSec * 1000L);
+        DateFormat formatter = new SimpleDateFormat(timeInSec > 60 * 60 ? "H:mm:ss" : "mm:ss", Locale.US);
+        return formatter.format(date);
     }
 
     private void updateView() {
         boolean stop = Store.getInt(KEY_CLOCK_STOP, 0) == 1;
 
         mClockView.setText(format(mTime));
-        if (stop || isTimout()) {
+        if (stop || isTimeout()) {
             mClockView.setTextColor(ContextCompat.getColor(mClockView.getContext(), R.color.colorNotAnswered));
         }
 
-        if (isTimout()) {
+        if (isTimeout()) {
             TextView mResultView = mClockView.getRootView().findViewById(R.id.view_result);
             if (mResultView != null) {
-                mResultView.setText("Time Out");
+                mResultView.setText(R.string.timeout);
                 mResultView.setVisibility(View.VISIBLE);
                 mResultView.setTextColor(ContextCompat.getColor(mClockView.getContext(), R.color.colorWrong));
             }
@@ -114,7 +113,7 @@ public class Clock {
         updateView();
     }
 
-    public boolean isTimout() {
+    public boolean isTimeout() {
         return mTime == 0;
     }
 }

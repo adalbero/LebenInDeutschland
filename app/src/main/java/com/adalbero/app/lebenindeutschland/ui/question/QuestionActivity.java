@@ -59,9 +59,10 @@ public class QuestionActivity extends AppCompatActivity implements ResultCallbac
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
+
         mFirebaseAnalytics = FirebaseAnalytics.getInstance(this);
 
-        setContentView(R.layout.activity_question2);
+        this.setContentView(R.layout.activity_question2);
 
         Exam exam = AppController.getCurrentExam();
         mQuestionList = exam.getQuestionList();
@@ -83,9 +84,9 @@ public class QuestionActivity extends AppCompatActivity implements ResultCallbac
         View contentView = findViewById(R.id.item_question);
         mQuestionViewHolder = new QuestionViewHolder(contentView, mResult, true, this);
 
-        AppController.initAdView(this);
-
         mVoice = new Voice(getApplicationContext());
+
+        AppController.initAdView(this);
     }
 
     @Override
@@ -183,10 +184,10 @@ public class QuestionActivity extends AppCompatActivity implements ResultCallbac
             mClock.stop();
 
             if (resultInfo.isPass()) {
-                mResultView.setText("Pass");
+                mResultView.setText(R.string.pass);
                 mResultView.setTextColor(ContextCompat.getColor(this, R.color.colorRightDark));
             } else {
-                mResultView.setText("Fail");
+                mResultView.setText(R.string.fail);
                 mResultView.setTextColor(ContextCompat.getColor(this, R.color.colorWrongDark));
             }
             mResultView.setVisibility(View.VISIBLE);
@@ -285,23 +286,25 @@ public class QuestionActivity extends AppCompatActivity implements ResultCallbac
         if (requestCode == Voice.SPEECH_REQUEST_CODE && resultCode == RESULT_OK) {
             List<String> results = data.getStringArrayListExtra(RecognizerIntent.EXTRA_RESULTS);
 
-            String[] result = findAnswer(results);
-            String answer = result[0];
-            String spokenText = result[1];
-            Toast.makeText(this, spokenText, Toast.LENGTH_SHORT).show();
+            if (results != null) {
+                String[] result = findAnswer(results);
+                String answer = result[0];
+                String spokenText = result[1];
+                Toast.makeText(this, spokenText, Toast.LENGTH_SHORT).show();
 
-            String msg;
-            if (answer == null) {
-                mVoice.speak(ENTSCHULDIGUNG);
-                msg = "N";
-            } else if (answer.equals(GENAUER_BITTE)) {
-                mVoice.speak(GENAUER_BITTE);
-                msg = "G";
-            } else {
-                mQuestionViewHolder.clickAntwort(answer);
-                msg = mQuestion.getAnswerLetter().equals(answer) ? "R" : "W";
+                String msg;
+                if (answer == null) {
+                    mVoice.speak(ENTSCHULDIGUNG);
+                    msg = "N";
+                } else if (answer.equals(GENAUER_BITTE)) {
+                    mVoice.speak(GENAUER_BITTE);
+                    msg = "G";
+                } else {
+                    mQuestionViewHolder.clickAntwort(answer);
+                    msg = mQuestion.getAnswerLetter().equals(answer) ? "R" : "W";
+                }
+                Analytics.logFeatureVoice(mFirebaseAnalytics, String.format("%1s: %s", msg, spokenText), mQuestion);
             }
-            Analytics.logFeatureVoice(mFirebaseAnalytics, String.format("%1s: %s", msg, spokenText), mQuestion);
         }
 
         super.onActivityResult(requestCode, resultCode, data);
@@ -311,7 +314,7 @@ public class QuestionActivity extends AppCompatActivity implements ResultCallbac
         String[] result = new String[2];
 
         for (String text : results) {
-            if (text != null && text.length() > 0) {
+            if (text != null && !text.isEmpty()) {
 
                 result[1] = text;
                 text = normalize(text);

@@ -4,7 +4,6 @@ import android.app.Activity;
 import android.content.ActivityNotFoundException;
 import android.content.Context;
 import android.content.Intent;
-import android.os.Build;
 import android.speech.RecognizerIntent;
 import android.speech.tts.TextToSpeech;
 import android.util.Log;
@@ -18,24 +17,28 @@ import java.util.Locale;
 public class Voice {
     public static final int SPEECH_REQUEST_CODE = 0;
 
-    private TextToSpeech mTTS;
+    private final TextToSpeech mTTS;
 
     public Voice(Context context) {
+        TextToSpeech.OnInitListener ttsListener = new TextToSpeech.OnInitListener() {
+            @Override
+            public void onInit(final int status) {
+                if (status == TextToSpeech.SUCCESS) {
+                    mTTS.setLanguage(Locale.GERMAN);
+                } else {
+                    Log.e("lid", "Error starting the text to speech engine.");
+                }
+            }
+        };
         mTTS = new TextToSpeech(context, ttsListener);
     }
 
     public void shutdown() {
-        if (mTTS != null) {
-            mTTS.shutdown();
-        }
+        mTTS.shutdown();
     }
 
     public void speak(String text) {
-        if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.LOLLIPOP) {
-            mTTS.speak(text, TextToSpeech.QUEUE_ADD, null, "DEFAULT");
-        } else {
-            mTTS.speak(text, TextToSpeech.QUEUE_ADD, null);
-        }
+        mTTS.speak(text, TextToSpeech.QUEUE_ADD, null, "DEFAULT");
     }
 
     public boolean speechRecognizer(Activity activity, String language, String prompt) {
@@ -60,17 +63,5 @@ public class Voice {
         return true;
     }
 
-
-    private TextToSpeech.OnInitListener ttsListener =
-            new TextToSpeech.OnInitListener() {
-                @Override
-                public void onInit(final int status) {
-                    if (status == TextToSpeech.SUCCESS) {
-                        mTTS.setLanguage(Locale.GERMAN);
-                    } else {
-                        Log.e("lid", "Error starting the text to speech engine.");
-                    }
-                }
-            };
 
 }

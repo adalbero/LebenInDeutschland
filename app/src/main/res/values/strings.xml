@@ -1,5 +1,8 @@
 <resources>
     <string name="app_name">Leben In Deutschland Test</string>
+    <string name="timeout">Timeout</string>
+    <string name="pass">Pass</string>
+    <string name="fail">Fail</string>
 
     <string name="ads_app_id"       >ca-app-pub-6002824579891362~7981010102</string>
     <string name="banner"           >ca-app-pub-6002824579891362/7925169782</string>

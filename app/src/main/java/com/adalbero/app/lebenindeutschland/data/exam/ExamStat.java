@@ -26,7 +26,7 @@ public class ExamStat extends Exam {
     };
 
     private Statistics mStat;
-    private int mFilterMode;
+    private final int mFilterMode;
 
     public ExamStat(String name, String subtitle, int filterMode) {
         super(name, subtitle);

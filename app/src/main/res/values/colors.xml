@@ -27,6 +27,7 @@
     <color name="colorButton">@color/Indigo_400</color>
     <color name="colorButtonPressed">@color/Indigo_500</color>
     <color name="colorOptions">@color/Gray_700</color>
+    <color name="colorOptionsBG">@color/Gray_100</color>
     <color name="colorBackground">@color/White</color>
     <color name="colorCardBG">@color/Gray_300</color>
     <color name="colorTagBG">@color/Gray_300</color>

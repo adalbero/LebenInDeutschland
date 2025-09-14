@@ -2,7 +2,6 @@ package com.adalbero.app.lebenindeutschland.ui.exam;
 
 import android.app.Dialog;
 import android.app.DialogFragment;
-import android.content.DialogInterface;
 import android.os.Bundle;
 import androidx.appcompat.app.AlertDialog;
 import android.view.LayoutInflater;
@@ -74,6 +73,7 @@ public class SortDialog extends DialogFragment implements View.OnClickListener {
 
                 enablePositiveButton(true);
             } catch (NumberFormatException ex) {
+                // ignore
             }
         } else if (v instanceof CheckBox) {
             mReverse = ((CheckBox) v).isChecked() ? -1 : 1;

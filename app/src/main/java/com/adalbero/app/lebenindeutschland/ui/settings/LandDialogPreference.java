@@ -53,7 +53,7 @@ public class LandDialogPreference extends DialogPreference {
 
     public void initView(View v) {
         final Context context = v.getContext();
-        List<String> data = AppController.getInstance().getQuestionDB().listDistinctLand();
+        List<String> data = AppController.getQuestionDB().listDistinctLand();
 
         adapter = new LandItemAdapter(context, data, null);
         adapter.setLand(land);

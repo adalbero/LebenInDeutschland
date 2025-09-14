@@ -87,8 +87,7 @@ public class Store {
     }
 
     public static String getExamName() {
-        String name = Store.getString(KEY_EXAM_NAME, null);
-        return name;
+        return Store.getString(KEY_EXAM_NAME, null);
     }
 
     public static void setExamName(String name) {
@@ -96,8 +95,7 @@ public class Store {
     }
 
     public static int getQuestionIdx() {
-        int idx = Store.getInt(KEY_QUESTION_IDX, 0);
-        return idx;
+        return Store.getInt(KEY_QUESTION_IDX, 0);
     }
 
     public static void setQuestionIdx(int idx) {
@@ -121,8 +119,7 @@ public class Store {
     }
 
     public static boolean getExamInline() {
-        boolean inline = Store.getBoolean(PREF_INLINE_MODE, false);
-        return inline;
+        return Store.getBoolean(PREF_INLINE_MODE, false);
     }
 
     public static void resetExam() {

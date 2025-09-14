@@ -25,8 +25,6 @@ import com.google.android.ump.UserMessagingPlatform;
 import com.google.firebase.analytics.FirebaseAnalytics;
 
 import static com.adalbero.app.lebenindeutschland.R.xml.preferences;
-import static com.adalbero.app.lebenindeutschland.controller.Store.PREF_REMOVE_STAT;
-import static com.adalbero.app.lebenindeutschland.controller.Store.PREF_VERSION;
 
 /**
  * Created by Adalbero on 10/06/2017.
@@ -61,10 +59,10 @@ public class SettingsFragment extends PreferenceFragment implements Preference.O
 
         addPreferencesFromResource(preferences);
 
-        initExcerciseSize();
+        initExerciseSize();
         initStatistics();
 
-        Preference pref1 = findPreference(PREF_VERSION);
+        Preference pref1 = findPreference(Store.PREF_VERSION);
         pref1.setSummary(appVersion());
         pref1.setOnPreferenceClickListener(this);
 
@@ -74,7 +72,7 @@ public class SettingsFragment extends PreferenceFragment implements Preference.O
         Preference prefLand = findPreference(Store.PREF_LAND);
         prefLand.setOnPreferenceChangeListener(this);
 
-        findPreference(PREF_REMOVE_STAT).setOnPreferenceClickListener(this);
+        findPreference(Store.PREF_REMOVE_STAT).setOnPreferenceClickListener(this);
 
         Preference prefDonate = findPreference(PREF_DONATE);
         prefDonate.setOnPreferenceClickListener(this);
@@ -110,7 +108,7 @@ public class SettingsFragment extends PreferenceFragment implements Preference.O
         super.onResume();
     }
 
-    private void initExcerciseSize() {
+    private void initExerciseSize() {
         ListPreference listPreference = (ListPreference) findPreference(Store.PREF_EXERCISE_SIZE);
         listPreference.setOnPreferenceChangeListener(this);
 
@@ -129,8 +127,8 @@ public class SettingsFragment extends PreferenceFragment implements Preference.O
         ListPreference listPreference = (ListPreference) findPreference(Store.PREF_STAT_MAX);
         listPreference.setOnPreferenceChangeListener(this);
 
-        String values[] = new String[]{"1", "3", "5", "10"};
-        String labels[] = new String[values.length];
+        String[] values = new String[]{"1", "3", "5", "10"};
+        String[] labels = new String[values.length];
 
         labels[0] = "Keep just last answer";
         for (int i = 1; i < values.length; i++) {
@@ -153,7 +151,7 @@ public class SettingsFragment extends PreferenceFragment implements Preference.O
     @Override
     public boolean onPreferenceClick(Preference preference) {
         String key = preference.getKey();
-        if (key.equals(PREF_VERSION)) {
+        if (key.equals(Store.PREF_VERSION)) {
             if (mDebugClick == DEBUG_CLICKS - 1) {
                 Toast.makeText(getActivity(), "Enable Debug Mode", Toast.LENGTH_SHORT).show();
                 getPreferenceScreen().addPreference(mDebugCategory);
@@ -177,7 +175,7 @@ public class SettingsFragment extends PreferenceFragment implements Preference.O
             Debug.removeExam();
         } else if (key.equals(DEBUG_REMOVE_PREF)) {
             Debug.removePref();
-        } else if (key.equals(PREF_REMOVE_STAT)) {
+        } else if (key.equals(Store.PREF_REMOVE_STAT)) {
             doRemoveStat();
         } else if (key.equals(DEBUG_TEST)) {
             Debug.doTest(25);

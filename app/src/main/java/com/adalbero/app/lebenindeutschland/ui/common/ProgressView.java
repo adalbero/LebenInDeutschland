@@ -44,7 +44,7 @@ public class ProgressView extends View {
         paint.setStyle(Paint.Style.FILL);
 
         float dx = (mResultInfo.total == 0 ? w : (float) w / mResultInfo.total);
-        float corner = h / 2;
+        float corner = (float) h / 2;
 
         if (dx < corner)
             corner = 0;
@@ -56,7 +56,7 @@ public class ProgressView extends View {
         }
 
         paint.setColor(Color.RED);
-        rectF.set(w / 2 - 2, 0, w / 2 + 2, h);
+        rectF.set((float) w / 2 - 2, 0, (float) w / 2 + 2, h);
         canvas.drawRect(rectF, paint);
     }
 

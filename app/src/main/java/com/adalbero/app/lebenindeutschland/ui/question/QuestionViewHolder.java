@@ -22,6 +22,7 @@ import com.adalbero.app.lebenindeutschland.ui.common.StatView;
 import com.adalbero.app.lebenindeutschland.ui.common.TagDialog;
 import com.google.firebase.analytics.FirebaseAnalytics;
 
+import java.util.Objects;
 import java.util.Set;
 
 /**
@@ -29,33 +30,28 @@ import java.util.Set;
  */
 
 public class QuestionViewHolder implements View.OnClickListener, ResultCallback {
-    private FirebaseAnalytics mFirebaseAnalytics;
+    private final FirebaseAnalytics mFirebaseAnalytics;
 
-    private View mView;
+    private final View mView;
     private Question mQuestion;
-    private ExamResult mResult;
-    private boolean mQuestionPage;
-    private Statistics mStats;
+    private final ExamResult mResult;
+    private final boolean mQuestionPage;
+    private final Statistics mStats;
 
-    private TextView mViewHeader;
-    private TextView mViewNum;
-    private LinearLayout mViewTags;
-    private ImageView mViewTagButton;
-    private StatView mViewStat;
-    private View mViewStatus;
-    private TextView mViewQuestion;
-    private CheckedTextView[] mViewOptions = new CheckedTextView[4];
-    private ImageView mViewImage;
-    private ImageView mViewImageAlt;
-    private View mGroupOptions;
+    private final TextView mViewHeader;
+    private final TextView mViewNum;
+    private final LinearLayout mViewTags;
+    private final ImageView mViewTagButton;
+    private final StatView mViewStat;
+    private final View mViewStatus;
+    private final TextView mViewQuestion;
+    private final CheckedTextView[] mViewOptions = new CheckedTextView[4];
+    private final ImageView mViewImage;
+    private final ImageView mViewImageAlt;
+    private final View mGroupOptions;
 
-    private ResultCallback mCallback;
-    private boolean hasSpace;
-
-//    private static int COLOR_DEFAULT = Color.TRANSPARENT;
-    private static int COLOR_DEFAULT = AppController.getCompatColor(R.color.colorOption);
-    private static int COLOR_RIGHT = AppController.getCompatColor(R.color.colorRightLight);
-    private static int COLOR_WRONG = AppController.getCompatColor(R.color.colorWrongLight);
+    private final ResultCallback mCallback;
+    private final boolean hasSpace;
 
     public QuestionViewHolder(View view, ExamResult result, boolean questionPage, ResultCallback callback) {
         mFirebaseAnalytics = FirebaseAnalytics.getInstance(view.getContext());
@@ -146,7 +142,7 @@ public class QuestionViewHolder implements View.OnClickListener, ResultCallback 
         final boolean b = mQuestionPage || inline;
 
         if (b) {
-            mViewTags.setClickable(true);
+            Objects.requireNonNull(mViewTags).setClickable(true);
             mViewTagButton.setVisibility(View.VISIBLE);
 
             mGroupOptions.setVisibility(View.VISIBLE);
@@ -208,13 +204,13 @@ public class QuestionViewHolder implements View.OnClickListener, ResultCallback 
 
         int color;
         if (response == null) {
-            color = COLOR_DEFAULT;
+            color = AppController.getCompatColor(R.color.colorOptionsBG);
         } else if (btn.getTag().equals(answer)) {
-            color = COLOR_RIGHT;
+            color = AppController.getCompatColor(R.color.colorRightLight);
         } else if (btn.getTag().equals(response)) {
-            color = COLOR_WRONG;
+            color = AppController.getCompatColor(R.color.colorWrongLight);
         } else {
-            color = COLOR_DEFAULT;
+            color = AppController.getCompatColor(R.color.colorOptionsBG);
         }
 
         btn.setBackgroundColor(color);
@@ -270,7 +266,7 @@ public class QuestionViewHolder implements View.OnClickListener, ResultCallback 
     public void clickAntwort(String antwort) {
         String list = "abcd";
 
-        if (antwort != null && antwort.length() > 0) {
+        if (antwort != null && !antwort.isEmpty()) {
             char ch = antwort.charAt(0);
 
             for (int i = 0; i < list.length(); i++) {

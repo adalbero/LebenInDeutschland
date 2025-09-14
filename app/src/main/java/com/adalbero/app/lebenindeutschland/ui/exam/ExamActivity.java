@@ -54,16 +54,17 @@ public class ExamActivity extends AppCompatActivity implements ResultCallback {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
+
         mFirebaseAnalytics = FirebaseAnalytics.getInstance(this);
 
-        setContentView(R.layout.activity_exam);
+        this.setContentView(R.layout.activity_exam);
 
         mExam = AppController.getCurrentExam();
 
-        String title = mExam.getTitle(false);
-        getSupportActionBar().setTitle(title);
-
         mResult = new ExamResult();
+
+        String title = mExam.getTitle(false);
+        this.setTitle(title);
 
         updateData();
         mAdapter = new QuestionItemAdapter(this, mData, mResult, this);
@@ -87,7 +88,6 @@ public class ExamActivity extends AppCompatActivity implements ResultCallback {
         });
 
         AppController.initAdView(this);
-
     }
 
     @Override
@@ -216,10 +216,10 @@ public class ExamActivity extends AppCompatActivity implements ResultCallback {
             mClock.stop();
 
             if (resultInfo.isPass()) {
-                mResultView.setText("Pass");
+                mResultView.setText(R.string.pass);
                 mResultView.setTextColor(ContextCompat.getColor(this, R.color.colorRightDark));
             } else {
-                mResultView.setText("Fail");
+                mResultView.setText(R.string.fail);
                 mResultView.setTextColor(ContextCompat.getColor(this, R.color.colorWrongDark));
             }
 
@@ -268,6 +268,7 @@ public class ExamActivity extends AppCompatActivity implements ResultCallback {
             try {
                 mSortMethod = (int) param;
             } catch (Exception ex) {
+                // ignore
             }
 
             doSort();

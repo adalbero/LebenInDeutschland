@@ -52,7 +52,7 @@ public class TagDialog extends DialogFragment {
                 .setPositiveButton(android.R.string.ok, (dialog, id) -> {
                     // sign in the user ...
                     String text = newTag.getText().toString();
-                    if (text.length() > 0) {
+                    if (!text.isEmpty()) {
                         selected.add(text.trim());
                     }
                     mCallback.onResult(TagDialog.this, null);

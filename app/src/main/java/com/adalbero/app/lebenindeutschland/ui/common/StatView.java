@@ -5,6 +5,8 @@ import android.graphics.Canvas;
 import android.graphics.Color;
 import android.graphics.Paint;
 import android.graphics.RectF;
+
+import androidx.annotation.NonNull;
 import androidx.core.content.ContextCompat;
 import android.util.AttributeSet;
 import android.view.View;
@@ -55,7 +57,7 @@ public class StatView extends View {
     }
 
     @Override
-    public void onDraw(Canvas canvas) {
+    public void onDraw(@NonNull Canvas canvas) {
         if (mQuestionNum != null) {
             drawRight(canvas);
         } else {
@@ -78,7 +80,7 @@ public class StatView extends View {
         paint.setStyle(Paint.Style.FILL);
 
         float dx = (size == 0 ? w : (float) w / size);
-        float corner = h / 2;
+        float corner = (float) h / 2;
 
         if (dx < corner)
             corner = 0;

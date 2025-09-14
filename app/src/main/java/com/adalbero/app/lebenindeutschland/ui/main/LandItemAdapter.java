@@ -9,6 +9,8 @@ import android.widget.ImageView;
 import android.widget.RadioButton;
 import android.widget.TextView;
 
+import androidx.annotation.NonNull;
+
 import com.adalbero.app.lebenindeutschland.R;
 import com.adalbero.app.lebenindeutschland.controller.AppController;
 import com.google.firebase.crashlytics.FirebaseCrashlytics;
@@ -21,7 +23,7 @@ import java.util.List;
 
 public class LandItemAdapter extends ArrayAdapter<String> implements View.OnClickListener {
     private final LayoutInflater mInflater;
-    private WelcomeDialog dialog;
+    private final WelcomeDialog dialog;
     private String selectedLand;
 
     public LandItemAdapter(Context context, List<String> data, WelcomeDialog dialog) {
@@ -39,8 +41,9 @@ public class LandItemAdapter extends ArrayAdapter<String> implements View.OnClic
         selectedLand = land;
     }
 
+    @NonNull
     @Override
-    public View getView(int position, View convertView, ViewGroup parent) {
+    public View getView(int position, View convertView, @NonNull ViewGroup parent) {
         final View view;
         if (convertView == null) {
             view = mInflater.inflate(R.layout.land_item, parent, false);
@@ -49,38 +52,36 @@ public class LandItemAdapter extends ArrayAdapter<String> implements View.OnClic
         }
 
         String land = getItem(position);
-        String code = land.substring(0, 2);
-        String name = land.substring(3);
+        if (land != null) {
+            String code = land.substring(0, 2);
+            String name = land.substring(3);
 
-        view.setOnClickListener(this);
+            view.setOnClickListener(this);
 
-        RadioButton radioView = view.findViewById(R.id.radio_land);
-        radioView.setTag(land);
-        radioView.setOnClickListener(this);
-        if (land.equals(this.selectedLand)) {
-            radioView.setChecked(true);
-        } else {
-            radioView.setChecked(false);
+            RadioButton radioView = view.findViewById(R.id.radio_land);
+            radioView.setTag(land);
+            radioView.setOnClickListener(this);
+            radioView.setChecked(land.equals(this.selectedLand));
+
+            ImageView iconView = view.findViewById(R.id.icon_land);
+            String iconName = "wappen_" + code.toLowerCase();
+            // Bug#4 fixed, but if still...
+            try {
+                int resId = AppController.getImageResourceByName(iconName);
+                iconView.setImageResource(resId);
+
+                iconView.setVisibility(View.VISIBLE);
+            } catch (Exception ex) {
+                iconView.setVisibility(View.INVISIBLE);
+
+                FirebaseCrashlytics crashlytics = FirebaseCrashlytics.getInstance();
+                crashlytics.log("lid: icon=" + iconName);
+                crashlytics.recordException(ex);
+            }
+
+            TextView textView = view.findViewById(R.id.text_land);
+            textView.setText(name);
         }
-
-        ImageView iconView = view.findViewById(R.id.icon_land);
-        String iconName = "wappen_" + code.toLowerCase();
-        // Bug#4 fixed, but if still...
-        try {
-            int resId = AppController.getImageResourceByName(iconName);
-            iconView.setImageResource(resId);
-
-            iconView.setVisibility(View.VISIBLE);
-        } catch (Exception ex) {
-            iconView.setVisibility(View.INVISIBLE);
-
-            FirebaseCrashlytics crashlytics = FirebaseCrashlytics.getInstance();
-            crashlytics.log("lid: icon=" + iconName);
-            crashlytics.recordException(ex);
-        }
-
-        TextView textView = view.findViewById(R.id.text_land);
-        textView.setText(name);
 
         return view;
     }
@@ -96,7 +97,7 @@ public class LandItemAdapter extends ArrayAdapter<String> implements View.OnClic
             v.setChecked(false);
         }
 
-        if (view != null && view instanceof RadioButton) {
+        if (view instanceof RadioButton) {
             RadioButton radio = (RadioButton) view;
 
             if (!radio.isChecked()) {

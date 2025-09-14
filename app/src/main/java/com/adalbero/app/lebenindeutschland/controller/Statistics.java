@@ -61,7 +61,7 @@ public class Statistics {
 
 
     public float getRating(List<String> questions) {
-        if (questions == null || questions.size() == 0) return 0f;
+        if (questions == null || questions.isEmpty()) return 0f;
 
         float rating = 0f;
 
@@ -77,7 +77,7 @@ public class Statistics {
     }
 
     public float getAnswerProgress(List<String> questions) {
-        if (questions == null || questions.size() == 0) return 0f;
+        if (questions == null || questions.isEmpty()) return 0f;
 
         float progress = 0f;
 
@@ -91,7 +91,7 @@ public class Statistics {
     }
 
     public float getRightProgress(List<String> questions) {
-        if (questions == null || questions.size() == 0) return 0f;
+        if (questions == null || questions.isEmpty()) return 0f;
 
         float progress = 0f;
         int answered = 0;
@@ -108,7 +108,7 @@ public class Statistics {
     }
 
     public float getLastRightProgress(List<String> questions) {
-        if (questions == null || questions.size() == 0) return 0f;
+        if (questions == null || questions.isEmpty()) return 0f;
 
         float progress = 0f;
         int answered = 0;
@@ -135,8 +135,8 @@ public class Statistics {
         }
     }
 
-    public class Info {
-        private String num;
+    public static class Info {
+        private final String num;
         private List<String> mAnswers;
 
         public Info(String num) {
@@ -158,7 +158,6 @@ public class Statistics {
 
         public void add(boolean answer) {
             String value = (answer ? ANSWER_RIGHT : ANSWER_WRONG);
-            getAnswers();
 
             mAnswers.add(0, value);
             int n = getHistorySize();
@@ -204,9 +203,7 @@ public class Statistics {
                 }
             }
 
-            float rating = (float) points / totalWeight;
-
-            return rating;
+            return (float) points / totalWeight;
         }
 
         public int getRatingInt() {
