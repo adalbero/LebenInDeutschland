@@ -2,17 +2,12 @@
 <project version="4">
   <component name="ProjectModuleManager">
     <modules>
-      <module fileurl="file://$PROJECT_DIR$/.idea/modules/LebenInDeutschland.iml" filepath="$PROJECT_DIR$/.idea/modules/LebenInDeutschland.iml" />
       <module fileurl="file://$PROJECT_DIR$/.idea/modules/FragenSpider/LebenInDeutschland.FragenSpider.iml" filepath="$PROJECT_DIR$/.idea/modules/FragenSpider/LebenInDeutschland.FragenSpider.iml" />
-      <module fileurl="file://$PROJECT_DIR$/.idea/modules/FragenSpider/LebenInDeutschland.FragenSpider.main.iml" filepath="$PROJECT_DIR$/.idea/modules/FragenSpider/LebenInDeutschland.FragenSpider.main.iml" />
-      <module fileurl="file://$PROJECT_DIR$/.idea/modules/FragenSpider/LebenInDeutschland.FragenSpider.test.iml" filepath="$PROJECT_DIR$/.idea/modules/FragenSpider/LebenInDeutschland.FragenSpider.test.iml" />
       <module fileurl="file://$PROJECT_DIR$/.idea/modules/app/LebenInDeutschland.app.iml" filepath="$PROJECT_DIR$/.idea/modules/app/LebenInDeutschland.app.iml" />
       <module fileurl="file://$PROJECT_DIR$/.idea/modules/app/LebenInDeutschland.app.androidTest.iml" filepath="$PROJECT_DIR$/.idea/modules/app/LebenInDeutschland.app.androidTest.iml" />
       <module fileurl="file://$PROJECT_DIR$/.idea/modules/app/LebenInDeutschland.app.main.iml" filepath="$PROJECT_DIR$/.idea/modules/app/LebenInDeutschland.app.main.iml" />
       <module fileurl="file://$PROJECT_DIR$/.idea/modules/app/LebenInDeutschland.app.unitTest.iml" filepath="$PROJECT_DIR$/.idea/modules/app/LebenInDeutschland.app.unitTest.iml" />
       <module fileurl="file://$PROJECT_DIR$/.idea/modules/sandbox/LebenInDeutschland.sandbox.iml" filepath="$PROJECT_DIR$/.idea/modules/sandbox/LebenInDeutschland.sandbox.iml" />
-      <module fileurl="file://$PROJECT_DIR$/.idea/modules/sandbox/LebenInDeutschland.sandbox.main.iml" filepath="$PROJECT_DIR$/.idea/modules/sandbox/LebenInDeutschland.sandbox.main.iml" />
-      <module fileurl="file://$PROJECT_DIR$/.idea/modules/sandbox/LebenInDeutschland.sandbox.test.iml" filepath="$PROJECT_DIR$/.idea/modules/sandbox/LebenInDeutschland.sandbox.test.iml" />
     </modules>
   </component>
 </project>

@@ -3,7 +3,6 @@
   <component name="CompilerConfiguration">
     <bytecodeTargetLevel target="11">
       <module name="FragenSpider" target="1.7" />
-      <module name="LebenInDeutschland.app" target="21" />
       <module name="sandbox" target="1.7" />
     </bytecodeTargetLevel>
   </component>

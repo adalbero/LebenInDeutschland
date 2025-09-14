@@ -4,10 +4,10 @@ android {
     compileSdk 34
     defaultConfig {
         applicationId "com.adalbero.app.lebenindeutchland"
-        minSdkVersion 21
+        minSdkVersion 24
         targetSdk 34
         versionCode 35
-        versionName '1.14.0'
+        versionName '1.15.0'
         testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
         vectorDrawables.useSupportLibrary = true
         multiDexEnabled true
@@ -26,8 +26,8 @@ android {
     productFlavors {
     }
     compileOptions {
-        sourceCompatibility = JavaVersion.VERSION_1_8
-        targetCompatibility = JavaVersion.VERSION_1_8
+        sourceCompatibility = JavaVersion.VERSION_11
+        targetCompatibility = JavaVersion.VERSION_11
     }
     namespace 'com.adalbero.app.lebenindeutschland'
 }
@@ -39,12 +39,12 @@ dependencies {
     implementation 'androidx.constraintlayout:constraintlayout:2.2.1'
     implementation 'androidx.multidex:multidex:2.0.1'
 
-    implementation 'com.google.android.material:material:1.12.0'
+    implementation 'com.google.android.material:material:1.13.0'
     implementation 'com.google.android.ump:user-messaging-platform:3.2.0'
 
-    implementation 'com.google.firebase:firebase-analytics:22.4.0'
+    implementation 'com.google.firebase:firebase-analytics:23.0.0'
     implementation 'com.google.firebase:firebase-ads:23.6.0'
-    implementation 'com.google.firebase:firebase-crashlytics:19.4.3'
+    implementation 'com.google.firebase:firebase-crashlytics:20.0.1'
 
     implementation 'com.android.support:multidex:1.0.3'
 }
