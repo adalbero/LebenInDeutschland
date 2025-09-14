@@ -7,20 +7,22 @@ import androidx.appcompat.app.AlertDialog;
 
 import android.widget.Toast;
 
+import com.adalbero.app.lebenindeutschland.R;
+
 /**
  * Created by Adalbero on 01/06/2017.
  */
 
 public class Dialog {
     public static void promptDialog(Context context, String text) {
-        AlertDialog.Builder builder = new AlertDialog.Builder(context);
+        AlertDialog.Builder builder = new AlertDialog.Builder(context, R.style.AppDialog);
         builder.setMessage(text)
                 .setPositiveButton("OK", null);
         builder.show();
     }
 
     public static void appNotFoundDialog(final Context context, final String text, final String pack) {
-        AlertDialog.Builder builder = new AlertDialog.Builder(context);
+        AlertDialog.Builder builder = new AlertDialog.Builder(context, R.style.AppDialog);
         builder.setMessage(text + " not found");
         builder.setPositiveButton("OK", null);
         builder.setNegativeButton("Install", (dialogInterface, i) -> {

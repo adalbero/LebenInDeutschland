@@ -16,7 +16,9 @@ import androidx.appcompat.app.AlertDialog;
 import android.util.Log;
 import android.widget.Toast;
 
+import com.adalbero.app.lebenindeutschland.R;
 import com.adalbero.app.lebenindeutschland.controller.Analytics;
+import com.adalbero.app.lebenindeutschland.controller.AppController;
 import com.adalbero.app.lebenindeutschland.controller.Debug;
 import com.adalbero.app.lebenindeutschland.controller.Statistics;
 import com.adalbero.app.lebenindeutschland.controller.Store;
@@ -222,7 +224,7 @@ public class SettingsFragment extends PreferenceFragment implements Preference.O
         final Context context = getActivity();
         String title = "Remove Statistics";
         String text = "This will remove all statistics.\nDo you confirm?";
-        AlertDialog.Builder builder = new AlertDialog.Builder(context);
+        AlertDialog.Builder builder = new AlertDialog.Builder(context, R.style.AppDialog);
         builder.setMessage(text)
                 .setTitle(title)
                 .setPositiveButton("Yes", new DialogInterface.OnClickListener() {

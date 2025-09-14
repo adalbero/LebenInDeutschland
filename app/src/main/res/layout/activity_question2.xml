@@ -1,15 +1,29 @@
 <?xml version="1.0" encoding="utf-8"?>
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/container"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="@color/colorBackground"
     android:orientation="vertical">
 
+    <androidx.appcompat.widget.Toolbar
+        android:id="@+id/toolbar"
+        android:layout_width="match_parent"
+        android:layout_height="?attr/actionBarSize"
+        android:elevation="4dp"
+        android:theme="@style/AppTheme"
+        android:background="@color/colorTitleBar"
+        app:titleTextColor="@color/colorOnTitleBar"
+        app:subtitleTextColor="@color/colorOnTitleBar"
+        app:navigationIcon="?attr/homeAsUpIndicator"
+        />
+
     <ScrollView
         android:id="@+id/scroll_view"
         android:layout_width="match_parent"
         android:layout_height="0dp"
+        android:layout_marginTop="8dp"
         android:layout_weight="1">
 
         <include
@@ -31,9 +45,7 @@
         android:layout_marginBottom="0dp"
         app:adSize="SMART_BANNER"
         app:adUnitId="@string/lid_banner_2020_c"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintLeft_toLeftOf="parent"
-        app:layout_constraintRight_toRightOf="parent" />
+        />
 
     <include
         android:id="@+id/include"

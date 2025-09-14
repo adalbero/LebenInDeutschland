@@ -5,7 +5,7 @@ import android.os.Bundle;
 
 import androidx.annotation.NonNull;
 import androidx.core.content.ContextCompat;
-import androidx.appcompat.app.AppCompatActivity;
+
 import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
@@ -23,6 +23,7 @@ import com.adalbero.app.lebenindeutschland.data.exam.Exam;
 import com.adalbero.app.lebenindeutschland.data.question.Question;
 import com.adalbero.app.lebenindeutschland.data.result.ExamResult;
 import com.adalbero.app.lebenindeutschland.data.result.ResultInfo;
+import com.adalbero.app.lebenindeutschland.ui.common.AppBaseActivity;
 import com.adalbero.app.lebenindeutschland.ui.common.ProgressView;
 import com.adalbero.app.lebenindeutschland.ui.common.ResultCallback;
 import com.adalbero.app.lebenindeutschland.ui.common.StatView;
@@ -34,7 +35,7 @@ import java.util.List;
 import java.util.Locale;
 import java.util.Map;
 
-public class ExamActivity extends AppCompatActivity implements ResultCallback {
+public class ExamActivity extends AppBaseActivity implements ResultCallback {
 
     private FirebaseAnalytics mFirebaseAnalytics;
 
@@ -199,7 +200,7 @@ public class ExamActivity extends AppCompatActivity implements ResultCallback {
     private void updateResult() {
         ResultInfo resultInfo = mResult.getResult();
 
-        getSupportActionBar().setSubtitle(String.format(Locale.US, "%d of %d", mResult.getResult().getAnswered(), mResult.getCount()));
+        this.setSubtitle(String.format(Locale.US, "%d of %d", mResult.getResult().getAnswered(), mResult.getCount()));
 
         updateStat();
 

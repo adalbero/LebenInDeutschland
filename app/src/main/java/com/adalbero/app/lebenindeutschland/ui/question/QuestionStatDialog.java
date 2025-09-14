@@ -38,7 +38,7 @@ public class QuestionStatDialog extends DialogFragment {
 
         Context context = getActivity();
 
-        AlertDialog.Builder builder = new AlertDialog.Builder(context);
+        AlertDialog.Builder builder = new AlertDialog.Builder(context, R.style.AppDialog);
 
         LayoutInflater inflater = getActivity().getLayoutInflater();
 

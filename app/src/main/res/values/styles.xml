@@ -1,15 +1,31 @@
 <resources>
 
     <!-- Base application theme. -->
-    <style name="AppTheme" parent="Theme.AppCompat.Light.DarkActionBar">
-        <!-- Customize your theme here. -->
+    <style name="AppTheme" parent="Theme.AppCompat.DayNight.NoActionBar">
+        <!-- App Background Color -->
+        <item name="android:windowBackground">@color/colorApp</item>
+
+        <!-- Default Text Color -->
+        <item name="android:textColor">@color/colorOnBackground</item>
+
+        <!-- Material Design Colors: https://m2.material.io/develop/android/theming/color -->
         <item name="colorPrimary">@color/colorPrimary</item>
-        <item name="colorPrimaryDark">@color/colorPrimaryDark</item>
-        <item name="colorAccent">@color/colorAccent</item>
+        <item name="colorPrimaryVariant">@color/colorPrimaryDark</item>
+        <item name="colorOnPrimary">@color/White</item>
+        <item name="colorAccent">@color/colorPrimary</item>
+
+        <item name="colorSecondary">@color/colorSecondary</item>
+        <item name="colorSecondaryVariant">@color/colorSecondaryVariant</item>
+        <item name="colorOnSecondary">@color/colorOnSecondary</item>
+
+        <!-- Toolbar colors -->
+        <item name="colorControlNormal">@color/colorOnPrimary</item>
+        <item name="android:textColorPrimary">@color/colorOnBackground</item>
+        <item name="android:textColorSecondary">@color/colorOnBackground</item>
     </style>
 
-    <style name="StatDialog" parent="Theme.AppCompat.Light.Dialog.Alert">
-        <!-- Used for the background -->
-        <item name="android:background">@color/colorStatBG</item>
+    <style name="AppDialog" parent="Theme.AppCompat.DayNight.Dialog.Alert">
+        <item name="android:windowBackground">@color/colorSurface</item>
+        <item name="android:textColor">@color/colorOnSurface</item>
     </style>
 </resources>

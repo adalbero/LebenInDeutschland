@@ -34,7 +34,7 @@ public class ExamStatDialog extends DialogFragment {
             mExam = AppController.getCurrentExam();
         }
 
-        AlertDialog.Builder builder = new AlertDialog.Builder(getActivity());
+        AlertDialog.Builder builder = new AlertDialog.Builder(getActivity(), R.style.AppDialog);
 
         LayoutInflater inflater = getActivity().getLayoutInflater();
 

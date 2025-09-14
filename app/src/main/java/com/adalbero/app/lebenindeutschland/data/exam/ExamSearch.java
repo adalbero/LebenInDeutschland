@@ -140,7 +140,7 @@ public class ExamSearch extends Exam {
     }
 
     public void dialog(Activity activity, final ResultCallback callback) {
-        AlertDialog.Builder builder = new AlertDialog.Builder(activity);
+        AlertDialog.Builder builder = new AlertDialog.Builder(activity, R.style.AppDialog);
         builder.setTitle("Search for...");
 
         final EditText input = new EditText(activity);

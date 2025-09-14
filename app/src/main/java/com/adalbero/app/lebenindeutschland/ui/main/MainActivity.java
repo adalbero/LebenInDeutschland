@@ -4,7 +4,6 @@ import android.content.Intent;
 import android.os.Bundle;
 
 import androidx.annotation.NonNull;
-import androidx.appcompat.app.AppCompatActivity;
 
 import android.util.Log;
 import android.view.Menu;
@@ -21,6 +20,7 @@ import com.adalbero.app.lebenindeutschland.data.exam.ExamHeader;
 import com.adalbero.app.lebenindeutschland.data.exam.ExamLand;
 import com.adalbero.app.lebenindeutschland.data.exam.ExamSearch;
 import com.adalbero.app.lebenindeutschland.data.exam.ExamTag;
+import com.adalbero.app.lebenindeutschland.ui.common.AppBaseActivity;
 import com.adalbero.app.lebenindeutschland.ui.common.ResultCallback;
 import com.adalbero.app.lebenindeutschland.ui.exam.ExamActivity;
 import com.adalbero.app.lebenindeutschland.ui.settings.SettingsActivity;
@@ -36,7 +36,7 @@ import java.util.Collections;
 import java.util.List;
 import java.util.concurrent.atomic.AtomicBoolean;
 
-public class MainActivity extends AppCompatActivity implements ResultCallback {
+public class MainActivity extends AppBaseActivity implements ResultCallback {
 
     private static final String TAG = "lid:MainActivity";
 

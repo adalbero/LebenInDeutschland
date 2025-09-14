@@ -2,11 +2,11 @@ package com.adalbero.app.lebenindeutschland.ui.settings;
 
 import android.os.Bundle;
 import android.os.PersistableBundle;
-import androidx.appcompat.app.AppCompatActivity;
 
 import com.adalbero.app.lebenindeutschland.R;
+import com.adalbero.app.lebenindeutschland.ui.common.AppBaseActivity;
 
-public class SettingsActivity extends AppCompatActivity {
+public class SettingsActivity extends AppBaseActivity {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -14,7 +14,7 @@ public class SettingsActivity extends AppCompatActivity {
 
         setContentView(R.layout.activity_settings);
 
-        getSupportActionBar().setTitle("Settings");
+        this.setTitle("Settings");
     }
 
     @Override

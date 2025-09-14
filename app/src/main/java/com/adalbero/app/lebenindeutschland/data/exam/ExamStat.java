@@ -20,7 +20,7 @@ public class ExamStat extends Exam {
             R.color.Red_400,
             R.color.Red_200,
             R.color.Red_100,
-            R.color.BlueGray_100,
+            R.color.Blue_Gray_100,
             R.color.Green_100,
             R.color.Green_200
     };

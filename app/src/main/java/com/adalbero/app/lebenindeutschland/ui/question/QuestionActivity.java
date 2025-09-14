@@ -28,6 +28,7 @@ import com.adalbero.app.lebenindeutschland.data.exam.Exam;
 import com.adalbero.app.lebenindeutschland.data.question.Question;
 import com.adalbero.app.lebenindeutschland.data.result.ExamResult;
 import com.adalbero.app.lebenindeutschland.data.result.ResultInfo;
+import com.adalbero.app.lebenindeutschland.ui.common.AppBaseActivity;
 import com.adalbero.app.lebenindeutschland.ui.common.ProgressView;
 import com.adalbero.app.lebenindeutschland.ui.common.ResultCallback;
 import com.google.firebase.analytics.FirebaseAnalytics;
@@ -36,7 +37,7 @@ import com.google.firebase.crashlytics.FirebaseCrashlytics;
 import java.util.List;
 import java.util.Locale;
 
-public class QuestionActivity extends AppCompatActivity implements ResultCallback {
+public class QuestionActivity extends AppBaseActivity implements ResultCallback {
 
     private FirebaseAnalytics mFirebaseAnalytics;
 
@@ -150,8 +151,8 @@ public class QuestionActivity extends AppCompatActivity implements ResultCallbac
         String num = mQuestionList.get(idx);
         mQuestion = AppController.getQuestionDB().getQuestion(num);
 
-        getSupportActionBar().setTitle(String.format(Locale.US, "Question %s", num));
-        getSupportActionBar().setSubtitle(String.format(Locale.US, "%d of %d", (idx + 1), count));
+        this.setTitle(String.format(Locale.US, "Question %s", num));
+        this.setSubtitle(String.format(Locale.US, "%d of %d", (idx + 1), count));
 
         ScrollView scrollView = findViewById(R.id.scroll_view);
         scrollView.scrollTo(0, 0);
