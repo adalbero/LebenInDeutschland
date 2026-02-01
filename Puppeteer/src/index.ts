@@ -21,26 +21,27 @@ interface Bundesland {
 const bundeslands: Bundesland = {
     // '': '300',
 
-    // 'Brandenburg': 'BB',
-    // 'Berlin': 'BE',
-    // 'Baden-Württemberg': 'BW',
-    // 'Bayern': 'BY',
-    // 'Bremen': 'HB',
+    'Brandenburg': 'BB',
+    'Berlin': 'BE',
+    'Baden-Württemberg': 'BW',
+    'Bayern': 'BY',
 
-    // 'Hessen': 'HE',
-    // 'Hamburg': 'HH',
-    // 'Mecklenburg-Vorpommern': 'MV',
-    // 'Niedersachsen': 'NI',
-    // 'Nordrhein-Westfalen': 'NW',
+    'Bremen': 'HB',
+    'Hessen': 'HE',
+    'Hamburg': 'HH',
+    'Mecklenburg-Vorpommern': 'MV',
 
-    // 'Rheinland-Pfalz': 'RP',
-    // 'Schleswig-Holstein': 'SH',
-    // 'Saarland': 'SL',
+    'Niedersachsen': 'NI',
+    'Nordrhein-Westfalen': 'NW',
+    'Rheinland-Pfalz': 'RP',
+    'Schleswig-Holstein': 'SH',
 
+    'Saarland': 'SL',
     'Sachsen': 'SN',
     'Sachsen-Anhalt': 'ST',
     'Thüringen': 'TH'
 };
+
 const questions: Question[] = [];
 const URL = 'https://oet.bamf.de/ords/oetut/';
 const NAME = 'BAMF';
@@ -64,7 +65,9 @@ const NAME = 'BAMF';
                 questions
             }
 
-            fs.writeFileSync(`data/data-${data.timestamp.substring(0, 10)}-${data.name}.json`, JSON.stringify(data, null, 2));
+            const filename = `data/data-${data.timestamp.substring(0, 10)}-${data.name}.json`;
+            fs.writeFileSync(filename, JSON.stringify(data, null, 2));
+            console.log(`==> Saved ${data.questions.length} questions to ${filename}`);
         }
         // console.log(data);
     } catch (e: any) {
@@ -83,6 +86,7 @@ async function fetchQuestions(page: Page, bundesland: string) {
     const end = Math.min(n, SIZE);
 
     await selectBundesland(page, bundesland);
+
     for (let i = start; i < end; i++) {
         await clickNext(page);
 
