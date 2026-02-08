@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="colorSurface">@color/Blue_Gray_600</color>
+    <color name="colorSurfaceLight">@color/Blue_Gray_700</color>
+    <color name="colorOnSurface">@color/White</color>
+    <color name="colorOnSurfaceVariant">@color/Gray_100</color>
+
+    <color name="colorExamHeader">@color/Gray_100</color>
+
+    <color name="colorRightLight">@color/Green_800</color>
+    <color name="colorWrongLight">@color/Red_800</color>
+
+    <color name="colorQuestion">@color/White</color>
+    <color name="colorQuestionBG">@color/Gray_800</color>
+    <color name="colorOptions">@color/White</color>
+    <color name="colorOptionsBG">@color/Gray_700</color>
+</resources>

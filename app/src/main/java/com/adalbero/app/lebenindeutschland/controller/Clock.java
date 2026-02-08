@@ -88,7 +88,7 @@ public class Clock {
 
         mClockView.setText(format(mTime));
         if (stop || isTimeout()) {
-            mClockView.setTextColor(ContextCompat.getColor(mClockView.getContext(), R.color.colorNotAnswered));
+            mClockView.setTextColor(ContextCompat.getColor(mClockView.getContext(), R.color.colorOnSurfaceVariant));
         }
 
         if (isTimeout()) {

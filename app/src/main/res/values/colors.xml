@@ -19,6 +19,10 @@
     <color name="colorOnSurface">@color/Black</color>
     <color name="colorOnSurfaceVariant">@color/Gray_700</color>
 
+    <color name="colorExamHeader">@color/Black</color>
+    <color name="colorExamTitle">@color/Black</color>
+    <color name="colorExamSubtitle">@color/Gray_700</color>
+
     <color name="colorRightLight">@color/Green_100</color>
     <color name="colorRight">@color/Green_200</color>
     <color name="colorRightDark">@color/Green_300</color>
@@ -38,6 +42,8 @@
     <color name="colorArea3">@color/Light_Blue_200</color>
 
     <color name="colorQuestion">@color/Gray_700</color>
+    <color name="colorQuestionBG">@color/White</color>
+    <color name="colorQuestionTitle">@color/Gray_700</color>
     <color name="colorButton">@color/Indigo_400</color>
     <color name="colorButtonPressed">@color/Indigo_500</color>
     <color name="colorOptions">@color/Gray_700</color>

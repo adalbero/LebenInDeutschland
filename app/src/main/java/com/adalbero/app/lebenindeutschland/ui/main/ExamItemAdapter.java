@@ -14,6 +14,7 @@ import android.widget.ImageView;
 import android.widget.TextView;
 
 import androidx.annotation.NonNull;
+import androidx.core.content.ContextCompat;
 
 import com.adalbero.app.lebenindeutschland.R;
 import com.adalbero.app.lebenindeutschland.controller.AppController;
@@ -85,6 +86,9 @@ public class ExamItemAdapter extends ArrayAdapter<Exam> {
             text_name.setText(name);
             text_name.setTypeface(null, style);
             text_name.setGravity(gravity);
+            if (exam instanceof ExamHeader) {
+                text_name.setTextColor(ContextCompat.getColor(view.getContext(), R.color.colorExamHeader));
+            }
 
             TextView text_subtitle = view.findViewById(R.id.text_subtitle);
             String subtitle = exam.getSubtitle();
