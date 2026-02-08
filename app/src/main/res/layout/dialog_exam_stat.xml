@@ -88,7 +88,9 @@
                 android:layout_marginTop="0dp"
                 android:text="History"
                 android:textSize="18sp"
-                android:textStyle="bold" />
+                android:textStyle="bold"
+                android:textColor="@color/colorOnSurfaceVariant"
+                />
 
             <LinearLayout
                 android:layout_width="match_parent"
@@ -110,7 +112,9 @@
                     android:layout_height="wrap_content"
                     android:layout_weight="1"
                     android:text="Label"
-                    android:textSize="18sp" />
+                    android:textSize="18sp"
+                    android:textColor="@color/colorOnSurfaceVariant"
+                    />
 
                 <TextView
                     android:id="@+id/view_value1"
@@ -118,7 +122,9 @@
                     android:layout_height="wrap_content"
                     android:layout_weight="0"
                     android:text="Value"
-                    android:textSize="18sp" />
+                    android:textSize="18sp"
+                    android:textColor="@color/colorOnSurfaceVariant"
+                    />
 
             </LinearLayout>
 
@@ -142,7 +148,9 @@
                     android:layout_height="wrap_content"
                     android:layout_weight="1"
                     android:text="Label"
-                    android:textSize="18sp" />
+                    android:textSize="18sp"
+                    android:textColor="@color/colorOnSurfaceVariant"
+                    />
 
                 <TextView
                     android:id="@+id/view_value2"
@@ -150,7 +158,9 @@
                     android:layout_height="wrap_content"
                     android:layout_weight="0"
                     android:text="Value"
-                    android:textSize="18sp" />
+                    android:textSize="18sp"
+                    android:textColor="@color/colorOnSurfaceVariant"
+                    />
 
             </LinearLayout>
 
@@ -174,7 +184,9 @@
                     android:layout_height="wrap_content"
                     android:layout_weight="1"
                     android:text="Label"
-                    android:textSize="18sp" />
+                    android:textSize="18sp"
+                    android:textColor="@color/colorOnSurfaceVariant"
+                    />
 
                 <TextView
                     android:id="@+id/view_value3"
@@ -182,7 +194,9 @@
                     android:layout_height="wrap_content"
                     android:layout_weight="0"
                     android:text="Value"
-                    android:textSize="18sp" />
+                    android:textSize="18sp"
+                    android:textColor="@color/colorOnSurfaceVariant"
+                    />
 
             </LinearLayout>
 

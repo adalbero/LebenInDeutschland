@@ -22,6 +22,7 @@
             android:text="Progress:"
             android:textSize="24sp"
             android:textStyle="bold"
+            android:textColor="@color/colorOnSurfaceVariant"
             app:layout_constraintLeft_toLeftOf="parent"
             app:layout_constraintTop_toTopOf="parent" />
 
@@ -29,11 +30,12 @@
             android:id="@+id/view_clock"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginRight="8dp"
             android:layout_marginTop="0dp"
+            android:layout_marginRight="8dp"
             android:text="00:00"
             android:textSize="24sp"
             android:textStyle="bold"
+            android:textColor="@color/colorOnSurfaceVariant"
             app:layout_constraintRight_toRightOf="parent"
             app:layout_constraintTop_toTopOf="@+id/view_header" />
 
@@ -45,6 +47,7 @@
             android:layout_marginTop="0dp"
             android:text="Answered"
             android:textSize="18sp"
+            android:textColor="@color/colorOnSurfaceVariant"
             app:layout_constraintLeft_toLeftOf="@+id/view_header"
             app:layout_constraintTop_toBottomOf="@+id/view_header" />
 
@@ -52,10 +55,11 @@
             android:id="@+id/text_value1"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginRight="0dp"
             android:layout_marginTop="0dp"
+            android:layout_marginRight="0dp"
             android:text="0"
             android:textSize="18sp"
+            android:textColor="@color/colorOnSurfaceVariant"
             app:layout_constraintRight_toRightOf="@+id/view_clock"
             app:layout_constraintTop_toTopOf="@+id/view_question" />
 
@@ -64,10 +68,11 @@
             android:layout_width="0dp"
             android:layout_height="wrap_content"
             android:layout_marginLeft="0dp"
-            android:layout_marginRight="0dp"
             android:layout_marginTop="-1dp"
+            android:layout_marginRight="0dp"
             android:text="Right"
             android:textSize="18sp"
+            android:textColor="@color/colorOnSurfaceVariant"
             app:layout_constraintHorizontal_bias="0.5"
             app:layout_constraintLeft_toLeftOf="@+id/view_question"
             app:layout_constraintRight_toRightOf="@+id/view_question"
@@ -77,10 +82,11 @@
             android:id="@+id/text_value2"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginRight="0dp"
             android:layout_marginTop="0dp"
+            android:layout_marginRight="0dp"
             android:text="0"
             android:textSize="18sp"
+            android:textColor="@color/colorOnSurfaceVariant"
             app:layout_constraintRight_toRightOf="@+id/text_value1"
             app:layout_constraintTop_toTopOf="@+id/text_label2" />
 
@@ -89,10 +95,10 @@
             android:id="@+id/view_progress"
             android:layout_width="0dp"
             android:layout_height="10dp"
-            android:layout_marginBottom="8dp"
             android:layout_marginLeft="8dp"
-            android:layout_marginRight="8dp"
             android:layout_marginTop="8dp"
+            android:layout_marginRight="8dp"
+            android:layout_marginBottom="8dp"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintHorizontal_bias="0.0"
             app:layout_constraintLeft_toLeftOf="parent"
@@ -104,10 +110,10 @@
             android:id="@+id/view_result"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginBottom="8dp"
             android:layout_marginLeft="8dp"
-            android:layout_marginRight="8dp"
             android:layout_marginTop="8dp"
+            android:layout_marginRight="8dp"
+            android:layout_marginBottom="8dp"
             android:rotation="-45"
             android:text="Pass"
             android:textSize="30sp"
@@ -118,8 +124,8 @@
             app:layout_constraintLeft_toLeftOf="parent"
             app:layout_constraintRight_toRightOf="parent"
             app:layout_constraintTop_toTopOf="parent"
-            tools:visibility="visible"
-            app:layout_constraintVertical_bias="0.39" />
+            app:layout_constraintVertical_bias="0.39"
+            tools:visibility="visible" />
 
     </androidx.constraintlayout.widget.ConstraintLayout>
 
@@ -140,7 +146,9 @@
             android:layout_marginTop="4dp"
             android:text="Stat.:"
             android:textSize="24sp"
-            android:textStyle="bold" />
+            android:textStyle="bold"
+            android:textColor="@color/colorOnSurfaceVariant"
+            />
 
         <com.adalbero.app.lebenindeutschland.ui.common.StatView
             android:id="@+id/view_stat"
@@ -161,7 +169,9 @@
             android:layout_marginRight="8dp"
             android:layout_marginTop="0dp"
             android:text="100%"
-            android:textSize="18sp" />
+            android:textSize="18sp"
+            android:textColor="@color/colorOnSurfaceVariant"
+            />
 
     </LinearLayout>
 </LinearLayout>
