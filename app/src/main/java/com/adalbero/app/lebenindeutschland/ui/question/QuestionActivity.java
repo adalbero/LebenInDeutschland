@@ -266,10 +266,10 @@ public class QuestionActivity extends AppBaseActivity implements ResultCallback 
 
     private void doSpeechRecognize() {
         boolean ok = mVoice.speechRecognizer(this, "de-DE",
-                "Sagen Sie: " +
-                        "\nder Antworttext" +
-                        "\noder: \"Antwort\" (A,B,C,D)" +
-                        "\noder: \"Nummer\" (1,2,3,4)");
+                "Sagen Sie" +
+                        " der Antworttext" +
+                        ", oder: \"Nummer\" (1,2,3,4)");
+//                        ", oder: \"Antwort\" (A,B,C,D)");
 
         if (!ok) {
             String msg = "Speech Recognizer not found in this device";
