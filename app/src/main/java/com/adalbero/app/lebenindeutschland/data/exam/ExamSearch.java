@@ -148,12 +148,12 @@ public class ExamSearch extends Exam {
         input.setText(getTermsString());
         builder.setView(input);
 
-        builder.setPositiveButton("OK", (dialog, which) -> {
+        builder.setPositiveButton(android.R.string.ok, (dialog, which) -> {
             String text = input.getText().toString();
             setTermsString(text);
             callback.onResult(ExamSearch.this, getName());
         });
-        builder.setNegativeButton("Cancel", (dialog, which) -> dialog.cancel());
+        builder.setNegativeButton(android.R.string.cancel, (dialog, which) -> dialog.cancel());
 
         builder.show();
     }
