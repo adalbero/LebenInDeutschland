@@ -1,0 +1,247 @@
+{
+  "name": "BAMF",
+  "url": "https://oet.bamf.de/ords/oetut/",
+  "timestamp": "2025-11-23T17:07:59.264Z",
+  "questions": [
+    {
+      "number": "BB-1",
+      "title": "MD5:37532047eba1ec68e6e4ab8daa20cb2d",
+      "options": [
+        "1",
+        "2",
+        "3",
+        "4"
+      ],
+      "correct": 0,
+      "bundesland": "Brandenburg"
+    },
+    {
+      "number": "BB-2",
+      "title": "MD5:a24d52d87bae7fd147dfbbfaf2b2eb81",
+      "options": [
+        "Prignitz",
+        "Rhein-Sieg-Kreis",
+        "Vogtlandkreis",
+        "Amberg-Sulzbach"
+      ],
+      "correct": 0,
+      "bundesland": "Brandenburg"
+    },
+    {
+      "number": "BB-3",
+      "title": "MD5:28cec78d8999a59d94d8737e825e918a",
+      "options": [
+        "3",
+        "4",
+        "5",
+        "6"
+      ],
+      "correct": 2,
+      "bundesland": "Brandenburg"
+    },
+    {
+      "number": "BB-4",
+      "title": "MD5:9584003782f400abb013443d838b72cb",
+      "options": [
+        "14",
+        "16",
+        "18",
+        "20"
+      ],
+      "correct": 1,
+      "bundesland": "Brandenburg"
+    },
+    {
+      "number": "BB-5",
+      "title": "MD5:a0ee0fd0c6ed47b7eb6034b3d77c73fa",
+      "options": [
+        "blau-weiß-rot",
+        "rot-weiß",
+        "grün-weiß-rot",
+        "schwarz-gelb"
+      ],
+      "correct": 1,
+      "bundesland": "Brandenburg"
+    },
+    {
+      "number": "BB-6",
+      "title": "MD5:ae3b64bb5ef447fbb660800061868050",
+      "options": [
+        "bei den Kirchen ",
+        "beim Ordnungsamt der Gemeinde",
+        "bei der Landeszentrale für politische Bildung",
+        "bei der Verbraucherzentrale"
+      ],
+      "correct": 2,
+      "bundesland": "Brandenburg"
+    },
+    {
+      "number": "BB-7",
+      "title": "MD5:07f8f34054fb456fa598362c868c1cb7",
+      "options": [
+        "Potsdam.",
+        "Cottbus.",
+        "Brandenburg.",
+        "Frankfurt/Oder."
+      ],
+      "correct": 0,
+      "bundesland": "Brandenburg"
+    },
+    {
+      "number": "BB-8",
+      "title": "MD5:351f0783e6a33c844846130f5f21212a",
+      "options": [
+        "1",
+        "2",
+        "3",
+        "4"
+      ],
+      "correct": 3,
+      "bundesland": "Brandenburg"
+    },
+    {
+      "number": "BB-9",
+      "title": "MD5:fd603a48e56e850b1fda0c0ed9fe6be9",
+      "options": [
+        "Erster Minister/ Erste Ministerin",
+        "Premierminister/ Premierministerin",
+        "Bürgermeister/ Bürgermeisterin",
+        "Ministerpräsident/ Ministerpräsidentin"
+      ],
+      "correct": 3,
+      "bundesland": "Brandenburg"
+    },
+    {
+      "number": "BB-10",
+      "title": "MD5:ea687ad06de3749f7d9358917b410e45",
+      "options": [
+        "Justizminister/ Justizministerin",
+        "Außenminister/ Außenministerin",
+        "Finanzminister/ Finanzministerin",
+        "Innenminister/ Innenministerin"
+      ],
+      "correct": 1,
+      "bundesland": "Brandenburg"
+    },
+    {
+      "number": "BE-1",
+      "title": "MD5:3cd1fa8958e2944bd9af9300f63c51ab",
+      "options": [
+        "1",
+        "2",
+        "3",
+        "4"
+      ],
+      "correct": 3,
+      "bundesland": "Berlin"
+    },
+    {
+      "number": "BE-2",
+      "title": "MD5:6d9cc62bb65ed865970b160b130343bd",
+      "options": [
+        "Altona",
+        "Prignitz",
+        "Pankow",
+        "Mecklenburgische Seenplatte"
+      ],
+      "correct": 2,
+      "bundesland": "Berlin"
+    },
+    {
+      "number": "BE-3",
+      "title": "MD5:732b9a443df37949249faa1ffb9e084c",
+      "options": [
+        "3",
+        "4",
+        "5",
+        "6"
+      ],
+      "correct": 2,
+      "bundesland": "Berlin"
+    },
+    {
+      "number": "BE-4",
+      "title": "MD5:5156e000bcee6b39d5db7b35672a8e58",
+      "options": [
+        "14",
+        "16",
+        "18",
+        "20"
+      ],
+      "correct": 1,
+      "bundesland": "Berlin"
+    },
+    {
+      "number": "BE-5",
+      "title": "MD5:39d8a1be4eda973a98c1886d13123b42",
+      "options": [
+        "blau-weiß-rot",
+        "weiß-rot",
+        "grün-weiß-rot",
+        "schwarz-gold"
+      ],
+      "correct": 1,
+      "bundesland": "Berlin"
+    },
+    {
+      "number": "BE-6",
+      "title": "MD5:81b31626f4537ed6ea8c94bd39e72037",
+      "options": [
+        "beim Ordnungsamt der Gemeinde",
+        "bei den Kirchen ",
+        "bei der Verbraucherzentrale",
+        "bei der Landeszentrale für politische Bildung"
+      ],
+      "correct": 3,
+      "bundesland": "Berlin"
+    },
+    {
+      "number": "BE-7",
+      "title": "MD5:e562c4f4063179c58a6d964527f44b6c",
+      "options": [
+        "Berlin",
+        "Saarland",
+        "Brandenburg",
+        "Hessen"
+      ],
+      "correct": 0,
+      "bundesland": "Berlin"
+    },
+    {
+      "number": "BE-8",
+      "title": "MD5:49d3c9a67756cfa25db4548d8193ce65",
+      "options": [
+        "1",
+        "2",
+        "3",
+        "4"
+      ],
+      "correct": 3,
+      "bundesland": "Berlin"
+    },
+    {
+      "number": "BE-9",
+      "title": "MD5:8d9eb29563ac088bdfb0ad90353547c4",
+      "options": [
+        "Ministerpräsident/ Ministerpräsidentin",
+        "Oberbürgermeister/ Oberbürgermeisterin",
+        "Präsident/ Präsidentin des Senats",
+        "Regierender Bürgermeister/ Regierende Bürgermeisterin"
+      ],
+      "correct": 3,
+      "bundesland": "Berlin"
+    },
+    {
+      "number": "BE-10",
+      "title": "MD5:2052bda813655ee22dae59db9f4d1d1e",
+      "options": [
+        "Finanzsenator / Finanzsenatorin",
+        "Innensenator / Innensenatorin ",
+        "Senator / Senatorin für Außenbeziehungen",
+        "Justizsenator / Justizsenatorin"
+      ],
+      "correct": 2,
+      "bundesland": "Berlin"
+    }
+  ]
+}
