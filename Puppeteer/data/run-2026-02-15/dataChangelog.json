@@ -1,0 +1,282 @@
+[
+  {
+    "diff": "diff on theme",
+    "num": "59",
+    "lid": {
+      "num": "59",
+      "question": "Vor wie vielen Jahren gab es erstmals eine jüdische Gemeinde auf dem Gebiet des heutigen Deutschlands?",
+      "a": "vor etwa 300 Jahren",
+      "b": "vor etwa 700 Jahren",
+      "c": "vor etwa 1150 Jahren",
+      "d": "vor etwa 1700 Jahren",
+      "solution": "d",
+      "area_code": "politik",
+      "area": "Politik in der Demokratie",
+      "theme": "Parteien"
+    },
+    "bot": {
+      "num": "59",
+      "question": "Vor wie vielen Jahren gab es erstmals eine jüdische Gemeinde auf dem Gebiet des heutigen Deutschlands?",
+      "a": "vor etwa 300 Jahren",
+      "b": "vor etwa 700 Jahren",
+      "c": "vor etwa 1150 Jahren",
+      "d": "vor etwa 1700 Jahren",
+      "solution": "d",
+      "area_code": "gesellschaft",
+      "area": "Mensch und Gesellschaft",
+      "theme": "Religiöse Vielfalt"
+    }
+  },
+  {
+    "diff": "diff on theme",
+    "num": "66",
+    "lid": {
+      "num": "66",
+      "question": "Welche Städte haben die größten jüdischen Gemeinden in Deutschland?",
+      "a": "Berlin und München",
+      "b": "Hamburg und Essen",
+      "c": "Nürnberg und Stuttgart",
+      "d": "Worms und Speyer",
+      "solution": "a",
+      "area_code": "politik",
+      "area": "Politik in der Demokratie",
+      "theme": "Staatssymbole"
+    },
+    "bot": {
+      "num": "66",
+      "question": "Welche Städte haben die größten jüdischen Gemeinden in Deutschland?",
+      "a": "Berlin und München",
+      "b": "Hamburg und Essen",
+      "c": "Nürnberg und Stuttgart",
+      "d": "Worms und Speyer",
+      "solution": "a",
+      "area_code": "gesellschaft",
+      "area": "Mensch und Gesellschaft",
+      "theme": "Religiöse Vielfalt"
+    }
+  },
+  {
+    "diff": "diff on option D",
+    "num": "73",
+    "lid": {
+      "num": "73",
+      "question": "Die beiden größten Fraktionen im Deutschen Bundestag heißen zurzeit ...",
+      "a": "CDU/CSU und AfD.",
+      "b": "Die Linke und Bündnis 90/Die Grünen.",
+      "c": "Bündnis 90/Die Grünen und SPD.",
+      "d": "Die Linke und CDU/CSU",
+      "solution": "a",
+      "area_code": "politik",
+      "area": "Politik in der Demokratie",
+      "theme": "Parteien"
+    },
+    "bot": {
+      "num": "73",
+      "question": "Die beiden größten Fraktionen im Deutschen Bundestag heißen zurzeit ...",
+      "a": "CDU/CSU und AfD.",
+      "b": "Die Linke und Bündnis 90/Die Grünen.",
+      "c": "Bündnis 90/Die Grünen und SPD.",
+      "d": "Die Linke und CDU/CSU.",
+      "solution": "a",
+      "area_code": "politik",
+      "area": "Politik in der Demokratie",
+      "theme": "Parteien"
+    }
+  },
+  {
+    "diff": "diff on theme",
+    "num": "96",
+    "lid": {
+      "num": "96",
+      "question": "Wie kann jemand, der den Holocaust leugnet, bestraft werden?",
+      "a": "Kürzung sozialer Leistungen",
+      "b": "bis zu 100 Sozialstunden",
+      "c": "gar nicht, Holocaustleugnung ist erlaubt",
+      "d": "mit Freiheitsstrafe bis zu fünf Jahren oder mit Geldstrafe",
+      "solution": "d",
+      "area_code": "politik",
+      "area": "Politik in der Demokratie",
+      "theme": "Pflichten"
+    },
+    "bot": {
+      "num": "96",
+      "question": "Wie kann jemand, der den Holocaust leugnet, bestraft werden?",
+      "a": "Kürzung sozialer Leistungen",
+      "b": "bis zu 100 Sozialstunden",
+      "c": "gar nicht, Holocaustleugnung ist erlaubt",
+      "d": "mit Freiheitsstrafe bis zu fünf Jahren oder mit Geldstrafe",
+      "solution": "d",
+      "area_code": "politik",
+      "area": "Politik in der Demokratie",
+      "theme": "Recht und Alltag"
+    }
+  },
+  {
+    "diff": "diff on theme",
+    "num": "111",
+    "lid": {
+      "num": "111",
+      "question": "Welche Handlung mit Bezug auf den Staat Israel ist in Deutschland verboten?",
+      "a": "die Politik Israels öffentlich kritisieren",
+      "b": "das Aufhängen einer israelischen Flagge auf dem Privatgrundstück",
+      "c": "eine Diskussion über die Politik Israels",
+      "d": "der öffentliche Aufruf zur Vernichtung Israels",
+      "solution": "d",
+      "area_code": "politik",
+      "area": "Politik in der Demokratie",
+      "theme": "Wahlen und Beteiligung"
+    },
+    "bot": {
+      "num": "111",
+      "question": "Welche Handlung mit Bezug auf den Staat Israel ist in Deutschland verboten?",
+      "a": "die Politik Israels öffentlich kritisieren",
+      "b": "das Aufhängen einer israelischen Flagge auf dem Privatgrundstück",
+      "c": "eine Diskussion über die Politik Israels",
+      "d": "der öffentliche Aufruf zur Vernichtung Israels",
+      "solution": "d",
+      "area_code": "politik",
+      "area": "Politik in der Demokratie",
+      "theme": "Recht und Alltag"
+    }
+  },
+  {
+    "diff": "diff on theme",
+    "num": "118",
+    "lid": {
+      "num": "118",
+      "question": "Wer darf bei den rund 40 jüdischen Makkabi-Sportvereinen Mitglied werden?",
+      "a": "nur Deutsche",
+      "b": "nur Israelis",
+      "c": "nur religiöse Menschen",
+      "d": "alle Menschen",
+      "solution": "d",
+      "area_code": "politik",
+      "area": "Politik in der Demokratie",
+      "theme": "Wahlen und Beteiligung"
+    },
+    "bot": {
+      "num": "118",
+      "question": "Wer darf bei den rund 40 jüdischen Makkabi-Sportvereinen Mitglied werden?",
+      "a": "nur Deutsche",
+      "b": "nur Israelis",
+      "c": "nur religiöse Menschen",
+      "d": "alle Menschen",
+      "solution": "d",
+      "area_code": "gesellschaft",
+      "area": "Mensch und Gesellschaft",
+      "theme": "Interkulturelles Zusammenleben"
+    }
+  },
+  {
+    "diff": "diff on theme",
+    "num": "149",
+    "lid": {
+      "num": "149",
+      "question": "Was ist ein Beispiel für antisemitisches Verhalten?",
+      "a": "ein jüdisches Fest besuchen",
+      "b": "die israelische Regierung kritisieren",
+      "c": "den Holocaust leugnen",
+      "d": "gegen Juden Fußball spielen",
+      "solution": "c",
+      "area_code": "politik",
+      "area": "Politik in der Demokratie",
+      "theme": "Recht und Alltag"
+    },
+    "bot": {
+      "num": "149",
+      "question": "Was ist ein Beispiel für antisemitisches Verhalten?",
+      "a": "ein jüdisches Fest besuchen",
+      "b": "die israelische Regierung kritisieren",
+      "c": "den Holocaust leugnen",
+      "d": "gegen Juden Fußball spielen",
+      "solution": "c",
+      "area_code": "politik",
+      "area": "Politik in der Demokratie",
+      "theme": "Grundrechte"
+    }
+  },
+  {
+    "diff": "diff on theme",
+    "num": "182",
+    "lid": {
+      "num": "182",
+      "question": "Wie heißt das jüdische Gebetshaus?",
+      "a": "Basilika",
+      "b": "Moschee",
+      "c": "Synagoge",
+      "d": "Kirche",
+      "solution": "c",
+      "area_code": "geschichte",
+      "area": "Geschichte und Verantwortung",
+      "theme": "Wichtige Stationen nach 1945"
+    },
+    "bot": {
+      "num": "182",
+      "question": "Wie heißt das jüdische Gebetshaus?",
+      "a": "Basilika",
+      "b": "Moschee",
+      "c": "Synagoge",
+      "d": "Kirche",
+      "solution": "c",
+      "area_code": "gesellschaft",
+      "area": "Mensch und Gesellschaft",
+      "theme": "Religiöse Vielfalt"
+    }
+  },
+  {
+    "diff": "diff on theme",
+    "num": "206",
+    "lid": {
+      "num": "206",
+      "question": "Woran erinnern die sogenannten „Stolpersteine“ in Deutschland?",
+      "a": "an berühmte deutsche Politikerinnen und Politiker",
+      "b": "an die Opfer des Nationalsozialismus",
+      "c": "an Verkehrstote",
+      "d": "an bekannte jüdische Musiker",
+      "solution": "b",
+      "area_code": "geschichte",
+      "area": "Geschichte und Verantwortung",
+      "theme": "Wiedervereinigung"
+    },
+    "bot": {
+      "num": "206",
+      "question": "Woran erinnern die sogenannten „Stolpersteine“ in Deutschland?",
+      "a": "an berühmte deutsche Politikerinnen und Politiker",
+      "b": "an die Opfer des Nationalsozialismus",
+      "c": "an Verkehrstote",
+      "d": "an bekannte jüdische Musiker",
+      "solution": "b",
+      "area_code": "geschichte",
+      "area": "Geschichte und Verantwortung",
+      "theme": "Der Nationalsozialismus und seine Folgen"
+    }
+  },
+  {
+    "diff": "diff on theme",
+    "num": "288",
+    "lid": {
+      "num": "288",
+      "question": "Woraus begründet sich Deutschlands besondere Verantwortung für Israel?",
+      "a": "aus der Mitgliedschaft in der Europäischen Union (EU)",
+      "b": "aus den nationalsozialistischen Verbrechen gegen Juden",
+      "c": "aus dem Grundgesetz der Bundesrepublik Deutschland",
+      "d": "aus der christlichen Tradition",
+      "solution": "b",
+      "area_code": "politik",
+      "area": "Politik in der Demokratie",
+      "theme": "Kommune"
+    },
+    "bot": {
+      "num": "288",
+      "question": "Woraus begründet sich Deutschlands besondere Verantwortung für Israel?",
+      "a": "aus der Mitgliedschaft in der Europäischen Union (EU)",
+      "b": "aus den nationalsozialistischen Verbrechen gegen Juden",
+      "c": "aus dem Grundgesetz der Bundesrepublik Deutschland",
+      "d": "aus der christlichen Tradition",
+      "solution": "b",
+      "area_code": "geschichte",
+      "area": "Geschichte und Verantwortung",
+      "theme": "Der Nationalsozialismus und seine Folgen"
+    }
+  }
+]

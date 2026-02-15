@@ -4,7 +4,10 @@
   "description": "",
   "main": "./src/index.js",
   "scripts": {
-    "start": "ts-node ./src/index.ts"
+    "start": "ts-node ./src/index.ts",
+    "bamf-run": "node ./src/bamf/bamf-index.js",
+    "bamf-validate": "node ./src/bamf/bamf-validate.js",
+    "bamf-compare": "node ./src/bamf/bamf-compare.js"
   },
   "author": "",
   "license": "ISC",

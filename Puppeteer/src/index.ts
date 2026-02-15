@@ -19,27 +19,27 @@ interface Bundesland {
 }
 
 const bundeslands: Bundesland = {
-    // '': '300',
+    '': '300',
 
-    'Brandenburg': 'BB',
-    'Berlin': 'BE',
-    'Baden-Württemberg': 'BW',
-    'Bayern': 'BY',
+    // 'Brandenburg': 'BB',
+    // 'Berlin': 'BE',
+    // 'Baden-Württemberg': 'BW',
+    // 'Bayern': 'BY',
 
-    'Bremen': 'HB',
-    'Hessen': 'HE',
-    'Hamburg': 'HH',
-    'Mecklenburg-Vorpommern': 'MV',
+    // 'Bremen': 'HB',
+    // 'Hessen': 'HE',
+    // 'Hamburg': 'HH',
+    // 'Mecklenburg-Vorpommern': 'MV',
 
-    'Niedersachsen': 'NI',
-    'Nordrhein-Westfalen': 'NW',
-    'Rheinland-Pfalz': 'RP',
-    'Schleswig-Holstein': 'SH',
+    // 'Niedersachsen': 'NI',
+    // 'Nordrhein-Westfalen': 'NW',
+    // 'Rheinland-Pfalz': 'RP',
+    // 'Schleswig-Holstein': 'SH',
 
-    'Saarland': 'SL',
-    'Sachsen': 'SN',
-    'Sachsen-Anhalt': 'ST',
-    'Thüringen': 'TH'
+    // 'Saarland': 'SL',
+    // 'Sachsen': 'SN',
+    // 'Sachsen-Anhalt': 'ST',
+    // 'Thüringen': 'TH'
 };
 
 const questions: Question[] = [];

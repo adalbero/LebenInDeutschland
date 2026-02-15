@@ -1,0 +1,36 @@
+politik;Politik in der Demokratie;Verfassungsorgane
+politik;Politik in der Demokratie;Verfassungsprinzipien
+politik;Politik in der Demokratie;Föderalismus
+politik;Politik in der Demokratie;Sozialsystem
+politik;Politik in der Demokratie;Grundrechte
+politik;Politik in der Demokratie;Wahlen und Beteiligung
+politik;Politik in der Demokratie;Parteien
+politik;Politik in der Demokratie;Aufgaben des Staates
+politik;Politik in der Demokratie;Pflichten
+politik;Politik in der Demokratie;Staatssymbole
+politik;Politik in der Demokratie;Kommune
+politik;Politik in der Demokratie;Recht und Alltag
+geschichte;Geschichte und Verantwortung;Der Nationalsozialismus und seine Folgen
+geschichte;Geschichte und Verantwortung;Wichtige Stationen nach 1945
+geschichte;Geschichte und Verantwortung;Wiedervereinigung
+geschichte;Geschichte und Verantwortung;Deutschland in Europa
+gesellschaft;Mensch und Gesellschaft;Religiöse Vielfalt
+gesellschaft;Mensch und Gesellschaft;Bildung
+gesellschaft;Mensch und Gesellschaft;Migrationsgeschichte
+gesellschaft;Mensch und Gesellschaft;Interkulturelles Zusammenleben
+land;Bundesland;Baden-Württemberg
+land;Bundesland;Bayern
+land;Bundesland;Berlin
+land;Bundesland;Brandenburg
+land;Bundesland;Bremen
+land;Bundesland;Hamburg
+land;Bundesland;Hessen
+land;Bundesland;Mecklenburg-Vorpommern
+land;Bundesland;Niedersachsen
+land;Bundesland;Nordrhein-Westfalen
+land;Bundesland;Rheinland-Pfalz
+land;Bundesland;Saarland
+land;Bundesland;Sachsen
+land;Bundesland;Sachsen-Anhalt
+land;Bundesland;Schleswig-Holstein
+land;Bundesland;Thüringen
