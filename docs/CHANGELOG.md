@@ -1,0 +1,33 @@
+Version 1.15.0 - 21-Feb-2026
+
+- New Dark Theme
+- Fix Edge-to-Edge (API 35)
+- Catalog Updates
+  - #59 - Theme update
+    - from Politik in der Demokratie / Parteien
+    - to: Mensch und Gesellschaft / Religiöse Vielfalt 
+  - #66 - Theme update
+    - from: Politik in der Demokratie / Staatssymbole 
+    - to: Mensch und Gesellschaft / Religiöse Vielfalt
+  - #73 - New options
+  - #96 - Theme update
+    - from: Politik in der Demokratie / Pflichten
+    - to: Politik in der Demokratie / Recht und Alltag
+  - #111 - Theme update
+    - from: Politik in der Demokratie / Wahlen und Beteiligung 
+    - to: Politik in der Demokratie / Recht und Alltag
+  - #118 - Theme update
+    - from : Politik in der Demokratie / Wahlen und Beteiligung
+    - to: Mensch und Gesellschaft / Interkulturelles Zusammenleben
+  - #149 - Theme update
+    - from: Politik in der Demokratie / Recht und Alltag
+    - to: Politik in der Demokratie / Grundrechte
+  - #182 - Theme update
+    - from: Geschichte und Verantwortung / Wichtige Stationen nach 1945
+    - to: Mensch und Gesellschaft / Religiöse Vielfalt
+  - #206 - Theme update
+    - from: Geschichte und Verantwortung / Wiedervereinigung
+    - to: Geschichte und Verantwortung / Der Nationalsozialismus und seine Folgen
+  - #288 - Theme update
+    - from: Politik in der Demokratie / Kommune
+    - to: Geschichte und Verantwortung / Der Nationalsozialismus und seine Folgen
