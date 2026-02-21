@@ -86,7 +86,7 @@ public class QuestionDB {
 
     public List<String> listAllTheme() {
         List<String> result = new ArrayList<>();
-        String[] list = {"13", "3", "24", "23", "1", "5", "59", "46", "95", "21", "56", "102",
+        String[] list = {"13", "3", "24", "23", "1", "5", "73", "46", "95", "21", "56", "102",
                 "152", "50", "191", "173", "33", "244", "297", "264"};
 
         for (String num : list) {
