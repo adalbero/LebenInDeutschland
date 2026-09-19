@@ -1,5 +1,6 @@
 package com.adalbero.app.lebenindeutschland.controller;
 
+import android.annotation.SuppressLint;
 import android.app.Activity;
 import android.graphics.drawable.Drawable;
 
@@ -153,6 +154,7 @@ public class AppController extends MultiDexApplication {
         return null;
     }
 
+    @SuppressLint("DiscouragedApi")
     public static int getImageResourceByName(String name) {
         return getInstance().getResources().getIdentifier(name, "drawable", getInstance().getPackageName());
     }
