@@ -10,7 +10,6 @@ android {
         versionName '1.16.0'
         testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
         vectorDrawables.useSupportLibrary = true
-        multiDexEnabled true
     }
     buildTypes {
         debug {
@@ -40,7 +39,6 @@ dependencies {
 
     implementation 'androidx.browser:browser:1.10.0'
     implementation 'androidx.constraintlayout:constraintlayout:2.2.2'
-    implementation 'androidx.multidex:multidex:2.0.1'
 
     implementation 'com.google.android.material:material:1.14.0'
     implementation 'com.google.android.ump:user-messaging-platform:4.0.0'

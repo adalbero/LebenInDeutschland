@@ -2,11 +2,11 @@ package com.adalbero.app.lebenindeutschland.controller;
 
 import android.annotation.SuppressLint;
 import android.app.Activity;
+import android.app.Application;
 import android.graphics.drawable.Drawable;
 
 import androidx.annotation.NonNull;
 import androidx.core.content.ContextCompat;
-import androidx.multidex.MultiDexApplication;
 
 import android.util.DisplayMetrics;
 import android.util.Log;
@@ -44,7 +44,7 @@ import java.util.List;
  * Created by Adalbero on 16/05/2017.
  */
 
-public class AppController extends MultiDexApplication {
+public class AppController extends Application {
 
     private static final String TAG = "lid:AppController";
     private static AppController mInstance;
