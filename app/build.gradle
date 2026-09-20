@@ -32,11 +32,6 @@ android {
         sourceCompatibility = JavaVersion.VERSION_11
         targetCompatibility = JavaVersion.VERSION_11
     }
-    tasks.withType(JavaCompile).configureEach {
-        options.compilerArgs << "-Xlint:unchecked" << "-Xlint:deprecation"
-        options.deprecation = true
-        options.warnings = true
-    }
     namespace 'com.adalbero.app.lebenindeutschland'
 }
 
