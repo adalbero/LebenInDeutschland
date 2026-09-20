@@ -19,7 +19,7 @@ interface Bundesland {
 }
 
 const bundeslands: Bundesland = {
-    '': '300',
+    // '': '300',
 
     // 'Brandenburg': 'BB',
     // 'Berlin': 'BE',
@@ -31,15 +31,15 @@ const bundeslands: Bundesland = {
     // 'Hamburg': 'HH',
     // 'Mecklenburg-Vorpommern': 'MV',
 
-    // 'Niedersachsen': 'NI',
-    // 'Nordrhein-Westfalen': 'NW',
-    // 'Rheinland-Pfalz': 'RP',
-    // 'Schleswig-Holstein': 'SH',
+    'Niedersachsen': 'NI',
+    'Nordrhein-Westfalen': 'NW',
+    'Rheinland-Pfalz': 'RP',
+    'Schleswig-Holstein': 'SH',
 
-    // 'Saarland': 'SL',
-    // 'Sachsen': 'SN',
-    // 'Sachsen-Anhalt': 'ST',
-    // 'Thüringen': 'TH'
+    'Saarland': 'SL',
+    'Sachsen': 'SN',
+    'Sachsen-Anhalt': 'ST',
+    'Thüringen': 'TH'
 };
 
 const questions: Question[] = [];

@@ -1,0 +1,967 @@
+{
+  "name": "BAMF",
+  "url": "https://oet.bamf.de/ords/oetut/",
+  "timestamp": "2026-09-20T10:10:38.302Z",
+  "questions": [
+    {
+      "number": "BB-1",
+      "title": "MD5:37532047eba1ec68e6e4ab8daa20cb2d",
+      "options": [
+        "1",
+        "2",
+        "3",
+        "4"
+      ],
+      "correct": 0,
+      "bundesland": "Brandenburg"
+    },
+    {
+      "number": "BB-2",
+      "title": "MD5:a24d52d87bae7fd147dfbbfaf2b2eb81",
+      "options": [
+        "Prignitz",
+        "Rhein-Sieg-Kreis",
+        "Vogtlandkreis",
+        "Amberg-Sulzbach"
+      ],
+      "correct": 0,
+      "bundesland": "Brandenburg"
+    },
+    {
+      "number": "BB-3",
+      "title": "MD5:28cec78d8999a59d94d8737e825e918a",
+      "options": [
+        "3",
+        "4",
+        "5",
+        "6"
+      ],
+      "correct": 2,
+      "bundesland": "Brandenburg"
+    },
+    {
+      "number": "BB-4",
+      "title": "MD5:9584003782f400abb013443d838b72cb",
+      "options": [
+        "14",
+        "16",
+        "18",
+        "20"
+      ],
+      "correct": 1,
+      "bundesland": "Brandenburg"
+    },
+    {
+      "number": "BB-5",
+      "title": "MD5:a0ee0fd0c6ed47b7eb6034b3d77c73fa",
+      "options": [
+        "blau-weiß-rot",
+        "rot-weiß",
+        "grün-weiß-rot",
+        "schwarz-gelb"
+      ],
+      "correct": 1,
+      "bundesland": "Brandenburg"
+    },
+    {
+      "number": "BB-6",
+      "title": "MD5:ae3b64bb5ef447fbb660800061868050",
+      "options": [
+        "bei den Kirchen ",
+        "beim Ordnungsamt der Gemeinde",
+        "bei der Landeszentrale für politische Bildung",
+        "bei der Verbraucherzentrale"
+      ],
+      "correct": 2,
+      "bundesland": "Brandenburg"
+    },
+    {
+      "number": "BB-7",
+      "title": "MD5:07f8f34054fb456fa598362c868c1cb7",
+      "options": [
+        "Potsdam.",
+        "Cottbus.",
+        "Brandenburg.",
+        "Frankfurt/Oder."
+      ],
+      "correct": 0,
+      "bundesland": "Brandenburg"
+    },
+    {
+      "number": "BB-8",
+      "title": "MD5:351f0783e6a33c844846130f5f21212a",
+      "options": [
+        "1",
+        "2",
+        "3",
+        "4"
+      ],
+      "correct": 3,
+      "bundesland": "Brandenburg"
+    },
+    {
+      "number": "BB-9",
+      "title": "MD5:fd603a48e56e850b1fda0c0ed9fe6be9",
+      "options": [
+        "Erster Minister/ Erste Ministerin",
+        "Premierminister/ Premierministerin",
+        "Bürgermeister/ Bürgermeisterin",
+        "Ministerpräsident/ Ministerpräsidentin"
+      ],
+      "correct": 3,
+      "bundesland": "Brandenburg"
+    },
+    {
+      "number": "BB-10",
+      "title": "MD5:ea687ad06de3749f7d9358917b410e45",
+      "options": [
+        "Justizminister/ Justizministerin",
+        "Außenminister/ Außenministerin",
+        "Finanzminister/ Finanzministerin",
+        "Innenminister/ Innenministerin"
+      ],
+      "correct": 1,
+      "bundesland": "Brandenburg"
+    },
+    {
+      "number": "BE-1",
+      "title": "MD5:3cd1fa8958e2944bd9af9300f63c51ab",
+      "options": [
+        "1",
+        "2",
+        "3",
+        "4"
+      ],
+      "correct": 3,
+      "bundesland": "Berlin"
+    },
+    {
+      "number": "BE-2",
+      "title": "MD5:6d9cc62bb65ed865970b160b130343bd",
+      "options": [
+        "Altona",
+        "Prignitz",
+        "Pankow",
+        "Mecklenburgische Seenplatte"
+      ],
+      "correct": 2,
+      "bundesland": "Berlin"
+    },
+    {
+      "number": "BE-3",
+      "title": "MD5:732b9a443df37949249faa1ffb9e084c",
+      "options": [
+        "3",
+        "4",
+        "5",
+        "6"
+      ],
+      "correct": 2,
+      "bundesland": "Berlin"
+    },
+    {
+      "number": "BE-4",
+      "title": "MD5:5156e000bcee6b39d5db7b35672a8e58",
+      "options": [
+        "14",
+        "16",
+        "18",
+        "20"
+      ],
+      "correct": 1,
+      "bundesland": "Berlin"
+    },
+    {
+      "number": "BE-5",
+      "title": "MD5:39d8a1be4eda973a98c1886d13123b42",
+      "options": [
+        "blau-weiß-rot",
+        "weiß-rot",
+        "grün-weiß-rot",
+        "schwarz-gold"
+      ],
+      "correct": 1,
+      "bundesland": "Berlin"
+    },
+    {
+      "number": "BE-6",
+      "title": "MD5:81b31626f4537ed6ea8c94bd39e72037",
+      "options": [
+        "beim Ordnungsamt der Gemeinde",
+        "bei den Kirchen ",
+        "bei der Verbraucherzentrale",
+        "bei der Landeszentrale für politische Bildung"
+      ],
+      "correct": 3,
+      "bundesland": "Berlin"
+    },
+    {
+      "number": "BE-7",
+      "title": "MD5:e562c4f4063179c58a6d964527f44b6c",
+      "options": [
+        "Berlin",
+        "Saarland",
+        "Brandenburg",
+        "Hessen"
+      ],
+      "correct": 0,
+      "bundesland": "Berlin"
+    },
+    {
+      "number": "BE-8",
+      "title": "MD5:49d3c9a67756cfa25db4548d8193ce65",
+      "options": [
+        "1",
+        "2",
+        "3",
+        "4"
+      ],
+      "correct": 3,
+      "bundesland": "Berlin"
+    },
+    {
+      "number": "BE-9",
+      "title": "MD5:8d9eb29563ac088bdfb0ad90353547c4",
+      "options": [
+        "Ministerpräsident/ Ministerpräsidentin",
+        "Oberbürgermeister/ Oberbürgermeisterin",
+        "Präsident/ Präsidentin des Senats",
+        "Regierender Bürgermeister/ Regierende Bürgermeisterin"
+      ],
+      "correct": 3,
+      "bundesland": "Berlin"
+    },
+    {
+      "number": "BE-10",
+      "title": "MD5:2052bda813655ee22dae59db9f4d1d1e",
+      "options": [
+        "Finanzsenator / Finanzsenatorin",
+        "Innensenator / Innensenatorin ",
+        "Senator / Senatorin für Außenbeziehungen",
+        "Justizsenator / Justizsenatorin"
+      ],
+      "correct": 2,
+      "bundesland": "Berlin"
+    },
+    {
+      "number": "BW-1",
+      "title": "MD5:ddb8c95f2e09984cddf24e9a4e348f9a",
+      "options": [
+        "1",
+        "2",
+        "3",
+        "4"
+      ],
+      "correct": 0,
+      "bundesland": "Baden-Württemberg"
+    },
+    {
+      "number": "BW-2",
+      "title": "MD5:e598483917203596d0794f8c4289b733",
+      "options": [
+        "Mecklenburgische Seenplatte",
+        "Neckar-Odenwald-Kreis",
+        "Nordfriesland",
+        "Altötting"
+      ],
+      "correct": 1,
+      "bundesland": "Baden-Württemberg"
+    },
+    {
+      "number": "BW-3",
+      "title": "MD5:440943ddcfcd781660e9650ac6fae485",
+      "options": [
+        "3",
+        "4",
+        "5",
+        "6"
+      ],
+      "correct": 2,
+      "bundesland": "Baden-Württemberg"
+    },
+    {
+      "number": "BW-4",
+      "title": "MD5:9e9eff05e540335961c79b4100cd7299",
+      "options": [
+        "14",
+        "16",
+        "18",
+        "20"
+      ],
+      "correct": 1,
+      "bundesland": "Baden-Württemberg"
+    },
+    {
+      "number": "BW-5",
+      "title": "MD5:b52cd8862633199dcb6ab2877c699a90",
+      "options": [
+        "blau-weiß-rot",
+        "schwarz-gold",
+        "weiß-blau",
+        "grün-weiß-rot"
+      ],
+      "correct": 1,
+      "bundesland": "Baden-Württemberg"
+    },
+    {
+      "number": "BW-6",
+      "title": "MD5:bc1748e34036f26f28c61dd778f309e1",
+      "options": [
+        "beim Ordnungsamt der Gemeinde",
+        "bei der Verbraucherzentrale",
+        "bei der Landeszentrale für politische Bildung",
+        "bei den Kirchen"
+      ],
+      "correct": 2,
+      "bundesland": "Baden-Württemberg"
+    },
+    {
+      "number": "BW-7",
+      "title": "MD5:592ebcf98c0ae1ef2229052de47c31ee",
+      "options": [
+        "Heidelberg.",
+        "Stuttgart.",
+        "Karlsruhe.",
+        "Mannheim."
+      ],
+      "correct": 1,
+      "bundesland": "Baden-Württemberg"
+    },
+    {
+      "number": "BW-8",
+      "title": "MD5:4ad4ee9d2af706574eb2f8a66f57a153",
+      "options": [
+        "1",
+        "2",
+        "3",
+        "4"
+      ],
+      "correct": 1,
+      "bundesland": "Baden-Württemberg"
+    },
+    {
+      "number": "BW-9",
+      "title": "MD5:e22754c07017f9a7fcf456803b59192c",
+      "options": [
+        "Erster Minister/ Erste Ministerin",
+        "Premierminister/ Premierministerin",
+        "Bürgermeister/ Bürgermeisterin",
+        "Ministerpräsident/ Ministerpräsidentin"
+      ],
+      "correct": 3,
+      "bundesland": "Baden-Württemberg"
+    },
+    {
+      "number": "BW-10",
+      "title": "MD5:21f4d7f37da6973889dfceaa9467956d",
+      "options": [
+        "Finanzminister/ Finanzministerin",
+        "Justizminister/ Justizministerin",
+        "Innenminister/ Innenministerin",
+        "Außenminister/ Außenministerin"
+      ],
+      "correct": 3,
+      "bundesland": "Baden-Württemberg"
+    },
+    {
+      "number": "BY-1",
+      "title": "MD5:1c11cfe356323d89c94b695723eed07c",
+      "options": [
+        "1",
+        "2",
+        "3",
+        "4"
+      ],
+      "correct": 1,
+      "bundesland": "Bayern"
+    },
+    {
+      "number": "BY-2",
+      "title": "MD5:3ccbacdb285fffd218efc8c010a5f65c",
+      "options": [
+        "Prignitz",
+        "Rhein-Sieg-Kreis",
+        "Nordfriesland",
+        "Altötting"
+      ],
+      "correct": 3,
+      "bundesland": "Bayern"
+    },
+    {
+      "number": "BY-3",
+      "title": "MD5:df12fe358c959cc9ce840a8fe3a2d377",
+      "options": [
+        "3",
+        "4",
+        "5",
+        "6"
+      ],
+      "correct": 2,
+      "bundesland": "Bayern"
+    },
+    {
+      "number": "BY-4",
+      "title": "MD5:6a6e8492cd008742a89528ce8583f1ba",
+      "options": [
+        "14",
+        "16",
+        "18",
+        "20"
+      ],
+      "correct": 2,
+      "bundesland": "Bayern"
+    },
+    {
+      "number": "BY-5",
+      "title": "MD5:3443cafe5b431d30f8b12dd91a0a2067",
+      "options": [
+        "blau-weiß-rot",
+        "weiß-blau ",
+        "grün-weiß-rot",
+        "schwarz-gelb"
+      ],
+      "correct": 1,
+      "bundesland": "Bayern"
+    },
+    {
+      "number": "BY-6",
+      "title": "MD5:e33361b442cf8250a5bc6461ab881e2a",
+      "options": [
+        "beim Ordnungsamt der Gemeinde",
+        "bei der Landeszentrale für politische Bildung ",
+        "bei der Verbraucherzentrale",
+        "bei den Kirchen"
+      ],
+      "correct": 1,
+      "bundesland": "Bayern"
+    },
+    {
+      "number": "BY-7",
+      "title": "MD5:2bb24f19bf9d48e40e1b4aac1a8d5a0c",
+      "options": [
+        "Ingolstadt.",
+        "Regensburg.",
+        "Nürnberg.",
+        "München."
+      ],
+      "correct": 3,
+      "bundesland": "Bayern"
+    },
+    {
+      "number": "BY-8",
+      "title": "MD5:65e56798fe8ce5e27536d9bca1d0d5d8",
+      "options": [
+        "1",
+        "2",
+        "3",
+        "4"
+      ],
+      "correct": 3,
+      "bundesland": "Bayern"
+    },
+    {
+      "number": "BY-9",
+      "title": "MD5:2df0de597006d3aad73e10c3fb7e72fd",
+      "options": [
+        "Erster Minister/ Erste Ministerin",
+        "Premierminister/ Premierministerin",
+        "Bürgermeister/ Bürgermeisterin",
+        "Ministerpräsident/ Ministerpräsidentin"
+      ],
+      "correct": 3,
+      "bundesland": "Bayern"
+    },
+    {
+      "number": "BY-10",
+      "title": "MD5:78a9b112b0672af5be48fd971924e869",
+      "options": [
+        "Justizminister/ Justizministerin ",
+        "Außenminister/ Außenministerin",
+        "Finanzminister/ Finanzministerin",
+        "Innenminister/ Innenministerin"
+      ],
+      "correct": 1,
+      "bundesland": "Bayern"
+    },
+    {
+      "number": "HB-1",
+      "title": "MD5:f098da739ce6077a6a8ee44e532b1cbf",
+      "options": [
+        "1",
+        "2",
+        "3",
+        "4"
+      ],
+      "correct": 2,
+      "bundesland": "Bremen"
+    },
+    {
+      "number": "HB-2",
+      "title": "MD5:0cd50e9ec5ecac7a805d84b5301606f2",
+      "options": [
+        "Altona",
+        "Hemelingen",
+        "Pankow",
+        "Babelsberg"
+      ],
+      "correct": 1,
+      "bundesland": "Bremen"
+    },
+    {
+      "number": "HB-3",
+      "title": "MD5:c50b399187df9fc6b5d0c44e20eb86ae",
+      "options": [
+        "3",
+        "4",
+        "5",
+        "6"
+      ],
+      "correct": 1,
+      "bundesland": "Bremen"
+    },
+    {
+      "number": "HB-4",
+      "title": "MD5:ae13061a132f66cb92c8c7fb52d8e1db",
+      "options": [
+        "14",
+        "16",
+        "18",
+        "20"
+      ],
+      "correct": 1,
+      "bundesland": "Bremen"
+    },
+    {
+      "number": "HB-5",
+      "title": "MD5:ac1130a73a8004d7eb285988f947a182",
+      "options": [
+        "blau-weiß-rot",
+        "rot-weiß",
+        "grün-weiß-rot ",
+        "schwarz-gold"
+      ],
+      "correct": 1,
+      "bundesland": "Bremen"
+    },
+    {
+      "number": "HB-6",
+      "title": "MD5:0067af57b672c30e15c543dcc15f1976",
+      "options": [
+        "beim Ordnungsamt der Gemeinde ",
+        "bei der Landeszentrale für politische Bildung",
+        "bei den Kirchen",
+        "bei der Verbraucherzentrale"
+      ],
+      "correct": 1,
+      "bundesland": "Bremen"
+    },
+    {
+      "number": "HB-7",
+      "title": "MD5:be190c5227db9d6aa04e91015f7e6883",
+      "options": [
+        "Bremen",
+        "München",
+        "Frankfurt",
+        "Erfurt"
+      ],
+      "correct": 0,
+      "bundesland": "Bremen"
+    },
+    {
+      "number": "HB-8",
+      "title": "MD5:fc9557cda7a8ba477da6fe912569078b",
+      "options": [
+        "1",
+        "2",
+        "3",
+        "4"
+      ],
+      "correct": 0,
+      "bundesland": "Bremen"
+    },
+    {
+      "number": "HB-9",
+      "title": "MD5:4322de750d26fb2219163d348099d9be",
+      "options": [
+        "Ministerpräsident/ Ministerpräsidentin",
+        "Erster Bürgermeister/ Erste Bürgermeisterin",
+        "Präsident/ Präsidentin des Senats",
+        "Regierender Bürgermeister/ Regierende Bürgermeisterin"
+      ],
+      "correct": 2,
+      "bundesland": "Bremen"
+    },
+    {
+      "number": "HB-10",
+      "title": "MD5:610e1d796107653cce968d5e32a33e48",
+      "options": [
+        "Senator / Senatorin für Außenbeziehungen",
+        "Finanzsenator / Finanzsenatorin ",
+        "Justizsenator / Justizsenatorin",
+        "Innensenator / Innensenatorin"
+      ],
+      "correct": 0,
+      "bundesland": "Bremen"
+    },
+    {
+      "number": "HE-1",
+      "title": "MD5:8f78f2b2ba4a632978abd05c64f6f708",
+      "options": [
+        "1",
+        "2",
+        "3",
+        "4"
+      ],
+      "correct": 0,
+      "bundesland": "Hessen"
+    },
+    {
+      "number": "HE-2",
+      "title": "MD5:020e838b1dcfc6af9fc195bd2e8be56a",
+      "options": [
+        "Ammerland",
+        "Altötting",
+        "Prignitz",
+        "Main-Taunus-Kreis"
+      ],
+      "correct": 3,
+      "bundesland": "Hessen"
+    },
+    {
+      "number": "HE-3",
+      "title": "MD5:9f37a9ec367d2832f8376eb6f0ad9121",
+      "options": [
+        "3",
+        "4",
+        "5",
+        "6"
+      ],
+      "correct": 2,
+      "bundesland": "Hessen"
+    },
+    {
+      "number": "HE-4",
+      "title": "MD5:4de77fc0e21a2db7373d6a19629fb15a",
+      "options": [
+        "14",
+        "16",
+        "18",
+        "20"
+      ],
+      "correct": 2,
+      "bundesland": "Hessen"
+    },
+    {
+      "number": "HE-5",
+      "title": "MD5:2063c0bb43a73d238d79fe349c98073f",
+      "options": [
+        "blau-weiß-rot",
+        "rot-weiß",
+        "schwarz-gold ",
+        "grün-weiß-rot "
+      ],
+      "correct": 1,
+      "bundesland": "Hessen"
+    },
+    {
+      "number": "HE-6",
+      "title": "MD5:2705c525c0dbf6eac0d83b6b68e5cb7d",
+      "options": [
+        "bei der Landeszentrale für politische Bildung",
+        "bei der Verbraucherzentrale",
+        "beim Ordnungsamt der Gemeinde",
+        "bei den Kirchen"
+      ],
+      "correct": 0,
+      "bundesland": "Hessen"
+    },
+    {
+      "number": "HE-7",
+      "title": "MD5:f66e3bcab1909d9344e1b91ab63be1ce",
+      "options": [
+        "Kassel.",
+        "Darmstadt.",
+        "Frankfurt.",
+        "Wiesbaden."
+      ],
+      "correct": 3,
+      "bundesland": "Hessen"
+    },
+    {
+      "number": "HE-8",
+      "title": "MD5:c315eb25c37e71d3d6597f28aef90a64",
+      "options": [
+        "1",
+        "2",
+        "3",
+        "4"
+      ],
+      "correct": 2,
+      "bundesland": "Hessen"
+    },
+    {
+      "number": "HE-9",
+      "title": "MD5:0e9e326ab8287026644bc4faf3fbcfb6",
+      "options": [
+        "Erster Minister/ Erste Ministerin",
+        "Premierminister/ Premierministerin",
+        "Bürgermeister/ Bürgermeisterin",
+        "Ministerpräsident/ Ministerpräsidentin"
+      ],
+      "correct": 3,
+      "bundesland": "Hessen"
+    },
+    {
+      "number": "HE-10",
+      "title": "MD5:3592d1812b63a73d75e838cb81180356",
+      "options": [
+        "Justizminister/ Justizministerin",
+        "Außenminister/ Außenministerin",
+        "Finanzminister/ Finanzministerin",
+        "Innenminister/ Innenministerin"
+      ],
+      "correct": 1,
+      "bundesland": "Hessen"
+    },
+    {
+      "number": "HH-1",
+      "title": "MD5:d0ec3d393e33fcf56db95952511adfaf",
+      "options": [
+        "1",
+        "2",
+        "3",
+        "4"
+      ],
+      "correct": 1,
+      "bundesland": "Hamburg"
+    },
+    {
+      "number": "HH-2",
+      "title": "MD5:fb47a433b920d832e732b9a2b95a869e",
+      "options": [
+        "Altona",
+        "Hemelingen",
+        "Pankow",
+        "Mecklenburgische Seenplatte"
+      ],
+      "correct": 0,
+      "bundesland": "Hamburg"
+    },
+    {
+      "number": "HH-3",
+      "title": "MD5:41ca926198756d3ee1a68da31c984884",
+      "options": [
+        "3",
+        "4",
+        "5",
+        "6"
+      ],
+      "correct": 2,
+      "bundesland": "Hamburg"
+    },
+    {
+      "number": "HH-4",
+      "title": "MD5:b6eb3a685d0ace08cce639f83f0afc5f",
+      "options": [
+        "14",
+        "16",
+        "18",
+        "20"
+      ],
+      "correct": 1,
+      "bundesland": "Hamburg"
+    },
+    {
+      "number": "HH-5",
+      "title": "MD5:826f528e1509a3f47b83cf1e8a5ad968",
+      "options": [
+        "blau-weiß-rot",
+        "weiß-rot",
+        "grün-weiß-rot ",
+        "schwarz-gelb"
+      ],
+      "correct": 1,
+      "bundesland": "Hamburg"
+    },
+    {
+      "number": "HH-6",
+      "title": "MD5:8ecef21b2c4a7894699c6f8a1b1d86cc",
+      "options": [
+        "beim Ordnungsamt der Gemeinde",
+        "bei der Verbraucherzentrale",
+        "bei den Kirchen",
+        "bei der Landeszentrale für politische Bildung"
+      ],
+      "correct": 3,
+      "bundesland": "Hamburg"
+    },
+    {
+      "number": "HH-7",
+      "title": "MD5:e562c4f4063179c58a6d964527f44b6c",
+      "options": [
+        "Hamburg",
+        "Sachsen",
+        "Bayern",
+        "Thüringen"
+      ],
+      "correct": 0,
+      "bundesland": "Hamburg"
+    },
+    {
+      "number": "HH-8",
+      "title": "MD5:186b8e739f48b66ef26be6db97f77a10",
+      "options": [
+        "1",
+        "2",
+        "3",
+        "4"
+      ],
+      "correct": 2,
+      "bundesland": "Hamburg"
+    },
+    {
+      "number": "HH-9",
+      "title": "MD5:581a2f3798fc1bafb5d3452df22225c7",
+      "options": [
+        "Ministerpräsident / Ministerpräsidentin",
+        "Erster Bürgermeister / Erste Bürgermeisterin",
+        "Regierender Senator / Regierende Senatorin",
+        "Oberbürgermeister / Oberbürgermeisterin"
+      ],
+      "correct": 1,
+      "bundesland": "Hamburg"
+    },
+    {
+      "number": "HH-10",
+      "title": "MD5:581cf51a3e863bed7a341f51afa59b9e",
+      "options": [
+        "Justizsenator / Justizsenatorin",
+        "Senator / Senatorin für Außenbeziehungen",
+        "Finanzsenator / Finanzsenatorin",
+        "Innensenator / Innensenatorin "
+      ],
+      "correct": 1,
+      "bundesland": "Hamburg"
+    },
+    {
+      "number": "MV-1",
+      "title": "MD5:edfd7cb72973e4a347f97beb3f681ab4",
+      "options": [
+        "1",
+        "2",
+        "3",
+        "4"
+      ],
+      "correct": 2,
+      "bundesland": "Mecklenburg-Vorpommern"
+    },
+    {
+      "number": "MV-2",
+      "title": "MD5:0d2ecfdf06fa21de9df67d3d1bdf603e",
+      "options": [
+        "Prignitz ",
+        "Mecklenburgische Seenplatte",
+        "Vogtlandkreis",
+        "Rhein-Sieg-Kreis"
+      ],
+      "correct": 1,
+      "bundesland": "Mecklenburg-Vorpommern"
+    },
+    {
+      "number": "MV-3",
+      "title": "MD5:c6f7b0d380ba8dafc8d4b6854281c622",
+      "options": [
+        "3",
+        "4",
+        "5",
+        "6"
+      ],
+      "correct": 2,
+      "bundesland": "Mecklenburg-Vorpommern"
+    },
+    {
+      "number": "MV-4",
+      "title": "MD5:506911b0f1e72a347ac2735748a002e7",
+      "options": [
+        "14",
+        "16",
+        "18",
+        "20"
+      ],
+      "correct": 1,
+      "bundesland": "Mecklenburg-Vorpommern"
+    },
+    {
+      "number": "MV-5",
+      "title": "MD5:dd83db54ef059887cd8b53aa1f2bda6c",
+      "options": [
+        "schwarz-rot-gold",
+        "blau-weiß-gelb-rot",
+        "grün-weiß-rot ",
+        "schwarz-gelb"
+      ],
+      "correct": 1,
+      "bundesland": "Mecklenburg-Vorpommern"
+    },
+    {
+      "number": "MV-6",
+      "title": "MD5:1a8573212e57f6bce0bc73a25360f070",
+      "options": [
+        "bei der Landeszentrale für politische Bildung",
+        "bei den Kirchen",
+        "beim Ordnungsamt der Gemeinde",
+        "bei der Verbraucherzentrale"
+      ],
+      "correct": 0,
+      "bundesland": "Mecklenburg-Vorpommern"
+    },
+    {
+      "number": "MV-7",
+      "title": "MD5:7fabdd5752e68fefe8b236e40847b990",
+      "options": [
+        "Greifswald.",
+        "Schwerin.",
+        "Rostock.",
+        "Wismar."
+      ],
+      "correct": 1,
+      "bundesland": "Mecklenburg-Vorpommern"
+    },
+    {
+      "number": "MV-8",
+      "title": "MD5:301c6191cfad8d24f990a22bad8ad475",
+      "options": [
+        "1",
+        "2",
+        "3",
+        "4"
+      ],
+      "correct": 2,
+      "bundesland": "Mecklenburg-Vorpommern"
+    },
+    {
+      "number": "MV-9",
+      "title": "MD5:d82a96c0eb87360908a63fef19de7d6a",
+      "options": [
+        "Erster Minister/ Erste Ministerin",
+        "Premierminister/ Premierministerin",
+        "Bürgermeister/ Bürgermeisterin",
+        "Ministerpräsident/ Ministerpräsidentin"
+      ],
+      "correct": 3,
+      "bundesland": "Mecklenburg-Vorpommern"
+    },
+    {
+      "number": "MV-10",
+      "title": "MD5:0cf1eea825ac92cdaf9cdf7864216288",
+      "options": [
+        "Justizminister/ Justizministerin ",
+        "Außenminister/ Außenministerin",
+        "Finanzminister/ Finanzministerin",
+        "Innenminister/ Innenministerin"
+      ],
+      "correct": 1,
+      "bundesland": "Mecklenburg-Vorpommern"
+    }
+  ]
+}
