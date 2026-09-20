@@ -122,18 +122,18 @@ public class ExamActivity extends AppBaseActivity implements ResultCallback {
 
     @Override
     public boolean onOptionsItemSelected(MenuItem item) {
-        switch (item.getItemId()) {
-            case R.id.menu_sort:
-                goSortDialog();
-                return true;
-            case R.id.menu_expand:
-                setInline(true);
-                return true;
-            case R.id.menu_collapse:
-                setInline(false);
-                return true;
-            default:
-                return super.onOptionsItemSelected(item);
+        int id = item.getItemId();
+        if (id == R.id.menu_sort) {
+            goSortDialog();
+            return true;
+        } else if (id == R.id.menu_expand) {
+            setInline(true);
+            return true;
+        } else if (id == R.id.menu_collapse) {
+            setInline(false);
+            return true;
+        } else {
+            return super.onOptionsItemSelected(item);
         }
     }
 

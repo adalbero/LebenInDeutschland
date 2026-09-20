@@ -180,12 +180,12 @@ public class MainActivity extends AppBaseActivity implements ResultCallback {
 
     @Override
     public boolean onOptionsItemSelected(MenuItem item) {
-        switch (item.getItemId()) {
-            case R.id.menu_settings:
-                goSettings();
-                return true;
-            default:
-                return super.onOptionsItemSelected(item);
+        int id = item.getItemId();
+        if (id == R.id.menu_settings) {
+            goSettings();
+            return true;
+        } else {
+            return super.onOptionsItemSelected(item);
         }
     }
 

@@ -125,18 +125,18 @@ public class QuestionActivity extends AppBaseActivity implements ResultCallback 
 
     @Override
     public boolean onOptionsItemSelected(MenuItem item) {
-        switch (item.getItemId()) {
-            case R.id.menu_tts:
-                doSpeak();
-                return true;
-            case R.id.menu_voice:
-                doSpeechRecognize();
-                return true;
-            case R.id.menu_share:
-                goTranslate();
-                return true;
-            default:
-                return super.onOptionsItemSelected(item);
+        int id = item.getItemId();
+        if (id == R.id.menu_tts) {
+            doSpeak();
+            return true;
+        } else if (id == R.id.menu_voice) {
+            doSpeechRecognize();
+            return true;
+        } else if (id == R.id.menu_share) {
+            goTranslate();
+            return true;
+        } else {
+            return super.onOptionsItemSelected(item);
         }
     }
 
