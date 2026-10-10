@@ -48,13 +48,13 @@
 
         <Preference
             android:key="pref.database"
-            android:summary="Q3-2026"
+            android:summary="Q4-2026"
             android:title="Database" />
 
         <Preference
-            android:key="pref.donate"
-            android:summary="This App is supported by Ads. Click here if you want to buy me a coffee and leave a message. Thanks."
-            android:title="Donate" />
+            android:key="pref.support"
+            android:summary="This App is supported by Ads. Visit App Home Page"
+            android:title="Support" />
     </PreferenceCategory>
 
     <PreferenceCategory
