@@ -18,7 +18,6 @@ import android.widget.Toast;
 
 import com.adalbero.app.lebenindeutschland.R;
 import com.adalbero.app.lebenindeutschland.controller.Analytics;
-import com.adalbero.app.lebenindeutschland.controller.AppController;
 import com.adalbero.app.lebenindeutschland.controller.Debug;
 import com.adalbero.app.lebenindeutschland.controller.Statistics;
 import com.adalbero.app.lebenindeutschland.controller.Store;
@@ -36,7 +35,7 @@ public class SettingsFragment extends PreferenceFragment implements Preference.O
     private FirebaseAnalytics mFirebaseAnalytics;
     private ConsentInformation consentInformation;
 
-    public static final String PREF_DONATE = "pref.donate";
+    public static final String PREF_SUPPORT = "pref.support";
     public static final String PRIVACY_CATEGORY = "privacy.category";
     public static final String PREF_PRIVACY_POLICY = "pref.privacy.policy";
     public static final String PREF_PRIVACY_OPTIONS = "pref.privacy.options";
@@ -76,8 +75,8 @@ public class SettingsFragment extends PreferenceFragment implements Preference.O
 
         findPreference(Store.PREF_REMOVE_STAT).setOnPreferenceClickListener(this);
 
-        Preference prefDonate = findPreference(PREF_DONATE);
-        prefDonate.setOnPreferenceClickListener(this);
+        Preference prefSupport = findPreference(PREF_SUPPORT);
+        prefSupport.setOnPreferenceClickListener(this);
 
         PreferenceCategory privacyCategory = (PreferenceCategory) findPreference(PRIVACY_CATEGORY);
 
@@ -161,8 +160,8 @@ public class SettingsFragment extends PreferenceFragment implements Preference.O
             } else {
                 mDebugClick++;
             }
-        } else if (key.equals(PREF_DONATE)) {
-            doOpenDonate();
+        } else if (key.equals(PREF_SUPPORT)) {
+            doOpenSupport();
         } else if (key.equals(PREF_PRIVACY_POLICY)) {
             doOpenPrivacyPolicy();
         } else if (key.equals(PREF_PRIVACY_OPTIONS)) {
@@ -187,10 +186,10 @@ public class SettingsFragment extends PreferenceFragment implements Preference.O
         return false;
     }
 
-    private void doOpenDonate() {
-        Analytics.logFeaturePolicy(mFirebaseAnalytics, "Donate");
+    private void doOpenSupport() {
+        Analytics.logFeaturePolicy(mFirebaseAnalytics, "Support");
 
-        String url="https://ko-fi.com/appadalbero";
+        String url="https://lidtest.de/index.html";
         startActivity(new Intent(Intent.ACTION_VIEW, Uri.parse(url)));
     }
 
